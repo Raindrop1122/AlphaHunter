@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpha Hunter</title>
+    <style>
+        body {
+            background-color: #0d0d0d; /* 深黑背景 */
+            color: #00ff41; /* 黑客绿 */
+            font-family: 'Courier New', Courier, monospace; /* 等宽字体 */
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            border-bottom: 2px solid #00ff41;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+            text-shadow: 0 0 5px #00ff41;
+        }
+
+        .paper-card {
+            border: 1px solid #333;
+            margin-bottom: 15px;
+            padding: 15px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .paper-card:hover {
+            border-color: #00ff41;
+            background-color: #001100;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .score-tag {
+            font-weight: bold;
+            padding: 2px 8px;
+            border: 1px solid #00ff41;
+            margin-right: 10px;
+        }
+
+        /* 高分高亮 */
+        .high-score {
+            color: #ff3333; /* 红色 */
+            border-color: #ff3333;
+            box-shadow: 0 0 5px #ff3333;
+        }
+
+        .title {
+            font-size: 1.1em;
+            flex-grow: 1;
+        }
+
+        .date {
+            color: #666;
+            font-size: 0.8em;
+            margin-left: 10px;
+        }
+
+        /* 详情区域（默认隐藏） */
+        .details {
+            display: none;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px dashed #333;
+            color: #ddd;
+        }
+
+        .ai-box {
+            background-color: #1a1a1a;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-left: 3px solid #00ff41;
+        }
+
+        .strategy-tag {
+            background-color: #333;
+            color: #fff;
+            padding: 2px 6px;
+            font-size: 0.8em;
+            border-radius: 3px;
+        }
+
+        .link {
+            display: inline-block;
+            margin-top: 10px;
+            color: #00ff41;
+            text-decoration: none;
+            border-bottom: 1px dotted #00ff41;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>ALPHA HUNTER // DAILY SIGNALS</h1>
+    <div id="paper-list">正在加载数据...</div>
+
+    <script>
+        // 读取本地 JSON 文件
+        fetch('papers.json')
+            .then(response => response.json())
+            .then(data => {
+                const container = document.getElementById('paper-list');
+                container.innerHTML = ''; // 清空加载提示
+
+                data.forEach(paper => {
+                    // 创建卡片
+                    const card = document.createElement('div');
+                    card.className = 'paper-card';
+                    
+                    // 判断是否是高分 (大于 8.0)
+                    const isHighScore = paper.ai_score >= 8.0;
+                    const scoreClass = isHighScore ? 'score-tag high-score' : 'score-tag';
+
+                    // 1. 构建卡片头部 (评分 + 标题)
+                    card.innerHTML = `
+                        <div class="header">
+                            <div>
+                                <span class="${scoreClass}">[${paper.ai_score}]</span>
+                                <span class="title">${paper.title}</span>
+                            </div>
+                            <span class="date">${paper.published}</span>
+                        </div>
+                        
+                        <div class="details">
+                            <div class="ai-box">
+                                <p><strong>🧠 AI 犀利点评：</strong> ${paper.ai_verdict}</p>
+                                <p><strong>📈 推荐策略：</strong> <span class="strategy-tag">${paper.ai_strategy}</span></p>
+                            </div>
+                            <p><strong>摘要：</strong>${paper.summary}</p>
+                            <a href="${paper.pdf_url}" target="_blank" class="link">📄 阅读 PDF 原文</a>
+                        </div>
+                    `;
+
+                    // 添加点击收缩/展开功能
+                    card.addEventListener('click', function() {
+                        const details = this.querySelector('.details');
+                        if (details.style.display === 'block') {
+                            details.style.display = 'none';
+                        } else {
+                            details.style.display = 'block';
+                        }
+                    });
+
+                    container.appendChild(card);
+                });
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('paper-list').innerHTML = '<p style="color:red">无法读取 papers.json，请确保脚本已运行成功。</p>';
+            });
+    </script>
+</body>
+</html>
