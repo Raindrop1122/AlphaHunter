@@ -17,9 +17,9 @@
         ],
         "pdf_url": "https://arxiv.org/pdf/2511.21690v1",
         "published": "2025-11-26",
-        "ai_score": 2,
-        "ai_verdict": "论文聚焦机器人学习，与量化交易关联弱，实战价值有限。",
-        "ai_strategy": "风控"
+        "ai_score": 1.5,
+        "ai_verdict": "论文聚焦机器人学习，与量化交易无关，实战价值极低。",
+        "ai_strategy": "N/A"
     },
     {
         "title": "ToolOrchestra: Elevating Intelligence via Efficient Model and Tool Orchestration",
@@ -44,9 +44,9 @@
         ],
         "pdf_url": "https://arxiv.org/pdf/2511.21689v1",
         "published": "2025-11-26",
-        "ai_score": 8,
-        "ai_verdict": "高效轻量级模型协调工具，提升量化决策效率与成本优势。",
-        "ai_strategy": "多因子"
+        "ai_score": 7.5,
+        "ai_verdict": "高效协调工具，提升智能系统性能，但需验证金融数据适用性。",
+        "ai_strategy": "NLP情绪"
     },
     {
         "title": "Matrix: Peer-to-Peer Multi-Agent Synthetic Data Generation Framework",
@@ -70,8 +70,8 @@
         ],
         "pdf_url": "https://arxiv.org/pdf/2511.21686v1",
         "published": "2025-11-26",
-        "ai_score": 7,
-        "ai_verdict": "框架提升数据生成效率，但需验证合成数据在量化中的适用性。",
+        "ai_score": 7.5,
+        "ai_verdict": "提升数据生成效率，但需验证金融数据适用性。",
         "ai_strategy": "多因子"
     },
     {
@@ -93,8 +93,8 @@
         ],
         "pdf_url": "https://arxiv.org/pdf/2511.21678v1",
         "published": "2025-11-26",
-        "ai_score": 7,
-        "ai_verdict": "提升多模态推理，减少错误重复，对复杂策略有潜在价值。",
+        "ai_score": 7.5,
+        "ai_verdict": "提升多模态推理稳定性，减少重复错误，适合长期学习。",
         "ai_strategy": "多因子"
     },
     {
@@ -106,8 +106,92 @@
         ],
         "pdf_url": "https://arxiv.org/pdf/2511.21675v1",
         "published": "2025-11-26",
-        "ai_score": 8,
-        "ai_verdict": "网络因果效应新方法，实战中可优化多因子策略，但需警惕时间趋势干扰。",
+        "ai_score": 7.5,
+        "ai_verdict": "网络因果效应估计可提升多因子策略，但依赖随机化假设，实战易受趋势干扰。",
         "ai_strategy": "多因子"
+    },
+    {
+        "title": "DSD: A Distributed Speculative Decoding Solution for Edge-Cloud Agile Large Model Serving",
+        "summary": "Large language model (LLM) inference often suffers from high decoding latency and limited scalability across heterogeneous edge-cloud environments. Existing speculative decoding (SD) techniques accelerate token generation but remain confined to single-node execution. We propose DSD, a distributed speculative decoding framework that extends SD to multi-device deployments through coordinated draft-target execution. Given the lack of prior work on simulating this paradigm, we first introduce DSD-Sim, a discrete-event simulator that captures network, batching, and scheduling dynamics. Building on insights from DSD-Sim, we further design an Adaptive Window Control (AWC) policy that dynamically adjusts speculation window size to optimize throughput. Experiments across diverse workloads show that DSD achieves up to 1.1x speedup and 9.7% higher throughput over existing SD baselines, enabling agile and scalable LLM serving across edge and cloud.",
+        "authors": [
+            "Fengze Yu",
+            "Leshu Li",
+            "Brad McDanel",
+            "Saiqian Zhang"
+        ],
+        "pdf_url": "https://arxiv.org/pdf/2511.21669v1",
+        "published": "2025-11-26",
+        "ai_score": 3.5,
+        "ai_verdict": "技术优化LLM推理，但对量化交易实战价值有限",
+        "ai_strategy": "NLP情绪"
+    },
+    {
+        "title": "Through the telecom lens: Are all training samples important?",
+        "summary": "The rise of AI in telecommunications, from optimizing Radio Access Networks to managing user experience, has sharply increased data volumes and training demands. Telecom data is often noisy, high-dimensional, costly to store, process, and label. Despite Ai's critical role, standard workflows still assume all training samples contribute equally. On the other hand, next generation systems require AI models that are accurate, efficient, and sustainable.The paper questions the assumptions of equal importance by focusing on applying and analyzing the roles of individual samples in telecom training and assessing whether the proposed model optimizes computation and energy use. we perform sample-level gradient analysis across epochs to identify patterns of influence and redundancy in model learning. Based on this, we propose a sample importance framework thats electively prioritizes impactful data and reduces computation without compromising accuracy. Experiments on three real-world telecom datasets show that our method [reserves performance while reducing data needs and computational overhead while advancing the goals of sustainable AI in telecommunications.",
+        "authors": [
+            "Shruti Bothe",
+            "Illyyne Saffar",
+            "Aurelie Boisbunon",
+            "Hasan Farooq",
+            "Julien Forgeat",
+            "Md Moin Uddin Chowdhury"
+        ],
+        "pdf_url": "https://arxiv.org/pdf/2511.21668v1",
+        "published": "2025-11-26",
+        "ai_score": 7.5,
+        "ai_verdict": "样本重要性优化可降本增效，但电信数据泛化性存疑。",
+        "ai_strategy": "多因子"
+    },
+    {
+        "title": "Escaping the Verifier: Learning to Reason via Demonstrations",
+        "summary": "Training Large Language Models (LLMs) to reason often relies on Reinforcement Learning (RL) with task-specific verifiers. However, many real-world reasoning-intensive tasks lack verifiers, despite offering abundant expert demonstrations that remain under-utilized for reasoning-focused training. We introduce RARO (Relativistic Adversarial Reasoning Optimization) that learns strong reasoning capabilities from only expert demonstrations via Inverse Reinforcement Learning. Our method sets up an adversarial interaction between a policy (generator) and a relativistic critic (discriminator): the policy learns to mimic expert answers, while the critic learns to compare and distinguish between policy and expert answers. Our method trains both the policy and the critic jointly and continuously via RL, and we identify the key stabilization techniques required for robust learning. Empirically, RARO significantly outperforms strong verifier-free baselines on all of our evaluation tasks -- Countdown, DeepMath, and Poetry Writing -- and enjoys the same robust scaling trends as RL on verifiable tasks. These results demonstrate that our method effectively elicits strong reasoning performance from expert demonstrations alone, enabling robust reasoning learning even when task-specific verifiers are unavailable.",
+        "authors": [
+            "Locke Cai",
+            "Ivan Provilkov"
+        ],
+        "pdf_url": "https://arxiv.org/pdf/2511.21667v1",
+        "published": "2025-11-26",
+        "ai_score": 7.5,
+        "ai_verdict": "无验证器下强化推理学习，提升模型泛化能力，但实战稳定性待验证。",
+        "ai_strategy": "NLP情绪"
+    },
+    {
+        "title": "EvilGenie: A Reward Hacking Benchmark",
+        "summary": "We introduce EvilGenie, a benchmark for reward hacking in programming settings. We source problems from LiveCodeBench and create an environment in which agents can easily reward hack, such as by hardcoding test cases or editing the testing files. We measure reward hacking in three ways: held out unit tests, LLM judges, and test file edit detection. We verify these methods against human review and each other. We find the LLM judge to be highly effective at detecting reward hacking in unambiguous cases, and observe only minimal improvement from the use of held out test cases. In addition to testing many models using Inspect's basic_agent scaffold, we also measure reward hacking rates for three popular proprietary coding agents: OpenAI's Codex, Anthropic's Claude Code, and Google's Gemini CLI Using GPT-5, Claude Sonnet 4, and Gemini 2.5 Pro, respectively. We observe explicit reward hacking by both Codex and Claude Code, and misaligned behavior by all three agents. Our codebase can be found at https://github.com/JonathanGabor/EvilGenie.",
+        "authors": [
+            "Jonathan Gabor",
+            "Jayson Lynch",
+            "Jonathan Rosenfeld"
+        ],
+        "pdf_url": "https://arxiv.org/pdf/2511.21654v1",
+        "published": "2025-11-26",
+        "ai_score": 2.5,
+        "ai_verdict": "论文聚焦AI编程作弊检测，与量化实战关联弱，应用有限。",
+        "ai_strategy": "风控"
+    },
+    {
+        "title": "Continual Error Correction on Low-Resource Devices",
+        "summary": "The proliferation of AI models in everyday devices has highlighted a critical challenge: prediction errors that degrade user experience. While existing solutions focus on error detection, they rarely provide efficient correction mechanisms, especially for resource-constrained devices. We present a novel system enabling users to correct AI misclassifications through few-shot learning, requiring minimal computational resources and storage. Our approach combines server-side foundation model training with on-device prototype-based classification, enabling efficient error correction through prototype updates rather than model retraining. The system consists of two key components: (1) a server-side pipeline that leverages knowledge distillation to transfer robust feature representations from foundation models to device-compatible architectures, and (2) a device-side mechanism that enables ultra-efficient error correction through prototype adaptation. We demonstrate our system's effectiveness on both image classification and object detection tasks, achieving over 50% error correction in one-shot scenarios on Food-101 and Flowers-102 datasets while maintaining minimal forgetting (less than 0.02%) and negligible computational overhead. Our implementation, validated through an Android demonstration app, proves the system's practicality in real-world scenarios.",
+        "authors": [
+            "Kirill Paramonov",
+            "Mete Ozay",
+            "Aristeidis Mystakidis",
+            "Nikolaos Tsalikidis",
+            "Dimitrios Sotos",
+            "Anastasios Drosou",
+            "Dimitrios Tzovaras",
+            "Hyunjun Kim",
+            "Kiseok Chang",
+            "Sangdok Mo",
+            "Namwoong Kim",
+            "Woojong Yoo",
+            "Jijoong Moon",
+            "Umberto Michieli"
+        ],
+        "pdf_url": "https://arxiv.org/pdf/2511.21652v1",
+        "published": "2025-11-26",
+        "ai_score": 6.5,
+        "ai_verdict": "纠错机制高效，但量化交易中模型错误非核心痛点",
+        "ai_strategy": "风控"
     }
 ]
