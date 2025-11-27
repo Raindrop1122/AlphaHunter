@@ -4,11 +4,22 @@ import time
 import os
 from openai import OpenAI
 
-# --- 1. 配置 DeepSeek ---
-# 逻辑：优先从环境变量读取 Key (给 GitHub Actions 用)
-# 如果读取不到，就使用后面这个默认值 (给你本地电脑用)
-# 这样你既可以在本地直接跑，传到 GitHub 也能自动跑，不用改代码！
-api_key = os.environ.get("DEEPSEEK_API_KEY", "sk-ed58b41ea71547938569c2a7076cdc7a")
+# --- 1. 配置 DeepSeek (安全模式) ---
+# 关键修改：不再直接写 "sk-..."，而是让代码去读取环境变量
+# GitHub Actions 会自动把保险箱里的 Key 填进来
+api_key = os.environ.get("DEEPSEEK_API_KEY")
+
+# 本地测试逻辑（防止你本地跑不通）：
+if not api_key:
+    # 如果没读到环境变量，说明你可能在本地电脑运行
+    # 你可以在这里临时填入 Key 进行测试，但【千万别提交】到 GitHub！
+    # 建议的方式是：在本地电脑也配置一个环境变量，或者测试时手动填一下，测完删掉
+    print("⚠️ 警告：未检测到环境变量 DEEPSEEK_API_KEY")
+    print("💻 如果你在本地运行，请手动配置环境变量，或临时在代码里填入Key测试（测完记得删掉！）")
+    # api_key = "sk-你的新Key" # <--- 本地测试时可以把这行取消注释，但千万别上传！
+    
+    # 为了防止程序直接崩坏，给个空字符串，虽然连不通但能跑完流程
+    api_key = ""
 
 client = OpenAI(
     api_key=api_key,
@@ -16,28 +27,31 @@ client = OpenAI(
 )
 
 # --- 2. 搜索设置 ---
-# 使用 arxiv 库抓取最新论文
 arxiv_client = arxiv.Client()
 search = arxiv.Search(
     query = 'cat:q-fin.ST OR cat:q-fin.PM OR cat:cs.LG',
-    max_results = 10,  # 🔥 升级：每天抓取 10 篇
+    max_results = 10,  
     sort_by = arxiv.SortCriterion.SubmittedDate
 )
 
 papers_data = []
 
-print(f"🚀 Alpha Hunter (每日10篇版) 启动中...")
-print(f"🔑 当前使用的 API Key: {api_key[:10]}******")
+print(f"🚀 Alpha Hunter (安全版) 启动中...")
+
+# 只有 Key 存在时才打印这一行，且只打印前几位，防止泄露
+if api_key:
+    print(f"🔑 API Key 加载成功: {api_key[:6]}******")
+else:
+    print("❌ API Key 未加载！")
+
 print("📡 正在连接 ArXiv 获取最新论文...")
 
-# 获取搜索结果
 results = list(arxiv_client.results(search))
-print(f"✅ 成功获取 {len(results)} 篇论文元数据，准备开始 AI 分析...")
+print(f"✅ 成功获取 {len(results)} 篇论文元数据...")
 
 for i, result in enumerate(results):
     print(f"\n[{i+1}/10] 正在分析: {result.title[:50]}...")
     
-    # 准备发给 AI 的提示词
     prompt = f"""
     你是华尔街顶级对冲基金的 Quant Researcher。
     请阅读这篇论文摘要，判断其对量化交易的实战价值。
@@ -49,12 +63,14 @@ for i, result in enumerate(results):
     {{
         "ai_score": (0-10分，数值类型，保留一位小数),
         "ai_verdict": (犀利的中文点评，30字以内，直击痛点),
-        "ai_strategy": (适合的策略类型，如：高频/统计套利/多因子/风控/NLP情绪)
+        "ai_strategy": (适合的策略类型)
     }}
     """
     
     try:
-        # 调用 DeepSeek API
+        if not api_key:
+            raise ValueError("没有 API Key，跳过分析")
+
         response = client.chat.completions.create(
             model="deepseek-chat",
             messages=[
@@ -65,7 +81,6 @@ for i, result in enumerate(results):
             stream=False
         )
         
-        # 解析结果
         content = response.choices[0].message.content
         analysis = json.loads(content)
         
@@ -74,14 +89,12 @@ for i, result in enumerate(results):
         
     except Exception as e:
         print(f"   ❌ 分析失败: {e}")
-        # 失败时的保底数据
         analysis = {
             "ai_score": 0, 
-            "ai_verdict": "分析超时或失败", 
+            "ai_verdict": "分析失败/Key缺失", 
             "ai_strategy": "未知"
         }
 
-    # 整合数据
     paper_info = {
         "title": result.title,
         "summary": result.summary,
@@ -93,15 +106,10 @@ for i, result in enumerate(results):
         "ai_strategy": analysis.get("ai_strategy", "N/A")
     }
     papers_data.append(paper_info)
-    
-    # 礼貌性停顿，避免触发 API 速率限制
     time.sleep(1)
 
-# --- 保存结果 ---
-# 确保保存为 UTF-8，防止中文乱码
 with open('papers.json', 'w', encoding='utf-8') as f:
     json.dump(papers_data, f, ensure_ascii=False, indent=4)
 
 print("\n" + "="*50)
-print(f"✅ 今日任务完成！成功分析并保存 {len(papers_data)} 篇论文。")
-print("📂 请去刷新你的网页查看最新情报！")
+print(f"✅ 任务完成！")
