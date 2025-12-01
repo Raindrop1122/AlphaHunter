@@ -1,5 +1,353 @@
 [
   {
+    "id": "2511.23473v1",
+    "title": "ThetaEvolve: Test-time Learning on Open Problems",
+    "pdf_url": "https://arxiv.org/pdf/2511.23473v1",
+    "published": "2025-11-28",
+    "crawled_at": "2025-12-01 20:01:41",
+    "ai_score": 8.5,
+    "translated_title": "ThetaEvolve：开放问题上的测试时学习",
+    "summary_en": [
+      "• Model Architecture: ThetaEvolve is an open-source framework that extends AlphaEvolve, featuring a single LLM, a large program database for exploration, batch sampling for throughput, lazy penalties to avoid stagnation, and optional reward shaping for stable training signals.",
+      "• Data used: The framework utilizes a large program database to enhance exploration and is tested on open optimization problems such as circle packing and first auto-correlation inequality, with models like DeepSeek-R1-0528-Qwen3-8B.",
+      "• Performance metrics: ThetaEvolve achieves new best-known bounds on open problems mentioned in AlphaEvolve, outperforms inference-only baselines across two models and four tasks, and shows that RL-trained checkpoints demonstrate faster progress and better final performance on both trained and unseen tasks."
+    ],
+    "summary_cn": [
+      "• 核心模型: ThetaEvolve是一个开源框架，扩展了AlphaEvolve，采用单一LLM、大型程序数据库、批量采样、惰性惩罚和可选奖励塑造等机制。",
+      "• 数据来源: 使用大型程序数据库进行增强探索，并在开放优化问题（如圆填充和自相关不等式）上测试，模型包括DeepSeek-R1-0528-Qwen3-8B。",
+      "• 主要结论: ThetaEvolve在AlphaEvolve提到的开放问题上实现了新的最佳边界，在多个模型和任务上优于纯推理基线，RL训练检查点显示在训练和未见任务上都有更快进展和更好性能。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for generating novel solutions to complex optimization problems in finance, such as portfolio optimization or risk modeling, by enabling continuous learning and adaptation at test time.",
+      "• Implementation Risk: Moderate risk due to reliance on open-source models and the complexity of integrating RL with LLMs, which may require significant computational resources and fine-tuning for specific financial applications.",
+      "• Novelty: Significant novelty as the first evolving framework that allows small open-source models to achieve state-of-the-art bounds on open problems, combining in-context learning and RL for test-time learning."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次实现小规模开源模型在开放问题上达到最先进边界，结合上下文学习和强化学习进行测试时学习，具有突破性。",
+      "• 实盘坑: 依赖开源模型可能带来稳定性问题，RL与LLM集成复杂，需要大量计算资源，在金融应用中需定制化调整。",
+      "• 复现难度: 中等难度，代码已公开，但需处理大型程序数据库和RL训练，对硬件和专业知识要求较高。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2511.23465v1",
+    "title": "SmallWorlds: Assessing Dynamics Understanding of World Models in Isolated Environments",
+    "pdf_url": "https://arxiv.org/pdf/2511.23465v1",
+    "published": "2025-11-28",
+    "crawled_at": "2025-12-01 20:02:00",
+    "ai_score": 7.2,
+    "translated_title": "小世界：在孤立环境中评估世界模型的动态理解能力",
+    "summary_en": [
+      "• Model Architecture: Evaluates four representative architectures: Recurrent State Space Model (RSSM), Transformer, Diffusion model, and Neural ODE in fully observable state spaces.",
+      "• Data used: Utilizes the SmallWorld Benchmark, a controlled testbed with six distinct domains featuring isolated and precisely defined dynamics, eliminating reliance on handcrafted reward signals.",
+      "• Performance metrics: Assesses model capability in capturing environment structure and tracks prediction deterioration over extended rollouts, revealing strengths and limitations of current paradigms."
+    ],
+    "summary_cn": [
+      "• 核心模型: 评估了四种代表性架构：循环状态空间模型（RSSM）、Transformer、扩散模型和神经ODE，均在完全可观测状态空间中进行测试。",
+      "• 数据来源: 使用SmallWorld基准测试，包含六个不同领域的受控环境，具有孤立且精确定义的动态，无需依赖人工设计的奖励信号。",
+      "• 主要结论: 揭示了这些模型在捕捉环境结构方面的有效性，以及其预测在长时间推演中的退化情况，突显了当前建模范式的优势和局限。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the benchmark provides a systematic framework for evaluating dynamics modeling, which could inform improved predictive models for time-series forecasting in finance, but direct alpha generation is limited.",
+      "• Implementation Risk: High; the isolated environments may not translate well to noisy, high-dimensional real-world financial data, and the lack of reward signals reduces applicability to reinforcement learning-based strategies.",
+      "• Novelty: Significant; introduces a unified evaluation benchmark for world models, addressing a critical gap in controlled assessment of dynamics understanding, though the core architectures are not novel."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著；提出了一个统一的世界模型评估基准，解决了在受控环境中评估动态理解能力的关键空白，但核心架构本身并非创新。",
+      "• 实盘坑: 高；孤立环境可能难以适应嘈杂、高维的真实金融数据，且缺乏奖励信号限制了其在基于强化学习的策略中的应用。",
+      "• 复现难度: 中等；基准测试和实验设置相对清晰，但需要精确控制动态环境，可能涉及复杂的模拟和计算资源。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2511.23455v1",
+    "title": "The Price of Progress: Algorithmic Efficiency and the Falling Cost of AI Inference",
+    "pdf_url": "https://arxiv.org/pdf/2511.23455v1",
+    "published": "2025-11-28",
+    "crawled_at": "2025-12-01 20:02:27",
+    "ai_score": 8.5,
+    "translated_title": "进步的代价：算法效率与AI推理成本下降",
+    "summary_en": [
+      "• Model Architecture: The paper does not propose a new model architecture but analyzes existing frontier language models (e.g., GPT-4, Claude, Llama) through a cost-efficiency lens, focusing on algorithmic improvements rather than architectural innovations.",
+      "• Data used: Utilizes the largest dataset of current and historical prices for AI inference, sourced from Artificial Analysis and Epoch AI, covering benchmarks on knowledge, reasoning, math, and software engineering tasks.",
+      "• Performance metrics: Measures cost per unit of benchmark performance, finding reductions of 5× to 10× per year for frontier models, with algorithmic efficiency progress estimated at 3× per year after controlling for hardware and competition effects.",
+      "• Economic analysis: Isolates factors driving cost declines, including economic forces, hardware efficiency gains, and algorithmic improvements, providing a framework to assess real-world AI impact beyond raw benchmark scores."
+    ],
+    "summary_cn": [
+      "• 核心模型: 分析前沿语言模型（如GPT-4、Claude、Llama），不提出新架构，而是从成本效率角度评估算法进步对性能的影响。",
+      "• 数据来源: 使用来自Artificial Analysis和Epoch AI的最大规模当前和历史价格数据集，涵盖知识、推理、数学和软件工程基准测试。",
+      "• 主要结论: 发现前沿模型在基准性能上的成本每年下降5×至10×，剔除硬件降价和竞争效应后，算法效率进步约为每年3×。",
+      "• 方法论: 通过控制开放模型和硬件价格下降，量化算法效率的独立贡献，为评估AI实际影响提供新指标。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High—this paper provides a novel framework to quantify cost-efficiency trends in AI, enabling hedge funds to better forecast ROI on AI deployments and identify undervalued models or vendors in a rapidly evolving market.",
+      "• Implementation Risk: Moderate—while the data sources (Artificial Analysis, Epoch AI) are reputable, real-time price tracking and model-specific variations could introduce noise; implementation requires continuous data updates and validation against proprietary benchmarks.",
+      "• Novelty: Significant—shifts focus from raw benchmark scores to cost-adjusted performance, a critical but often overlooked metric in AI research, with practical implications for budgeting and strategy in quant finance.",
+      "• Scalability: High—the methodology is broadly applicable across AI domains, allowing for extension to other benchmarks or custom metrics, though it relies on external data that may not capture all market dynamics."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著—将AI进步评估从纯性能指标转向成本效率，提出“价格/性能比”作为关键指标，填补了学术与实务间的鸿沟，对量化投资中的AI部署决策有直接指导意义。",
+      "• 实盘坑: 中等—依赖第三方数据源（Artificial Analysis、Epoch AI），可能存在数据滞后或偏差；实际应用中需结合内部成本数据，且模型价格波动大，需动态调整策略。",
+      "• 复现难度: 低—方法论透明，基于公开数据集和简单计算，但获取全面历史价格数据可能受限，且需处理不同基准和模型的归一化问题。",
+      "• 风险提示: 算法效率进步可能非线性，未来硬件瓶颈或监管变化可能颠覆成本下降趋势，需在策略中纳入敏感性分析。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2511.23449v1",
+    "title": "Physics-Informed Neural Networks for Thermophysical Property Retrieval",
+    "pdf_url": "https://arxiv.org/pdf/2511.23449v1",
+    "published": "2025-11-28",
+    "crawled_at": "2025-12-01 20:02:50",
+    "ai_score": 7.5,
+    "translated_title": "基于物理信息神经网络的材料热物理性质反演",
+    "summary_en": [
+      "• Model Architecture: The paper proposes an iterative PINN-based framework that alternates between solving the forward heat problem with a fixed thermal conductivity (k) and optimizing k by comparing predicted and observed thermographs and surface temperatures until convergence.",
+      "• Data used: The study utilizes both environmental data captured by a weather station and synthetic data generated from Finite-Volume-Method software simulations, focusing on temperature profiles of walls at dawn when conditions are close to steady state.",
+      "• Performance metrics: The framework achieves accurate predictions of thermal conductivity across various environmental conditions and sampling times, with a maximum Mean Absolute Error (MAE) of 4.0851 even when the steady-state assumption is violated."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出了一种基于物理信息神经网络（PINN）的迭代框架，通过交替固定热导率（k）求解正向热问题，并基于预测与观测的热成像图及表面温度优化k，直至收敛。",
+      "• 数据来源: 结合了气象站采集的环境数据和基于有限体积法软件模拟生成的合成数据，重点关注黎明时接近稳态的墙体温度分布。",
+      "• 主要结论: 该方法在不同环境条件和采样时间下能准确预测热导率，即使在违反稳态假设的情况下，最大平均绝对误差（MAE）也仅为4.0851，展示了PINN在实地材料性质估计中的潜力。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the method could enhance building energy efficiency analysis by providing non-invasive, rapid thermal conductivity estimates, potentially applicable to real estate or infrastructure investment models, but direct financial alpha generation is limited without integration into broader predictive systems.",
+      "• Implementation Risk: High; the framework relies on steady-state assumptions at dawn, which may not hold in dynamic urban environments, and its accuracy degrades with environmental variability, posing challenges for real-world deployment in noisy, uncontrolled settings.",
+      "• Novelty: High; this work pioneers the use of PINNs for in-situ inverse heat problems, addressing a gap in machine learning applications for thermophysical property retrieval, though it builds on established PINN methodologies rather than introducing groundbreaking architectural innovations."
+    ],
+    "verdict_cn": [
+      "• 创新点: 较高；首次将PINN应用于实地逆热问题求解，填补了机器学习在热物理性质反演领域的空白，但模型架构本身基于现有PINN技术，未带来革命性突破。",
+      "• 实盘坑: 高；方法依赖于黎明时的稳态假设，在动态城市环境中可能不成立，且对环境变化敏感，在噪声大、非受控的实地部署中准确率易受影响，实施风险较大。",
+      "• 复现难度: 中等；需要气象站数据和有限体积法模拟数据，以及PINN的专业实现知识，但论文提供了清晰的迭代框架，对于有计算物理背景的团队复现可行。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2511.23443v1",
+    "title": "Provable Benefits of Sinusoidal Activation for Modular Addition",
+    "pdf_url": "https://arxiv.org/pdf/2511.23443v1",
+    "published": "2025-11-28",
+    "crawled_at": "2025-12-01 20:03:14",
+    "ai_score": 8.5,
+    "translated_title": "正弦激活函数在模加法中的可证明优势",
+    "summary_en": [
+      "• Model Architecture: Two-layer neural networks with sinusoidal activation functions (sine MLPs) versus ReLU networks for learning modular addition tasks.",
+      "• Data used: Synthetic datasets for modular addition with varying lengths m and residues modulo p, focusing on interpolation and extrapolation scenarios.",
+      "• Performance metrics: Expressivity gap (width requirements), generalization bounds (Natarajan-dimension), sample complexity (nearly optimal O~(p)), and empirical generalization across regimes.",
+      "• Key findings: Sine networks achieve exact realizations with width-2, exhibit strong length extrapolation, and generalize better than ReLU networks in both theoretical and empirical evaluations."
+    ],
+    "summary_cn": [
+      "• 核心模型: 使用正弦激活函数的两层神经网络（正弦MLP）与ReLU网络对比，用于学习模加法任务。",
+      "• 数据来源: 基于模加法的合成数据集，涵盖不同长度m和模p的余数，重点测试插值和外推能力。",
+      "• 主要结论: 正弦网络在宽度为2时即可实现精确表示，理论泛化边界接近最优样本复杂度，实证中泛化性能优于ReLU网络，并展现出强大的长度外推能力。",
+      "• 技术亮点: 建立了正弦网络的Natarajan维数泛化界，揭示了激活函数在模型表达能力和泛化中的关键作用。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for tasks involving periodic or modular patterns in financial data (e.g., cyclical trends, calendar effects), potentially improving model efficiency and generalization in quant strategies.",
+      "• Implementation Risk: Moderate; sine activations may introduce computational overhead and require careful tuning for stability, though theoretical guarantees reduce empirical risks.",
+      "• Novelty: Significant; provides rigorous theoretical insights into activation function choice, bridging expressivity and generalization with practical implications for neural network design.",
+      "• Practical limitations: Focus on synthetic modular addition limits direct applicability to complex real-world datasets; further validation on financial time series needed."
+    ],
+    "verdict_cn": [
+      "• 创新点: 从理论角度深入分析了激活函数对神经网络表达能力和泛化的影响，为模型设计提供了新思路，尤其在周期性和模运算任务中具有突破性。",
+      "• 实盘坑: 正弦激活可能增加计算复杂度，需精细调参以避免数值不稳定；理论结果虽强，但在实际金融数据中的泛化能力仍需验证。",
+      "• 复现难度: 中等；论文提供了清晰的数学推导和实证验证，但实现正弦网络并适配金融场景需要一定的机器学习专业知识。",
+      "• 策略适配性: 适用于高频交易或因子挖掘中涉及周期模式的场景，但需结合领域知识进行模型优化。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2511.23442v1",
+    "title": "ASTRO: Adaptive Stitching via Dynamics-Guided Trajectory Rollouts",
+    "pdf_url": "https://arxiv.org/pdf/2511.23442v1",
+    "published": "2025-11-28",
+    "crawled_at": "2025-12-01 20:03:36",
+    "ai_score": 8.2,
+    "translated_title": "ASTRO：基于动力学引导轨迹滚动的自适应拼接方法",
+    "summary_en": [
+      "• Model Architecture: ASTRO employs a two-stage framework: (1) temporal-distance representation learning to identify reachable stitch targets, and (2) dynamics-guided stitch planner with Rollout Deviation Feedback to generate connecting action sequences that ensure dynamics consistency.",
+      "• Data used: Evaluated on offline RL datasets including OGBench suite and D4RL benchmarks, containing suboptimal and fragmented trajectories from pre-collected datasets without online interaction.",
+      "• Performance metrics: Outperforms prior offline RL augmentation methods across various algorithms, achieving notable gains on OGBench and consistent improvements on D4RL benchmarks, demonstrating enhanced policy learning through effective trajectory stitching."
+    ],
+    "summary_cn": [
+      "• 核心模型: ASTRO采用两阶段框架：首先学习时序距离表示以识别可达的拼接目标，然后使用基于动力学引导的拼接规划器，通过滚动偏差反馈生成连接动作序列，确保动力学一致性。",
+      "• 数据来源: 使用离线强化学习数据集，包括OGBench套件和D4RL基准测试，这些数据集包含预收集的次优和碎片化轨迹，无需在线交互。",
+      "• 主要结论: ASTRO在多种算法上优于先前的离线RL增强方法，在OGBench上取得显著性能提升，在D4RL基准测试上表现一致改进，通过有效的轨迹拼接增强了策略学习。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for improving offline RL in finance applications like portfolio optimization or algorithmic trading, where data is limited and suboptimal, by generating novel, dynamics-consistent trajectories to enhance value estimation and policy performance.",
+      "• Implementation Risk: Moderate risk due to reliance on accurate dynamics models and temporal-distance representations; errors in these components could lead to unrealistic trajectories, degrading policy learning in real-world financial environments.",
+      "• Novelty: Introduces adaptive stitching via Rollout Deviation Feedback, a novel mechanism that dynamically adjusts action sequences based on the gap between target and actual states, addressing limitations of existing methods that produce confined or dynamics-violating trajectories."
+    ],
+    "verdict_cn": [
+      "• 创新点: 引入基于滚动偏差反馈的自适应拼接机制，动态调整动作序列以弥合目标状态与实际状态之间的差距，解决了现有方法生成受限或违反动力学轨迹的问题，提升了轨迹拼接的可行性和可达性。",
+      "• 实盘坑: 依赖准确的动力学模型和时序距离表示，在复杂金融市场中可能存在建模误差，导致生成不切实际的轨迹，影响策略性能；需要大量离线数据支持，可能限制在数据稀缺场景的应用。",
+      "• 复现难度: 中等难度，需要实现两阶段框架和滚动偏差反馈机制，但基于开源基准测试（如D4RL）和标准RL库，复现相对可行，不过优化超参数和动力学模型可能需要专业知识。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2511.23440v1",
+    "title": "Accelerated Execution of Bayesian Neural Networks using a Single Probabilistic Forward Pass and Code Generation",
+    "pdf_url": "https://arxiv.org/pdf/2511.23440v1",
+    "published": "2025-11-28",
+    "crawled_at": "2025-12-01 20:03:57",
+    "ai_score": 8.2,
+    "translated_title": "基于单次概率前向传播与代码生成的贝叶斯神经网络加速执行",
+    "summary_en": [
+      "• Model Architecture: Introduces Probabilistic Forward Pass (PFP) as an efficient approximation to Stochastic Variational Inference (SVI) for Bayesian neural networks, assuming Gaussian-distributed weights and activations to enable analytic uncertainty propagation with a single deterministic forward pass.",
+      "• Data used: Evaluated on Dirty-MNIST dataset, a variant of MNIST with added noise and distortions, to test accuracy, uncertainty estimation, and out-of-domain (OOD) detection capabilities.",
+      "• Performance metrics: Achieves up to 4200x speedup compared to SVI for small mini-batches, with PFP-BNNs matching SVI-BNNs in accuracy, uncertainty estimation, and OOD detection on Dirty-MNIST while significantly reducing computational cost."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出概率前向传播（PFP）作为贝叶斯神经网络中随机变分推断（SVI）的高效近似方法，通过假设权重和激活值服从高斯分布，实现单次确定性前向传播的解析不确定性传播。",
+      "• 数据来源: 使用Dirty-MNIST数据集（MNIST的噪声和扭曲变体）进行评估，测试准确性、不确定性估计和域外（OOD）检测能力。",
+      "• 主要结论: PFP在小型批次上相比SVI实现高达4200倍的加速，在Dirty-MNIST上匹配SVI的准确性、不确定性估计和OOD检测，同时大幅降低计算成本。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for deploying Bayesian uncertainty estimation in latency-sensitive applications like high-frequency trading or real-time risk management, where computational efficiency is critical.",
+      "• Implementation Risk: Moderate risk due to reliance on Gaussian assumptions and TVM compiler optimizations, which may not generalize well to complex non-Gaussian data distributions or other hardware platforms.",
+      "• Novelty: Novel integration of Bayesian approximations with deep learning compilation (TVM) for embedded systems, offering a practical solution to the computational bottleneck of traditional BNNs."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将贝叶斯近似与深度学习编译器（TVM）结合，针对嵌入式系统提出实用解决方案，有效解决传统贝叶斯神经网络的计算瓶颈。",
+      "• 实盘坑: 依赖高斯假设和TVM编译器优化，可能在复杂非高斯数据分布或其他硬件平台上泛化能力不足，存在模型偏差风险。",
+      "• 复现难度: 中等难度，需要TVM编译器和ARM CPU环境，但代码生成和优化策略可能增加部署复杂性。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2511.23404v1",
+    "title": "LFM2 Technical Report",
+    "pdf_url": "https://arxiv.org/pdf/2511.23404v1",
+    "published": "2025-11-28",
+    "crawled_at": "2025-12-01 20:04:24",
+    "ai_score": 8.2,
+    "translated_title": "LFM2技术报告",
+    "summary_en": [
+      "• Model Architecture: LFM2采用硬件在环架构搜索，结合门控短卷积与分组查询注意力块，形成紧凑混合骨干，支持350M-8.3B参数范围，包括密集模型和混合专家变体，上下文长度32K，并开发了多模态和检索变体（LFM2-VL、LFM2-Audio、LFM2-ColBERT）。",
+      "• Data used: 预训练使用10-12T tokens，训练流程包括知识蒸馏、课程学习和三阶段后训练（监督微调、长度归一化偏好优化、模型合并）。",
+      "• Performance metrics: LFM2-2.6B在IFEval上达到79.56%，GSM8K上达到82.41%，CPU推理速度比同类模型快2倍，支持边缘设备高效部署，音频变体性能可与3倍大模型竞争。"
+    ],
+    "summary_cn": [
+      "• 核心模型: LFM2是基于硬件在环架构搜索的液态基础模型家族，采用门控短卷积与分组查询注意力块的混合骨干，参数范围350M-8.3B，支持多模态和检索扩展，专为边缘设备优化。",
+      "• 数据来源: 预训练数据量为10-12T tokens，采用知识蒸馏、课程学习和三阶段后训练（监督微调、偏好优化、模型合并）的完整训练流程。",
+      "• 主要结论: 模型在多项基准测试中表现强劲，如LFM2-2.6B在IFEval和GSM8K上分别达到79.56%和82.41%，CPU推理速度提升2倍，音频变体实时性能媲美更大模型，并提供开源部署方案。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: 模型在边缘计算场景具有高潜力，通过硬件优化实现快速推理，可能为低延迟交易策略或实时数据分析提供技术基础，但需验证在金融数据上的泛化能力。",
+      "• Implementation Risk: 依赖特定硬件和部署框架（如ExecuTorch、llama.cpp），实盘集成可能面临兼容性和稳定性挑战，且混合专家变体的动态计算开销需精细管理。",
+      "• Novelty: 创新点包括硬件在环架构搜索、门控短卷积与注意力块的混合设计，以及多模态变体的高效处理机制，但整体仍基于现有Transformer框架，突破性有限。"
+    ],
+    "verdict_cn": [
+      "• 创新点: 采用硬件在环架构搜索优化边缘部署，结合门控短卷积与注意力块的混合骨干，以及多模态变体的高效处理（如音频分离路径），但核心架构未脱离Transformer范式。",
+      "• 实盘坑: 模型依赖特定部署工具，实盘集成可能遇到硬件兼容性和延迟波动问题；混合专家变体的动态计算可能增加不确定性，需额外监控。",
+      "• 复现难度: 开源权重和部署包降低了复现门槛，但硬件在环搜索和多阶段训练流程复杂，需高算力支持，对团队技术要求较高。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2511.23402v1",
+    "title": "Quantized-Tinyllava: a new multimodal foundation model enables efficient split learning",
+    "pdf_url": "https://arxiv.org/pdf/2511.23402v1",
+    "published": "2025-11-28",
+    "crawled_at": "2025-12-01 20:04:44",
+    "ai_score": 7.2,
+    "translated_title": "量化-Tinyllava：一种新型多模态基础模型实现高效分割学习",
+    "summary_en": [
+      "• Model Architecture: Introduces Quantized-Tinyllava, a multimodal foundation model with a learning-based data compression method that converts model embeddings into low-bit integers to reduce transmission costs in split learning.",
+      "• Data used: Not specified in the abstract; likely involves multimodal datasets (e.g., image-text pairs) typical for foundation models, but details on specific datasets or sources are omitted.",
+      "• Performance metrics: Claims to preserve model performance while compressing embeddings, with optimal discrete representation levels determined via entropy coding theory, though no quantitative metrics (e.g., accuracy, compression ratios) are provided."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出Quantized-Tinyllava多模态基础模型，集成基于学习的数据压缩方法，将模型嵌入量化为低比特整数，以降低分割学习中的传输成本。",
+      "• 数据来源: 摘要中未明确说明；可能使用多模态数据集（如图像-文本对），但具体数据集或来源细节缺失。",
+      "• 主要结论: 在压缩嵌入的同时保持模型性能，基于熵编码理论确定最优离散表示级别，显著减少分区间的传输开销。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; addresses a key bottleneck in split learning (communication costs) for large models, potentially enabling more efficient distributed training in privacy-sensitive applications, but lacks empirical validation of financial or real-world impact.",
+      "• Implementation Risk: High; abstract omits critical details like compression ratios, latency benchmarks, and hardware compatibility, raising risks in deployment for high-frequency or latency-sensitive trading environments.",
+      "• Novelty: Moderate; combines split learning with quantization for multimodal models, leveraging entropy coding theory, but similar compression techniques exist in literature, limiting breakthrough innovation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；将分割学习与多模态模型量化结合，利用熵编码理论优化表示级别，但类似压缩方法已有研究，创新性有限。",
+      "• 实盘坑: 高；摘要缺乏压缩比、延迟基准和硬件兼容性等关键细节，在高频或低延迟交易环境中部署风险较大。",
+      "• 复现难度: 中等；模型结构描述较泛，数据和方法细节不足，可能增加复现挑战，需依赖完整论文或代码。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2511.23388v1",
+    "title": "Learning-Augmented Online Bipartite Matching in the Random Arrival Order Model",
+    "pdf_url": "https://arxiv.org/pdf/2511.23388v1",
+    "published": "2025-11-28",
+    "crawled_at": "2025-12-01 20:05:07",
+    "ai_score": 7.8,
+    "translated_title": "随机到达顺序模型中学习增强的在线二分图匹配",
+    "summary_en": [
+      "• Model Architecture: The paper proposes a learning-augmented algorithm for online bipartite matching in the random arrival order model, building upon Choo et al. (ICML 2024). It uses a prefix of the arrival sequence as a sample to assess prediction quality, then either follows predictions or switches to a baseline β-competitive algorithm.",
+      "• Data used: The algorithm leverages untrusted predictions of online vertex types (neighborhoods) and assumes the predicted matching size is at least αn for any constant 0 < α ≤ 1, without requiring the optimal matching to be size n.",
+      "• Performance metrics: The algorithm achieves (1-o(1))-consistency and (β-o(1))-robustness, with a smooth degradation in competitive ratio between consistency and robustness as prediction error increases."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于Choo等人（ICML 2024）的工作，提出一种学习增强的在线二分图匹配算法，在随机到达顺序模型中，通过采样到达序列前缀来评估预测质量，并动态选择跟随预测或使用基线算法。",
+      "• 数据来源: 利用在线顶点类型（邻域）的不受信任预测，假设预测匹配大小至少为αn（0 < α ≤ 1），无需最优匹配大小为n的强假设。",
+      "• 主要结论: 算法实现(1-o(1))一致性和(β-o(1))鲁棒性，竞争比随预测误差增加在一致性和鲁棒性之间平滑下降。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate—the algorithm's ability to leverage predictions for improved matching in online settings could enhance portfolio allocation or routing systems, but direct financial alpha is limited without specific market applications.",
+      "• Implementation Risk: High—relying on untrusted predictions introduces significant risk if predictions are inaccurate; the smooth degradation feature mitigates this but requires careful calibration in real-world systems.",
+      "• Novelty: Moderate—extends prior work by removing the optimal matching size assumption and generalizing to αn predicted matching, but the core approach of using a sample prefix for prediction assessment is not entirely new."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等——通过移除最优匹配大小为n的假设并推广到αn预测匹配，扩展了先前研究，但使用采样前缀评估预测的核心方法创新性有限。",
+      "• 实盘坑: 高——依赖不受信任的预测在预测不准确时风险大；平滑下降特性虽缓解风险，但在实际系统中需精细调参，可能增加操作复杂性。",
+      "• 复现难度: 中等——算法基于标准在线匹配框架，理论分析清晰，但实现中需处理随机到达顺序和预测误差的建模，对工程能力有一定要求。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "ICML",
+      "status": "Accepted"
+    }
+  },
+  {
     "id": "2511.21690v1",
     "title": "TraceGen: World Modeling in 3D Trace Space Enables Learning from Cross-Embodiment Videos",
     "pdf_url": "https://arxiv.org/pdf/2511.21690v1",
