@@ -1,5 +1,353 @@
 [
   {
+    "id": "2512.02020v1",
+    "title": "EfficientFlow: Efficient Equivariant Flow Policy Learning for Embodied AI",
+    "pdf_url": "https://arxiv.org/pdf/2512.02020v1",
+    "published": "2025-12-01",
+    "crawled_at": "2025-12-02 20:01:41",
+    "ai_score": 8.2,
+    "translated_title": "EfficientFlow：用于具身AI的高效等变流策略学习",
+    "summary_en": [
+      "• Model Architecture: EfficientFlow is a flow-based policy learning framework that incorporates equivariance into flow matching, using an isotropic Gaussian prior and an equivariant velocity prediction network to ensure the action distribution remains equivariant, with a novel acceleration regularization strategy for faster sampling.",
+      "• Data used: The model is evaluated across a wide range of robotic manipulation benchmarks, focusing on limited data scenarios to demonstrate improved data efficiency compared to existing generative policies that require large-scale demonstrations.",
+      "• Performance metrics: The algorithm achieves competitive or superior performance in robotic manipulation tasks under limited data, with dramatically faster inference speeds, highlighting reduced data demands and enhanced sampling efficiency."
+    ],
+    "summary_cn": [
+      "• 核心模型: EfficientFlow采用基于流的策略学习框架，通过将等变性引入流匹配，使用各向同性高斯先验和等变速度预测网络，确保动作分布保持等变，并提出了加速正则化策略以提升采样速度。",
+      "• 数据来源: 模型在多种机器人操作基准测试中进行评估，侧重于有限数据场景，以展示相比需要大规模演示的现有生成策略在数据效率上的改进。",
+      "• 主要结论: 在有限数据下，该算法在机器人操作任务中达到竞争性或更优性能，推理速度显著加快，突显了数据需求减少和采样效率提升的优势。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for applications in robotic control and embodied AI systems where data efficiency and fast inference are critical, such as in real-time automation or adaptive environments, due to its improved generalization and reduced data requirements.",
+      "• Implementation Risk: Moderate risk due to the complexity of implementing equivariant flow matching and acceleration regularization, which may require specialized expertise and careful tuning to achieve stable training and scalable deployment in practical settings.",
+      "• Novelty: High novelty in integrating equivariance with flow-based policies and proposing a surrogate loss for acceleration regularization, offering a unified approach that addresses both data and sampling inefficiencies in generative modeling for embodied AI."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将等变性与基于流的策略学习结合，提出加速正则化的代理损失函数，有效解决了生成模型在具身AI中的数据低效和采样慢的问题，具有较高的理论和技术创新性。",
+      "• 实盘坑: 实现等变流匹配和加速正则化可能较复杂，需要专业知识和精细调参，以确保训练稳定性和实际部署的可扩展性，存在一定的技术门槛和调试风险。",
+      "• 复现难度: 中等偏高，因涉及理论证明和新型正则化策略，复现需深入理解流匹配和等变网络，可能依赖特定代码库或硬件，但论文提供了理论基础和实验基准，有助于指导实现。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2512.02019v1",
+    "title": "A Diffusion Model Framework for Maximum Entropy Reinforcement Learning",
+    "pdf_url": "https://arxiv.org/pdf/2512.02019v1",
+    "published": "2025-12-01",
+    "crawled_at": "2025-12-02 20:01:58",
+    "ai_score": 7.8,
+    "translated_title": "基于扩散模型框架的最大熵强化学习",
+    "summary_en": [
+      "• Model Architecture: Proposes diffusion model-based variants of Soft Actor-Critic (DiffSAC), Proximal Policy Optimization (DiffPPO), and Wasserstein Policy Optimization (DiffWPO) by reinterpreting MaxEntRL as a diffusion sampling problem",
+      "• Data used: Standard continuous control benchmarks (likely MuJoCo, OpenAI Gym environments) without specifying exact datasets or proprietary data sources",
+      "• Performance metrics: Reports better returns and higher sample efficiency compared to baseline SAC and PPO algorithms on continuous control tasks"
+    ],
+    "summary_cn": [
+      "• 核心模型: 将最大熵强化学习重新解释为扩散采样问题，提出基于扩散模型的DiffSAC、DiffPPO和DiffWPO变体",
+      "• 数据来源: 使用标准连续控制基准测试环境（如MuJoCo、OpenAI Gym），未提及具体数据集或专有数据",
+      "• 主要结论: 在连续控制任务中，扩散模型变体相比基线SAC和PPO实现了更高回报和样本效率"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - diffusion models offer theoretical advantages for exploration in continuous action spaces, but real-world financial applications require validation beyond toy control problems",
+      "• Implementation Risk: Low - methods require only minor changes to existing algorithms, but diffusion models add computational overhead and hyperparameter sensitivity",
+      "• Novelty: High - first principled integration of diffusion models with MaxEntRL framework, though diffusion applications in RL are emerging rapidly"
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次将扩散模型与最大熵强化学习框架进行原理性结合，为连续动作空间探索提供新视角",
+      "• 实盘坑: 扩散模型计算开销较大，超参数敏感，金融环境中的状态转移动态与标准控制任务差异显著",
+      "• 复现难度: 中等 - 代码修改较少但需要扩散模型专业知识，基准结果容易复现但金融场景迁移困难"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2512.02017v1",
+    "title": "Visual Sync: Multi-Camera Synchronization via Cross-View Object Motion",
+    "pdf_url": "https://arxiv.org/pdf/2512.02017v1",
+    "published": "2025-12-01",
+    "crawled_at": "2025-12-02 20:02:21",
+    "ai_score": 7.5,
+    "translated_title": "视觉同步：通过跨视角物体运动实现多相机同步",
+    "summary_en": [
+      "• Model Architecture: VisualSync is an optimization framework based on multi-view dynamics that leverages epipolar constraints from moving 3D points co-visible in two cameras, using off-the-shelf 3D reconstruction, feature matching, and dense tracking to extract tracklets, relative poses, and cross-view correspondences.",
+      "• Data used: Experiments were conducted on four diverse, challenging datasets covering scenarios like concerts, sports events, lectures, family gatherings, and birthday parties recorded with multiple consumer cameras.",
+      "• Performance metrics: VisualSync achieves median synchronization error below 50 ms, outperforming baseline methods in millisecond accuracy for aligning unposed, unsynchronized videos."
+    ],
+    "summary_cn": [
+      "• 核心模型: VisualSync是一个基于多视角动力学的优化框架，利用在两个相机中共同可见的移动3D点的极线约束，通过现成的3D重建、特征匹配和密集跟踪技术提取轨迹片段、相对姿态和跨视角对应关系。",
+      "• 数据来源: 实验在四个多样化、具有挑战性的数据集上进行，涵盖音乐会、体育赛事、讲座、家庭聚会和生日派对等多消费者相机录制场景。",
+      "• 主要结论: VisualSync在同步未标定、未同步视频时，中位同步误差低于50毫秒，优于基线方法，实现了毫秒级精度。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low direct alpha potential for financial markets; the technology could be adapted for surveillance or event analysis systems, but lacks immediate trading applications.",
+      "• Implementation Risk: High risk due to reliance on accurate 3D reconstruction and feature matching in uncontrolled environments; performance may degrade with poor lighting or fast motion.",
+      "• Novelty: Moderate novelty in applying epipolar constraints to multi-camera synchronization without controlled settings, but builds on established computer vision techniques."
+    ],
+    "verdict_cn": [
+      "• 创新点: 在非受控环境下应用极线约束实现多相机同步，避免了传统方法对特定目标、手动校正或昂贵硬件的依赖，具有一定创新性。",
+      "• 实盘坑: 依赖3D重建和特征匹配的准确性，在光照不佳或快速运动场景中性能可能下降，实际部署风险较高。",
+      "• 复现难度: 中等难度，需要现成的计算机视觉工具链和多样化数据集，但算法框架相对清晰，可基于开源库实现。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2512.02012v1",
+    "title": "Improved Mean Flows: On the Challenges of Fastforward Generative Models",
+    "pdf_url": "https://arxiv.org/pdf/2512.02012v1",
+    "published": "2025-12-01",
+    "crawled_at": "2025-12-02 20:02:40",
+    "ai_score": 8.2,
+    "translated_title": "改进均值流：快速前向生成模型的挑战",
+    "summary_en": [
+      "• Model Architecture: Improved MeanFlow (iMF) reformulates the training objective as a loss on instantaneous velocity v, re-parameterized by a network predicting average velocity u, and introduces explicit conditioning variables for classifier-free guidance processed through in-context conditioning.",
+      "• Data used: Trained entirely from scratch on ImageNet dataset at 256×256 resolution.",
+      "• Performance metrics: Achieves 1.72 FID with single function evaluation (1-NFE) on ImageNet 256×256, substantially outperforming prior fastforward methods and closing the gap with multi-step methods without distillation."
+    ],
+    "summary_cn": [
+      "• 核心模型: 改进均值流(iMF)将训练目标重构为对瞬时速度v的损失，通过预测平均速度u的网络重新参数化，并引入显式条件变量处理无分类器引导。",
+      "• 数据来源: 完全从头开始在ImageNet数据集上训练，分辨率为256×256。",
+      "• 主要结论: 在ImageNet 256×256上以单次函数评估(1-NFE)实现1.72 FID，显著超越同类先前方法，无需蒸馏即缩小与多步方法的差距。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for real-time generative applications in finance (e.g., synthetic data generation for backtesting, market scenario simulation) due to one-step inference efficiency and competitive FID scores.",
+      "• Implementation Risk: Moderate risk; in-context conditioning and velocity re-parameterization may introduce complexity in hyperparameter tuning and require careful validation on financial datasets.",
+      "• Novelty: Significant novelty in addressing training stability and flexibility issues in fastforward models, with practical improvements that advance the standalone paradigm of one-step generative modeling."
+    ],
+    "verdict_cn": [
+      "• 创新点: 通过重构训练目标为速度损失和引入显式条件变量，有效解决快速前向模型的训练不稳定性和灵活性不足问题，具有实质性技术突破。",
+      "• 实盘坑: 在金融数据上应用时，条件处理和速度参数化可能需大量调优，且单步生成虽快但可能牺牲多样性，需警惕过拟合风险。",
+      "• 复现难度: 中等偏高；需要完整实现速度重参数化和上下文条件处理，对计算资源和ImageNet级数据有要求，但论文方法描述较清晰。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2512.02010v1",
+    "title": "Four Over Six: More Accurate NVFP4 Quantization with Adaptive Block Scaling",
+    "pdf_url": "https://arxiv.org/pdf/2512.02010v1",
+    "published": "2025-12-01",
+    "crawled_at": "2025-12-02 20:03:01",
+    "ai_score": 7.8,
+    "translated_title": "四分之六：通过自适应块缩放实现更精确的NVFP4量化",
+    "summary_en": [
+      "• Model Architecture: Introduces Four Over Six (4/6), a modification to the NVFP4 quantization algorithm that evaluates two potential scale factors per block to improve representation of near-maximal values, addressing quantization error issues in floating-point formats like FP4.",
+      "• Data used: Evaluated on transformer and hybrid model architectures during pre-training experiments, comparing training loss to BF16 baselines and incorporating into various post-training quantization methods for downstream accuracy assessment.",
+      "• Performance metrics: Prevents divergence in several cases during training, bringing loss significantly closer to BF16 compared to state-of-the-art NVFP4 recipes, and generally improves downstream accuracy when integrated into post-training quantization."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出四分之六（4/6）算法，作为NVFP4量化的改进，通过为每个块评估两个缩放因子，优化近最大值表示，解决FP4等浮点格式的量化误差问题。",
+      "• 数据来源: 在Transformer和混合模型架构上进行预训练实验，对比BF16基准的训练损失，并融入多种后训练量化方法评估下游准确性。",
+      "• 主要结论: 在多个案例中防止训练发散，损失显著接近BF16，优于当前NVFP4训练方案，且在后训练量化中普遍提升下游精度。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; improves training stability and inference accuracy for NVFP4-quantized LLMs, potentially enabling faster, memory-efficient deployments in latency-sensitive applications like high-frequency trading or real-time NLP systems.",
+      "• Implementation Risk: Low to moderate; designed for efficient implementation on NVIDIA Blackwell GPUs, but requires integration into existing training pipelines and may add computational overhead from scale factor evaluation.",
+      "• Novelty: Moderate; adapts block scaling to floating-point quantization, addressing a specific error source in NVFP4, but builds on established quantization techniques rather than introducing a fundamentally new approach."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；将块缩放应用于浮点量化，针对NVFP4中近最大值的量化误差进行优化，但未突破现有量化框架，属于渐进式改进。",
+      "• 实盘坑: 低至中等；需在NVIDIA Blackwell GPU上高效实现，但集成到训练流程可能增加计算开销，且依赖特定硬件支持。",
+      "• 复现难度: 低；算法描述清晰，基于标准量化方法，但需要访问相应GPU和模型架构进行验证。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2512.02004v1",
+    "title": "AlignSAE: Concept-Aligned Sparse Autoencoders",
+    "pdf_url": "https://arxiv.org/pdf/2512.02004v1",
+    "published": "2025-12-01",
+    "crawled_at": "2025-12-02 20:03:22",
+    "ai_score": 7.5,
+    "translated_title": "AlignSAE：概念对齐的稀疏自编码器",
+    "summary_en": [
+      "• Model Architecture: AlignSAE uses a 'pre-train, then post-train' curriculum with unsupervised training followed by supervised post-training to align features with a defined ontology, creating dedicated latent slots for specific concepts while preserving general reconstruction capacity.",
+      "• Data used: The paper does not specify datasets but implies using hidden activations from Large Language Models (LLMs) and human-defined concept ontologies for supervised alignment.",
+      "• Performance metrics: Empirical results demonstrate precise causal interventions, such as reliable 'concept swaps', by targeting single, semantically aligned slots, indicating improved interpretability and control over feature representations."
+    ],
+    "summary_cn": [
+      "• 核心模型: AlignSAE采用'预训练后微调'的课程学习框架，通过无监督训练和后续有监督微调，将稀疏自编码器特征与预定义本体对齐，为特定概念创建专用潜在槽位，同时保留通用重构能力。",
+      "• 数据来源: 未明确指定数据集，但暗示使用大型语言模型的隐藏激活和人工定义的概念本体进行有监督对齐。",
+      "• 主要结论: 实验结果表明，通过针对单个语义对齐槽位，能够实现精确的因果干预（如可靠的概念交换），提升了特征表示的可解释性和可控性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the method could enhance interpretability in LLM-based trading strategies by enabling precise control over concept representations, potentially improving risk management and signal generation in NLP-driven models.",
+      "• Implementation Risk: High; aligning features with human-defined ontologies requires extensive domain expertise and may not generalize well across different market regimes or concept definitions, leading to inconsistent performance.",
+      "• Novelty: Moderate; the 'pre-train, then post-train' approach for concept alignment in SAEs is innovative, but builds on existing sparse autoencoder and interpretability research, with limited demonstrated scalability to complex financial datasets."
+    ],
+    "verdict_cn": [
+      "• 创新点: 采用课程学习框架实现稀疏自编码器的概念对齐，为特定概念创建专用槽位，在可解释性研究中有一定新意，但基于现有技术扩展。",
+      "• 实盘坑: 高; 依赖人工定义的本体进行特征对齐，需要大量领域知识，且在不同市场环境或概念定义下泛化能力可能不足，导致性能不稳定。",
+      "• 复现难度: 中等; 方法描述清晰，但需要获取LLM隐藏激活和构建概念本体，数据准备和调优过程可能复杂，对计算资源有一定要求。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2512.01996v1",
+    "title": "Learning Sim-to-Real Humanoid Locomotion in 15 Minutes",
+    "pdf_url": "https://arxiv.org/pdf/2512.01996v1",
+    "published": "2025-12-01",
+    "crawled_at": "2025-12-02 20:03:45",
+    "ai_score": 8.5,
+    "translated_title": "在15分钟内学习从仿真到真实的人形机器人步态控制",
+    "summary_en": [
+      "• Model Architecture: Utilizes off-policy RL algorithms (FastSAC and FastTD3) with massively parallel simulation (thousands of environments) on a single RTX 4090 GPU, employing minimalist reward functions and carefully tuned design choices for stability.",
+      "• Data used: Training relies on simulated environments with strong domain randomization, including randomized dynamics, rough terrain, and push perturbations, without requiring real-world robot data during training.",
+      "• Performance metrics: Achieves rapid end-to-end learning of humanoid locomotion controllers in just 15 minutes, demonstrated on Unitree G1 and Booster T1 robots, with capabilities for whole-body human-motion tracking policies."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于离策略强化学习算法（FastSAC和FastTD3），通过大规模并行仿真（数千个环境）在单张RTX 4090 GPU上实现快速训练，采用极简奖励函数和精细调优的设计选择以确保稳定性。",
+      "• 数据来源: 使用具有强领域随机化的仿真环境进行训练，包括随机化动力学、粗糙地形和推力扰动，无需在训练阶段收集真实机器人数据。",
+      "• 主要结论: 在15分钟内实现人形机器人步态控制器的端到端快速学习，在Unitree G1和Booster T1机器人上验证有效，并能快速训练全身人体运动跟踪策略。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for accelerating robotic control development in finance-related applications such as automated trading system maintenance or physical asset monitoring, though direct trading alpha is limited.",
+      "• Implementation Risk: Moderate to high risk due to sim-to-real gaps; domain randomization may not fully capture real-world complexities, and hardware dependencies (e.g., RTX 4090) could increase costs.",
+      "• Novelty: Significant novelty in achieving 15-minute training times for humanoid locomotion, leveraging massive parallelism and minimalist rewards, but builds on existing off-policy RL methods without groundbreaking algorithmic advances."
+    ],
+    "verdict_cn": [
+      "• 创新点: 在15分钟内实现人形机器人步态控制的快速训练具有显著创新性，通过大规模并行仿真和极简奖励设计提升效率，但算法层面基于现有离策略RL方法，缺乏突破性理论贡献。",
+      "• 实盘坑: 仿真到真实的迁移风险较高，领域随机化可能无法完全覆盖现实世界的复杂性；硬件依赖（如RTX 4090）可能增加部署成本，且机器人控制的不确定性可能影响实际应用稳定性。",
+      "• 复现难度: 中等难度，需要高性能GPU和仿真环境设置，但开源代码和详细配方降低了技术门槛；不过，调优参数和领域随机化细节可能影响复现效果。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2512.01993v1",
+    "title": "RoaD: Rollouts as Demonstrations for Closed-Loop Supervised Fine-Tuning of Autonomous Driving Policies",
+    "pdf_url": "https://arxiv.org/pdf/2512.01993v1",
+    "published": "2025-12-01",
+    "crawled_at": "2025-12-02 20:04:07",
+    "ai_score": 7.8,
+    "translated_title": "RoaD：将策略自身闭环推演作为演示数据用于自动驾驶策略的闭环监督微调",
+    "summary_en": [
+      "• Model Architecture: RoaD introduces a closed-loop supervised fine-tuning (CL-SFT) method that uses the policy's own rollouts as training demonstrations, enhanced with expert guidance during rollout generation to bias trajectories toward high-quality behavior.",
+      "• Data used: The method leverages human demonstrations for initial training and then generates additional training data from the policy's closed-loop rollouts in simulation, requiring orders of magnitude less data than reinforcement learning approaches.",
+      "• Performance metrics: On WOSAC, RoaD performs similar or better than prior CL-SFT methods; on AlpaSim, it improves driving score by 41% and reduces collisions by 54% compared to baseline methods."
+    ],
+    "summary_cn": [
+      "• 核心模型: RoaD提出一种闭环监督微调方法，利用策略自身在闭环环境中的推演轨迹作为训练数据，并通过专家指导在推演生成过程中引导轨迹向高质量行为偏移。",
+      "• 数据来源: 初始训练使用人类演示数据，后续通过策略在仿真环境中的闭环推演生成额外训练数据，数据需求远低于强化学习方法。",
+      "• 主要结论: 在WOSAC基准测试中，RoaD表现与现有CL-SFT方法相当或更优；在AlpaSim高保真仿真中，驾驶评分提升41%，碰撞减少54%。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - The method addresses covariate shift in autonomous driving policies, potentially improving real-world deployment robustness, but domain transfer to financial applications is indirect.",
+      "• Implementation Risk: High - Requires high-fidelity simulators and expert guidance mechanisms; real-world validation beyond simulation benchmarks is limited.",
+      "• Novelty: Moderate - The core idea of using policy rollouts as training data is not entirely new, but the specific application to closed-loop fine-tuning with expert guidance adds incremental innovation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将策略自身闭环推演作为训练数据，结合专家指导机制，为自动驾驶策略的闭环适应提供了一种数据高效的解决方案。",
+      "• 实盘坑: 依赖高保真仿真环境，专家指导机制设计复杂，实际部署中的安全性和泛化能力仍需验证。",
+      "• 复现难度: 中等 - 需要构建闭环仿真环境和专家指导模块，但方法框架相对清晰，开源实现可能性较高。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2512.01987v1",
+    "title": "Forecasting in Offline Reinforcement Learning for Non-stationary Environments",
+    "pdf_url": "https://arxiv.org/pdf/2512.01987v1",
+    "published": "2025-12-01",
+    "crawled_at": "2025-12-02 20:04:27",
+    "ai_score": 7.8,
+    "translated_title": "非平稳环境下离线强化学习的预测方法",
+    "summary_en": [
+      "• Model Architecture: FORL framework combines conditional diffusion-based state generation with zero-shot time-series foundation models to handle non-stationary environments",
+      "• Data used: Offline RL benchmarks augmented with real-world time-series data to simulate realistic non-stationarity and abrupt offsets",
+      "• Performance metrics: Empirical evaluations show FORL consistently outperforms competitive baselines in environments with unexpected, potentially non-Markovian offsets",
+      "• Key innovation: Unifies forecasting capabilities with agent experience without presupposing specific patterns of future non-stationarity"
+    ],
+    "summary_cn": [
+      "• 核心模型: FORL框架整合了条件扩散候选状态生成与零样本时间序列基础模型，针对非平稳环境设计",
+      "• 数据来源: 离线强化学习基准数据集，增强真实世界时间序列数据以模拟现实非平稳性和突发偏移",
+      "• 主要结论: 在存在意外、潜在非马尔可夫偏移的环境中，FORL相比竞争基线方法持续提升性能表现",
+      "• 技术特点: 无需预设未来非平稳性具体模式，将零样本预测与智能体经验相结合"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - addresses real-world non-stationarity which is critical for robust trading strategies, but limited to offline settings",
+      "• Implementation Risk: High - diffusion models are computationally expensive, zero-shot forecasting reliability in financial markets is unproven",
+      "• Novelty: Significant - first to combine diffusion-based state generation with time-series foundation models for non-stationary offline RL",
+      "• Practical limitations: Assumes access to real-world time-series data for augmentation, may not handle regime shifts in live markets"
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次将扩散状态生成与时间序列基础模型结合，针对非平稳离线强化学习问题提出系统解决方案",
+      "• 实盘坑: 扩散模型计算成本高，金融市场零样本预测可靠性未经证实，离线设置限制实时适应性",
+      "• 复现难度: 中等偏高 - 需要真实时间序列数据增强，扩散模型训练复杂，基准环境需专门构建",
+      "• 应用局限: 假设可获得真实世界时间序列数据，对实时市场状态切换处理能力存疑"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2512.01986v1",
+    "title": "A robust generalizable device-agnostic deep learning model for sleep-wake determination from triaxial wrist accelerometry",
+    "pdf_url": "https://arxiv.org/pdf/2512.01986v1",
+    "published": "2025-12-01",
+    "crawled_at": "2025-12-02 20:05:00",
+    "ai_score": 7.5,
+    "translated_title": "基于三轴腕部加速度计睡眠-觉醒判定的鲁棒通用设备无关深度学习模型",
+    "summary_en": [
+      "• Model Architecture: A 3-class deep learning model trained to detect wake, sleep, and sleep with arousals, collapsed into wake vs. sleep using a decision tree, with specific training on subjects with low sleep efficiency/high arousal index to enhance wake detection.",
+      "• Data used: Wrist accelerometry data collected simultaneously with polysomnography (PSG) from 453 adults undergoing clinical sleep testing using three different devices, spanning a wide age range with and without sleep disorders.",
+      "• Performance metrics: Achieved F1 Score of 0.86, sensitivity (sleep) of 0.87, specificity (wakefulness) of 0.78, with moderate correlations to PSG for total sleep time (R=0.69) and sleep efficiency (R=0.63).",
+      "• Generalizability: Model performance was robust across three different accelerometer models and maintained consistency in the presence of sleep disorders like sleep apnea and periodic limb movements."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用三层分类深度学习模型，识别觉醒、睡眠及伴觉醒睡眠状态，通过决策树合并为觉醒与睡眠二分类，并针对低睡眠效率/高觉醒指数受试者进行专项训练以提升觉醒检测能力。",
+      "• 数据来源: 基于453名成年临床睡眠测试者的三轴腕部加速度计数据，同步采集多导睡眠图（PSG），覆盖广泛年龄范围及有无睡眠障碍人群，使用三种不同设备。",
+      "• 主要结论: 模型在睡眠检测敏感性（0.87）和觉醒特异性（0.78）上表现优异，F1分数达0.86，与PSG在总睡眠时间（R=0.69）和睡眠效率（R=0.63）上呈中度相关，且对睡眠障碍（如睡眠呼吸暂停、周期性肢体运动）具有鲁棒性。",
+      "• 设备通用性: 模型在三种不同加速度计设备上均保持稳定性能，展示了跨设备泛化能力。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the model's robustness to sleep disorders and device-agnostic nature could enable scalable sleep-wake detection in consumer wearables, potentially informing health-related trading signals or fatigue risk models in occupational settings.",
+      "• Implementation Risk: High; real-world deployment faces challenges from data quality variability, environmental noise in accelerometry, and the need for continuous model updates to adapt to new device hardware and user demographics.",
+      "• Novelty: Limited; while the cross-device validation and focus on sleep disorder robustness are commendable, the core approach of using deep learning on accelerometry for sleep-wake detection is well-established, with incremental improvements over prior work.",
+      "• Data Dependency: Critical; model performance heavily relies on high-quality PSG-annotated data, which is expensive and time-consuming to collect, limiting rapid iteration and large-scale application without significant investment."
+    ],
+    "verdict_cn": [
+      "• 创新点: 有限；模型在跨设备验证和睡眠障碍鲁棒性方面有所贡献，但基于加速度计的深度学习睡眠-觉醒检测方法已较为成熟，属于对现有技术的渐进式改进。",
+      "• 实盘坑: 高；实际部署面临数据质量波动、加速度计环境噪声干扰等挑战，且需持续更新模型以适应新设备硬件和用户群体变化，维护成本较高。",
+      "• 复现难度: 中等；研究提供了清晰的模型架构和数据描述，但依赖专业PSG标注数据，采集成本高昂，且未开源代码或模型权重，可能增加独立验证的障碍。",
+      "• 应用局限: 模型专注于成人群体，未验证在儿童或特殊人群中的性能，且仅评估了三种设备，在更广泛设备生态中的泛化能力存疑。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "Sleep Medicine",
+      "status": "Accepted"
+    }
+  },
+  {
     "id": "2511.23473v1",
     "title": "ThetaEvolve: Test-time Learning on Open Problems",
     "pdf_url": "https://arxiv.org/pdf/2511.23473v1",
