@@ -1,5 +1,353 @@
 [
   {
+    "id": "2512.03035v1",
+    "title": "Learning Physically Consistent Lagrangian Control Models Without Acceleration Measurements",
+    "pdf_url": "https://arxiv.org/pdf/2512.03035v1",
+    "published": "2025-12-02",
+    "crawled_at": "2025-12-03 20:01:32",
+    "ai_score": 7.8,
+    "translated_title": "无需加速度测量的物理一致拉格朗日控制模型学习",
+    "summary_en": [
+      "• Model Architecture: Hybrid method combining Lagrangian neural networks with a novel loss function to enforce physical consistency without acceleration calculations",
+      "• Data used: Limited, partial, and noisy training data from both simulated systems and experimental benchmarks",
+      "• Performance metrics: Significant improvements in physical consistency of learned models compared to baseline learning approaches",
+      "• Control applications: Demonstrated practical relevance for feedback linearization and energy-based control techniques on experimental systems"
+    ],
+    "summary_cn": [
+      "• 核心模型: 混合方法结合拉格朗日神经网络与新颖损失函数，无需加速度计算即可保证物理一致性",
+      "• 数据来源: 来自仿真系统和实验基准的有限、部分且带噪声的训练数据",
+      "• 主要结论: 相比基线学习方法，所提方案在模型物理一致性方面有显著提升",
+      "• 控制应用: 在实验系统上验证了反馈线性化和基于能量控制技术的实际相关性"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - physically consistent models could improve control stability in robotic trading systems or automated execution",
+      "• Implementation Risk: High - real-world financial systems have far more complex dynamics than mechanical benchmarks, noisy market data presents major challenges",
+      "• Novelty: Significant - original loss function for enforcing physical consistency without acceleration measurements addresses key limitation in Lagrangian neural networks",
+      "• Practical limitations: Experimental validation on simple mechanical systems only, financial market dynamics are orders of magnitude more complex"
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出无需加速度测量的物理一致性损失函数，解决了拉格朗日神经网络在真实系统中的关键限制",
+      "• 实盘坑: 金融市场动态比机械系统复杂数个数量级，噪声数据问题更严重，直接迁移风险极高",
+      "• 复现难度: 中等 - 核心算法清晰但需要专业物理建模知识，金融数据适配需要大量工程工作",
+      "• 适用性: 更适合机器人交易或自动化执行系统，而非传统量化策略"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "IEEE Transactions on Robotics or ICRA",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2512.03025v1",
+    "title": "LORE: A Large Generative Model for Search Relevance",
+    "pdf_url": "https://arxiv.org/pdf/2512.03025v1",
+    "published": "2025-12-02",
+    "crawled_at": "2025-12-03 20:01:55",
+    "ai_score": 8.2,
+    "translated_title": "LORE：用于搜索相关性的大型生成模型",
+    "summary_en": [
+      "• Model Architecture: LORE employs a two-stage training paradigm combining progressive Chain-of-Thought synthesis via Supervised Fine-Tuning with human preference alignment via Reinforcement Learning, designed to decompose relevance into distinct capabilities including knowledge/reasoning, multi-modal matching, and rule adherence.",
+      "• Data used: The framework leverages extensive e-commerce search data accumulated over three years of deployment, though specific dataset details are not explicitly mentioned in the abstract; it includes synthesized CoT data and human preference annotations for RL alignment.",
+      "• Performance metrics: Achieves a cumulative +27% improvement in online GoodRate metrics over three years of iterative deployment, with evaluation conducted using the comprehensive RAIR benchmark designed to assess core relevance capabilities."
+    ],
+    "summary_cn": [
+      "• 核心模型: LORE采用两阶段训练范式，结合基于监督微调的渐进式思维链合成与基于强化学习的人类偏好对齐，将相关性分解为知识推理、多模态匹配和规则遵循等核心能力。",
+      "• 数据来源: 基于三年电商搜索部署积累的数据，包括合成的思维链数据和用于强化学习对齐的人类偏好标注，但摘要未提供具体数据集细节。",
+      "• 主要结论: 通过能力分解和两阶段训练，LORE在在线GoodRate指标上实现累计27%的提升，RAIR基准验证了其在核心相关性能力上的有效性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate-high; the systematic decomposition of relevance into distinct capabilities could uncover latent patterns in search behavior that traditional monolithic models miss, potentially transferable to financial text analysis or news sentiment ranking.",
+      "• Implementation Risk: High; the three-year deployment timeline suggests significant engineering overhead, and the query frequency-stratified deployment strategy requires robust infrastructure; RL alignment with human preferences introduces stability risks.",
+      "• Novelty: Moderate; while CoT and RL alignment are established techniques, the principled decomposition of relevance and the complete lifecycle blueprint (data to deployment) offer methodological advances for vertical domain applications."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将相关性任务系统分解为知识推理、多模态匹配和规则遵循等核心能力，突破了传统思维链方法的性能瓶颈；提供从数据到部署的完整生命周期蓝图。",
+      "• 实盘坑: 三年部署周期暗示高昂工程成本；基于查询频率的分层部署策略对基础设施要求高；强化学习对齐人类偏好可能引入训练不稳定风险。",
+      "• 复现难度: 较高；需要大量电商搜索数据和人类标注进行两阶段训练，且部署策略依赖特定业务场景，通用化复现可能受限。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2512.03024v1",
+    "title": "TokenPowerBench: Benchmarking the Power Consumption of LLM Inference",
+    "pdf_url": "https://arxiv.org/pdf/2512.03024v1",
+    "published": "2025-12-02",
+    "crawled_at": "2025-12-03 20:02:19",
+    "ai_score": 8.5,
+    "translated_title": "TokenPowerBench：大语言模型推理功耗基准测试",
+    "summary_en": [
+      "• Model Architecture: TokenPowerBench is a lightweight, extensible benchmark combining a declarative configuration interface (model choice, prompt set, inference engine), a measurement layer capturing GPU-, node-, and system-level power without specialized meters, and a phase-aligned metrics pipeline attributing energy to prefill and decode stages.",
+      "• Data used: The benchmark is evaluated on four widely used model series (Llama, Falcon, Qwen, Mistral), covering parameter ranges from 1 billion up to frontier-scale Llama3-405B, with experiments varying batch size, context length, parallelism strategy, and quantization.",
+      "• Performance metrics: Key metrics include joules per token and other energy-efficiency measures, enabling users to assess how settings affect power consumption, forecast operating expenses, and meet sustainability targets in LLM inference deployments."
+    ],
+    "summary_cn": [
+      "• 核心模型: TokenPowerBench是一个轻量级、可扩展的基准测试工具，包含声明式配置接口（模型选择、提示集、推理引擎）、无需专用电表的GPU/节点/系统级功耗测量层，以及将能耗归因于预填充和解码阶段的相位对齐指标流水线。",
+      "• 数据来源: 在四个广泛使用的模型系列（Llama、Falcon、Qwen、Mistral）上进行评估，参数范围从10亿到前沿规模的Llama3-405B，实验涵盖批量大小、上下文长度、并行策略和量化等变量。",
+      "• 主要结论: 该基准测试提供每令牌焦耳等能效指标，帮助用户分析设置对功耗的影响，预测运营成本，并支持LLM服务部署中的可持续性目标。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for quant funds focusing on sustainable AI infrastructure, as it enables precise power consumption forecasting and cost optimization in LLM inference, potentially reducing operational expenses by 10-30% in large-scale deployments.",
+      "• Implementation Risk: Moderate; while open-source and extensible, real-world deployment requires integration with existing inference pipelines and may face challenges in heterogeneous hardware environments or dynamic workload conditions.",
+      "• Novelty: Significant as the first dedicated benchmark for LLM inference power consumption, addressing a critical gap in existing benchmarks that focus on training or performance metrics, with practical applications for cost and sustainability management."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首个专注于LLM推理功耗的基准测试工具，填补了现有基准在训练或性能指标方面的空白，具有轻量级、可扩展的设计和无需专用电表的测量能力。",
+      "• 实盘坑: 实际部署需与现有推理流水线集成，可能在异构硬件环境或动态工作负载条件下遇到挑战，且功耗测量精度可能受系统噪声影响。",
+      "• 复现难度: 中等；开源代码和详细配置降低了复现门槛，但大规模实验（如Llama3-405B）需要高端GPU集群，可能增加成本和复杂性。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2512.03019v1",
+    "title": "Distribution-Calibrated Inference time compute for Thinking LLM-as-a-Judge",
+    "pdf_url": "https://arxiv.org/pdf/2512.03019v1",
+    "published": "2025-12-02",
+    "crawled_at": "2025-12-03 20:02:42",
+    "ai_score": 7.8,
+    "translated_title": "基于分布校准的推理时计算用于思考型LLM作为评判者",
+    "summary_en": [
+      "• Model Architecture: Proposes a distribution-calibrated aggregation scheme based on Bradley-Terry-Davidson formulation that models three-way preferences using rating counts, incorporating both polarity (margin among non-ties) and decisiveness (non-tie rate) to distinguish narrow margins from strong consensus.",
+      "• Data used: Evaluated across various evaluation benchmarks with human-consensus meta-labels as ground truth, though specific datasets are not detailed in the abstract.",
+      "• Performance metrics: Shows consistent reduction in MAE (Mean Absolute Error) and increased pairwise accuracy versus standard baselines (majority vote, soft self-consistency, instruction-based self-aggregation), matching or exceeding individual human raters when evaluated against human-consensus meta-labels."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出基于Bradley-Terry-Davidson公式的分布校准聚合方案，利用评分计数建模三向偏好，结合极性（非平局间的边际）和决定性（非平局率）来区分窄边际与强共识。",
+      "• 数据来源: 在多个评估基准上进行测试，使用人类共识元标签作为真实基准，但摘要中未详细说明具体数据集。",
+      "• 主要结论: 相比标准基线方法（多数投票、软自一致性、基于指令的自聚合），该方法持续降低MAE并提高成对准确性，在人类共识元标签评估中匹配或超越个体人类评分者。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - The method improves reliability of LLM-as-judge systems, which could enhance automated evaluation pipelines in quantitative research, but direct trading alpha generation is limited without specific financial applications.",
+      "• Implementation Risk: Low to moderate - The approach is theoretically sound and tested on benchmarks, but real-world deployment in noisy financial data environments may require additional robustness testing and calibration.",
+      "• Novelty: High - Introduces a principled, distribution-aware aggregation scheme that addresses inconsistencies in existing methods when ties are allowed, leveraging both polarity and decisiveness for better calibration."
+    ],
+    "verdict_cn": [
+      "• 创新点: 较高 - 提出基于分布校准的聚合方法，解决现有方法在允许平局时的不一致性问题，结合极性和决定性实现更优校准，在LLM作为评判者领域具有理论创新。",
+      "• 实盘坑: 中低 - 方法在基准测试中表现稳健，但在金融数据噪声环境中部署需额外鲁棒性测试，且未针对具体交易场景优化，直接应用风险可控但收益不确定。",
+      "• 复现难度: 中等 - 基于公开的Bradley-Terry-Davidson模型，算法描述清晰，但需要具体数据集和计算资源生成n个独立思考评分样本，复现门槛适中。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2512.02983v1",
+    "title": "ProteinPNet: Prototypical Part Networks for Concept Learning in Spatial Proteomics",
+    "pdf_url": "https://arxiv.org/pdf/2512.02983v1",
+    "published": "2025-12-02",
+    "crawled_at": "2025-12-03 20:03:01",
+    "ai_score": 7.5,
+    "translated_title": "ProteinPNet：用于空间蛋白质组学概念学习的原型部分网络",
+    "summary_en": [
+      "• Model Architecture: ProteinPNet is a prototypical part network framework that directly learns discriminative, interpretable spatial prototypes through supervised training, unlike traditional post-hoc explainability models.",
+      "• Data used: Validated on synthetic datasets with ground truth motifs and tested on a real-world lung cancer spatial proteomics dataset.",
+      "• Performance metrics: Consistently identifies biologically meaningful prototypes aligned with different tumor subtypes, capturing interpretable features related to immune infiltration and tissue modularity."
+    ],
+    "summary_cn": [
+      "• 核心模型: ProteinPNet是一种基于原型部分网络的框架，通过监督训练直接学习可区分、可解释的空间原型，区别于传统的后验可解释性模型。",
+      "• 数据来源: 在具有真实基序的合成数据集上验证，并在真实世界的肺癌空间蛋白质组学数据集上测试。",
+      "• 主要结论: 一致识别出与不同肿瘤亚型对齐的生物学意义原型，捕捉到与免疫浸润和组织模块性相关的可解释特征。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; prototype-based learning could reveal interpretable spatial biomarkers in tumor microenvironment, potentially useful for precision oncology applications in biotech/pharma investing.",
+      "• Implementation Risk: High; real-world spatial proteomics data is scarce and noisy, and translating biological prototypes to actionable financial signals is non-trivial.",
+      "• Novelty: High; direct learning of interpretable spatial prototypes in spatial omics is innovative, moving beyond black-box deep learning models in this domain."
+    ],
+    "verdict_cn": [
+      "• 创新点: 在空间组学中直接学习可解释的空间原型具有创新性，超越了该领域的黑盒深度学习模型。",
+      "• 实盘坑: 真实世界空间蛋白质组学数据稀缺且噪声大，将生物学原型转化为可操作的金融信号具有挑战性。",
+      "• 复现难度: 中等；需要专业领域知识和高质量空间蛋白质组学数据，但模型架构相对标准。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2512.02978v1",
+    "title": "Rethinking Generalized BCIs: Benchmarking 340,000+ Unique Algorithmic Configurations for EEG Mental Command Decoding",
+    "pdf_url": "https://arxiv.org/pdf/2512.02978v1",
+    "published": "2025-12-02",
+    "crawled_at": "2025-12-03 20:03:24",
+    "ai_score": 7.8,
+    "translated_title": "重新思考广义脑机接口：基于340,000+独特算法配置的EEG心理指令解码基准测试",
+    "summary_en": [
+      "• Model Architecture: Evaluated over 340,000+ unique combinations of spatial (Common Spatial Patterns, Riemannian geometry) and nonlinear (functional connectivity, fractal/entropy-based features) EEG classification methods across three open-access datasets.",
+      "• Data used: Three open-access EEG datasets analyzed at per-participant level across multiple frequency bands (8-15 Hz and 8-30 Hz), focusing on motor imagery patterns with documented inter- and intra-participant variability.",
+      "• Performance metrics: Covariance tangent space projection (cov-tgsp) and CSP achieved highest average classification accuracies, but performance was strongly dataset-dependent with marked participant-level differences; nonlinear methods outperformed spatial approaches for specific individuals."
+    ],
+    "summary_cn": [
+      "• 核心模型: 评估了超过340,000种空间方法（共空间模式、黎曼几何）和非线性方法（功能连接性、分形/熵特征）的独特组合，用于EEG分类。",
+      "• 数据来源: 三个公开EEG数据集，在个体参与者层面分析多个频段（8-15 Hz和8-30 Hz），重点关注运动想象模式。",
+      "• 主要结论: 协方差切空间投影和CSP平均准确率最高，但性能高度依赖数据集；非线性方法对特定个体表现更优，强调个性化管道选择的必要性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - Demonstrates personalized EEG decoding can outperform generic methods, suggesting potential for adaptive BCI systems in niche applications, but direct financial alpha generation is limited.",
+      "• Implementation Risk: High - Strong dataset dependency and participant variability make real-world deployment challenging; requires extensive calibration and may not generalize across different EEG setups or populations.",
+      "• Novelty: Significant - Large-scale benchmarking (340,000+ configurations) at per-participant level is unprecedented, providing empirical evidence against 'one-size-fits-all' approaches in EEG decoding."
+    ],
+    "verdict_cn": [
+      "• 创新点: 大规模基准测试（340,000+配置）在个体层面进行，首次系统证明EEG解码无通用最优方法，推动个性化脑机接口研究。",
+      "• 实盘坑: 数据集依赖性极强，参与者变异性大，实际部署需大量校准，跨设备或人群泛化能力存疑。",
+      "• 复现难度: 中等 - 使用公开数据集和标准方法，但340,000+配置的计算资源需求高，个体化分析流程复杂。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2512.02968v1",
+    "title": "Flexible Gravitational-Wave Parameter Estimation with Transformers",
+    "pdf_url": "https://arxiv.org/pdf/2512.02968v1",
+    "published": "2025-12-02",
+    "crawled_at": "2025-12-03 20:03:50",
+    "ai_score": 8.2,
+    "translated_title": "基于Transformer的灵活引力波参数估计方法",
+    "summary_en": [
+      "• Model Architecture: Introduces Dingo-T1, a transformer-based neural network architecture with adaptive training strategy that enables flexible inference across varying detector configurations, frequency ranges, and data cuts without retraining.",
+      "• Data used: Analyzes 48 real gravitational-wave events from the third LIGO-Virgo-KAGRA Observing Run, covering diverse astrophysical sources and signal characteristics under multiple analysis configurations.",
+      "• Performance metrics: Improves median sample efficiency from 1.4% to 4.2% on real events, demonstrates capability to handle missing/incomplete data, and enables systematic studies of detector configuration impacts on posterior distributions.",
+      "• Key innovation: Provides a single model that can perform parameter estimation, systematic studies, and general relativity tests across diverse observational scenarios without architecture modifications."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出Dingo-T1，基于Transformer架构的神经网络，采用自适应训练策略，可在不同探测器配置、频率范围和数据截断条件下进行灵活推理而无需重新训练。",
+      "• 数据来源: 使用第三次LIGO-Virgo-KAGRA观测运行的48个真实引力波事件数据，涵盖多种天体物理源和信号特征，并在多种分析配置下进行测试。",
+      "• 主要结论: 将真实事件的样本效率中位数从1.4%提升至4.2%，证明模型能够处理缺失或不完整数据，并支持系统研究探测器配置对后验分布的影响。",
+      "• 应用扩展: 单一模型即可完成参数估计、系统研究和广义相对论检验，为当前和下一代天文台提供可扩展的推理框架。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for financial time-series analysis where data quality varies (market closures, missing ticks, regime changes) - could enable robust inference across different market conditions without model retraining.",
+      "• Implementation Risk: Moderate-high risk due to domain specificity - gravitational wave data characteristics differ significantly from financial data, requiring substantial adaptation of preprocessing and feature engineering.",
+      "• Novelty: Significant methodological innovation in handling incomplete/missing data through flexible architecture - transformer adaptation strategy could inspire similar approaches in finance for handling irregular market data.",
+      "• Scalability Concern: While efficient for gravitational waves, financial applications would require handling much higher frequency data and more complex noise structures, potentially limiting direct transferability."
+    ],
+    "verdict_cn": [
+      "• 创新点: 通过灵活的Transformer架构处理不完整/缺失数据的方法具有突破性，为金融时间序列分析中处理市场闭市、数据缺失和制度转换提供了新思路。",
+      "• 实盘坑: 高领域特异性风险 - 引力波数据与金融数据特征差异巨大，需彻底改造预处理和特征工程，直接迁移可能失败。",
+      "• 复现难度: 中等偏高 - 需要专业的天文物理数据集和领域知识，金融应用需重新设计数据管道和损失函数，但核心架构思想可借鉴。",
+      "• 扩展挑战: 金融数据频率更高、噪声结构更复杂，直接应用可能面临计算效率和过拟合问题，需要针对性优化。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2512.02967v1",
+    "title": "Pruning AMR: Efficient Visualization of Implicit Neural Representations via Weight Matrix Analysis",
+    "pdf_url": "https://arxiv.org/pdf/2512.02967v1",
+    "published": "2025-12-02",
+    "crawled_at": "2025-12-03 20:04:10",
+    "ai_score": 7.2,
+    "translated_title": "剪枝AMR：通过权重矩阵分析实现隐式神经表示的高效可视化",
+    "summary_en": [
+      "• Model Architecture: PruningAMR algorithm uses interpolative decomposition pruning on weight matrices of pre-trained implicit neural representations (INRs) to identify geometric features, then guides adaptive mesh refinement for variable-resolution visualization.",
+      "• Data used: Works with pre-trained INRs without access to original training data; applicable to memory-intensive visualization tasks like 4D CT scanning where data is natively stored as INRs.",
+      "• Performance metrics: Achieves substantial memory savings by producing adaptive meshes tailored to underlying function resolution, enabling efficient discretization to regular grids for visualization tasks."
+    ],
+    "summary_cn": [
+      "• 核心模型: PruningAMR算法通过对预训练隐式神经表示（INR）的权重矩阵进行插值分解剪枝，识别几何特征，并指导自适应网格细化，实现可变分辨率可视化。",
+      "• 数据来源: 使用预训练的INR模型，无需原始训练数据；适用于内存密集型可视化任务（如4D CT扫描），其中数据以INR形式原生存储。",
+      "• 主要结论: 通过生成适应底层函数分辨率的自适应网格，实现显著内存节省，支持高效离散化到规则网格以完成可视化任务。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - technique could be adapted for efficient data compression in financial time-series visualization or high-dimensional market microstructure analysis, but direct trading alpha generation is limited.",
+      "• Implementation Risk: High - depends on quality of pre-trained INRs and may require domain-specific tuning for financial applications; mesh generation process adds computational overhead.",
+      "• Novelty: Significant - novel approach combining neural network pruning with adaptive mesh refinement for INR visualization, though application to finance would require substantial adaptation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将神经网络剪枝与自适应网格细化结合，用于INR可视化，方法新颖，但金融应用需大幅调整。",
+      "• 实盘坑: 依赖预训练INR质量，金融领域应用需大量调参；网格生成过程增加计算开销，可能影响实时性。",
+      "• 复现难度: 中等 - 算法原理清晰，但需要INR预训练和网格生成的专业知识，金融数据适配可能复杂。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2512.02947v1",
+    "title": "Representation of Inorganic Synthesis Reactions and Prediction: Graphical Framework and Datasets",
+    "pdf_url": "https://arxiv.org/pdf/2512.02947v1",
+    "published": "2025-12-02",
+    "crawled_at": "2025-12-03 20:04:31",
+    "ai_score": 7.2,
+    "translated_title": "无机合成反应表示与预测：图框架与数据集",
+    "summary_en": [
+      "• Model Architecture: Introduces ActionGraph, a directed acyclic graph framework encoding chemical and procedural structure of inorganic synthesis reactions through synthesis operations.",
+      "• Data used: 13,017 text-mined solid-state synthesis reactions from the Materials Project database.",
+      "• Performance metrics: Incorporates PCA-reduced ActionGraph adjacency matrices into k-nearest neighbors model, achieving 1.34% and 2.76% increases in precursor and operation F1 scores respectively, with operation length matching accuracy rising 3.4 times from 15.8% to 53.3%."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出ActionGraph框架，一种有向无环图结构，通过合成操作编码无机合成反应的化学和程序结构。",
+      "• 数据来源: 使用Materials Project数据库中的13,017个文本挖掘固态合成反应。",
+      "• 主要结论: 将PCA降维后的ActionGraph邻接矩阵融入k近邻检索模型，显著提升合成路径预测，操作长度匹配准确率从15.8%提升至53.3%，增长3.4倍。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - framework shows promise for materials discovery pipelines but incremental performance gains (1-3% F1) limit immediate trading edge without integration into broader ML systems.",
+      "• Implementation Risk: High - reliance on text-mined data introduces noise; PCA component trade-off (10-11 vs 30) indicates model instability; real-world synthesis involves complex kinetics not captured.",
+      "• Novelty: Solid - ActionGraph representation is novel for encoding procedural steps, but k-NN approach is simplistic; paper lacks comparison to state-of-the-art sequence models (e.g., transformers)."
+    ],
+    "verdict_cn": [
+      "• 创新点: 较强 - ActionGraph框架首次将合成操作图结构化，但k-NN模型基础，未与先进序列模型（如Transformer）对比，创新性受限。",
+      "• 实盘坑: 高 - 文本挖掘数据噪声大；PCA组件数选择（10-11与30）存在权衡，模型稳定性存疑；未考虑实际合成动力学因素。",
+      "• 复现难度: 中等 - 依赖公开Materials Project数据，但文本挖掘和PCA处理需精细调参，图结构构建可能计算成本较高。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2512.02925v1",
+    "title": "Fast Gaussian Process Approximations for Autocorrelated Data",
+    "pdf_url": "https://arxiv.org/pdf/2512.02925v1",
+    "published": "2025-12-02",
+    "crawled_at": "2025-12-03 20:04:50",
+    "ai_score": 7.2,
+    "translated_title": "自相关数据的快速高斯过程近似方法",
+    "summary_en": [
+      "• Model Architecture: The paper modifies existing fast Gaussian process approximations by segmenting autocorrelated data into blocks to decorrelate them, enabling efficient computation while maintaining accuracy.",
+      "• Data used: The study employs diverse application datasets with autocorrelated characteristics, though specific datasets are not detailed in the abstract.",
+      "• Performance metrics: Numerical experiments show the proposed approaches accelerate computation for Gaussian process regression on autocorrelated data without compromising prediction performance, addressing temporal overfitting."
+    ],
+    "summary_cn": [
+      "• 核心模型: 通过将自相关数据分块以去相关，改进现有快速高斯过程近似方法，适用于自相关数据的高效建模。",
+      "• 数据来源: 使用多种具有自相关特性的应用数据集进行数值实验，但摘要中未具体说明数据集细节。",
+      "• 主要结论: 所提方法能显著加速自相关数据的高斯过程回归计算，且不损害模型预测性能，有效缓解时间过拟合问题。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the method could enhance predictive models in time-series financial data by reducing computational overhead while maintaining accuracy, potentially improving trading signal generation.",
+      "• Implementation Risk: High; adapting the blocking approach to real-world financial data with complex autocorrelation structures may require careful parameter tuning and validation to avoid performance degradation.",
+      "• Novelty: Low to moderate; the idea of blocking for decorrelation is not entirely new, but its application to fast Gaussian process approximations for autocorrelated data adds practical value in computational efficiency."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将分块去相关技术应用于快速高斯过程近似，针对自相关数据优化计算效率，属于方法改进而非根本性突破。",
+      "• 实盘坑: 在金融市场复杂自相关数据中实施时，分块策略的参数选择和验证风险较高，可能影响模型稳定性和预测精度。",
+      "• 复现难度: 中等；需要处理自相关数据和实现分块算法，但基于现有高斯过程框架，技术门槛相对可控。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2512.02020v1",
     "title": "EfficientFlow: Efficient Equivariant Flow Policy Learning for Embodied AI",
     "pdf_url": "https://arxiv.org/pdf/2512.02020v1",
