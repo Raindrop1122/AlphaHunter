@@ -1,5 +1,353 @@
 [
   {
+    "id": "2512.05117v1",
+    "title": "The Universal Weight Subspace Hypothesis",
+    "pdf_url": "https://arxiv.org/pdf/2512.05117v1",
+    "published": "2025-12-04",
+    "crawled_at": "2025-12-05 20:01:29",
+    "ai_score": 8.5,
+    "translated_title": "通用权重子空间假说",
+    "summary_en": [
+      "• Model Architecture: Analyzes over 1100 models including 500 Mistral-7B LoRAs, 500 Vision Transformers, and 50 LLaMA-8B models across diverse architectures",
+      "• Data used: Trained on a wide range of tasks and datasets (unspecified but implied diverse domains), using spectral decomposition techniques on weight matrices",
+      "• Performance metrics: Identifies universal low-dimensional subspaces capturing majority variance in few principal directions, demonstrating systematic convergence regardless of initialization, task, or domain"
+    ],
+    "summary_cn": [
+      "• 核心模型: 分析了超过1100个模型，包括500个Mistral-7B LoRA、500个视觉Transformer和50个LLaMA-8B模型，涵盖多种架构",
+      "• 数据来源: 在广泛的任务和数据集上训练（未具体说明但暗示多样化领域），对权重矩阵应用谱分解技术",
+      "• 主要结论: 识别出通用低维子空间，在少数主方向上捕获大部分方差，证明无论初始化、任务或领域如何，系统性地收敛到共享谱子空间"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High - Universal subspaces could enable efficient model reuse, multi-task learning, and model merging, potentially reducing computational costs and carbon footprint for large-scale neural models",
+      "• Implementation Risk: Moderate - Requires extensive empirical validation across more architectures and tasks; practical application in financial contexts (e.g., algorithmic trading) needs further testing",
+      "• Novelty: High - First large-scale empirical evidence of universal subspaces in deep networks, offering new insights into intrinsic information organization and raising questions about discovery without extensive resources"
+    ],
+    "verdict_cn": [
+      "• 创新点: 高 - 首次提供深度学习网络中通用子空间的大规模实证证据，为内在信息组织提供新见解，并引发关于无需大量资源即可发现的疑问",
+      "• 实盘坑: 中等 - 需要在更多架构和任务上进行广泛实证验证；在金融环境（如算法交易）中的实际应用需进一步测试",
+      "• 复现难度: 中等 - 需要大量计算资源（1100+模型）和谱分解技术，但方法描述清晰，可复现性较高"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2512.05116v1",
+    "title": "Value Gradient Guidance for Flow Matching Alignment",
+    "pdf_url": "https://arxiv.org/pdf/2512.05116v1",
+    "published": "2025-12-04",
+    "crawled_at": "2025-12-05 20:01:47",
+    "ai_score": 7.8,
+    "translated_title": "基于价值梯度引导的流匹配对齐方法",
+    "summary_en": [
+      "• Model Architecture: VGG-Flow method leverages optimal control theory to finetune pretrained flow matching models by matching the optimal difference between finetuned and pretrained velocity fields with the gradient field of a value function",
+      "• Data used: Empirical validation conducted on Stable Diffusion 3, a popular text-to-image flow matching model, though specific training datasets are not detailed in the abstract",
+      "• Performance metrics: Achieves effective and prior-preserving alignment under limited computational budgets, demonstrating adaptation efficiency while maintaining probabilistic soundness of prior preservation"
+    ],
+    "summary_cn": [
+      "• 核心模型: VGG-Flow方法基于最优控制理论，通过将微调后速度场与预训练速度场之间的最优差异与价值函数的梯度场匹配，实现流匹配模型的微调",
+      "• 数据来源: 在Stable Diffusion 3（流行的文本到图像流匹配模型）上进行实证验证，但摘要中未详细说明具体训练数据集",
+      "• 主要结论: 在有限计算预算下实现有效且保持先验的对齐，展示了适应效率同时保持了先验的概率合理性"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - method addresses key limitation in flow matching alignment (efficiency vs prior preservation trade-off) but limited to specific generative model class; potential applications in synthetic data generation for training financial models",
+      "• Implementation Risk: High - requires sophisticated understanding of optimal control theory and flow matching architectures; value function initialization heuristics may be domain-specific and difficult to generalize",
+      "• Novelty: Significant - novel application of optimal control theory to flow matching alignment problem; gradient-matching approach with value function guidance represents innovative technical contribution"
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著 - 将最优控制理论创新应用于流匹配对齐问题；基于价值函数引导的梯度匹配方法代表了重要的技术贡献",
+      "• 实盘坑: 高 - 需要深入理解最优控制理论和流匹配架构；价值函数初始化启发式方法可能具有领域特异性且难以泛化",
+      "• 复现难度: 中等偏高 - 需要Stable Diffusion 3等特定流匹配模型作为基础，且价值函数设计需要领域专业知识"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2512.05114v1",
+    "title": "Deep infant brain segmentation from multi-contrast MRI",
+    "pdf_url": "https://arxiv.org/pdf/2512.05114v1",
+    "published": "2025-12-04",
+    "crawled_at": "2025-12-05 20:02:04",
+    "ai_score": 8.2,
+    "translated_title": "基于多对比度MRI的深度婴儿脑分割",
+    "summary_en": [
+      "• Model Architecture: BabySeg framework utilizes domain randomization techniques to synthesize diverse training images and features flexible pooling mechanism for multi-scan inputs.",
+      "• Data used: Pediatric brain MRI scans from infants and young children with varying protocols, including repeat scans and image types not seen during training.",
+      "• Performance metrics: Achieves state-of-the-art performance matching or exceeding existing methods across various age cohorts and input configurations with significantly reduced runtime."
+    ],
+    "summary_cn": [
+      "• 核心模型: BabySeg框架基于领域随机化技术合成多样化训练图像，支持灵活的多扫描特征池化机制。",
+      "• 数据来源: 婴幼儿多协议脑部MRI扫描数据，包括重复扫描和训练中未见的图像类型。",
+      "• 主要结论: 在多种年龄组和输入配置下实现最先进性能，运行时间大幅减少，超越现有方法。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for medical imaging applications in pediatric neurology and developmental studies, but limited direct financial market applications.",
+      "• Implementation Risk: Moderate risk due to dependency on specialized MRI data and potential variability in clinical imaging conditions.",
+      "• Novelty: Significant novelty in domain randomization for pediatric MRI segmentation and flexible multi-scan feature interaction mechanism."
+    ],
+    "verdict_cn": [
+      "• 创新点: 领域随机化技术在儿科MRI分割中的创新应用，多扫描特征交互机制具有突破性。",
+      "• 实盘坑: 依赖专业医疗影像数据，临床环境成像条件多变可能影响模型稳定性。",
+      "• 复现难度: 中等偏高，需要获取婴幼儿MRI数据集和计算资源进行领域随机化训练。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "Medical Image Analysis or MICCAI",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2512.05112v1",
+    "title": "DraCo: Draft as CoT for Text-to-Image Preview and Rare Concept Generation",
+    "pdf_url": "https://arxiv.org/pdf/2512.05112v1",
+    "published": "2025-12-04",
+    "crawled_at": "2025-12-05 20:02:27",
+    "ai_score": 8.2,
+    "translated_title": "DraCo：以草稿作为思维链的文本到图像预览与稀有概念生成",
+    "summary_en": [
+      "• Model Architecture: DraCo introduces a novel interleaved reasoning paradigm that generates low-resolution draft images as visual previews, then uses the model's inherent understanding to verify semantic alignment and perform selective corrections with super-resolution, supported by DraCo-CFG for classifier-free guidance.",
+      "• Data used: The authors curated DraCo-240K, a dataset designed to enhance three atomic capabilities: general correction, instance manipulation, and layout reorganization, specifically tailored for training the model's reasoning and refinement processes.",
+      "• Performance metrics: DraCo achieves significant improvements on benchmarks: +8% on GenEval, +0.91 on Imagine-Bench, and +3% on GenEval++, outperforming direct generation and other CoT-enhanced methods in text-to-image generation tasks."
+    ],
+    "summary_cn": [
+      "• 核心模型: DraCo采用草稿作为思维链的交替推理范式，先生成低分辨率草稿图像作为视觉预览，再利用模型内在理解能力验证语义对齐，并通过超分辨率进行选择性修正，辅以DraCo-CFG策略优化推理过程。",
+      "• 数据来源: 构建了DraCo-240K数据集，专注于提升通用校正、实例操纵和布局重组三种原子能力，专门用于训练模型的推理与精炼能力。",
+      "• 主要结论: 在GenEval、Imagine-Bench和GenEval++等基准测试中，DraCo相比直接生成和其他思维链增强方法，性能显著提升，有效解决了文本规划粗糙和稀有属性组合生成困难的问题。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for generating rare or complex visual concepts in financial data visualization, such as unusual market scenarios or composite risk indicators, which could enhance quantitative modeling and trading signal interpretation.",
+      "• Implementation Risk: Moderate to high risk due to reliance on large-scale multimodal training data (DraCo-240K) and computational demands for super-resolution refinement, which may limit real-time deployment in high-frequency trading environments.",
+      "• Novelty: Significant novelty in integrating visual drafts into CoT reasoning, addressing limitations of abstract textual planning; however, the approach builds on existing MLLM frameworks rather than introducing entirely new architectures."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将视觉草稿融入思维链推理，提供更具体的视觉规划，有效克服传统文本规划的粗糙性，在稀有概念生成方面具有突破性。",
+      "• 实盘坑: 依赖大规模多模态数据集DraCo-240K，计算成本高，超分辨率精炼步骤可能延迟实时应用，在快节奏交易中面临部署挑战。",
+      "• 复现难度: 中等偏高，需要复现DraCo-CFG策略和数据集构建，对硬件资源和多模态模型调优有较高要求，可能增加实施复杂性。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2512.05106v1",
+    "title": "NeuralRemaster: Phase-Preserving Diffusion for Structure-Aligned Generation",
+    "pdf_url": "https://arxiv.org/pdf/2512.05106v1",
+    "published": "2025-12-04",
+    "crawled_at": "2025-12-05 20:02:51",
+    "ai_score": 8.2,
+    "translated_title": "NeuralRemaster：用于结构对齐生成的相位保持扩散方法",
+    "summary_en": [
+      "• Model Architecture: Phase-Preserving Diffusion (φ-PD) reformulates standard diffusion by preserving input phase components while randomizing magnitude, enabling structure-aligned generation without architectural changes or additional parameters. It introduces Frequency-Selective Structured (FSS) noise with a single frequency-cutoff parameter for continuous control over structural rigidity.",
+      "• Data used: The paper applies φ-PD to photorealistic and stylized re-rendering, sim-to-real enhancement for driving planners (specifically using CARLA simulator), and image-to-image/video-to-video generation tasks. It mentions compatibility with any diffusion model for images or videos.",
+      "• Performance metrics: φ-PD improves CARLA-to-Waymo planner performance by 50% when applied to the CARLA simulator. The method produces controllable, spatially aligned results across tasks and adds no inference-time cost."
+    ],
+    "summary_cn": [
+      "• 核心模型: 相位保持扩散（φ-PD）通过保留输入相位分量并随机化幅度，重新表述标准扩散过程，实现无需架构更改或额外参数的结构对齐生成。引入频率选择性结构化（FSS）噪声，通过单一频率截止参数连续控制结构刚性。",
+      "• 数据来源: 应用于逼真和风格化重渲染、驾驶规划器的仿真到真实增强（特别是使用CARLA模拟器）以及图像到图像/视频到视频生成任务。兼容任何图像或视频的扩散模型。",
+      "• 主要结论: φ-PD在应用于CARLA模拟器时，将CARLA到Waymo规划器性能提升50%。该方法在多个任务中产生可控、空间对齐的结果，且不增加推理时间成本。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for applications requiring geometric consistency, such as re-rendering, simulation enhancement, and image-to-image translation, where standard diffusion fails due to phase corruption. The 50% improvement in planner performance demonstrates tangible benefits for autonomous driving and robotics.",
+      "• Implementation Risk: Low risk as φ-PD is model-agnostic, adds no inference-time cost, and requires no architectural changes or additional parameters. However, reliance on phase preservation may limit effectiveness in tasks where phase information is less critical or noisy.",
+      "• Novelty: Novel approach of preserving phase while randomizing magnitude in diffusion processes, addressing a key limitation of standard diffusion for structure-aligned tasks. The introduction of FSS noise for controllable rigidity adds further innovation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 在扩散过程中保留相位并随机化幅度的新方法，解决了标准扩散在结构对齐任务中的关键限制。引入FSS噪声实现可控刚性，进一步增强了创新性。",
+      "• 实盘坑: 依赖相位保持可能在相位信息不关键或嘈杂的任务中效果有限。虽然模型无关且无推理成本，但需确保输入数据的相位质量以避免性能下降。",
+      "• 复现难度: 低难度，因为φ-PD无需架构更改或额外参数，兼容现有扩散模型。代码和项目页面可用，便于复现和应用。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2512.05105v1",
+    "title": "Semantic Soft Bootstrapping: Long Context Reasoning in LLMs without Reinforcement Learning",
+    "pdf_url": "https://arxiv.org/pdf/2512.05105v1",
+    "published": "2025-12-04",
+    "crawled_at": "2025-12-05 20:03:17",
+    "ai_score": 7.2,
+    "translated_title": "语义软引导：无需强化学习的LLM长上下文推理",
+    "summary_en": [
+      "• Model Architecture: Semantic Soft Bootstrapping (SSB) is a self-distillation technique where the same base language model acts as both teacher and student, using different semantic contexts about answer correctness during training.",
+      "• Data used: Experiments conducted on GSM8K dataset for training, with evaluation on MATH500 and AIME2024 benchmarks using Qwen2.5-3B-Instruct model.",
+      "• Performance metrics: Achieved 10.6% and 10% accuracy improvements over GRPO (Group Relative Policy Optimization) on MATH500 and AIME2024 respectively via parameter-efficient fine-tuning.",
+      "• Training method: Automatically curates paired teacher-student training sets from raw problem-answer data without human intervention, generating correct and common incorrect responses for robust step-by-step explanations."
+    ],
+    "summary_cn": [
+      "• 核心模型: 语义软引导（SSB）是一种自蒸馏技术，同一基础语言模型在训练中同时扮演教师和学生角色，通过不同语义上下文判断答案正确性。",
+      "• 数据来源: 使用GSM8K数据集进行训练，在MATH500和AIME2024基准上评估，基于Qwen2.5-3B-Instruct模型。",
+      "• 主要结论: 相比GRPO算法，在MATH500和AIME2024上分别实现10.6%和10%的准确率提升，通过参数高效微调达成。",
+      "• 训练流程: 从原始问题-答案数据自动构建教师-学生配对训练集，无需人工标注，生成正确和常见错误回答以增强推理鲁棒性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - SSB demonstrates meaningful accuracy gains in math reasoning tasks without RL, potentially applicable to quantitative reasoning in finance, but limited to specific problem types.",
+      "• Implementation Risk: High - Relies on model's ability to generate correct/incorrect rollouts automatically; may fail with ambiguous or complex financial data where correctness is less binary.",
+      "• Novelty: Significant - Self-distillation approach without reinforcement learning addresses RLVR bottlenecks like sparse rewards, offering compute-efficient alternative for reasoning enhancement.",
+      "• Scalability: Questionable - Tested only on 3B parameter model; performance on larger models or diverse financial datasets (e.g., earnings reports, news) remains unverified."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著 - 无需强化学习的自蒸馏方法，解决RLVR的稀疏奖励等瓶颈，为推理增强提供计算高效替代方案。",
+      "• 实盘坑: 高 - 依赖模型自动生成正确/错误回答的能力；在金融数据模糊或复杂（如财报、新闻）时可能失效，正确性判断非二元化。",
+      "• 复现难度: 中等 - 代码和数据集已公开，但需要特定基准（GSM8K）和模型（Qwen2.5）支持；扩展到金融领域需大量数据适配。",
+      "• 应用局限: 明显 - 仅在数学推理任务验证，金融量化推理的泛化能力未测试；3B参数模型规模较小，大模型效果未知。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2512.05103v1",
+    "title": "TV2TV: A Unified Framework for Interleaved Language and Video Generation",
+    "pdf_url": "https://arxiv.org/pdf/2512.05103v1",
+    "published": "2025-12-04",
+    "crawled_at": "2025-12-05 20:03:39",
+    "ai_score": 7.8,
+    "translated_title": "TV2TV：交错语言与视频生成的统一框架",
+    "summary_en": [
+      "• Model Architecture: TV2TV uses a Mixture-of-Transformers (MoT) architecture that jointly learns language modeling (next-token prediction) and video flow matching (next-frame prediction), enabling interleaved text and video generation.",
+      "• Data used: The model was trained on video game data for controlled experiments and augmented sports videos with natural language action descriptions using vision-language models (VLMs) for scaling to natural videos.",
+      "• Performance metrics: TV2TV demonstrates substantial improvements in visual quality and prompt alignment on video game data, and shows strong visual quality and prompt alignment on natural videos, enabling fine-grained controllability through text interventions."
+    ],
+    "summary_cn": [
+      "• 核心模型: TV2TV采用混合变换器（MoT）架构，联合学习语言建模（下一词预测）和视频流匹配（下一帧预测），实现文本与视频的交错生成。",
+      "• 数据来源: 模型在视频游戏数据上进行受控实验训练，并使用视觉语言模型（VLM）增强体育视频的自然语言动作描述，以扩展到自然视频。",
+      "• 主要结论: TV2TV在视频游戏数据上显著提升视觉质量和提示对齐，在自然视频上展示出强大的视觉质量和提示对齐能力，支持通过文本干预实现细粒度控制。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for generating complex, semantically rich videos with improved controllability, applicable to content creation, simulation, and interactive media, but limited by current video generation quality and computational demands.",
+      "• Implementation Risk: Moderate to high risk due to the complexity of joint training, need for large-scale video-text datasets, and challenges in real-time inference for high-resolution videos.",
+      "• Novelty: Novel approach integrating language reasoning into video generation, enabling 'think in words, act in pixels' paradigm, but builds on existing LM and video generation techniques without groundbreaking architectural innovations."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将语言推理融入视频生成，实现“用词思考、用像素行动”的新范式，提升生成视频的语义复杂性和可控性，但架构上未突破现有技术框架。",
+      "• 实盘坑: 联合训练复杂度高，需要大规模视频-文本数据集，实时推理高分辨率视频面临计算挑战，可能限制实际部署效率。",
+      "• 复现难度: 中等偏高，需复现MoT架构和交错生成逻辑，依赖特定数据集和VLM增强，实验环境要求较高，可能增加复现成本和时间。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2512.05100v1",
+    "title": "Structured Document Translation via Format Reinforcement Learning",
+    "pdf_url": "https://arxiv.org/pdf/2512.05100v1",
+    "published": "2025-12-04",
+    "crawled_at": "2025-12-05 20:03:57",
+    "ai_score": 7.5,
+    "translated_title": "基于格式强化学习的结构化文档翻译",
+    "summary_en": [
+      "• Model Architecture: Format Reinforcement Learning (FormatRL) combines supervised fine-tuning with Group Relative Policy Optimization to optimize structure-aware rewards including TreeSim (structural similarity) and Node-chrF (node-level translation quality).",
+      "• Data used: Experiments conducted on SAP software-documentation benchmark dataset containing XML/HTML structured documents.",
+      "• Performance metrics: Evaluated using six metrics including StrucAUC (distinguishing minor errors from major structural failures), showing improvements across all metrics compared to baseline approaches."
+    ],
+    "summary_cn": [
+      "• 核心模型: 格式强化学习(FormatRL)在监督微调模型基础上，采用组相对策略优化，直接优化结构感知奖励函数TreeSim和Node-chrF。",
+      "• 数据来源: 使用SAP软件文档基准数据集进行实验，该数据集包含XML/HTML结构化文档。",
+      "• 主要结论: 在六个评估指标上均取得改进，StrucAUC指标能区分细微错误与重大结构故障，不同奖励函数对结构和翻译质量提升有不同贡献。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - specialized application to structured document translation could create niche trading signals from technical documentation analysis, but limited direct financial applications.",
+      "• Implementation Risk: High - requires specialized XML/HTML parsing infrastructure and domain-specific training data; reward function tuning is computationally intensive.",
+      "• Novelty: Significant - introduces novel structure-aware rewards (TreeSim, Node-chrF) and StrucAUC metric for document-level translation, advancing beyond sentence-level approaches."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著 - 首次提出文档级结构化翻译的强化学习框架，引入TreeSim和Node-chrF等结构感知奖励函数，突破传统句子级翻译局限。",
+      "• 实盘坑: 高 - 需要复杂的XML/HTML解析管道，SAP文档数据领域特定性强，奖励函数调参计算成本高，泛化到金融文档存在挑战。",
+      "• 复现难度: 中等偏高 - 需要复现Group Relative Policy Optimization和定制奖励函数，但论文提供了明确的实验设置和基准数据集。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2512.05092v1",
+    "title": "Foundations of Diffusion Models in General State Spaces: A Self-Contained Introduction",
+    "pdf_url": "https://arxiv.org/pdf/2512.05092v1",
+    "published": "2025-12-04",
+    "crawled_at": "2025-12-05 20:04:23",
+    "ai_score": 8.5,
+    "translated_title": "一般状态空间中扩散模型的基础：自包含导论",
+    "summary_en": [
+      "• Model Architecture: Presents a unified framework for diffusion models across continuous (via SDEs) and discrete (via CTMCs) state spaces, detailing forward noising via Markov kernels and learned reverse dynamics, with connections to Fokker-Planck and master equations.",
+      "• Data used: Theoretical paper with no specific datasets; focuses on general state spaces including Euclidean data (continuous domains) and discrete/categorical structures (finite alphabets).",
+      "• Performance metrics: No empirical results; emphasizes theoretical synthesis, deriving ELBO for training losses and clarifying how forward corruption choices (Gaussian processes, uniform/masking kernels) shape reverse dynamics.",
+      "• Core contribution: Provides layered introduction for three audiences, offering reusable proofs, identities, and principles to unify diffusion methodology across domains."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出一个统一框架，涵盖连续状态空间（通过随机微分方程）和离散状态空间（通过连续时间马尔可夫链）的扩散模型，详细描述前向加噪（马尔可夫核）和学习反向动力学，并关联Fokker-Planck和主方程。",
+      "• 数据来源: 理论性论文，无具体数据集；聚焦于一般状态空间，包括欧几里得数据（连续域）和离散/分类结构（有限字母表）。",
+      "• 主要结论: 推导出支撑标准训练损失的ELBO，明确前向腐蚀选择（如高斯过程、均匀/掩码核）如何影响反向动力学和ELBO，为不同受众提供分层介绍。",
+      "• 理论贡献: 通过紧凑的可重用证明、恒等式和核心理论原则，为现代扩散方法提供跨域统一路线图。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; theoretical unification could inspire novel generative models for financial time series or categorical data, but direct alpha generation requires empirical validation and application-specific tuning.",
+      "• Implementation Risk: High; abstract framework lacks concrete algorithms or code, increasing risk in translating theory to practice, especially for discrete diffusion which is less mature than continuous counterparts.",
+      "• Novelty: High; bridges gap between continuous and discrete diffusion literature, offering a rare synthesis that clarifies foundational connections and expands methodology to non-Euclidean spaces.",
+      "• Practical limitations: No empirical benchmarks or real-world case studies, limiting immediate applicability; relies on practitioners to adapt proofs to specific domains like finance or NLP."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；弥合连续与离散扩散文献之间的鸿沟，提供罕见理论综合，阐明基础联系并将方法扩展到非欧几里得空间，具有概念突破性。",
+      "• 实盘坑: 高；抽象框架缺乏具体算法或代码，理论到实践转化风险大，尤其离散扩散技术较不成熟，需大量工程化调试。",
+      "• 复现难度: 中高；依赖读者理论背景理解统一证明，但无实证数据支持，复现需自行实现SDE/CTMC模拟和ELBO优化，可能耗时。",
+      "• 应用挑战: 作为导论性论文，未提供金融或具体领域案例，直接用于量化策略需结合领域知识进行大量适配和验证。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2512.05089v1",
+    "title": "The Geometry of Intelligence: Deterministic Functional Topology as a Foundation for Real-World Perception",
+    "pdf_url": "https://arxiv.org/pdf/2512.05089v1",
+    "published": "2025-12-04",
+    "crawled_at": "2025-12-05 20:04:41",
+    "ai_score": 7.5,
+    "translated_title": "智能的几何学：确定性函数拓扑学作为现实世界感知的基础",
+    "summary_en": [
+      "• Model Architecture: A deterministic functional-topological framework where physical processes form compact perceptual manifolds with finite Hausdorff radius, enabling self-supervised boundary discovery via Monte Carlo sampling without requiring known governing equations.",
+      "• Data used: Empirical validation across three domains: electromechanical railway point machines, electrochemical battery discharge curves, and physiological ECG signals.",
+      "• Performance metrics: Theoretical guarantees for rapid generalization from limited observations, practical estimators of knowledge boundaries, and demonstration of unified mathematical foundation for perception and world-model construction in both biological and artificial systems."
+    ],
+    "summary_cn": [
+      "• 核心模型: 确定性函数拓扑学框架，将物理过程建模为具有有限Hausdorff半径的紧致感知流形，通过蒙特卡洛采样实现无监督边界发现，无需已知系统控制方程。",
+      "• 数据来源: 三个领域的实证验证：机电铁路道岔设备、电化学电池放电曲线、生理心电图信号。",
+      "• 主要结论: 为生物学习者和自监督AI模型从有限观测中快速泛化提供了统一的数学基础，解释了现实世界信号在函数空间中的低变异性集中现象。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for identifying structural invariants in time-series data across domains (railway, battery, ECG), enabling anomaly detection and regime change prediction without labeled data.",
+      "• Implementation Risk: Moderate to high risk due to computational intensity of Monte Carlo sampling on high-dimensional functional spaces and domain-specific manifold estimation requirements.",
+      "• Novelty: Strong theoretical novelty in bridging functional topology with real-world perception, but empirical validation limited to three specific domains rather than financial markets."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将函数拓扑学与感知理论结合，提出紧致流形假设解释现实世界信号的几何结构，为无监督学习提供新数学框架。",
+      "• 实盘坑: 蒙特卡洛采样在高维函数空间计算成本高，不同金融资产需要重新估计流形边界，实时性挑战大。",
+      "• 复现难度: 中等偏高，需要跨领域数据验证和流形边界估计算法实现，但论文提供了理论保证和实用估计器。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
     "id": "2512.03035v1",
     "title": "Learning Physically Consistent Lagrangian Control Models Without Acceleration Measurements",
     "pdf_url": "https://arxiv.org/pdf/2512.03035v1",
