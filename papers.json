@@ -1,5 +1,349 @@
 [
   {
+    "id": "2512.05967v1",
+    "title": "Enhancing Retrieval-Augmented Generation with Entity Linking for Educational Platforms",
+    "pdf_url": "https://arxiv.org/pdf/2512.05967v1",
+    "published": "2025-12-05",
+    "crawled_at": "2025-12-08 20:01:29",
+    "ai_score": 7.5,
+    "translated_title": "通过实体链接增强检索增强生成在教育平台中的应用",
+    "summary_en": [
+      "• Model Architecture: Proposes an enhanced RAG architecture integrating Wikidata-based Entity Linking with three re-ranking strategies: hybrid score weighting, reciprocal rank fusion, and cross-encoder re-ranker.",
+      "• Data used: Evaluated on two benchmarks: a custom academic dataset for domain-specific contexts and the standard SQuAD-it dataset for general-domain performance.",
+      "• Performance metrics: Hybrid schema based on reciprocal rank fusion significantly outperforms baseline and cross-encoder on domain-specific datasets, while cross-encoder achieves best results on general-domain datasets, confirming domain mismatch effects."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出增强型RAG架构，集成基于Wikidata的实体链接模块，采用三种重排序策略：混合分数加权、互逆排名融合和交叉编码器重排序。",
+      "• 数据来源: 使用自定义学术数据集（领域特定）和标准SQuAD-it数据集（通用领域）进行实验验证。",
+      "• 主要结论: 在领域特定场景中，基于互逆排名融合的混合方案显著优于基线和交叉编码器方法；交叉编码器在通用数据集上表现最佳，证实了领域不匹配效应。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - Entity-aware RAG systems could improve factual accuracy in specialized domains like education, potentially enhancing AI tutoring tools, but limited to Italian language and specific benchmarks.",
+      "• Implementation Risk: High - Domain mismatch effects require careful adaptation; Wikidata dependency introduces external data reliability concerns; re-ranking strategies add computational overhead.",
+      "• Novelty: Low to Moderate - Integration of Entity Linking with RAG is not entirely novel, but application to Italian educational QA and hybrid ranking strategies offers incremental improvements over existing methods."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等偏低 - 将实体链接与RAG结合并非全新概念，但在意大利语教育问答中的应用及混合排名策略提供了渐进式改进。",
+      "• 实盘坑: 高 - 领域不匹配效应需精细调适；依赖Wikidata引入外部数据可靠性风险；重排序策略增加计算复杂度，影响实时性能。",
+      "• 复现难度: 中等 - 需要构建自定义学术数据集和集成Wikidata实体链接模块，但方法描述较清晰，开源工具可用性高。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2512.05962v1",
+    "title": "Whatever Remains Must Be True: Filtering Drives Reasoning in LLMs, Shaping Diversity",
+    "pdf_url": "https://arxiv.org/pdf/2512.05962v1",
+    "published": "2025-12-05",
+    "crawled_at": "2025-12-08 20:01:49",
+    "ai_score": 8.2,
+    "translated_title": "剩余必真：过滤驱动LLM推理，塑造多样性",
+    "summary_en": [
+      "• Model Architecture: Proposes a method using α-divergence family to approximate target distribution from pre-trained LLM, enabling interpolation between mode-seeking (Reverse KL) and mass-covering divergences for precision-diversity trade-off control.",
+      "• Data used: Evaluated on a Lean theorem-proving benchmark, focusing on filtering incorrect answers while preserving relative probabilities of correct ones to construct explicit target distribution.",
+      "• Performance metrics: Achieves state-of-the-art performance on coverage-precision Pareto frontier, outperforming prior methods on coverage axis in theorem-proving tasks."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于预训练LLM，采用α-散度族逼近目标分布，通过插值模式寻求与质量覆盖散度，实现精度-多样性权衡的直接控制。",
+      "• 数据来源: 使用Lean定理证明基准数据集，通过过滤错误答案并保留正确答案的相对概率构建显式目标分布。",
+      "• 主要结论: 在覆盖度-精度帕累托前沿上达到最先进性能，在定理证明任务中覆盖度轴优于所有先前方法。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for applications requiring diversity-preserving reasoning, such as financial scenario generation or risk assessment where over-concentration on modes can lead to missed tail risks.",
+      "• Implementation Risk: Moderate; relies on accurate filtering of incorrect answers, which may be challenging in noisy or ambiguous real-world datasets, potentially introducing bias if filtering is imperfect.",
+      "• Novelty: Significant; explicitly addresses diversity loss in RL-tuned LLMs by shifting from implicit optimization to explicit target distribution approximation, offering a unified framework via α-divergence for controllable trade-offs."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著；通过从隐式优化转向显式目标分布逼近，解决RL调优LLM中的多样性损失问题，提供基于α-散度的统一框架以实现可控权衡。",
+      "• 实盘坑: 中等；依赖错误答案的准确过滤，在嘈杂或模糊的真实世界数据集中可能具有挑战性，若过滤不完美可能引入偏差。",
+      "• 复现难度: 中等；需要预训练LLM和定理证明基准，但方法描述清晰，α-散度插值可标准化实现，不过过滤步骤可能需领域特定调整。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2512.05958v1",
+    "title": "MaxShapley: Towards Incentive-compatible Generative Search with Fair Context Attribution",
+    "pdf_url": "https://arxiv.org/pdf/2512.05958v1",
+    "published": "2025-12-05",
+    "crawled_at": "2025-12-08 20:02:13",
+    "ai_score": 7.5,
+    "translated_title": "MaxShapley：面向激励相容的生成式搜索与公平上下文归因",
+    "summary_en": [
+      "• Model Architecture: MaxShapley is an efficient algorithm based on Shapley value theory, designed for fair attribution in retrieval-augmented generation (RAG) pipelines. It uses a decomposable max-sum utility function to compute document contributions linearly, avoiding exponential computational costs.",
+      "• Data used: The algorithm is evaluated on three multi-hop question-answering datasets: HotPotQA, MuSiQUE, and MS MARCO, which involve complex queries requiring information from multiple documents.",
+      "• Performance metrics: MaxShapley achieves comparable attribution quality to exact Shapley computation while significantly reducing resource consumption, with up to an 8x reduction in tokens compared to prior state-of-the-art methods at similar accuracy levels."
+    ],
+    "summary_cn": [
+      "• 核心模型: MaxShapley是一种基于Shapley值理论的高效算法，专为检索增强生成（RAG）管道中的公平归因而设计，利用可分解的最大和效用函数实现线性计算复杂度。",
+      "• 数据来源: 在三个多跳问答数据集（HotPotQA、MuSiQUE和MS MARCO）上进行评估，这些数据集涉及需要从多个文档中提取信息的复杂查询。",
+      "• 主要结论: MaxShapley在保持与精确Shapley计算相当的归因质量的同时，显著降低了资源消耗，相比先前最先进方法，在相同准确度下令牌使用量减少高达8倍。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate—the algorithm addresses a critical issue in generative search ecosystems by enabling fair compensation for content providers, which could enhance data quality and reduce bias in LLM-based search systems, potentially improving information retrieval accuracy for financial data analysis.",
+      "• Implementation Risk: High—integrating MaxShapley into existing generative search pipelines requires significant technical overhead, including adaptation to diverse RAG architectures and real-time computation constraints, which may hinder practical deployment in fast-paced environments like trading systems.",
+      "• Novelty: Moderate—while leveraging established Shapley value concepts, the introduction of a decomposable utility function for linear computation is innovative, but the approach is specific to RAG contexts and may not generalize well to other attribution problems in finance."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等——算法通过引入可分解的效用函数实现线性计算，在Shapley值理论基础上进行了优化，但创新性局限于RAG场景，未突破传统归因方法的框架。",
+      "• 实盘坑: 高——将MaxShapley集成到现有生成式搜索管道中技术门槛高，需适应不同的RAG架构和实时计算需求，在交易系统等快节奏环境中部署困难，且可能引入延迟风险。",
+      "• 复现难度: 中等——算法基于公开数据集和标准RAG流程，复现相对可行，但需要精细调参和计算资源优化，对团队的技术能力有一定要求。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2512.05957v1",
+    "title": "Consequences of Kernel Regularity for Bandit Optimization",
+    "pdf_url": "https://arxiv.org/pdf/2512.05957v1",
+    "published": "2025-12-05",
+    "crawled_at": "2025-12-08 20:02:34",
+    "ai_score": 8.2,
+    "translated_title": "核正则性对赌博机优化的影响",
+    "summary_en": [
+      "• Model Architecture: Analyzes kernelized bandit algorithms (global RKHS regressors) and smoothness-based methods (local approximations), with specific focus on LP-GP-UCB hybrid algorithm combining Gaussian process surrogates with local polynomial estimators.",
+      "• Data used: Theoretical analysis based on spectral properties of isotropic kernels (Matérn, square-exponential, rational-quadratic, γ-exponential, piecewise-polynomial, Dirichlet) without empirical datasets.",
+      "• Performance metrics: Asymptotic regret bounds derived through maximum information gain analysis (worst-case regret) and Hölder/Besov space embeddings (local continuity analysis), achieving order-optimality across multiple kernel families."
+    ],
+    "summary_cn": [
+      "• 核心模型: 分析核化赌博机算法（全局RKHS回归器）和平滑性方法（局部近似），特别关注LP-GP-UCB混合算法，结合高斯过程代理与局部多项式估计器。",
+      "• 数据来源: 基于各向同性核（Matérn、平方指数、有理二次、γ指数、分段多项式、Dirichlet）的谱特性进行理论分析，未使用实证数据集。",
+      "• 主要结论: 通过最大信息增益分析（最坏情况遗憾）和Hölder/Besov空间嵌入（局部连续性分析）推导渐近遗憾界，在多个核族中实现阶最优性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - provides theoretical framework connecting kernel regularity to regret bounds, enabling better algorithm selection for specific kernel families in optimization problems.",
+      "• Implementation Risk: High - theoretical results require precise kernel parameter tuning and spectral decay estimation; hybrid LP-GP-UCB algorithm adds computational complexity without uniform dominance.",
+      "• Novelty: High - establishes unified framework connecting kernel-based and locally adaptive methods through spectral analysis, with novel regret bounds for several kernel families."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高 - 通过谱分析建立核方法与局部自适应方法的统一框架，为多个核族提供新颖的遗憾界，理论贡献显著。",
+      "• 实盘坑: 高 - 理论结果需要精确的核参数调优和谱衰减估计；混合LP-GP-UCB算法增加计算复杂度且无统一优势，实盘应用风险大。",
+      "• 复现难度: 中高 - 需要深入理解核谱理论和赌博机优化，但算法描述清晰，复现可行但技术要求高。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "ICML",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2512.05950v1",
+    "title": "Impugan: Learning Conditional Generative Models for Robust Data Imputation",
+    "pdf_url": "https://arxiv.org/pdf/2512.05950v1",
+    "published": "2025-12-05",
+    "crawled_at": "2025-12-08 20:02:54",
+    "ai_score": 7.8,
+    "translated_title": "Impugan：学习条件生成模型以实现稳健数据插补",
+    "summary_en": [
+      "• Model Architecture: Impugan uses a conditional Generative Adversarial Network (cGAN) with a generator that reconstructs missing values from observed features and a discriminator that enforces realism by distinguishing true from imputed data.",
+      "• Data used: The model is trained on complete samples to learn dependencies between missing and observed variables, and tested on benchmark datasets and a multi-source integration task involving heterogeneous data with varying scales, sampling rates, and quality.",
+      "• Performance metrics: Achieves up to 82% lower Earth Mover's Distance (EMD) and 70% lower mutual-information deviation (MI) compared to leading baselines, indicating superior accuracy in capturing nonlinear and multimodal relationships."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用条件生成对抗网络（cGAN），生成器基于观测特征重构缺失值，判别器通过区分真实与插补数据来确保真实性。",
+      "• 数据来源: 在完整样本上训练以学习缺失变量与观测变量之间的依赖关系，并在基准数据集和多源集成任务（涉及不同尺度、采样率和质量的异构数据）上进行测试。",
+      "• 主要结论: 与领先基线相比，地球移动距离（EMD）降低高达82%，互信息偏差（MI）降低70%，证明其在捕捉非线性和多模态关系方面具有卓越准确性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for generating alpha in quantitative finance by improving data quality for factor models, risk assessment, and portfolio optimization through robust imputation of missing financial data from diverse sources.",
+      "• Implementation Risk: Moderate risk due to reliance on GAN training stability, which can be sensitive to hyperparameters and data distribution shifts; may require extensive tuning for real-world financial datasets with complex dependencies.",
+      "• Novelty: Novel application of cGANs to data imputation, addressing limitations of traditional methods like regression and EM by capturing nonlinear relationships without strong linearity or independence assumptions."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将cGAN创新应用于数据插补，克服传统回归和期望最大化方法的局限性，无需强线性或独立性假设即可捕捉非线性关系。",
+      "• 实盘坑: 中等风险，因依赖GAN训练稳定性，对超参数和数据分布变化敏感；在具有复杂依赖关系的真实金融数据集上可能需要大量调优。",
+      "• 复现难度: 中等难度，代码已开源（GitHub），但复现需处理GAN收敛问题和异构数据集成，可能涉及计算资源需求。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2512.05948v1",
+    "title": "Developing synthetic microdata through machine learning for firm-level business surveys",
+    "pdf_url": "https://arxiv.org/pdf/2512.05948v1",
+    "published": "2025-12-05",
+    "crawled_at": "2025-12-08 20:03:11",
+    "ai_score": 7.2,
+    "translated_title": "通过机器学习开发合成微观数据用于企业级商业调查",
+    "summary_en": [
+      "• Model Architecture: Machine learning model for generating synthetic firm-level data, preserving critical statistical moments while removing actual records.",
+      "• Data used: Annual Business Survey (ABS) and 2007 Survey of Business Owners data, focusing on firm-level business surveys with confidentiality challenges.",
+      "• Performance metrics: Econometric replication of published analysis in Small Business Economics demonstrates verisimilitude to true data, with quality metrics discussed for synthetic PUMS."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用机器学习模型生成合成企业级数据，保留关键统计特征同时消除真实记录。",
+      "• 数据来源: 基于年度商业调查(ABS)和2007年企业主调查数据，针对企业级商业调查的保密性挑战。",
+      "• 主要结论: 通过在小企业经济学杂志上发表的实证分析复制，证明合成数据与真实数据的高度相似性，并讨论了合成公共使用微观数据样本的质量指标。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Limited direct alpha generation; primarily useful for data preprocessing and synthetic data creation for backtesting environments where real data is restricted.",
+      "• Implementation Risk: High risk due to confidentiality constraints and potential regulatory issues with synthetic data in financial applications.",
+      "• Novelty: Moderate novelty in applying machine learning to create synthetic firm-level data, addressing unique challenges compared to demographic data."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将机器学习应用于企业级合成数据生成，解决企业数据匿名化难题，相比人口统计数据更具挑战性。",
+      "• 实盘坑: 合成数据在金融应用中存在监管风险，且真实数据保密性要求可能限制实际部署。",
+      "• 复现难度: 中等难度，需要访问受限的商业调查数据，且合成数据质量验证依赖专业统计方法。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2512.05940v1",
+    "title": "Designing an Optimal Sensor Network via Minimizing Information Loss",
+    "pdf_url": "https://arxiv.org/pdf/2512.05940v1",
+    "published": "2025-12-05",
+    "crawled_at": "2025-12-08 20:03:33",
+    "ai_score": 7.8,
+    "translated_title": "通过最小化信息损失设计最优传感器网络",
+    "summary_en": [
+      "• Model Architecture: Novel model-based sensor placement criterion integrating physics-based simulations with Bayesian experimental design principles, using sparse variational inference and separable Gauss-Markov priors",
+      "• Data used: Large datasets from physics-based simulations (specifically air temperature monitoring in Phoenix, Arizona), leveraging computational science advancements rarely used in experimental design",
+      "• Performance metrics: Superior to random or quasi-random sampling methods, particularly effective with limited sensor counts, validated through case study monitoring air temperature",
+      "• Optimization approach: Highly-efficient algorithm that minimizes information loss from simulated data while accounting for temporal dimensions in spatiotemporal processes"
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于物理模拟与贝叶斯实验设计原则的新型传感器布局准则，采用稀疏变分推断和可分离高斯-马尔可夫先验",
+      "• 数据来源: 基于物理模拟的大规模数据集（亚利桑那州凤凰城气温监测案例），利用计算科学中罕见应用于实验设计的数据资源",
+      "• 主要结论: 在传感器数量有限时显著优于随机或准随机采样方法，通过气温监测案例验证了框架有效性",
+      "• 技术特点: 高效优化算法，最小化模拟数据的信息损失，明确考虑时空过程中的时间维度"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - Framework could be adapted for optimal placement of financial data collection points (sensors) to capture market signals with minimal information loss, particularly in high-frequency or spatial arbitrage contexts",
+      "• Implementation Risk: High - Requires access to physics-based simulations and specialized computational resources; real-world deployment considerations mentioned but not fully addressed",
+      "• Novelty: Significant - Integrates computational science datasets with Bayesian experimental design in novel way; temporal dimension consideration in sensor placement is innovative",
+      "• Practical limitations: Framework validation limited to single case study; scalability to complex financial environments uncertain without substantial adaptation"
+    ],
+    "verdict_cn": [
+      "• 创新点: 将计算科学模拟数据与贝叶斯实验设计首次结合，时空维度建模具有理论创新性，稀疏变分推断应用较为前沿",
+      "• 实盘坑: 依赖物理模拟数据源在金融领域难以获取，计算资源要求高，单案例验证缺乏普适性证明，实际部署复杂度被低估",
+      "• 复现难度: 较高 - 需要专业模拟数据集和贝叶斯优化专业知识，算法实现涉及复杂数学推导，金融场景适配需大量修改",
+      "• 应用局限: 框架主要针对物理环境监测，直接迁移至金融市场需重新设计数据源和验证标准，时间维度处理可能不适应金融时间序列特性"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2512.05931v1",
+    "title": "On the Bayes Inconsistency of Disagreement Discrepancy Surrogates",
+    "pdf_url": "https://arxiv.org/pdf/2512.05931v1",
+    "published": "2025-12-05",
+    "crawled_at": "2025-12-08 20:03:52",
+    "ai_score": 8.2,
+    "translated_title": "关于分歧差异代理损失的贝叶斯不一致性研究",
+    "summary_en": [
+      "• Model Architecture: The paper analyzes existing surrogate losses for disagreement discrepancy (a measure of model disagreement under distribution shift) and proposes a novel disagreement loss paired with cross-entropy to create a provably consistent surrogate.",
+      "• Data used: Empirical evaluations are conducted across diverse benchmarks, though specific datasets are not named in the abstract; the focus is on challenging adversarial conditions to test robustness.",
+      "• Performance metrics: The method provides more accurate and robust estimates of disagreement discrepancy compared to existing approaches, particularly under adversarial conditions, as demonstrated through empirical evaluations."
+    ],
+    "summary_cn": [
+      "• 核心模型: 分析现有分歧差异代理损失，提出一种结合交叉熵的新分歧损失，构建可证明一致的代理损失。",
+      "• 数据来源: 在多样化基准测试中进行实证评估，未指定具体数据集，重点测试对抗性条件下的鲁棒性。",
+      "• 主要结论: 新方法比现有方法更准确、鲁棒地估计分歧差异，尤其在对抗性条件下表现优异，揭示了现有代理损失的贝叶斯不一致性根本缺陷。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the theoretical insights into surrogate consistency could enhance robust model training under distribution shifts, potentially improving risk management in dynamic markets, but direct trading alpha is limited.",
+      "• Implementation Risk: High; the method relies on theoretical bounds and adversarial conditions, which may be computationally intensive and sensitive to hyperparameters in real-world deployment.",
+      "• Novelty: High; the paper introduces novel theoretical bounds on the optimality gap for surrogates and a provably consistent loss, addressing a fundamental flaw in prior work on disagreement discrepancy."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；提出分歧差异代理损失贝叶斯不一致性的新理论上下界，并设计可证明一致的损失函数，填补了现有方法的根本缺陷。",
+      "• 实盘坑: 高；依赖对抗性条件和理论边界，计算成本高，超参数敏感，在实盘分布漂移中可能难以稳定应用。",
+      "• 复现难度: 中等；方法基于标准深度学习框架，但需要精确实现理论损失和对抗评估，可能受基准数据集和计算资源限制。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2512.05926v1",
+    "title": "BalLOT: Balanced $k$-means clustering with optimal transport",
+    "pdf_url": "https://arxiv.org/pdf/2512.05926v1",
+    "published": "2025-12-05",
+    "crawled_at": "2025-12-08 20:04:09",
+    "ai_score": 7.8,
+    "translated_title": "BalLOT：基于最优传输的平衡k均值聚类",
+    "summary_en": [
+      "• Model Architecture: BalLOT combines optimal transport theory with alternating minimization to enforce balanced cluster sizes while minimizing within-cluster variance",
+      "• Data used: Evaluated on synthetic datasets under the stochastic ball model and generic real-world clustering benchmarks",
+      "• Performance metrics: Demonstrates fast convergence, exact recovery of planted clusters under theoretical conditions, and improved balanced clustering accuracy compared to baseline methods"
+    ],
+    "summary_cn": [
+      "• 核心模型: 将最优传输理论与交替最小化结合，强制平衡聚类大小同时最小化类内方差",
+      "• 数据来源: 使用随机球模型生成的合成数据和通用聚类基准数据集进行验证",
+      "• 主要结论: 在理论条件下能精确恢复预设聚类结构，收敛速度快，平衡聚类效果优于传统方法"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - balanced clustering could identify market regimes or sector groupings with equal representation, but direct financial applications need validation",
+      "• Implementation Risk: High - optimal transport computations scale poorly with large datasets; real-time financial applications would face computational bottlenecks",
+      "• Novelty: Significant - novel integration of optimal transport with k-means for balanced clustering provides theoretical guarantees rarely seen in clustering literature"
+    ],
+    "verdict_cn": [
+      "• 创新点: 将最优传输理论首次系统应用于平衡k均值聚类，提供了严格的数学保证和收敛性分析",
+      "• 实盘坑: 最优传输计算复杂度高，大规模金融数据场景下实时性差；平衡约束可能过度简化真实市场结构",
+      "• 复现难度: 中等 - 核心算法描述清晰，但需要优化传输求解器的工程实现，理论证明部分依赖特定假设条件"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "ICML",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2512.05920v1",
+    "title": "NICE: Neural Implicit Craniofacial Model for Orthognathic Surgery Prediction",
+    "pdf_url": "https://arxiv.org/pdf/2512.05920v1",
+    "published": "2025-12-05",
+    "crawled_at": "2025-12-08 20:04:30",
+    "ai_score": 7.5,
+    "translated_title": "NICE：用于正颌手术预测的神经隐式颅面模型",
+    "summary_en": [
+      "• Model Architecture: NICE employs a two-module design with region-specific implicit Signed Distance Function (SDF) decoders for anatomical reconstruction and deformation decoders driven by a shared surgical latent code to model nonlinear biomechanical responses to skeletal movements.",
+      "• Data used: The paper mentions extensive experiments but does not specify datasets; typical for this field would involve 3D facial scans, CT/MRI images, and surgical planning data from orthognathic procedures.",
+      "• Performance metrics: NICE outperforms state-of-the-art methods, improving prediction accuracy in critical facial regions like lips and chin while preserving anatomical integrity, though exact numerical metrics (e.g., error rates, computational times) are not detailed in the abstract."
+    ],
+    "summary_cn": [
+      "• 核心模型: NICE采用双模块架构，包括基于区域特定隐式符号距离函数（SDF）解码器的形状模块和基于共享手术潜在码驱动的变形解码器的手术模块，用于精确重建和预测手术结果。",
+      "• 数据来源: 摘要未明确指定数据集，但该领域通常使用3D面部扫描、CT/MRI影像和正颌手术规划数据，通过大量实验验证模型性能。",
+      "• 主要结论: NICE在关键面部区域（如嘴唇和下巴）的预测准确性上优于现有方法，同时保持解剖完整性，为临床手术规划和患者咨询提供了可行工具。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the model's ability to capture complex nonlinear interactions could inspire similar approaches in financial time-series prediction or risk modeling, but direct alpha generation is limited due to domain specificity.",
+      "• Implementation Risk: High; reliance on specialized medical data (3D scans, anatomical priors) and computational resources for implicit neural representations makes real-world deployment challenging outside clinical settings.",
+      "• Novelty: High; the use of implicit neural representations with region-specific decoders and a shared latent code for surgical prediction is innovative in craniofacial modeling, though similar techniques exist in other 3D reconstruction domains."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；采用隐式神经表示结合区域特定解码器和共享潜在码，在颅面建模中有效捕捉骨骼运动与软组织间的复杂非线性相互作用，方法新颖。",
+      "• 实盘坑: 高；依赖专业医学数据（如3D扫描和解剖先验）和计算资源，在金融领域直接应用困难，且模型可解释性可能不足，增加实盘风险。",
+      "• 复现难度: 中高；需要获取和处理大量3D面部数据，实现隐式神经表示和变形解码器技术门槛较高，但开源代码和详细方法可降低部分难度。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2512.05117v1",
     "title": "The Universal Weight Subspace Hypothesis",
     "pdf_url": "https://arxiv.org/pdf/2512.05117v1",
