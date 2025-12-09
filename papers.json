@@ -1,5 +1,355 @@
 [
   {
+    "id": "2512.07833v1",
+    "title": "Relational Visual Similarity",
+    "pdf_url": "https://arxiv.org/pdf/2512.07833v1",
+    "published": "2025-12-08",
+    "crawled_at": "2025-12-09 20:01:37",
+    "ai_score": 7.8,
+    "translated_title": "关系视觉相似性",
+    "summary_en": [
+      "• Model Architecture: Fine-tuned Vision-Language model (likely CLIP-based) to measure relational similarity between images by focusing on internal relations among visual elements rather than surface attributes.",
+      "• Data used: Curated 114k image-caption dataset with anonymized captions that describe underlying relational logic of scenes, not visible content, enabling training for relational similarity.",
+      "• Performance metrics: Demonstrates that existing models (e.g., LPIPS, CLIP, DINO) fail to capture relational similarity, highlighting a critical gap; the proposed model serves as a first step toward connecting images by relational structure."
+    ],
+    "summary_cn": [
+      "• 核心模型: 微调视觉-语言模型（可能基于CLIP），通过关注视觉元素间的内部关系而非表面属性，测量图像间的关系相似性。",
+      "• 数据来源: 构建了114k图像-标题数据集，标题匿名化，描述场景的底层关系逻辑而非可见内容，用于训练关系相似性。",
+      "• 主要结论: 现有模型（如LPIPS、CLIP、DINO）无法捕捉关系相似性，揭示视觉计算中的关键差距；提出模型是连接图像关系结构的第一步。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for novel alpha generation in image-based financial applications (e.g., detecting relational patterns in market charts or satellite imagery) by capturing non-obvious similarities missed by traditional models.",
+      "• Implementation Risk: Moderate to high risk due to reliance on curated dataset quality and potential overfitting to specific relational types; real-world generalization to diverse financial data may be challenging.",
+      "• Novelty: High novelty in formulating relational similarity as a measurable problem and using anonymized captions to train models, addressing a gap in visual computing with potential cross-disciplinary impact."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将关系相似性公式化为可测量问题，并使用匿名化标题训练模型，填补视觉计算空白，具有跨学科潜力。",
+      "• 实盘坑: 依赖数据集质量，可能过拟合特定关系类型；泛化到多样化金融数据（如市场图表）可能困难，实施风险中高。",
+      "• 复现难度: 中等难度，需要构建类似匿名化数据集和微调视觉-语言模型，但开源代码和预训练模型可降低门槛。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2512.07832v1",
+    "title": "Do Generalisation Results Generalise?",
+    "pdf_url": "https://arxiv.org/pdf/2512.07832v1",
+    "published": "2025-12-08",
+    "crawled_at": "2025-12-09 20:01:55",
+    "ai_score": 6.5,
+    "translated_title": "泛化结果能否泛化？",
+    "summary_en": [
+      "• Model Architecture: Analyzes OLMo2 and OPT large language models (LLMs) to assess their out-of-distribution (OOD) generalization capabilities.",
+      "• Data used: Evaluates performance across multiple OOD test sets during fine-tuning runs, controlling for in-domain performance via partial correlation analysis.",
+      "• Performance metrics: Measures correlation of OOD generalization performances between different test sets after regressing out in-domain performance, finding no consistent trend."
+    ],
+    "summary_cn": [
+      "• 核心模型: 使用OLMo2和OPT两种大型语言模型（LLMs）评估其分布外（OOD）泛化能力。",
+      "• 数据来源: 在微调过程中，基于多个OOD测试集评估模型性能，并通过偏相关分析控制域内性能的影响。",
+      "• 主要结论: 研究发现，在控制域内性能后，不同OOD测试集之间的泛化性能相关性没有统一趋势，具体相关性取决于模型选择。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low; the paper highlights the inconsistency in OOD generalization, suggesting limited direct trading signals but useful for risk assessment in NLP-based strategies.",
+      "• Implementation Risk: High; findings indicate that generalization results are model-specific and dataset-dependent, complicating reliable deployment in dynamic financial environments.",
+      "• Novelty: Moderate; introduces a multi-dataset evaluation framework for OOD generalization, but the core insight about variability is not groundbreaking in quant finance."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；提出了一个多数据集评估框架来研究OOD泛化，但核心发现（泛化结果不一致）在量化金融中并非革命性。",
+      "• 实盘坑: 高；研究显示泛化结果高度依赖模型和数据集，在动态市场环境中部署时可能导致不可预测的性能波动。",
+      "• 复现难度: 中等；需要访问OLMo2和OPT模型及多个OOD测试集，但方法论清晰，技术门槛可控。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2512.07828v1",
+    "title": "The Adoption and Usage of AI Agents: Early Evidence from Perplexity",
+    "pdf_url": "https://arxiv.org/pdf/2512.07828v1",
+    "published": "2025-12-08",
+    "crawled_at": "2025-12-09 20:02:16",
+    "ai_score": 7.2,
+    "translated_title": "AI代理的采用与使用：来自Perplexity的早期证据",
+    "summary_en": [
+      "• Model Architecture: The study analyzes Comet, an AI-powered browser with integrated agent Comet Assistant, focusing on user behavior patterns rather than technical model architecture details.",
+      "• Data used: Hundreds of millions of anonymized user interactions from Perplexity's Comet browser, providing large-scale field data on AI agent adoption and usage.",
+      "• Performance metrics: Introduces hierarchical agentic taxonomy (topic/subtopic/task levels) showing 57% of queries in Productivity & Workflow and Learning & Research categories, with 55% of queries concentrated in top 10 tasks out of 90."
+    ],
+    "summary_cn": [
+      "• 核心模型: 研究分析Perplexity开发的AI浏览器Comet及其集成代理Comet Assistant，重点在于用户行为模式而非技术架构细节。",
+      "• 数据来源: 基于Perplexity Comet浏览器的数亿次匿名用户交互数据，提供AI代理采用和使用的大规模实地数据。",
+      "• 主要结论: 早期采用者、高GDP国家用户、数字/知识密集型行业从业者更可能使用AI代理；57%查询集中在生产力/工作流和学习/研究两大主题；使用模式随时间向认知密集型任务迁移。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - identifies user segmentation patterns (digital/knowledge workers, high-GDP countries) that could inform targeted AI product development and adoption forecasting models.",
+      "• Implementation Risk: High - relies on proprietary Perplexity data with limited technical details about the AI agent's architecture, making direct replication difficult.",
+      "• Novelty: Moderate - first large-scale field study of general-purpose AI agents in open-web environments with hierarchical taxonomy, but descriptive rather than predictive/causal."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次对开放网络环境中通用AI代理进行大规模实地研究，提出分层代理分类法（主题/子主题/任务三级），但更多是描述性分析而非预测性研究。",
+      "• 实盘坑: 严重依赖Perplexity专有数据，缺乏AI代理技术架构细节，数据采集可能存在选择偏差（仅限Comet用户）。",
+      "• 复现难度: 高 - 需要访问类似的AI浏览器用户交互数据，且论文未提供完整的分类法细节或模型训练参数。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2512.07827v1",
+    "title": "An Adaptive Multi-Layered Honeynet Architecture for Threat Behavior Analysis via Deep Learning",
+    "pdf_url": "https://arxiv.org/pdf/2512.07827v1",
+    "published": "2025-12-08",
+    "crawled_at": "2025-12-09 20:02:41",
+    "ai_score": 7.2,
+    "translated_title": "基于深度学习的自适应多层蜜网架构用于威胁行为分析",
+    "summary_en": [
+      "• Model Architecture: ADLAH (Adaptive Deep Learning Anomaly Detection Honeynet) features a multi-layered architecture with low-interaction sensor nodes and dynamically provisioned high-interaction honeypots, orchestrated by a reinforcement learning agent for real-time session escalation decisions.",
+      "• Data used: The paper acknowledges insufficient live data for field-scale validation; the prototype was tested with simulated or limited real-world traffic, focusing on automated bot attacks as the primary threat vector.",
+      "• Performance metrics: No quantitative performance metrics are provided; feasibility is demonstrated through a functional prototype of the decision mechanism, with design trade-offs and limitations detailed instead of empirical results.",
+      "• Core capability: The architecture aims for automated extraction, clustering, and versioning of bot attack chains to produce actionable threat intelligence, targeting cost-efficient capture of high-value adversary behavior."
+    ],
+    "summary_cn": [
+      "• 核心模型: ADLAH（自适应深度学习异常检测蜜网）采用多层架构，包括低交互传感器节点和动态配置的高交互蜜罐，通过强化学习代理实时决策会话升级。",
+      "• 数据来源: 论文承认缺乏足够的实时数据进行大规模验证，原型测试基于模拟或有限的真实流量，重点关注自动化僵尸网络攻击作为主要威胁向量。",
+      "• 主要结论: 该架构为AI驱动的欺骗平台提供了端到端蓝图，通过选择性升级和异常检测，实现高效捕获高价值对手行为、系统化僵尸版本管理和可操作威胁情报生成。",
+      "• 技术路线: 详细阐述了设计权衡和局限性，并提供了严格的规模化实证评估路线图，但未进行实际性能指标验证。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate—the adaptive, AI-driven approach could enhance threat detection and intelligence gathering in cybersecurity applications, potentially reducing false positives and operational costs, but direct financial alpha is indirect and depends on implementation in security products or services.",
+      "• Implementation Risk: High—the architecture is complex, requiring integration of multiple components (RL agent, honeypots, clustering algorithms); lack of field-scale validation and live data raises concerns about real-world performance and scalability.",
+      "• Novelty: Moderate—combines honeynets with deep learning and reinforcement learning for adaptive threat analysis is innovative, but similar concepts exist in cybersecurity research; the automated bot versioning feature adds some uniqueness.",
+      "• Practical limitations: The paper is more of a blueprint than a validated solution, with no empirical results or benchmarks provided, making it speculative for immediate deployment."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等——将蜜网与深度学习和强化学习结合用于自适应威胁分析具有创新性，自动化僵尸版本管理功能增加了独特性，但类似概念在网络安全研究中已有探索。",
+      "• 实盘坑: 高——架构复杂，需整合多个组件（RL代理、蜜罐、聚类算法）；缺乏大规模验证和实时数据，实际性能和可扩展性存疑，部署成本和技术门槛较高。",
+      "• 复现难度: 高——论文仅提供蓝图和原型，未公开完整代码或数据集，实证评估路线图依赖未来工作，复现需要大量工程资源和网络安全专业知识。",
+      "• 应用前景: 有限——作为学术研究有潜力，但直接转化为金融Alpha间接，需通过网络安全产品实现价值，当前阶段更适合理论探讨而非实盘应用。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2512.07820v1",
+    "title": "Graph-Based Learning of Spectro-Topographical EEG Representations with Gradient Alignment for Brain-Computer Interfaces",
+    "pdf_url": "https://arxiv.org/pdf/2512.07820v1",
+    "published": "2025-12-08",
+    "crawled_at": "2025-12-09 20:03:01",
+    "ai_score": 7.5,
+    "translated_title": "基于图学习的脑电频谱地形图表示与梯度对齐方法用于脑机接口",
+    "summary_en": [
+      "• Model Architecture: Graph convolutional networks (GCNs) fuse embeddings from frequency-based topographical maps and time-frequency spectrograms, incorporating center loss and pairwise difference loss for inter-class separability, with a gradient alignment strategy to resolve domain conflicts.",
+      "• Data used: Three publicly available EEG datasets: BCI-2a, CL-Drive, and CLARE, covering diverse brain-computer interface applications.",
+      "• Performance metrics: Extensive experiments and ablation studies validate efficacy, though specific metrics (e.g., accuracy, F1-score) are not detailed in the abstract; focus is on inter-class separability and gradient alignment improvements."
+    ],
+    "summary_cn": [
+      "• 核心模型: 图卷积网络融合频域地形图和时频谱图嵌入，结合中心损失和成对差异损失提升类间可分性，采用梯度对齐策略解决多域冲突。",
+      "• 数据来源: 三个公开脑电数据集：BCI-2a、CL-Drive和CLARE，涵盖不同脑机接口场景。",
+      "• 主要结论: 模型通过梯度对齐优化多域信息融合，提高脑电信号表示的鲁棒性和分类性能，消融实验验证各组件重要性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; graph-based fusion of multi-domain EEG data could enhance signal processing for real-time BCI applications, but direct financial alpha generation is limited without market data integration.",
+      "• Implementation Risk: High; EEG signals are temporally dynamic and subject-sensitive, requiring extensive calibration and hardware dependencies, posing challenges for scalable deployment in trading environments.",
+      "• Novelty: Good; gradient alignment for resolving domain conflicts in GCNs is innovative, though building on established EEG and graph learning techniques; novelty lies in the specific application to spectro-topographical representations."
+    ],
+    "verdict_cn": [
+      "• 创新点: 梯度对齐策略在多域图卷积网络中解决冲突，提升脑电信号融合效果，有一定技术新颖性，但基于现有脑电和图学习框架。",
+      "• 实盘坑: 脑电信号动态性强、个体差异大，需大量校准和专用硬件，实盘应用风险高，难以直接迁移至金融交易场景。",
+      "• 复现难度: 中等；依赖公开数据集和标准深度学习库，但梯度对齐和损失函数设计需精细调参，可能增加复现复杂性。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2512.07818v1",
+    "title": "Provable Long-Range Benefits of Next-Token Prediction",
+    "pdf_url": "https://arxiv.org/pdf/2512.07818v1",
+    "published": "2025-12-08",
+    "crawled_at": "2025-12-09 20:03:18",
+    "ai_score": 8.5,
+    "translated_title": "可证明的下一个词预测的长期效益",
+    "summary_en": [
+      "• Model Architecture: Recurrent Neural Network (RNN) trained via next-token prediction optimization",
+      "• Data used: Documents sampled from a training distribution, with held-out documents for evaluation",
+      "• Performance metrics: Achieves k-token indistinguishability, where no bounded algorithm can distinguish between k consecutive tokens from held-out documents and model-generated tokens after the same prefix",
+      "• Theoretical bounds: Polynomial bounds in k (independent of document length) on model size needed for k-token indistinguishability"
+    ],
+    "summary_cn": [
+      "• 核心模型: 通过下一个词预测优化的循环神经网络（RNN）",
+      "• 数据来源: 从训练分布中采样的文档，使用保留文档进行评估",
+      "• 主要结论: 实现k词不可区分性，即任何有界算法无法区分保留文档的k个连续词与模型在相同前缀后生成的k个词",
+      "• 理论边界: 模型大小需求与k呈多项式关系（独立于文档长度），以达成k词不可区分性"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for NLP/LLM strategies, as it provides a theoretical foundation for long-range coherence in language models, potentially improving document generation and structure prediction",
+      "• Implementation Risk: Moderate; theoretical proofs may not directly translate to practical gains, and RNNs are less common than transformers in modern LLMs",
+      "• Novelty: Significant; offers a complexity-theoretic explanation for why next-token prediction works, bridging theory and practice in language modeling"
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著；为下一个词预测的有效性提供复杂性理论解释，连接语言建模的理论与实践",
+      "• 实盘坑: 中等；理论证明可能无法直接转化为实际收益，且RNN在现代大语言模型中不如Transformer常见",
+      "• 复现难度: 中等；需要实现RNN训练和理论验证，但多项式边界简化了模型规模需求"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2512.07808v1",
+    "title": "LUNA: LUT-Based Neural Architecture for Fast and Low-Cost Qubit Readout",
+    "pdf_url": "https://arxiv.org/pdf/2512.07808v1",
+    "published": "2025-12-08",
+    "crawled_at": "2025-12-09 20:03:41",
+    "ai_score": 8.2,
+    "translated_title": "LUNA：基于查找表的神经架构，用于快速低成本量子比特读出",
+    "summary_en": [
+      "• Model Architecture: LUNA combines low-cost integrator-based preprocessing with LUT-based neural networks (LogicNets) for classification, using simple integrators for dimensionality reduction and synthesized DNNs into LUT logic to minimize hardware overhead.",
+      "• Data used: The paper likely uses simulated or experimental data from superconducting qubit readout systems, though specific datasets are not detailed in the abstract; it focuses on analog response mapping to discrete states.",
+      "• Performance metrics: Achieves up to 10.95x reduction in area, 30% lower latency, and maintains high fidelity with little to no loss compared to state-of-the-art DNN-based readout implementations."
+    ],
+    "summary_cn": [
+      "• 核心模型: LUNA采用基于低成本积分器的预处理和基于查找表（LUT）的神经网络（LogicNets）进行分类，通过简单积分器降维和将DNN合成到LUT逻辑中，大幅减少硬件开销。",
+      "• 数据来源: 可能使用超导量子比特读出系统的模拟或实验数据，摘要中未详细说明具体数据集；重点在于将模拟响应映射到离散状态。",
+      "• 主要结论: 与最先进的基于DNN的读出实现相比，LUNA实现面积减少高达10.95倍，延迟降低30%，且保真度损失极小或无损失，支持可扩展、低占用、高速的量子比特读出。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for improving quantum computing efficiency by enabling faster, lower-cost qubit readout, which could enhance quantum error correction loops and support larger quantum systems, though direct financial alpha in traditional markets is limited.",
+      "• Implementation Risk: Moderate risk due to reliance on specialized hardware (superconducting qubits) and the need for integration into existing quantum systems; scalability and real-world deployment challenges may arise.",
+      "• Novelty: Novel in combining integrator-based preprocessing with LUT-based neural networks for quantum readout, offering a unique hardware-software co-design approach that reduces resource usage and latency compared to prior DNN implementations."
+    ],
+    "verdict_cn": [
+      "• 创新点: 创新性地将基于积分器的预处理与基于查找表的神经网络结合用于量子读出，提供独特的硬件-软件协同设计方法，相比先前DNN实现，显著降低资源使用和延迟。",
+      "• 实盘坑: 中等风险，依赖于专用硬件（超导量子比特）且需集成到现有量子系统中；可扩展性和实际部署可能面临挑战，如硬件兼容性和环境稳定性问题。",
+      "• 复现难度: 较高难度，需要量子计算实验设备和专业知识来复现；LUT合成和优化框架可能涉及复杂算法，但开源代码或详细方法可降低部分难度。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2512.07805v1",
+    "title": "Group Representational Position Encoding",
+    "pdf_url": "https://arxiv.org/pdf/2512.07805v1",
+    "published": "2025-12-08",
+    "crawled_at": "2025-12-09 20:04:03",
+    "ai_score": 8.5,
+    "translated_title": "群表示位置编码",
+    "summary_en": [
+      "• Model Architecture: GRAPE is a unified positional encoding framework based on group actions, with two main variants: Multiplicative GRAPE using rotations in SO(d) for norm-preserving maps, and Additive GRAPE using unipotent actions in GL for additive logit biases.",
+      "• Data used: The paper is theoretical and does not specify experimental datasets; it focuses on mathematical derivations and framework unification rather than empirical validation on specific data.",
+      "• Performance metrics: No explicit performance metrics are provided; the paper demonstrates that GRAPE recovers existing methods (RoPE, ALiBi, FoX) as special cases and extends them with learned commuting subspaces and non-commuting mixtures at O(d) and O(r d) cost per head."
+    ],
+    "summary_cn": [
+      "• 核心模型: GRAPE是一个基于群作用的统一位置编码框架，包含两个变体：乘法GRAPE使用SO(d)中的旋转实现保范映射，加法GRAPE使用GL中的单能作用实现加性对数偏置。",
+      "• 数据来源: 论文为理论性研究，未指定实验数据集；重点在于数学推导和框架统一，而非在特定数据上的实证验证。",
+      "• 主要结论: GRAPE将RoPE和ALiBi等现有方法作为特例包含，并通过学习可交换子空间和非可交换混合扩展几何结构，每头成本为O(d)和O(r d)，为长上下文模型提供原则性设计空间。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; GRAPE offers a principled extension to existing positional encodings, potentially improving long-context modeling in NLP/LLMs, but lacks empirical validation to confirm practical advantages over established methods.",
+      "• Implementation Risk: High; the framework involves complex group theory and matrix exponentials, increasing implementation complexity and computational overhead, especially for non-commuting mixtures, which may hinder adoption in production systems.",
+      "• Novelty: High; GRAPE unifies multiplicative and additive positional encodings under a single group-theoretic framework, providing a novel mathematical perspective and extending beyond current methods with learned subspaces and cross-feature coupling."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；GRAPE在群论框架下统一了乘法和加法位置编码，提供新颖的数学视角，并通过学习子空间和跨特征耦合扩展现有方法，超越RoPE和ALiBi等特例。",
+      "• 实盘坑: 高；框架涉及复杂群论和矩阵指数，增加实现复杂性和计算开销，特别是非可交换混合部分，可能阻碍在生产系统中的部署，且缺乏实证性能验证。",
+      "• 复现难度: 中高；需要扎实的群论和线性代数知识来复现理论推导，但开源项目页可能提供代码支持；实验部分缺失使得性能复现和比较更具挑战性。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2512.07801v1",
+    "title": "Collaborative Causal Sensemaking: Closing the Complementarity Gap in Human-AI Decision Support",
+    "pdf_url": "https://arxiv.org/pdf/2512.07801v1",
+    "published": "2025-12-08",
+    "crawled_at": "2025-12-09 20:04:27",
+    "ai_score": 7.5,
+    "translated_title": "协同因果意义构建：弥合人机决策支持中的互补性差距",
+    "summary_en": [
+      "• Model Architecture: Proposes Collaborative Causal Sensemaking (CCS) framework for AI agents that co-construct mental models, goals, and causal hypotheses with human experts through iterative interaction protocols.",
+      "• Data used: No specific dataset mentioned; focuses on theoretical framework for human-AI collaborative decision-making in messy, high-stakes environments.",
+      "• Performance metrics: Evaluates based on trust, complementarity, and improvement in joint decision outcomes over time rather than traditional accuracy metrics.",
+      "• Key innovation: Shifts from accuracy-focused AI assistance to systems that participate in collaborative cognitive processes where both human and AI learn from each other."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出协同因果意义构建（CCS）框架，设计AI代理作为认知工作伙伴，与人类专家共同构建心理模型、目标和因果假设。",
+      "• 数据来源: 未提及具体数据集，专注于混乱高风险环境中人机协同决策的理论框架。",
+      "• 主要结论: 人机团队表现不佳源于互补性差距，需要AI系统参与协作认知过程，共同测试和修订假设。",
+      "• 方法论: 强调交互协议、共同建模表示，以及以信任和互补性为中心的评价体系。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - framework could enhance decision-making in complex domains like macro trading or event-driven strategies by improving human-AI collaboration, but requires extensive real-world validation.",
+      "• Implementation Risk: High - requires significant changes to existing AI systems, human training, and organizational processes; trust-building and co-learning mechanisms are difficult to implement reliably.",
+      "• Novelty: High - reframes AI assistance from tool to teammate, emphasizing collaborative sensemaking over traditional accuracy metrics; addresses fundamental gaps in current human-AI team performance.",
+      "• Practical challenges: Training ecologies for collaborative thinking, developing interaction protocols for co-authored models, and evaluating trust dynamics present substantial research hurdles."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将AI从工具重新定义为队友，强调协同意义构建而非传统准确性指标，填补当前人机团队表现的根本性差距。",
+      "• 实盘坑: 实施风险高，需彻底改造现有AI系统、人员培训和组织流程；信任构建和共同学习机制难以可靠实现。",
+      "• 复现难度: 极高，框架依赖理论交互协议和共同建模表示，缺乏具体算法或数据集，实际部署需要大量定制化开发。",
+      "• 量化应用: 在宏观交易或事件驱动策略等复杂领域有潜力，但需大量实盘验证，短期难以产生直接Alpha。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2512.07795v1",
+    "title": "ReasonBENCH: Benchmarking the (In)Stability of LLM Reasoning",
+    "pdf_url": "https://arxiv.org/pdf/2512.07795v1",
+    "published": "2025-12-08",
+    "crawled_at": "2025-12-09 20:04:46",
+    "ai_score": 8.2,
+    "translated_title": "ReasonBENCH：基准测试LLM推理的（不）稳定性",
+    "summary_en": [
+      "• Model Architecture: ReasonBENCH is a modular evaluation library that standardizes reasoning frameworks, models, and tasks, designed to quantify instability in LLM reasoning across various domains.",
+      "• Data used: The benchmark includes tasks from different domains to assess reasoning strategies, with a multi-run protocol that reports statistically reliable metrics for both quality and cost.",
+      "• Performance metrics: It reports metrics such as confidence intervals (up to four times wider for similar average performance), solve rate stability, and cost consistency, highlighting high instability in most reasoning strategies and models."
+    ],
+    "summary_cn": [
+      "• 核心模型: ReasonBENCH是一个模块化评估库，标准化了推理框架、模型和任务，旨在量化不同领域中LLM推理的不稳定性。",
+      "• 数据来源: 基准测试包含来自不同领域的任务，用于评估推理策略，采用多轮运行协议报告质量和成本的统计可靠指标。",
+      "• 主要结论: 大多数推理策略和模型表现出高不稳定性，即使平均性能相似的策略置信区间可宽达四倍，且顶级方法往往成本更高且更不稳定。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for identifying stable and cost-effective LLM reasoning methods, which could enhance reliability in financial applications like automated analysis or decision-making.",
+      "• Implementation Risk: Moderate risk due to the complexity of integrating multi-run protocols and variance-aware reporting into existing systems, potentially increasing computational costs.",
+      "• Novelty: High novelty as the first benchmark to systematically quantify LLM reasoning instability, introducing a public leaderboard to encourage reproducibility and uncertainty quantification."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首个系统量化LLM推理不稳定性的基准测试，引入公共排行榜以促进可复现性和不确定性量化，填补了当前评估实践的盲点。",
+      "• 实盘坑: 集成多轮运行协议和方差感知报告可能增加计算成本，且不稳定策略可能导致实盘性能波动，影响可靠性。",
+      "• 复现难度: 中等难度，需要标准化推理框架和任务，但公开代码库（https://github.com/au-clan/ReasonBench）降低了复现门槛。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
     "id": "2512.05967v1",
     "title": "Enhancing Retrieval-Augmented Generation with Entity Linking for Educational Platforms",
     "pdf_url": "https://arxiv.org/pdf/2512.05967v1",
