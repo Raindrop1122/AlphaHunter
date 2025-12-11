@@ -1,5 +1,349 @@
 [
   {
+    "id": "2512.09929v1",
+    "title": "Closing the Train-Test Gap in World Models for Gradient-Based Planning",
+    "pdf_url": "https://arxiv.org/pdf/2512.09929v1",
+    "published": "2025-12-10",
+    "crawled_at": "2025-12-11 20:01:31",
+    "ai_score": 7.8,
+    "translated_title": "缩小基于梯度规划的世界模型中的训练-测试差距",
+    "summary_en": [
+      "• Model Architecture: World models paired with model predictive control (MPC) for gradient-based planning, focusing on closing the train-test gap between next-state prediction training and action sequence estimation at inference.",
+      "• Data used: Large-scale datasets of expert trajectories for offline training, with train-time data synthesis techniques to improve planning performance.",
+      "• Performance metrics: Outperforms or matches classical gradient-free cross-entropy method (CEM) across object manipulation and navigation tasks in 10% of the time budget, demonstrating significant efficiency gains."
+    ],
+    "summary_cn": [
+      "• 核心模型: 结合模型预测控制（MPC）的世界模型，用于基于梯度的规划，旨在缩小训练时的下一状态预测与测试时的动作序列估计之间的差距。",
+      "• 数据来源: 基于专家轨迹的大规模离线训练数据集，采用训练时数据合成技术以提升规划性能。",
+      "• 主要结论: 在10%的时间预算内，在多种物体操作和导航任务中优于或匹配传统的无梯度交叉熵方法（CEM），显示出显著的效率提升。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; gradient-based planning offers computational efficiency for real-time decision-making in dynamic markets, but performance historically lags behind other methods, limiting immediate alpha generation.",
+      "• Implementation Risk: High; reliance on expert trajectories and data synthesis may introduce biases or overfitting, and integration with existing trading systems could be complex due to model predictive control requirements.",
+      "• Novelty: Moderate; the focus on closing the train-test gap is a novel twist, but world models and gradient-based planning are established concepts, reducing breakthrough potential."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；通过训练时数据合成技术缩小训练-测试差距是新颖之处，但世界模型和基于梯度的规划已有基础，创新性有限。",
+      "• 实盘坑: 高；依赖专家轨迹可能导致数据偏差，模型预测控制的集成复杂度高，实时市场环境中的泛化能力未经充分验证。",
+      "• 复现难度: 中等；方法基于标准深度学习框架，但需要大规模专家数据和精细调参，复现成本较高。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2512.09914v1",
+    "title": "FALCON: Few-step Accurate Likelihoods for Continuous Flows",
+    "pdf_url": "https://arxiv.org/pdf/2512.09914v1",
+    "published": "2025-12-10",
+    "crawled_at": "2025-12-11 20:01:51",
+    "ai_score": 7.8,
+    "translated_title": "FALCON：连续流的少步精确似然",
+    "summary_en": [
+      "• Model Architecture: FALCON introduces a hybrid training objective for continuous normalizing flows (CNFs) that encourages invertibility, enabling few-step sampling with accurate likelihoods for importance sampling applications.",
+      "• Data used: The paper focuses on molecular Boltzmann sampling, likely using molecular dynamics simulation datasets or standard benchmarks in statistical physics for evaluating thermodynamic equilibrium states.",
+      "• Performance metrics: FALCON outperforms state-of-the-art normalizing flow models in molecular Boltzmann sampling and is two orders of magnitude faster than equivalently performing CNF models, significantly reducing computational cost from thousands to few function evaluations per sample."
+    ],
+    "summary_cn": [
+      "• 核心模型: FALCON采用混合训练目标优化连续归一化流（CNF），增强可逆性，实现少步采样和精确似然计算，适用于重要性采样。",
+      "• 数据来源: 基于分子玻尔兹曼采样任务，可能使用分子动力学模拟数据集或统计物理标准基准来评估热力学平衡态。",
+      "• 主要结论: FALCON在分子玻尔兹曼采样中优于现有归一化流模型，速度比同等性能的CNF快两个数量级，大幅降低计算开销。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; FALCON's speed-up in likelihood computation could enhance generative modeling for financial time series or option pricing, but direct alpha generation is limited without specific financial applications tested.",
+      "• Implementation Risk: High; integrating FALCON into trading systems requires adaptation from molecular physics to financial data, with risks in model stability and real-time performance in noisy markets.",
+      "• Novelty: High; the hybrid training objective for invertibility in CNFs is innovative, addressing a key bottleneck in Boltzmann Generators, though it builds on existing flow matching techniques."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；通过混合训练目标提升CNF可逆性，解决玻尔兹曼生成器中似然计算成本高的核心问题，方法新颖但基于现有流匹配技术。",
+      "• 实盘坑: 高；将模型从分子物理迁移到金融数据需大量调整，市场噪声和实时性要求可能影响性能，实施风险较大。",
+      "• 复现难度: 中等；论文方法描述清晰，但依赖专业统计物理数据集和计算资源，复现需跨领域专业知识，可能耗时。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2512.09912v1",
+    "title": "Supervised learning pays attention",
+    "pdf_url": "https://arxiv.org/pdf/2512.09912v1",
+    "published": "2025-12-10",
+    "crawled_at": "2025-12-11 20:02:13",
+    "ai_score": 7.8,
+    "translated_title": "监督学习引入注意力机制",
+    "summary_en": [
+      "• Model Architecture: Proposes attention-weighted supervised learning methods for tabular data, adapting in-context learning concepts to traditional algorithms like lasso regression and gradient boosting. The approach fits personalized local models for each test observation by weighting training data based on supervised similarity measures.",
+      "• Data used: Applied to real and simulated datasets, including time series and spatial data, demonstrating adaptability to heterogeneous data without pre-specified clusters or similarity structures.",
+      "• Performance metrics: Shows improved predictive performance across datasets while preserving interpretability. Theoretical analysis indicates lower mean squared error than standard linear models under mixture-of-models data-generating processes with known subgroup structure."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出针对表格数据的注意力加权监督学习方法，将上下文学习概念应用于传统算法（如lasso回归和梯度提升），通过基于监督相似性度量的训练数据加权为每个测试观测拟合个性化局部模型。",
+      "• 数据来源: 应用于真实和模拟数据集，包括时间序列和空间数据，展示了对异构数据的适应性，无需预先指定聚类或相似性结构。",
+      "• 主要结论: 在保持可解释性的同时，提高了跨数据集的预测性能。理论分析表明，在已知子组结构的混合模型数据生成过程中，注意力加权线性模型比标准线性模型具有更低的均方误差。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate to high potential for generating alpha in quantitative strategies, particularly for handling heterogeneous data and distributional shifts in tabular datasets, which are common in financial applications like factor modeling and risk assessment.",
+      "• Implementation Risk: Moderate risk due to the complexity of implementing attention mechanisms in traditional supervised learning frameworks and the need for careful calibration of similarity measures to avoid overfitting in real-world financial data.",
+      "• Novelty: High novelty in bridging in-context learning from neural networks to interpretable supervised methods, offering a fresh approach to personalized modeling without sacrificing transparency, though the core attention concept is not entirely new."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将神经网络中的上下文学习概念引入可解释的监督学习方法，实现了在不牺牲透明度的前提下进行个性化建模，为处理表格数据中的异质性和分布偏移提供了新思路。",
+      "• 实盘坑: 在实际金融数据中实施时，需注意相似性度量的校准以避免过拟合，且注意力机制在传统框架中的集成可能增加计算复杂性和调参难度。",
+      "• 复现难度: 中等难度，需要实现注意力加权算法并适配到现有监督学习流程中，但对数据集和代码的依赖性较强，可能受限于特定应用场景。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2512.09909v1",
+    "title": "STACHE: Local Black-Box Explanations for Reinforcement Learning Policies",
+    "pdf_url": "https://arxiv.org/pdf/2512.09909v1",
+    "published": "2025-12-10",
+    "crawled_at": "2025-12-11 20:02:33",
+    "ai_score": 7.8,
+    "translated_title": "STACHE：强化学习策略的局部黑盒解释框架",
+    "summary_en": [
+      "• Model Architecture: STACHE generates Composite Explanations with two components: Robustness Region (connected neighborhood where action remains invariant) and Minimal Counterfactuals (smallest state perturbations to alter decision). It uses an exact, search-based algorithm exploiting factored state spaces to avoid surrogate model fidelity gaps.",
+      "• Data used: Empirical validation conducted on Gymnasium environments (standard RL benchmarks), focusing on discrete Markov games with sparse-reward or safety-critical settings.",
+      "• Performance metrics: Framework effectively explains policy actions and captures evolution of policy logic during training, from erratic to optimized strategies, providing insights into agent sensitivity and decision boundaries."
+    ],
+    "summary_cn": [
+      "• 核心模型: STACHE框架生成复合解释，包含鲁棒性区域（动作不变的连通邻域）和最小反事实（改变决策的最小状态扰动），采用基于精确搜索的算法，利用因子化状态空间结构避免代理模型保真度差距。",
+      "• 数据来源: 在Gymnasium环境（标准强化学习基准）上进行实证验证，专注于稀疏奖励或安全关键的离散马尔可夫游戏。",
+      "• 主要结论: 框架不仅能解释策略动作，还能有效捕捉训练过程中策略逻辑的演变（从不稳定到优化策略），提供关于智能体敏感性和决策边界的可操作见解。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - provides debugging tools for RL policies in financial applications like algorithmic trading or portfolio optimization, but direct alpha generation requires integration with specific trading strategies.",
+      "• Implementation Risk: High - search-based algorithms in high-dimensional state spaces may be computationally expensive; real-time application in dynamic markets could face latency issues.",
+      "• Novelty: Significant - introduces Composite Explanations combining robustness and counterfactuals, addressing black-box nature of RL policies without surrogate models, offering fresh approach to interpretability in RL."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著 - 提出复合解释结合鲁棒性和反事实，无需代理模型直接处理RL策略的黑盒特性，为强化学习可解释性提供新思路。",
+      "• 实盘坑: 高 - 高维状态空间中的搜索算法计算成本高；动态市场中的实时应用可能面临延迟问题；稀疏奖励环境下的解释可能不适用于高频交易场景。",
+      "• 复现难度: 中等 - 基于Gymnasium环境的标准实现相对直接，但自定义状态空间和算法优化可能需要专业知识；论文未提供完整代码或超参数细节。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2512.09894v1",
+    "title": "Exploring Protein Language Model Architecture-Induced Biases for Antibody Comprehension",
+    "pdf_url": "https://arxiv.org/pdf/2512.09894v1",
+    "published": "2025-12-10",
+    "crawled_at": "2025-12-11 20:02:55",
+    "ai_score": 7.5,
+    "translated_title": "探索蛋白质语言模型架构诱导的抗体理解偏见",
+    "summary_en": [
+      "• Model Architecture: The study systematically compares three state-of-the-art protein language models (AntiBERTa, BioBERT, ESM2) against a general-purpose language model baseline (GPT-2) for antibody-specific tasks.",
+      "• Data used: The evaluation is conducted on antibody target specificity prediction tasks, focusing on biological features such as V gene usage, somatic hypermutation patterns, and isotype information.",
+      "• Performance metrics: All PLMs achieve high classification accuracy but exhibit distinct biases in capturing biological features; attention attribution analysis reveals that antibody-specific models naturally focus on complementarity-determining regions (CDRs), while general protein models benefit from explicit CDR-focused training strategies."
+    ],
+    "summary_cn": [
+      "• 核心模型: 系统比较了三种先进的蛋白质语言模型（AntiBERTa、BioBERT、ESM2）与通用语言模型基线（GPT-2）在抗体特异性任务上的表现。",
+      "• 数据来源: 基于抗体靶标特异性预测任务进行评估，重点关注V基因使用、体细胞超突变模式和同种型信息等生物学特征。",
+      "• 主要结论: 所有蛋白质语言模型均实现高分类准确率，但在捕获生物学特征时表现出不同偏见；注意力归因分析显示，抗体特异性模型自然聚焦于互补决定区（CDRs），而通用蛋白质模型则显著受益于明确的CDR聚焦训练策略。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the insights into model architecture biases could inform the development of more accurate antibody design tools, potentially leading to improved drug discovery pipelines and reduced experimental costs.",
+      "• Implementation Risk: High; translating these findings into practical trading strategies is indirect, as the research focuses on biological applications rather than financial markets, requiring significant adaptation and validation.",
+      "• Novelty: Moderate; while the comparison of PLMs for antibody tasks is novel, the core concepts of architecture-induced biases and attention analysis are established in machine learning, limiting groundbreaking contributions."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；研究通过系统比较不同蛋白质语言模型在抗体任务上的表现，揭示了架构诱导的偏见，为计算抗体设计提供了新见解，但未突破现有机器学习范式。",
+      "• 实盘坑: 高；该研究聚焦生物学应用，直接转化为金融交易策略的路径不明确，需大量跨领域适配和验证，实盘部署风险较大。",
+      "• 复现难度: 中等；模型和任务描述清晰，但依赖专业生物数据集和计算资源，复现需领域知识和基础设施支持，可能增加成本和复杂性。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2512.09892v1",
+    "title": "Provably Learning from Modern Language Models via Low Logit Rank",
+    "pdf_url": "https://arxiv.org/pdf/2512.09892v1",
+    "published": "2025-12-10",
+    "crawled_at": "2025-12-11 20:03:14",
+    "ai_score": 8.5,
+    "translated_title": "通过低对数秩从现代语言模型中可证明学习",
+    "summary_en": [
+      "• Model Architecture: The paper proposes a theoretical framework based on the observation that modern language models exhibit approximately low logit rank, meaning the matrix of log probabilities for tokens conditioned on sequences can be approximated by a low-rank matrix.",
+      "• Data used: The study does not rely on specific datasets but focuses on a query learning model with logit queries, simulating access to common APIs for language models, without empirical data validation.",
+      "• Performance metrics: The main result is an efficient algorithm for learning any approximately low logit rank model from queries, providing provable learning guarantees, though no quantitative metrics like accuracy or speed are detailed."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于现代语言模型具有近似低对数秩的观察，提出理论框架，即令牌条件序列的对数概率矩阵可用低秩矩阵近似。",
+      "• 数据来源: 未使用具体数据集，而是基于查询学习模型，模拟通过API访问语言模型的对数查询，缺乏实证数据验证。",
+      "• 主要结论: 提出高效算法，可从查询中学习任何近似低对数秩模型，提供可证明的学习保证，但未详细说明量化性能指标。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for developing novel trading strategies by leveraging low logit rank structure to extract predictive signals from language models, possibly enhancing NLP-based alpha factors in financial markets.",
+      "• Implementation Risk: Moderate to high risk due to theoretical nature; practical implementation requires bridging gap between abstract queries and real-world API constraints, with potential issues in scalability and noise handling.",
+      "• Novelty: High novelty as it offers first end-to-end learning guarantee for generative models mimicking modern language models, introducing low logit rank as a tractable abstraction for complex systems."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高创新性，首次为模拟现代语言模型的生成模型提供端到端学习保证，引入低对数秩作为复杂系统的可处理抽象。",
+      "• 实盘坑: 中等至高风险，理论性强，实际应用需解决抽象查询与真实API限制的差距，可能存在可扩展性和噪声处理问题。",
+      "• 复现难度: 高难度，算法基于理论假设，缺乏开源代码或实证验证，复现需深入数学推导和自定义实现。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2512.09890v1",
+    "title": "Analysis of Dirichlet Energies as Over-smoothing Measures",
+    "pdf_url": "https://arxiv.org/pdf/2512.09890v1",
+    "published": "2025-12-10",
+    "crawled_at": "2025-12-11 20:03:39",
+    "ai_score": 7.5,
+    "translated_title": "狄利克雷能量作为过平滑度量的分析",
+    "summary_en": [
+      "• Model Architecture: The paper analyzes two functionals derived from graph Laplacians (unnormalized and normalized) used as over-smoothing measures in Graph Neural Networks (GNNs).",
+      "• Data used: The study is theoretical and does not specify empirical datasets; it relies on formal spectral properties and axiomatic definitions from prior work.",
+      "• Performance metrics: The analysis focuses on spectral compatibility with GNN architectures, highlighting that the normalized graph Laplacian fails to meet axiomatic criteria for node-similarity measures.",
+      "• Key findings: It resolves ambiguities in monitoring GNN dynamics by clarifying distinctions between the two Dirichlet energy definitions, aiding in metric selection for over-smoothing detection."
+    ],
+    "summary_cn": [
+      "• 核心模型: 分析基于图拉普拉斯算子（未归一化和归一化）的两种函数，用作图神经网络（GNN）中的过平滑度量。",
+      "• 数据来源: 研究为理论性分析，未指定实证数据集；依赖于先验工作的形式化谱性质和公理化定义。",
+      "• 主要结论: 归一化图拉普拉斯算子不满足节点相似性度量的公理化标准，通过澄清两种狄利克雷能量定义的区别，解决了监测GNN动态时的模糊性。",
+      "• 理论贡献: 形式化了两种定义的基本谱性质，强调了选择与GNN架构谱兼容的度量的关键区别。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low; the paper is theoretical and focuses on methodological clarification rather than direct financial applications, but could indirectly improve GNN-based models in quantitative finance if integrated with alpha-generating architectures.",
+      "• Implementation Risk: Moderate; while the concepts are well-defined, applying them to real-world financial graphs (e.g., stock correlation networks) requires careful adaptation to noisy, non-stationary data, risking overfitting if not properly validated.",
+      "• Novelty: Moderate; it builds on existing work by Rusch et al. to formalize distinctions, offering a clear resolution to an ambiguity in the field, but does not introduce groundbreaking new techniques or empirical results.",
+      "• Practical Impact: The analysis could enhance monitoring of over-smoothing in GNNs used for tasks like portfolio optimization or risk assessment, potentially improving model stability and performance in long-term strategies."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；基于Rusch等人的工作形式化区分，解决了领域内的模糊性，但未引入突破性新技术或实证结果，属于理论深化。",
+      "• 实盘坑: 中等；将概念应用于实际金融图（如股票相关性网络）需适应噪声和非平稳数据，若验证不当可能导致过拟合风险。",
+      "• 复现难度: 低；研究为理论分析，依赖标准数学框架，易于复现核心论证，但集成到实盘GNN模型需额外工程工作。",
+      "• 量化价值: 间接；通过改进GNN过平滑监测，可能提升基于图的量化模型（如风险因子提取）的稳定性，但无直接阿尔法生成策略。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2512.09886v1",
+    "title": "HPM-KD: Hierarchical Progressive Multi-Teacher Framework for Knowledge Distillation and Efficient Model Compression",
+    "pdf_url": "https://arxiv.org/pdf/2512.09886v1",
+    "published": "2025-12-10",
+    "crawled_at": "2025-12-11 20:03:57",
+    "ai_score": 8.2,
+    "translated_title": "HPM-KD：用于知识蒸馏和高效模型压缩的分层渐进式多教师框架",
+    "summary_en": [
+      "• Model Architecture: HPM-KD integrates six components: Adaptive Configuration Manager (meta-learning), Progressive Distillation Chain, Attention-Weighted Multi-Teacher Ensemble, Meta-Learned Temperature Scheduler, Parallel Processing Pipeline, and Shared Optimization Memory.",
+      "• Data used: Experiments conducted on CIFAR-10, CIFAR-100, and unspecified tabular datasets.",
+      "• Performance metrics: Achieves 10x-15x compression with 85% accuracy retention, reduces training time by 30-40%, and ablation studies show component contributions of 0.10-0.98 percentage points."
+    ],
+    "summary_cn": [
+      "• 核心模型: HPM-KD包含六个协同组件：自适应配置管理器（元学习）、渐进蒸馏链、注意力加权多教师集成、元学习温度调度器、并行处理管道和共享优化内存。",
+      "• 数据来源: 在CIFAR-10、CIFAR-100和未指定的表格数据集上进行实验。",
+      "• 主要结论: 实现10-15倍压缩，保持85%准确率，训练时间减少30-40%，消融研究确认各组件独立贡献为0.10-0.98个百分点。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for deploying compressed models in latency-sensitive trading strategies, enabling faster inference without significant accuracy loss.",
+      "• Implementation Risk: Moderate risk due to reliance on meta-learning and complex multi-teacher coordination, which may require extensive computational resources for fine-tuning.",
+      "• Novelty: Novel integration of meta-learning for hyperparameter tuning and progressive distillation, addressing key limitations in traditional knowledge distillation methods."
+    ],
+    "verdict_cn": [
+      "• 创新点: 创新性地结合元学习进行超参数调优和渐进蒸馏，有效解决传统知识蒸馏中的容量差距和协调问题。",
+      "• 实盘坑: 依赖元学习和复杂多教师协调，可能在实际部署中需要大量计算资源进行微调，增加实施成本。",
+      "• 复现难度: 中等难度，框架已开源在DeepBridge库，但需要熟悉元学习和并行处理技术，可能面临环境配置挑战。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2512.09850v1",
+    "title": "Conformal Bandits: Bringing statistical validity and reward efficiency to the small-gap regime",
+    "pdf_url": "https://arxiv.org/pdf/2512.09850v1",
+    "published": "2025-12-10",
+    "crawled_at": "2025-12-11 20:04:14",
+    "ai_score": 8.2,
+    "translated_title": "保形赌博机：将统计有效性和奖励效率引入小差距机制",
+    "summary_en": [
+      "• Model Architecture: Integrates Conformal Prediction (CP) into bandit algorithms, combining Thompson Sampling/UCB with statistical coverage guarantees, and incorporates hidden Markov models for regime-switching in financial applications.",
+      "• Data used: Simulation studies for validation and portfolio allocation data in small-gap regimes where classical policies underperform.",
+      "• Performance metrics: Demonstrates improved regret efficiency in small-gap settings, achieves nominal coverage guarantees where UCB fails, and shows higher risk-adjusted returns while preserving statistical validity."
+    ],
+    "summary_cn": [
+      "• 核心模型: 将保形预测（CP）集成到赌博机算法中，结合汤普森采样/UCB与统计覆盖保证，并引入隐马尔可夫模型捕捉金融市场的机制转换行为。",
+      "• 数据来源: 通过模拟研究验证，并应用于投资组合配置的小差距机制数据，其中经典策略表现不佳。",
+      "• 主要结论: 在小差距设置中提升后悔效率，在UCB失败时实现名义覆盖保证，并在保持统计有效性的同时获得更高的风险调整后回报。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High in small-gap regimes like portfolio allocation, where traditional bandit algorithms struggle; risk-adjusted returns improvement is promising for quantitative finance applications.",
+      "• Implementation Risk: Moderate; integration of CP with bandits and HMMs adds complexity, and real-world financial data may deviate from simulation assumptions.",
+      "• Novelty: Significant; bridges regret minimization with statistical guarantees using CP, addressing a gap in traditional bandit literature focused solely on asymptotic performance."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著；利用保形预测将后悔最小化与统计保证结合，填补了传统赌博机文献仅关注渐近性能的空白。",
+      "• 实盘坑: 中等；CP与赌博机及HMM的集成增加了复杂性，实际金融数据可能偏离模拟假设，覆盖保证在动态市场中可能不稳定。",
+      "• 复现难度: 中等偏高；需要实现CP、赌博机算法和HMM的集成，模拟设置和金融应用的数据处理可能具有挑战性。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2512.09836v1",
+    "title": "Fast Factorized Learning: Powered by In-Memory Database Systems",
+    "pdf_url": "https://arxiv.org/pdf/2512.09836v1",
+    "published": "2025-12-10",
+    "crawled_at": "2025-12-11 20:04:31",
+    "ai_score": 7.5,
+    "translated_title": "快速因子化学习：基于内存数据库系统的驱动",
+    "summary_en": [
+      "• Model Architecture: Implements factorized learning for linear regression using cofactors pre-computed from factorized joins in database systems, leveraging in-memory engines like HyPer and disk-based systems like PostgreSQL.",
+      "• Data used: Benchmarks conducted on factorized joins within databases, comparing performance between in-memory (HyPer) and disk-based (PostgreSQL) systems, with no specific external dataset mentioned.",
+      "• Performance metrics: Shows a 70% performance gain for factorized learning on in-memory systems compared to non-factorized learning, and a 100x speedup over disk-based systems, highlighting efficiency improvements."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于因子化连接的线性回归学习模型，利用数据库系统预计算共享余因子，实现因子化学习，支持内存和磁盘数据库引擎。",
+      "• 数据来源: 使用数据库内的因子化连接数据进行基准测试，对比内存数据库（HyPer）和磁盘数据库（PostgreSQL）的性能，未提及外部数据集。",
+      "• 主要结论: 在内存数据库系统上，因子化学习比非因子化学习性能提升70%，比磁盘数据库系统快100倍，证明现代数据库引擎可加速机器学习训练。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the approach could enhance data preprocessing efficiency in ML pipelines for financial models, potentially reducing latency in factor-based strategies, but direct alpha generation is limited without integration into specific trading algorithms.",
+      "• Implementation Risk: High; relies on in-memory database systems like HyPer, which may not be widely adopted in production environments, and requires significant engineering effort to adapt to real-world financial data workflows.",
+      "• Novelty: Low to moderate; builds on prior work on factorized learning in disk-based systems, but extends it to in-memory databases with open-source implementation, offering incremental innovation rather than groundbreaking methods."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将因子化学习从磁盘数据库扩展到内存数据库，提供开源实现，但创新性有限，主要基于已有技术优化。",
+      "• 实盘坑: 依赖特定内存数据库系统（如HyPer），在金融生产环境中部署风险高，需大量工程适配，且性能增益可能受数据规模和复杂度影响。",
+      "• 复现难度: 中等；论文提供开源代码，但需要配置内存数据库和因子化连接数据，技术门槛较高，可能难以直接应用于复杂金融场景。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2512.08931v1",
     "title": "Astra: General Interactive World Model with Autoregressive Denoising",
     "pdf_url": "https://arxiv.org/pdf/2512.08931v1",
