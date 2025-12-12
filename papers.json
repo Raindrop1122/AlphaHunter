@@ -1,5 +1,345 @@
 [
   {
+    "id": "2512.10953v1",
+    "title": "Bidirectional Normalizing Flow: From Data to Noise and Back",
+    "pdf_url": "https://arxiv.org/pdf/2512.10953v1",
+    "published": "2025-12-11",
+    "crawled_at": "2025-12-12 20:01:41",
+    "ai_score": 8.2,
+    "translated_title": "双向归一化流：从数据到噪声再返回",
+    "summary_en": [
+      "• Model Architecture: BiFlow introduces a bidirectional framework that learns separate forward (data-to-noise) and reverse (noise-to-data) models, eliminating the requirement for exact analytic invertibility typical in traditional Normalizing Flows.",
+      "• Data used: Experiments conducted on ImageNet dataset, a large-scale benchmark for image generation tasks, demonstrating scalability and practical applicability.",
+      "• Performance metrics: Achieves up to two orders of magnitude faster sampling compared to causal decoding methods, with state-of-the-art results among NF-based approaches and competitive performance in single-evaluation (1-NFE) settings."
+    ],
+    "summary_cn": [
+      "• 核心模型: BiFlow采用双向学习框架，分别训练前向（数据到噪声）和反向（噪声到数据）模型，突破了传统归一化流必须具有精确解析逆的限制。",
+      "• 数据来源: 在ImageNet数据集上进行实验验证，这是图像生成领域的大规模基准数据集，证明了方法的可扩展性和实际应用价值。",
+      "• 主要结论: 相比因果解码方法，采样速度提升达两个数量级，在基于NF的方法中达到最先进水平，在单次评估（1-NFE）方法中表现具有竞争力。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for time-series generation and anomaly detection in financial data, where fast sampling and flexible architectures could capture complex market dynamics more efficiently than traditional methods.",
+      "• Implementation Risk: Moderate risk due to reliance on learned inverse approximations rather than exact inverses, which may introduce stability issues in high-dimensional financial applications with noisy data.",
+      "• Novelty: Significant novelty in decoupling forward and reverse processes, enabling more expressive architectures and loss functions, though builds upon established NF and Transformer foundations."
+    ],
+    "verdict_cn": [
+      "• 创新点: 核心创新在于解耦前向和反向过程，允许使用近似逆映射而非精确解析逆，为架构设计和损失函数提供了更大灵活性。",
+      "• 实盘坑: 主要风险在于学习到的近似逆在金融高维噪声数据中可能不稳定，且ImageNet实验结果向金融时间序列的迁移效果待验证。",
+      "• 复现难度: 中等难度，需要实现双向训练框架和灵活的损失函数，但对计算资源要求较高，特别是大规模金融数据训练时。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2512.10952v1",
+    "title": "Hierarchical Dataset Selection for High-Quality Data Sharing",
+    "pdf_url": "https://arxiv.org/pdf/2512.10952v1",
+    "published": "2025-12-11",
+    "crawled_at": "2025-12-12 20:02:02",
+    "ai_score": 7.8,
+    "translated_title": "高质量数据共享的分层数据集选择方法",
+    "summary_en": [
+      "• Model Architecture: DaSH (Dataset Selection via Hierarchies) employs a hierarchical framework that models utility at both dataset and group levels (e.g., collections, institutions), enabling efficient generalization from limited observations through structured selection mechanisms.",
+      "• Data used: Evaluated on two public benchmarks: Digit-Five (digit recognition across domains) and DomainNet (object recognition across domains), both representing heterogeneous multi-source datasets with varying relevance and quality.",
+      "• Performance metrics: Outperforms state-of-the-art data selection baselines by up to 26.2% in accuracy on benchmark tasks, while requiring significantly fewer exploration steps; demonstrated robustness in low-resource settings and scenarios with limited relevant datasets."
+    ],
+    "summary_cn": [
+      "• 核心模型: DaSH采用分层架构，在数据集和组级别（如集合、机构）建模效用，通过结构化选择机制从有限观察中实现高效泛化。",
+      "• 数据来源: 基于两个公开基准测试：Digit-Five（跨领域数字识别）和DomainNet（跨领域物体识别），均代表具有不同相关性和质量的异构多源数据集。",
+      "• 主要结论: 在基准任务上比现有数据选择方法准确率提升高达26.2%，同时显著减少探索步骤；在低资源设置和缺乏相关数据集场景中表现出鲁棒性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - Hierarchical dataset selection could improve data acquisition efficiency in multi-source financial datasets (e.g., alternative data aggregation), potentially reducing noise and improving model generalization in cross-institutional settings.",
+      "• Implementation Risk: High - Real-world financial datasets often lack clean hierarchical structures; institutional data sharing faces regulatory and privacy hurdles; performance gains may not translate directly to noisy financial time-series data.",
+      "• Novelty: Significant - Formalizes dataset selection as a distinct problem from sample selection; hierarchical modeling of dataset groups is conceptually novel, though implementation details appear incremental over existing multi-armed bandit approaches."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将数据集选择形式化为独立于样本选择的问题具有概念突破性；分层建模数据集组的方法在结构上新颖，但实现细节相对现有多臂老虎机方法改进有限。",
+      "• 实盘坑: 金融数据集通常缺乏清晰分层结构；机构间数据共享面临监管和隐私障碍；在噪声金融时间序列数据上性能增益可能不明显。",
+      "• 复现难度: 中等 - 基于公开基准测试，代码和数据应可获取；但需要适应金融领域特有的数据异质性和时效性要求，调整成本较高。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2512.10946v1",
+    "title": "ImplicitRDP: An End-to-End Visual-Force Diffusion Policy with Structural Slow-Fast Learning",
+    "pdf_url": "https://arxiv.org/pdf/2512.10946v1",
+    "published": "2025-12-11",
+    "crawled_at": "2025-12-12 20:02:24",
+    "ai_score": 8.2,
+    "translated_title": "ImplicitRDP：一种具有结构慢快学习的端到端视觉-力扩散策略",
+    "summary_en": [
+      "• Model Architecture: ImplicitRDP is an end-to-end visual-force diffusion policy that integrates visual planning and reactive force control in a single network, using Structural Slow-Fast Learning with causal attention to process asynchronous visual and force tokens, and Virtual-target-based Representation Regularization to prevent modality collapse.",
+      "• Data used: The paper mentions extensive experiments on contact-rich manipulation tasks, but does not specify exact datasets; likely involves simulated or real-world robotic manipulation environments with visual and force feedback data.",
+      "• Performance metrics: ImplicitRDP significantly outperforms vision-only and hierarchical baselines in contact-rich tasks, achieving superior reactivity and success rates, as demonstrated through experimental results."
+    ],
+    "summary_cn": [
+      "• 核心模型: ImplicitRDP是一种端到端的视觉-力扩散策略，通过结构慢快学习机制，利用因果注意力处理异步视觉和力令牌，并结合虚拟目标表示正则化防止模态崩溃。",
+      "• 数据来源: 论文未明确指定数据集，但基于接触丰富的操作任务进行广泛实验，可能涉及模拟或真实机器人环境中的视觉和力反馈数据。",
+      "• 主要结论: ImplicitRDP在接触丰富的任务中显著优于仅视觉和分层基线，实现了更高的反应性和成功率，验证了其统一网络的有效性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for applications in robotic manipulation and autonomous systems where integrating multi-modal sensory data (vision and force) is critical for real-time, adaptive control, potentially leading to improved efficiency in industrial or service robotics.",
+      "• Implementation Risk: Moderate risk due to the complexity of end-to-end training with diffusion models and the need for precise synchronization of asynchronous modalities; real-world deployment may face challenges in sensor noise and environmental variability.",
+      "• Novelty: High novelty in proposing a unified diffusion policy for visual-force integration, with innovative components like Structural Slow-Fast Learning and Virtual-target-based Representation Regularization, addressing key gaps in multi-modal reinforcement learning."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出了一种端到端的视觉-力扩散策略，结合结构慢快学习和虚拟目标正则化，有效解决了多模态频率差异和模态崩溃问题，在机器人操作领域具有前沿性。",
+      "• 实盘坑: 端到端训练复杂度高，异步模态同步可能在实际部署中受传感器噪声和环境变化影响，导致性能下降或稳定性问题。",
+      "• 复现难度: 中等偏高，需要实现扩散模型、因果注意力机制和多模态数据处理，代码和实验细节的公开程度将影响复现可行性。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2512.10938v1",
+    "title": "Stronger Normalization-Free Transformers",
+    "pdf_url": "https://arxiv.org/pdf/2512.10938v1",
+    "published": "2025-12-11",
+    "crawled_at": "2025-12-12 20:02:44",
+    "ai_score": 7.8,
+    "translated_title": "更强归一化自由Transformer",
+    "summary_en": [
+      "• Model Architecture: Introduces Derf(x) = erf(αx + s) as a point-wise function to replace normalization layers in Transformer architectures, where erf is the rescaled Gaussian cumulative distribution function, with parameters α and s learned during training.",
+      "• Data used: Evaluated across multiple domains including vision (image recognition and generation), speech representation, and DNA sequence modeling, though specific datasets are not detailed in the abstract.",
+      "• Performance metrics: Outperforms LayerNorm, RMSNorm, and Dynamic Tanh (DyT) in various tasks, with gains attributed to improved generalization rather than stronger fitting capacity."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出Derf(x) = erf(αx + s)作为点函数，替代Transformer中的归一化层，其中erf是重缩放高斯累积分布函数，参数α和s在训练中学习。",
+      "• 数据来源: 在多个领域评估，包括视觉（图像识别和生成）、语音表示和DNA序列建模，但摘要中未指定具体数据集。",
+      "• 主要结论: Derf在性能上超越LayerNorm、RMSNorm和Dynamic Tanh (DyT)，其优势主要源于更好的泛化能力而非更强的拟合能力。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate to high; Derf's improved generalization could enhance model robustness and performance in diverse applications, potentially leading to better predictive models in finance if adapted to time-series or NLP tasks.",
+      "• Implementation Risk: Low to moderate; as a simple point-wise function, Derf is easy to integrate into existing architectures, but domain-specific tuning and validation are needed to ensure stability and effectiveness in real-world scenarios.",
+      "• Novelty: High; introduces a novel function design based on erf, moving beyond traditional normalization layers and Dynamic Tanh, with empirical evidence of superior performance across multiple domains."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；基于erf函数设计新点函数，突破传统归一化层和Dynamic Tanh，在多个领域实证性能优越，为归一化自由架构提供新思路。",
+      "• 实盘坑: 中低；作为简单点函数易于集成，但需针对金融任务（如时间序列或NLP）进行调优和验证，以确保在实际应用中的稳定性和有效性。",
+      "• 复现难度: 低；模型设计简洁，参数少，易于复现和实验，但需注意跨领域性能可能依赖具体数据集和任务设置。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2512.10936v1",
+    "title": "Empirical evaluation of the Frank-Wolfe methods for constructing white-box adversarial attacks",
+    "pdf_url": "https://arxiv.org/pdf/2512.10936v1",
+    "published": "2025-12-11",
+    "crawled_at": "2025-12-12 20:03:01",
+    "ai_score": 7.2,
+    "translated_title": "Frank-Wolfe方法构建白盒对抗攻击的实证评估",
+    "summary_en": [
+      "• Model Architecture: Evaluates modified Frank-Wolfe methods for constructing white-box adversarial attacks, comparing them with standard projection-based approaches and geometrical intuition methods.",
+      "• Data used: Conducts numerical experiments on MNIST and CIFAR-10 datasets, utilizing multiclass logistic regression, convolutional neural networks (CNNs), and Vision Transformer (ViT) models.",
+      "• Performance metrics: Focuses on efficiency and effectiveness of attack construction, with theoretical analysis and empirical validation of optimization performance."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用改进的Frank-Wolfe方法构建白盒对抗攻击，对比标准投影方法和几何直觉方法。",
+      "• 数据来源: 在MNIST和CIFAR-10数据集上进行实验，使用多类逻辑回归、卷积神经网络和Vision Transformer模型。",
+      "• 主要结论: 从数值优化角度提出高效对抗攻击构建方法，通过理论分析和实验验证其性能优势。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - The optimization approach could enhance adversarial robustness testing in financial ML models, but direct trading alpha generation is limited.",
+      "• Implementation Risk: High - Adversarial attacks in production systems require careful validation; real-world financial data noise may reduce effectiveness.",
+      "• Novelty: Low to Moderate - Frank-Wolfe methods are established in optimization; application to adversarial attacks is incremental rather than groundbreaking."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将经典Frank-Wolfe优化方法应用于对抗攻击构建，属于方法迁移而非理论突破。",
+      "• 实盘坑: 金融数据的高噪声和动态特性可能显著降低攻击效果，实际部署需大量调参和验证。",
+      "• 复现难度: 中等 - 方法描述清晰，但需要优化算法和深度学习框架的专业知识。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2512.10935v1",
+    "title": "Any4D: Unified Feed-Forward Metric 4D Reconstruction",
+    "pdf_url": "https://arxiv.org/pdf/2512.10935v1",
+    "published": "2025-12-11",
+    "crawled_at": "2025-12-12 20:03:24",
+    "ai_score": 8.2,
+    "translated_title": "Any4D：统一的馈送式度量4D重建",
+    "summary_en": [
+      "• Model Architecture: Any4D is a scalable multi-view transformer that uses a modular 4D scene representation with egocentric factors (depthmaps, camera intrinsics in local coordinates) and allocentric factors (camera extrinsics, scene flow in global coordinates) for feed-forward metric 4D reconstruction.",
+      "• Data used: The model processes multi-view RGB frames and can incorporate additional modalities such as RGB-D frames, IMU-based egomotion, and Radar Doppler measurements when available, enabling flexible input handling.",
+      "• Performance metrics: The paper claims superior performance with 2-3X lower error in accuracy and 15X faster compute efficiency compared to prior methods, across diverse setups."
+    ],
+    "summary_cn": [
+      "• 核心模型: Any4D采用可扩展的多视角Transformer架构，通过模块化4D场景表示（包括以局部相机坐标表示的自我中心因素如深度图和相机内参，以及以全局世界坐标表示的他者中心因素如相机外参和场景流）实现馈送式度量4D重建。",
+      "• 数据来源: 模型处理多视角RGB帧，并可整合RGB-D帧、基于IMU的自我运动、雷达多普勒测量等多种模态数据，支持灵活输入。",
+      "• 主要结论: 论文声称在多样设置下，相比先前方法，Any4D在准确性上误差降低2-3倍，计算效率提升15倍，为下游应用开辟新途径。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for applications in autonomous systems, robotics, and augmented reality due to its ability to handle multiple sensor modalities and provide dense 4D reconstructions with improved accuracy and speed, which could enhance real-time decision-making in dynamic environments.",
+      "• Implementation Risk: Moderate risk due to reliance on diverse sensor inputs (e.g., RGB-D, IMU, Radar), which may not be consistently available in all real-world scenarios, and the complexity of integrating the modular representation into existing pipelines.",
+      "• Novelty: High novelty in unifying feed-forward 4D reconstruction with a modular approach that separates egocentric and allocentric factors, enabling flexible multi-modal processing and outperforming prior work focused on 2-view or sparse methods."
+    ],
+    "verdict_cn": [
+      "• 创新点: 创新性高，通过模块化表示将自我中心和他者中心因素分离，统一了馈送式4D重建，支持多模态处理，在密集运动预测和几何重建方面超越先前基于双视角或稀疏点的方法。",
+      "• 实盘坑: 中等风险，模型依赖多种传感器输入（如RGB-D、IMU、雷达），在实际部署中可能面临数据不一致或缺失问题，且模块化表示的集成复杂度较高，可能增加系统维护成本。",
+      "• 复现难度: 中等难度，需要多视角RGB数据和可选的多模态数据，以及Transformer架构的实现，但论文提供了清晰的框架描述，有助于复现，不过传感器校准和数据处理可能带来挑战。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2512.10934v1",
+    "title": "Curriculum-Based Reinforcement Learning for Autonomous UAV Navigation in Unknown Curved Tubular Conduit",
+    "pdf_url": "https://arxiv.org/pdf/2512.10934v1",
+    "published": "2025-12-11",
+    "crawled_at": "2025-12-12 20:03:45",
+    "ai_score": 7.8,
+    "translated_title": "基于课程学习的强化学习用于无人机在未知弯曲管道中的自主导航",
+    "summary_en": [
+      "• Model Architecture: Uses PPO (Proximal Policy Optimization) reinforcement learning with a curriculum learning strategy that progressively increases tube curvature, incorporating a turning-negotiation mechanism based on LiDAR symmetry cues, directional memory, and conditional visual detection of tube center.",
+      "• Data used: Relies solely on local observations from LiDAR sensors and conditional visual detection of tube center; no prior geometric knowledge of the tubular environment is provided during training or deployment.",
+      "• Performance metrics: Consistently outperforms Pure Pursuit algorithm (deterministic baseline) despite information asymmetry; demonstrates robust and generalizable behavior validated in high-fidelity 3D environment with continuous physical dynamics."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用PPO强化学习框架，结合课程学习策略逐步增加管道曲率，并引入基于LiDAR对称性线索、方向记忆和条件视觉检测的转弯协商机制。",
+      "• 数据来源: 仅依赖LiDAR传感器的局部观测数据和管道中心的视觉检测信号，训练和部署阶段均无需管道几何形状的先验知识。",
+      "• 主要结论: 在信息不对称条件下持续超越Pure Pursuit确定性基线算法；在高保真3D环境中验证了学习行为的鲁棒性、泛化性和物理动力学可迁移性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - demonstrates RL's ability to compensate for geometric information deficits in constrained environments, potentially applicable to other perception-limited autonomous systems.",
+      "• Implementation Risk: High - real-world deployment faces challenges with sensor noise, dynamic obstacles, and computational latency in continuous physical environments.",
+      "• Novelty: Significant - curriculum learning approach for progressive exposure to curved geometries combined with multi-modal perception fusion (LiDAR+vision+memory) addresses partial observability in novel way."
+    ],
+    "verdict_cn": [
+      "• 创新点: 课程学习与多模态感知融合的创新组合，通过渐进式曲率暴露和LiDAR对称性分析有效解决管道导航中的部分可观测性问题。",
+      "• 实盘坑: 实际部署面临传感器噪声干扰、动态障碍物处理、计算延迟等挑战，且缺乏对管道材质、光照变化等环境扰动的鲁棒性验证。",
+      "• 复现难度: 中等偏高 - 需要构建高保真3D仿真环境，集成LiDAR和视觉传感器模型，并实现复杂的课程学习调度机制。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ICRA or IROS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2512.10931v1",
+    "title": "Asynchronous Reasoning: Training-Free Interactive Thinking LLMs",
+    "pdf_url": "https://arxiv.org/pdf/2512.10931v1",
+    "published": "2025-12-11",
+    "crawled_at": "2025-12-12 20:04:06",
+    "ai_score": 7.8,
+    "translated_title": "异步推理：无需训练的交互式思维大语言模型",
+    "summary_en": [
+      "• Model Architecture: The paper proposes a method to augment reasoning-capable LLMs for asynchronous operation without additional training, leveraging the properties of rotary embeddings to enable simultaneous thinking, listening, and output generation.",
+      "• Data used: The evaluation is conducted on math, commonsense, and safety reasoning tasks, though specific datasets are not detailed in the abstract; it likely uses standard benchmarks for these domains.",
+      "• Performance metrics: The approach reduces time to first non-thinking token from minutes to ≤5 seconds and decreases overall real-time delays by 6-11x, while maintaining accuracy in thinking-augmented answers."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出一种无需额外训练的方法，通过利用旋转嵌入的特性，使具备推理能力的大语言模型能够异步操作，实现同时思考、监听和生成输出。",
+      "• 数据来源: 在数学、常识和安全推理任务上进行评估，可能使用这些领域的标准基准数据集，但摘要中未具体说明。",
+      "• 主要结论: 该方法将首个非思考令牌的生成时间从几分钟减少到≤5秒，整体实时延迟降低6-11倍，同时保持思维增强答案的准确性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the method addresses a key limitation in real-time LLM applications like voice assistants, potentially improving user experience and enabling new interactive use cases, but direct financial alpha is indirect and depends on deployment in trading or analysis systems.",
+      "• Implementation Risk: High; integrating asynchronous reasoning into existing LLM pipelines may require significant architectural changes, and the reliance on rotary embeddings could limit compatibility with models not using this technique, posing scalability and robustness challenges.",
+      "• Novelty: High; the concept of training-free asynchronous reasoning for LLMs is innovative, leveraging embedding properties to mimic human-like multitasking in AI systems, though it builds on prior work in rotary embeddings and interactive LLMs."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；无需训练的异步推理概念新颖，利用嵌入特性模拟人类多任务处理，提升大语言模型在实时交互中的表现，但基于旋转嵌入和交互式大语言模型的现有研究。",
+      "• 实盘坑: 高；集成到现有大语言模型管道可能需要重大架构调整，依赖旋转嵌入可能限制与不使用此技术的模型的兼容性，带来可扩展性和鲁棒性风险。",
+      "• 复现难度: 中等；方法基于公开的旋转嵌入技术，但实现异步操作需要深入理解大语言模型内部机制，可能涉及复杂的工程优化。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2512.10929v1",
+    "title": "Noisy Quantum Learning Theory",
+    "pdf_url": "https://arxiv.org/pdf/2512.10929v1",
+    "published": "2025-12-11",
+    "crawled_at": "2025-12-12 20:04:27",
+    "ai_score": 8.5,
+    "translated_title": "噪声量子学习理论",
+    "summary_en": [
+      "• Model Architecture: Introduces NBQP (noisy BQP) complexity class to model noisy fault-tolerant quantum computers that query uncharacterized systems through noisy couplings, analyzing quantum learning advantages under noise.",
+      "• Data used: Theoretical framework based on oracle problems and concrete noisy learning tasks (purity testing, Pauli shadow tomography), with analysis of noise effects like local depolarizing noise and noise-resilient structures.",
+      "• Performance metrics: Shows noise can eliminate exponential quantum learning advantages for ideal noiseless learners while preserving superpolynomial gaps between NISQ and fault-tolerant devices, with sample complexity bounds for noisy Pauli shadow tomography."
+    ],
+    "summary_cn": [
+      "• 核心模型: 引入NBQP（噪声BQP）复杂性类，建模通过噪声耦合查询未表征系统的噪声容错量子计算机，分析噪声下的量子学习优势。",
+      "• 数据来源: 基于预言机问题和具体噪声学习任务（纯度测试、泡利影子层析成像）的理论框架，分析局部去极化噪声和噪声弹性结构等噪声效应。",
+      "• 主要结论: 噪声可消除理想无噪声学习者的指数级量子学习优势，同时保持NISQ与容错设备间的超多项式差距；除非实验系统具有潜在的噪声鲁棒结构，否则量子学习优势对噪声敏感。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for quantum computing and machine learning applications, as it identifies conditions where noise-resilient structures can restore quantum advantages, relevant for future experimental designs in quantum-enhanced learning.",
+      "• Implementation Risk: Moderate to high; practical implementation depends on developing fault-tolerant quantum devices with specific noise-robust properties, and real-world noise may be more complex than modeled.",
+      "• Novelty: Strong; introduces NBQP class and bridges quantum learning theory with noise analysis, offering insights into the fragility of quantum primitives like Bell-basis and SWAP-test under noise."
+    ],
+    "verdict_cn": [
+      "• 创新点: 引入NBQP复杂性类，将量子学习理论与噪声分析结合，揭示贝尔基和SWAP测试等量子原语在噪声下的脆弱性，为噪声鲁棒量子优势提供理论框架。",
+      "• 实盘坑: 高；实际应用需依赖具有特定噪声弹性结构的容错量子设备，且现实噪声可能比模型更复杂，实现量子学习优势面临技术挑战。",
+      "• 复现难度: 中高；基于理论分析和预言机问题，实验复现需先进量子硬件和噪声控制，但算法设计部分（如泡利影子层析成像）可能较易模拟验证。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2512.10926v1",
+    "title": "Decoupled Q-Chunking",
+    "pdf_url": "https://arxiv.org/pdf/2512.10926v1",
+    "published": "2025-12-11",
+    "crawled_at": "2025-12-12 20:04:49",
+    "ai_score": 7.5,
+    "translated_title": "解耦Q分块",
+    "summary_en": [
+      "• Model Architecture: Proposes a novel algorithm that decouples critic chunk length from policy chunk length, using a distilled critic for partial action chunks to approximate maximum value when extended to complete chunks.",
+      "• Data used: Evaluated on challenging, long-horizon offline goal-conditioned tasks, though specific datasets or environments are not detailed in the abstract.",
+      "• Performance metrics: Reported to reliably outperform prior methods on the evaluated tasks, indicating improved value estimation and policy reactivity."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出解耦评论家与策略分块长度的算法，通过蒸馏评论家优化部分动作分块的价值估计，避免长分块策略学习困难。",
+      "• 数据来源: 在具有挑战性的长时域离线目标条件任务上进行评估，但摘要未具体说明数据集或环境细节。",
+      "• 主要结论: 该方法在评估任务中稳定优于现有方法，提升了价值估计准确性和策略反应性，解决了分块评论家中的开环次优问题。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; addresses bootstrapping bias in TD methods and improves policy reactivity in long-horizon tasks, potentially applicable to sequential decision-making in finance.",
+      "• Implementation Risk: High; relies on optimistic value backup and distillation, which may introduce approximation errors and require careful hyperparameter tuning for stable performance.",
+      "• Novelty: High; introduces decoupled chunking concept, a novel approach to mitigate open-loop sub-optimality in chunked critics, though building on existing chunked critic work."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；提出解耦分块的核心洞察，通过蒸馏评论家优化部分动作分块，有效结合多步价值传播与策略灵活性，解决长分块策略建模难题。",
+      "• 实盘坑: 高；乐观价值回溯和蒸馏过程可能引入估计偏差，在复杂金融环境中泛化性存疑，且超参数敏感可能导致性能不稳定。",
+      "• 复现难度: 中等；算法依赖现有分块评论家框架，但蒸馏和优化步骤增加实现复杂度，需谨慎处理价值近似和策略优化交互。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
     "id": "2512.09929v1",
     "title": "Closing the Train-Test Gap in World Models for Gradient-Based Planning",
     "pdf_url": "https://arxiv.org/pdf/2512.09929v1",
