@@ -1,5 +1,351 @@
 [
   {
+    "id": "2512.11793v1",
+    "title": "A General Algorithm for Detecting Higher-Order Interactions via Random Sequential Additions",
+    "pdf_url": "https://arxiv.org/pdf/2512.11793v1",
+    "published": "2025-12-12",
+    "crawled_at": "2025-12-15 20:01:28",
+    "ai_score": 7.5,
+    "translated_title": "通过随机顺序添加检测高阶交互的通用算法",
+    "summary_en": [
+      "• Model Architecture: The paper introduces a geometric method based on random sequential additions of elements, where contributions are plotted over trials to reveal L-shaped patterns. It formalizes this with the L-score, a continuous measure ranging from -1 (perfect synergy) to +1 (perfect redundancy), and uses pairwise measurements to infer higher-order interactions through cross-pair relationships.",
+      "• Data used: The method is metric-agnostic and broadly applicable to any domain where performance can be evaluated incrementally over non-repeating element sequences, such as features in machine learning models or components in complex systems, without specifying particular datasets.",
+      "• Performance metrics: The L-score quantifies interaction structure on a unified scale, distinguishing synergy, independence, and redundancy. It also reveals feature dominance through the relative scaling of L-shaped arms, providing insights into how elements contribute individually or together."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出一种基于随机顺序添加元素的几何方法，通过多次试验绘制贡献图以揭示L形模式，并使用L分数（范围从-1到+1）形式化量化交互结构，通过成对测量推断高阶交互。",
+      "• 数据来源: 方法不依赖特定指标，适用于任何可增量评估性能的领域（如机器学习特征或复杂系统组件），未指定具体数据集。",
+      "• 主要结论: L分数在统一尺度上区分协同、独立和冗余交互，并通过L形臂的相对缩放揭示特征主导性，提供元素贡献模式的几何洞察。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the method could help identify synergistic feature combinations in financial models (e.g., factor investing) by detecting non-linear interactions, potentially uncovering hidden alpha signals in multi-factor strategies.",
+      "• Implementation Risk: High; the approach requires extensive computational trials over random sequences, which may be slow and noisy in real-time trading environments, and its reliance on pairwise measurements might miss complex higher-order effects in noisy market data.",
+      "• Novelty: High; the geometric L-score framework offers a unified, intuitive way to quantify interactions beyond traditional correlation measures, with applications across domains, though it builds on existing concepts like Shapley values in a novel visual form."
+    ],
+    "verdict_cn": [
+      "• 创新点: 较高；L分数框架提供统一、直观的交互量化方法，超越传统相关性度量，具有跨领域应用潜力，尽管基于夏普利值等概念以新颖视觉形式呈现。",
+      "• 实盘坑: 高；方法需大量随机序列计算试验，在实时交易中可能缓慢且嘈杂，且依赖成对测量可能在嘈杂市场数据中遗漏复杂高阶效应。",
+      "• 复现难度: 中等；算法概念简单，但实现需处理随机顺序和多次试验，对计算资源要求较高，且结果可能因随机性而波动。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2512.11784v1",
+    "title": "Softmax as Linear Attention in the Large-Prompt Regime: a Measure-based Perspective",
+    "pdf_url": "https://arxiv.org/pdf/2512.11784v1",
+    "published": "2025-12-12",
+    "crawled_at": "2025-12-15 20:01:47",
+    "ai_score": 8.5,
+    "translated_title": "大提示词机制下的Softmax作为线性注意力：基于测度的视角",
+    "summary_en": [
+      "• Model Architecture: Analyzes single-layer softmax attention in transformers, focusing on its convergence to a linear operator in the infinite-prompt limit using a measure-based framework.",
+      "• Data used: Assumes i.i.d. Gaussian inputs and sub-Gaussian tokens for theoretical analysis, with specific application to in-context linear regression scenarios.",
+      "• Performance metrics: Establishes non-asymptotic concentration bounds for output and gradient, quantifying convergence rates from finite to infinite prompts and proving stability across training trajectories."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于测度框架分析单层softmax注意力机制，研究其在无限提示词极限下收敛为线性算子的性质。",
+      "• 数据来源: 理论分析假设独立同分布高斯输入和次高斯标记，具体应用于上下文线性回归场景。",
+      "• 主要结论: 建立输出和梯度的非渐近集中界，量化有限到无限提示词的收敛速度，证明训练轨迹的稳定性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for NLP/LLM strategies; provides theoretical foundation for analyzing softmax attention in large-prompt regimes, potentially improving model interpretability and optimization in transformer-based trading systems.",
+      "• Implementation Risk: Moderate; theoretical results rely on specific distributional assumptions (Gaussian/sub-Gaussian), which may not hold in real-world financial data, requiring careful validation.",
+      "• Novelty: Significant; introduces a unified measure-based framework to bridge softmax and linear attention, offering new tools for studying training dynamics in large-prompt settings."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出统一的测度框架，将softmax注意力与线性注意力联系起来，为大提示词机制下的训练动力学分析提供新工具。",
+      "• 实盘坑: 理论假设（高斯/次高斯分布）在真实金融数据中可能不成立，需额外验证；无限提示词极限在实际应用中难以实现。",
+      "• 复现难度: 中等；需要较强的数学背景实现测度理论和集中界推导，但核心结论可直接应用于现有Transformer架构。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2512.11779v1",
+    "title": "Conditional Coverage Diagnostics for Conformal Prediction",
+    "pdf_url": "https://arxiv.org/pdf/2512.11779v1",
+    "published": "2025-12-12",
+    "crawled_at": "2025-12-15 20:02:05",
+    "ai_score": 8.2,
+    "translated_title": "条件覆盖诊断在共形预测中的应用",
+    "summary_en": [
+      "• Model Architecture: The paper introduces ERT (Excess Risk of Target Coverage), a family of metrics that frames conditional coverage estimation as a classification problem, using modern classifiers to evaluate deviations from target coverage.",
+      "• Data used: The experimental evaluation likely involves synthetic or real-world datasets to benchmark conformal prediction methods, though specific datasets are not detailed in the abstract.",
+      "• Performance metrics: ERT provides conservative estimates of miscoverage measures (e.g., L1 and L2 distance), separates over- and under-coverage effects, and offers higher statistical power compared to existing metrics like CovGap."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出ERT（目标覆盖超额风险）指标族，将条件覆盖估计转化为分类问题，利用现代分类器评估与目标覆盖的偏差。",
+      "• 数据来源: 实验可能使用合成或真实数据集来基准测试不同共形预测方法，但摘要中未具体说明。",
+      "• 主要结论: ERT能保守估计误覆盖度量（如L1和L2距离），区分过覆盖和欠覆盖效应，相比现有指标（如CovGap）具有更高统计功效。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate—ERT could enhance risk management in predictive systems by improving conditional coverage diagnostics, potentially leading to more reliable trading signals or portfolio adjustments in finance.",
+      "• Implementation Risk: Low to moderate—the open-source package facilitates adoption, but integration into existing conformal prediction pipelines may require calibration and validation for specific applications.",
+      "• Novelty: High—the classification-based approach to conditional coverage estimation is innovative, addressing sample inefficiency and overfitting issues of prior metrics, with experimental validation of improved power."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高—将条件覆盖估计转化为分类问题，提出ERT指标族，有效解决现有度量的样本低效和过拟合问题，实验证明统计功效提升。",
+      "• 实盘坑: 中低—开源包降低实施门槛，但需针对具体应用（如金融预测）进行校准和验证，集成到现有共形预测流程可能耗时。",
+      "• 复现难度: 低—论文提供开源包，复现实验相对直接，但依赖现代分类器选择和数据集准备。"
+    ],
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2512.11776v1",
+    "title": "The Adaptive Vekua Cascade: A Differentiable Spectral-Analytic Solver for Physics-Informed Representation",
+    "pdf_url": "https://arxiv.org/pdf/2512.11776v1",
+    "published": "2025-12-12",
+    "crawled_at": "2025-12-15 20:02:24",
+    "ai_score": 8.5,
+    "translated_title": "自适应Vekua级联：一种用于物理信息表示的可微谱解析求解器",
+    "summary_en": [
+      "• Model Architecture: AVC is a hybrid architecture combining deep learning with classical approximation theory, featuring a deep network for diffeomorphic warping of the physical domain and a differentiable linear solver for spectral coefficient resolution.",
+      "• Data used: Evaluated on five physics benchmarks including high-frequency Helmholtz wave propagation, sparse medical reconstruction, and unsteady 3D Navier-Stokes turbulence.",
+      "• Performance metrics: Achieves state-of-the-art accuracy with 840 parameters vs. 4.2 million for 3D grids, converging 2-3x faster than implicit neural representations."
+    ],
+    "summary_cn": [
+      "• 核心模型: AVC是一种混合架构，通过深度网络学习物理域的微分同胚扭曲，将复杂时空动态投影到潜在流形上，并用广义解析函数基表示解。",
+      "• 数据来源: 在五个物理基准测试上进行评估，包括高频Helmholtz波传播、稀疏医学重建和非稳态3D Navier-Stokes湍流。",
+      "• 主要结论: 在保持最先进精度的同时，参数数量减少数个数量级（例如，3D网格中840参数对比420万参数），收敛速度比隐式神经表示快2-3倍。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for scientific machine learning applications requiring spectral accuracy and memory efficiency, particularly in high-frequency dynamics and 3D simulations.",
+      "• Implementation Risk: Moderate risk due to reliance on differentiable linear solvers and complex architecture integration, which may pose challenges in real-world deployment.",
+      "• Novelty: High novelty in bridging deep learning with classical approximation theory and introducing a differentiable spectral-analytic solver, establishing a new paradigm for physics-informed representation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将深度学习与经典逼近理论结合，引入可微谱解析求解器，有效解决谱偏差和维度诅咒问题，为物理信息表示提供新范式。",
+      "• 实盘坑: 依赖可微线性求解器和复杂架构集成，在实际部署中可能面临计算稳定性和泛化性挑战，需谨慎验证。",
+      "• 复现难度: 中等难度，代码已开源，但涉及高级数学概念和混合架构，需要专业知识进行复现和调优。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2512.11767v1",
+    "title": "Learning Minimal Representations of Fermionic Ground States",
+    "pdf_url": "https://arxiv.org/pdf/2512.11767v1",
+    "published": "2025-12-12",
+    "crawled_at": "2025-12-15 20:02:44",
+    "ai_score": 7.5,
+    "translated_title": "学习费米子基态的最小表示",
+    "summary_en": [
+      "• Model Architecture: Uses an autoencoder neural network to compress quantum many-body ground states into minimal latent representations, with the decoder serving as a differentiable variational ansatz for energy minimization.",
+      "• Data used: Generated from $L$-site Fermi-Hubbard models, a standard quantum simulation framework for fermionic systems.",
+      "• Performance metrics: Achieves a sharp reconstruction quality threshold at $L-1$ latent dimensions, matching the system's intrinsic degrees of freedom, and circumvents the $N$-representability problem by implicitly restricting optimization to physically valid states."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用自编码器神经网络架构，将量子多体基态压缩为最小潜在表示，解码器作为可微分的变分拟设用于能量最小化。",
+      "• 数据来源: 基于$L$位点费米-哈伯德模型生成的数据，这是费米子系统的标准量子模拟框架。",
+      "• 主要结论: 在$L-1$潜在维度处实现尖锐的重构质量阈值，匹配系统内在自由度，并通过隐式限制优化到物理有效状态来规避$N$可表示性问题。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the method could enhance quantum simulation efficiency for materials science or quantum chemistry applications, but direct financial alpha is limited without specific market linkages.",
+      "• Implementation Risk: High; relies on quantum data from Fermi-Hubbard models, which may not generalize to real-world financial datasets, and requires expertise in quantum physics and machine learning.",
+      "• Novelty: High; introduces an unsupervised ML framework for quantum state compression with a differentiable decoder, offering a novel approach to variational optimization in quantum systems."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；提出无监督机器学习框架用于量子态压缩，结合可微分解码器，为量子系统中的变分优化提供新方法。",
+      "• 实盘坑: 高；依赖费米-哈伯德模型的量子数据，可能难以泛化到金融市场数据集，且需要量子物理和机器学习的专业知识。",
+      "• 复现难度: 中高；需要设置量子模拟环境生成数据，并实现自编码器架构，但论文未提供完整代码或超参数细节，可能增加复现挑战。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2512.11765v1",
+    "title": "High-Frequency Analysis of a Trading Game with Transient Price Impact",
+    "pdf_url": "https://arxiv.org/pdf/2512.11765v1",
+    "published": "2025-12-12",
+    "crawled_at": "2025-12-15 20:03:11",
+    "ai_score": 8.5,
+    "translated_title": "具有瞬态价格影响交易博弈的高频分析",
+    "summary_en": [
+      "• Model Architecture: Analyzes an n-trader optimal execution game in discrete time with transient price impact (Obizhaeva-Wang type) and quadratic instantaneous trading costs θ(ΔX_t)² per transaction.",
+      "• Data used: Theoretical mathematical model with no empirical data; focuses on convergence analysis from discrete-time Nash equilibrium to continuous-time limit as trading frequency increases.",
+      "• Performance metrics: Demonstrates convergence rate of 1/N for discrete equilibrium inventories to continuous-time equilibrium; identifies coefficients ϑ₀=(n-1)/2 and ϑ_T=1/2 for boundary block costs in the limit model.",
+      "• Key finding: Shows that fine time discretization and small instantaneous costs in continuous time both regularize the model, selecting a canonical limit model with boundary block costs, while absence of costs (θ=0) leads to oscillations and no limit."
+    ],
+    "summary_cn": [
+      "• 核心模型: 离散时间n交易者最优执行博弈，包含瞬态价格影响（Obizhaeva-Wang型）和每笔交易二次瞬时成本θ(ΔX_t)²。",
+      "• 数据来源: 纯理论数学模型，无实证数据；基于高频极限下离散时间纳什均衡向连续时间均衡的收敛分析。",
+      "• 主要结论: 离散均衡库存以1/N速率收敛至连续时间均衡；边界块交易成本系数ϑ₀=(n-1)/2和ϑ_T=1/2在极限中内生出现；若无瞬时成本（θ=0），模型振荡且无极限。",
+      "• 理论贡献: 扩展了Schied等人n=2的结果，揭示了时间离散化和小瞬时成本对模型正则化的相似作用，为高频交易执行提供理论基准。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; provides theoretical foundation for high-frequency execution strategies with transient impact, but direct alpha extraction requires empirical calibration and market microstructure integration.",
+      "• Implementation Risk: High; model assumes idealized conditions (e.g., known impact functions, rational traders), and real-world frictions (e.g., latency, liquidity shocks) could deviate significantly from predictions.",
+      "• Novelty: High; extends prior work (n=2) to general n traders, rigorously derives boundary cost coefficients endogenously, and links discrete-time and continuous-time regularization effects, offering fresh insights into limit behavior.",
+      "• Practical limitation: Lacks empirical validation; coefficients depend on theoretical assumptions (e.g., quadratic costs), which may not hold in actual markets, limiting immediate trading applications."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著；将n=2特例推广至一般n交易者，内生推导边界成本系数ϑ₀=(n-1)/2和ϑ_T=1/2，并连接离散与连续时间正则化效应，深化高频执行理论。",
+      "• 实盘坑: 高；模型基于理想假设（如已知影响函数、理性交易者），实际市场摩擦（延迟、流动性冲击）可能导致预测偏差，且无实证校准，直接应用风险大。",
+      "• 复现难度: 中等；数学推导严谨但复杂，需高级随机分析和博弈论知识；代码实现需离散化算法和参数估计，但无数据要求，理论复现可行。",
+      "• 策略价值: 中等；为高频执行提供理论框架，但需结合市场微观结构数据优化，更适合风险管理和执行算法基础，而非直接alpha生成。"
+    ],
+    "ai_strategy": "High-Freq",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2512.11760v1",
+    "title": "SpectralKrum: A Spectral-Geometric Defense Against Byzantine Attacks in Federated Learning",
+    "pdf_url": "https://arxiv.org/pdf/2512.11760v1",
+    "published": "2025-12-12",
+    "crawled_at": "2025-12-15 20:03:31",
+    "ai_score": 7.2,
+    "translated_title": "SpectralKrum：一种针对联邦学习中拜占庭攻击的谱几何防御方法",
+    "summary_en": [
+      "• Model Architecture: SpectralKrum combines spectral subspace estimation with geometric neighbor-based selection, projecting updates into a learned low-dimensional manifold and applying Krum selection in compressed coordinates with residual energy filtering.",
+      "• Data used: Evaluated on CIFAR-10 with Dirichlet-distributed non-IID partitions (alpha = 0.1), simulating heterogeneous client data distributions across 56,000 training rounds.",
+      "• Performance metrics: Competitive against directional and subspace-aware attacks (adaptive-steer, buffer-drift) but limited advantage under label-flip and min-max attacks where malicious updates remain spectrally indistinguishable."
+    ],
+    "summary_cn": [
+      "• 核心模型: SpectralKrum融合谱子空间估计与几何邻居选择，将更新投影到学习的低维流形中，在压缩坐标中应用Krum选择并过滤残差能量超标的候选。",
+      "• 数据来源: 使用CIFAR-10数据集，通过狄利克雷分布（alpha=0.1）生成非独立同分布分区，模拟异构客户端数据分布，覆盖56,000轮训练。",
+      "• 主要结论: 在定向和子空间感知攻击（如adaptive-steer、buffer-drift）中表现有竞争力，但在标签翻转和最小-最大攻击下优势有限，因恶意更新在谱上难以区分。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; offers a novel spectral-geometric approach to Byzantine robustness in FL, but limited effectiveness against common attacks like label-flip reduces practical alpha generation in real-world heterogeneous settings.",
+      "• Implementation Risk: High; relies on accurate estimation of low-dimensional manifolds from historical aggregates, which may be unstable under dynamic or adversarial data shifts, increasing operational risk.",
+      "• Novelty: High; fuses spectral subspace methods with geometric defenses like Krum, introducing a data-driven residual threshold, though builds on existing robust aggregation literature without breakthrough guarantees."
+    ],
+    "verdict_cn": [
+      "• 创新点: 较高；将谱子空间方法与几何防御（如Krum）结合，引入数据驱动的残差阈值，为联邦学习中的拜占庭鲁棒性提供了新视角，但未突破现有理论框架。",
+      "• 实盘坑: 高；依赖从历史聚合中准确估计低维流形，在动态或对抗性数据变化下可能不稳定，且对标签翻转等常见攻击效果有限，增加实盘风险。",
+      "• 复现难度: 中等；方法基于模型更新操作，无需辅助数据，但谱估计和阈值调优需要精细实现，在非IID设置下可能难以泛化。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2512.11750v1",
+    "title": "LUCID: Learning-Enabled Uncertainty-Aware Certification of Stochastic Dynamical Systems",
+    "pdf_url": "https://arxiv.org/pdf/2512.11750v1",
+    "published": "2025-12-12",
+    "crawled_at": "2025-12-15 20:03:52",
+    "ai_score": 8.5,
+    "translated_title": "LUCID：随机动态系统的学习驱动不确定性感知认证",
+    "summary_en": [
+      "• Model Architecture: LUCID employs a modular architecture combining control barrier certificates learned from data, conditional mean embeddings in RKHS, and a finite Fourier kernel expansion to transform semi-infinite non-convex optimization into a tractable linear program.",
+      "• Data used: The system operates on a finite dataset of random state transitions from black-box stochastic dynamical systems, using RKHS ambiguity sets to robustify against out-of-distribution behavior.",
+      "• Performance metrics: LUCID is the first tool to provide quantified safety guarantees for black-box stochastic systems, demonstrated on challenging benchmarks with scalable efficiency via fast Fourier transform optimization."
+    ],
+    "summary_cn": [
+      "• 核心模型: LUCID采用模块化架构，结合从数据学习的控制屏障证书、RKHS中的条件均值嵌入和有限傅里叶核展开，将半无限非凸优化转化为可处理的线性规划。",
+      "• 数据来源: 系统基于黑盒随机动态系统的有限随机状态转移数据集运行，利用RKHS模糊集增强对分布外行为的鲁棒性。",
+      "• 主要结论: LUCID是首个为黑盒随机系统提供量化安全保证的工具，在挑战性基准测试中展示，通过快速傅里叶变换优化实现可扩展的高效性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for risk management in AI-driven trading systems by providing formal safety guarantees for stochastic models, applicable to high-frequency trading or algorithmic strategies with black-box components.",
+      "• Implementation Risk: Moderate to high risk due to reliance on finite datasets and RKHS embeddings, which may not generalize well in non-stationary financial markets without careful calibration.",
+      "• Novelty: Significant novelty as the first tool to certify safety for black-box stochastic dynamical systems, with innovative use of Fourier expansions and RKHS ambiguity sets for tractable optimization."
+    ],
+    "verdict_cn": [
+      "• 创新点: 作为首个认证黑盒随机动态系统安全的工具，创新性高，采用傅里叶展开和RKHS模糊集实现可处理的优化，填补了传统形式验证的空白。",
+      "• 实盘坑: 依赖有限数据集和RKHS嵌入，在非平稳金融市场中泛化能力可能不足，需精细调参以避免过拟合或分布偏移风险。",
+      "• 复现难度: 中等偏高，涉及复杂数学如RKHS和傅里叶变换，模块化架构虽便于扩展，但实现需专业知识，可能限制快速部署。"
+    ],
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2512.11727v1",
+    "title": "ECCO: Leveraging Cross-Camera Correlations for Efficient Live Video Continuous Learning",
+    "pdf_url": "https://arxiv.org/pdf/2512.11727v1",
+    "published": "2025-12-12",
+    "crawled_at": "2025-12-15 20:04:16",
+    "ai_score": 8.2,
+    "translated_title": "ECCO：利用跨摄像头相关性实现高效实时视频持续学习",
+    "summary_en": [
+      "• Model Architecture: ECCO introduces a three-component framework: a lightweight grouping algorithm that dynamically clusters cameras with similar data drift patterns, a GPU allocator that optimizes resource distribution across groups for accuracy and fairness, and a transmission controller at each camera that manages frame sampling and bandwidth sharing based on assigned GPU resources.",
+      "• Data used: The framework was evaluated on three distinctive datasets for two vision tasks, though specific dataset names and task details are not provided in the abstract, indicating a focus on general video analytics applications such as object detection or classification.",
+      "• Performance metrics: ECCO improves retraining accuracy by 6.7%-18.1% compared to leading baselines under the same compute and communication constraints, or supports 3.3 times more concurrent cameras while maintaining the same accuracy level, demonstrating significant efficiency gains."
+    ],
+    "summary_cn": [
+      "• 核心模型: ECCO采用三模块架构：轻量级分组算法动态聚类具有相似数据漂移模式的摄像头；GPU分配器优化跨组资源分配以提升精度和公平性；每个摄像头的传输控制器基于分配的GPU资源管理帧采样和带宽共享。",
+      "• 数据来源: 在三个不同数据集上对两种视觉任务进行评估，但摘要未具体说明数据集名称和任务细节，表明研究聚焦于通用视频分析应用（如目标检测或分类）。",
+      "• 主要结论: 在相同计算和通信资源下，ECCO相比领先基线将重训练精度提升6.7%-18.1%，或在相同精度下支持3.3倍并发摄像头数量，显示出显著的效率优势。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate to high for surveillance or IoT-based trading strategies where real-time video data from multiple sources (e.g., traffic cameras, satellite feeds) could inform market-moving events, though direct financial application is not explicit; the efficiency gains in handling concurrent streams may reduce latency in data processing pipelines.",
+      "• Implementation Risk: High due to dependency on cross-camera correlations, which may not hold in fragmented or heterogeneous environments (e.g., urban vs. rural settings), and the need for robust GPU resource management in dynamic conditions, potentially leading to scalability issues in real-world deployments.",
+      "• Novelty: High, as it innovates by leveraging spatial-temporal correlations across cameras for shared model retraining, a departure from per-camera approaches, and integrates grouping, allocation, and transmission control into a cohesive framework for continuous learning, though similar concepts exist in federated learning."
+    ],
+    "verdict_cn": [
+      "• 创新点: 较高，通过利用跨摄像头的时空相关性进行共享模型重训练，突破单摄像头方法的局限，并将分组、分配和传输控制整合为持续学习的统一框架，但类似思想在联邦学习中已有体现。",
+      "• 实盘坑: 高风险，依赖于跨摄像头相关性，在碎片化或异构环境（如城市与乡村）中可能不成立，且动态条件下的GPU资源管理需高度稳健，实际部署中易引发可扩展性问题。",
+      "• 复现难度: 中等偏高，需实现复杂的分组算法和资源分配机制，并依赖特定视频数据集进行调优，但框架组件描述较清晰，开源代码可降低难度。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2512.11705v1",
+    "title": "High-Dimensional Surrogate Modeling for Closed-Loop Learning of Neural-Network-Parameterized Model Predictive Control",
+    "pdf_url": "https://arxiv.org/pdf/2512.11705v1",
+    "published": "2025-12-12",
+    "crawled_at": "2025-12-15 20:04:37",
+    "ai_score": 7.5,
+    "translated_title": "用于神经网络参数化模型预测控制闭环学习的高维代理建模",
+    "summary_en": [
+      "• Model Architecture: Compares Gaussian processes with Matern kernels, finite-width Bayesian neural networks (BNNs), and infinite-width BNNs as surrogate models for Bayesian optimization in controller tuning.",
+      "• Data used: Closed-loop performance data from few experiments on a cart-pole task, used to construct probabilistic surrogates for learning controller parameters.",
+      "• Performance metrics: Evaluates convergence speed and reliability of closed-loop cost, effectiveness in optimizing high-dimensional parameterizations (hundreds to over a thousand parameters).",
+      "• Key finding: BNNs, especially infinite-width variants, outperform Gaussian processes in high-dimensional settings, enabling successful optimization where standard methods fail."
+    ],
+    "summary_cn": [
+      "• 核心模型: 比较了Matern核高斯过程、有限宽度贝叶斯神经网络和无限宽度贝叶斯神经网络作为贝叶斯优化中的代理模型，用于控制器参数调优。",
+      "• 数据来源: 基于倒立摆任务的闭环性能数据，通过少量实验构建概率代理模型来学习控制器参数。",
+      "• 主要结论: 贝叶斯神经网络在高维参数化（数百至上千参数）场景下表现更优，收敛更快更可靠，而高斯过程在此类设置中迅速失效。",
+      "• 应用价值: 为基于学习的控制器设计提供了选择代理模型的实用指导，特别适用于密集高维控制器参数化。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; BNNs as surrogates could enhance optimization in high-dimensional control problems, potentially improving algorithmic trading strategies with complex parameter spaces, but direct financial application is indirect.",
+      "• Implementation Risk: High; deploying infinite-width BNNs in real-time trading systems introduces computational overhead and stability concerns, with risk of overfitting in noisy market data.",
+      "• Novelty: Moderate; extends Bayesian optimization to high-dimensional spaces using BNNs, but builds on established techniques in machine learning and control theory without groundbreaking innovation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；将贝叶斯神经网络作为代理模型应用于高维控制器参数学习，提升了贝叶斯优化在密集参数空间中的有效性，但未突破现有机器学习范式。",
+      "• 实盘坑: 高；无限宽度贝叶斯神经网络在实时交易系统中计算成本高，市场数据噪声大易导致过拟合，闭环学习可能引入延迟风险。",
+      "• 复现难度: 中等；基于公开的倒立摆任务和标准机器学习库可复现，但高维优化和贝叶斯训练需要专业知识，可能受超参数选择影响。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
     "id": "2512.10953v1",
     "title": "Bidirectional Normalizing Flow: From Data to Noise and Back",
     "pdf_url": "https://arxiv.org/pdf/2512.10953v1",
