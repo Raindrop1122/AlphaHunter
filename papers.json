@@ -1,5 +1,349 @@
 [
   {
+    "id": "2512.14697v1",
+    "title": "Spherical Leech Quantization for Visual Tokenization and Generation",
+    "pdf_url": "https://arxiv.org/pdf/2512.14697v1",
+    "published": "2025-12-16",
+    "crawled_at": "2025-12-17 20:01:27",
+    "ai_score": 7.8,
+    "translated_title": "球形Leech量化用于视觉标记化与生成",
+    "summary_en": [
+      "• Model Architecture: Introduces Spherical Leech Quantization (Λ₂₄-SQ) based on Leech lattice coding, which leverages high symmetry and even distribution on hyperspheres to simplify training and improve compression-reconstruction trade-offs in auto-encoders.",
+      "• Data used: Implicitly involves image datasets for tokenization and compression tasks, though specific datasets are not named in the abstract; likely standard computer vision benchmarks.",
+      "• Performance metrics: Outperforms prior art BSQ in reconstruction quality across all metrics while using slightly fewer bits; improvements extend to state-of-the-art auto-regressive image generation frameworks."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于Leech晶格的球形Leech量化（Λ₂₄-SQ），利用高对称性和超球面上的均匀分布，简化自编码器训练并优化压缩-重建权衡。",
+      "• 数据来源: 未明确指定，但涉及图像标记化和压缩任务，可能使用标准计算机视觉基准数据集。",
+      "• 主要结论: 在所有指标上重建质量优于先前最佳方法BSQ，同时消耗更少比特；改进可扩展到最先进的自回归图像生成框架。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; improved compression efficiency could enhance data processing in high-frequency trading or reduce storage costs, but direct financial alpha generation is limited without specific market applications.",
+      "• Implementation Risk: Low to moderate; relies on established lattice theory, but integration into existing quant pipelines may require specialized expertise in geometric deep learning.",
+      "• Novelty: High; novel application of Leech lattice to non-parametric quantization, offering a unified formulation and practical advantages over prior methods like BSQ."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；将Leech晶格应用于非参数量化，提供统一的理论框架，并在实际性能上超越BSQ等现有方法。",
+      "• 实盘坑: 中低；基于成熟晶格理论，但集成到量化交易系统需几何深度学习专业知识，可能增加部署复杂性。",
+      "• 复现难度: 中；需要理解晶格编码和自编码器训练，但方法描述清晰，代码开源可能性高。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2512.14689v1",
+    "title": "CHIP: Adaptive Compliance for Humanoid Control through Hindsight Perturbation",
+    "pdf_url": "https://arxiv.org/pdf/2512.14689v1",
+    "published": "2025-12-16",
+    "crawled_at": "2025-12-17 20:01:49",
+    "ai_score": 7.5,
+    "translated_title": "CHIP：通过后见扰动实现人形机器人控制的自适应柔顺性",
+    "summary_en": [
+      "• Model Architecture: CHIP is a plug-and-play module that integrates with existing motion-tracking controllers to enable adaptive end-effector stiffness through hindsight perturbation, allowing dynamic adjustment of compliance without retraining the base controller.",
+      "• Data used: The method does not require additional data augmentation or specialized datasets; it leverages the existing training data of the generalist motion-tracking controller, applying perturbations during inference to simulate different compliance scenarios.",
+      "• Performance metrics: Demonstrated on diverse forceful manipulation tasks including multi-robot collaboration, wiping, box delivery, and door opening, showing improved adaptability and task performance compared to static compliance controllers."
+    ],
+    "summary_cn": [
+      "• 核心模型: CHIP是一个即插即用模块，通过后见扰动技术，在现有运动跟踪控制器基础上实现自适应末端执行器刚度控制，无需重新训练基础模型。",
+      "• 数据来源: 无需额外数据增强或特定数据集，利用通用运动跟踪控制器的现有训练数据，在推理过程中施加扰动以模拟不同柔顺性需求。",
+      "• 主要结论: 在多种需要不同末端柔顺性的强力操作任务（如多机器人协作、擦拭、箱体搬运、开门）中，CHIP显著提升了任务适应性和执行效果。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the adaptive compliance approach could enhance robotic manipulation in dynamic environments, potentially applicable to automated trading systems requiring real-time adjustment to market conditions, though direct financial alpha is limited.",
+      "• Implementation Risk: High; integrating CHIP into existing robotic systems may face challenges in real-time perturbation tuning and stability guarantees, with risks of performance degradation in untested scenarios.",
+      "• Novelty: Moderate; while the plug-and-play design and hindsight perturbation are innovative for humanoid control, adaptive compliance concepts exist in prior robotics literature, reducing breakthrough potential."
+    ],
+    "verdict_cn": [
+      "• 创新点: 采用后见扰动实现自适应柔顺控制，无需数据增强或奖励调整，即插即用设计简化了集成流程，在机器人操作灵活性方面有实用改进。",
+      "• 实盘坑: 实时扰动调参可能引入不稳定因素，在未经验证的任务场景中易出现性能下降，且对硬件传感器精度要求较高，增加部署成本。",
+      "• 复现难度: 中等；方法描述清晰，但依赖现有运动跟踪控制器的训练基础，复现需具备相应机器人平台和仿真环境，可能受限于开源代码完整性。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2512.14687v1",
+    "title": "Spoken DialogSum: An Emotion-Rich Conversational Dataset for Spoken Dialogue Summarization",
+    "pdf_url": "https://arxiv.org/pdf/2512.14687v1",
+    "published": "2025-12-16",
+    "crawled_at": "2025-12-17 20:02:13",
+    "ai_score": 7.2,
+    "translated_title": "Spoken DialogSum：面向口语对话摘要的情感丰富对话数据集",
+    "summary_en": [
+      "• Model Architecture: The paper introduces a two-stage pipeline: first, an LLM rewrites DialogSum scripts with Switchboard-style fillers and back-channels, then tags utterances with emotion, pitch, and speaking rate; second, an expressive TTS engine synthesizes speech from tagged scripts, aligned with paralinguistic labels.",
+      "• Data used: The dataset comprises 13,460 emotion-diverse dialogues, each paired with both a factual and an emotion-focused summary, built from DialogSum scripts enhanced with paralinguistic cues.",
+      "• Performance metrics: Baselines show that an Audio-LLM raises emotional-summary ROUGE-L by 28% relative to a cascaded ASR-LLM system, confirming the value of end-to-end speech modeling."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用两阶段流程：首先，LLM重写DialogSum脚本，添加Switchboard风格填充词和反馈词，并为每句话标注情感、音高和语速；其次，表达性TTS引擎从标注脚本合成语音，与副语言标签对齐。",
+      "• 数据来源: 数据集包含13,460个情感多样的对话，每个对话配有事实摘要和情感摘要，基于DialogSum脚本增强副语言线索构建。",
+      "• 主要结论: 基线实验显示，Audio-LLM将情感摘要的ROUGE-L分数相对于级联ASR-LLM系统提高了28%，验证了端到端语音建模的价值。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the dataset enables emotion-aware summarization in spoken dialogues, which could enhance sentiment analysis for conversational AI in finance (e.g., customer service calls), but direct trading alpha is limited without integration into broader models.",
+      "• Implementation Risk: High; reliance on synthetic speech from TTS may not fully capture real-world audio nuances, and the 28% improvement is relative to a weak baseline (cascaded ASR-LLM), raising questions about scalability and robustness in noisy environments.",
+      "• Novelty: High; this is the first corpus aligning raw conversational audio with both factual and emotion-rich summaries, plus utterance-level paralinguistic labels, addressing a gap in emotion-aware spoken dialogue research."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；首次构建了将原始对话音频与事实摘要、情感摘要及副语言标签对齐的语料库，填补了情感感知口语对话研究的数据空白。",
+      "• 实盘坑: 高；依赖TTS合成语音可能无法完全模拟真实音频的细微差别，且28%的性能提升是相对于弱基线（级联ASR-LLM）而言，在嘈杂环境中的可扩展性和鲁棒性存疑。",
+      "• 复现难度: 中等；数据集已公开，但需要访问LLM和TTS引擎进行合成，且情感标注可能引入主观偏差，增加复现复杂性。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2512.14686v1",
+    "title": "Bias-Variance Trade-off for Clipped Stochastic First-Order Methods: From Bounded Variance to Infinite Mean",
+    "pdf_url": "https://arxiv.org/pdf/2512.14686v1",
+    "published": "2025-12-16",
+    "crawled_at": "2025-12-17 20:02:34",
+    "ai_score": 8.2,
+    "translated_title": "裁剪随机一阶方法的偏差-方差权衡：从有界方差到无限均值",
+    "summary_en": [
+      "• Model Architecture: Analyzes clipped stochastic first-order methods (SFOMs) with gradient clipping to handle heavy-tailed noise, focusing on bias-variance trade-off in optimization algorithms.",
+      "• Data used: Theoretical analysis based on noise distributions with tail index α∈(0,2], covering regimes from bounded variance to infinite mean; validated through numerical experiments with unspecified synthetic or real-world datasets.",
+      "• Performance metrics: Oracle complexity guarantees for SFOMs across full range of tail indices, showing improved complexity bounds when symmetry measure of noise tail is controlled, with numerical validation of theoretical findings."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用梯度裁剪的随机一阶方法，通过偏差-方差权衡分析处理重尾噪声，覆盖噪声尾指数α∈(0,2]的完整范围。",
+      "• 数据来源: 基于理论噪声分布分析，涵盖从有界方差到无限均值的不同噪声机制，并通过数值实验验证，具体数据集未明确说明。",
+      "• 主要结论: 当噪声尾部的对称性度量受控时，裁剪SFOMs在重尾噪声下获得改进的复杂度保证，统一了α∈(0,2]范围内的理论结果。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for quantitative strategies dealing with heavy-tailed financial data (e.g., volatility clustering, extreme returns), as improved complexity bounds could enhance optimization robustness in noisy environments.",
+      "• Implementation Risk: Moderate; gradient clipping is established but symmetry measure control may be challenging in practice, and real-world noise distributions might not perfectly match theoretical assumptions.",
+      "• Novelty: Significant; extends existing theory from α∈(1,2] to α∈(0,2], addressing infinite mean noise rarely studied, with novel bias-variance trade-off analysis providing unified guarantees."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著，将噪声尾指数分析从α∈(1,2]扩展到α∈(0,2]，涵盖无限均值噪声这一较少研究的领域，通过偏差-方差权衡提供统一理论框架。",
+      "• 实盘坑: 中等，梯度裁剪技术成熟，但噪声对称性度量在实际数据中可能难以控制，且真实噪声分布可能与理论假设存在偏差。",
+      "• 复现难度: 较低，分析方法直接，可与经典轻尾噪声分析结合，数值实验部分应可复现，但需注意算法参数调优。"
+    ],
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2512.14683v1",
+    "title": "Early Warning Index for Patient Deteriorations in Hospitals",
+    "pdf_url": "https://arxiv.org/pdf/2512.14683v1",
+    "published": "2025-12-16",
+    "crawled_at": "2025-12-17 20:02:55",
+    "ai_score": 7.8,
+    "translated_title": "医院患者病情恶化早期预警指数",
+    "summary_en": [
+      "• Model Architecture: Multimodal machine learning framework (Early Warning Index) with human-in-the-loop design, using SHAP for explainable outputs to highlight clinical/operational risk drivers.",
+      "• Data used: 18,633 unique patients from a large U.S. hospital, automatically extracting features from both structured and unstructured electronic health record (EHR) data.",
+      "• Performance metrics: Achieves C-statistic of 0.796 for predicting aggregate risk of ICU admission, emergency response team dispatch, and mortality; deployed in hospital dashboard with three-tier risk stratification."
+    ],
+    "summary_cn": [
+      "• 核心模型: 多模态机器学习框架（早期预警指数），采用人机协同设计，利用SHAP提供可解释性输出，突出临床和运营风险驱动因素。",
+      "• 数据来源: 来自美国一家大型医院的18,633名独特患者数据，自动从结构化和非结构化电子健康记录（EHR）中提取特征。",
+      "• 主要结论: 模型在预测ICU入院、紧急响应团队派遣和死亡率的综合风险方面，C统计量达到0.796；已部署于医院仪表板，实现三级风险分层，作为主动管理高风险患者的分类工具。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - Framework could be adapted for financial risk prediction (e.g., credit defaults or market crashes) by leveraging heterogeneous data streams and explainable AI for regulatory compliance.",
+      "• Implementation Risk: High - Relies on hospital-specific data (EHR) and clinician input; translating to financial markets requires domain adaptation and may face data privacy/quality issues.",
+      "• Novelty: Low to moderate - Combines multimodal data with human-in-the-loop and SHAP for healthcare, but similar approaches exist in finance; main innovation is application to clinical settings with operational factors."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等偏低 - 将多模态数据与人机协同、SHAP可解释性结合应用于医疗场景，但金融领域已有类似方法；主要创新在于整合临床和运营因素（如手术排期、病房普查）。",
+      "• 实盘坑: 高 - 依赖医院特定数据（EHR）和临床医生输入；移植到金融市场需领域适配，可能面临数据隐私、质量不一致等挑战。",
+      "• 复现难度: 中等 - 模型架构相对标准，但需要大量标注医疗数据和临床专家参与；在金融领域复现需类似异质数据源和领域知识。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2512.14675v1",
+    "title": "Beyond Lipschitz Continuity and Monotonicity: Fractal and Chaotic Activation Functions in Echo State Networks",
+    "pdf_url": "https://arxiv.org/pdf/2512.14675v1",
+    "published": "2025-12-16",
+    "crawled_at": "2025-12-17 20:03:14",
+    "ai_score": 7.8,
+    "translated_title": "超越Lipschitz连续性与单调性：回声状态网络中的分形与混沌激活函数",
+    "summary_en": [
+      "• Model Architecture: Echo State Networks (ESNs) with non-smooth activation functions, including chaotic, stochastic, and fractal variants, tested across 36,610 reservoir configurations.",
+      "• Data used: Synthetic or simulated data for parameter sweeps, focusing on convergence speed and spectral radius tolerance metrics.",
+      "• Performance metrics: Cantor function achieved 2.6x faster convergence than tanh and ReLU, maintained Echo State Property (ESP) up to spectral radii of ρ ~ 10, and introduced a Degenerate Echo State Property (d-ESP) for discrete-output functions."
+    ],
+    "summary_cn": [
+      "• 核心模型: 回声状态网络（ESN），采用非光滑激活函数，包括混沌、随机和分形变体，在36,610个储层配置中进行测试。",
+      "• 数据来源: 合成或模拟数据，用于参数扫描，重点关注收敛速度和谱半径容限指标。",
+      "• 主要结论: Cantor函数比tanh和ReLU收敛速度快2.6倍，在谱半径ρ ~ 10时仍保持回声状态属性（ESP），并为离散输出函数引入了退化回声状态属性（d-ESP）。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; non-smooth activations may enhance robustness in extreme conditions (e.g., defense, disaster response), but direct financial applications are unclear.",
+      "• Implementation Risk: High; fractal and chaotic functions introduce stability challenges, require careful tuning of crowding ratio Q=N/k, and lack explainability for performance mechanisms.",
+      "• Novelty: High; challenges traditional assumptions in reservoir computing by showing preprocessing topology, not continuity, determines stability, with theoretical contributions like d-ESP."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；挑战储层计算中的传统假设，显示预处理拓扑而非连续性决定稳定性，并提出了d-ESP等理论贡献。",
+      "• 实盘坑: 高；分形和混沌函数引入稳定性问题，需要精细调整拥挤比Q=N/k，且性能机制缺乏可解释性。",
+      "• 复现难度: 中等；需要大量参数扫描（36,610配置），但方法描述清晰，理论框架可复现。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2512.14658v1",
+    "title": "gridfm-datakit-v1: A Python Library for Scalable and Realistic Power Flow and Optimal Power Flow Data Generation",
+    "pdf_url": "https://arxiv.org/pdf/2512.14658v1",
+    "published": "2025-12-16",
+    "crawled_at": "2025-12-17 20:03:36",
+    "ai_score": 7.5,
+    "translated_title": "gridfm-datakit-v1：用于可扩展和真实电力潮流与最优潮流数据生成的Python库",
+    "summary_en": [
+      "• Model Architecture: Python library combining global load scaling from real-world profiles with localized noise and arbitrary N-k topology perturbations for diverse scenario generation",
+      "• Data used: Generates synthetic Power Flow (PF) and Optimal Power Flow (OPF) datasets with realistic stochastic load variations, topology perturbations, and varying generator cost functions",
+      "• Performance metrics: Scales efficiently to large grids (up to 10,000 buses), addresses limitations of existing datasets by generating samples beyond operating limits and with varying costs",
+      "• Key features: Supports generation of both PF and OPF data, includes comparisons with OPFData, OPF-Learn, PGLearn, and PFΔ libraries"
+    ],
+    "summary_cn": [
+      "• 核心模型: Python库架构，结合真实世界负荷曲线的全局缩放与局部噪声，支持任意N-k拓扑扰动，生成多样化场景",
+      "• 数据来源: 生成合成的电力潮流和最优潮流数据集，包含真实随机负荷变化、拓扑扰动和可变发电机成本函数",
+      "• 主要结论: 可高效扩展至大型电网（高达10,000个节点），通过生成超出运行限制和成本变化的样本解决现有数据集局限性",
+      "• 技术特点: 支持PF和OPF数据生成，与OPFData、OPF-Learn、PGLearn和PFΔ等库进行比较"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - enables better training of ML solvers for power grid optimization, potentially improving prediction accuracy for real-time grid management and energy trading",
+      "• Implementation Risk: Low to moderate - open-source Apache 2.0 license reduces barriers, but integration with existing trading systems and real-time data feeds requires additional engineering",
+      "• Novelty: High - addresses specific gaps in existing datasets (lack of realistic perturbations, limited generalization beyond operating limits, fixed generator costs) with comprehensive solution",
+      "• Practical considerations: Focuses on data generation rather than trading algorithms directly, requires downstream ML model development for actual alpha extraction"
+    ],
+    "verdict_cn": [
+      "• 创新点: 高 - 针对现有数据集三大缺陷（缺乏真实扰动、运行限制外泛化不足、固定发电机成本）提供全面解决方案，填补领域空白",
+      "• 实盘坑: 中低风险 - 开源Apache 2.0许可降低使用门槛，但需与交易系统和实时数据流集成，且仅为数据生成工具而非完整交易算法",
+      "• 复现难度: 低 - 代码公开于GitHub，支持pip安装，文档和比较基准清晰，技术栈为常见Python生态",
+      "• 应用局限: 专注于数据生成环节，实际alpha提取需下游机器学习模型开发，非端到端交易解决方案"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2512.14645v1",
+    "title": "TiME: Tiny Monolingual Encoders for Efficient NLP Pipelines",
+    "pdf_url": "https://arxiv.org/pdf/2512.14645v1",
+    "published": "2025-12-16",
+    "crawled_at": "2025-12-17 20:03:59",
+    "ai_score": 7.2,
+    "translated_title": "TiME：用于高效NLP流程的微型单语编码器",
+    "summary_en": [
+      "• Model Architecture: TiME models are tiny monolingual encoders trained using modern techniques like distillation, specifically designed for efficiency-critical applications with support for low-resource languages.",
+      "• Data used: The paper mentions distillation from multilingual teachers to monolingual models, implying use of multilingual datasets for teacher training and potentially monolingual data for student models, though specific datasets are not detailed in the abstract.",
+      "• Performance metrics: Evaluated on a range of common NLP tasks, showing improved trade-off between benchmark performance versus throughput, latency, and energy consumption, with distillation enabling transfer from models with relative positional embeddings to those with absolute ones."
+    ],
+    "summary_cn": [
+      "• 核心模型: TiME模型是基于蒸馏等现代训练技术构建的微型单语编码器，专为高效应用设计，支持低资源语言，通过从多语教师模型蒸馏到单语学生模型实现优化。",
+      "• 数据来源: 使用多语数据集训练教师模型，并可能结合单语数据训练学生模型，但摘要中未明确指定具体数据集名称或规模。",
+      "• 主要结论: 在多种常见NLP任务上评估，TiME模型在基准性能与吞吐量、延迟和能耗之间实现了更好的权衡，证明了从多语到单语及从相对位置嵌入到绝对位置嵌入的蒸馏可行性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; TiME addresses efficiency gaps in NLP pipelines for real-time or high-throughput applications, potentially enabling faster data processing in financial text analysis or sentiment tracking, but direct alpha generation is limited without task-specific adaptations.",
+      "• Implementation Risk: Low to moderate; distillation techniques are well-established, and tiny models reduce deployment complexity, but risks include dependency on teacher model quality and potential performance drops in complex tasks compared to larger models.",
+      "• Novelty: Moderate; the approach combines known distillation methods with a focus on monolingual efficiency and low-resource languages, offering practical insights rather than groundbreaking theoretical advances, with novelty in demonstrating specific distillation pathways."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；将蒸馏技术应用于微型单语模型，支持低资源语言，并展示了从多语到单语及不同位置嵌入方式的蒸馏可行性，但核心方法基于现有技术，缺乏颠覆性突破。",
+      "• 实盘坑: 低至中等；模型小巧易于部署，但依赖教师模型质量，在复杂任务上性能可能不及大模型，需针对金融场景定制训练数据以优化效果。",
+      "• 复现难度: 低；基于标准蒸馏框架和公开技术，代码和数据要求可能较高，但整体流程清晰，适合团队快速实验和迭代。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2512.14619v1",
+    "title": "ParaFormer: A Generalized PageRank Graph Transformer for Graph Representation Learning",
+    "pdf_url": "https://arxiv.org/pdf/2512.14619v1",
+    "published": "2025-12-16",
+    "crawled_at": "2025-12-17 20:04:17",
+    "ai_score": 7.8,
+    "translated_title": "ParaFormer：一种用于图表示学习的广义PageRank图Transformer",
+    "summary_en": [
+      "• Model Architecture: Proposes PageRank Transformer (ParaFormer) with a PageRank-enhanced attention module to mimic deep Transformers, functioning as an adaptive-pass filter to mitigate over-smoothing.",
+      "• Data used: Evaluated on 11 datasets ranging from thousands to millions of nodes, covering both node classification and graph classification tasks.",
+      "• Performance metrics: Achieves consistent performance improvements across all datasets, validating efficacy in handling over-smoothing compared to standard Graph Transformers and GNNs."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出PageRank Transformer (ParaFormer)，采用PageRank增强的注意力模块，模拟深度Transformer行为，作为自适应滤波器缓解过平滑问题。",
+      "• 数据来源: 在11个数据集上进行实验，节点规模从数千到数百万，涵盖节点分类和图分类任务。",
+      "• 主要结论: 在所有数据集上实现一致的性能提升，验证了ParaFormer在缓解过平滑方面的有效性，优于标准图Transformer和图神经网络。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; adaptive filtering could enhance graph-based signal extraction in financial networks (e.g., correlation graphs), but direct alpha generation is limited without domain-specific tuning.",
+      "• Implementation Risk: High; PageRank integration adds complexity, and scalability to real-time financial data (millions of nodes) may pose computational challenges.",
+      "• Novelty: High; novel fusion of PageRank with Transformer architecture addresses a critical over-smoothing issue in graph learning, offering a fresh approach to global information capture."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；将PageRank与Transformer架构创新融合，针对图学习中的过平滑问题提出解决方案，提升全局信息捕获能力。",
+      "• 实盘坑: 高；PageRank集成增加模型复杂性，处理实时金融数据（数百万节点）时可能面临计算扩展性挑战。",
+      "• 复现难度: 中等；代码开源（GitHub），但需要专业知识调整以适应金融图结构，实验环境要求较高。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2512.14617v1",
+    "title": "Model-Based Reinforcement Learning in Discrete-Action Non-Markovian Reward Decision Processes",
+    "pdf_url": "https://arxiv.org/pdf/2512.14617v1",
+    "published": "2025-12-16",
+    "crawled_at": "2025-12-17 20:04:37",
+    "ai_score": 8.2,
+    "translated_title": "基于模型的离散动作非马尔可夫奖励决策过程强化学习",
+    "summary_en": [
+      "• Model Architecture: QR-MAX algorithm factorizes Markovian transition learning from non-Markovian reward handling using reward machines, with Bucket-QR-MAX extension for continuous state spaces using SimHash-based discretization",
+      "• Data used: Experimental comparison on environments of increasing complexity, no specific real-world datasets mentioned but synthetic environments designed to test temporal-dependency tasks",
+      "• Performance metrics: Demonstrates polynomial sample complexity with PAC convergence to ε-optimal policies, shows significant improvement in sample efficiency and increased robustness in finding optimal policies compared to modern state-of-the-art model-based RL approaches"
+    ],
+    "summary_cn": [
+      "• 核心模型: QR-MAX算法通过奖励机将马尔可夫转移学习与非马尔可夫奖励处理分离，Bucket-QR-MAX扩展使用SimHash离散化处理连续状态空间",
+      "• 数据来源: 在复杂度递增的环境中进行实验比较，未提及具体真实数据集，使用合成环境测试时间依赖任务",
+      "• 主要结论: 首次为离散动作NMRDPs提供具有多项式样本复杂度的PAC收敛保证，相比现有模型强化学习方法显著提升样本效率和策略寻优鲁棒性"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for temporal-dependency trading strategies where success depends on sequence of actions rather than final state, could be applied to optimal execution or multi-step arbitrage strategies",
+      "• Implementation Risk: Moderate-high risk due to complexity of reward machine construction and SimHash discretization requiring careful parameter tuning, continuous state extension adds additional implementation challenges",
+      "• Novelty: Significant novelty as first model-based RL algorithm for discrete-action NMRDPs with formal PAC guarantees and polynomial sample complexity, factorization approach is innovative"
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次为离散动作非马尔可夫奖励决策过程提供具有多项式样本复杂度的PAC收敛保证，奖励机分离架构具有理论创新性",
+      "• 实盘坑: 奖励机构建复杂且需要领域知识，SimHash离散化参数敏感，连续状态扩展在实际金融数据中稳定性待验证",
+      "• 复现难度: 中等偏高，需要实现奖励机架构和SimHash离散化，实验环境构建需要专业知识，理论证明复杂"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
     "id": "2512.13690v1",
     "title": "DiffusionBrowser: Interactive Diffusion Previews via Multi-Branch Decoders",
     "pdf_url": "https://arxiv.org/pdf/2512.13690v1",
