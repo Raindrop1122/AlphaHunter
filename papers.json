@@ -1,5 +1,359 @@
 [
   {
+    "id": "2512.16917v1",
+    "title": "Generative Adversarial Reasoner: Enhancing LLM Reasoning with Adversarial Reinforcement Learning",
+    "pdf_url": "https://arxiv.org/pdf/2512.16917v1",
+    "published": "2025-12-18",
+    "crawled_at": "2025-12-19 20:01:42",
+    "ai_score": 8.2,
+    "translated_title": "生成对抗推理器：通过对抗强化学习增强大语言模型推理能力",
+    "summary_en": [
+      "• Model Architecture: Introduces Generative Adversarial Reasoner (GAR), an on-policy joint training framework that co-evolves an LLM reasoner and an LLM-based discriminator through adversarial reinforcement learning. The discriminator evaluates reasoning chain slices for soundness with structured justifications.",
+      "• Data used: Evaluated on various mathematical benchmarks including AIME24, using models like DeepSeek-R1-Distill-Qwen-7B and DeepSeek-R1-Distill-Llama-8B. The method leverages compute-efficient review schedules to partition reasoning chains into logically complete slices.",
+      "• Performance metrics: Achieved significant improvements on AIME24: DeepSeek-R1-Distill-Qwen-7B improved from 54.0 to 61.3 (+7.3) and DeepSeek-R1-Distill-Llama-8B from 43.7 to 53.7 (+10.0). The framework produces dense, well-calibrated step-level rewards that enhance sample efficiency and reasoning quality."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出生成对抗推理器（GAR），一种基于策略的联合训练框架，通过对抗强化学习共同进化LLM推理器和基于LLM的判别器。判别器使用结构化理由评估推理链切片的合理性。",
+      "• 数据来源: 在包括AIME24在内的多个数学基准上进行评估，使用DeepSeek-R1-Distill-Qwen-7B和DeepSeek-R1-Distill-Llama-8B等模型。通过计算高效的审查计划将推理链分割为逻辑完整的切片。",
+      "• 主要结论: 在AIME24上取得显著提升：DeepSeek-R1-Distill-Qwen-7B从54.0提升至61.3（+7.3），DeepSeek-R1-Distill-Llama-8B从43.7提升至53.7（+10.0）。该框架产生密集、校准良好的步骤级奖励，提高样本效率和推理质量。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for improving quantitative reasoning in financial models, especially for complex mathematical problems and logical deduction tasks where traditional LLMs struggle with process errors. The dense reward signals could enhance algorithmic trading strategies.",
+      "• Implementation Risk: Moderate to high risk due to computational complexity of adversarial training and dependency on high-quality reasoning datasets. The method requires careful tuning of discriminator and reasoner interactions to avoid training instability.",
+      "• Novelty: Novel integration of adversarial reinforcement learning with LLM reasoning, introducing a compute-efficient review schedule and structured justification mechanism. The modular discriminator enables flexible reward shaping for various objectives beyond mathematical reasoning."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将对抗强化学习与LLM推理创新性结合，引入计算高效的审查计划和结构化理由机制。模块化判别器支持灵活奖励塑造，适用于数学推理以外的多种目标。",
+      "• 实盘坑: 对抗训练的计算复杂度较高，依赖高质量推理数据集，存在训练不稳定性风险。需要精细调整判别器与推理器的交互，实际部署可能面临延迟和资源挑战。",
+      "• 复现难度: 中等偏高，需要复现对抗训练框架、审查计划分割逻辑和结构化理由生成。依赖特定LLM模型和数学基准数据，开源代码和详细超参数配置对复现至关重要。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2512.16912v1",
+    "title": "Exploration v.s. Exploitation: Rethinking RLVR through Clipping, Entropy, and Spurious Reward",
+    "pdf_url": "https://arxiv.org/pdf/2512.16912v1",
+    "published": "2025-12-18",
+    "crawled_at": "2025-12-19 20:02:02",
+    "ai_score": 7.8,
+    "translated_title": "探索与利用：通过裁剪、熵和虚假奖励重新思考RLVR",
+    "summary_en": [
+      "• Model Architecture: The paper examines the RLVR (Reinforcement Learning with Verifiable Rewards) framework applied to Large Language Models (LLMs), focusing on mechanisms like spurious rewards and entropy minimization to improve mathematical reasoning.",
+      "• Data used: The study likely uses synthetic or benchmark datasets for mathematical reasoning tasks, though specific datasets are not detailed in the abstract; it emphasizes theoretical analysis over empirical data.",
+      "• Performance metrics: Performance is evaluated based on reasoning accuracy and policy entropy reduction, with findings showing that clipping bias under spurious rewards reduces entropy and enhances output confidence, but entropy minimization alone is insufficient for improvement."
+    ],
+    "summary_cn": [
+      "• 核心模型: 研究基于RLVR（可验证奖励的强化学习）框架，应用于大语言模型（LLMs），通过虚假奖励和熵最小化机制提升数学推理能力。",
+      "• 数据来源: 可能使用合成或基准数据集进行数学推理任务，但摘要中未具体说明；更侧重于理论分析而非实证数据。",
+      "• 主要结论: 虚假奖励下的裁剪偏差能降低策略熵，使输出更自信和确定，但仅靠熵最小化不足以提升性能；提出了奖励错配模型解释虚假奖励在非污染设置下的增益。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the insights into spurious rewards and entropy dynamics could inform novel training strategies for LLMs in quantitative tasks, but direct financial applications are limited without empirical validation in market contexts.",
+      "• Implementation Risk: High; the reliance on theoretical mechanisms like clipping bias and reward misalignment introduces complexity, and real-world deployment may face challenges in reward design and model stability.",
+      "• Novelty: High; the paper addresses a paradoxical dynamic in RLVR where both suppressing exploitation and exploration improve performance, offering a fresh perspective on reinforcement learning for reasoning enhancement."
+    ],
+    "verdict_cn": [
+      "• 创新点: 较高；揭示了RLVR中虚假奖励和熵最小化的矛盾机制，为提升LLMs推理能力提供了新思路，尤其在数学任务上具有理论突破。",
+      "• 实盘坑: 高；依赖裁剪偏差和奖励错配等理论机制，实操中奖励设计和模型稳定性风险大，缺乏金融市场实证支持。",
+      "• 复现难度: 中等；框架基于现有RLVR，但需要精细调整奖励函数和熵参数，可能受数据集和计算资源限制。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2512.16911v1",
+    "title": "Posterior Behavioral Cloning: Pretraining BC Policies for Efficient RL Finetuning",
+    "pdf_url": "https://arxiv.org/pdf/2512.16911v1",
+    "published": "2025-12-18",
+    "crawled_at": "2025-12-19 20:02:25",
+    "ai_score": 8.2,
+    "translated_title": "后验行为克隆：为高效强化学习微调预训练BC策略",
+    "summary_en": [
+      "• Model Architecture: Introduces Posterior Behavioral Cloning (PostBC), a method that trains a policy to model the posterior distribution of demonstrator behavior given demonstration data, using standard supervised learning with modern generative models.",
+      "• Data used: Large-scale demonstration datasets in robotic control domains, including realistic benchmarks and real-world robotic manipulation tasks, without requiring additional data beyond standard behavioral cloning setups.",
+      "• Performance metrics: Theoretically ensures coverage over demonstrator's actions (a minimal condition for effective RL finetuning) and empirically shows significantly improved RL finetuning performance compared to standard behavioral cloning, while maintaining pretrained performance at least as good as BC."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出后验行为克隆（PostBC），通过建模演示者行为的后验分布来训练策略，使用标准监督学习和现代生成模型实现。",
+      "• 数据来源: 机器人控制领域的大规模演示数据集，包括现实基准测试和真实世界机器人操作任务，无需超出标准行为克隆设置的数据。",
+      "• 主要结论: 理论上确保覆盖演示者的动作（有效RL微调的最小条件），实证显示相比标准行为克隆显著提升RL微调性能，同时保持预训练性能不低于BC。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for robotics and sequential decision-making applications where RL finetuning is critical; could enhance sample efficiency and final performance in deployment domains, potentially reducing training costs and improving adaptability.",
+      "• Implementation Risk: Moderate; relies on accurate modeling of posterior distributions, which may be sensitive to demonstration quality and model assumptions, and requires integration with existing RL pipelines, though uses standard supervised learning.",
+      "• Novelty: Significant; addresses an overlooked aspect of policy pretraining by focusing on coverage rather than exact imitation, providing a theoretical foundation and practical method to improve RL initialization, with potential extensions to other domains like language."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著，通过关注覆盖性而非精确模仿，解决了策略预训练中被忽视的方面，为改进RL初始化提供了理论基础和实用方法，可扩展至语言等领域。",
+      "• 实盘坑: 中等，依赖后验分布的准确建模，可能对演示质量和模型假设敏感，需与现有RL流程集成，尽管使用标准监督学习。",
+      "• 复现难度: 中等，基于标准监督学习和生成模型，但需要处理后验估计和RL微调集成，可能涉及计算资源和调优挑战。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2512.16910v1",
+    "title": "SFTok: Bridging the Performance Gap in Discrete Tokenizers",
+    "pdf_url": "https://arxiv.org/pdf/2512.16910v1",
+    "published": "2025-12-18",
+    "crawled_at": "2025-12-19 20:02:44",
+    "ai_score": 8.2,
+    "translated_title": "SFTok：弥合离散分词器性能差距",
+    "summary_en": [
+      "• Model Architecture: SFTok is a discrete tokenizer that uses a multi-step iterative mechanism with self-forcing guided visual reconstruction and debias-and-fitting training strategy to address training-inference inconsistency.",
+      "• Data used: The model was evaluated on ImageNet dataset, indicating use of standard large-scale image datasets for training and testing.",
+      "• Performance metrics: Achieves state-of-the-art reconstruction quality with rFID = 1.21 on ImageNet and gFID = 2.29 for class-to-image generation at high compression rate of 64 tokens per image."
+    ],
+    "summary_cn": [
+      "• 核心模型: SFTok采用多步迭代机制，结合自强制引导视觉重建和去偏拟合训练策略，解决离散分词器训练-推理不一致问题。",
+      "• 数据来源: 基于ImageNet数据集进行训练和评估，使用标准大规模图像数据。",
+      "• 主要结论: 在每图像仅64个令牌的高压缩率下，实现ImageNet上rFID=1.21的最优重建质量，类到图像生成任务中gFID=2.29的卓越性能。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for improving multimodal AI systems by bridging discrete-continuous tokenizer gap, enabling more efficient high-resolution image generation in trading signal visualization and alternative data processing.",
+      "• Implementation Risk: Moderate risk due to complex multi-step iterative mechanism requiring careful hyperparameter tuning and potential computational overhead in real-time applications.",
+      "• Novelty: Significant novelty in addressing training-inference inconsistency through self-forcing mechanism and debias strategy, representing meaningful advancement over existing discrete tokenizers."
+    ],
+    "verdict_cn": [
+      "• 创新点: 通过自强制机制和去偏策略解决多步过程中的训练-推理不一致问题，在离散分词器领域具有实质性突破。",
+      "• 实盘坑: 多步迭代机制可能引入计算延迟，在实时图像处理应用中需要优化，且高压缩率可能损失细微市场模式信息。",
+      "• 复现难度: 中等偏高，需要精确实现自强制引导重建和去偏拟合训练策略，对计算资源和调参经验要求较高。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2512.16902v1",
+    "title": "In-Context Algebra",
+    "pdf_url": "https://arxiv.org/pdf/2512.16902v1",
+    "published": "2025-12-18",
+    "crawled_at": "2025-12-19 20:03:04",
+    "ai_score": 8.2,
+    "translated_title": "上下文代数",
+    "summary_en": [
+      "• Model Architecture: Transformer models trained on arithmetic sequences with variable token meanings, focusing on in-context learning mechanisms rather than fixed geometric embeddings.",
+      "• Data used: Custom-designed sequences where symbol-to-algebraic-group assignments vary per sequence, including targeted distributions for causal testing of hypothesized mechanisms.",
+      "• Performance metrics: Achieved near-perfect accuracy on the task and demonstrated generalization to unseen algebraic groups, indicating robust symbolic reasoning capabilities.",
+      "• Key mechanisms identified: Commutative copying via dedicated heads, identity element recognition, and closure-based cancellation for tracking group membership."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于Transformer架构，训练于算术序列任务，其中令牌含义为变量而非固定值，强调上下文学习机制而非几何嵌入。",
+      "• 数据来源: 自定义序列数据，符号与代数群元素的映射随序列变化，包含针对性分布以因果测试假设机制。",
+      "• 主要结论: 模型在任务上达到接近完美的准确率，并能泛化到未见过的代数群，揭示了符号推理能力的涌现。",
+      "• 机制发现: 识别出三种一致学习到的机制：交换复制、恒等元识别和基于闭包的消去法。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for applications in dynamic symbolic reasoning tasks, such as financial modeling with variable parameters or adaptive algorithmic trading strategies, due to robust generalization and in-context learning.",
+      "• Implementation Risk: Moderate; challenges include scaling to real-world noisy data and ensuring stability in high-stakes environments, as the study uses controlled synthetic data.",
+      "• Novelty: Significant; introduces a novel task setup with variable symbol meanings, contrasting prior fixed-symbol work, and isolates specific symbolic mechanisms, advancing understanding of transformer reasoning."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出变量含义的上下文代数任务，突破传统固定符号设置，首次系统分离出符号推理机制，为Transformer可解释性提供新视角。",
+      "• 实盘坑: 数据依赖合成序列，实盘应用需处理噪声和动态性；机制可能在高频或复杂市场环境中失效，风险控制是关键。",
+      "• 复现难度: 中等；需复现自定义数据分布和训练流程，但论文机制描述清晰，开源代码可降低难度。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2512.16901v1",
+    "title": "Impacts of Racial Bias in Historical Training Data for News AI",
+    "pdf_url": "https://arxiv.org/pdf/2512.16901v1",
+    "published": "2025-12-18",
+    "crawled_at": "2025-12-19 20:03:25",
+    "ai_score": 7.2,
+    "translated_title": "新闻AI历史训练数据中种族偏见的影响研究",
+    "summary_en": [
+      "• Model Architecture: Multi-label classifier trained on the New York Times Annotated Corpus using explainable AI methods to investigate embedded biases",
+      "• Data used: New York Times Annotated Corpus containing decades of news articles that encode historical attitudes and stereotypes",
+      "• Performance metrics: The 'blacks' label functions as a partial 'racism detector' but performs poorly on modern examples like COVID-19 anti-Asian hate stories and Black Lives Matter reporting",
+      "• Key finding: AI models trained on historical news data reproduce and amplify existing biases, creating unexpected outputs in newsroom applications"
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于《纽约时报》标注语料库训练的多标签分类器，采用可解释AI方法分析嵌入偏见",
+      "• 数据来源: 《纽约时报》标注语料库，包含数十年新闻报道，编码了历史态度和刻板印象",
+      "• 主要结论: '黑人'标签部分起到'种族主义检测器'作用，但在现代案例（如COVID-19反亚裔仇恨报道）中表现不佳",
+      "• 研究发现: 基于历史新闻数据训练的AI模型会复制并放大现有偏见，导致新闻编辑室应用中出现意外输出"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Limited direct trading alpha, but valuable for understanding bias propagation in financial NLP models that process news/sentiment data",
+      "• Implementation Risk: High risk of reproducing historical biases in automated news analysis systems, potentially leading to flawed investment signals",
+      "• Novelty: Strong case study methodology using explainable AI to trace bias origins, but similar bias studies exist in ML literature",
+      "• Practical limitation: Focuses on newsroom applications rather than direct financial applications, requiring adaptation for trading use cases"
+    ],
+    "verdict_cn": [
+      "• 创新点: 采用可解释AI方法系统追踪偏见来源，为新闻AI偏见研究提供详细案例",
+      "• 实盘坑: 历史偏见在金融新闻分析模型中复现风险极高，可能导致投资信号系统性偏差",
+      "• 复现难度: 中等，需要访问《纽约时报》标注语料库和类似训练框架，但方法可迁移",
+      "• 应用局限: 主要针对新闻编辑室场景，需重大调整才能应用于金融交易环境"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2512.16891v1",
+    "title": "LinkedOut: Linking World Knowledge Representation Out of Video LLM for Next-Generation Video Recommendation",
+    "pdf_url": "https://arxiv.org/pdf/2512.16891v1",
+    "published": "2025-12-18",
+    "crawled_at": "2025-12-19 20:03:47",
+    "ai_score": 8.2,
+    "translated_title": "LinkedOut：从视频大语言模型中提取世界知识表示用于下一代视频推荐",
+    "summary_en": [
+      "• Model Architecture: LinkedOut extracts semantically grounded, knowledge-aware tokens from raw video frames using Video Large Language Models (VLLMs), guided by promptable queries and optional auxiliary modalities. It introduces a cross-layer knowledge fusion Mixture of Experts (MoE) that selects appropriate abstraction levels from VLLM features for personalized, interpretable recommendation.",
+      "• Data used: The method operates on raw video frames without handcrafted labels, leveraging internet-scale pretraining data typical for VLLMs. It supports multi-video histories and removes the language bottleneck by preserving pixel-level detail.",
+      "• Performance metrics: Achieves state-of-the-art results on standard benchmarks for video recommendation. Interpretability studies and ablations confirm benefits of layer diversity and layer-wise fusion, enabling low-latency inference and rapid response."
+    ],
+    "summary_cn": [
+      "• 核心模型: LinkedOut 使用视频大语言模型（VLLMs）从原始视频帧中提取语义基础、知识感知的标记，通过可提示查询和可选辅助模态引导。引入跨层知识融合专家混合（MoE），从VLLM特征中选择适当的抽象级别，实现个性化、可解释的推荐。",
+      "• 数据来源: 该方法在原始视频帧上操作，无需手工标注标签，利用VLLMs典型的互联网规模预训练数据。支持多视频历史记录，并通过保留像素级细节消除语言瓶颈。",
+      "• 主要结论: 在标准视频推荐基准测试中达到最先进性能。可解释性研究和消融实验证实了层多样性和逐层融合的优势，实现低延迟推理和快速响应。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for generating novel video recommendation signals by leveraging world knowledge from VLLMs without language constraints, enabling fine-grained visual reasoning that could outperform traditional methods in dynamic content environments.",
+      "• Implementation Risk: Moderate risk due to dependency on large-scale VLLM pretraining and computational overhead for real-time inference; integration with existing recommendation systems may require significant engineering effort.",
+      "• Novelty: High novelty as the first VLLM-based video recommendation method operating on raw frames without handcrafted labels, introducing cross-layer fusion MoE to bridge world knowledge and visual detail for practical deployment."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次提出基于VLLM的视频推荐方法，直接在原始帧上操作，无需手工标签，通过跨层融合MoE将世界知识与视觉细节结合，实现低延迟推理。",
+      "• 实盘坑: 依赖大规模VLLM预训练，实时推理计算开销大；与现有推荐系统集成需大量工程工作，可能面临延迟和可扩展性挑战。",
+      "• 复现难度: 中等偏高，需要访问预训练VLLM和视频数据集，实现跨层融合MoE和优化推理流程的技术门槛较高。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2512.16882v1",
+    "title": "Cartesian-nj: Extending e3nn to Irreducible Cartesian Tensor Product and Contracion",
+    "pdf_url": "https://arxiv.org/pdf/2512.16882v1",
+    "published": "2025-12-18",
+    "crawled_at": "2025-12-19 20:04:10",
+    "ai_score": 7.5,
+    "translated_title": "Cartesian-nj：将e3nn扩展至不可约笛卡尔张量积与收缩",
+    "summary_en": [
+      "• Model Architecture: Introduces Cartesian-3j and Cartesian-nj symbols as analogues to Wigner symbols for irreducible Cartesian tensors (ICTs), enabling tensor coupling in Cartesian space. Extends e3nn framework to support irreducible Cartesian tensor product and contraction (ICTP/ICTC), implemented in Python package cartnn.",
+      "• Data used: Implements Cartesian counterparts of MACE, NequIP, and Allegro models for systematic comparison with spherical tensor (ST) models. Uses TACE as a representative example to evaluate ICTP/ICTC architectures.",
+      "• Performance metrics: Conducts first systematic comparison between Cartesian and spherical models to assess advantages under specific conditions. Examines whether Cartesian formulations offer improved design opportunities and conceptual foundations."
+    ],
+    "summary_cn": [
+      "• 核心模型: 引入Cartesian-3j和Cartesian-nj符号作为Wigner符号的笛卡尔张量对应物，支持不可约笛卡尔张量（ICT）的耦合。扩展e3nn框架以支持不可约笛卡尔张量积与收缩（ICTP/ICTC），发布Python包cartnn。",
+      "• 数据来源: 实现MACE、NequIP和Allegro模型的笛卡尔版本，用于与球张量（ST）模型进行系统比较。以TACE为例评估ICTP/ICTC架构。",
+      "• 主要结论: 首次系统比较笛卡尔与球张量模型，评估特定条件下的优势。探讨笛卡尔公式是否提供改进设计机会和概念基础。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate. Cartesian formulations may offer computational or interpretability advantages in specific molecular/atomic systems, but ST dominance limits immediate alpha. Systematic comparison could reveal niche applications.",
+      "• Implementation Risk: High. Requires deep expertise in group theory and tensor algebra. Integration with existing ST-based pipelines may be challenging due to different mathematical foundations.",
+      "• Novelty: High. First formal extension of e3nn to Cartesian space with new coupling coefficients. Addresses long-standing question about ST exclusivity in equivariant ML."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高。首次将e3nn框架正式扩展至笛卡尔空间，引入新的耦合系数。挑战球张量在等变机器学习中的主导地位，探索替代设计原则。",
+      "• 实盘坑: 高。需要深厚的群论和张量代数知识。与现有球张量流程集成困难，数学基础差异可能导致兼容性问题。",
+      "• 复现难度: 中高。提供Python包cartnn降低复现门槛，但理论复杂性和模型实现细节仍需专业领域知识。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2512.16881v1",
+    "title": "PolaRiS: Scalable Real-to-Sim Evaluations for Generalist Robot Policies",
+    "pdf_url": "https://arxiv.org/pdf/2512.16881v1",
+    "published": "2025-12-18",
+    "crawled_at": "2025-12-19 20:04:28",
+    "ai_score": 8.2,
+    "translated_title": "PolaRiS：面向通用机器人策略的可扩展真实到仿真评估框架",
+    "summary_en": [
+      "• Model Architecture: PolaRiS combines neural reconstruction methods to convert real-world video scans into interactive simulation environments, with a co-training recipe for bridging real-to-sim gaps and enabling zero-shot evaluation in unseen environments.",
+      "• Data used: Utilizes short video scans of real-world scenes as input for environment reconstruction, paired with simulation data for co-training to enhance fidelity and reduce domain gaps.",
+      "• Performance metrics: Demonstrates stronger correlation to real-world generalist policy performance compared to existing simulated benchmarks, validated through extensive paired evaluations between simulation and real-world rollouts."
+    ],
+    "summary_cn": [
+      "• 核心模型: PolaRiS采用神经重建方法将真实场景视频扫描转换为交互式仿真环境，结合协同训练方案实现零样本评估。",
+      "• 数据来源: 基于真实世界场景的短视频扫描进行环境重建，利用仿真数据进行协同训练以提升保真度。",
+      "• 主要结论: 相比现有仿真基准，PolaRiS评估与真实世界通用策略性能相关性更强，支持快速创建多样化仿真环境。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for scalable and democratized evaluation of robotic policies, reducing reliance on costly real-world testing and enabling faster iteration for foundation models.",
+      "• Implementation Risk: Moderate risk due to dependency on neural reconstruction accuracy and potential simulation-reality gaps despite co-training; real-world variability may still affect reliability.",
+      "• Novelty: Novel integration of real-to-sim reconstruction with co-training for zero-shot evaluation, addressing key bottlenecks in robotics benchmarking with a simple, scalable framework."
+    ],
+    "verdict_cn": [
+      "• 创新点: 创新性地结合真实到仿真重建与协同训练，实现零样本评估，简化了机器人策略的分布式评测流程。",
+      "• 实盘坑: 依赖神经重建精度，仿真与真实世界间仍可能存在未完全弥合的差距，实际部署时需验证泛化能力。",
+      "• 复现难度: 中等难度，需具备机器人仿真和神经重建技术基础，但框架设计相对简洁，有利于社区复现和扩展。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2512.16876v1",
+    "title": "Training Together, Diagnosing Better: Federated Learning for Collagen VI-Related Dystrophies",
+    "pdf_url": "https://arxiv.org/pdf/2512.16876v1",
+    "published": "2025-12-18",
+    "crawled_at": "2025-12-19 20:04:52",
+    "ai_score": 7.5,
+    "translated_title": "协同训练，更优诊断：联邦学习在胶原蛋白VI相关肌营养不良症中的应用",
+    "summary_en": [
+      "• Model Architecture: Federated Learning (FL) framework using Sherpa.ai platform for collaborative training across decentralized datasets without data sharing",
+      "• Data used: Collagen VI immunofluorescence microscopy images from patient-derived fibroblast cultures across two international organizations",
+      "• Performance metrics: Achieved F1-score of 0.82 for classifying three pathogenic mechanism groups (exon skipping, glycine substitution, pseudoexon insertion)",
+      "• Comparison: Outperformed single-organization models (F1-scores 0.57-0.75) by substantial margin",
+      "• Application: Diagnostic tool for rare collagen VI-related dystrophies with potential for variant interpretation and sequencing prioritization"
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于Sherpa.ai平台的联邦学习框架，实现跨机构协同训练而无需共享原始数据",
+      "• 数据来源: 来自两个国际组织的患者成纤维细胞培养胶原蛋白VI免疫荧光显微镜图像",
+      "• 主要结论: FL模型F1分数达0.82，显著优于单机构模型(0.57-0.75)，证明FL能提升罕见病诊断的准确性和泛化能力",
+      "• 技术突破: 解决了医疗数据隐私和监管障碍，实现跨地域协作的机器学习应用",
+      "• 应用前景: 不仅支持更准确诊断，还能辅助解读意义未明变异并指导测序策略优化"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Medium-high - FL approach addresses critical data scarcity in niche medical domains, creating defensible moat through regulatory compliance",
+      "• Implementation Risk: High - Medical data standardization, cross-institutional coordination, and regulatory approvals create significant deployment friction",
+      "• Novelty: Moderate - FL application to rare disease diagnosis is innovative, but core FL technology itself is established in other domains",
+      "• Scalability: Limited - Highly specialized application to collagen VI dystrophies restricts immediate broader market applications",
+      "• Competitive Advantage: Strong in niche - First-mover advantage in specific rare disease FL diagnostics with validated performance improvement"
+    ],
+    "verdict_cn": [
+      "• 创新点: 将联邦学习首次应用于胶原蛋白VI相关肌营养不良症诊断，解决医疗数据孤岛和隐私监管难题",
+      "• 实盘坑: 医疗数据标准化程度低、跨机构协调成本高、监管审批流程漫长，商业化落地阻力大",
+      "• 复现难度: 中等偏高 - 需要获取多个医疗机构的专业病理图像数据，并建立跨机构的联邦学习基础设施",
+      "• 市场空间: 狭窄但高价值 - 针对罕见病诊断细分市场，单价高但患者基数小，需拓展到更广泛疾病领域",
+      "• 技术护城河: 中等 - 医疗数据访问壁垒和监管合规要求形成一定保护，但FL技术本身易被复制"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "Nature Medicine or Nature Communications",
+      "status": "Accepted"
+    }
+  },
+  {
     "id": "2512.15712v1",
     "title": "Predictive Concept Decoders: Training Scalable End-to-End Interpretability Assistants",
     "pdf_url": "https://arxiv.org/pdf/2512.15712v1",
