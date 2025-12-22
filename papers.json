@@ -1,5 +1,352 @@
 [
   {
+    "id": "2512.17908v1",
+    "title": "Re-Depth Anything: Test-Time Depth Refinement via Self-Supervised Re-lighting",
+    "pdf_url": "https://arxiv.org/pdf/2512.17908v1",
+    "published": "2025-12-19",
+    "crawled_at": "2025-12-22 20:01:34",
+    "ai_score": 7.8,
+    "translated_title": "重新深度任何事物：通过自监督重照明的测试时深度优化",
+    "summary_en": [
+      "• Model Architecture: Re-Depth Anything combines Depth Anything V2 (DA-V2) with large-scale 2D diffusion models, using a test-time self-supervision framework that freezes the encoder, updates intermediate embeddings, and fine-tunes the decoder to refine depth maps via re-lighting and input augmentation.",
+      "• Data used: The method operates label-free on real-world input images, leveraging shape from shading (SfS) cues in a generative context with Score Distillation Sampling (SDS), without requiring additional labeled training data.",
+      "• Performance metrics: Across diverse benchmarks, the framework achieves substantial gains in depth accuracy and realism over DA-V2, demonstrating improved handling of images far from the training distribution."
+    ],
+    "summary_cn": [
+      "• 核心模型: Re-Depth Anything 融合 Depth Anything V2 (DA-V2) 与大规模 2D 扩散模型，采用测试时自监督框架，冻结编码器、更新中间嵌入并微调解码器，通过重照明和输入增强优化深度图。",
+      "• 数据来源: 方法在真实世界输入图像上无标签运行，利用生成式上下文中的形状从阴影 (SfS) 线索和分数蒸馏采样 (SDS)，无需额外标注训练数据。",
+      "• 主要结论: 在多样化基准测试中，该框架在深度准确性和真实感上相比 DA-V2 有显著提升，展示了对远离训练分布图像的更好处理能力。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the method addresses domain gaps in monocular depth estimation, which could enhance computer vision applications in finance (e.g., surveillance analysis or autonomous trading environments), but direct alpha generation is limited without specific financial data integration.",
+      "• Implementation Risk: High; reliance on large-scale diffusion models and test-time optimization increases computational costs and latency, making real-time deployment challenging for high-frequency trading scenarios.",
+      "• Novelty: High; the approach innovatively bridges geometric reasoning with generative priors using SDS and targeted optimization, offering a new self-supervision avenue beyond classical photometric reconstruction."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高; 该方法创新性地通过分数蒸馏采样 (SDS) 和定向优化，将几何推理与生成式先验结合，超越了传统光度重建，为自监督提供了新路径。",
+      "• 实盘坑: 高; 依赖大规模扩散模型和测试时优化增加了计算成本和延迟，对高频交易等实时场景部署构成挑战，且缺乏金融数据适配可能限制应用效果。",
+      "• 复现难度: 中等; 框架基于开源模型如 DA-V2，但集成扩散模型和优化策略需要专业知识，实验设置和基准测试的复现可能受资源限制影响。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2512.17899v1",
+    "title": "Distributionally Robust Imitation Learning: Layered Control Architecture for Certifiable Autonomy",
+    "pdf_url": "https://arxiv.org/pdf/2512.17899v1",
+    "published": "2025-12-19",
+    "crawled_at": "2025-12-22 20:01:56",
+    "ai_score": 7.5,
+    "translated_title": "分布鲁棒模仿学习：可认证自主性的分层控制架构",
+    "summary_en": [
+      "• Model Architecture: Proposes Distributionally Robust Imitation Policy (DRIP), a Layered Control Architecture (LCA) integrating Taylor Series Imitation Learning (TaSIL) and L1-Distributionally Robust Adaptive Control (ℓonedrac) to handle distribution shifts from policy errors and uncertainties.",
+      "• Data used: Relies on expert demonstrations for imitation learning, with robustness against aleatoric (exogenous disturbances) and epistemic (model errors) uncertainties, though specific datasets or simulation environments are not detailed.",
+      "• Performance metrics: Focuses on theoretical guarantees for certifiable autonomy, enabling safety certificates for the entire control pipeline by designing layer-centric input/output requirements, without empirical validation metrics."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出分布鲁棒模仿策略（DRIP），一种分层控制架构（LCA），整合泰勒级数模仿学习（TaSIL）和L1分布鲁棒自适应控制（ℓonedrac），以处理策略误差和不确定性引起的分布偏移。",
+      "• 数据来源: 基于专家演示进行模仿学习，针对偶发（外生扰动）和认知（模型误差）不确定性提供鲁棒性，但未指定具体数据集或仿真环境。",
+      "• 主要结论: 通过设计层中心输入/输出要求，为整个控制流程提供可认证的自主性保证，实现安全证书，但缺乏实证性能指标验证。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; offers a framework for certifiable autonomy in robotics or autonomous systems, potentially reducing risk in high-stakes applications, but direct financial alpha generation is limited without market-specific adaptation.",
+      "• Implementation Risk: High; theoretical nature with no empirical results increases uncertainty; integration of multiple complex components (TaSIL and ℓonedrac) may lead to practical challenges in real-world deployment.",
+      "• Novelty: High; novel integration of imitation learning with distributionally robust control in a layered architecture addresses compounding errors and uncertainties, advancing certifiable autonomy pipelines."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；新颖地将模仿学习与分布鲁棒控制整合为分层架构，解决复合误差和不确定性，推动可认证自主性流程的发展。",
+      "• 实盘坑: 高；理论性强且无实证结果，增加不确定性；多个复杂组件（TaSIL和ℓonedrac）的集成可能在现实部署中带来实际挑战。",
+      "• 复现难度: 高；需要专业知识在模仿学习和鲁棒控制领域，且缺乏开源代码或详细实验设置，复现困难。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2512.17897v1",
+    "title": "RadarGen: Automotive Radar Point Cloud Generation from Cameras",
+    "pdf_url": "https://arxiv.org/pdf/2512.17897v1",
+    "published": "2025-12-19",
+    "crawled_at": "2025-12-22 20:02:18",
+    "ai_score": 7.5,
+    "translated_title": "RadarGen：基于摄像头的汽车雷达点云生成",
+    "summary_en": [
+      "• Model Architecture: RadarGen is a diffusion model that adapts image-latent diffusion to generate radar point clouds in bird's-eye-view (BEV) form, incorporating BEV-aligned depth, semantic, and motion cues from pretrained foundation models to guide generation.",
+      "• Data used: The model is evaluated on large-scale driving data, leveraging multi-view camera imagery and existing visual datasets or simulation frameworks for conditioning, making it broadly compatible with multimodal datasets.",
+      "• Performance metrics: Evaluations show that RadarGen captures characteristic radar measurement distributions, reduces the gap to perception models trained on real data, and marks progress toward unified generative simulation across sensing modalities."
+    ],
+    "summary_cn": [
+      "• 核心模型: RadarGen采用扩散模型，将图像潜在扩散技术应用于雷达领域，以鸟瞰图形式生成雷达点云，并结合预训练基础模型提取的深度、语义和运动线索进行引导。",
+      "• 数据来源: 基于大规模驾驶数据进行评估，利用多视角摄像头图像和现有视觉数据集或仿真框架作为条件输入，实现与多模态数据的广泛兼容。",
+      "• 主要结论: 实验表明，RadarGen能捕捉雷达测量特征分布，缩小与基于真实数据训练的感知模型之间的差距，推动跨传感模态的统一生成仿真。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the model could enhance simulation for autonomous driving systems by generating synthetic radar data, potentially improving training efficiency and robustness in multimodal perception tasks, but direct financial alpha is limited to niche applications in automotive tech or simulation-driven trading strategies.",
+      "• Implementation Risk: High; reliance on pretrained foundation models for depth, semantic, and motion cues introduces dependencies on external models, and the stochastic generation process may produce inconsistent outputs, requiring extensive validation for real-world deployment.",
+      "• Novelty: Moderate; adapting diffusion models to radar generation is innovative, but the use of BEV representations and conditioning on camera imagery builds on existing multimodal and generative techniques, with incremental advancements in radar-specific attributes like RCS and Doppler."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；将扩散模型应用于雷达点云生成具有新意，但基于鸟瞰图表示和摄像头图像条件输入，借鉴了现有多模态和生成技术，在雷达特定属性如RCS和多普勒方面有渐进改进。",
+      "• 实盘坑: 高；依赖预训练基础模型提取深度、语义和运动线索，增加了外部模型依赖性，随机生成过程可能导致输出不一致，需大量验证才能实际部署。",
+      "• 复现难度: 中等；模型架构相对标准，但需要大规模驾驶数据和预训练模型支持，数据处理和条件对齐步骤可能复杂，适合有深度学习经验的团队复现。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2512.17895v1",
+    "title": "Visualization of The Content of Surah al Fiil using Marker-Based Augmented Reality",
+    "pdf_url": "https://arxiv.org/pdf/2512.17895v1",
+    "published": "2025-12-19",
+    "crawled_at": "2025-12-22 20:02:39",
+    "ai_score": 3.5,
+    "translated_title": "基于标记的增强现实技术在《象章》内容可视化中的应用",
+    "summary_en": [
+      "• Model Architecture: Marker-based AR system built with Unity 3D and Vuforia SDK, featuring 3D assets created in Blender for visualizing Quranic narrative elements like elephant army and Ababil birds.",
+      "• Data used: High-contrast image markers for AR tracking, with content derived from Surah al-Fil (Quranic chapter) for Islamic education context.",
+      "• Performance metrics: Achieved 95% marker detection accuracy at 30-40 cm distance, with consistent real-time rendering on Android devices; user satisfaction score of 4.7/5 from students and teachers."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于标记的增强现实系统，采用Unity 3D和Vuforia SDK开发，Blender创建3D资产（如象军、阿巴比尔鸟），用于可视化《古兰经》叙事。",
+      "• 数据来源: 高对比度图像标记用于AR追踪，内容源自《古兰经》的《象章》，应用于伊斯兰教育场景。",
+      "• 主要结论: 标记检测准确率达95%（最佳距离30-40厘米），Android设备实时渲染稳定；用户满意度4.7/5，显示AR能提升学习参与度和理解深度。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Negligible for quantitative finance; focused on educational technology with no financial data, models, or predictive insights applicable to trading strategies.",
+      "• Implementation Risk: High for financial applications due to domain mismatch—AR for Islamic education lacks scalability to market analysis, data processing, or risk management frameworks.",
+      "• Novelty: Low in finance context; marker-based AR is established in edtech, but paper offers no innovation in algorithms, data science, or financial modeling that could generate alpha."
+    ],
+    "verdict_cn": [
+      "• 创新点: 在金融领域无创新性；基于标记的AR在教育技术中已成熟，但未涉及量化模型、市场数据或预测算法，无法应用于交易策略。",
+      "• 实盘坑: 高风险，因领域不匹配—伊斯兰教育AR缺乏金融可扩展性，无市场分析、数据处理或风险管理框架，实盘应用不可行。",
+      "• 复现难度: 低，技术栈（Unity、Vuforia、Blender）标准且文档齐全，但复现对金融研究无价值，仅适用于教育项目开发。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2512.17884v1",
+    "title": "Regularized Random Fourier Features and Finite Element Reconstruction for Operator Learning in Sobolev Space",
+    "pdf_url": "https://arxiv.org/pdf/2512.17884v1",
+    "published": "2025-12-19",
+    "crawled_at": "2025-12-22 20:03:04",
+    "ai_score": 7.8,
+    "translated_title": "Sobolev空间中算子学习的正则化随机傅里叶特征与有限元重构方法",
+    "summary_en": [
+      "• Model Architecture: Combines regularized random Fourier features (RRFF) with finite element reconstruction (RRFF-FEM), using multivariate Student's t distributions for feature sampling and frequency-weighted Tikhonov regularization to suppress high-frequency noise.",
+      "• Data used: Noisy training data from benchmark PDE problems including advection, Burgers', Darcy flow, Helmholtz, Navier-Stokes, and structural mechanics.",
+      "• Performance metrics: Achieves improved robustness to noise, reduced training time compared to unregularized random feature models, and competitive accuracy relative to kernel and neural operator methods.",
+      "• Theoretical guarantees: Provides high-probability bounds on extreme singular values of random feature matrix, with well-conditioned system when number of features scales as m log m (m = training samples)."
+    ],
+    "summary_cn": [
+      "• 核心模型: 正则化随机傅里叶特征(RRFF)与有限元重构(RRFF-FEM)结合，采用多元t分布采样特征，通过频率加权Tikhonov正则化抑制高频噪声。",
+      "• 数据来源: 基于偏微分方程基准问题的噪声训练数据，包括对流、Burgers、达西流、Helmholtz、Navier-Stokes和结构力学问题。",
+      "• 主要结论: 方法对噪声具有鲁棒性，相比未正则化随机特征模型训练时间减少，同时保持与核方法和神经算子相当的精度。",
+      "• 理论支撑: 建立了随机特征矩阵极端奇异值的高概率界，证明当特征数按m log m缩放时系统条件良好。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - method's noise robustness and computational efficiency could be valuable for financial PDE applications (e.g., option pricing, interest rate models) where data is noisy and real-time processing needed.",
+      "• Implementation Risk: High - requires careful tuning of regularization parameters and feature distributions; multivariate t-distribution sampling adds complexity; finite element reconstruction may be computationally intensive for high-dimensional problems.",
+      "• Novelty: Significant - combines random Fourier features with Student's t distributions and frequency-weighted regularization specifically for operator learning, with theoretical conditioning guarantees not commonly found in financial ML papers.",
+      "• Practical Limitations: Method validation limited to academic PDE benchmarks; financial market data characteristics (non-stationarity, regime changes) may challenge theoretical assumptions."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著 - 将随机傅里叶特征与t分布采样、频率加权正则化结合专门用于算子学习，提供理论条件保证，在金融ML文献中不常见。",
+      "• 实盘坑: 高 - 需要精细调节正则化参数和特征分布；多元t分布采样增加复杂性；有限元重构在高维问题中计算量大；市场数据的非平稳性和制度转换可能挑战理论假设。",
+      "• 复现难度: 中等偏高 - 需要实现随机特征采样、正则化优化和有限元重构；基准PDE问题相对标准，但扩展到金融应用需要领域专业知识。",
+      "• 应用前景: 中等 - 噪声鲁棒性和计算效率对金融PDE问题(如期权定价、利率模型)有价值，但需验证实际市场数据效果。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2512.17878v1",
+    "title": "Weighted Stochastic Differential Equation to Implement Wasserstein-Fisher-Rao Gradient Flow",
+    "pdf_url": "https://arxiv.org/pdf/2512.17878v1",
+    "published": "2025-12-19",
+    "crawled_at": "2025-12-22 20:03:24",
+    "ai_score": 7.5,
+    "translated_title": "加权随机微分方程实现Wasserstein-Fisher-Rao梯度流",
+    "summary_en": [
+      "• Model Architecture: Introduces weighted stochastic differential equations (WSDEs) with explicit correction terms to implement Wasserstein-Fisher-Rao (WFR) gradient flows, leveraging Feynman-Kac representation for mass reweighting mechanisms.",
+      "• Data used: Theoretical framework focused on probability distributions and sampling dynamics; no specific empirical datasets mentioned, but applicable to multimodal/non-log-concave target distributions common in generative modeling.",
+      "• Performance metrics: Provides rigorous theoretical investigation of WFR-based sampling dynamics, aiming to improve exploration in nonconvex landscapes compared to classical diffusion models with exponential convergence guarantees for strongly log-concave targets."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出加权随机微分方程（WSDEs），通过显式校正项实现Wasserstein-Fisher-Rao（WFR）梯度流，利用Feynman-Kac表示进行质量重加权机制。",
+      "• 数据来源: 理论框架专注于概率分布和采样动态；未提及具体实证数据集，但适用于生成建模中常见的多模态/非对数凹目标分布。",
+      "• 主要结论: 对基于WFR的采样动态进行了严谨的理论研究，旨在改善非凸景观中的探索能力，相较于经典扩散模型在强对数凹目标下的指数收敛保证。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; WFR-based sampling could enhance exploration in complex financial distributions (e.g., multimodal returns), potentially improving generative models for option pricing or risk scenarios, but lacks empirical validation.",
+      "• Implementation Risk: High; theoretical nature with no algorithmic details or code, requiring expertise in stochastic calculus and information geometry; practical integration into trading systems uncertain.",
+      "• Novelty: High; novel integration of WFR geometries with WSDEs for sampling, addressing limitations of classical diffusion models in non-log-concave settings, though preliminary and foundational."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；将WFR几何与WSDEs新颖结合用于采样，解决经典扩散模型在非对数凹设置中的局限性，尽管是初步和基础性的。",
+      "• 实盘坑: 高；理论性质强，缺乏算法细节或代码，需要随机微积分和信息几何的专业知识；实际集成到交易系统中的不确定性大。",
+      "• 复现难度: 高；需要高级数学背景和计算资源来复现WSDEs和WFR动态，无现成实现或基准测试。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2512.17877v1",
+    "title": "Learning vertical coordinates via automatic differentiation of a dynamical core",
+    "pdf_url": "https://arxiv.org/pdf/2512.17877v1",
+    "published": "2025-12-19",
+    "crawled_at": "2025-12-22 20:03:42",
+    "ai_score": 8.2,
+    "translated_title": "通过动力核心自动微分学习垂直坐标",
+    "summary_en": [
+      "• Model Architecture: End-to-end differentiable numerical solver for 2D non-hydrostatic Euler equations on Arakawa C-grid with NEUVE terrain-following coordinates using integral transformed neural network that guarantees monotonicity",
+      "• Data used: Several standard atmospheric test cases (benchmarks) with steep topography to evaluate coordinate performance",
+      "• Performance metrics: Learned coordinates reduce mean squared error by factor of 1.4-2 in non-linear statistical benchmarks and eliminate spurious vertical velocity striations over steep topography"
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于Arakawa C网格的二维非静力欧拉方程端到端可微分数值求解器，采用积分变换神经网络保证单调性的NEUVE地形跟随坐标",
+      "• 数据来源: 多个标准大气测试案例（基准测试），包含陡峭地形以评估坐标性能",
+      "• 主要结论: 学习坐标在非线性统计基准中将均方误差降低1.4-2倍，消除陡峭地形上的虚假垂直速度条纹"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for improving numerical weather prediction accuracy and reducing computational artifacts in atmospheric models, could translate to better climate risk modeling",
+      "• Implementation Risk: Moderate-high - requires differentiable dynamical core implementation and neural network integration into legacy atmospheric codes",
+      "• Novelty: Significant - first framework to learn vertical coordinates via automatic differentiation, eliminating heuristic parameter tuning and finite-difference truncation errors"
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次通过自动微分学习垂直坐标的框架，消除启发式参数调整和有限差分截断误差，实现物理与数值优化的网格结构",
+      "• 实盘坑: 需要将可微分动力核心和神经网络集成到传统大气代码中，计算成本较高，实时应用存在延迟",
+      "• 复现难度: 中等偏高 - 需要专业的大气数值模拟知识和自动微分框架（如JAX/PyTorch）实现，但论文提供了明确的方法论"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "Journal of Advances in Modeling Earth Systems (JAMES) or Journal of Computational Physics",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2512.17875v1",
+    "title": "Visually Prompted Benchmarks Are Surprisingly Fragile",
+    "pdf_url": "https://arxiv.org/pdf/2512.17875v1",
+    "published": "2025-12-19",
+    "crawled_at": "2025-12-22 20:04:09",
+    "ai_score": 7.5,
+    "translated_title": "视觉提示基准测试出人意料地脆弱",
+    "summary_en": [
+      "• Model Architecture: Evaluated nine open- and closed-source Vision-Language Models (VLMs) including InternVL3-8B and Gemini 2.5 Pro, focusing on their visual perception capabilities through visual prompting techniques.",
+      "• Data used: Analyzed two visually prompted tasks with existing benchmarks, later curated into VPBench—a new benchmark with 16 visual marker variants to test robustness against visual details like marker color, size, and JPEG compression levels.",
+      "• Performance metrics: Measured model performance and leaderboard rankings, showing significant sensitivity to visual marker design (e.g., color changes from red to blue) and dataset size, with effects large enough to alter rankings between models.",
+      "• Key finding: Low-level inference choices, such as JPEG compression in API calls, have substantial impacts on visually prompted benchmarks compared to conventional semantic evaluations, highlighting fragility in current evaluation methods."
+    ],
+    "summary_cn": [
+      "• 核心模型: 评估了九个开源和闭源的视觉语言模型（VLMs），包括InternVL3-8B和Gemini 2.5 Pro，重点通过视觉提示技术测试其视觉感知能力。",
+      "• 数据来源: 基于两个视觉提示任务分析现有基准测试，并整理成VPBench——一个包含16种视觉标记变体的新基准，用于测试对视觉细节（如标记颜色、大小和JPEG压缩级别）的鲁棒性。",
+      "• 主要结论: 模型性能和排行榜排名对视觉标记设计（如颜色从红变蓝）和数据集大小高度敏感，影响足以改变模型间排名；低级推理选择（如API调用中的JPEG压缩）在视觉提示基准中影响显著，突显当前评估方法的脆弱性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate—identifies fragility in VLM evaluations that could be exploited for model selection or benchmarking arbitrage, but limited direct financial applications; potential in refining AI-driven visual analysis tools for market data.",
+      "• Implementation Risk: High—benchmark instability due to visual details and low-level choices poses risks for deploying VLMs in real-world scenarios; requires careful calibration to avoid performance degradation in production environments.",
+      "• Novelty: High—novel insight into the sensitivity of visually prompted benchmarks, with practical demonstrations (e.g., marker changes altering rankings) and creation of VPBench to mitigate issues; contributes to more robust VLM evaluation methodologies.",
+      "• Additional consideration: Scalability concerns—VPBench's 16 variants may increase testing complexity, but tools provided could aid in standardizing evaluations across the industry."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高——揭示了视觉提示基准的敏感性，通过实际演示（如标记变化改变排名）和新基准VPBench的创建来缓解问题，为更鲁棒的VLM评估方法做出贡献。",
+      "• 实盘坑: 高——视觉细节和低级选择导致的基准不稳定性，在现实场景中部署VLMs存在风险；需要精细校准以避免生产环境中的性能下降。",
+      "• 复现难度: 中等——方法基于现有模型和数据集，但涉及多变量测试（如16种标记变体）和低级推理调整，可能增加复现复杂性；开源工具（VPBench）有助于降低难度。",
+      "• 额外点评: 行业影响——该研究可能推动VLM评估标准化，但对冲基金需谨慎评估其直接交易应用，更适合作为技术风险管理的参考。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2512.17820v1",
+    "title": "Exploiting ID-Text Complementarity via Ensembling for Sequential Recommendation",
+    "pdf_url": "https://arxiv.org/pdf/2512.17820v1",
+    "published": "2025-12-19",
+    "crawled_at": "2025-12-22 20:04:28",
+    "ai_score": 7.5,
+    "translated_title": "通过集成学习利用ID与文本特征的互补性进行序列推荐",
+    "summary_en": [
+      "• Model Architecture: Proposes a simple ensembling strategy that independently trains ID-based and text-based sequential recommendation models, then combines their predictions to preserve complementarity without complex fusion architectures.",
+      "• Data used: Likely employs standard sequential recommendation datasets (e.g., Amazon, MovieLens) with item IDs and textual descriptions, though specific datasets are not detailed in the abstract.",
+      "• Performance metrics: Outperforms competitive sequential recommendation baselines, demonstrating that the ensemble method achieves state-of-the-art performance by effectively leveraging both ID and text features."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出一种简单的集成策略，独立训练基于ID和基于文本的序列推荐模型，然后结合它们的预测，以保留互补性而无需复杂的融合架构。",
+      "• 数据来源: 可能使用标准序列推荐数据集（如Amazon、MovieLens），包含项目ID和文本描述，但摘要中未详细说明具体数据集。",
+      "• 主要结论: 集成方法通过有效利用ID和文本特征，超越了竞争性基线，表明两者对于实现最先进的序列推荐性能都是必要的，但复杂融合架构并非必需。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the method could enhance recommendation accuracy in financial contexts like personalized trading or portfolio suggestions by leveraging complementary signals from structured IDs and unstructured text.",
+      "• Implementation Risk: Low to moderate; the simplicity of ensembling reduces technical risk, but reliance on high-quality text data and model training stability could pose challenges in noisy real-world environments.",
+      "• Novelty: Limited; the idea of ensembling is well-established, but the focus on ID-text complementarity in sequential recommendation provides a fresh perspective, though it lacks groundbreaking architectural innovations."
+    ],
+    "verdict_cn": [
+      "• 创新点: 有限；集成学习是成熟技术，但专注于序列推荐中ID与文本特征的互补性提供了新视角，不过缺乏突破性的架构创新。",
+      "• 实盘坑: 低到中等；集成策略简单降低了技术风险，但对高质量文本数据和模型训练稳定性的依赖可能在嘈杂的实际环境中带来挑战。",
+      "• 复现难度: 低；方法基于标准序列推荐模型和简单集成，易于复现，但需要获取和处理多模态数据可能增加复杂性。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2512.17800v1",
+    "title": "Domain-Aware Quantum Circuit for QML",
+    "pdf_url": "https://arxiv.org/pdf/2512.17800v1",
+    "published": "2025-12-19",
+    "crawled_at": "2025-12-22 20:04:50",
+    "ai_score": 8.2,
+    "translated_title": "面向量子机器学习的领域感知量子电路",
+    "summary_en": [
+      "• Model Architecture: Domain-Aware Quantum Circuit (DAQC) uses non-overlapping DCT-style zigzag windows for locality-preserving encoding and entanglement, with interleaved encode-entangle-train cycles that align to device connectivity to expand receptive field without deep global mixing.",
+      "• Data used: Evaluated on MNIST, FashionMNIST, and PneumoniaMNIST datasets for image classification tasks.",
+      "• Performance metrics: Achieves performance competitive with classical baselines (ResNet-18/50, DenseNet-121, EfficientNet-B0) and substantially outperforms Quantum Circuit Search (QCS) baselines on real quantum hardware, claimed as best reported performance for QML-based image classification."
+    ],
+    "summary_cn": [
+      "• 核心模型: 领域感知量子电路（DAQC）采用非重叠DCT风格之字形窗口进行局部保持编码和纠缠，通过交错编码-纠缠-训练循环，对齐设备连接性以扩展感受野，避免深度全局混合。",
+      "• 数据来源: 在MNIST、FashionMNIST和PneumoniaMNIST数据集上进行图像分类任务评估。",
+      "• 主要结论: 在真实量子硬件上，性能与经典基线（如ResNet-18/50、DenseNet-121、EfficientNet-B0）竞争，并显著优于量子电路搜索（QCS）基线，据称是目前QML图像分类任务的最佳报告性能。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for niche quantum advantage in image processing on NISQ devices, leveraging domain priors to mitigate barren plateaus and hardware noise, but limited to specific datasets and small-scale tasks.",
+      "• Implementation Risk: Moderate to high risk due to reliance on quantum hardware availability, noise sensitivity, and scalability issues beyond toy datasets; classical baselines remain more practical for real-world applications.",
+      "• Novelty: Novel approach integrating image priors (DCT-style windows) into quantum circuit design, focusing on locality-preserving operations to reduce two-qubit operations and improve trainability, though incremental over existing quantum encoding methods."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将图像先验（DCT风格窗口）融入量子电路设计，通过局部保持操作减少双量子比特操作并提高可训练性，但相对于现有量子编码方法创新有限。",
+      "• 实盘坑: 依赖量子硬件可用性，噪声敏感性强，且仅在小规模数据集上验证，扩展到实际应用场景存在可扩展性问题；经典基线在现实应用中仍更实用。",
+      "• 复现难度: 中等至高难度，需要量子硬件访问和专业知识来复现DAQC设计，代码和预训练模型已开源，但硬件限制可能阻碍广泛复现。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
     "id": "2512.16917v1",
     "title": "Generative Adversarial Reasoner: Enhancing LLM Reasoning with Adversarial Reinforcement Learning",
     "pdf_url": "https://arxiv.org/pdf/2512.16917v1",
