@@ -1,5 +1,345 @@
 [
   {
+    "id": "2512.19687v1",
+    "title": "Pushing the Frontier of Audiovisual Perception with Large-Scale Multimodal Correspondence Learning",
+    "pdf_url": "https://arxiv.org/pdf/2512.19687v1",
+    "published": "2025-12-22",
+    "crawled_at": "2025-12-23 20:01:18",
+    "ai_score": 8.2,
+    "translated_title": "通过大规模多模态对应学习推动视听感知前沿",
+    "summary_en": [
+      "• Model Architecture: Introduces PE-AV, a family of encoders for audio and video understanding based on scaled contrastive learning, with unified cross-modal embeddings supporting audio-video, audio-text, and video-text modalities.",
+      "• Data used: Built a strong audiovisual data engine synthesizing high-quality captions for O(100M) audio-video pairs, including speech, music, and general sound effects to avoid single-domain limitations.",
+      "• Performance metrics: Sets new state-of-the-art across standard audio and video benchmarks, with improved zero-shot performance through ten pairwise contrastive objectives and fine-grained alignment via PE-A-Frame for tasks like sound event detection."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出PE-AV编码器家族，基于缩放对比学习，支持音频-视频、音频-文本、视频-文本的统一跨模态嵌入。",
+      "• 数据来源: 构建视听数据引擎，为O(100M)音频-视频对合成高质量字幕，涵盖语音、音乐和通用音效，避免单领域限制。",
+      "• 主要结论: 在标准音频和视频基准测试中达到新SOTA，通过十对对比目标和PE-A-Frame微调实现细粒度对齐，提升零样本性能。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for alpha generation in audio-visual data analysis, enabling novel tasks like speech retrieval and sound event detection with cross-modal embeddings that could uncover market signals from multimedia sources.",
+      "• Implementation Risk: Moderate risk due to reliance on large-scale synthetic data (O(100M) pairs) and complex training with ten contrastive objectives, which may require significant computational resources and careful tuning for real-world deployment.",
+      "• Novelty: High novelty with unified cross-modal embeddings extending beyond prior single-domain work, and innovative use of scaled contrastive learning to strengthen alignment across diverse modalities."
+    ],
+    "verdict_cn": [
+      "• 创新点: 统一跨模态嵌入支持多任务处理，避免单领域限制，通过缩放对比学习提升对齐效果，具有显著技术突破。",
+      "• 实盘坑: 依赖大规模合成数据，训练复杂度高（十对对比目标），计算资源需求大，可能影响实盘部署效率和稳定性。",
+      "• 复现难度: 中等偏高，需重建O(100M)数据引擎和复杂训练流程，对硬件和算法调优要求严格，可能难以完全复现SOTA结果。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2512.19673v1",
+    "title": "Bottom-up Policy Optimization: Your Language Model Policy Secretly Contains Internal Policies",
+    "pdf_url": "https://arxiv.org/pdf/2512.19673v1",
+    "published": "2025-12-22",
+    "crawled_at": "2025-12-23 20:01:39",
+    "ai_score": 8.2,
+    "translated_title": "自底向上策略优化：你的语言模型策略中隐藏着内部策略",
+    "summary_en": [
+      "• Model Architecture: Decomposes Transformer-based LLM policies into Internal Layer Policies (per-layer contributions) and Internal Modular Policies (self-attention and FFN components) by analyzing residual streams and unembedding matrix equivalence.",
+      "• Data used: Evaluated on complex reasoning benchmarks (unspecified datasets), comparing LLama and Qwen-series models (e.g., Qwen3) to analyze entropy patterns and reasoning structures.",
+      "• Performance metrics: BuPO method demonstrates superior performance on reasoning benchmarks by optimizing internal layer policies early in training, reconstructing foundational reasoning capabilities with improved convergence patterns."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于Transformer的大语言模型，通过残差流分解和嵌入矩阵等价性，将策略分解为内部层策略（各层贡献）和内部模块策略（自注意力和前馈网络组件）。",
+      "• 数据来源: 使用复杂推理基准测试（未指定具体数据集），对比LLama和Qwen系列模型（如Qwen3）分析熵模式和推理结构。",
+      "• 主要结论: 早期层保持高熵以探索，顶层收敛至近零熵以精炼；BuPO方法通过早期优化内部层策略，在推理基准上实现卓越性能，重建基础推理能力。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for NLP/LLM-based strategies; reveals layer-specific policy dynamics enabling targeted optimization, potentially improving reasoning accuracy and efficiency in financial text analysis or sentiment modeling.",
+      "• Implementation Risk: Moderate; requires deep model introspection and custom RL training, which may be computationally intensive and sensitive to hyperparameters, limiting scalability to production systems.",
+      "• Novelty: Significant; introduces BuPO paradigm for internal policy optimization, challenging traditional unified policy views and offering insights into progressive reasoning structures akin to human cognition."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出BuPO范式，首次将LLM策略分解为内部组件进行优化，揭示层间熵变化模式，挑战传统统一策略假设，具有认知科学启发性。",
+      "• 实盘坑: 实现需深度模型内省和定制强化学习，计算成本高，超参数敏感，可能难以直接集成到现有交易系统中，存在过拟合风险。",
+      "• 复现难度: 中等偏高；依赖开源代码和特定模型系列（如Qwen），需复杂基准测试和训练基础设施，但代码可用性（GitHub）降低部分门槛。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2512.19649v1",
+    "title": "Deep Legendre Transform",
+    "pdf_url": "https://arxiv.org/pdf/2512.19649v1",
+    "published": "2025-12-22",
+    "crawled_at": "2025-12-23 20:01:57",
+    "ai_score": 7.8,
+    "translated_title": "深度勒让德变换",
+    "summary_en": [
+      "• Model Architecture: Uses implicit Fenchel formulation with gradient-based optimization framework for convex conjugation, incorporating symbolic regression via Kolmogorov-Arnold networks for exact solutions in specific cases.",
+      "• Data used: Numerical experiments on high-dimensional convex functions (exact functions not specified in abstract), likely synthetic test functions from convex analysis literature.",
+      "• Performance metrics: Demonstrates accurate results across high-dimensional examples with a posteriori error estimates; outperforms traditional methods in scalability and recent neural approaches in computational efficiency."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于隐式Fenchel公式的梯度优化框架，用于凸共轭计算，结合Kolmogorov-Arnold网络进行符号回归以获取精确解。",
+      "• 数据来源: 高维凸函数的数值实验（摘要未指定具体函数），可能采用凸分析文献中的合成测试函数。",
+      "• 主要结论: 在多个高维示例中实现准确结果，提供后验误差估计；相比传统方法具有更好的可扩展性，比近期神经网络方法计算更高效。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - could enhance optimization-based trading strategies or risk modeling where convex conjugates are used, but direct financial applications are not demonstrated.",
+      "• Implementation Risk: High - requires expertise in convex analysis and deep learning; numerical stability in high-dimensional finance data untested.",
+      "• Novelty: Significant - novel integration of implicit Fenchel formulation with gradient methods for convex conjugation, addressing scalability issues in high dimensions."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著 - 将隐式Fenchel公式与梯度方法结合用于凸共轭计算，解决高维可扩展性问题，引入符号回归提升精确性。",
+      "• 实盘坑: 高 - 需凸分析和深度学习专业知识；高维金融数据的数值稳定性未经验证；计算复杂度可能影响实时交易。",
+      "• 复现难度: 中高 - 需要实现复杂的优化框架和符号回归组件，但对开源代码或详细方法论的依赖程度未知。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2512.19643v1",
+    "title": "The Best of Both Worlds: Hybridizing Neural Operators and Solvers for Stable Long-Horizon Inference",
+    "pdf_url": "https://arxiv.org/pdf/2512.19643v1",
+    "published": "2025-12-22",
+    "crawled_at": "2025-12-23 20:02:19",
+    "ai_score": 8.5,
+    "translated_title": "两全其美：融合神经算子与求解器实现稳定长时域推理",
+    "summary_en": [
+      "• Model Architecture: ANCHOR (Adaptive Numerical Correction for High-fidelity Operator Rollouts) hybrid framework combining pretrained neural operators with classical numerical solvers, using physics-informed residual-based error estimator with exponential moving average (EMA) monitoring",
+      "• Data used: Evaluated on four canonical PDEs: 1D and 2D Burgers' equations, 2D Allen-Cahn equation, and 3D heat conduction equation; training data not specified but presumably synthetic/benchmark datasets",
+      "• Performance metrics: Demonstrated reliable bounding of long-horizon error growth, stabilization of extrapolative rollouts, improved robustness over standalone neural operators, and substantial efficiency gains over high-fidelity numerical solvers; EMA-based estimator showed strong correlation with true relative L2 error"
+    ],
+    "summary_cn": [
+      "• 核心模型: ANCHOR混合框架，将预训练神经算子与经典数值求解器结合，采用基于物理的残差误差估计器，通过指数移动平均(EMA)监控误差累积",
+      "• 数据来源: 在四个经典PDE上进行评估：1D和2D Burgers方程、2D Allen-Cahn方程、3D热传导方程；训练数据未明确说明，推测为合成/基准数据集",
+      "• 主要结论: 可靠地限制了长时域误差增长，稳定了外推滚动预测，相比独立神经算子显著提升鲁棒性，同时比高保真数值求解器效率大幅提高；EMA估计器与真实相对L2误差强相关"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for quantitative finance applications involving PDE-based pricing models (options, derivatives), risk simulations, or any time-series prediction where error accumulation is critical; enables stable long-horizon forecasting with controlled error bounds",
+      "• Implementation Risk: Moderate - requires integration of neural operators with traditional solvers, physics-informed error estimation adds complexity, real-time EMA monitoring may introduce computational overhead in production systems",
+      "• Novelty: Significant - introduces adaptive correction mechanism inspired by numerical analysis, data-free instance-aware error control during inference, addresses critical compounding error problem in autoregressive neural operators"
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著 - 引入受数值分析启发的自适应校正机制，推理过程中实现无需数据的实例感知误差控制，解决了自回归神经算子中关键的误差累积问题",
+      "• 实盘坑: 中等 - 需要将神经算子与传统求解器集成，基于物理的误差估计增加复杂性，实时EMA监控可能在生产系统中引入计算开销",
+      "• 复现难度: 中等偏高 - 需要神经算子预训练、数值求解器集成、EMA监控系统实现；四个PDE基准测试提供了明确验证路径但需要相应数值模拟基础设施"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2512.19621v1",
+    "title": "Counterexamples for FX Options Interpolations -- Part I",
+    "pdf_url": "https://arxiv.org/pdf/2512.19621v1",
+    "published": "2025-12-22",
+    "crawled_at": "2025-12-23 20:02:36",
+    "ai_score": 7.5,
+    "translated_title": "外汇期权插值反例研究——第一部分",
+    "summary_en": [
+      "• Model Architecture: The paper critiques popular interpolation methods used in FX options pricing, focusing on their breakdown in specific scenarios rather than proposing a new model.",
+      "• Data used: The study employs theoretical counterexamples and simulated scenarios to demonstrate where interpolation methods fail, without specifying real market data.",
+      "• Performance metrics: The paper evaluates interpolation methods based on their robustness and accuracy in extreme or non-standard market conditions, highlighting potential pricing errors."
+    ],
+    "summary_cn": [
+      "• 核心模型: 本文批判性地分析外汇期权定价中常用的插值方法，而非提出新模型，重点揭示其在特定场景下的失效问题。",
+      "• 数据来源: 研究基于理论反例和模拟场景，展示插值方法在极端或非标准市场条件下的失败案例，未使用实际市场数据。",
+      "• 主要结论: 指出流行插值方法在风险管理中可能引入显著定价误差，特别是在处理奇异衍生品或局部波动率模型时。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low to moderate; the paper identifies pitfalls in existing methods but does not provide a superior alternative, limiting direct alpha generation.",
+      "• Implementation Risk: High; the counterexamples highlight critical failures that could lead to mispricing and increased risk in FX options portfolios.",
+      "• Novelty: Moderate; while the focus on interpolation breakdowns is specific, the concept of testing interpolation robustness is not entirely new in quantitative finance."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；集中于外汇期权插值方法的系统性反例分析，但未突破现有风险管理框架。",
+      "• 实盘坑: 高；揭示的插值失效可能导致定价偏差，在实盘中需谨慎验证插值方法的边界条件。",
+      "• 复现难度: 低；基于理论反例，易于复现和测试，适合作为风险管理的参考案例。"
+    ],
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2512.19611v1",
+    "title": "Heston vol-of-vol and the VVIX",
+    "pdf_url": "https://arxiv.org/pdf/2512.19611v1",
+    "published": "2025-12-22",
+    "crawled_at": "2025-12-23 20:02:55",
+    "ai_score": 7.2,
+    "translated_title": "Heston波动率模型的波动率参数与VVIX指数关系研究",
+    "summary_en": [
+      "• Model Architecture: Analyzes the Heston stochastic volatility model with focus on the vol-of-vol parameter, presenting four estimation methods: two based on variance transition density, one analytical approximation, and one PDE-based approach using SPX500 data.",
+      "• Data used: Utilizes SPX500 (S&P 500) underlying data for PDE-based VVIX estimation, with implied volatility data for calibration purposes.",
+      "• Performance metrics: Evaluates calibration stability improvement through VVIX estimation methods, though specific quantitative metrics are not detailed in the abstract."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于Heston随机波动率模型，重点研究波动率参数（vol-of-vol）与VVIX（波动率波动率指数）的关系，提出四种VVIX估计方法。",
+      "• 数据来源: 使用SPX500（标普500）基础数据用于PDE方法估计VVIX，并依赖隐含波动率数据进行模型校准。",
+      "• 主要结论: 通过VVIX估计方法可提升Heston模型的校准稳定性，但具体量化改进程度未在摘要中明确说明。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - VVIX-based calibration could improve exotic option pricing accuracy, potentially generating alpha through better volatility surface fitting.",
+      "• Implementation Risk: High - Heston model calibration is notoriously unstable; real-time implementation requires robust numerical methods and market data quality control.",
+      "• Novelty: Limited - The paper applies existing VVIX concepts to Heston calibration rather than introducing fundamentally new models or methodologies."
+    ],
+    "verdict_cn": [
+      "• 创新点: 有限 - 将VVIX概念应用于Heston模型校准，属于现有方法的组合应用而非理论突破。",
+      "• 实盘坑: 高 - Heston模型校准本身不稳定，实盘需处理数值收敛问题、市场数据噪声及计算延迟。",
+      "• 复现难度: 中等 - 四种方法中PDE方法计算复杂，但基于过渡密度的方法相对标准，整体复现需较强数值计算能力。"
+    ],
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2512.19605v1",
+    "title": "KerJEPA: Kernel Discrepancies for Euclidean Self-Supervised Learning",
+    "pdf_url": "https://arxiv.org/pdf/2512.19605v1",
+    "published": "2025-12-22",
+    "crawled_at": "2025-12-23 20:03:17",
+    "ai_score": 7.5,
+    "translated_title": "KerJEPA：用于欧几里得自监督学习的核差异方法",
+    "summary_en": [
+      "• Model Architecture: Introduces KerJEPA, a family of self-supervised learning algorithms with kernel-based regularizers, expanding on Joint-Embedding Predictive Architectures (JEPAs) by incorporating flexible kernel choices and priors.",
+      "• Data used: Not explicitly specified in the abstract; typical for self-supervised learning papers, likely uses standard image or text datasets (e.g., ImageNet, CIFAR) for validation, but details are omitted.",
+      "• Performance metrics: Claims improved training stability and design flexibility; references provable gains in downstream generalization from regularizing Euclidean representations toward isotropic Gaussian priors, but no specific numerical results provided."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出KerJEPA，一种基于核正则化的自监督学习算法家族，扩展了联合嵌入预测架构（JEPA），通过引入灵活的核函数和先验分布来增强模型表达能力。",
+      "• 数据来源: 摘要中未明确说明；推测使用标准图像或文本数据集（如ImageNet、CIFAR）进行验证，但缺乏具体数据细节。",
+      "• 主要结论: 通过计算切片最大均值差异（MMD）的高维极限闭式解，开发出具有改进训练稳定性和设计灵活性的替代KerJEPA变体，理论上有助于下游任务泛化。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; kernel-based regularizers could enhance representation learning in financial time series or alternative data, potentially improving feature extraction for alpha signals, but direct applications are untested.",
+      "• Implementation Risk: High; relies on theoretical advancements in self-supervised learning, with no empirical validation in the abstract; practical deployment in noisy, non-stationary market data poses significant challenges.",
+      "• Novelty: High; introduces a novel family of algorithms (KerJEPAs) by generalizing kernel choices and priors beyond existing methods like LeJEPA, offering a fresh approach to regularization in Euclidean spaces."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；通过扩展核函数和先验分布类别，提出KerJEPA新算法家族，在自监督学习的正则化方法上具有理论创新，可能推动表示学习领域发展。",
+      "• 实盘坑: 高；摘要缺乏实证结果，实际应用于金融市场数据时，面临数据非平稳性、噪声干扰等挑战，稳定性未经市场验证，风险较大。",
+      "• 复现难度: 中；基于公开的学术框架（如PyTorch/TensorFlow）可能较易复现，但需要高维极限计算和核函数调优，对工程实现有一定技术要求。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2512.19576v1",
+    "title": "LeLaR: The First In-Orbit Demonstration of an AI-Based Satellite Attitude Controller",
+    "pdf_url": "https://arxiv.org/pdf/2512.19576v1",
+    "published": "2025-12-22",
+    "crawled_at": "2025-12-23 20:03:33",
+    "ai_score": 8.2,
+    "translated_title": "LeLaR：首次在轨演示基于AI的卫星姿态控制器",
+    "summary_en": [
+      "• Model Architecture: Deep Reinforcement Learning (DRL) agent trained entirely in simulation for adaptive attitude control, deployed on InnoCube 3U nanosatellite.",
+      "• Data used: Training data generated from simulation environment; real-world data from in-orbit maneuvers on the satellite for validation and comparison.",
+      "• Performance metrics: Steady-state metrics confirm robust performance during repeated in-orbit maneuvers; comparison with classical PD controller shows AI-based controller's effectiveness."
+    ],
+    "summary_cn": [
+      "• 核心模型: 完全在模拟环境中训练的深度强化学习（DRL）智能体，用于自适应姿态控制，部署于InnoCube 3U纳米卫星。",
+      "• 数据来源: 训练数据来自模拟环境生成；验证和比较数据来自卫星在轨机动的真实世界数据。",
+      "• 主要结论: 稳态指标证实了在重复在轨机动中的鲁棒性能；与经典PD控制器的比较显示了基于AI的控制器的有效性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for adaptive control in dynamic environments like satellite operations, reducing design time and improving robustness against uncertainties.",
+      "• Implementation Risk: Significant risk due to Sim2Real gap; discrepancies between simulation and real satellite behavior must be carefully managed for reliable deployment.",
+      "• Novelty: First successful in-orbit demonstration of an AI-based attitude controller, pioneering the application of DRL in real-world satellite control systems."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次成功在轨演示基于AI的姿态控制器，开创了DRL在真实卫星控制系统中的应用先河。",
+      "• 实盘坑: Sim2Real差距带来显著风险；模拟与真实卫星行为之间的差异需仔细管理以确保可靠部署。",
+      "• 复现难度: 高难度，需要专业卫星硬件、模拟环境和DRL训练基础设施，对资源和专业知识要求苛刻。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2512.19554v1",
+    "title": "CARE What Fails: Contrastive Anchored-REflection for Verifiable Multimodal",
+    "pdf_url": "https://arxiv.org/pdf/2512.19554v1",
+    "published": "2025-12-22",
+    "crawled_at": "2025-12-23 20:03:56",
+    "ai_score": 7.8,
+    "translated_title": "CARE 关注失败：用于可验证多模态推理的对比锚定反思",
+    "summary_en": [
+      "• Model Architecture: CARE (Contrastive Anchored REflection) is a failure-centric post-training framework combining anchored-contrastive objective with Reflection-Guided Resampling (RGR) for multimodal reasoning.",
+      "• Data used: Evaluated on six verifiable visual-reasoning benchmarks including MathVista and MMMU-Pro, using Qwen2.5-VL-7B and Qwen3-VL-8B models.",
+      "• Performance metrics: Achieves 4.6-point macro-averaged accuracy improvement over GRPO on Qwen2.5-VL-7B, reaching competitive or state-of-the-art results on MathVista and MMMU-Pro with Qwen3-VL-8B."
+    ],
+    "summary_cn": [
+      "• 核心模型: CARE（对比锚定反思）是一个以失败为中心的后训练框架，结合锚定对比目标和反思引导重采样（RGR），用于多模态推理。",
+      "• 数据来源: 在六个可验证视觉推理基准（包括MathVista和MMMU-Pro）上评估，使用Qwen2.5-VL-7B和Qwen3-VL-8B模型。",
+      "• 主要结论: 在Qwen2.5-VL-7B上比GRPO提升4.6个百分点的宏观平均准确率，在Qwen3-VL-8B上于MathVista和MMMU-Pro达到竞争性或最先进水平。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; failure-centric learning could improve model robustness in noisy financial data (e.g., news sentiment analysis), but direct trading applications are unclear.",
+      "• Implementation Risk: High; anchored-contrastive objective and RGR require precise tuning and may not scale well to real-time systems, with potential overfitting to specific benchmarks.",
+      "• Novelty: High; innovative focus on leveraging failures via contrastive subgroups and one-shot self-repair, addressing gradient stalling in RLVR, though builds on existing contrastive learning concepts."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；通过对比子组和一次性自我修复，创新性地利用失败数据，解决RLVR中的梯度停滞问题，但基于现有对比学习概念。",
+      "• 实盘坑: 高；锚定对比目标和RGR需要精细调参，可能难以扩展到实时系统，存在对特定基准过拟合的风险。",
+      "• 复现难度: 中等；依赖Qwen模型和特定基准，但框架描述清晰，复现需处理多模态数据和验证器集成。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2512.19550v1",
+    "title": "DFORD: Directional Feedback based Online Ordinal Regression Learning",
+    "pdf_url": "https://arxiv.org/pdf/2512.19550v1",
+    "published": "2025-12-22",
+    "crawled_at": "2025-12-23 20:04:17",
+    "ai_score": 7.2,
+    "translated_title": "DFORD：基于方向反馈的在线序数回归学习",
+    "summary_en": [
+      "• Model Architecture: Introduces an online algorithm for ordinal regression using directional feedback (left/right of actual label), with exploration-exploitation scheme and kernel-based variant for non-linear models; maintains threshold ordering via truncation trick for memory efficiency.",
+      "• Data used: Evaluated on synthetic and real-world datasets, comparing with full-information and weakly supervised ordinal regression baselines.",
+      "• Performance metrics: Achieves expected regret of O(log T); performs comparably or sometimes better than full-information counterpart in experiments."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出基于方向反馈（预测标签在真实标签左侧或右侧）的在线序数回归算法，采用探索-利用策略，并引入核方法变体处理非线性问题，通过截断技巧优化内存效率。",
+      "• 数据来源: 使用合成数据集和真实世界数据集进行测试，与全信息监督和弱监督序数回归方法对比。",
+      "• 主要结论: 算法在期望意义上保持阈值顺序，达到O(log T)的期望遗憾；在实验中表现与全信息方法相当或更优。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; directional feedback reduces labeling cost vs. full supervision, potentially useful for sequential decision-making in finance (e.g., credit scoring, sentiment tiers) where exact labels are expensive, but limited by ordinal nature.",
+      "• Implementation Risk: High; online learning with kernel methods and truncation may face scalability issues in high-frequency settings; directional feedback assumes monotonic thresholds, which might not hold in noisy markets.",
+      "• Novelty: Moderate; introduces directional feedback to ordinal regression, extending online learning to weak supervision, but builds on existing exploration-exploitation and kernel techniques; theoretical regret bound is standard for online convex optimization."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；将方向反馈引入序数回归，扩展了在线学习到弱监督场景，但基于现有探索-利用和核方法，理论遗憾界为在线凸优化常见结果。",
+      "• 实盘坑: 高；核方法与截断技巧在高频场景下可能扩展性不足；方向反馈假设阈值单调，在噪声市场中可能不成立；序数回归限制于有序类别，灵活性较低。",
+      "• 复现难度: 中等；算法描述清晰，但需处理在线学习和核实现细节；实验使用标准数据集，复现可行，但优化内存和实时性能需额外工程。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
     "id": "2512.17908v1",
     "title": "Re-Depth Anything: Test-Time Depth Refinement via Self-Supervised Re-lighting",
     "pdf_url": "https://arxiv.org/pdf/2512.17908v1",
