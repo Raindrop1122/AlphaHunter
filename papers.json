@@ -1,5 +1,355 @@
 [
   {
+    "id": "2512.23707v1",
+    "title": "Training AI Co-Scientists Using Rubric Rewards",
+    "pdf_url": "https://arxiv.org/pdf/2512.23707v1",
+    "published": "2025-12-29",
+    "crawled_at": "2025-12-30 20:01:40",
+    "ai_score": 7.8,
+    "translated_title": "使用评分标准奖励训练AI科研助手",
+    "summary_en": [
+      "• Model Architecture: Reinforcement learning with self-grading using a frozen copy of initial policy as grader, creating generator-verifier gap for improvement without human supervision.",
+      "• Data used: Scalable, diverse training corpus automatically extracted from research papers across multiple domains (machine learning, medical research, arXiv preprints), including research goals and goal-specific grading rubrics.",
+      "• Performance metrics: Human experts preferred finetuned Qwen3-30B-A3B model outputs for 70% of research goals; 84% approval rate for automatically extracted rubrics; 12-22% relative improvements with significant cross-domain generalization."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于自评分的强化学习框架，使用初始策略的冻结副本作为评分器，通过生成器-验证器差距实现无监督改进。",
+      "• 数据来源: 从多个领域（机器学习、医学研究、arXiv预印本）的研究论文中自动提取的可扩展、多样化训练语料，包括研究目标和目标特定评分标准。",
+      "• 主要结论: 微调后的Qwen3-30B-A3B模型在70%的研究目标上优于初始模型；自动提取的评分标准获得84%专家认可；实现12-22%的相对改进和显著的跨领域泛化能力。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - Automated rubric extraction enables scalable training without human supervision, potentially applicable to other structured generation tasks in finance (e.g., investment thesis generation, risk assessment frameworks).",
+      "• Implementation Risk: High - Domain-specific rubric quality varies; medical research validation shows promise but financial applications would require extensive domain adaptation and regulatory compliance considerations.",
+      "• Novelty: Significant - Self-grading RL with generator-verifier gap is innovative for research plan generation, though similar techniques exist in other NLP tasks; automatic rubric extraction from papers is novel for this application."
+    ],
+    "verdict_cn": [
+      "• 创新点: 通过自动从论文提取评分标准实现无监督训练，自评分强化学习中的生成器-验证器差距设计具有技术新颖性。",
+      "• 实盘坑: 金融领域应用需大量领域适应，评分标准质量在不同市场环境下可能不稳定，监管合规要求增加实施复杂度。",
+      "• 复现难度: 中等偏高 - 需要大规模研究论文语料和计算资源进行模型微调，但核心方法相对清晰，开源模型基础降低技术门槛。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2512.23701v1",
+    "title": "Eliciting Behaviors in Multi-Turn Conversations",
+    "pdf_url": "https://arxiv.org/pdf/2512.23701v1",
+    "published": "2025-12-29",
+    "crawled_at": "2025-12-30 20:02:03",
+    "ai_score": 7.5,
+    "translated_title": "多轮对话中的行为诱导研究",
+    "summary_en": [
+      "• Model Architecture: The paper proposes an analytical framework categorizing behavior elicitation methods into three families based on interaction with target LLMs: prior knowledge-based, offline interaction-based, and online interaction-based methods, with a generalized multi-turn formulation for online methods.",
+      "• Data used: The study evaluates methods on automatically generating multi-turn test cases across three tasks, using query budget (number of interactions) and success rate (discovery rate of behavior-eliciting inputs) as key metrics, with comparisons to static methods from existing multi-turn conversation benchmarks.",
+      "• Performance metrics: Online methods achieve average success rates of 45%, 19%, and 77% across three tasks with just a few thousand queries, significantly outperforming static methods that find few or no failure cases, highlighting efficiency in query budget versus success rate trade-offs."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出分析框架，将行为诱导方法分为三类：基于先验知识、基于离线交互和基于在线交互的方法，并针对在线方法提出广义多轮公式，统一单轮和多轮诱导。",
+      "• 数据来源: 在三个任务上评估方法，自动生成多轮测试用例，使用查询预算（交互次数）和成功率（行为诱导输入的发现率）作为关键指标，并与现有多轮对话基准的静态方法进行比较。",
+      "• 主要结论: 在线方法在仅几千次查询下，在三个任务中平均成功率分别达到45%、19%和77%，显著优于静态方法，后者发现很少甚至没有失败案例，强调动态基准的必要性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the method could enhance LLM evaluation for conversational AI systems, potentially improving robustness testing in financial chatbots or sentiment analysis tools, but direct trading alpha is limited as it focuses on model behavior rather than market prediction.",
+      "• Implementation Risk: High; online methods require significant query budgets and computational resources, posing scalability issues for real-time applications, and the success rates vary widely across tasks (19-77%), indicating task-dependent reliability.",
+      "• Novelty: High; the work introduces a novel application of behavior elicitation in multi-turn conversation evaluation, unifying single-turn and multi-turn settings, and advocates for dynamic benchmarks, advancing beyond static testing approaches in LLM research."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；将行为诱导方法应用于多轮对话评估，提出统一框架，强调动态基准，推动LLM研究从静态测试向动态交互发展，具有学术前沿性。",
+      "• 实盘坑: 高；在线方法需要大量查询和计算资源，在实时金融应用中可能面临可扩展性问题，且成功率在不同任务间波动大（19-77%），可靠性依赖任务特定性。",
+      "• 复现难度: 中等；方法基于现有LLM交互技术，但需要定制多轮测试环境和查询优化，可能涉及复杂的实验设置和资源调配，对团队技术要求较高。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2512.23694v1",
+    "title": "Bellman Calibration for V-Learning in Offline Reinforcement Learning",
+    "pdf_url": "https://arxiv.org/pdf/2512.23694v1",
+    "published": "2025-12-29",
+    "crawled_at": "2025-12-30 20:02:24",
+    "ai_score": 7.8,
+    "translated_title": "离线强化学习中V学习的贝尔曼校准",
+    "summary_en": [
+      "• Model Architecture: Introduces Iterated Bellman Calibration, a post-hoc, model-agnostic procedure for calibrating off-policy value predictions in infinite-horizon Markov decision processes, using a one-dimensional fitted value iteration scheme that adapts histogram and isotonic calibration methods.",
+      "• Data used: Designed for offline reinforcement learning settings with off-policy data, employing a doubly robust pseudo-outcome to handle counterfactual scenarios without requiring online interaction or real-time data collection.",
+      "• Performance metrics: Provides finite-sample guarantees for both calibration and prediction accuracy under weak assumptions, specifically without needing Bellman completeness or realizability, which enhances robustness in practical applications."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出迭代贝尔曼校准，一种后处理、模型无关的方法，用于在无限时域马尔可夫决策过程中校准离策略价值预测，采用一维拟合价值迭代方案，并适配直方图和等渗校准技术。",
+      "• 数据来源: 针对离线强化学习场景，使用离策略数据，通过双重稳健伪结果处理反事实情况，无需在线交互或实时数据收集。",
+      "• 主要结论: 在弱假设下（无需贝尔曼完备性或可实现性），为校准和预测提供有限样本保证，提高了实际应用中的鲁棒性和可靠性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the method could improve value estimation accuracy in offline RL for financial applications like portfolio optimization or risk assessment, but direct alpha generation is limited as it focuses on calibration rather than novel prediction models.",
+      "• Implementation Risk: Low to moderate; being model-agnostic and post-hoc reduces integration complexity, but reliance on off-policy data and doubly robust estimators may introduce biases if data quality is poor or assumptions are violated in real-world financial datasets.",
+      "• Novelty: High; the adaptation of classical calibration techniques to dynamic, counterfactual settings with finite-sample guarantees without Bellman completeness is innovative, addressing a key gap in offline RL literature and offering practical advancements."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；将经典校准技术适配到动态反事实场景，并在无需贝尔曼完备性的条件下提供有限样本保证，这在离线强化学习领域具有显著创新性，解决了关键理论缺口。",
+      "• 实盘坑: 中低风险；模型无关和后处理特性降低了集成复杂度，但依赖离策略数据和双重稳健估计器，若金融数据质量差或假设不成立，可能引入偏差，影响实际部署效果。",
+      "• 复现难度: 中等；方法相对简单，但需要处理离线数据和实现校准算法，对计算资源和数据预处理有一定要求，可能增加复现成本和时间。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2512.23675v1",
+    "title": "End-to-End Test-Time Training for Long Context",
+    "pdf_url": "https://arxiv.org/pdf/2512.23675v1",
+    "published": "2025-12-29",
+    "crawled_at": "2025-12-30 20:02:44",
+    "ai_score": 8.2,
+    "translated_title": "面向长上下文的端到端测试时训练",
+    "summary_en": [
+      "• Model Architecture: Uses a standard Transformer with sliding-window attention, combined with test-time training (TTT) via next-token prediction to compress context into model weights during inference.",
+      "• Data used: Trained 3B parameter models on 164B tokens, focusing on scaling experiments with varying context lengths up to 128K tokens.",
+      "• Performance metrics: Scales similarly to full-attention Transformers with context length, achieves constant inference latency regardless of context (2.7x faster than full attention for 128K context), and outperforms alternatives like Mamba 2 and Gated DeltaNet in scaling properties."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用标准Transformer结合滑动窗口注意力，通过测试时训练（TTT）和元学习，在推理时通过下一个词预测压缩上下文到权重中。",
+      "• 数据来源: 使用164B tokens训练3B参数模型，进行上下文长度扩展实验，最高达128K tokens。",
+      "• 主要结论: 在上下文长度扩展方面表现与全注意力Transformer相似，推理延迟恒定（128K上下文下比全注意力快2.7倍），优于Mamba 2和Gated DeltaNet等模型。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for low-latency, long-context applications in algorithmic trading where real-time data processing is critical, leveraging constant inference speed for edge in high-frequency scenarios.",
+      "• Implementation Risk: Moderate risk due to reliance on test-time training, which may introduce instability in production environments and require careful tuning of meta-learning parameters.",
+      "• Novelty: Novel formulation of long-context modeling as continual learning with end-to-end test-time training, offering a fresh approach compared to architectural modifications like sparse attention or state-space models."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将长上下文建模重新定义为持续学习问题，结合端到端测试时训练，避免了复杂的架构改动，提供了一种简洁高效的解决方案。",
+      "• 实盘坑: 测试时训练可能导致推理不稳定，元学习参数调优复杂，在实盘环境中可能引入不可预测的延迟或错误。",
+      "• 复现难度: 中等难度，需要实现滑动窗口注意力、测试时训练和元学习组件，但代码已公开，降低了技术壁垒。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2512.23671v1",
+    "title": "Calibrated Multi-Level Quantile Forecasting",
+    "pdf_url": "https://arxiv.org/pdf/2512.23671v1",
+    "published": "2025-12-29",
+    "crawled_at": "2025-12-30 20:03:06",
+    "ai_score": 8.5,
+    "translated_title": "校准多级分位数预测",
+    "summary_en": [
+      "• Model Architecture: Multi-Level Quantile Tracker (MultiQT) is a lightweight wrapper method that can be applied to any existing point or quantile forecaster to produce corrected forecasts with guaranteed calibration across multiple quantile levels simultaneously.",
+      "• Data used: The paper evaluates MultiQT on real-world epidemic and energy forecasting problems, though specific datasets are not detailed in the abstract; it likely involves time-series data with adversarial distribution shifts.",
+      "• Performance metrics: MultiQT ensures calibration (forecasts exceed target value at the specified α-fraction of time steps), maintains ordered quantiles (e.g., 0.5-level ≤ 0.6-level), and provides a no-regret guarantee with respect to quantile loss, showing significant improvement in calibration in experiments."
+    ],
+    "summary_cn": [
+      "• 核心模型: Multi-Level Quantile Tracker (MultiQT) 是一种轻量级包装方法，可应用于任何现有点或分位数预测器，生成经过校正的预测，保证在多级分位数上同时实现校准。",
+      "• 数据来源: 论文在流行病和能源预测等现实问题中评估 MultiQT，但摘要未详述具体数据集；可能涉及具有对抗性分布漂移的时间序列数据。",
+      "• 主要结论: MultiQT 显著提高了真实预测器的校准性能，确保预测有序（如 0.5 级分位数预测不超过 0.6 级），并提供关于分位数损失的无悔保证，在实验中表现优异。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for alpha generation in quantile-based strategies, as guaranteed calibration and no-regret properties can improve risk-adjusted returns in volatile markets like energy or epidemic forecasting, where distribution shifts are common.",
+      "• Implementation Risk: Low to moderate risk; the wrapper method is lightweight and compatible with existing forecasters, but real-world deployment may face challenges in handling high-frequency data or extreme adversarial shifts not covered in experiments.",
+      "• Novelty: Moderately novel; the approach combines calibration guarantees with multi-level quantile ordering and no-regret theory, offering a practical solution for robust forecasting, though similar concepts exist in online learning and conformal prediction literature."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将校准保证与多级分位数排序及无悔理论结合，提供了一种轻量级包装方法，适用于对抗性分布漂移，在分位数预测领域具有实用创新。",
+      "• 实盘坑: 实盘应用中可能面临高频数据处理困难或极端对抗性漂移的挑战，实验未覆盖所有市场条件，需谨慎测试。",
+      "• 复现难度: 中等难度；方法描述清晰，但依赖现有预测器，复现需获取原始数据和实现细节，可能涉及复杂的时间序列分析。"
+    ],
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2512.23670v1",
+    "title": "Random Controlled Differential Equations",
+    "pdf_url": "https://arxiv.org/pdf/2512.23670v1",
+    "published": "2025-12-29",
+    "crawled_at": "2025-12-30 20:03:38",
+    "ai_score": 8.2,
+    "translated_title": "随机控制微分方程",
+    "summary_en": [
+      "• Model Architecture: Introduces two variants: Random Fourier CDEs (RF-CDEs) that use random Fourier features for kernel-free RBF approximation, and Random Rough DEs (R-RDEs) that operate on rough-path inputs via log-ODE discretization with log-signatures for higher-order temporal interactions. Both use large randomly parameterized CDEs as continuous-time reservoirs with only a linear readout layer trained.",
+      "• Data used: Evaluated across a range of time-series benchmarks (specific datasets not detailed in abstract, but implied standard time-series datasets).",
+      "• Performance metrics: Demonstrates competitive or state-of-the-art performance on benchmarks, offering practical alternatives to explicit signature computations with efficiency from random features.",
+      "• Theoretical Foundation: Proves that in the infinite-width limit, models induce RBF-lifted signature kernel and rough signature kernel, unifying random-feature reservoirs, continuous-time architectures, and path-signature theory.",
+      "• Training Efficiency: Framework is training-efficient due to random features and linear readout, resulting in fast, scalable models with strong inductive bias."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出两种变体：随机傅里叶控制微分方程（RF-CDEs），使用随机傅里叶特征进行无核RBF近似；随机粗糙微分方程（R-RDEs），通过log-ODE离散化处理粗糙路径输入，利用log-signature捕获高阶时间交互。两者均使用大型随机参数化CDE作为连续时间储层，仅训练线性读出层。",
+      "• 数据来源: 在多个时间序列基准测试上进行评估（摘要未详述具体数据集，但暗示为标准时间序列数据）。",
+      "• 主要结论: 在基准测试中展示竞争性或最先进的性能，提供显式signature计算的实际替代方案，保留其归纳偏置并受益于随机特征的效率。",
+      "• 理论贡献: 证明在无限宽度极限下，模型诱导RBF提升的signature核和粗糙signature核，统一了随机特征储层、连续时间架构和路径signature理论。",
+      "• 训练优势: 由于随机特征和线性读出，框架训练高效，实现快速、可扩展的模型，具有强归纳偏置。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for time-series prediction tasks due to strong inductive bias from path-signature theory and efficiency from random features, likely applicable to financial time-series for capturing complex temporal dependencies without heavy training overhead.",
+      "• Implementation Risk: Moderate risk; random features and linear readout simplify training, but stability of R-RDEs on rough paths and hyperparameter tuning for random initialization could pose challenges in real-world noisy data.",
+      "• Novelty: High novelty in unifying random-feature reservoirs with controlled differential equations and path-signature theory, offering a fresh perspective on continuous-time deep learning for sequences, though builds on existing CDE and signature kernel work.",
+      "• Scalability: Excellent scalability from training-efficient design, suitable for large-scale time-series data, but may require careful implementation to handle continuous-time discretization in practice.",
+      "• Practicality: Provides a practical alternative to explicit signature computations, making signature-based methods more accessible, but benchmarking against diverse real-world datasets is needed to validate robustness."
+    ],
+    "verdict_cn": [
+      "• 创新点: 创新性高，将随机特征储层与控制微分方程和路径signature理论统一，为序列的连续时间深度学习提供新视角，尽管基于现有CDE和signature核工作。",
+      "• 实盘坑: 中等风险；随机特征和线性读出简化训练，但R-RDEs在粗糙路径上的稳定性及随机初始化的超参数调优可能在现实噪声数据中带来挑战，需验证金融时间序列的适用性。",
+      "• 复现难度: 中等难度；框架设计训练高效，但实现连续时间离散化和log-ODE方法可能需要专业知识，开源代码和详细参数将降低复现门槛。",
+      "• 应用前景: 在时间序列预测任务中潜力大，因路径signature理论的强归纳偏置和随机特征的效率，可能适用于金融时间序列以捕获复杂时间依赖，无需繁重训练开销。",
+      "• 局限性: 摘要未提及计算成本或内存需求，实际部署时需评估大规模数据的处理能力，且基准测试范围需扩展以证明泛化性。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2512.23643v1",
+    "title": "Simultaneous Approximation of the Score Function and Its Derivatives by Deep Neural Networks",
+    "pdf_url": "https://arxiv.org/pdf/2512.23643v1",
+    "published": "2025-12-29",
+    "crawled_at": "2025-12-30 20:03:53",
+    "ai_score": 7.5,
+    "translated_title": "深度神经网络对评分函数及其导数的同时逼近",
+    "summary_en": [
+      "• Model Architecture: Deep neural networks designed for simultaneous approximation of score functions and their derivatives, with theoretical guarantees for arbitrary-order derivatives.",
+      "• Data used: Theoretical analysis focuses on data distributions with low-dimensional structure and unbounded support, relaxing typical bounded support assumptions.",
+      "• Performance metrics: Approximation error bounds that avoid the curse of dimensionality, matching existing literature while extending to higher-order derivatives."
+    ],
+    "summary_cn": [
+      "• 核心模型: 深度神经网络同时逼近评分函数及其导数，支持任意阶导数逼近的理论保证。",
+      "• 数据来源: 针对具有低维结构和无界支持的数据分布进行理论分析，放宽了传统有界支持假设。",
+      "• 主要结论: 逼近误差界避免了维度灾难，与现有文献匹配并扩展到高阶导数场景。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - theoretical framework could enable better density estimation and generative modeling for complex financial data distributions.",
+      "• Implementation Risk: High - theoretical results require careful translation to practical architectures; unbounded support assumptions may not hold in real markets.",
+      "• Novelty: Significant - extends score function approximation to arbitrary derivatives and relaxes bounded support requirements, advancing theoretical foundations."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著 - 将评分函数逼近扩展到任意阶导数，放宽有界支持要求，推进了理论基础。",
+      "• 实盘坑: 高 - 理论结果需谨慎转化为实际架构；无界支持假设在真实市场中可能不成立。",
+      "• 复现难度: 中等 - 理论证明清晰，但实现需要深度神经网络架构的精心设计。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2512.23640v1",
+    "title": "Broken Symmetry of Stock Returns -- a Modified Jones-Faddy Skew t-Distribution",
+    "pdf_url": "https://arxiv.org/pdf/2512.23640v1",
+    "published": "2025-12-29",
+    "crawled_at": "2025-12-30 20:04:10",
+    "ai_score": 7.2,
+    "translated_title": "股票收益率的对称性破缺——修正的Jones-Faddy偏斜t分布",
+    "summary_en": [
+      "• Model Architecture: Proposes a modified Jones-Faddy skew t-distribution to capture asymmetric stochastic volatility in stock returns, splitting gains and losses with different volatility parameters.",
+      "• Data used: Illustrates application on daily S&P500 returns, focusing on tail analysis to validate the distribution's fit to real market data.",
+      "• Performance metrics: Claims the model meaningfully captures asymmetry in returns, particularly negative skew and positive mean, through organic single-distribution representation."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用修正的Jones-Faddy偏斜t分布，通过将收益和损失分别建模为不同随机波动率参数，以捕捉股票收益率的不对称性。",
+      "• 数据来源: 基于标普500指数的日收益率数据，重点分析尾部特征以验证模型对实际市场分布的拟合效果。",
+      "• 主要结论: 模型能有效反映收益率分布的负偏和正均值特性，通过单一有机分布捕捉随机波动率的对称性破缺。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; model may improve risk-adjusted returns by better capturing tail risks and asymmetry, but direct alpha generation is limited without trading signals.",
+      "• Implementation Risk: High; stochastic volatility models are computationally intensive and sensitive to parameter estimation, especially in splitting gains/losses.",
+      "• Novelty: Low to moderate; builds on existing skew-t distributions and stochastic volatility theory, with incremental contribution in modified Jones-Faddy application."
+    ],
+    "verdict_cn": [
+      "• 创新点: 有限；主要是在现有偏斜t分布和随机波动率框架上的微调，缺乏突破性理论或实证创新。",
+      "• 实盘坑: 高；模型参数估计复杂，对收益/损失的分割可能过度拟合，且计算成本高，实盘部署挑战大。",
+      "• 复现难度: 中等；需要标普500日收益率数据和随机微分方程求解，但方法描述较清晰，复现可行性尚可。"
+    ],
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2512.23633v1",
+    "title": "AI tutoring can safely and effectively support students: An exploratory RCT in UK classrooms",
+    "pdf_url": "https://arxiv.org/pdf/2512.23633v1",
+    "published": "2025-12-29",
+    "crawled_at": "2025-12-30 20:04:33",
+    "ai_score": 7.8,
+    "translated_title": "AI辅导可安全有效地支持学生：英国课堂探索性随机对照试验",
+    "summary_en": [
+      "• Model Architecture: LearnLM, a generative AI model fine-tuned for pedagogy, integrated into chat-based tutoring sessions on the Eedi mathematics platform.",
+      "• Data used: N=165 students across five UK secondary schools in an exploratory randomized controlled trial (RCT), with expert tutors supervising LearnLM's drafted messages.",
+      "• Performance metrics: Supervising tutors approved 76.4% of LearnLM's drafted messages with zero or minimal edits; students guided by LearnLM performed at least as well as those with human tutors on measured learning outcomes.",
+      "• Additional finding: Students supported by LearnLM were 5.5 percentage points more likely to solve novel problems on subsequent topics (66.2% success rate vs. 60.7% for human tutors alone)."
+    ],
+    "summary_cn": [
+      "• 核心模型: LearnLM，一种针对教学法进行微调的生成式AI模型，集成于Eedi数学平台的聊天式辅导会话中。",
+      "• 数据来源: 在英国五所中学进行的探索性随机对照试验（RCT），涉及165名学生，由专家导师监督LearnLM生成的消息。",
+      "• 主要结论: 监督导师对76.4%的LearnLM草拟消息给予零或最小编辑的批准；在各项学习成果上，LearnLM辅导的学生表现至少与人类导师辅导的学生相当。",
+      "• 额外发现: 接受LearnLM支持的学生在后续主题上解决新问题的可能性高出5.5个百分点（成功率66.2% vs. 人类导师的60.7%）。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; demonstrates AI's ability to scale personalized tutoring with human oversight, potentially reducing costs and improving educational outcomes, but direct financial alpha in hedge fund context is limited.",
+      "• Implementation Risk: High; reliance on expert tutors for supervision limits scalability, and the study's small sample size (N=165) and UK-specific context may not generalize to broader markets or diverse educational systems.",
+      "• Novelty: Low to moderate; while the integration of pedagogically fine-tuned AI in real-world classrooms is innovative, the concept of AI-assisted tutoring is not new, and the study lacks technical details on model architecture or training data."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；在实际课堂环境中集成教学法微调的AI进行辅导具有应用创新，但AI辅助教学的概念本身并不新颖。",
+      "• 实盘坑: 高；依赖专家导师监督限制了可扩展性，样本量小（165人）且局限于英国背景，难以泛化至更广泛市场或多样教育体系。",
+      "• 复现难度: 中等；需要访问LearnLM模型和Eedi平台，但缺乏详细的模型架构或训练数据信息，可能增加技术复现的挑战。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2512.23631v1",
+    "title": "BOAD: Discovering Hierarchical Software Engineering Agents via Bandit Optimization",
+    "pdf_url": "https://arxiv.org/pdf/2512.23631v1",
+    "published": "2025-12-29",
+    "crawled_at": "2025-12-30 20:04:57",
+    "ai_score": 8.2,
+    "translated_title": "BOAD：通过多臂老虎机优化发现分层软件工程智能体",
+    "summary_en": [
+      "• Model Architecture: Proposes BOAD (Bandit Optimization for Agent Design), a hierarchical multi-agent system where an orchestrator coordinates specialized sub-agents (e.g., for localization, editing, validation) using multi-armed bandit optimization to automatically discover effective agent hierarchies.",
+      "• Data used: Evaluated on SWE-bench-Verified and SWE-bench-Live datasets, which contain real-world software engineering issues from GitHub repositories, featuring long-horizon, out-of-distribution problems.",
+      "• Performance metrics: Outperforms single-agent and manually designed multi-agent systems on SWE-bench-Verified. On SWE-bench-Live, their 36B system ranked second on the leaderboard, surpassing larger models like GPT-4 and Claude, demonstrating improved generalization on challenging SWE tasks."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出BOAD（基于多臂老虎机优化的智能体设计）框架，采用分层多智能体架构，通过编排器协调专业化子智能体（如定位、编辑、验证），并利用多臂老虎机优化自动发现有效的智能体层次结构。",
+      "• 数据来源: 使用SWE-bench-Verified和SWE-bench-Live数据集进行评估，这些数据集包含来自GitHub仓库的真实世界软件工程问题，具有长视野和分布外特性。",
+      "• 主要结论: 在SWE-bench-Verified上优于单智能体和手动设计的多智能体系统；在SWE-bench-Live上，其36B系统在评估时排名第二，超越了GPT-4和Claude等更大模型，显著提升了在挑战性长视野软件工程任务上的泛化能力。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for alpha generation in algorithmic trading by applying similar hierarchical agent discovery to financial modeling, portfolio optimization, or risk assessment tasks, where decomposing complex problems into specialized sub-tasks could improve accuracy and efficiency.",
+      "• Implementation Risk: Moderate to high risk due to the combinatorial search space in hierarchy discovery, which may require significant computational resources and careful tuning of the bandit optimization parameters, potentially leading to scalability issues in real-time financial applications.",
+      "• Novelty: Novel approach in using multi-armed bandit optimization for automatic hierarchy discovery in multi-agent systems, addressing credit assignment challenges in collaborative agent teams, which is a fresh take compared to traditional manual or reinforcement learning-based methods."
+    ],
+    "verdict_cn": [
+      "• 创新点: 创新性地将多臂老虎机优化应用于多智能体系统的自动层次结构发现，解决了协作智能体团队中的信用分配难题，相比传统手动或基于强化学习的方法更具新颖性。",
+      "• 实盘坑: 实盘应用风险较高，因为层次结构发现的组合搜索空间可能导致计算资源需求大，且老虎机优化参数需精细调优，在实时金融场景中可能引发可扩展性问题。",
+      "• 复现难度: 复现难度中等，需要访问SWE-bench数据集和大型语言模型（如36B参数系统），但代码已开源，且方法相对清晰，不过优化过程的实验设置可能复杂。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
     "id": "2512.21336v1",
     "title": "Optimizing Decoding Paths in Masked Diffusion Models by Quantifying Uncertainty",
     "pdf_url": "https://arxiv.org/pdf/2512.21336v1",
