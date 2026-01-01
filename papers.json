@@ -1,5 +1,353 @@
 [
   {
+    "id": "2512.25072v1",
+    "title": "Coordinated Humanoid Manipulation with Choice Policies",
+    "pdf_url": "https://arxiv.org/pdf/2512.25072v1",
+    "published": "2025-12-31",
+    "crawled_at": "2026-01-01 20:01:00",
+    "ai_score": 7.5,
+    "translated_title": "基于选择策略的仿人机器人协调操作",
+    "summary_en": [
+      "• Model Architecture: Introduces Choice Policy, an imitation learning framework that generates multiple candidate actions and learns to score them, enabling fast inference and multimodal behavior modeling.",
+      "• Data used: High-quality demonstrations collected via a modular teleoperation interface that decomposes humanoid control into intuitive submodules (hand-eye coordination, grasp primitives, arm tracking, locomotion).",
+      "• Performance metrics: Significantly outperforms diffusion policies and standard behavior cloning in real-world tasks (dishwasher loading, whiteboard wiping), with hand-eye coordination identified as critical for long-horizon success."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出选择策略（Choice Policy），一种模仿学习方法，通过生成多个候选动作并学习评分，实现快速推理和多模态行为建模。",
+      "• 数据来源: 通过模块化遥操作界面收集高质量演示数据，将仿人机器人控制分解为直观子模块（手眼协调、抓取基元、手臂跟踪、移动）。",
+      "• 主要结论: 在真实世界任务（洗碗机装载、白板擦拭）中显著优于扩散策略和标准行为克隆，手眼协调对长时程任务成功至关重要。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - scalable learning framework could be adapted for robotic process automation in logistics or manufacturing, but direct financial alpha is limited.",
+      "• Implementation Risk: High - real-world deployment in unstructured environments faces hardware reliability, safety, and generalization challenges beyond controlled experiments.",
+      "• Novelty: Moderate - modular teleoperation is practical but not groundbreaking; Choice Policy builds on existing imitation learning concepts with efficient multimodal modeling."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等 - 模块化遥操作设计提升数据收集效率，选择策略在多模态行为建模上有所优化，但整体架构未突破现有模仿学习范式。",
+      "• 实盘坑: 高 - 非结构化环境中的硬件稳定性、安全合规性及泛化能力是主要障碍，实验任务规模较小，工业级应用风险大。",
+      "• 复现难度: 中等 - 需要仿人机器人硬件和定制遥操作界面，但算法部分相对标准，开源可能性较高。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2512.25070v1",
+    "title": "Scaling Open-Ended Reasoning to Predict the Future",
+    "pdf_url": "https://arxiv.org/pdf/2512.25070v1",
+    "published": "2025-12-31",
+    "crawled_at": "2026-01-01 20:01:18",
+    "ai_score": 7.8,
+    "translated_title": "扩展开放式推理以预测未来",
+    "summary_en": [
+      "• Model Architecture: Qwen3 thinking models trained with reinforcement learning (RL) using an improved reward function, resulting in OpenForecaster 8B specialized for forecasting.",
+      "• Data used: Fully automated synthesis of novel forecasting questions from global events in daily news, using an offline news corpus to prevent future information leakage during training and evaluation.",
+      "• Performance metrics: Matches much larger proprietary models in accuracy, calibration, and consistency on held-out testing from May to August 2025, with calibration improvements generalizing across popular benchmarks."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于Qwen3思维模型，通过改进的奖励函数进行强化学习训练，最终得到专用于预测的OpenForecaster 8B模型。",
+      "• 数据来源: 从每日新闻中的全球事件自动合成新颖的预测问题，使用离线新闻语料库以避免训练和评估中的未来信息泄露。",
+      "• 主要结论: 在2025年5月至8月的保留测试中，OpenForecaster 8B在准确性、校准性和一致性上匹配了更大的专有模型，且校准改进在多个流行基准测试中具有泛化性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; specialized forecasting models could enhance event-driven strategies by improving prediction accuracy and calibration under uncertainty, but real-world market dynamics may differ from news-based forecasting.",
+      "• Implementation Risk: High; reliance on automated news curation introduces noise and bias risks, and offline corpus usage may limit adaptability to real-time market changes, potentially reducing practical trading utility.",
+      "• Novelty: Significant; fully automated data synthesis from news and offline training to prevent leakage are innovative, but the core model architecture (Qwen3 with RL) builds on existing techniques rather than introducing groundbreaking advances."
+    ],
+    "verdict_cn": [
+      "• 创新点: 从新闻中全自动合成预测数据并使用离线训练防止信息泄露，方法新颖，但模型架构基于现有技术，缺乏革命性突破。",
+      "• 实盘坑: 依赖自动化新闻处理可能引入噪声和偏差，离线语料库限制了实时市场适应性，实际交易应用风险较高。",
+      "• 复现难度: 中等；开源模型、代码和数据降低了复现门槛，但需要大量计算资源和新闻数据处理能力，可能增加实施成本。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2512.25063v1",
+    "title": "Many Minds from One Model: Bayesian Transformers for Population Intelligence",
+    "pdf_url": "https://arxiv.org/pdf/2512.25063v1",
+    "published": "2025-12-31",
+    "crawled_at": "2026-01-01 20:01:38",
+    "ai_score": 7.8,
+    "translated_title": "一模型多心智：用于群体智能的贝叶斯Transformer",
+    "summary_en": [
+      "• Model Architecture: Introduces Population Bayesian Transformers (B-Trans), which convert standard LLMs into Bayesian models by treating normalization layer bias offsets as stochastic variables with Gaussian variational approximation, enabling sampling of diverse model instances from pre-trained weights.",
+      "• Data used: Experiments conducted across zero-shot generation, Reinforcement Learning with Verifiable Rewards (RLVR), and RL without explicit labels, leveraging general pre-trained transformer weights without specifying particular datasets.",
+      "• Performance metrics: Demonstrates superior semantic diversity and better task performance compared to deterministic baselines through population-level decision-making and aggregation of predictions across sampled individuals."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出Population Bayesian Transformers (B-Trans)，通过将归一化层的偏置偏移视为具有高斯变分近似的随机变量，将标准大语言模型转换为贝叶斯模型，支持从预训练权重中采样多样化的模型实例。",
+      "• 数据来源: 在零样本生成、带可验证奖励的强化学习(RLVR)和无显式标签的强化学习等任务上进行实验，利用通用的预训练Transformer权重，未指定具体数据集。",
+      "• 主要结论: 通过群体级决策和跨采样个体的预测聚合，B-Trans在语义多样性和任务性能上均优于确定性基线模型，有效利用了群体智慧。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate to high for NLP/LLM applications requiring diverse outputs or exploration in reinforcement learning, as population sampling enhances decision-making robustness and semantic variety.",
+      "• Implementation Risk: High due to computational overhead from sampling multiple model instances and potential coherence issues despite sequence-level noise freezing; real-time deployment may be challenging.",
+      "• Novelty: Significant for introducing a practical Bayesian approach to transformers without full Bayesian neural network training, leveraging stochastic normalization layers for efficient diversity generation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著创新在于提出了一种无需训练完整贝叶斯神经网络的实用贝叶斯Transformer方法，通过随机归一化层高效生成多样性，避免了传统贝叶斯方法的高计算成本。",
+      "• 实盘坑: 高实施风险，采样多个模型实例会增加计算开销，且尽管在序列级别冻结噪声，仍可能存在一致性问题和实时部署挑战。",
+      "• 复现难度: 中等偏高，需要处理变分近似和采样机制，对硬件和算法实现有一定要求，但基于预训练权重可能降低部分难度。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2512.25060v1",
+    "title": "On the geometry and topology of representations: the manifolds of modular addition",
+    "pdf_url": "https://arxiv.org/pdf/2512.25060v1",
+    "published": "2025-12-31",
+    "crawled_at": "2026-01-01 20:01:56",
+    "ai_score": 7.2,
+    "translated_title": "关于表示几何与拓扑：模加法的流形研究",
+    "summary_en": [
+      "• Model Architecture: Analyzes both uniform attention and trainable attention architectures in neural networks, focusing on their representations for modular addition tasks.",
+      "• Data used: Implicitly uses synthetic or standard modular addition datasets common in mechanistic interpretability research, though not explicitly specified in the abstract.",
+      "• Performance metrics: Demonstrates topological and geometric equivalence between representations across hundreds of circuits, using statistical analysis rather than traditional accuracy metrics."
+    ],
+    "summary_cn": [
+      "• 核心模型: 分析均匀注意力和可训练注意力架构在神经网络中的表示，专注于模加法任务的电路实现。",
+      "• 数据来源: 基于机制可解释性研究中常见的合成或标准模加法数据集，但摘要未明确说明具体数据。",
+      "• 主要结论: 通过拓扑和几何工具揭示不同架构实现相同算法，表示在统计上等价，挑战了先前关于电路差异性的假设。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low direct alpha potential; primarily theoretical with limited immediate trading applications, but insights into representation learning could inform future model design for financial time series.",
+      "• Implementation Risk: High risk due to abstract mathematical focus; translating topological equivalence to practical trading strategies requires significant engineering and validation.",
+      "• Novelty: Moderate novelty in applying topological methods to neural network interpretability, though the core finding of architectural equivalence is more incremental than groundbreaking."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将拓扑学工具引入神经网络表示分析，方法新颖，但结论相对保守，主要验证架构等价性而非发现新机制。",
+      "• 实盘坑: 理论性强，缺乏直接交易应用；从几何等价性到盈利策略的转化路径模糊，实盘部署风险高。",
+      "• 复现难度: 中等偏高，需要专业知识在拓扑学和深度学习交叉领域，但基于标准模加法任务，数据获取相对简单。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2512.25059v1",
+    "title": "Reliable and Resilient Collective Communication Library for LLM Training and Serving",
+    "pdf_url": "https://arxiv.org/pdf/2512.25059v1",
+    "published": "2025-12-31",
+    "crawled_at": "2026-01-01 20:02:17",
+    "ai_score": 8.2,
+    "translated_title": "用于大语言模型训练与服务的可靠弹性集体通信库",
+    "summary_en": [
+      "• Model Architecture: R²CCL is a fault-tolerant communication library that leverages multi-NIC hardware to enable lossless, low-overhead failover through rapid connection migration, bandwidth-aware load redistribution, and resilient collective algorithms.",
+      "• Data used: The evaluation was conducted on two 8-GPU H100 InfiniBand servers and via large-scale ML simulators modeling hundreds of GPUs with diverse failure patterns, including network errors and link fluctuations.",
+      "• Performance metrics: R²CCL incurs less than 1% training overhead and less than 3% inference overhead under NIC failures, outperforming baselines AdapCC and DejaVu by 12.18× and 47×, respectively, and reduces GPU hour waste from 10–15% to minimal levels."
+    ],
+    "summary_cn": [
+      "• 核心模型: R²CCL是一个基于多网卡硬件的容错通信库，通过快速连接迁移、带宽感知负载重分配和弹性集体算法，实现无损低开销故障转移。",
+      "• 数据来源: 在配备8个H100 GPU的InfiniBand服务器上进行实验，并通过大规模ML模拟器模拟数百个GPU的多样化故障模式，包括网络错误和链路波动。",
+      "• 主要结论: R²CCL在网卡故障下训练开销低于1%，推理开销低于3%，性能分别超过基线AdapCC和DejaVu 12.18倍和47倍，将GPU小时浪费从10–15%降至可忽略水平。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for reducing operational costs in large-scale ML deployments by minimizing downtime and GPU waste, directly impacting profit margins in compute-intensive hedge fund strategies.",
+      "• Implementation Risk: Moderate risk due to dependency on multi-NIC hardware and InfiniBand infrastructure, which may limit adoption in heterogeneous environments or increase integration complexity.",
+      "• Novelty: Novel in exploiting multi-NIC hardware for fault tolerance with low overhead, but builds on existing concepts like connection migration and load balancing, offering incremental rather than groundbreaking innovation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 利用多网卡硬件实现低开销容错，结合快速连接迁移和带宽感知算法，在现有技术基础上优化了大规模ML系统的可靠性。",
+      "• 实盘坑: 依赖特定硬件（如InfiniBand和多网卡），可能增加部署成本和兼容性问题，且在极端故障场景下的稳定性未充分验证。",
+      "• 复现难度: 中等偏高，需要专业硬件和模拟环境，算法实现复杂，但开源代码或详细文档可降低难度。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2512.25034v1",
+    "title": "Generative Classifiers Avoid Shortcut Solutions",
+    "pdf_url": "https://arxiv.org/pdf/2512.25034v1",
+    "published": "2025-12-31",
+    "crawled_at": "2026-01-01 20:02:33",
+    "ai_score": 8.5,
+    "translated_title": "生成式分类器避免捷径解决方案",
+    "summary_en": [
+      "• Model Architecture: Generative classifiers based on class-conditional generative models (diffusion-based and autoregressive) that model all features including core and spurious correlations",
+      "• Data used: Five standard image and text distribution shift benchmarks, plus realistic applications in medical and satellite datasets, with Gaussian toy setting for theoretical analysis",
+      "• Performance metrics: Achieved state-of-the-art performance on distribution shift benchmarks, reduced impact of spurious correlations in practical applications, outperformed discriminative classifiers under certain data properties"
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于类别条件生成模型（扩散模型和自回归模型）的生成式分类器，建模包括核心和虚假相关的所有特征",
+      "• 数据来源: 五个标准图像和文本分布偏移基准测试，医疗和卫星数据集的实际应用，以及用于理论分析的高斯玩具设置",
+      "• 主要结论: 在分布偏移基准测试中达到最先进性能，在实际应用中减少虚假相关的影响，在特定数据属性下优于判别式分类器"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for robust alpha signals in distribution shift scenarios where traditional discriminative models fail due to spurious correlations",
+      "• Implementation Risk: Moderate risk due to computational intensity of generative models and potential overfitting in high-dimensional financial data",
+      "• Novelty: Significant novelty in applying generative classifiers to avoid shortcut solutions, with strong theoretical grounding in Gaussian toy analysis"
+    ],
+    "verdict_cn": [
+      "• 创新点: 将生成式分类器应用于避免捷径解决方案的创新方法，在高斯玩具分析中有坚实的理论基础",
+      "• 实盘坑: 生成模型计算强度大可能导致实盘延迟，高维金融数据可能存在过拟合风险",
+      "• 复现难度: 中等难度，需要复现生成模型训练但无需专门的数据增强或强正则化"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2512.25023v1",
+    "title": "ResponseRank: Data-Efficient Reward Modeling through Preference Strength Learning",
+    "pdf_url": "https://arxiv.org/pdf/2512.25023v1",
+    "published": "2025-12-31",
+    "crawled_at": "2026-01-01 20:02:51",
+    "ai_score": 7.8,
+    "translated_title": "ResponseRank：通过偏好强度学习实现数据高效的奖励建模",
+    "summary_en": [
+      "• Model Architecture: ResponseRank uses relative differences in proxy signals (e.g., response times, annotator agreement) to rank responses by inferred preference strength, with local stratification to control for systemic variation.",
+      "• Data used: Synthetic preference learning with simulated response times, language modeling with annotator agreement, and RL control tasks with simulated episode returns.",
+      "• Performance metrics: Improved sample efficiency and robustness across tasks, measured using the novel Pearson Distance Correlation (PDC) metric to isolate cardinal utility learning from ordinal accuracy."
+    ],
+    "summary_cn": [
+      "• 核心模型: ResponseRank利用代理信号（如响应时间、标注者一致性）的相对差异来按推断的偏好强度对响应排序，并通过局部分层控制系统性变异。",
+      "• 数据来源: 合成偏好学习（模拟响应时间）、语言建模（标注者一致性）和强化学习控制任务（模拟回合回报）。",
+      "• 主要结论: 在多样任务中提高了样本效率和鲁棒性，使用新颖的Pearson距离相关性（PDC）指标将基数效用学习与序数准确性分离。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; improves data efficiency in RLHF settings, potentially reducing annotation costs and enhancing model generalization in preference-based systems.",
+      "• Implementation Risk: High; relies on noisy proxy signals (e.g., response times) that may be confounded in real-world applications, requiring careful stratification and validation.",
+      "• Novelty: High; introduces a novel method for learning preference strength from relative signals and the PDC metric, addressing a gap in binary choice-based RLHF."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；提出从相对信号学习偏好强度的新方法及PDC指标，填补了基于二元选择的RLHF中的空白。",
+      "• 实盘坑: 高；依赖嘈杂的代理信号（如响应时间），在实际应用中易受混淆，需精细分层和验证。",
+      "• 复现难度: 中等；方法相对直接，但需要模拟或获取代理信号数据，且分层策略可能因任务而异。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2512.25017v1",
+    "title": "Convergence of the generalization error for deep gradient flow methods for PDEs",
+    "pdf_url": "https://arxiv.org/pdf/2512.25017v1",
+    "published": "2025-12-31",
+    "crawled_at": "2026-01-01 20:03:13",
+    "ai_score": 7.5,
+    "translated_title": "深度梯度流方法求解偏微分方程时泛化误差的收敛性",
+    "summary_en": [
+      "• Model Architecture: Deep gradient flow methods (DGFMs) for solving high-dimensional partial differential equations (PDEs), analyzed in the wide network limit.",
+      "• Data used: Theoretical PDE solutions under verifiable assumptions, no empirical datasets mentioned.",
+      "• Performance metrics: Generalization error decomposed into approximation error (vanishes as neurons → ∞) and training error (analyzed via gradient flow as training time → ∞).",
+      "• Main conclusion: Generalization error converges to zero as both number of neurons and training time approach infinity, providing mathematical foundation for DGFMs."
+    ],
+    "summary_cn": [
+      "• 核心模型: 深度梯度流方法（DGFMs），用于求解高维偏微分方程（PDEs），在宽网络极限下分析。",
+      "• 数据来源: 基于可验证假设的理论PDE解，未提及实证数据集。",
+      "• 主要结论: 泛化误差分解为近似误差（随神经元数→∞而趋于零）和训练误差（通过梯度流分析，随训练时间→∞而收敛），证明DGFMs的泛化误差在神经元数和训练时间均趋于无穷时收敛到零。",
+      "• 数学基础: 为DGFMs在PDE求解中的应用提供了严格的数学理论支撑。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; theoretical convergence guarantees could enhance PDE-based pricing models in quantitative finance, but direct alpha generation requires empirical validation.",
+      "• Implementation Risk: High; relies on infinite neuron and training time limits, practical implementations may face computational bottlenecks and overfitting in finite settings.",
+      "• Novelty: Moderate; builds on existing deep learning for PDEs literature by formalizing error convergence, but lacks novel architectural or algorithmic breakthroughs.",
+      "• Scalability: Limited; high-dimensional PDEs are addressed theoretically, but real-world financial applications (e.g., multi-asset options) may require further adaptation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；将深度梯度流方法的泛化误差收敛性理论化，补充了深度学习求解PDE的数学基础，但无突破性架构或算法创新。",
+      "• 实盘坑: 高；依赖无限神经元和训练时间的极限假设，实际应用中计算成本高、可能过拟合，且未涉及市场数据或交易约束。",
+      "• 复现难度: 中等；理论推导清晰，但实现需大量计算资源验证收敛性，且缺乏代码或实证案例参考。",
+      "• 金融应用: 有限；理论结果可潜在改进PDE定价模型，但需结合金融数据调整，直接生成alpha的路径不明确。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2512.25014v1",
+    "title": "Diffusion Language Models are Provably Optimal Parallel Samplers",
+    "pdf_url": "https://arxiv.org/pdf/2512.25014v1",
+    "published": "2025-12-31",
+    "crawled_at": "2026-01-01 20:03:31",
+    "ai_score": 8.5,
+    "translated_title": "扩散语言模型被证明是最优并行采样器",
+    "summary_en": [
+      "• Model Architecture: Diffusion Language Models (DLMs) augmented with polynomial-length chain-of-thought (CoT) and optional revision/remasking capabilities",
+      "• Data used: Theoretical analysis with no specific dataset mentioned; focuses on algorithmic simulation and expressivity proofs",
+      "• Performance metrics: Optimal number of sequential steps for parallel sampling, optimal space complexity with revision/remasking, strict expressivity gap demonstrated",
+      "• Key theoretical result: DLMs with CoT can simulate any parallel sampling algorithm using optimal sequential steps, matching target distribution generation efficiency"
+    ],
+    "summary_cn": [
+      "• 核心模型: 扩散语言模型（DLMs）结合多项式长度思维链（CoT），可选修订/重掩码功能",
+      "• 数据来源: 纯理论分析，未提及具体数据集；专注于算法模拟和表达能力证明",
+      "• 主要结论: DLMs在并行采样中实现最优序列步数，启用修订/重掩码后达到最优空间复杂度",
+      "• 理论突破: 证明DLMs能模拟任何并行采样算法，修订功能显著提升表达能力"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for NLP/LLM trading strategies requiring fast parallel token generation; optimal sampling efficiency could reduce inference latency in real-time applications",
+      "• Implementation Risk: Moderate-high; theoretical proofs require practical validation, revision mechanisms add complexity, CoT length impacts computational overhead",
+      "• Novelty: Significant theoretical contribution; first rigorous proof of DLMs as optimal parallel samplers with expressivity gap analysis for revision capabilities",
+      "• Practical limitations: Large intermediate footprints without revision, polynomial CoT requirements may limit real-time applications"
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次严格证明DLMs是最优并行采样器，建立修订功能的表达能力优势理论",
+      "• 实盘坑: 理论证明需实践验证，修订机制增加复杂度，思维链长度影响计算效率",
+      "• 复现难度: 中等偏高；需要实现修订/重掩码功能，多项式长度CoT可能难以优化",
+      "• 应用风险: 无修订时中间足迹大，可能限制高频场景下的实际部署"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2512.24999v1",
+    "title": "Basic Inequalities for First-Order Optimization with Applications to Statistical Risk Analysis",
+    "pdf_url": "https://arxiv.org/pdf/2512.24999v1",
+    "published": "2025-12-31",
+    "crawled_at": "2026-01-01 20:03:50",
+    "ai_score": 7.5,
+    "translated_title": "一阶优化的基本不等式及其在统计风险分析中的应用",
+    "summary_en": [
+      "• Model Architecture: The paper introduces a framework of 'basic inequalities' for first-order iterative optimization algorithms, including gradient descent, mirror descent with Bregman divergence projection, and exponentiated gradient descent, connecting implicit and explicit regularization.",
+      "• Data used: The paper is theoretical with no specific dataset mentioned; experiments are conducted on generalized linear models, but details on data sources or characteristics are not provided in the abstract.",
+      "• Performance metrics: The framework translates iteration counts into effective regularization coefficients, enabling analyses of training dynamics and prediction risk bounds, with theoretical findings supplemented by experiments on generalized linear models."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出一阶迭代优化算法（如梯度下降、镜像下降、指数梯度下降）的'基本不等式'框架，连接隐式和显式正则化。",
+      "• 数据来源: 论文为理论性研究，未指定具体数据集；实验基于广义线性模型，但摘要中未提供数据来源或特征的详细信息。",
+      "• 主要结论: 将迭代次数转化为损失函数中的有效正则化系数，用于分析训练动态和预测风险界限，并通过广义线性模型实验补充理论发现。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the framework could enhance risk-adjusted returns by improving optimization stability in statistical models, but direct trading alpha is limited as it focuses on theoretical analysis rather than market applications.",
+      "• Implementation Risk: High; translating theoretical inequalities into practical trading strategies requires significant adaptation, with risks from model misspecification and computational overhead in real-time environments.",
+      "• Novelty: Moderate; while the specific form of basic inequalities is highlighted as new, the core concepts build on existing literature, offering refinements rather than groundbreaking innovations."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；强调特定形式的'基本不等式'作为新工具，但核心思想基于现有文献，更多是改进而非突破性创新。",
+      "• 实盘坑: 高；将理论不等式转化为实际交易策略需大量调整，存在模型误设和实时计算开销的风险。",
+      "• 复现难度: 中等；理论框架清晰，但实验细节不足可能增加复现挑战，需依赖广义线性模型的实现。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "ICML",
+      "status": "Accepted"
+    }
+  },
+  {
     "id": "2512.23707v1",
     "title": "Training AI Co-Scientists Using Rubric Rewards",
     "pdf_url": "https://arxiv.org/pdf/2512.23707v1",
