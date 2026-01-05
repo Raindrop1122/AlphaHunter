@@ -1,5 +1,345 @@
 [
   {
+    "id": "2601.00794v1",
+    "title": "Two Deep Learning Approaches for Automated Segmentation of Left Ventricle in Cine Cardiac MRI",
+    "pdf_url": "https://arxiv.org/pdf/2601.00794v1",
+    "published": "2026-01-02",
+    "crawled_at": "2026-01-05 20:01:30",
+    "ai_score": 7.2,
+    "translated_title": "两种用于心脏电影磁共振图像左心室自动分割的深度学习方法",
+    "summary_en": [
+      "• Model Architecture: Proposes two novel deep learning architectures - LNU-Net (layer normalization U-Net) and IBU-Net (instance-batch normalized U-Net) for left ventricle segmentation, both featuring down-sampling paths for feature extraction and up-sampling paths for precise localization.",
+      "• Data used: Utilizes a dataset containing 805 MRI images from 45 patients, with image processing incorporating affine transformations and elastic deformations for data augmentation.",
+      "• Performance metrics: Evaluates using dice coefficient and average perpendicular distance, reporting that both proposed approaches outperform state-of-the-art methods on these metrics."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出两种新型深度学习架构LNU-Net（层归一化U-Net）和IBU-Net（实例-批量归一化U-Net），均采用下采样路径进行特征提取和上采样路径实现精确定位。",
+      "• 数据来源: 使用包含45名患者的805张MRI图像数据集，通过仿射变换和弹性变形进行图像数据增强处理。",
+      "• 主要结论: 实验结果表明，所提方法在骰子系数和平均垂直距离指标上优于现有最先进方法，验证了归一化策略在医学图像分割中的有效性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - specialized medical imaging segmentation has limited direct financial applications but could inform similar structured data segmentation problems in finance (e.g., chart pattern recognition).",
+      "• Implementation Risk: High - medical imaging datasets are highly regulated and domain-specific; financial applications would require complete retraining on financial data with uncertain transfer learning efficacy.",
+      "• Novelty: Limited - builds incrementally on established U-Net architecture with normalization variations; lacks breakthrough architectural innovations or novel loss functions."
+    ],
+    "verdict_cn": [
+      "• 创新点: 有限 - 在标准U-Net架构基础上进行归一化策略微调（层归一化与实例-批量归一化组合），属于渐进式改进而非突破性创新。",
+      "• 实盘坑: 极高 - 医学图像与金融数据分布差异巨大，模型迁移需完全重新训练；金融时序数据的分割任务定义模糊，缺乏明确标注标准。",
+      "• 复现难度: 中等 - 架构描述清晰，但缺少超参数细节和完整训练代码；医学数据获取受限，需寻找替代金融数据集进行验证。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2601.00791v1",
+    "title": "Geometry of Reason: Spectral Signatures of Valid Mathematical Reasoning",
+    "pdf_url": "https://arxiv.org/pdf/2601.00791v1",
+    "published": "2026-01-02",
+    "crawled_at": "2026-01-05 20:01:48",
+    "ai_score": 8.5,
+    "translated_title": "推理的几何：有效数学推理的谱特征",
+    "summary_en": [
+      "• Model Architecture: Analyzes seven transformer models from four architectural families (Meta Llama, Alibaba Qwen, Microsoft Phi, Mistral AI), with specific attention to Mistral-7B's Sliding Window Attention mechanism.",
+      "• Data used: No training data required; method is training-free and uses attention matrices from model outputs on mathematical proofs, validated through systematic label correction against formal verifiers.",
+      "• Performance metrics: Achieves 85.0-95.6% classification accuracy with effect sizes up to Cohen's d = 3.30 (p < 10^{-116}), calibrated thresholds reach 93-95% on full dataset, and identifies architectural dependencies (e.g., Mistral-7B shifts signal to late-layer Smoothness with d = 2.09)."
+    ],
+    "summary_cn": [
+      "• 核心模型: 分析了来自四个架构家族的七个Transformer模型（Meta Llama、阿里巴巴Qwen、Microsoft Phi、Mistral AI），重点关注Mistral-7B的滑动窗口注意力机制。",
+      "• 数据来源: 无需训练数据；方法基于模型在数学证明上的注意力矩阵，通过系统标签校正与形式验证器对比验证。",
+      "• 主要结论: 分类准确率达85.0-95.6%，效应量高达Cohen's d = 3.30（p < 10^{-116}），校准阈值在全数据集上达93-95%，并发现架构依赖性（如Mistral-7B将信号转移至晚层平滑度）。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for detecting logical coherence in AI outputs, applicable to hallucination detection and AI safety monitoring, with immediate practical use in verifying reasoning without training.",
+      "• Implementation Risk: Moderate risk due to architectural dependencies (e.g., Mistral-7B requires different spectral features), which may limit generalization across all models without adjustments.",
+      "• Novelty: Novel training-free approach using spectral graph analysis of attention patterns, introducing interpretable diagnostics (Fiedler value, HFER, smoothness, entropy) for reasoning verification."
+    ],
+    "verdict_cn": [
+      "• 创新点: 创新性地使用注意力模式的谱图分析，无需训练即可验证推理，引入可解释的诊断指标（Fiedler值、高频能量比、平滑度、谱熵）。",
+      "• 实盘坑: 存在架构依赖性风险（如Mistral-7B需不同特征），可能影响跨模型泛化能力，需针对不同模型调整阈值。",
+      "• 复现难度: 中等难度，需访问多种Transformer模型和数学证明数据，但方法开源且无需复杂训练，复现可行性较高。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2601.00785v1",
+    "title": "FedHypeVAE: Federated Learning with Hypernetwork Generated Conditional VAEs for Differentially Private Embedding Sharing",
+    "pdf_url": "https://arxiv.org/pdf/2601.00785v1",
+    "published": "2026-01-02",
+    "crawled_at": "2026-01-05 20:02:09",
+    "ai_score": 7.8,
+    "translated_title": "FedHypeVAE：基于超网络生成条件VAE的联邦学习，用于差分隐私嵌入共享",
+    "summary_en": [
+      "• Model Architecture: FedHypeVAE uses a conditional VAE backbone with client-aware decoders and class-conditional priors generated by a shared hypernetwork from private client codes, decoupling local data from communicated parameters.",
+      "• Data used: The paper focuses on federated learning with non-IID client heterogeneity, using synthetic embedding-level data across decentralized clients without centralizing raw data.",
+      "• Performance metrics: The framework optimizes the shared hypernetwork under differential privacy with noise-perturbed, clipped gradients, and includes a local MMD alignment and Lipschitz regularizer for stability and distributional coherence under non-IID conditions."
+    ],
+    "summary_cn": [
+      "• 核心模型: FedHypeVAE采用条件VAE架构，通过共享超网络从私有客户端代码生成客户端感知解码器和类条件先验，实现本地数据与通信参数的解耦。",
+      "• 数据来源: 论文针对非独立同分布的客户端异构性，在去中心化客户端间使用合成嵌入级数据，无需集中原始数据。",
+      "• 主要结论: 该框架在差分隐私下优化共享超网络，通过噪声扰动和梯度裁剪聚合梯度，并引入局部MMD对齐和Lipschitz正则化器，提升非独立同分布条件下的稳定性和分布一致性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the framework addresses key federated learning challenges like non-IID data and privacy, potentially enabling safer data synthesis for alpha generation in decentralized financial datasets, but real-world financial data complexity may limit immediate impact.",
+      "• Implementation Risk: High; differential privacy mechanisms and hypernetwork training add computational overhead, and the reliance on synthetic embeddings could introduce fidelity issues in volatile market conditions, requiring robust validation.",
+      "• Novelty: High; the bi-level design with hypernetwork-generated conditional VAEs for personalized, privacy-preserving embedding synthesis is innovative, unifying personalization, privacy, and distribution alignment at the generator level in federated settings."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；采用超网络生成条件VAE的双层设计，在生成器层面统一个性化、隐私保护和分布对齐，为联邦学习中的隐私保护数据合成提供了新方法。",
+      "• 实盘坑: 高；差分隐私机制和超网络训练增加计算成本，合成嵌入的保真度在波动市场条件下可能不足，需严格验证以避免模型偏差。",
+      "• 复现难度: 中等；代码已开源，但涉及复杂的超网络和VAE架构，非独立同分布数据模拟和隐私参数调优需要专业知识，可能耗时较长。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2601.00781v1",
+    "title": "Categorical Reparameterization with Denoising Diffusion models",
+    "pdf_url": "https://arxiv.org/pdf/2601.00781v1",
+    "published": "2026-01-02",
+    "crawled_at": "2026-01-05 20:02:25",
+    "ai_score": 7.5,
+    "translated_title": "基于去噪扩散模型的分类变量重参数化",
+    "summary_en": [
+      "• Model Architecture: Introduces a diffusion-based soft reparameterization for categorical distributions, leveraging a Gaussian noising process with a closed-form denoiser that enables efficient computation and training-free diffusion sampling.",
+      "• Data used: Benchmarks include synthetic datasets and standard optimization tasks involving categorical variables, such as variational inference and reinforcement learning scenarios, though specific datasets are not detailed in the abstract.",
+      "• Performance metrics: Shows competitive or improved optimization performance on various benchmarks, indicating effectiveness in reducing gradient noise and bias compared to traditional score-function estimators and continuous relaxations."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出一种基于扩散模型的分类分布软重参数化方法，利用高斯噪声过程和闭式去噪器，实现高效计算和无训练扩散采样。",
+      "• 数据来源: 使用合成数据集和标准优化任务（如变分推断和强化学习）作为基准测试，但摘要中未具体说明数据集细节。",
+      "• 主要结论: 在多个基准测试中表现出竞争性或改进的优化性能，有效减少梯度噪声和偏差，优于传统评分函数估计器和连续松弛方法。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the method could enhance optimization in financial models with categorical variables (e.g., asset selection or regime switching), but direct alpha generation is limited without integration into broader strategies.",
+      "• Implementation Risk: High; diffusion models are computationally intensive and may face scalability issues in real-time trading environments, with potential instability in gradient propagation.",
+      "• Novelty: High; introduces a novel diffusion-based approach to categorical reparameterization, offering a fresh perspective on gradient estimation that could inspire further research in machine learning for finance."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高; 首次将扩散模型应用于分类变量重参数化，提供了一种新的梯度估计方法，具有理论新颖性和潜在应用价值。",
+      "• 实盘坑: 高; 扩散模型计算成本高，在实时交易中可能面临可扩展性问题，且梯度传播可能存在不稳定性，需谨慎部署。",
+      "• 复现难度: 中等; 方法基于标准扩散框架，但实现细节（如闭式去噪器）需要专业知识，基准测试结果可复现但需调整超参数。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2601.00756v1",
+    "title": "Memory Bank Compression for Continual Adaptation of Large Language Models",
+    "pdf_url": "https://arxiv.org/pdf/2601.00756v1",
+    "published": "2026-01-02",
+    "crawled_at": "2026-01-05 20:02:44",
+    "ai_score": 7.8,
+    "translated_title": "大型语言模型持续适应的记忆库压缩",
+    "summary_en": [
+      "• Model Architecture: MBC combines a codebook optimization strategy for memory bank compression with an online resetting mechanism to prevent codebook collapse, and integrates Key-Value Low-Rank Adaptation (KV-LoRA) in attention layers for efficient memory utilization.",
+      "• Data used: Benchmark question-answering datasets were employed to evaluate the model's performance in continual learning scenarios, though specific dataset names are not detailed in the abstract.",
+      "• Performance metrics: MBC reduces memory bank size to 0.3% compared to the most competitive baseline while maintaining high retention accuracy during online adaptation learning, demonstrating significant efficiency gains."
+    ],
+    "summary_cn": [
+      "• 核心模型: MBC采用码本优化策略压缩记忆库，结合在线重置机制防止码本崩溃，并在注意力层集成键值低秩适应（KV-LoRA）以高效利用压缩记忆表示。",
+      "• 数据来源: 使用基准问答数据集评估模型在持续学习场景中的性能，但摘要中未具体说明数据集名称。",
+      "• 主要结论: MBC将记忆库大小减少至最强基线的0.3%，同时在在线适应学习中保持高保留准确率，显示出显著的效率提升。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the compression technique could reduce computational costs for real-time LLM updates in financial NLP applications, but direct alpha generation is limited without specific trading or market data integration.",
+      "• Implementation Risk: High; the online resetting mechanism and codebook optimization may introduce instability in production environments, and scalability to extremely large data streams remains unproven.",
+      "• Novelty: Moderate; memory compression for continual learning is an emerging area, but the combination of codebook optimization with KV-LoRA offers incremental innovation rather than groundbreaking advances."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；记忆库压缩结合码本优化和KV-LoRA在持续学习中提供新思路，但非革命性突破，更多是现有技术的集成改进。",
+      "• 实盘坑: 高；在线重置机制可能在生产环境中引发不稳定，且未验证超大规模数据流下的可扩展性，实盘部署风险较大。",
+      "• 复现难度: 中等；代码已公开，但依赖特定基准数据集和调参，复现需一定工程资源，可能遇到性能波动问题。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2601.00748v1",
+    "title": "A Machine Learning Framework for Off Ball Defensive Role and Performance Evaluation in Football",
+    "pdf_url": "https://arxiv.org/pdf/2601.00748v1",
+    "published": "2026-01-02",
+    "crawled_at": "2026-01-05 20:03:03",
+    "ai_score": 7.8,
+    "translated_title": "足球中无球防守角色与表现评估的机器学习框架",
+    "summary_en": [
+      "• Model Architecture: Introduces a covariate-dependent Hidden Markov Model (CDHMM) tailored to corner kicks, which infers time-resolved man-marking and zonal assignments from player tracking data without requiring manual labels.",
+      "• Data used: Utilizes player tracking data from football matches, specifically focusing on corner kicks as a structured game situation to analyze defensive roles and performance.",
+      "• Performance metrics: Proposes a novel framework for defensive credit attribution and a role-conditioned ghosting method for counterfactual analysis, enabling interpretable evaluation of off-ball defensive contributions against context-aware baselines."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用协变量依赖隐马尔可夫模型（CDHMM），针对角球场景设计，从球员追踪数据中无监督推断实时人盯人和区域防守任务。",
+      "• 数据来源: 基于足球比赛的球员追踪数据，特别选取角球这一高度结构化的比赛片段进行分析。",
+      "• 主要结论: 开发了新的防守贡献归因框架和角色条件幽灵模型，提供可解释的无球防守表现评估，相比传统方法更具战术上下文感知能力。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the framework could be adapted to quantify defensive inefficiencies in sports betting markets or player valuation models, but direct financial alpha is limited to niche applications.",
+      "• Implementation Risk: High; the model relies on high-quality player tracking data which is proprietary and expensive, and its generalization beyond corner kicks requires further validation.",
+      "• Novelty: Significant; introduces a label-free, context-aware approach to off-ball defense analysis, advancing beyond traditional ghosting models by incorporating tactical role assignments."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著；提出无监督、上下文感知的无球防守分析方法，通过角色条件幽灵模型超越传统平均行为模拟，在体育分析领域具有前沿性。",
+      "• 实盘坑: 高；依赖昂贵且专有的球员追踪数据，模型泛化性受限（仅角球场景），实际部署成本和技术门槛较高。",
+      "• 复现难度: 中等；方法基于标准机器学习框架（HMM），但需要特定足球数据集和领域知识进行调优，开源实现可能不完整。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2601.00747v1",
+    "title": "The Reasoning-Creativity Trade-off: Toward Creativity-Driven Problem Solving",
+    "pdf_url": "https://arxiv.org/pdf/2601.00747v1",
+    "published": "2026-01-02",
+    "crawled_at": "2026-01-05 20:03:23",
+    "ai_score": 8.5,
+    "translated_title": "推理-创造力权衡：迈向创造力驱动的问题解决",
+    "summary_en": [
+      "• Model Architecture: Introduces Distributional Creative Reasoning (DCR), a unified variational objective that frames training as gradient flow through probability measures on solution traces, encompassing methods like STaR, GRPO, and DPO as special cases.",
+      "• Data used: The paper does not specify explicit datasets but focuses on theoretical analysis and framework development for large language model (LLM) pipelines, likely based on synthetic or benchmark reasoning tasks.",
+      "• Performance metrics: Provides theoretical results including the diversity decay theorem, designs for stable and diverse policy convergence, and actionable recipes to prevent collapse in reasoning paths, emphasizing semantic entropy and creative problem-solving."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出分布创造性推理（DCR），一个统一的变分目标，将训练视为通过解迹概率测度的梯度流，涵盖STaR、GRPO和DPO等方法作为特例。",
+      "• 数据来源: 未明确指定具体数据集，侧重于大型语言模型（LLM）管道的理论分析和框架开发，可能基于合成或基准推理任务。",
+      "• 主要结论: 提供理论结果，包括多样性衰减定理、确保稳定和多样策略收敛的设计，以及防止推理路径崩溃的可操作方案，强调语义熵和创造性问题解决。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for enhancing LLM-based trading strategies by preventing reasoning collapse, which could improve creative problem-solving in market prediction and risk assessment, though direct financial applications are not tested.",
+      "• Implementation Risk: Moderate risk due to theoretical nature; practical implementation requires integration into existing LLM pipelines and validation on financial datasets, with potential challenges in tuning for domain-specific creativity.",
+      "• Novelty: High novelty as it offers the first principled framework to balance correctness and creativity in LLMs, addressing a key limitation in current reasoning methods with a unified variational approach."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高创新性，首次提出平衡LLM正确性和创造力的原则性框架，通过统一变分方法解决当前推理方法的关键限制。",
+      "• 实盘坑: 中等风险，理论性强，需集成到现有LLM管道并在金融数据集上验证，调优领域特定创造力可能面临挑战。",
+      "• 复现难度: 中等难度，框架设计相对简单，但依赖LLM基础设施和实验设置，复现需要专业知识在推理任务中应用DCR。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2601.00738v1",
+    "title": "Second Thoughts: How 1-second subslots transform CEX-DEX Arbitrage on Ethereum",
+    "pdf_url": "https://arxiv.org/pdf/2601.00738v1",
+    "published": "2026-01-02",
+    "crawled_at": "2026-01-05 20:03:40",
+    "ai_score": 7.8,
+    "translated_title": "再思考：1秒子时隙如何改变以太坊上的CEX-DEX套利",
+    "summary_en": [
+      "• Model Architecture: Develops a trading model where agents face execution risk for DEX transactions, comparing behavior under Ethereum's 12-second slot time versus 1-second subslot execution regimes.",
+      "• Data used: Calibrated simulations using Binance and Uniswap v3 data from July to September 2025.",
+      "• Performance metrics: Shows 535% increase in arbitrage transaction count and 203% increase in trading volume under 1-second subslots, driven by reduced variance in trade outcomes."
+    ],
+    "summary_cn": [
+      "• 核心模型: 构建交易模型，代理面临DEX交易执行风险，比较以太坊12秒时隙与1秒子时隙执行机制下的行为差异。",
+      "• 数据来源: 使用2025年7月至9月的币安和Uniswap v3数据进行校准模拟。",
+      "• 主要结论: 1秒子时隙下套利交易数量增加535%，交易量增加203%，归因于交易结果方差降低，提高了风险调整后收益。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; identifies structural advantage in faster execution times but relies on Ethereum protocol changes that may not materialize.",
+      "• Implementation Risk: High; dependent on Ethereum's adoption of 1-second subslots, which faces technical and consensus hurdles.",
+      "• Novelty: Limited; builds on existing arbitrage literature but applies it to emerging subslot execution concepts in blockchain."
+    ],
+    "verdict_cn": [
+      "• 创新点: 有限；基于现有套利文献，但应用于区块链中子时隙执行的新兴概念。",
+      "• 实盘坑: 高；依赖以太坊采用1秒子时隙，面临技术和共识障碍，实现不确定性大。",
+      "• 复现难度: 中等；模型相对简单，但需要访问未来数据和模拟以太坊协议变更。"
+    ],
+    "ai_strategy": "Arbitrage",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2601.00737v1",
+    "title": "Stochastic Actor-Critic: Mitigating Overestimation via Temporal Aleatoric Uncertainty",
+    "pdf_url": "https://arxiv.org/pdf/2601.00737v1",
+    "published": "2026-01-02",
+    "crawled_at": "2026-01-05 20:04:00",
+    "ai_score": 7.5,
+    "translated_title": "随机行动者-评论者：通过时间偶然不确定性缓解高估问题",
+    "summary_en": [
+      "• Model Architecture: STAC uses a single distributional critic network to model temporal aleatoric uncertainty (from stochastic transitions, rewards, and policy variability) and applies dropout to both critic and actor networks for regularization.",
+      "• Data used: The paper focuses on reinforcement learning environments with stochastic transitions and rewards, though specific datasets or benchmarks are not detailed in the abstract.",
+      "• Performance metrics: STAC achieves improved computational efficiency with a single critic network, mitigates overestimation, and leads to risk-averse behavior in stochastic environments, with dropout enhancing training stability and performance."
+    ],
+    "summary_cn": [
+      "• 核心模型: STAC采用单一分布评论者网络建模时间偶然不确定性（源于随机转移、奖励和政策变异性），并对评论者和行动者网络应用dropout进行正则化。",
+      "• 数据来源: 论文聚焦于具有随机转移和奖励的强化学习环境，但摘要中未详细说明具体数据集或基准测试。",
+      "• 主要结论: STAC通过单一评论者网络提高计算效率，有效缓解高估问题，在随机环境中自然产生风险规避行为，dropout进一步提升了训练稳定性和性能。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the method's risk-averse behavior in stochastic environments could be adapted for portfolio optimization or algorithmic trading under uncertainty, but direct financial applications are not explored.",
+      "• Implementation Risk: High; reliance on stochastic transitions and rewards may limit applicability to deterministic financial markets, and tuning dropout and distributional critic parameters could be challenging in real-world settings.",
+      "• Novelty: Significant; introducing temporal aleatoric uncertainty for pessimistic bias instead of epistemic uncertainty is a fresh approach, though building on existing distributional RL and dropout techniques."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著；利用时间偶然不确定性而非认知不确定性来引入悲观偏差，是强化学习领域的新思路，但基于现有分布RL和dropout技术。",
+      "• 实盘坑: 高；依赖随机转移和奖励可能限制其在确定性金融市场中的应用，且dropout和分布评论者参数调优在实盘中可能复杂。",
+      "• 复现难度: 中等；模型架构相对简洁，但需要处理随机环境和分布建模，可能涉及大量计算资源和调试工作。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2601.00728v1",
+    "title": "Precision Autotuning for Linear Solvers via Contextual Bandit-Based RL",
+    "pdf_url": "https://arxiv.org/pdf/2601.00728v1",
+    "published": "2026-01-02",
+    "crawled_at": "2026-01-05 20:04:20",
+    "ai_score": 7.5,
+    "translated_title": "基于上下文老虎机强化学习的线性求解器精度自动调优",
+    "summary_en": [
+      "• Model Architecture: Contextual bandit RL framework with Q-table mapping discretized features (e.g., condition number, matrix norm) to precision configurations, optimized via epsilon-greedy strategy for multi-objective reward balancing accuracy and computational cost.",
+      "• Data used: Linear systems Ax=b for iterative refinement; features calculated from system properties; tested on diverse out-of-sample datasets to verify generalization.",
+      "• Performance metrics: Reduced computational cost while maintaining accuracy comparable to double-precision baselines; demonstrated effective precision selection across unseen data."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于上下文老虎机的强化学习框架，使用Q表将离散化特征（如条件数、矩阵范数）映射到精度配置，通过epsilon-greedy策略优化多目标奖励以平衡精度和计算成本。",
+      "• 数据来源: 线性系统Ax=b的迭代精化应用；从系统属性计算特征；在多样化的样本外数据集上测试以验证泛化能力。",
+      "• 主要结论: 在保持与双精度基线相当的精度同时，有效降低了计算成本；框架在未见数据上表现出良好的泛化性能，可扩展至其他数值算法。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - framework offers adaptive precision tuning that could reduce computational overhead in quantitative models, but direct financial alpha generation is limited without specific market data integration.",
+      "• Implementation Risk: High - discretized state space and Q-table approach may not scale well to complex financial datasets; epsilon-greedy strategy introduces exploration-exploitation trade-offs that could impact real-time performance.",
+      "• Novelty: High - first RL-based precision autotuning work for linear solvers with verification on unseen datasets; advances mixed-precision methods in scientific computing with potential cross-application to algorithmic trading systems."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次将强化学习应用于线性求解器的精度自动调优，并在未见数据集上验证；采用上下文老虎机框架，为混合精度数值方法提供了新思路。",
+      "• 实盘坑: 离散化状态空间和Q表方法在复杂金融数据上可能难以扩展；epsilon-greedy策略的探索-利用权衡可能影响实时性能；缺乏市场数据集成，直接金融应用有限。",
+      "• 复现难度: 中等 - 框架相对清晰，但需要线性系统数据和特征工程；强化学习调参和奖励函数设计可能增加复现复杂性。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
     "id": "2512.25072v1",
     "title": "Coordinated Humanoid Manipulation with Choice Policies",
     "pdf_url": "https://arxiv.org/pdf/2512.25072v1",
