@@ -1,5 +1,331 @@
 [
   {
+    "id": "2601.02360v1",
+    "title": "Heterogeneous Low-Bandwidth Pre-Training of LLMs",
+    "pdf_url": "https://arxiv.org/pdf/2601.02360v1",
+    "published": "2026-01-05",
+    "crawled_at": "2026-01-06 20:01:28",
+    "ai_score": 7.8,
+    "translated_title": "大语言模型的异构低带宽预训练",
+    "summary_en": [
+      "• Model Architecture: Combines SparseLoCo (low-communication data parallelism) with pipeline model parallelism using activation and gradient compression, featuring heterogeneous participants where high-bandwidth nodes host full replicas while low-bandwidth nodes use compressed pipeline parallelism.",
+      "• Data used: Standard pretraining corpora for large-scale language modeling experiments, with model sizes ranging from 178M to 1B parameters.",
+      "• Performance metrics: Activation compression composes with SparseLoCo at modest cost; selective heterogeneous compression improves loss-communication tradeoff, especially at aggressive compression ratios, compared to compressing all replicas."
+    ],
+    "summary_cn": [
+      "• 核心模型: 结合SparseLoCo（低通信数据并行）与使用激活和梯度压缩的流水线模型并行，采用异构参与者架构，高带宽节点托管完整副本，低带宽节点使用压缩流水线并行。",
+      "• 数据来源: 标准预训练语料库，用于大规模语言建模实验，模型参数规模从1.78亿到10亿。",
+      "• 主要结论: 激活压缩与SparseLoCo结合成本适中；选择性异构压缩相比压缩所有副本，能改善损失-通信权衡，尤其在激进压缩比下效果更佳。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; enables LLM pre-training in bandwidth-constrained environments, potentially reducing infrastructure costs and expanding training to distributed, heterogeneous compute resources, which could lower barriers for smaller firms.",
+      "• Implementation Risk: High; requires careful tuning of compression ratios and synchronization frequencies, with potential for increased training instability or convergence issues in heterogeneous setups.",
+      "• Novelty: Significant; integrates sparse synchronization with pipeline compression in a heterogeneous framework, addressing scalability bottlenecks in distributed LLM training beyond well-provisioned datacenters."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著；在异构框架中整合稀疏同步与流水线压缩，解决分布式LLM训练在带宽受限环境下的可扩展性瓶颈，超越传统数据中心配置。",
+      "• 实盘坑: 高；需精细调整压缩比和同步频率，异构设置可能增加训练不稳定性或收敛问题，实际部署复杂。",
+      "• 复现难度: 中等偏高；依赖特定压缩算法和分布式协调，实验规模较大（1B参数），但开源代码和标准语料可能降低门槛。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2601.02353v1",
+    "title": "Meta-Learning Guided Pruning for Few-Shot Plant Pathology on Edge Devices",
+    "pdf_url": "https://arxiv.org/pdf/2601.02353v1",
+    "published": "2026-01-05",
+    "crawled_at": "2026-01-06 20:01:46",
+    "ai_score": 7.8,
+    "translated_title": "面向边缘设备少样本植物病理学的元学习引导剪枝方法",
+    "summary_en": [
+      "• Model Architecture: Proposes a three-stage Prune-then-Meta-Learn-then-Prune (PMP) pipeline with Disease-Aware Channel Importance Scoring (DACIS) for neural network pruning integrated with few-shot learning.",
+      "• Data used: Experiments conducted on PlantVillage and PlantDoc datasets, focusing on plant disease image classification with limited labeled examples.",
+      "• Performance metrics: Achieves 78% model size reduction while maintaining 92.3% of original accuracy, with compressed model running at 7 FPS on Raspberry Pi 4."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出三阶段剪枝-元学习-再剪枝（PMP）流程，结合疾病感知通道重要性评分（DACIS）进行神经网络剪枝与少样本学习集成。",
+      "• 数据来源: 使用PlantVillage和PlantDoc数据集进行实验，专注于有限标注样本的植物病害图像分类。",
+      "• 主要结论: 实现模型大小减少78%，同时保持92.3%的原始准确率，压缩模型在树莓派4上达到7帧/秒的推理速度。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - addresses practical edge deployment for agricultural applications but limited direct financial market applications; potential for specialized hardware optimization strategies.",
+      "• Implementation Risk: High - agricultural field conditions introduce environmental variability; edge device performance consistency unproven in real-world deployment.",
+      "• Novelty: Moderate - combines established pruning and meta-learning techniques with disease-specific importance scoring; incremental rather than breakthrough innovation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将剪枝与元学习结合，引入疾病感知评分机制，针对农业边缘计算场景进行优化，但技术组合较为常规。",
+      "• 实盘坑: 农业现场环境复杂多变，光照、角度等因素影响图像质量；边缘设备在野外条件下的稳定性和可靠性未经充分验证。",
+      "• 复现难度: 中等 - 依赖公开数据集和标准深度学习框架，但需要精细调参和硬件适配，农业领域专业知识可能成为瓶颈。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2601.02324v1",
+    "title": "Hunting for \"Oddballs\" with Machine Learning: Detecting Anomalous Exoplanets Using a Deep-Learned Low-Dimensional Representation of Transit Spectra with Autoencoders",
+    "pdf_url": "https://arxiv.org/pdf/2601.02324v1",
+    "published": "2026-01-05",
+    "crawled_at": "2026-01-06 20:02:13",
+    "ai_score": 7.5,
+    "translated_title": "利用机器学习寻找“异类”：基于自编码器低维表示的凌星光谱异常系外行星检测",
+    "summary_en": [
+      "• Model Architecture: Autoencoder-based dimensionality reduction combined with four anomaly detection methods (Autoencoder Reconstruction Loss, One-Class SVM, K-means Clustering, Local Outlier Factor) in both original spectral space and latent space.",
+      "• Data used: Atmospheric Big Challenge (ABC) database with over 100,000 simulated exoplanet spectra, defining CO2-rich atmospheres as anomalies and CO2-poor atmospheres as normal class.",
+      "• Performance metrics: Evaluated using ROC curves and AUC metrics across Gaussian noise levels from 10-50 ppm, with latent space methods consistently outperforming raw spectral space approaches.",
+      "• Key finding: K-means clustering in latent space demonstrated superior stability and performance, maintaining robustness up to 30 ppm noise (realistic space-based observation levels) and remaining viable at 50 ppm."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于自编码器的降维架构，结合四种异常检测方法（自编码器重建损失、一类支持向量机、K均值聚类、局部离群因子），在原始光谱空间和潜在空间进行对比分析。",
+      "• 数据来源: 使用大气大数据挑战（ABC）数据库，包含超过10万条模拟系外行星光谱，将CO2富集大气定义为异常类，CO2贫乏大气定义为正常类。",
+      "• 主要结论: 潜在空间中的异常检测在所有噪声水平下均表现更优，其中潜在空间K均值聚类方法稳定性最高，在30ppm噪声（符合实际空间观测水平）下保持稳健，在50ppm噪声下仍具可行性。",
+      "• 方法优势: 自编码器驱动的降维为大规模巡天中识别化学异常目标提供了计算高效的解决方案，避免了计算量巨大的详尽反演过程。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - The methodology could be adapted for financial anomaly detection in high-dimensional time series data (e.g., identifying unusual market regimes or outlier instruments), though direct financial application requires significant domain adaptation.",
+      "• Implementation Risk: High - Real-world financial data exhibits non-stationarity, regime changes, and complex noise structures that differ substantially from simulated exoplanet spectra; the 30ppm noise robustness may not translate to financial contexts.",
+      "• Novelty: Moderate - While autoencoders for anomaly detection are well-established, the systematic comparison of multiple methods across noise levels in both raw and latent spaces provides valuable empirical insights for robustness evaluation.",
+      "• Scalability Concern: The approach assumes anomalies are well-defined (CO2-rich vs poor), whereas financial anomalies are often ambiguous and context-dependent, requiring more sophisticated labeling strategies."
+    ],
+    "verdict_cn": [
+      "• 创新点: 在模拟系外行星光谱数据上系统比较了原始空间与潜在空间异常检测方法的噪声鲁棒性，为高维数据降维后的异常检测提供了实证基准。",
+      "• 实盘坑: 金融数据具有非平稳性、制度转换和复杂噪声结构，与模拟光谱数据差异显著；30ppm噪声鲁棒性结论难以直接迁移至金融场景。",
+      "• 复现难度: 中等 - 方法架构相对标准，但需要构建类似的大规模模拟数据集进行基准测试；金融领域应用需重新定义异常类别并处理实际数据质量问题。",
+      "• 迁移挑战: 该方法假设异常类别明确（CO2富集vs贫乏），而金融异常通常模糊且依赖上下文，需要更复杂的标签策略和领域适应技术。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2601.02316v1",
+    "title": "DatBench: Discriminative, Faithful, and Efficient VLM Evaluations",
+    "pdf_url": "https://arxiv.org/pdf/2601.02316v1",
+    "published": "2026-01-05",
+    "crawled_at": "2026-01-06 20:02:58",
+    "ai_score": 8.5,
+    "translated_title": "DatBench：判别性、忠实且高效的视觉语言模型评估基准",
+    "summary_en": [
+      "• Model Architecture: The paper does not propose a new VLM architecture but focuses on evaluation methodology. It critiques existing benchmarks and introduces DatBench, a curated suite of 33 datasets transformed to improve discriminability and efficiency.",
+      "• Data used: The work analyzes and cleans existing VLM evaluation datasets, identifying issues such as multiple-choice formats, blindly solvable questions (up to 70% in some cases), and mislabeled/ambiguous samples (up to 42%). It filters and transforms these to create DatBench-Full and a more efficient DatBench subset.",
+      "• Performance metrics: Key metrics include discriminability between models, faithfulness to modality/application, and computational efficiency. The paper reports capability drops of up to 35% when converting multiple-choice to generative tasks, and achieves a 13x average speedup (up to 50x) with DatBench while maintaining discriminative power."
+    ],
+    "summary_cn": [
+      "• 核心模型: 本文未提出新的视觉语言模型架构，而是专注于评估方法学。它批判现有基准测试，并引入DatBench——一个经过筛选和转换的33个数据集套件，旨在提升判别性和效率。",
+      "• 数据来源: 研究分析并清理了现有的VLM评估数据集，识别出多项问题：多项选择题格式、可盲目解答的问题（某些评估中占比高达70%）、以及错误标注或模糊样本（某些数据集中高达42%）。通过过滤和转换这些数据，创建了DatBench-Full和更高效的DatBench子集。",
+      "• 主要结论: 将多项选择题转换为生成式任务可揭示高达35%的能力下降；过滤盲目可解和错误标注样本能同时提升判别力并降低计算成本；DatBench实现了13倍平均加速（最高50倍），且判别能力接近原始数据集。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for alpha generation in quant strategies that rely on accurate model evaluation, as improved discriminability can lead to better selection of top-performing VLMs for financial applications like sentiment analysis or document processing.",
+      "• Implementation Risk: Moderate risk; while the methodology is clear, integrating DatBench into existing evaluation pipelines may require significant re-engineering, and the reliance on curated datasets could introduce biases if not properly validated.",
+      "• Novelty: High novelty in addressing critical gaps in VLM evaluation practices. The focus on faithfulness, discriminability, and efficiency provides a fresh framework that challenges conventional benchmarking approaches, though it builds on prior critique of evaluation datasets."
+    ],
+    "verdict_cn": [
+      "• 创新点: 创新性高，针对VLM评估中的关键缺陷提出系统性解决方案。强调忠实性、判别性和效率的三重标准，为评估实践提供了新框架，挑战了传统基准测试方法。",
+      "• 实盘坑: 中等风险；方法虽清晰，但将DatBench集成到现有评估流程可能需要大量重构工作，且依赖筛选后的数据集可能引入偏差，需谨慎验证。",
+      "• 复现难度: 中等难度；论文提供了详细的方法和数据集发布，但复现需要访问原始基准数据并进行复杂的数据清洗和转换，计算资源要求较高。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2601.02313v1",
+    "title": "Game of Coding: Coding Theory in the Presence of Rational Adversaries, Motivated by Decentralized Machine Learning",
+    "pdf_url": "https://arxiv.org/pdf/2601.02313v1",
+    "published": "2026-01-05",
+    "crawled_at": "2026-01-06 20:03:23",
+    "ai_score": 7.8,
+    "translated_title": "编码博弈：理性对手存在下的编码理论及其在去中心化机器学习中的应用",
+    "summary_en": [
+      "• Model Architecture: Introduces a game-theoretic framework called 'game of coding' that extends classical coding theory to trust-minimized decentralized systems, focusing on repetition coding as a case study.",
+      "• Data used: Theoretical analysis based on game theory and coding theory principles; no empirical datasets are mentioned, relying on mathematical modeling of rational adversaries in decentralized networks.",
+      "• Performance metrics: Achieves non-zero probability of data recovery even when adversarial nodes are in the majority, and demonstrates Sybil resistance where equilibrium remains stable despite increasing adversarial nodes.",
+      "• Key innovation: Contrasts with classical worst-case adversarial models by incorporating strategic rational behavior motivated by incentive structures in decentralized machine learning (DeML)."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出'编码博弈'这一博弈论框架，将经典编码理论扩展到信任最小化的去中心化系统，以重复编码为例进行分析。",
+      "• 数据来源: 基于博弈论和编码理论原理的理论分析，未使用实证数据集，依赖于对去中心化网络中理性对手的数学建模。",
+      "• 主要结论: 即使在对手节点占多数的情况下，也能实现非零的数据恢复概率，并展示出Sybil抗性，即均衡状态在对手节点增加时保持不变。",
+      "• 应用背景: 针对去中心化机器学习（DeML）等新兴应用，其中节点因贡献获得奖励，从而催生理性而非纯粹恶意的对手行为。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the framework could enable more robust decentralized systems in DeML and blockchain applications, potentially reducing reliance on majority-honest assumptions and improving fault tolerance in incentive-driven networks.",
+      "• Implementation Risk: High; theoretical nature with no empirical validation, and practical deployment faces challenges such as accurately modeling rational behavior, scalability issues, and integration with existing DeML protocols.",
+      "• Novelty: High; introduces a novel intersection of game theory and coding theory for rational adversaries, addressing a gap in classical models and offering fresh insights for trust-minimized decentralized computing.",
+      "• Limitations: Lacks concrete algorithms or simulations, and open problems (e.g., unknown adversary strategies) indicate the framework is still in early stages, requiring further research for real-world applicability."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；首次将博弈论与编码理论结合，针对理性对手模型，突破了经典最坏情况假设，为去中心化系统提供了新的理论视角。",
+      "• 实盘坑: 高；纯理论框架缺乏实证验证，实际部署需解决理性行为建模、可扩展性以及与现有DeML协议集成等难题，风险较大。",
+      "• 复现难度: 中；基于数学推导，复现理论分析相对直接，但实现具体应用（如编码方案）需额外开发，且未提供代码或详细算法。",
+      "• 潜在价值: 中；若能实证验证，可提升去中心化机器学习等系统的鲁棒性，减少对多数诚实节点的依赖，但当前仍处概念阶段。"
+    ],
+    "ai_strategy": "Crypto",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2601.02310v1",
+    "title": "Temporal Kolmogorov-Arnold Networks (T-KAN) for High-Frequency Limit Order Book Forecasting: Efficiency, Interpretability, and Alpha Decay",
+    "pdf_url": "https://arxiv.org/pdf/2601.02310v1",
+    "published": "2026-01-05",
+    "crawled_at": "2026-01-06 20:03:50",
+    "ai_score": 8.2,
+    "translated_title": "时序Kolmogorov-Arnold网络（T-KAN）在高频限价订单簿预测中的应用：效率、可解释性与Alpha衰减",
+    "summary_en": [
+      "• Model Architecture: Introduces Temporal Kolmogorov-Arnold Networks (T-KAN) that replace fixed linear weights in standard LSTMs with learnable B-spline activation functions to capture the 'shape' of market signals rather than just magnitude",
+      "• Data used: FI-2010 dataset containing high-frequency limit order book (LOB) data, which is notoriously noisy and non-linear",
+      "• Performance metrics: Achieves 19.1% relative improvement in F1-score at k=100 horizon compared to DeepLOB, generates 132.48% return versus -82.76% DeepLOB drawdown under 1.0 bps transaction costs",
+      "• Additional features: Model demonstrates interpretability through visible 'dead-zones' in splines and is optimized for low-latency FPGA implementation via High Level Synthesis (HLS)"
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出时序Kolmogorov-Arnold网络（T-KAN），用可学习的B样条激活函数替代标准LSTM的固定线性权重，以捕捉市场信号的'形态'而非仅幅度",
+      "• 数据来源: 使用FI-2010数据集中的高频限价订单簿（LOB）数据，该数据以噪声大和非线性著称",
+      "• 主要结论: 在k=100时间窗口上F1分数相对提升19.1%，在1.0基点交易成本下实现132.48%回报，而DeepLOB策略亏损82.76%",
+      "• 附加特性: 模型通过样条中的'死区'实现可解释性，并通过高级综合（HLS）优化实现低延迟FPGA部署"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Strong short-term alpha generation demonstrated with 132.48% returns, but long-term sustainability unproven beyond k=100 horizon; addresses alpha decay better than DeepLOB but may still face decay at longer horizons",
+      "• Implementation Risk: FPGA optimization suggests practical deployment potential, but real-world latency requirements and market microstructure changes could impact performance; transaction cost sensitivity not fully explored beyond 1.0 bps",
+      "• Novelty: Innovative application of Kolmogorov-Arnold networks to temporal financial data with B-spline activations; combines interpretability with performance in a domain dominated by black-box models",
+      "• Limitations: FI-2010 dataset is dated (2010); no comparison to state-of-the-art models beyond DeepLOB; hardware implementation details sparse in abstract"
+    ],
+    "verdict_cn": [
+      "• 创新点: 将Kolmogorov-Arnold网络与B样条激活函数结合应用于时序金融数据，在保持可解释性的同时提升预测性能，突破传统LSTM的线性权重限制",
+      "• 实盘坑: 基于2010年数据集，市场微观结构可能已发生变化；FPGA部署虽提及但具体延迟指标未披露；仅测试1.0基点成本，未覆盖更广泛的交易成本场景",
+      "• 复现难度: 代码已开源（GitHub），但FPGA实现需要专业硬件知识；B样条参数调优可能复杂；需处理FI-2010数据集的噪声和非线性特性",
+      "• 风险提示: 长期Alpha衰减问题仅部分解决，未验证k>100的表现；缺乏与最新模型（如Transformer变体）的对比；实际交易中的滑点和市场影响未评估"
+    ],
+    "ai_strategy": "High-Freq",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2601.02307v1",
+    "title": "Differential Privacy for Transformer Embeddings of Text with Nonparametric Variational Information Bottleneck",
+    "pdf_url": "https://arxiv.org/pdf/2601.02307v1",
+    "published": "2026-01-05",
+    "crawled_at": "2026-01-06 20:04:10",
+    "ai_score": 7.5,
+    "translated_title": "基于非参数变分信息瓶颈的Transformer文本嵌入差分隐私方法",
+    "summary_en": [
+      "• Model Architecture: Integrates a Nonparametric Variational Information Bottleneck (NVIB) layer into transformer architecture to inject noise into multi-vector embeddings, using Rényi divergence and Bayesian Differential Privacy (BDP) for privacy guarantees.",
+      "• Data used: Tested on the GLUE benchmark, which includes multiple natural language understanding tasks such as sentiment analysis and textual entailment.",
+      "• Performance metrics: Demonstrates a tradeoff between privacy and accuracy by varying noise levels; maintains high accuracy with lower noise while providing strong privacy protection."
+    ],
+    "summary_cn": [
+      "• 核心模型: 在Transformer架构中集成非参数变分信息瓶颈（NVIB）层，通过向多向量嵌入注入噪声实现差分隐私，使用Rényi散度和贝叶斯差分隐私（BDP）进行隐私度量。",
+      "• 数据来源: 在GLUE基准测试上进行评估，涵盖情感分析、文本蕴含等多种自然语言理解任务。",
+      "• 主要结论: 通过调整噪声水平实现隐私与准确性的权衡；在低噪声下保持高准确性并提供强隐私保护，有效平衡隐私与实用性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; useful for hedge funds handling sensitive text data (e.g., earnings calls, news) by enabling secure sharing of embeddings without compromising utility, potentially enhancing NLP-based strategies with privacy compliance.",
+      "• Implementation Risk: High; integrating NVIB into existing transformer models may require significant computational resources and fine-tuning, and real-world adversarial attacks could challenge the privacy guarantees in dynamic financial environments.",
+      "• Novelty: High; combines differential privacy with nonparametric variational methods for transformer embeddings, offering a novel approach to mitigate privacy risks in multi-vector representations, though similar concepts exist in other domains."
+    ],
+    "verdict_cn": [
+      "• 创新点: 较高；将差分隐私与非参数变分方法结合应用于Transformer嵌入，针对多向量表示提出新颖的隐私保护方案，尽管在其他领域有类似思路。",
+      "• 实盘坑: 高；将NVIB集成到现有Transformer模型可能需要大量计算资源和调优，且实际金融环境中的对抗性攻击可能威胁隐私保证的动态稳定性。",
+      "• 复现难度: 中等；基于公开的GLUE数据和标准Transformer架构，但NVIB层的实现和噪声校准需要专业知识，可能增加复现复杂性。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2601.02273v1",
+    "title": "TopoLoRA-SAM: Topology-Aware Parameter-Efficient Adaptation of Foundation Segmenters for Thin-Structure and Cross-Domain Binary Semantic Segmentation",
+    "pdf_url": "https://arxiv.org/pdf/2601.02273v1",
+    "published": "2026-01-05",
+    "crawled_at": "2026-01-06 20:04:34",
+    "ai_score": 8.2,
+    "translated_title": "TopoLoRA-SAM：面向细长结构与跨域二值语义分割的基础分割器拓扑感知参数高效适配方法",
+    "summary_en": [
+      "• Model Architecture: TopoLoRA-SAM injects Low-Rank Adaptation (LoRA) into a frozen ViT encoder, augmented with a lightweight spatial convolutional adapter and optional topology-aware supervision via differentiable clDice.",
+      "• Data used: Evaluated on five benchmarks: retinal vessel segmentation (DRIVE, STARE, CHASE_DB1), polyp segmentation (Kvasir-SEG), and SAR sea/land segmentation (SL-SSDD).",
+      "• Performance metrics: Achieved best retina-average Dice and best overall average Dice across datasets, training only 5.2% of model parameters (~4.9M). On CHASE_DB1, it substantially improved segmentation accuracy and robustness.",
+      "• Comparison: Outperformed U-Net, DeepLabV3+, SegFormer, and Mask2Former, matching or exceeding fully fine-tuned specialist models."
+    ],
+    "summary_cn": [
+      "• 核心模型: TopoLoRA-SAM 在冻结的 ViT 编码器中注入低秩适配（LoRA），并增强轻量级空间卷积适配器和可选的基于可微分 clDice 的拓扑感知监督。",
+      "• 数据来源: 在五个基准数据集上评估：视网膜血管分割（DRIVE、STARE、CHASE_DB1）、息肉分割（Kvasir-SEG）和 SAR 海陆分割（SL-SSDD）。",
+      "• 主要结论: 在仅训练 5.2% 模型参数（约 490 万）的情况下，实现了最佳视网膜平均 Dice 和最佳整体平均 Dice。在 CHASE_DB1 上显著提升了分割准确性和鲁棒性。",
+      "• 对比结果: 优于 U-Net、DeepLabV3+、SegFormer 和 Mask2Former，匹配或超越了完全微调的专家模型。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for medical imaging and remote sensing applications where thin-structure segmentation is critical; parameter efficiency enables deployment on edge devices for real-time analysis.",
+      "• Implementation Risk: Moderate; dependency on foundation models like SAM may limit adaptability to proprietary datasets, and topology-aware supervision adds computational overhead.",
+      "• Novelty: Strong; combines LoRA with topology-aware loss (clDice) for parameter-efficient adaptation, addressing catastrophic forgetting and domain shift in binary segmentation tasks.",
+      "• Scalability: Limited to binary segmentation; extension to multi-class scenarios requires further validation and may increase complexity."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将 LoRA 与拓扑感知损失（clDice）结合，实现参数高效适配，有效解决灾难性遗忘和域偏移问题，在细长结构分割中表现突出。",
+      "• 实盘坑: 依赖 SAM 等基础模型，可能限制对专有数据集的适应性；拓扑感知监督增加计算开销，影响实时性能。",
+      "• 复现难度: 中等；代码已开源，但需要特定数据集和计算资源，拓扑感知组件的调参可能复杂。",
+      "• 应用局限: 目前仅适用于二值分割任务，扩展到多类别场景需进一步验证，可能增加模型复杂性。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2601.02265v1",
+    "title": "Predicting Early and Complete Drug Release from Long-Acting Injectables Using Explainable Machine Learning",
+    "pdf_url": "https://arxiv.org/pdf/2601.02265v1",
+    "published": "2026-01-05",
+    "crawled_at": "2026-01-06 20:05:01",
+    "ai_score": 7.8,
+    "translated_title": "利用可解释机器学习预测长效注射剂的早期和完全药物释放",
+    "summary_en": [
+      "• Model Architecture: The paper employs an explainable machine learning framework with Shapley additive explanations (SHAP) for interpretability, using a time-independent approach to predict drug release profiles, including classification of release types and prediction of complete release curves.",
+      "• Data used: The study analyzes 321 long-acting injectable (LAI) formulations, focusing on physicochemical properties and drug release data at early time points (24, 48, 72 hours) and complete release profiles.",
+      "• Performance metrics: Achieves a strong correlation (>0.65) between true and predicted drug release at 72 hours, with a 0.87 F1-score for classifying release profile types, and outperforms current time-dependent methods in predicting delayed biphasic and triphasic curves.",
+      "• Key findings: The approach identifies material characteristics that influence early and complete drug release, providing actionable insights for optimizing LAI formulations, with publicly available source code for model implementation."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用可解释机器学习框架，结合Shapley加性解释（SHAP）提高模型透明度，使用时间无关方法预测药物释放曲线，包括释放类型分类和完全释放曲线预测。",
+      "• 数据来源: 基于321种长效注射剂（LAI）配方的数据，涵盖物理化学特性和药物释放数据，重点关注早期时间点（24、48、72小时）和完全释放曲线。",
+      "• 主要结论: 在72小时药物释放预测中实现强相关性（>0.65），释放类型分类的F1分数达0.87，在预测延迟双相和三相曲线方面优于现有时间依赖方法，揭示了影响释放的关键材料特性。",
+      "• 应用价值: 为科学家优化LAI药物释放动力学提供定量策略和建议，模型源代码已公开，便于复现和扩展。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the explainable ML approach could be adapted for financial time-series prediction or risk modeling by identifying key drivers in complex systems, but direct application to trading is limited due to the biomedical focus.",
+      "• Implementation Risk: High; translating the methodology to financial markets requires significant domain adaptation, as the data structure and objectives differ substantially from LAI formulations, increasing integration challenges.",
+      "• Novelty: High; the combination of time-independent ML with SHAP for interpretability in drug release prediction is innovative, offering a template for explainable AI in other domains, though novelty in core ML techniques is moderate.",
+      "• Practical limitations: The study relies on in-vitro data, which may not fully capture real-world variability, and the model's performance on unseen formulations or external datasets is untested, posing generalization risks."
+    ],
+    "verdict_cn": [
+      "• 创新点: 较高；将时间无关机器学习与SHAP可解释性结合用于药物释放预测，提供了一种跨领域可解释AI的模板，但在核心机器学习技术上创新性一般。",
+      "• 实盘坑: 高；该方法应用于金融市场需大量领域适配，因数据结构和目标与LAI配方差异大，集成风险显著，且依赖体外数据可能无法完全反映实际变异性。",
+      "• 复现难度: 中等；源代码公开降低了技术壁垒，但需要专业领域知识处理LAI数据，且模型在未见配方或外部数据集上的泛化能力未经验证，存在不确定性。",
+      "• 潜在价值: 中等；可解释ML框架可能用于金融时间序列预测或风险建模，识别复杂系统中的关键驱动因素，但直接交易应用受限。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2601.00794v1",
     "title": "Two Deep Learning Approaches for Automated Segmentation of Left Ventricle in Cine Cardiac MRI",
     "pdf_url": "https://arxiv.org/pdf/2601.00794v1",
