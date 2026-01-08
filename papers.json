@@ -1,5 +1,368 @@
 [
   {
+    "id": "2601.04181v1",
+    "title": "Lightweight Test-Time Adaptation for EMG-Based Gesture Recognition",
+    "pdf_url": "https://arxiv.org/pdf/2601.04181v1",
+    "published": "2026-01-07",
+    "crawled_at": "2026-01-08 20:01:31",
+    "ai_score": 7.8,
+    "translated_title": "基于EMG手势识别的轻量级测试时自适应方法",
+    "summary_en": [
+      "• Model Architecture: Temporal Convolutional Network (TCN) backbone with three TTA strategies: causal adaptive batch normalization, Gaussian Mixture Model alignment with experience replay, and meta-learning for few-shot calibration.",
+      "• Data used: NinaPro DB6 multi-session dataset, focusing on inter-session performance to address signal drift from electrode shifts, muscle fatigue, and posture changes.",
+      "• Performance metrics: Significantly bridges inter-session accuracy gap with minimal overhead; experience-replay updates provide superior stability under limited data, while meta-learning achieves competitive performance in one- and two-shot regimes using only a fraction of benchmark data requirements."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于时序卷积网络（TCN）的轻量级测试时自适应框架，包含因果自适应批归一化、高斯混合模型对齐与经验回放、以及元学习三种策略。",
+      "• 数据来源: 使用NinaPro DB6多会话数据集，重点解决电极移位、肌肉疲劳和姿势变化导致的信号漂移问题。",
+      "• 主要结论: 在最小开销下显著缩小会话间准确率差距；经验回放更新在有限数据下提供更优稳定性，元学习在一到两个样本的校准场景中仅需少量数据即可达到基准性能。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for real-time prosthetic control applications where signal drift degrades performance; lightweight TTA enables 'plug-and-play' usability with minimal calibration, potentially reducing user burden and improving long-term reliability.",
+      "• Implementation Risk: Moderate; while strategies are deployment-ready, real-world variability in EMG signals (e.g., skin conditions, movement artifacts) may require additional robustness testing beyond controlled datasets.",
+      "• Novelty: Strong in combining TTA with EMG decoding; the integration of causal adaptive batch normalization and GMM alignment with experience replay addresses forgetting issues, though meta-learning for few-shot calibration is an established technique in other domains."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将测试时自适应（TTA）引入EMG手势识别，结合因果自适应批归一化和高斯混合模型对齐，有效缓解信号漂移和遗忘问题，支持轻量级实时部署。",
+      "• 实盘坑: 实际应用中EMG信号受皮肤状态、运动伪影等影响更大，需在真实穿戴场景中验证鲁棒性；经验回放可能增加存储和计算开销，需平衡性能与资源限制。",
+      "• 复现难度: 中等；基于公开数据集和标准TCN架构，但实现因果自适应批归一化和GMM对齐需精细调参，元学习部分依赖少量样本的快速校准，可能对数据质量敏感。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2601.04176v1",
+    "title": "Robust Physics Discovery from Highly Corrupted Data: A PINN Framework Applied to the Nonlinear Schrödinger Equation",
+    "pdf_url": "https://arxiv.org/pdf/2601.04176v1",
+    "published": "2026-01-07",
+    "crawled_at": "2026-01-08 20:01:51",
+    "ai_score": 8.2,
+    "translated_title": "从高度污染数据中稳健发现物理规律：应用于非线性薛定谔方程的PINN框架",
+    "summary_en": [
+      "• Model Architecture: Physics-Informed Neural Networks (PINNs) integrated with automatic differentiation to solve inverse problems in spatiotemporal dynamics.",
+      "• Data used: 500 sparse, randomly sampled data points corrupted by 20% additive Gaussian noise, with validation across 100-1000 training points and beta values between 0.5-2.0.",
+      "• Performance metrics: Achieves less than 0.2% relative error in reconstructing nonlinear coefficient beta, with sub-1% accuracy across regimes and standard deviation below 0.15% for beta=1.0.",
+      "• Computational efficiency: Complete pipeline executes in approximately 80 minutes on NVIDIA Tesla T4 GPU, making it accessible for widespread adoption."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于物理信息神经网络（PINNs）结合自动微分，用于解决时空动力学中的反问题。",
+      "• 数据来源: 使用500个稀疏随机采样数据点，添加20%高斯噪声，并在100-1000个训练点和beta值0.5-2.0范围内验证。",
+      "• 主要结论: 在高度噪声环境下成功恢复非线性系数beta，相对误差低于0.2%，泛化能力强，标准差小于0.15%。",
+      "• 计算效率: 在NVIDIA Tesla T4 GPU上约80分钟完成全流程，便于实际应用。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for extracting hidden parameters from noisy financial time series data where traditional methods fail due to noise amplification.",
+      "• Implementation Risk: Moderate risk due to dependency on accurate physical models; incorrect model assumptions could lead to significant errors in parameter estimation.",
+      "• Novelty: Significant novelty in applying PINNs to highly corrupted data regimes, demonstrating robustness where finite difference methods typically fail.",
+      "• Reproducibility: Low risk as code is publicly available, but requires expertise in deep learning and physics modeling for successful deployment."
+    ],
+    "verdict_cn": [
+      "• 创新点: 在传统数值方法失效的高噪声环境下，利用PINNs成功恢复物理参数，展示了物理正则化对测量不确定性的有效过滤能力。",
+      "• 实盘坑: 高度依赖准确的物理模型假设，若模型偏差可能导致参数估计错误；计算资源需求可能限制高频交易应用。",
+      "• 复现难度: 代码公开降低了复现门槛，但需要深度学习和物理建模专业知识，对数据预处理和超参数调优要求较高。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2601.04171v1",
+    "title": "Agentic Rubrics as Contextual Verifiers for SWE Agents",
+    "pdf_url": "https://arxiv.org/pdf/2601.04171v1",
+    "published": "2026-01-07",
+    "crawled_at": "2026-01-08 20:02:14",
+    "ai_score": 7.8,
+    "translated_title": "作为软件工程智能体上下文验证器的代理式评分标准",
+    "summary_en": [
+      "• Model Architecture: Agentic Rubrics framework where an expert agent interacts with code repositories to create context-grounded rubric checklists, then scores candidate patches against these rubrics without test execution",
+      "• Data used: SWE-Bench Verified dataset for software engineering tasks, evaluated on Qwen3-Coder-30B-A3B and Qwen3-32B models",
+      "• Performance metrics: Achieved 54.2% score on Qwen3-Coder-30B-A3B and 40.6% on Qwen3-32B, with +3.5 percentage-point gain over strongest baseline in parallel TTS evaluation",
+      "• Key innovation: Replaces traditional code execution verification with context-aware rubric-based scoring that captures issues tests miss while maintaining consistency with ground-truth tests"
+    ],
+    "summary_cn": [
+      "• 核心模型: 代理式评分标准框架，专家代理与代码库交互创建基于上下文的评分清单，无需测试执行即可对候选补丁进行评分",
+      "• 数据来源: SWE-Bench Verified软件工程任务数据集，在Qwen3-Coder-30B-A3B和Qwen3-32B模型上评估",
+      "• 主要结论: 在并行测试时扩展评估中，Qwen3-Coder-30B-A3B得分54.2%，Qwen3-32B得分40.6%，比最强基线至少提升3.5个百分点",
+      "• 技术优势: 通过上下文感知的评分标准替代传统代码执行验证，既能捕获测试遗漏的问题，又与真实测试结果保持一致"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - provides scalable verification signal for SWE agents that could improve automated coding systems, but direct financial alpha generation unclear",
+      "• Implementation Risk: High - requires expert agent setup and repository interaction, creating deployment complexity; rubric consistency depends heavily on agent quality",
+      "• Novelty: High - innovative approach to verification without test execution, addressing scaling limitations of traditional methods while maintaining interpretability",
+      "• Limitations: Performance gains modest (+3.5pp), requires substantial computational resources for agentic context gathering, and SWE-Bench may not represent real-world financial coding tasks"
+    ],
+    "verdict_cn": [
+      "• 创新点: 高 - 无需测试执行的验证方法创新，解决传统方法扩展性限制，同时保持可解释性，代理式上下文收集是关键突破",
+      "• 实盘坑: 高 - 需要专家代理设置和代码库交互，部署复杂；评分标准一致性严重依赖代理质量；计算资源需求大",
+      "• 复现难度: 中等偏高 - 需要完整的代理框架和SWE-Bench环境，但论文提供了足够的方法细节；性能提升有限（仅+3.5个百分点）",
+      "• 金融应用: 有限 - 主要针对软件工程任务，直接金融应用需适配；可作为自动化交易系统代码验证的参考框架"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2601.04164v1",
+    "title": "Clinical Data Goes MEDS? Let's OWL make sense of it",
+    "pdf_url": "https://arxiv.org/pdf/2601.04164v1",
+    "published": "2026-01-07",
+    "crawled_at": "2026-01-08 20:02:36",
+    "ai_score": 7.2,
+    "translated_title": "临床数据采用MEDS标准？让OWL来解读它",
+    "summary_en": [
+      "• Model Architecture: Introduces MEDS-OWL, a lightweight OWL ontology with 13 classes, 10 object properties, 20 data properties, and 24 axioms, designed to represent MEDS datasets as RDF graphs, and meds2rdf, a Python library for conversion.",
+      "• Data used: Synthetic clinical dataset describing patient care pathways for ruptured intracranial aneurysms, validated using SHACL constraints to ensure data integrity and conformance.",
+      "• Performance metrics: Enables transformation into FAIR-aligned datasets, supports provenance-aware publishing, and enhances interoperability of event-based clinical data, though no quantitative benchmarks are provided."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出MEDS-OWL，一个轻量级OWL本体，包含13个类、10个对象属性、20个数据属性和24个公理，用于将MEDS数据集表示为RDF图，并开发meds2rdf Python库进行转换。",
+      "• 数据来源: 使用合成临床数据集，描述颅内动脉瘤破裂患者的护理路径，通过SHACL约束验证以确保数据一致性和合规性。",
+      "• 主要结论: 该方法能将数据转换为符合FAIR原则的数据集，支持溯源感知发布，并提升基于事件的临床数据的互操作性，为后续图分析奠定基础。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low to moderate; bridges MEDS with Semantic Web for improved data interoperability in healthcare, potentially enabling better ML models through standardized event-based data, but direct financial alpha is limited without specific trading applications.",
+      "• Implementation Risk: High; relies on adoption of MEDS and Semantic Web standards in clinical settings, which faces regulatory and integration challenges; meds2rdf library may require maintenance for real-world data complexities.",
+      "• Novelty: Moderate; introduces a semantic layer for MEDS data using OWL, but builds on existing standards like RDF and SHACL; contribution is more in integration than groundbreaking innovation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；通过OWL本体将MEDS标准与语义网结合，为临床事件数据提供可重用的语义层，但更多是集成现有技术而非突破性创新。",
+      "• 实盘坑: 高；依赖MEDS和语义网标准在医疗领域的采纳，面临监管和系统集成障碍；meds2rdf库在处理真实世界数据时可能需应对复杂性和维护问题。",
+      "• 复现难度: 中等；基于开源Python库和标准工具，但需要合成数据集和SHACL验证，可能受限于数据可用性和领域专业知识。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2601.04163v1",
+    "title": "Scanner-Induced Domain Shifts Undermine the Robustness of Pathology Foundation Models",
+    "pdf_url": "https://arxiv.org/pdf/2601.04163v1",
+    "published": "2026-01-07",
+    "crawled_at": "2026-01-08 20:03:01",
+    "ai_score": 7.8,
+    "translated_title": "扫描仪诱导的领域偏移削弱病理学基础模型的鲁棒性",
+    "summary_en": [
+      "• Model Architecture: The study evaluates 14 pathology foundation models (PFMs), including state-of-the-art models, earlier self-supervised models, and a baseline trained on natural images, with a focus on their robustness to scanner-induced domain shifts.",
+      "• Data used: A multiscanner dataset of 384 breast cancer whole-slide images (WSIs) scanned on five different devices, designed to isolate scanner effects from biological and laboratory confounders.",
+      "• Performance metrics: Robustness is assessed through unsupervised embedding analyses and supervised prediction tasks for clinicopathological outcomes, with metrics including AUC stability, embedding space variability, and calibration of downstream predictions.",
+      "• Key finding: Current PFMs are not invariant to scanner variability; most encode scanner-specific information in embeddings, leading to scanner-dependent bias that can impact clinical reliability, despite stable AUC in some cases."
+    ],
+    "summary_cn": [
+      "• 核心模型: 评估了14个病理学基础模型（PFMs），包括最先进的模型、早期自监督模型和基于自然图像训练的基线模型，重点关注其对扫描仪诱导领域偏移的鲁棒性。",
+      "• 数据来源: 使用包含384个乳腺癌全切片图像的多扫描仪数据集，这些图像在五种不同设备上扫描，旨在隔离扫描仪效应与生物和实验室混杂因素。",
+      "• 主要结论: 当前PFMs对扫描仪变异性不具有不变性；大多数模型在嵌入空间中编码了显著的扫描仪特异性信息，导致扫描仪依赖性偏差，可能影响临床可靠性，尽管在某些情况下AUC保持稳定。",
+      "• 评估方法: 通过无监督嵌入分析和有监督的临床病理预测任务评估鲁棒性，重点关注嵌入空间稳定性和下游预测的校准。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the paper identifies a critical failure mode in PFMs (scanner-dependent bias) that could be exploited for alpha if models are improved for robustness, but current models show limited direct trading applicability.",
+      "• Implementation Risk: High; the findings highlight significant risks in deploying PFMs in real-world clinical or financial contexts due to unreliable robustness, which could lead to biased predictions and operational failures.",
+      "• Novelty: High; the study systematically evaluates PFM robustness to scanner variability, moving beyond accuracy-centric benchmarks to focus on embedding stability and calibration, a novel approach in computational pathology.",
+      "• Practical implication: The work underscores the need for explicit evaluation of domain shifts in model development, which could inform better risk management strategies in AI-driven applications."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；研究系统评估了PFMs对扫描仪变异性的鲁棒性，超越了以准确性为中心的基准，专注于嵌入稳定性和校准，这在计算病理学中是一种新颖的方法。",
+      "• 实盘坑: 高；发现揭示了在现实世界临床或金融环境中部署PFMs的重大风险，由于鲁棒性不可靠，可能导致预测偏差和操作失败。",
+      "• 复现难度: 中等；研究使用了公开可用的多扫描仪数据集和标准评估方法，但需要专业病理学知识和计算资源来复现实验和分析结果。",
+      "• 策略启示: 强调了在模型开发中明确评估领域偏移的必要性，可为AI驱动应用中的风险管理策略提供参考。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2601.04160v1",
+    "title": "All That Glisters Is Not Gold: A Benchmark for Reference-Free Counterfactual Financial Misinformation Detection",
+    "pdf_url": "https://arxiv.org/pdf/2601.04160v1",
+    "published": "2026-01-07",
+    "crawled_at": "2026-01-08 20:03:24",
+    "ai_score": 7.2,
+    "translated_title": "闪光的不都是金子：一个无参考反事实金融虚假信息检测基准",
+    "summary_en": [
+      "• Model Architecture: The paper introduces RFC Bench, a benchmark designed to evaluate large language models (LLMs) on financial misinformation detection, focusing on paragraph-level analysis and contextual complexity without requiring reference documents.",
+      "• Data used: The benchmark utilizes realistic financial news paragraphs, capturing dispersed cues and contextual nuances, and includes paired original and perturbed inputs for comparative diagnosis tasks.",
+      "• Performance metrics: Experiments reveal significant performance gaps: models perform substantially better with comparative context (paired inputs) than in reference-free settings, where they exhibit unstable predictions and elevated invalid outputs.",
+      "• Key finding: Current LLMs struggle to maintain coherent belief states without external grounding, highlighting weaknesses in reference-free reasoning for financial misinformation detection."
+    ],
+    "summary_cn": [
+      "• 核心模型: 论文提出RFC Bench基准，用于评估大语言模型在金融虚假信息检测中的表现，专注于段落级分析和无参考的上下文复杂性。",
+      "• 数据来源: 使用真实的金融新闻段落，捕捉分散的线索和上下文细微差别，并包含成对的原始和扰动输入用于比较诊断任务。",
+      "• 主要结论: 实验显示显著性能差距：模型在有比较上下文（成对输入）时表现明显更好，而在无参考设置中表现出预测不稳定和无效输出增加。",
+      "• 关键发现: 当前大语言模型在没有外部基础的情况下难以保持一致的信念状态，突显了金融虚假信息检测中无参考推理的弱点。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate—RFC Bench provides a structured testbed for improving financial misinformation detection, which could enhance sentiment analysis and risk assessment in trading strategies if models are refined.",
+      "• Implementation Risk: High—The benchmark exposes significant weaknesses in current LLMs, including unstable predictions and invalid outputs in reference-free settings, making direct deployment risky without further model development.",
+      "• Novelty: High—The focus on reference-free counterfactual detection in financial contexts is innovative, addressing a gap in realistic news analysis where reference documents are often unavailable.",
+      "• Practical challenge: The reliance on comparative context for better performance limits real-world applicability, as such paired data may not always be accessible in live financial news feeds."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高—专注于金融上下文中的无参考反事实检测具有创新性，解决了现实新闻分析中参考文档常不可用的空白。",
+      "• 实盘坑: 高—基准暴露了当前大语言模型的显著弱点，包括无参考设置中的预测不稳定和无效输出，未经进一步模型开发直接部署风险大。",
+      "• 复现难度: 中等—基准结构清晰，但需要真实的金融新闻数据和扰动处理，可能涉及数据收集和预处理挑战。",
+      "• 应用限制: 依赖比较上下文以获得更好性能限制了实际应用，因为这种成对数据在实时金融新闻流中可能不总是可用。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2601.04157v1",
+    "title": "FLEx: Language Modeling with Few-shot Language Explanations",
+    "pdf_url": "https://arxiv.org/pdf/2601.04157v1",
+    "published": "2026-01-07",
+    "crawled_at": "2026-01-08 20:03:43",
+    "ai_score": 7.8,
+    "translated_title": "FLEx：基于少样本语言解释的语言建模",
+    "summary_en": [
+      "• Model Architecture: FLEx uses embedding-based clustering to select representative model errors, verifies explanations correct those errors, and summarizes them into a prompt prefix prepended at inference-time without modifying model weights.",
+      "• Data used: Evaluated on CounterBench, GSM8K, and ReasonIF datasets, focusing on tasks like math problem solving and open-domain question answering where natural language explanations are valuable.",
+      "• Performance metrics: Consistently outperforms chain-of-thought (CoT) prompting across all three datasets, reducing up to 83% of CoT's remaining errors, demonstrating significant error correction efficiency."
+    ],
+    "summary_cn": [
+      "• 核心模型: FLEx采用基于嵌入的聚类选择代表性模型错误，验证相关解释纠正这些错误，并将解释总结为推理时前置的提示前缀，不修改模型权重。",
+      "• 数据来源: 在CounterBench、GSM8K和ReasonIF数据集上评估，涵盖数学问题求解和开放域问答等任务，这些任务中自然语言解释具有重要价值。",
+      "• 主要结论: 在三个数据集上均持续优于思维链提示，减少了高达83%的思维链剩余错误，显示出高效的错误纠正能力。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for NLP/LLM strategies, as FLEx improves model accuracy without retraining, potentially reducing systematic errors in financial text analysis or sentiment prediction tasks with minimal data annotation costs.",
+      "• Implementation Risk: Moderate; relies on quality of few-shot explanations and clustering effectiveness, which may vary across domains, and prompt engineering could introduce instability in real-time applications.",
+      "• Novelty: Significant; introduces a novel few-shot explanation framework that leverages error clustering and summarization, addressing scalability issues in expert annotation domains, though builds on existing prompting techniques."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著；提出新颖的少样本解释框架，利用错误聚类和总结，解决专家标注领域的可扩展性问题，但基于现有提示技术构建。",
+      "• 实盘坑: 中等；依赖少样本解释质量和聚类效果，这可能因领域而异，提示工程可能在实时应用中引入不稳定性。",
+      "• 复现难度: 中等；需要实现嵌入聚类和解释验证步骤，但开源数据和代码可用性可能降低门槛，适合有NLP经验的团队。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2601.04149v1",
+    "title": "A Theoretical and Empirical Taxonomy of Imbalance in Binary Classification",
+    "pdf_url": "https://arxiv.org/pdf/2601.04149v1",
+    "published": "2026-01-07",
+    "crawled_at": "2026-01-08 20:04:08",
+    "ai_score": 8.2,
+    "translated_title": "二分类不平衡的理论与实证分类法",
+    "summary_en": [
+      "• Model Architecture: Proposes a theoretical framework based on Gaussian Bayes classifier with three key parameters: imbalance coefficient (η), sample-dimension ratio (κ), and intrinsic separability (Δ). Derives closed-form Bayes errors and discriminant boundary shifts.",
+      "• Data used: Balanced high-dimensional genomic dataset where only the imbalance coefficient η is systematically varied while keeping κ and Δ fixed to isolate imbalance effects.",
+      "• Performance metrics: Analyzes Recall, Precision, F1-score, and PR-AUC across parametric and non-parametric models, showing empirical degradation aligns with theoretical predictions of four regimes (Normal, Mild, Extreme, Catastrophic).",
+      "• Key finding: Minority Recall collapses when log(η) exceeds Δ√κ, while Precision increases asymmetrically, providing a model-agnostic explanation of imbalance deterioration."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于高斯贝叶斯分类器构建理论框架，引入三个基本尺度：不平衡系数η、样本-维度比κ和内在可分性Δ，推导闭式贝叶斯误差和判别边界偏移。",
+      "• 数据来源: 使用平衡的高维基因组数据集，仅系统改变不平衡系数η，保持κ和Δ固定，以隔离不平衡效应。",
+      "• 主要结论: 经验退化与理论预测一致，少数类召回率在log(η)超过Δ√κ时崩溃，精确度非对称增加，F1分数和PR-AUC下降，揭示了四个不平衡退化机制（正常、轻度、极端、灾难性）。",
+      "• 理论贡献: 三元组(η,κ,Δ)提供了模型无关、几何基础的不平衡退化解释，预测了退化斜率。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate—provides a principled framework to diagnose and mitigate imbalance in financial datasets (e.g., rare event prediction), potentially improving model robustness in imbalanced scenarios like fraud detection or default prediction.",
+      "• Implementation Risk: High—theoretical assumptions (Gaussian distributions, fixed κ and Δ) may not hold in noisy, non-stationary financial data; isolating imbalance effects in practice is challenging due to confounding factors.",
+      "• Novelty: High—unifies imbalance analysis through a geometric, parameterized framework with closed-form predictions, offering a taxonomy of regimes beyond ad-hoc techniques like SMOTE or class weighting.",
+      "• Practical limitation: Framework is descriptive rather than prescriptive; does not provide direct algorithmic solutions for imbalance correction, limiting immediate trading signal generation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高—首次从统一理论视角分析不平衡问题，基于几何基础的三元组(η,κ,Δ)框架，推导闭式预测和退化机制分类，超越传统启发式方法。",
+      "• 实盘坑: 高—理论假设（高斯分布、固定κ和Δ）在金融噪声数据中可能不成立；实际中隔离不平衡效应困难，因市场非平稳性和混杂变量干扰。",
+      "• 复现难度: 中等—方法清晰，但需高维平衡数据集作为基准，金融数据中难以精确控制κ和Δ，实验设置可能过于理想化。",
+      "• 应用局限: 框架为描述性而非处方性，未提供直接的不平衡校正算法，对即时交易信号生成帮助有限。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2601.04131v1",
+    "title": "ContextFocus: Activation Steering for Contextual Faithfulness in Large Language Models",
+    "pdf_url": "https://arxiv.org/pdf/2601.04131v1",
+    "published": "2026-01-07",
+    "crawled_at": "2026-01-08 20:04:27",
+    "ai_score": 7.8,
+    "translated_title": "ContextFocus：大型语言模型中基于激活引导的上下文忠实性增强方法",
+    "summary_en": [
+      "• Model Architecture: ContextFocus is a lightweight activation steering approach that modifies LLM activations during inference to prioritize external context over internal parametric knowledge, requiring no model fine-tuning.",
+      "• Data used: Evaluated on the ConFiQA benchmark, which tests knowledge-conflict scenarios where retrieved evidence contradicts the model's memorized facts, with comparisons to baselines like ContextDPO and COIECD.",
+      "• Performance metrics: Significantly improves contextual-faithfulness in outputs while preserving fluency and efficiency, with minimal inference-time overhead and effectiveness on larger models."
+    ],
+    "summary_cn": [
+      "• 核心模型: ContextFocus是一种轻量级激活引导方法，在推理时调整LLM的激活状态，以优先考虑外部上下文而非内部参数化知识，无需模型微调。",
+      "• 数据来源: 使用ConFiQA基准进行评估，该基准测试知识冲突场景（检索证据与模型记忆事实相矛盾），并与ContextDPO、COIECD等基线方法对比。",
+      "• 主要结论: 在保持流畅性和效率的同时，显著提升上下文忠实性，推理开销极小，且在更大模型上仍有效。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; improves LLM reliability in dynamic information environments (e.g., financial news analysis), but direct trading alpha may be limited without integration into broader systems.",
+      "• Implementation Risk: Low; no fine-tuning reduces deployment complexity, but activation steering might introduce subtle biases or instability in edge cases.",
+      "• Novelty: High; addresses knowledge-conflict issues via efficient inference-time intervention, complementing rather than replacing existing methods like prompting."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；通过推理时激活引导解决知识冲突问题，无需微调，效率高，与提示策略互补，具有新颖性。",
+      "• 实盘坑: 中等；激活调整可能引入不可预测的偏差，在复杂金融场景中稳定性待验证，需谨慎集成到生产系统。",
+      "• 复现难度: 低；方法轻量，开源可能性大，但依赖具体LLM架构和基准数据，可能需调整以适应不同模型。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2601.04121v1",
+    "title": "MORPHFED: Federated Learning for Cross-institutional Blood Morphology Analysis",
+    "pdf_url": "https://arxiv.org/pdf/2601.04121v1",
+    "published": "2026-01-07",
+    "crawled_at": "2026-01-08 20:04:51",
+    "ai_score": 7.5,
+    "translated_title": "MORPHFED：跨机构血液形态学分析的联邦学习框架",
+    "summary_en": [
+      "• Model Architecture: Federated learning framework applied to both convolutional neural networks (CNNs) and transformer-based architectures for white blood cell morphology analysis, enabling collaborative training without data exchange.",
+      "• Data used: Blood films from multiple clinical sites with diverse staining variability, imaging differences, and rare morphologies, simulating real-world dataset shifts in low- and middle-income countries (LMICs).",
+      "• Performance metrics: Federated models achieved strong cross-site performance and improved generalization to unseen institutions compared to centralized training, demonstrating domain-invariant representations.",
+      "• Key finding: Federated learning provides a practical, privacy-preserving approach for developing equitable and scalable medical imaging AI in resource-limited healthcare environments."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用联邦学习框架，结合卷积神经网络和基于Transformer的架构，用于白细胞形态学分析，支持跨机构协作训练而无需共享数据。",
+      "• 数据来源: 来自多个临床站点的血液涂片，涵盖染色变异、成像差异和罕见形态，模拟中低收入国家（LMICs）的真实数据集偏移。",
+      "• 主要结论: 联邦训练模型在跨站点性能和未见机构泛化方面优于集中式训练，学习到鲁棒、领域不变的表示。",
+      "• 应用价值: 联邦学习为资源有限的医疗环境提供了一种实用、隐私保护的AI开发方法，促进公平和可扩展的医学影像分析。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; federated learning in medical imaging could reduce data silos and improve model generalization, potentially leading to more robust diagnostic tools in global health applications, but direct financial alpha is limited to healthcare tech investments.",
+      "• Implementation Risk: High; federated learning introduces complexities in communication overhead, model aggregation, and heterogeneity management across institutions, with risks of non-IID data and convergence issues in real-world deployments.",
+      "• Novelty: Moderate; while federated learning is established in AI research, its application to blood morphology analysis in LMICs addresses a specific, underserved niche with practical implications for privacy and scalability in medical AI.",
+      "• Scalability: Federated learning enables scalable AI development without centralized data, but requires robust infrastructure and coordination among participating institutions, posing logistical challenges."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将联邦学习应用于血液形态学分析，针对中低收入国家的医疗数据隐私和多样性问题，提供了一种跨机构协作的解决方案，具有一定的新颖性和实用性。",
+      "• 实盘坑: 联邦学习在实际部署中面临高通信开销、模型聚合复杂性和数据异构性管理风险，可能导致收敛困难和非独立同分布数据问题，增加实施难度。",
+      "• 复现难度: 中等；需要获取多个临床站点的血液涂片数据并搭建联邦学习框架，但开源工具和标准架构可降低技术门槛，数据隐私和协调成本是主要障碍。",
+      "• 市场应用: 在医疗AI领域有潜力，但直接金融Alpha有限，更适合作为医疗科技投资或研究项目，而非高频交易策略。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
     "id": "2601.03244v1",
     "title": "Self-Supervised Learning from Noisy and Incomplete Data",
     "pdf_url": "https://arxiv.org/pdf/2601.03244v1",
