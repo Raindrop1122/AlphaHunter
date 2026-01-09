@@ -1,5 +1,357 @@
 [
   {
+    "id": "2601.05245v1",
+    "title": "Optimal Lower Bounds for Online Multicalibration",
+    "pdf_url": "https://arxiv.org/pdf/2601.05245v1",
+    "published": "2026-01-08",
+    "crawled_at": "2026-01-09 20:01:35",
+    "ai_score": 8.5,
+    "translated_title": "在线多校准的最优下界",
+    "summary_en": [
+      "• Model Architecture: The paper establishes information-theoretic lower bounds for online multicalibration using adversarial group functions that can depend on both context and learner predictions, as well as context-only dependencies.",
+      "• Data used: Theoretical analysis based on adversarial online learning frameworks with binary outcomes, using three disjoint binary groups in the general setting and Θ(T)-sized group families constructed via orthogonal function systems.",
+      "• Performance metrics: Proves Ω(T^{2/3}) lower bound on expected multicalibration error in general setting, matching upper bounds up to logarithmic factors and separating from marginal calibration's O(T^{2/3-ε}) bound.",
+      "• Technical approach: Constructs hard instances via orthogonal function systems to establish lower bounds, demonstrating tightness by matching existing upper bounds from Noarov et al. (2025) and Dagan et al. (2025)."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于对抗性在线学习框架，研究多校准问题，考虑组函数可依赖于上下文和预测结果，以及仅依赖于上下文的情况。",
+      "• 数据来源: 理论分析使用二元结果和对抗性组构造，在一般设置中使用三个不相交二元组，在上下文依赖设置中使用正交函数系统构建Θ(T)规模的组族。",
+      "• 主要结论: 证明在线多校准的Ω(T^{2/3})下界，与现有上界匹配至对数因子，并与边际校准的O(T^{2/3-ε})上界分离，确立信息论上的差异。",
+      "• 技术方法: 通过正交函数系统构造困难实例，建立下界，展示与Noarov等人(2025)和Dagan等人(2025)上界的紧致性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High theoretical value for fairness-aware algorithmic trading systems where calibration guarantees are crucial for risk management and regulatory compliance in prediction models.",
+      "• Implementation Risk: Extremely high - theoretical lower bounds provide impossibility results rather than practical algorithms; direct trading application requires significant adaptation to real-world data and constraints.",
+      "• Novelty: Strong theoretical contribution establishing tight lower bounds that separate multicalibration from marginal calibration, resolving open questions in online learning theory with clean information-theoretic arguments.",
+      "• Practical limitations: Focuses purely on adversarial worst-case analysis without empirical validation; assumes binary outcomes and specific group structures that may not align with financial time series data."
+    ],
+    "verdict_cn": [
+      "• 创新点: 理论贡献显著，首次建立在线多校准的紧致下界，并与边际校准分离，解决了在线学习理论中的开放问题，信息论论证清晰有力。",
+      "• 实盘坑: 极高风险 - 论文提供的是不可能性结果而非实用算法；直接应用于交易需大幅调整以适应真实数据和约束，缺乏实证验证。",
+      "• 复现难度: 中等偏高 - 理论证明基于正交函数系统构造，数学要求较高，但核心下界论证相对清晰；实际代码实现需处理对抗性组构造的复杂性。",
+      "• 应用局限: 专注于对抗性最坏情况分析，假设二元结果和特定组结构，与金融时间序列数据的连续性和相关性不匹配，需重大修改才能用于交易策略。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2601.05242v1",
+    "title": "GDPO: Group reward-Decoupled Normalization Policy Optimization for Multi-reward RL Optimization",
+    "pdf_url": "https://arxiv.org/pdf/2601.05242v1",
+    "published": "2026-01-08",
+    "crawled_at": "2026-01-09 20:01:55",
+    "ai_score": 7.5,
+    "translated_title": "GDPO：面向多奖励强化学习优化的组奖励解耦归一化策略优化",
+    "summary_en": [
+      "• Model Architecture: Introduces Group reward-Decoupled Normalization Policy Optimization (GDPO), a policy optimization method that decouples normalization of individual rewards in multi-reward RL settings to preserve relative differences between distinct reward signals.",
+      "• Data used: Evaluated on three distinct tasks: tool calling, math reasoning, and coding reasoning, using datasets specific to each domain to test multi-reward optimization capabilities.",
+      "• Performance metrics: Measured both correctness metrics (accuracy, bug ratio) and constraint adherence metrics (format, length), with GDPO consistently outperforming GRPO across all tasks and metrics."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出GDPO（组奖励解耦归一化策略优化），通过解耦多奖励设置中各个奖励的归一化处理，避免奖励信号坍缩，提升训练分辨率和稳定性。",
+      "• 数据来源: 在工具调用、数学推理和代码推理三个任务上进行评估，使用各领域专用数据集验证多奖励优化效果。",
+      "• 主要结论: GDPO在所有任务和指标上均优于GRPO，尤其在训练稳定性和多奖励信号保真度方面表现突出，证明了其通用性和有效性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - addresses a specific but important limitation in multi-reward RL pipelines, potentially improving alignment of language models with diverse human preferences in practical applications.",
+      "• Implementation Risk: Low to moderate - method is conceptually straightforward but requires careful integration into existing RL frameworks; validation across only three tasks may limit generalizability claims.",
+      "• Novelty: High - identifies and solves a previously overlooked issue in GRPO's application to multi-reward settings, introducing a novel normalization approach that preserves reward signal resolution."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高 - 首次指出GRPO在多奖励设置中的归一化缺陷会导致奖励信号坍缩，并提出解耦归一化的创新解决方案，具有理论洞察力。",
+      "• 实盘坑: 中 - 方法虽简洁，但需适配不同RL框架；仅三个任务的验证可能不足以证明广泛适用性，存在过拟合风险。",
+      "• 复现难度: 低 - 算法描述清晰，无需复杂架构变更，但需要准确实现奖励解耦和归一化逻辑，对工程细节要求较高。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2601.05240v1",
+    "title": "Robust Reasoning as a Symmetry-Protected Topological Phase",
+    "pdf_url": "https://arxiv.org/pdf/2601.05240v1",
+    "published": "2026-01-08",
+    "crawled_at": "2026-01-09 20:02:18",
+    "ai_score": 8.5,
+    "translated_title": "稳健推理作为对称性保护拓扑相",
+    "summary_en": [
+      "• Model Architecture: Introduces a 'Holonomic Network' based on Symmetry-Protected Topological (SPT) phase principles, contrasting with standard Transformers and RNNs that operate in a 'Metric Phase' vulnerable to logical inconsistencies.",
+      "• Data used: Evaluated on a variable-binding task on $S_{10}$ with $3.6 \\times 10^6$ states, representing symbolic manipulation, to test logical reasoning and generalization capabilities.",
+      "• Performance metrics: Demonstrates a sharp topological phase transition with a macroscopic 'mass gap' maintaining invariant fidelity below critical noise; achieves perfect fidelity extrapolating $100\\times$ beyond training (from $L=50$ to $5000$), while Transformers lose logical coherence."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出基于对称性保护拓扑相原理的'完整网络'，与易受逻辑不一致影响的'度量相'标准Transformer和RNN形成对比。",
+      "• 数据来源: 使用$S_{10}$上的变量绑定任务，包含$3.6 \\times 10^6$个状态，用于测试符号操作的逻辑推理和泛化能力。",
+      "• 主要结论: 展示出尖锐的拓扑相变，具有宏观'质量隙'，在临界噪声以下保持不变保真度；在训练范围外$100$倍（从$L=50$到$5000$）实现完美保真度，而Transformer失去逻辑一致性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for developing robust AI systems in finance where logical consistency is critical, such as in automated trading strategies or risk modeling, by mitigating hallucinations and improving generalization.",
+      "• Implementation Risk: Significant risk due to theoretical complexity; non-Abelian gauge symmetry and topological invariants may be difficult to implement in practical, scalable systems, potentially leading to high computational costs.",
+      "• Novelty: Highly novel approach linking causal stability in reasoning to topological phases, introducing concepts from condensed matter physics (e.g., SPT phases, anyon braiding) to AI, which could define a new universality class for logical reasoning."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高度创新，将推理中的因果稳定性与拓扑相连接，引入凝聚态物理概念（如对称性保护拓扑相、任意子编织）到AI中，可能定义逻辑推理的新普适类。",
+      "• 实盘坑: 实现风险高，理论复杂；非阿贝尔规范对称性和拓扑不变量在实际可扩展系统中难以实施，可能导致高计算成本。",
+      "• 复现难度: 复现难度大，需要深入理解拓扑物理和AI交叉领域，实验设置（如$S_{10}$任务）可能资源密集，且结果依赖于特定噪声阈值。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2601.05232v1",
+    "title": "Measuring and Fostering Peace through Machine Learning and Artificial Intelligence",
+    "pdf_url": "https://arxiv.org/pdf/2601.05232v1",
+    "published": "2026-01-08",
+    "crawled_at": "2026-01-09 20:02:38",
+    "ai_score": 7.2,
+    "translated_title": "通过机器学习和人工智能衡量与促进和平",
+    "summary_en": [
+      "• Model Architecture: Neural networks for news media analysis using text embeddings; separate models for social media (YouTube) combining word-level (GoEmotions) and context-level (Large Language Model) methods.",
+      "• Data used: Online news sources (two distinct datasets for training and validation); social media content from YouTube; demographic data showing 71% of 20-40 year olds consume news via short videos.",
+      "• Performance metrics: High accuracy when trained model generalized to different news dataset; Chrome extension (MirrorMirror) tested for real-time feedback on peacefulness of media."
+    ],
+    "summary_cn": [
+      "• 核心模型: 新闻媒体分析采用基于文本嵌入的神经网络；社交媒体（YouTube）分析结合词级（GoEmotions）和上下文级（大语言模型）方法。",
+      "• 数据来源: 在线新闻源（训练和验证使用两个不同数据集）；YouTube社交媒体内容；20-40岁人群71%通过短视频获取新闻的统计数据。",
+      "• 主要结论: 训练模型在不同新闻数据集上表现出高准确性；Chrome扩展（MirrorMirror）可实时反馈媒体和平程度，旨在促进更尊重、细致的信息传播。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate—peace metrics could inform sentiment-based trading signals in geopolitical risk models, but direct financial application is indirect and requires further validation.",
+      "• Implementation Risk: High—reliance on social media data introduces noise and bias; real-time Chrome extension faces scalability and user adoption challenges; generalization across cultures/languages unproven.",
+      "• Novelty: Moderate—combining NLP for peace measurement with intervention tools (MirrorMirror) is innovative, but core ML techniques (neural networks, LLMs) are standard in academia."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将NLP用于和平衡量并结合干预工具（MirrorMirror）有一定新意，但核心机器学习技术（神经网络、大语言模型）在学术界已属常规。",
+      "• 实盘坑: 高—依赖社交媒体数据引入噪声和偏差；Chrome扩展实时反馈面临可扩展性和用户采纳难题；跨文化/语言泛化能力未经验证。",
+      "• 复现难度: 中等—模型架构和数据方法描述清晰，但获取和处理大规模新闻/社交媒体数据需资源，且和平标签定义主观可能影响复现一致性。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2601.05227v1",
+    "title": "Stochastic Deep Learning: A Probabilistic Framework for Modeling Uncertainty in Structured Temporal Data",
+    "pdf_url": "https://arxiv.org/pdf/2601.05227v1",
+    "published": "2026-01-08",
+    "crawled_at": "2026-01-09 20:03:03",
+    "ai_score": 8.2,
+    "translated_title": "随机深度学习：结构化时序数据不确定性建模的概率框架",
+    "summary_en": [
+      "• Model Architecture: Proposes Stochastic Latent Differential Inference (SLDI), integrating Itô stochastic differential equations (SDEs) into variational autoencoder latent space with neural network-parameterized drift and diffusion terms",
+      "• Data used: Structured temporal data with irregular sampling patterns and complex dynamic structures (implied from abstract, specific datasets not mentioned)",
+      "• Performance metrics: Introduces pathwise-regularized adjoint loss and variance-reduced gradient flows for improved training stability in deep latent SDEs",
+      "• Theoretical foundation: Co-parameterizes adjoint state with neural network to form coupled forward-backward system capturing both latent evolution and gradient dynamics",
+      "• Framework scope: Unifies variational inference, continuous-time generative modeling, and control-theoretic optimization for uncertainty quantification"
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出随机潜在微分推断(SLDI)框架，将伊藤随机微分方程嵌入变分自编码器潜在空间，通过神经网络参数化漂移和扩散项",
+      "• 数据来源: 针对结构化时序数据，特别处理不规则采样和复杂动态结构（摘要中未指定具体数据集）",
+      "• 主要结论: 引入路径正则化伴随损失和方差缩减梯度流，提升深度潜在SDE训练稳定性，为随机概率机器学习提供严格数学基础",
+      "• 理论创新: 通过神经网络共同参数化伴随状态，形成耦合前向-后向系统，同时捕捉潜在演化和梯度动态",
+      "• 应用范围: 统一变分推断、连续时间生成建模和控制理论优化，扩展不确定性量化能力"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for quantitative strategies requiring precise uncertainty calibration in time series forecasting, volatility modeling, and regime detection in financial markets",
+      "• Implementation Risk: Moderate-high due to computational complexity of SDE-adjoint systems, sensitivity to hyperparameters, and potential instability in high-dimensional latent spaces",
+      "• Novelty: Significant theoretical contribution through SDE-VAE integration with adjoint co-parameterization, advancing beyond standard Bayesian deep learning approaches",
+      "• Practical limitations: Abstract lacks empirical validation on real financial datasets, making direct alpha extraction speculative without implementation testing",
+      "• Strategic fit: Best suited for sophisticated quant teams with expertise in stochastic calculus and deep learning infrastructure"
+    ],
+    "verdict_cn": [
+      "• 创新点: 将SDE与VAE深度整合，伴随状态共同参数化是核心理论突破，超越传统贝叶斯深度学习框架",
+      "• 实盘坑: 计算复杂度高，伴随系统训练不稳定，高维潜在空间可能产生数值问题，超参数敏感性强",
+      "• 复现难度: 较高，需要精通随机微积分和深度学习的团队，代码实现和调优周期可能较长",
+      "• 策略适配: 最适合时间序列预测、波动率建模和状态识别等需要精确不确定性量化的量化策略",
+      "• 验证缺失: 摘要未提供金融数据实证结果，实际alpha效果需自行测试验证"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2601.05219v1",
+    "title": "CAOS: Conformal Aggregation of One-Shot Predictors",
+    "pdf_url": "https://arxiv.org/pdf/2601.05219v1",
+    "published": "2026-01-08",
+    "crawled_at": "2026-01-09 20:03:22",
+    "ai_score": 7.8,
+    "translated_title": "CAOS：一次性预测器的保形聚合",
+    "summary_en": [
+      "• Model Architecture: CAOS combines multiple one-shot predictors using a conformal aggregation framework with leave-one-out calibration, addressing data scarcity by avoiding split conformal inefficiencies.",
+      "• Data used: Evaluated on one-shot facial landmarking and RAFT text classification tasks, leveraging limited labeled examples typical of few-shot learning scenarios.",
+      "• Performance metrics: Achieves valid marginal coverage with substantially smaller prediction sets compared to split conformal baselines, demonstrating improved efficiency without sacrificing reliability."
+    ],
+    "summary_cn": [
+      "• 核心模型: CAOS采用保形聚合框架，通过留一校准方案自适应整合多个一次性预测器，避免数据分割，提升稀缺标签数据的利用率。",
+      "• 数据来源: 基于一次性面部关键点检测和RAFT文本分类任务，使用典型少样本学习场景中的有限标注数据。",
+      "• 主要结论: 在违反经典可交换性假设下，通过单调性论证实现有效边际覆盖，预测集显著小于传统分割保形方法，保持可靠覆盖。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate—efficient uncertainty quantification in few-shot settings could enhance model trust in dynamic markets, but direct financial application is limited without domain-specific adaptation.",
+      "• Implementation Risk: High—reliance on monotonicity assumptions and leave-one-out calibration may be computationally intensive and sensitive to non-exchangeable data shifts in real-world trading.",
+      "• Novelty: Strong—novel aggregation approach for conformal prediction in one-shot learning, though theoretical guarantees under violated exchangeability are promising but untested in finance."
+    ],
+    "verdict_cn": [
+      "• 创新点: 在一次性学习中引入保形聚合，通过单调性论证突破可交换性限制，理论创新显著，但金融场景验证不足。",
+      "• 实盘坑: 留一校准计算开销大，单调性假设在非平稳市场数据中可能失效，实盘部署需谨慎处理数据漂移和延迟。",
+      "• 复现难度: 中等—框架清晰，但依赖特定任务的一次性预测器，金融数据适配和超参数调优可能增加复现复杂性。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2601.05205v1",
+    "title": "EARL: Energy-Aware Optimization of Liquid State Machines for Pervasive AI",
+    "pdf_url": "https://arxiv.org/pdf/2601.05205v1",
+    "published": "2026-01-08",
+    "crawled_at": "2026-01-09 20:03:39",
+    "ai_score": 8.2,
+    "translated_title": "EARL：面向泛在人工智能的液态状态机能量感知优化",
+    "summary_en": [
+      "• Model Architecture: EARL integrates Bayesian optimization with adaptive reinforcement learning for hyperparameter tuning, using surrogate modeling for global exploration and an early termination mechanism to reduce computational overhead.",
+      "• Data used: Experiments conducted on three benchmark datasets (specific datasets not named in abstract) for evaluating Liquid State Machines in pervasive AI applications.",
+      "• Performance metrics: Achieves 6-15% higher accuracy, 60-80% lower energy consumption, and up to 10x reduction in optimization time compared to existing hyperparameter tuning frameworks."
+    ],
+    "summary_cn": [
+      "• 核心模型: EARL结合贝叶斯优化与自适应强化学习，通过代理模型进行全局探索，并采用早期终止机制减少计算开销。",
+      "• 数据来源: 在三个基准数据集上进行实验（摘要中未具体命名），用于评估液态状态机在泛在AI应用中的性能。",
+      "• 主要结论: 相比现有超参数调优框架，EARL实现精度提升6-15%，能耗降低60-80%，优化时间减少高达10倍。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for edge AI and IoT applications where energy efficiency directly impacts deployment feasibility and operational costs.",
+      "• Implementation Risk: Moderate risk due to dependency on specific LSM architectures and potential hardware compatibility issues in real-world deployments.",
+      "• Novelty: Significant novelty in integrating energy-aware optimization with reinforcement learning for hyperparameter tuning, addressing a critical gap in resource-constrained AI systems."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将能量感知优化与强化学习结合用于超参数调优，针对资源受限AI系统的关键痛点提出创新解决方案。",
+      "• 实盘坑: 依赖特定液态状态机架构，实际部署中可能存在硬件兼容性问题，且基准数据集未具体说明，影响泛化能力评估。",
+      "• 复现难度: 中等偏高，需要实现复杂的贝叶斯优化与强化学习集成框架，并适配具体硬件平台进行能量测量。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2601.05202v1",
+    "title": "Stock Market Price Prediction using Neural Prophet with Deep Neural Network",
+    "pdf_url": "https://arxiv.org/pdf/2601.05202v1",
+    "published": "2026-01-08",
+    "crawled_at": "2026-01-09 20:03:58",
+    "ai_score": 4.2,
+    "translated_title": "使用神经先知与深度神经网络进行股票市场价格预测",
+    "summary_en": [
+      "• Model Architecture: Proposes Neural Prophet with Deep Neural Network (NP-DNN), combining Neural Prophet time-series framework with Multi-Layer Perceptron (MLP) for nonlinear relationship learning.",
+      "• Data used: Stock price data preprocessed with Z-score normalization and missing value imputation; specific datasets not mentioned in abstract.",
+      "• Performance metrics: Claims 99.21% accuracy compared to Fused Large Language Model approach; no details on validation methodology, time horizons, or error metrics provided."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出神经先知与深度神经网络(NP-DNN)模型，结合神经先知时序框架和多层感知机(MLP)学习非线性关系。",
+      "• 数据来源: 使用Z-score标准化和缺失值填补预处理的股价数据；摘要中未提及具体数据集或来源。",
+      "• 主要结论: 声称相比融合大语言模型方法达到99.21%准确率；但缺乏验证方法、时间跨度和误差指标的详细信息。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Extremely low - 99.21% accuracy claims are unrealistic for financial markets; likely overfitted or using inappropriate metrics; no evidence of economic significance or risk-adjusted returns.",
+      "• Implementation Risk: High - Abstract lacks critical details: no specific assets, timeframes, transaction costs, or out-of-sample testing; normalization and imputation may introduce look-ahead bias.",
+      "• Novelty: Low - Neural Prophet is an existing open-source package; MLP is standard architecture; combination is incremental at best; compares to 'Fused Large Language Model' which is not standard benchmark."
+    ],
+    "verdict_cn": [
+      "• 创新点: 较低 - 神经先知是现有开源工具，MLP是标准架构，组合缺乏实质性创新；与'融合大语言模型'对比非标准基准。",
+      "• 实盘坑: 极高 - 99.21%准确率不切实际，可能过拟合或使用不当指标；未考虑交易成本、样本外测试和前瞻性偏差。",
+      "• 复现难度: 中等 - 架构描述清晰但缺乏数据细节和超参数；准确率声称可疑，实际复现结果可能大幅下降。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2601.05194v1",
+    "title": "An interpretable data-driven approach to optimizing clinical fall risk assessment",
+    "pdf_url": "https://arxiv.org/pdf/2601.05194v1",
+    "published": "2026-01-08",
+    "crawled_at": "2026-01-09 20:04:20",
+    "ai_score": 7.8,
+    "translated_title": "一种可解释的数据驱动方法优化临床跌倒风险评估",
+    "summary_en": [
+      "• Model Architecture: Constrained Score Optimization (CSO) models were employed to reweight the Johns Hopkins Fall Risk Assessment Tool (JHFRAT) scoring weights while preserving its additive structure and clinical thresholds, maintaining interpretability and clinical workflow compatibility.",
+      "• Data used: Retrospective cohort analysis of 54,209 inpatient admissions from three Johns Hopkins Health System hospitals between March 2022 and October 2023, with 20,208 high fall risk encounters and 13,941 low fall risk encounters.",
+      "• Performance metrics: CSO achieved AUC-ROC=0.91 compared to JHFRAT's AUC-ROC=0.86, translating to protecting an additional 35 high-risk patients per week across the health system. CSO demonstrated robustness to variations in risk labeling compared to XGBoost (AUC-ROC=0.94)."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用约束分数优化（CSO）模型重新加权约翰霍普金斯跌倒风险评估工具（JHFRAT）的评分权重，保持其可加性结构和临床阈值，确保可解释性和临床工作流兼容性。",
+      "• 数据来源: 回顾性队列分析，涵盖2022年3月至2023年10月期间约翰霍普金斯卫生系统三家医院的54,209例住院患者，包括20,208例高风险跌倒事件和13,941例低风险事件。",
+      "• 主要结论: CSO模型在AUC-ROC指标上显著提升至0.91（原JHFRAT为0.86），每周可额外保护35名高风险患者，且相比XGBoost（AUC-ROC=0.94）在风险标签变化下表现更稳健。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the CSO approach demonstrates robust predictive improvements in clinical risk assessment, potentially applicable to other healthcare or financial risk domains for enhanced decision-making and resource allocation.",
+      "• Implementation Risk: High; integration into existing clinical workflows requires careful validation and regulatory compliance, with potential resistance from healthcare professionals due to changes in established protocols.",
+      "• Novelty: Limited; while the application of constrained optimization to clinical tools is innovative, the core methodology is not groundbreaking, building on existing data-driven techniques in healthcare analytics."
+    ],
+    "verdict_cn": [
+      "• 创新点: 有限；将约束优化应用于临床工具具有创新性，但核心方法基于现有医疗数据分析技术，缺乏突破性理论贡献。",
+      "• 实盘坑: 高；集成到现有临床工作流需严格验证和法规合规，可能因改变既定协议而面临医疗专业人员抵制，实施风险较大。",
+      "• 复现难度: 中等；数据来自特定卫生系统，需类似医疗数据集和临床专业知识，但模型架构相对透明，技术复现可行。"
+    ],
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2601.05191v1",
+    "title": "Cutting AI Research Costs: How Task-Aware Compression Makes Large Language Model Agents Affordable",
+    "pdf_url": "https://arxiv.org/pdf/2601.05191v1",
+    "published": "2026-01-08",
+    "crawled_at": "2026-01-09 20:04:39",
+    "ai_score": 7.8,
+    "translated_title": "降低AI研究成本：任务感知压缩如何让大语言模型代理变得经济实惠",
+    "summary_en": [
+      "• Model Architecture: AgentCompress system uses a small neural network to assess task difficulty based on opening words, then routes tasks to appropriately compressed model variants in under 1ms",
+      "• Data used: Tested across 500 research workflows in four scientific fields, though specific dataset details and training data for the neural network aren't specified",
+      "• Performance metrics: Achieved 68.3% reduction in compute costs while maintaining 96.2% of original success rate, with cost example of $127 per session for 70B parameter model"
+    ],
+    "summary_cn": [
+      "• 核心模型: AgentCompress系统使用小型神经网络根据任务开头词语评估难度，在1毫秒内将任务路由到适当压缩的模型变体",
+      "• 数据来源: 在四个科学领域的500个研究工作流中进行测试，但未详细说明具体数据集和神经网络的训练数据",
+      "• 主要结论: 计算成本降低68.3%，同时保持96.2%的原始成功率，70B参数模型单次会话成本约127美元"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - Cost reduction approach could be applied to trading signal generation and research automation, but financial applications would require significant adaptation",
+      "• Implementation Risk: High - Task difficulty assessment based on opening words may fail with complex financial queries; compression could degrade performance on critical market analysis tasks",
+      "• Novelty: Good - Task-aware compression concept is innovative, though similar ideas exist in model pruning literature; real-time routing system shows practical engineering value"
+    ],
+    "verdict_cn": [
+      "• 创新点: 任务感知压缩概念新颖，实时路由系统展示工程价值，但类似思想在模型剪枝文献中已有体现",
+      "• 实盘坑: 基于开头词语的任务难度评估可能在复杂金融查询中失效；压缩可能降低关键市场分析任务的性能；金融数据与科研工作流差异巨大",
+      "• 复现难度: 中等 - 核心算法相对简单，但需要大量标注数据训练任务分类器；压缩模型变体的创建和验证需要专业知识"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2601.04181v1",
     "title": "Lightweight Test-Time Adaptation for EMG-Based Gesture Recognition",
     "pdf_url": "https://arxiv.org/pdf/2601.04181v1",
