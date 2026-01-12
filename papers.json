@@ -1,5 +1,349 @@
 [
   {
+    "id": "2601.06025v1",
+    "title": "Manifold limit for the training of shallow graph convolutional neural networks",
+    "pdf_url": "https://arxiv.org/pdf/2601.06025v1",
+    "published": "2026-01-09",
+    "crawled_at": "2026-01-12 20:01:18",
+    "ai_score": 7.8,
+    "translated_title": "浅层图卷积神经网络训练的流形极限",
+    "summary_en": [
+      "• Model Architecture: Shallow graph convolutional neural networks (GCNNs) with spectral graph convolution via graph Laplacian, operating on proximity graphs of sampled point clouds under a manifold assumption, with infinite-width linear functionals on measure spaces.",
+      "• Data used: Graph signals as spatial discretizations of functions on smooth manifolds, with training data consistent across graph resolutions derived from sampled point clouds.",
+      "• Performance metrics: Proves Γ-convergence of regularized empirical risk minimization functionals and convergence of global minimizers, ensuring mesh and sample independence in training."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于流形假设的浅层图卷积神经网络，通过图拉普拉斯算子进行谱图卷积，在参数空间的测度上定义为无限宽线性泛函。",
+      "• 数据来源: 使用采样点云的邻近图，图信号视为流形上函数的空间离散化，训练数据在不同图分辨率下保持一致。",
+      "• 主要结论: 证明了正则化经验风险最小化泛函的Γ收敛及其全局最小化器的收敛，实现了训练中的网格和样本独立性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; provides theoretical foundation for robust GCNN training on manifold-structured data, potentially enhancing generalization in financial graph applications like correlation networks or transaction graphs.",
+      "• Implementation Risk: High; requires precise manifold approximation and spectral cutoff tuning, with weak convergence assumptions that may not hold in noisy real-world datasets.",
+      "• Novelty: High; introduces a continuum limit framework for GCNNs with rigorous convergence proofs, bridging discrete graph theory and functional analysis in a novel way."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；提出了图卷积神经网络的连续极限框架，结合离散图论和泛函分析，通过Γ收敛理论严格证明训练稳定性。",
+      "• 实盘坑: 高；依赖流形精确近似和谱截断调整，弱收敛假设在噪声数据中可能失效，实盘应用需大量调参。",
+      "• 复现难度: 中高；需要专业数学背景实现连续参数空间和收敛证明，但开源代码可降低难度。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2601.06016v1",
+    "title": "LookAroundNet: Extending Temporal Context with Transformers for Clinically Viable EEG Seizure Detection",
+    "pdf_url": "https://arxiv.org/pdf/2601.06016v1",
+    "published": "2026-01-09",
+    "crawled_at": "2026-01-12 20:01:39",
+    "ai_score": 7.5,
+    "translated_title": "LookAroundNet：基于Transformer扩展时间上下文以实现临床可行的EEG癫痫检测",
+    "summary_en": [
+      "• Model Architecture: LookAroundNet is a transformer-based seizure detector that incorporates EEG signals from both before and after the segment of interest, mimicking clinical interpretation by using extended temporal context.",
+      "• Data used: The method is evaluated on multiple EEG datasets, including publicly available datasets and a large proprietary collection of home EEG recordings, covering diverse clinical environments, patient populations, and recording modalities such as routine clinical EEG and long-term ambulatory recordings.",
+      "• Performance metrics: LookAroundNet achieves strong performance across datasets, demonstrates good generalization to unseen recording conditions, and operates with computational costs suitable for real-world clinical deployment, with key factors being extended temporal context, increased training data diversity, and model ensembling."
+    ],
+    "summary_cn": [
+      "• 核心模型: LookAroundNet是一种基于Transformer的癫痫检测器，通过整合感兴趣段前后EEG信号，扩展时间上下文以模拟临床解读方式。",
+      "• 数据来源: 使用多个EEG数据集进行评估，包括公开可用数据集和大型专有家庭EEG记录集合，涵盖不同临床环境、患者群体和记录模式（如常规临床EEG和长期动态记录）。",
+      "• 主要结论: LookAroundNet在多个数据集上表现强劲，对未见记录条件泛化良好，计算成本适合实际临床部署，关键改进因素包括扩展时间上下文、增加训练数据多样性和模型集成。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the approach shows promise for improving seizure detection accuracy and generalization in clinical settings, potentially reducing false alarms and enhancing patient monitoring, but direct financial alpha is limited as it targets healthcare applications rather than market prediction.",
+      "• Implementation Risk: High; deploying in real-world clinical environments involves challenges such as data variability, regulatory compliance, and integration with existing healthcare systems, which could hinder practical adoption and scalability.",
+      "• Novelty: Moderate; while the use of transformers for EEG analysis is innovative, the core idea of extended temporal context is not entirely new, and the paper builds on existing work in medical signal processing and deep learning."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；将Transformer应用于EEG分析具有创新性，但扩展时间上下文的核心思想并非全新，论文在医学信号处理和深度学习现有工作基础上进行改进。",
+      "• 实盘坑: 高；实际临床部署面临数据变异性、法规合规性和与现有医疗系统集成等挑战，可能阻碍实际应用和扩展性。",
+      "• 复现难度: 中等；方法描述相对清晰，但需要访问专有家庭EEG数据集和计算资源，可能增加复现成本和复杂性。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2601.06009v1",
+    "title": "Detecting Stochasticity in Discrete Signals via Nonparametric Excursion Theorem",
+    "pdf_url": "https://arxiv.org/pdf/2601.06009v1",
+    "published": "2026-01-09",
+    "crawled_at": "2026-01-12 20:01:57",
+    "ai_score": 7.5,
+    "translated_title": "基于非参数游程定理的离散信号随机性检测",
+    "summary_en": [
+      "• Model Architecture: Nonparametric framework based on classical excursion and crossing theorems for continuous semimartingales, correlating excursion counts N_ε with quadratic variation [X]_T",
+      "• Data used: Single discrete time series from canonical stochastic systems, periodic/chaotic maps, systems with additive white noise, and stochastic Duffing system",
+      "• Performance metrics: Classification via log-log slope deviation measuring ε^{-2} law, distinguishing diffusion-like processes from deterministic signals with theoretical certification"
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于连续半鞅的经典游程和穿越定理的非参数框架，将游程计数N_ε与二次变差[X]_T相关联",
+      "• 数据来源: 标准随机系统、周期/混沌映射、加性白噪声系统及随机Duffing系统的单离散时间序列",
+      "• 主要结论: 通过测量ε^{-2}律的对数-对数斜率偏差进行分类，理论上可区分扩散类过程与确定性信号"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - provides model-free stochasticity detection that could identify mispriced options or volatility regimes, but requires integration with trading signals",
+      "• Implementation Risk: High - relies on accurate estimation of quadratic variation from discrete data, sensitive to sampling frequency and noise",
+      "• Novelty: Significant - theoretical foundation using excursion theorems offers rigorous alternative to entropy/recurrence methods, though practical robustness unproven"
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著 - 利用游程定理的理论基础为熵/递归方法提供严格替代，但实际鲁棒性未经验证",
+      "• 实盘坑: 高 - 依赖离散数据中二次变差的准确估计，对采样频率和噪声敏感，可能产生误分类",
+      "• 复现难度: 中等 - 方法非参数且模型无关，但需要精细调整ε尺度并验证小尺度结构假设"
+    ],
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2601.05988v1",
+    "title": "CyberGFM: Graph Foundation Models for Lateral Movement Detection in Enterprise Networks",
+    "pdf_url": "https://arxiv.org/pdf/2601.05988v1",
+    "published": "2026-01-09",
+    "crawled_at": "2026-01-12 20:02:15",
+    "ai_score": 8.2,
+    "translated_title": "CyberGFM：用于企业网络横向移动检测的图基础模型",
+    "summary_en": [
+      "• Model Architecture: CyberGFM extends random walk-based skip-grams to transformer-based foundation models, using language models optimized for GPU to predict missing tokens in random walks through computer networks, then fine-tunes for link prediction.",
+      "• Data used: The model was evaluated on three widely used network anomaly detection datasets, representing enterprise networks as graphs with benign connections for training.",
+      "• Performance metrics: Achieved state-of-the-art results with up to 2× improvement in average precision, outperforming prior works in unsupervised link prediction using the same number of parameters and with equal or better efficiency."
+    ],
+    "summary_cn": [
+      "• 核心模型: CyberGFM将基于随机游走的skip-gram方法扩展到基于Transformer的基础模型，利用GPU优化的语言模型预测计算机网络随机游走中的缺失令牌，并微调用于链接预测。",
+      "• 数据来源: 使用三个广泛使用的网络异常检测数据集，将企业网络表示为图，利用良性连接进行训练。",
+      "• 主要结论: 在平均精度上实现高达2倍的提升，达到最先进水平，在相同参数数量下优于所有先前工作，且效率相当或更好。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for detecting novel cyber threats in real-time network monitoring, with improved precision reducing false positives in anomaly detection systems.",
+      "• Implementation Risk: Moderate risk due to dependency on GPU optimizations and large-scale graph data, which may limit deployment in resource-constrained environments.",
+      "• Novelty: Significant novelty in bridging graph-based methods with modern transformer architectures, offering a hybrid approach that combines efficiency and semantic richness."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将基于随机游走的图方法与Transformer基础模型结合，创新性地利用语言模型处理图数据，实现高效且语义丰富的异常检测。",
+      "• 实盘坑: 依赖GPU优化和大规模图数据，在资源有限的环境中部署可能受限；模型微调和实时推理的计算开销需仔细评估。",
+      "• 复现难度: 中等难度，需要复现随机游走生成、Transformer训练和链接预测微调流程，但开源代码和标准数据集可降低门槛。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2601.05984v1",
+    "title": "Community-Based Model Sharing and Generalisation: Anomaly Detection in IoT Temperature Sensor Networks",
+    "pdf_url": "https://arxiv.org/pdf/2601.05984v1",
+    "published": "2026-01-09",
+    "crawled_at": "2026-01-12 20:02:38",
+    "ai_score": 7.2,
+    "translated_title": "基于社区共享与泛化的模型：物联网温度传感器网络中的异常检测",
+    "summary_en": [
+      "• Model Architecture: The framework employs a community-based approach where sensors are grouped using a fused similarity matrix (Spearman temporal correlations, Gaussian spatial proximity, elevation similarities). For each community, representative stations are selected via silhouette scores, and three autoencoder architectures (BiLSTM, LSTM, MLP) are trained with Bayesian hyperparameter optimization and expanding window cross-validation.",
+      "• Data used: The study utilizes temperature data from IoT sensor networks, focusing on normal patterns for training autoencoders to detect anomalies through reconstruction error analysis. The data includes temporal, spatial, and elevation features to define communities.",
+      "• Performance metrics: Experimental results demonstrate robust within-community performance across configurations, with variations observed across different communities. The framework effectively reduces computational overhead and supports model generalizability across sensor networks."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用基于社区的方法，通过融合相似性矩阵（斯皮尔曼时间相关性、高斯空间邻近性、海拔相似性）对传感器进行分组。每个社区选择代表性站点，使用三种自编码器架构（BiLSTM、LSTM、MLP）进行训练，并采用贝叶斯超参数优化和扩展窗口交叉验证。",
+      "• 数据来源: 研究使用物联网温度传感器网络的数据，专注于正常温度模式训练自编码器，通过重构误差分析检测异常。数据包括时间、空间和海拔特征以定义社区。",
+      "• 主要结论: 实验结果显示，在社区内部性能稳健，但不同社区间存在差异。该框架有效降低了计算开销，并支持模型在传感器网络间的泛化能力。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the community-based approach could enhance anomaly detection in IoT networks, potentially leading to improved risk management in environmental monitoring or smart city applications, but direct financial alpha is limited without specific market data integration.",
+      "• Implementation Risk: High; the framework relies on complex similarity matrices and autoencoder training, which may be computationally intensive and sensitive to data quality. Real-world deployment in dynamic IoT environments could face challenges in scalability and real-time processing.",
+      "• Novelty: Moderate; the integration of community-based grouping with multiple autoencoder architectures is innovative for IoT anomaly detection, but similar techniques exist in other domains. The use of Bayesian optimization and expanding window validation adds methodological rigor."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；将基于社区的分组与多种自编码器架构结合用于物联网异常检测具有创新性，但类似技术在其他领域已有应用。贝叶斯优化和扩展窗口验证增加了方法严谨性。",
+      "• 实盘坑: 高；框架依赖复杂的相似性矩阵和自编码器训练，计算量大且对数据质量敏感。在动态物联网环境中实际部署可能面临可扩展性和实时处理挑战。",
+      "• 复现难度: 中等；需要物联网温度数据和社区定义，但方法描述清晰，复现可行，不过需注意计算资源和数据预处理细节。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2601.05978v1",
+    "title": "AWaRe-SAC: Proactive Slice Admission Control under Weather-Induced Capacity Uncertainty",
+    "pdf_url": "https://arxiv.org/pdf/2601.05978v1",
+    "published": "2026-01-09",
+    "crawled_at": "2026-01-12 20:02:57",
+    "ai_score": 7.8,
+    "translated_title": "AWaRe-SAC：天气诱导容量不确定性下的主动切片准入控制",
+    "summary_en": [
+      "• Model Architecture: Integrates a deep learning predictor for future network conditions with a proactive Q-learning-based slice admission control mechanism, designed to handle rain-induced capacity fluctuations in mmWave x-haul networks.",
+      "• Data used: Real-world data from a mmWave x-haul deployment in a dense urban area, incorporating realistic models of link capacity attenuation and dynamic slice demands.",
+      "• Performance metrics: Achieves 2-3x higher long-term average revenue under dynamic link conditions compared to standard reactive approaches, with evaluations demonstrating scalability and resilience for adaptive admission control."
+    ],
+    "summary_cn": [
+      "• 核心模型: 结合深度学习预测器与基于Q学习的主动切片准入控制机制，针对毫米波x-haul网络中雨衰引起的容量波动进行优化。",
+      "• 数据来源: 使用密集城区毫米波x-haul部署的真实数据，包括链路容量衰减和动态切片需求的现实模型。",
+      "• 主要结论: 在动态链路条件下，相比标准被动方法，实现长期平均收入提升2-3倍，提供可扩展且鲁棒的适应性准入控制框架。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the proactive approach to handling weather-induced uncertainty in network capacity could be adapted for predictive resource allocation in high-frequency trading or latency-sensitive arbitrage strategies, though direct financial alpha is limited.",
+      "• Implementation Risk: High; real-world deployment requires accurate weather prediction models and robust mmWave infrastructure, with potential for significant operational overhead and integration challenges in existing systems.",
+      "• Novelty: Moderate; combines deep learning with reinforcement learning for proactive control in a specific domain (mmWave networks), but similar hybrid approaches exist in other fields, reducing breakthrough innovation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；将深度学习与强化学习结合用于毫米波网络的主动控制，但类似混合方法在其他领域已有应用，创新性有限。",
+      "• 实盘坑: 高；实际部署需依赖精确的天气预测模型和稳定的毫米波基础设施，操作复杂且与现有系统集成困难。",
+      "• 复现难度: 中等；基于公开数据和标准算法，但需要特定硬件和领域知识，复现成本较高。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2601.05975v1",
+    "title": "DeePM: Regime-Robust Deep Learning for Systematic Macro Portfolio Management",
+    "pdf_url": "https://arxiv.org/pdf/2601.05975v1",
+    "published": "2026-01-09",
+    "crawled_at": "2026-01-12 20:03:20",
+    "ai_score": 8.5,
+    "translated_title": "DeePM：面向系统性宏观投资组合管理的稳健深度学习模型",
+    "summary_en": [
+      "• Model Architecture: DeePM integrates a Directed Delay (Causal Sieve) mechanism for asynchronous data handling, a Macroeconomic Graph Prior for cross-asset regularization, and a distributionally robust objective with smooth worst-window penalty as a differentiable proxy for EVaR.",
+      "• Data used: The model is trained and tested on daily closing prices of 50 diversified futures from 2010 to 2025, incorporating highly realistic transaction costs to simulate real-world trading conditions.",
+      "• Performance metrics: DeePM achieves net risk-adjusted returns approximately twice those of classical trend-following strategies and passive benchmarks, and improves upon the state-of-the-art Momentum Transformer by roughly 50%, demonstrating resilience across regime shifts like the 2010s CTA Winter and post-2020 volatility."
+    ],
+    "summary_cn": [
+      "• 核心模型: DeePM结合了定向延迟（因果筛）机制处理异步数据、宏观经济图先验正则化跨资产依赖，以及基于平滑最差窗口惩罚的分布鲁棒优化目标，作为EVaR的可微代理。",
+      "• 数据来源: 使用2010年至2025年50种多样化期货的每日收盘价进行训练和回测，并纳入高度真实的交易成本以模拟实际交易环境。",
+      "• 主要结论: DeePM的净风险调整后收益约为经典趋势跟踪策略和被动基准的两倍，相比最先进的动量Transformer提升约50%，在2010年代CTA寒冬和2020年后波动率制度转变等时期表现出结构韧性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High, as DeePM demonstrates significant outperformance over benchmarks and state-of-the-art models in backtests, with robust returns across diverse market regimes, suggesting strong potential for generating alpha in systematic macro strategies.",
+      "• Implementation Risk: Moderate to high, due to the complexity of integrating causal mechanisms, graph priors, and robust optimization in a real-time trading environment, along with potential overfitting risks from extensive hyperparameter tuning.",
+      "• Novelty: High, with innovative contributions including the Directed Delay mechanism for ragged filtration, Macroeconomic Graph Prior for regularization, and a differentiable EVaR proxy for window-robust utility, advancing deep learning applications in finance."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高，模型通过定向延迟机制解决异步数据问题、宏观经济图先验增强跨资产学习，以及可微EVaR代理实现窗口鲁棒性，在深度学习金融应用中具有显著创新性。",
+      "• 实盘坑: 中到高，实时交易中集成因果机制和图先验的复杂性较高，且回测可能未完全覆盖极端市场事件，存在过拟合和参数敏感风险。",
+      "• 复现难度: 高，需要处理大规模期货数据、实现复杂的深度学习架构和鲁棒优化算法，对计算资源和领域专业知识要求较高。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2601.05956v1",
+    "title": "On the Robustness of Age for Learning-Based Wireless Scheduling in Unknown Environments",
+    "pdf_url": "https://arxiv.org/pdf/2601.05956v1",
+    "published": "2026-01-09",
+    "crawled_at": "2026-01-12 20:03:41",
+    "ai_score": 7.8,
+    "translated_title": "关于未知环境中基于学习的无线调度中年龄鲁棒性的研究",
+    "summary_en": [
+      "• Model Architecture: The paper proposes a learning-based wireless scheduling policy that replaces the traditional virtual queue length with head-of-line age (age of the oldest packet) in a constrained combinatorial multi-armed bandit framework, aiming to enhance robustness under abrupt channel changes.",
+      "• Data used: The analysis is theoretical and simulation-based, focusing on network conditions including i.i.d. (independent and identically distributed) scenarios and abrupt changes in channel conditions, without specifying real-world datasets.",
+      "• Performance metrics: The policy matches state-of-the-art performance under i.i.d. conditions and demonstrates stability and rapid recovery from constraint infeasibility under abrupt channel changes, with key metrics including throughput optimization and virtual queue behavior."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出一种基于学习的无线调度策略，在约束组合多臂老虎机框架中，用队首年龄（虚拟队列中最旧数据包的年龄）替代传统虚拟队列长度，以提高鲁棒性。",
+      "• 数据来源: 基于理论分析和仿真，研究网络条件包括独立同分布场景和信道条件的突变，未使用具体真实世界数据集。",
+      "• 主要结论: 在独立同分布条件下，该策略性能达到最先进水平；在信道突变时，系统保持稳定并能快速从约束不可行期恢复，优化吞吐量。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the approach could offer incremental improvements in wireless network optimization for latency-sensitive applications, but direct financial alpha is limited as it targets communication systems rather than market dynamics.",
+      "• Implementation Risk: High; real-world deployment faces challenges such as integration with existing network protocols, scalability in large-scale systems, and sensitivity to parameter tuning in dynamic environments.",
+      "• Novelty: Significant; introducing head-of-line age as a robust metric in learning-based scheduling is a novel twist on virtual queue techniques, addressing a known weakness in prior algorithms under abrupt changes."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著；将队首年龄作为鲁棒性指标引入基于学习的调度，是对虚拟队列技术的新颖改进，解决了先前算法在突变条件下的已知缺陷。",
+      "• 实盘坑: 高；实际部署面临挑战，如与现有网络协议集成、大规模系统可扩展性，以及动态环境中参数调优的敏感性。",
+      "• 复现难度: 中等；基于仿真和理论分析，复现相对直接，但需要专业知识在无线网络和老虎机学习领域，且可能依赖特定模拟设置。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2601.05946v1",
+    "title": "A Critical Examination of Active Learning Workflows in Materials Science",
+    "pdf_url": "https://arxiv.org/pdf/2601.05946v1",
+    "published": "2026-01-09",
+    "crawled_at": "2026-01-12 20:04:00",
+    "ai_score": 7.5,
+    "translated_title": "材料科学中主动学习工作流程的批判性审视",
+    "summary_en": [
+      "• Model Architecture: The paper examines various surrogate models (e.g., Gaussian processes, neural networks) used in active learning workflows for materials science, focusing on their role in predicting material properties and guiding experimental design.",
+      "• Data used: The analysis relies on synthetic and experimental datasets from materials science applications, such as interatomic potential construction and self-driving laboratory operations, to evaluate workflow performance.",
+      "• Performance metrics: The study assesses metrics like prediction accuracy, uncertainty quantification reliability, and sampling efficiency, identifying how design choices impact overall workflow effectiveness."
+    ],
+    "summary_cn": [
+      "• 核心模型: 论文批判性评估了材料科学中主动学习工作流程使用的多种代理模型（如高斯过程、神经网络），分析其在预测材料性质和指导实验设计中的作用。",
+      "• 数据来源: 研究基于材料科学应用中的合成和实验数据集（如原子间势构建和自主实验室操作），用于评估工作流程性能。",
+      "• 主要结论: 通过识别常见陷阱（如模型偏差、采样策略缺陷）和讨论缓解策略，为从业者提供了高效设计、评估和解释主动学习工作流程的实用指南。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the critical framework for assessing AL workflows could inspire similar meta-analyses in quantitative finance for optimizing model selection and data acquisition strategies, though direct alpha generation is limited.",
+      "• Implementation Risk: High; the paper highlights implicit design assumptions and pitfalls in AL workflows, suggesting that uncritical adoption in trading systems could lead to model failure or suboptimal performance without careful validation.",
+      "• Novelty: Moderate; while systematic examination of AL workflows in materials science is valuable, the concepts (e.g., uncertainty quantification, sampling strategies) are well-established in ML literature, limiting groundbreaking insights."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；论文在材料科学领域系统审视主动学习工作流程，提供了批判性框架，但核心概念（如不确定性量化）在机器学习中已成熟，创新性有限。",
+      "• 实盘坑: 高；研究指出工作流程中的隐含设计假设和常见陷阱，在量化交易中直接应用可能导致模型失效或性能不佳，需严格验证。",
+      "• 复现难度: 中等；方法论基于公开的AL原则，但材料科学特定数据集和实验设置可能增加跨领域复现的复杂性，需要领域适配。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2601.05937v1",
+    "title": "Performance of a Deep Learning-Based Segmentation Model for Pancreatic Tumors on Public Endoscopic Ultrasound Datasets",
+    "pdf_url": "https://arxiv.org/pdf/2601.05937v1",
+    "published": "2026-01-09",
+    "crawled_at": "2026-01-12 20:04:25",
+    "ai_score": 6.8,
+    "translated_title": "基于深度学习的胰腺肿瘤分割模型在公共内镜超声数据集上的性能评估",
+    "summary_en": [
+      "• Model Architecture: Vision Transformer-based segmentation model using USFM framework, trained on EUS images with grayscale conversion, cropping, and resizing to 512x512 pixels.",
+      "• Data used: 17,367 EUS images from two public datasets for training/validation (5-fold cross-validation), plus independent test set of 350 images from another public dataset with radiologist annotations.",
+      "• Performance metrics: Mean DSC 0.651±0.738, IoU 0.579±0.658, sensitivity 69.8%, specificity 98.8%, accuracy 97.5% in cross-validation; external validation showed DSC 0.657, IoU 0.614, sensitivity 71.8%, specificity 97.7%.",
+      "• Key findings: Model demonstrated strong segmentation performance but exhibited 9.7% erroneous multiple predictions; dataset heterogeneity and limited external validation noted as limitations."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于Vision Transformer的USFM框架分割模型，用于内镜超声图像中的胰腺肿瘤分割，预处理包括灰度转换、裁剪和512x512像素调整。",
+      "• 数据来源: 训练/验证使用两个公共数据集的17,367张图像（5折交叉验证），独立测试集来自另一个公共数据集的350张图像，由放射科医生手动分割。",
+      "• 主要结论: 模型在交叉验证中DSC均值0.651±0.738，IoU 0.579±0.658，敏感性69.8%，特异性98.8%，准确性97.5%；外部验证DSC 0.657，IoU 0.614，敏感性71.8%，特异性97.7%，但9.7%的病例出现错误多重预测。",
+      "• 局限性: 数据集异质性和有限的外部验证表明需要进一步优化、标准化和前瞻性研究。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; model shows promise for medical imaging automation but limited direct financial alpha without integration into diagnostic pipelines or healthcare analytics platforms.",
+      "• Implementation Risk: High; 9.7% erroneous predictions and dataset heterogeneity pose reliability issues; clinical adoption requires rigorous validation and regulatory hurdles.",
+      "• Novelty: Low; Vision Transformer applications in medical imaging are established; this study applies it to pancreatic EUS without groundbreaking architectural innovations.",
+      "• Scalability: Moderate; public datasets enable replication, but performance variability and error rates may hinder deployment in high-stakes medical environments."
+    ],
+    "verdict_cn": [
+      "• 创新点: 较低；将Vision Transformer应用于胰腺内镜超声分割，但缺乏架构或方法上的重大突破，属于现有技术的应用扩展。",
+      "• 实盘坑: 高；9.7%的错误多重预测和数据集异质性导致可靠性风险，医疗应用需克服临床验证和监管障碍，直接金融化难度大。",
+      "• 复现难度: 中等；基于公共数据集和标准框架，技术复现可行，但性能波动和错误率可能影响实际部署效果。",
+      "• 投资价值: 有限；作为医疗AI研究有潜力，但需与诊断系统或健康数据分析整合才能产生直接alpha，当前阶段更适合学术或长期技术储备。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "Medical Image Analysis or IEEE Transactions on Medical Imaging",
+      "status": "Accepted"
+    }
+  },
+  {
     "id": "2601.05245v1",
     "title": "Optimal Lower Bounds for Online Multicalibration",
     "pdf_url": "https://arxiv.org/pdf/2601.05245v1",
