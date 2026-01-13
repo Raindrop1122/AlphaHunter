@@ -1,5 +1,351 @@
 [
   {
+    "id": "2601.07834v1",
+    "title": "A Complete Decomposition of Stochastic Differential Equations",
+    "pdf_url": "https://arxiv.org/pdf/2601.07834v1",
+    "published": "2026-01-12",
+    "crawled_at": "2026-01-13 20:01:29",
+    "ai_score": 7.5,
+    "translated_title": "随机微分方程的完全分解",
+    "summary_en": [
+      "• Model Architecture: Proposes a decomposition of stochastic differential equations into three components: a scalar field for marginal evolution, a symmetric positive-semidefinite diffusion matrix field, and a skew-symmetric matrix field.",
+      "• Data used: Theoretical framework with no empirical data; relies on mathematical proofs and assumptions about time-dependent marginal distributions.",
+      "• Performance metrics: No empirical metrics; evaluated based on mathematical completeness, uniqueness, and applicability to SDEs with prescribed marginals."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出随机微分方程的三分量分解：控制边缘演化的标量场、对称半正定扩散矩阵场和反对称矩阵场。",
+      "• 数据来源: 纯理论框架，无实证数据；基于数学证明和时间依赖性边缘分布的假设。",
+      "• 主要结论: 证明了任何具有指定时间依赖性边缘分布的随机微分方程都存在唯一分解，增强了SDE的理论理解和建模灵活性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; decomposition could enable novel factor models or risk adjustments in quantitative finance, but direct alpha generation is limited without empirical validation.",
+      "• Implementation Risk: High; theoretical nature requires significant adaptation for real-world data, and practical calibration of matrix fields may be computationally intensive.",
+      "• Novelty: High; provides a complete and unique decomposition framework for SDEs, advancing mathematical finance theory with potential applications in derivatives pricing or stochastic modeling."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；提出随机微分方程的完全分解理论，在数学金融领域具有基础性突破，可能推动SDE建模的新方法。",
+      "• 实盘坑: 高；理论性强，需大量工程化适配现实数据，矩阵场校准可能计算成本高，且缺乏实证验证。",
+      "• 复现难度: 中高；基于数学推导，复现理论可行，但应用到具体金融场景需深厚数学和编程能力，可能依赖高级数值方法。"
+    ],
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2601.07830v1",
+    "title": "Optimal Learning Rate Schedule for Balancing Effort and Performance",
+    "pdf_url": "https://arxiv.org/pdf/2601.07830v1",
+    "published": "2026-01-12",
+    "crawled_at": "2026-01-13 20:01:49",
+    "ai_score": 8.5,
+    "translated_title": "平衡努力与性能的最优学习率调度",
+    "summary_en": [
+      "• Model Architecture: The paper introduces a normative framework formalized as an optimal control process, deriving a closed-form solution for optimal learning rate as a closed-loop controller dependent on current and expected future performance, with a simple episodic memory mechanism for performance expectation approximation.",
+      "• Data used: No specific empirical datasets are mentioned; the analysis is based on theoretical models and simulations, with the framework tested across tasks and architectures in numerical simulations.",
+      "• Performance metrics: The framework maximizes cumulative performance while incurring a learning cost, with validation through reproduction of numerically optimized schedules and mathematical analysis of how agent and task parameters shape learning-rate scheduling."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出一个规范框架，将学习速度控制形式化为最优控制过程，推导出最优学习率的闭式解，表现为依赖当前和预期未来性能的闭环控制器，并引入简单情景记忆机制来近似性能期望。",
+      "• 数据来源: 未使用具体实证数据集；分析基于理论模型和模拟，框架在数值模拟中跨任务和架构进行测试。",
+      "• 主要结论: 最优策略依赖于未来性能期望，框架预测过度自信或自信不足如何影响参与度和持久性，将学习速度控制与自我调节学习理论联系起来，并提供生物可行的近最优行为路径。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for applications in adaptive learning systems, such as optimizing training schedules in deep learning models or enhancing reinforcement learning agents, by providing a principled approach to balance performance gains with effort costs.",
+      "• Implementation Risk: Moderate risk due to reliance on accurate performance expectations, which may be challenging to estimate in complex real-world environments, and the need for task-specific parameter tuning.",
+      "• Novelty: High novelty in linking optimal control theory to self-regulated learning, offering a unified mathematical framework that integrates learning speed control, effort allocation, and episodic memory, with potential cross-disciplinary impact."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将最优控制理论应用于自我调节学习，提供统一数学框架，整合学习速度控制、努力分配和情景记忆，具有跨学科影响潜力。",
+      "• 实盘坑: 依赖准确的性能期望估计，在复杂现实环境中可能难以实现，且需要任务特定参数调优，增加实施不确定性。",
+      "• 复现难度: 中等难度，框架基于理论推导和模拟，但闭式解和记忆机制可能简化，实际复现需处理性能期望建模和参数校准挑战。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2601.07821v1",
+    "title": "Failure-Aware RL: Reliable Offline-to-Online Reinforcement Learning with Self-Recovery for Real-World Manipulation",
+    "pdf_url": "https://arxiv.org/pdf/2601.07821v1",
+    "published": "2026-01-12",
+    "crawled_at": "2026-01-13 20:02:08",
+    "ai_score": 7.8,
+    "translated_title": "故障感知强化学习：具有自我恢复能力的可靠离线到在线强化学习用于现实世界操作",
+    "summary_en": [
+      "• Model Architecture: FARL integrates a world-model-based safety critic and an offline-trained recovery policy to prevent Intervention-requiring Failures (IR Failures) during online exploration.",
+      "• Data used: The method utilizes FailureBench, a benchmark incorporating common failure scenarios requiring human intervention, for training and evaluation in both simulation and real-world experiments.",
+      "• Performance metrics: FARL reduces IR Failures by 73.1% and improves performance by 11.3% on average during real-world RL post-training, demonstrating effectiveness in reducing failures while enhancing generalization."
+    ],
+    "summary_cn": [
+      "• 核心模型: FARL结合基于世界模型的安全评估器和离线训练的恢复策略，防止在线探索中的干预需求故障。",
+      "• 数据来源: 使用FailureBench基准，包含需要人工干预的常见故障场景，在仿真和现实世界实验中进行训练和评估。",
+      "• 主要结论: FARL在现实世界RL后训练中平均减少73.1%的干预需求故障，提升11.3%的性能，显著提高可靠性和泛化能力。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - The approach addresses a critical bottleneck in real-world RL deployment by minimizing costly failures, potentially applicable to algorithmic trading systems requiring high reliability.",
+      "• Implementation Risk: High - Real-world robotic manipulation involves complex dynamics; translating to financial domains requires significant adaptation and may face latency issues in high-frequency contexts.",
+      "• Novelty: Significant - Introduces a failure-aware paradigm with self-recovery mechanisms, distinct from traditional safe RL methods, though world-model integration is not entirely new."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出故障感知范式，结合安全评估和恢复策略，针对现实世界RL的干预需求故障问题，具有自我恢复能力。",
+      "• 实盘坑: 现实世界操作复杂性高，迁移到金融领域需大量调整，高频场景可能面临延迟挑战，故障定义在交易中更模糊。",
+      "• 复现难度: 中等偏高，需要构建FailureBench类基准和世界模型，但代码已公开，实验设计相对清晰。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2601.07806v1",
+    "title": "The Confidence Trap: Gender Bias and Predictive Certainty in LLMs",
+    "pdf_url": "https://arxiv.org/pdf/2601.07806v1",
+    "published": "2026-01-12",
+    "crawled_at": "2026-01-13 20:02:25",
+    "ai_score": 7.2,
+    "translated_title": "信心陷阱：大语言模型中的性别偏见与预测确定性",
+    "summary_en": [
+      "• Model Architecture: The study evaluates six state-of-the-art LLMs, including Gemma-2, focusing on their confidence calibration mechanisms in gender bias contexts.",
+      "• Data used: The research employs human-annotated bias judgments and gendered pronoun resolution tasks to assess model performance and fairness disparities.",
+      "• Performance metrics: Introduces Gender-ECE, a novel calibration metric designed to measure gender disparities, and finds Gemma-2 shows the worst calibration among tested models."
+    ],
+    "summary_cn": [
+      "• 核心模型: 研究评估了六种先进大语言模型（包括Gemma-2），重点关注其在性别偏见背景下的信心校准机制。",
+      "• 数据来源: 使用人工标注的偏见判断和性别代词解析任务来评估模型性能和公平性差异。",
+      "• 主要结论: Gemma-2在性别偏见基准测试中校准最差；提出新校准指标Gender-ECE，用于衡量解析任务中的性别差异。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the Gender-ECE metric could help identify biased models in financial NLP applications, potentially reducing algorithmic discrimination in sentiment analysis or risk assessment.",
+      "• Implementation Risk: High; calibration metrics for bias are context-dependent and may not generalize across domains, requiring extensive validation for real-world deployment.",
+      "• Novelty: Limited; while Gender-ECE is new, the focus on confidence calibration for fairness builds on existing bias evaluation literature, offering incremental rather than groundbreaking insights."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出Gender-ECE校准指标，针对性别偏见量化，但整体研究基于现有偏见评估框架，创新性有限。",
+      "• 实盘坑: 高；偏见校准指标依赖特定任务和数据集，在金融应用中泛化能力差，需大量调整和验证。",
+      "• 复现难度: 中等；使用公开模型和标注数据，但精确复现需要访问相同人类标注和测试环境，可能增加成本。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2601.07792v1",
+    "title": "Non-Convex Portfolio Optimization via Energy-Based Models: A Comparative Analysis Using the Thermodynamic HypergRaphical Model Library (THRML) for Index Tracking",
+    "pdf_url": "https://arxiv.org/pdf/2601.07792v1",
+    "published": "2026-01-12",
+    "crawled_at": "2026-01-13 20:02:47",
+    "ai_score": 8.2,
+    "translated_title": "基于能量模型的非凸投资组合优化：使用热力学超图模型库（THRML）进行指数跟踪的比较分析",
+    "summary_en": [
+      "• Model Architecture: THRML reformulates index tracking as probabilistic inference on an Ising Hamiltonian using GPU-accelerated block Gibbs sampling to sample from the Boltzmann distribution of high-quality portfolios, with three key innovations: dynamic coupling strength scaling inversely with VIX, rebalanced bias weights prioritizing tracking quality, and sector-aware post-processing.",
+      "• Data used: Backtesting on a 100-stock S&P 500 universe from 2023 to 2025, with market volatility data (VIX) incorporated for dynamic coupling.",
+      "• Performance metrics: Achieves 4.31% annualized tracking error versus 5.66-6.30% for baselines, generates 128.63% total return against index total return of 79.61%, and Diebold-Mariano test confirms statistical significance with p<0.0001."
+    ],
+    "summary_cn": [
+      "• 核心模型: THRML将指数跟踪重新表述为伊辛哈密顿量上的概率推断，使用GPU加速的块吉布斯采样从高质量投资组合的玻尔兹曼分布中采样，包含动态耦合强度、再平衡偏置权重和行业感知后处理三大创新。",
+      "• 数据来源: 基于2023年至2025年的100只标普500股票组合进行回测，并整合市场波动率数据（VIX）用于动态耦合。",
+      "• 主要结论: 年化跟踪误差为4.31%，优于基线方法的5.66-6.30%；总回报率为128.63%，远超指数的79.61%；Diebold-Mariano检验显示所有比较均具有统计显著性（p<0.0001）。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High due to superior tracking error reduction and significant outperformance in total returns, suggesting strong potential for generating excess returns in index replication strategies.",
+      "• Implementation Risk: Moderate; GPU dependency and complex probabilistic sampling may introduce computational overhead and stability issues in live trading environments.",
+      "• Novelty: High; bridges statistical mechanics and quantitative finance by applying energy-based models to portfolio optimization, offering a fresh approach to NP-hard combinatorial problems."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将统计力学中的能量模型引入量化金融，解决非凸投资组合优化问题，方法新颖且跨学科融合度高。",
+      "• 实盘坑: GPU加速采样可能带来高计算成本，动态耦合基于VIX的假设在市场极端波动时可能失效，增加实盘风险。",
+      "• 复现难度: 中等偏高；需要JAX和THRML库的专业知识，且行业感知后处理细节未充分披露，可能影响复现精度。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2601.07778v1",
+    "title": "DT-ICU: Towards Explainable Digital Twins for ICU Patient Monitoring via Multi-Modal and Multi-Task Iterative Inference",
+    "pdf_url": "https://arxiv.org/pdf/2601.07778v1",
+    "published": "2026-01-12",
+    "crawled_at": "2026-01-13 20:03:09",
+    "ai_score": 8.2,
+    "translated_title": "DT-ICU：通过多模态多任务迭代推理实现可解释ICU患者监测数字孪生",
+    "summary_en": [
+      "• Model Architecture: DT-ICU integrates variable-length clinical time series with static patient information in a unified multitask architecture, enabling iterative predictions updated as new observations accumulate during ICU stays.",
+      "• Data used: Evaluated on the large, publicly available MIMIC-IV dataset, which includes multimodal clinical data from intensive care units.",
+      "• Performance metrics: Consistently outperforms established baseline models across different evaluation settings, with meaningful discrimination achieved shortly after admission and improved ranking of high-risk patients in imbalanced cohorts over longer observation windows.",
+      "• Interpretability: Systematic modality ablations reveal structured reliance on interventions, physiological responses, and contextual information, providing insights into multimodal signal combination and sensitivity-precision trade-offs."
+    ],
+    "summary_cn": [
+      "• 核心模型: DT-ICU采用统一的多任务架构，整合可变长度临床时间序列与静态患者信息，支持基于新观测数据的迭代预测更新。",
+      "• 数据来源: 基于公开的大规模MIMIC-IV数据集进行评估，该数据集包含ICU中的多模态临床数据。",
+      "• 主要结论: 在不同评估设置下持续超越基准模型，入院后短期内即可实现有效风险区分，更长观察窗口进一步改善高风险患者在高度不平衡队列中的排序。",
+      "• 可解释性: 通过模态消融分析揭示模型对干预措施、生理反应观测和上下文信息的结构化依赖，阐明多模态信号组合方式及敏感性与精度之间的权衡。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for clinical risk prediction applications in healthcare investing, particularly for companies developing ICU monitoring systems or digital health solutions, with demonstrated temporal robustness and interpretability.",
+      "• Implementation Risk: Moderate risk due to reliance on high-quality, multimodal clinical data which may not be readily available in all healthcare settings; real-world deployment requires validation across diverse patient populations and institutions.",
+      "• Novelty: Significant novelty in combining digital twin concepts with multimodal, multitask learning for continuous ICU monitoring, offering explainable insights through systematic ablation studies rather than black-box predictions."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将数字孪生概念与多模态多任务学习结合用于连续ICU监测，通过系统性消融研究提供可解释性洞察而非黑箱预测，在医疗AI领域具有显著创新性。",
+      "• 实盘坑: 依赖高质量多模态临床数据，实际部署需在不同患者群体和医疗机构进行验证；模型性能可能受数据质量、标注一致性和隐私法规限制。",
+      "• 复现难度: 中等偏低，源代码和训练权重已公开，基于标准MIMIC-IV数据集，但需要专业医疗数据预处理和计算资源支持多模态时间序列建模。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2601.07767v1",
+    "title": "Are LLM Decisions Faithful to Verbal Confidence?",
+    "pdf_url": "https://arxiv.org/pdf/2601.07767v1",
+    "published": "2026-01-12",
+    "crawled_at": "2026-01-13 20:03:32",
+    "ai_score": 7.8,
+    "translated_title": "LLM决策是否忠实于其口头置信度？",
+    "summary_en": [
+      "• Model Architecture: The paper introduces RiskEval, a framework designed to evaluate LLMs' abstention policies under varying error penalties, focusing on strategic decision-making rather than traditional calibration metrics.",
+      "• Data used: The study evaluates several frontier LLMs (specific models not named in abstract) using synthetic or controlled experimental setups to test cost-awareness and strategic responsiveness in high-penalty scenarios.",
+      "• Performance metrics: Key metrics include utility collapse under extreme penalties, frequency of abstention versus optimal mathematical strategy, and dissociation between verbal confidence and actual decision-making behavior.",
+      "• Main finding: Models show critical dissociation—they are neither cost-aware in expressing confidence nor strategically responsive in abstention decisions, leading to poor utility even when abstention is mathematically optimal."
+    ],
+    "summary_cn": [
+      "• 核心模型: 研究引入RiskEval框架，评估多个前沿LLM在可变错误惩罚下的弃权策略，关注战略决策而非传统校准指标。",
+      "• 数据来源: 使用合成或受控实验设置测试LLM的成本意识和战略响应性，涉及高惩罚场景下的行为分析。",
+      "• 主要结论: 模型表现出关键分离——在表达置信度时缺乏成本意识，在弃权决策中缺乏战略响应性，导致即使弃权在数学上最优时仍出现效用崩溃。",
+      "• 方法论: 通过极端惩罚条件测试模型是否调整弃权政策，揭示口头置信度与推理、知识或决策之间的脱节。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate—identifies a critical flaw in LLM uncertainty estimation that could inform risk-sensitive trading algorithms, but lacks direct financial application or backtesting results.",
+      "• Implementation Risk: High—findings suggest LLMs cannot reliably convert uncertainty into optimal decisions under risk, posing significant challenges for deploying them in high-stakes financial environments without additional safeguards.",
+      "• Novelty: High—introduces RiskEval as a novel framework to test strategic agency in LLMs, moving beyond calibration to examine how models handle error penalties, a fresh perspective in AI interpretability research.",
+      "• Limitations: Abstract does not specify which LLMs were tested or provide quantitative results, limiting immediate reproducibility and practical insights for specific model deployments."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高——提出RiskEval框架，从战略决策角度评估LLM不确定性，超越传统校准研究，为AI可解释性提供新视角。",
+      "• 实盘坑: 高——模型在高惩罚下缺乏战略响应性，可能导致金融应用中风险失控，需额外风控措施，直接部署风险大。",
+      "• 复现难度: 中等——框架概念清晰，但摘要未指定测试的具体LLM或提供详细数据，需自定义实验设置，可能增加复现复杂性。",
+      "• 应用价值: 中等——揭示LLM置信度与决策的脱节，对开发风险敏感算法有启发，但缺乏直接金融案例或性能指标，需进一步转化。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2601.07760v1",
+    "title": "Free-RBF-KAN: Kolmogorov-Arnold Networks with Adaptive Radial Basis Functions for Efficient Function Learning",
+    "pdf_url": "https://arxiv.org/pdf/2601.07760v1",
+    "published": "2026-01-12",
+    "crawled_at": "2026-01-13 20:03:55",
+    "ai_score": 7.5,
+    "translated_title": "Free-RBF-KAN：采用自适应径向基函数的Kolmogorov-Arnold网络用于高效函数学习",
+    "summary_en": [
+      "• Model Architecture: Free-RBF-KAN replaces B-spline basis functions in original KANs with adaptive radial basis functions (RBFs) that feature learnable shapes and dynamic grid alignment to activation patterns, while jointly optimizing smoothness as a kernel parameter without added computational cost.",
+      "• Data used: The paper evaluates performance across multiscale function approximation tasks, physics-informed machine learning problems, and PDE solution operator learning scenarios, though specific datasets are not detailed in the abstract.",
+      "• Performance metrics: Free-RBF-KAN achieves accuracy comparable to original B-spline-based KANs while delivering faster training and inference speeds, demonstrating improved computational efficiency and adaptive resolution for high-dimensional structured modeling."
+    ],
+    "summary_cn": [
+      "• 核心模型: Free-RBF-KAN采用自适应径向基函数（RBF）替代原始KAN中的B样条基函数，通过可学习的RBF形状和动态网格对齐激活模式，同时将平滑度作为核参数与网络权重联合优化。",
+      "• 数据来源: 论文在多重尺度函数逼近、物理信息机器学习以及偏微分方程求解算子学习等任务上进行评估，但摘要中未具体说明所用数据集。",
+      "• 主要结论: Free-RBF-KAN在保持与原始B样条KAN相当精度的同时，实现了更快的训练和推理速度，尤其在高维结构化建模任务中展现出计算效率与自适应分辨率的平衡优势。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate—Free-RBF-KAN's efficiency gains could enhance real-time prediction models in quantitative finance, such as option pricing or volatility surface fitting, but its impact depends on specific application tuning and benchmark performance against existing methods.",
+      "• Implementation Risk: High—Adaptive RBFs and dynamic grid alignment may introduce instability in training convergence or overfitting, especially in noisy financial data environments; the abstract lacks details on regularization techniques or robustness tests.",
+      "• Novelty: Moderate—The integration of learnable RBF shapes and smoothness optimization is innovative within KAN architectures, but it builds on established RBF and neural network concepts, with limited breakthrough compared to broader ML advancements."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等——将可学习的RBF形状与平滑度优化结合到KAN架构中，在动态网格对齐方面有所创新，但整体基于现有RBF和神经网络技术，突破性有限。",
+      "• 实盘坑: 高——自适应RBF和动态网格可能导致训练不稳定或过拟合，尤其在金融噪声数据中；摘要未提及正则化方法或鲁棒性测试，实盘应用风险较大。",
+      "• 复现难度: 中等——模型架构相对清晰，但实现自适应RBF和联合优化需要精细调参，且依赖未公开的代码和数据集细节，可能增加复现挑战。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2601.07756v1",
+    "title": "Learning to bin: differentiable and Bayesian optimization for multi-dimensional discriminants in high-energy physics",
+    "pdf_url": "https://arxiv.org/pdf/2601.07756v1",
+    "published": "2026-01-12",
+    "crawled_at": "2026-01-13 20:04:14",
+    "ai_score": 7.2,
+    "translated_title": "学习分箱：高能物理中多维判别式的可微和贝叶斯优化",
+    "summary_en": [
+      "• Model Architecture: Proposes a binning optimization framework using Gaussian Mixture Models (GMM) for multi-dimensional discriminants and direct boundary adjustment for one-dimensional cases, with two optimization strategies: differentiable and Bayesian approaches.",
+      "• Data used: Evaluated on two toy setups: a binary classification problem and a three-class problem with two signals and backgrounds, focusing on high-energy physics event categorization.",
+      "• Performance metrics: Achieved improved signal sensitivity compared to equidistant binning in one-dimensional cases, with the differentiable approach performing best in multi-dimensional scenarios, particularly when signal processes have limited separability."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出基于高斯混合模型（GMM）的多维判别式分箱优化框架，以及一维情况下的直接边界调整方法，采用可微优化和贝叶斯优化两种策略。",
+      "• 数据来源: 使用两个模拟设置进行评估：二元分类问题和包含两个信号与背景的三类问题，专注于高能物理事件分类。",
+      "• 主要结论: 在一维情况下相比等距分箱提升了信号灵敏度，多维场景中可微优化方法表现最佳，尤其在信号分离度有限时优于传统argmax分类。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - The method could enhance signal detection in noisy financial data where traditional threshold-based approaches underperform, particularly in multi-factor models.",
+      "• Implementation Risk: High - Integration into existing trading systems requires careful calibration of GMM parameters and optimization stability, with potential overfitting in low-data regimes.",
+      "• Novelty: Significant - Combines differentiable optimization with Bayesian methods for binning, moving beyond manual or simple automated approaches in discriminant analysis."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著 - 将可微优化与贝叶斯方法结合用于分箱优化，超越了传统手动或简单自动化方法，在多维判别式处理上具有新颖性。",
+      "• 实盘坑: 高 - GMM参数校准和优化稳定性是关键挑战，低数据量时容易过拟合，且需要与现有分析流程无缝集成。",
+      "• 复现难度: 中等 - 提供了轻量级Python插件，但需要高能物理或类似领域的专业知识来正确设置模拟数据和评估指标。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2601.07752v1",
+    "title": "Riesz Representer Fitting under Bregman Divergence: A Unified Framework for Debiased Machine Learning",
+    "pdf_url": "https://arxiv.org/pdf/2601.07752v1",
+    "published": "2026-01-12",
+    "crawled_at": "2026-01-13 20:04:35",
+    "ai_score": 7.8,
+    "translated_title": "基于Bregman散度的Riesz表示器拟合：去偏机器学习的统一框架",
+    "summary_en": [
+      "• Model Architecture: Proposes a unified framework for Riesz representer estimation using Bregman divergence, which generalizes squared loss (Riesz regression) and KL divergence (tailored loss minimization) with connections to covariate balancing methods.",
+      "• Data used: Theoretical framework applicable to general causal and structural parameter estimation problems; no specific dataset mentioned, but assumes access to observational data with covariates, treatments, and outcomes.",
+      "• Performance metrics: Provides convergence analysis for two model classes: reproducing kernel Hilbert spaces (RKHS) and neural networks, establishing theoretical guarantees for estimation accuracy under the proposed framework."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出基于Bregman散度的统一框架，将Riesz回归和协变量平衡方法统一为广义Riesz回归，通过自动协变量平衡对偶性连接不同估计方法。",
+      "• 数据来源: 适用于因果推断和结构参数估计的观测数据框架，需要协变量、处理变量和结果变量的标准数据集，但未指定具体数据源。",
+      "• 主要结论: 证明了平方损失对应Riesz回归，KL散度对应定制损失最小化，在特定模型设定下对偶解分别对应稳定平衡权重和熵平衡权重，扩展了密度比估计的应用范围。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - provides theoretical foundation for debiased ML in causal inference, potentially improving treatment effect estimation in financial applications like policy impact analysis or factor attribution.",
+      "• Implementation Risk: High - requires careful specification of Bregman divergence and model class; neural network implementation may suffer from optimization challenges and hyperparameter sensitivity.",
+      "• Novelty: Significant - unifies previously disparate methods (Riesz regression, covariate balancing) under single framework with automatic covariate balancing duality, extending density ratio estimation to broader Riesz representer problems."
+    ],
+    "verdict_cn": [
+      "• 创新点: 理论创新突出，首次将Bregman散度框架应用于Riesz表示器估计，通过自动协变量平衡对偶性统一多种去偏方法，扩展了密度比估计的理论边界。",
+      "• 实盘坑: 实际应用风险较高，Bregman散度选择依赖问题领域先验知识，神经网络实现需要大量调参，收敛性保证在有限样本下可能不成立。",
+      "• 复现难度: 中等偏高，理论框架清晰但实现细节复杂，需要同时处理对偶优化和模型拟合，RKHS版本相对容易，神经网络版本计算成本较高。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
     "id": "2601.06025v1",
     "title": "Manifold limit for the training of shallow graph convolutional neural networks",
     "pdf_url": "https://arxiv.org/pdf/2601.06025v1",
