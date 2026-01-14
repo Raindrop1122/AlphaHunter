@@ -1,5 +1,345 @@
 [
   {
+    "id": "2601.08828v1",
+    "title": "Motion Attribution for Video Generation",
+    "pdf_url": "https://arxiv.org/pdf/2601.08828v1",
+    "published": "2026-01-13",
+    "crawled_at": "2026-01-14 20:01:23",
+    "ai_score": 7.8,
+    "translated_title": "视频生成中的运动归因",
+    "summary_en": [
+      "• Model Architecture: Motive is a gradient-based data attribution framework that isolates temporal dynamics from static appearance using motion-weighted loss masks, enabling efficient computation of motion-specific influence in video generation models.",
+      "• Data used: The framework scales to modern, large, high-quality video datasets and models, specifically applied to text-to-video models to study fine-tuning clips that affect temporal dynamics.",
+      "• Performance metrics: Achieves a 74.1% human preference win rate compared to the pretrained base model, with improvements in motion smoothness and dynamic degree on VBench, demonstrating enhanced temporal consistency and physical plausibility."
+    ],
+    "summary_cn": [
+      "• 核心模型: Motive是一个基于梯度的数据归因框架，通过运动加权损失掩码将时间动态与静态外观分离，实现视频生成模型中运动特定影响的高效计算。",
+      "• 数据来源: 应用于现代大规模高质量视频数据集和模型，特别是文本到视频模型，研究影响时间动态的微调片段。",
+      "• 主要结论: 在VBench上提高了运动平滑度和动态程度，相比预训练基础模型获得74.1%的人类偏好胜率，增强了时间一致性和物理合理性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the framework's ability to identify high-influence data for improving motion quality could enhance video generation models, potentially applicable to synthetic data generation for training or simulation in finance-related contexts.",
+      "• Implementation Risk: High; gradient-based attribution methods are computationally intensive and may not scale well to real-time applications, with dependencies on specific model architectures and datasets limiting generalizability.",
+      "• Novelty: High; this is the first framework to attribute motion rather than visual appearance in video generative models, introducing a motion-centric approach to data curation that addresses an underexplored aspect of video generation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次在视频生成模型中归因运动而非视觉外观，引入以运动为中心的数据策展方法，填补了视频生成中时间动态理解的空白。",
+      "• 实盘坑: 基于梯度的归因方法计算量大，可能难以扩展到实时应用，且对特定模型架构和数据集的依赖限制了泛化能力。",
+      "• 复现难度: 中等；需要访问大规模视频数据集和预训练模型，但框架设计相对清晰，开源实现可能降低技术门槛。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2601.08808v1",
+    "title": "Multiplex Thinking: Reasoning via Token-wise Branch-and-Merge",
+    "pdf_url": "https://arxiv.org/pdf/2601.08808v1",
+    "published": "2026-01-13",
+    "crawled_at": "2026-01-14 20:01:43",
+    "ai_score": 8.2,
+    "translated_title": "多路思考：基于逐令牌分支与合并的推理机制",
+    "summary_en": [
+      "• Model Architecture: Multiplex Thinking introduces a stochastic soft reasoning mechanism that samples K candidate tokens at each thinking step and aggregates their embeddings into a single continuous multiplex token, maintaining vocabulary embedding priors and sampling dynamics while enabling tractable probability distributions over rollouts.",
+      "• Data used: The paper evaluates on challenging math reasoning benchmarks, though specific datasets are not detailed in the abstract; code and checkpoints are available on GitHub for reproducibility.",
+      "• Performance metrics: Multiplex Thinking consistently outperforms strong discrete Chain-of-Thought (CoT) and reinforcement learning baselines across Pass@1 to Pass@1024 metrics while producing shorter sequences, indicating improved efficiency and accuracy."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出多路思考机制，在每一步推理中采样K个候选令牌，将其嵌入聚合为单个连续多路令牌，保留词汇嵌入先验和采样动态，同时支持可处理的概率分布。",
+      "• 数据来源: 在具有挑战性的数学推理基准上进行评估，具体数据集未在摘要中详述；代码和检查点已在GitHub上开源。",
+      "• 主要结论: 多路思考在Pass@1至Pass@1024指标上持续优于离散思维链和强化学习基线，同时生成更短的序列，显示出更高的效率和准确性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for improving reasoning efficiency in quantitative models, especially in scenarios requiring probabilistic decision-making or uncertainty handling, which could enhance algorithmic trading strategies.",
+      "• Implementation Risk: Moderate risk due to reliance on reinforcement learning optimization and the complexity of integrating continuous multiplex tokens into existing discrete token frameworks, potentially increasing computational overhead.",
+      "• Novelty: Novel approach blending soft reasoning with discrete generation, offering a self-adaptive mechanism that transitions between discrete and continuous representations based on confidence, though inspired by human reasoning patterns."
+    ],
+    "verdict_cn": [
+      "• 创新点: 创新性地结合软推理与离散生成，提供自适应性机制，根据置信度在离散和连续表示间切换，但灵感来源于人类推理模式。",
+      "• 实盘坑: 中等风险，依赖于强化学习优化，且将连续多路令牌集成到现有离散令牌框架中可能增加计算开销，影响实时性能。",
+      "• 复现难度: 中等难度，代码已开源，但需要处理复杂的嵌入聚合和强化学习训练，可能对硬件和专业知识有较高要求。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2601.08784v1",
+    "title": "On the use of graph models to achieve individual and group fairness",
+    "pdf_url": "https://arxiv.org/pdf/2601.08784v1",
+    "published": "2026-01-13",
+    "crawled_at": "2026-01-14 20:02:00",
+    "ai_score": 7.2,
+    "translated_title": "基于图模型实现个体与群体公平性的研究",
+    "summary_en": [
+      "• Model Architecture: Proposes a theoretical framework based on Sheaf Diffusion, leveraging dynamical systems and homology to model fairness, projecting input data into a bias-free space with fairness constraints.",
+      "• Data used: Tested on a simulation study and standard fairness benchmarks, though specific datasets are not detailed in the abstract.",
+      "• Performance metrics: Evaluated in terms of accuracy and fairness, studying trade-offs on the Pareto frontier, with satisfactory results reported."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于Sheaf Diffusion的理论框架，利用动力系统和同调学建模公平性，将输入数据投影到无偏空间。",
+      "• 数据来源: 使用模拟研究和标准公平性基准测试，但摘要中未具体说明数据集。",
+      "• 主要结论: 模型在准确性和公平性方面表现满意，研究了帕累托前沿的权衡，并提供了SHAP值的可解释性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the unified method for individual and group fairness could enhance model robustness in finance, but direct alpha generation is limited without specific financial applications.",
+      "• Implementation Risk: High; reliance on graph models and homology may introduce complexity, and real-world data integration could be challenging due to abstract theoretical foundations.",
+      "• Novelty: High; innovative use of Sheaf Diffusion and homology for fairness modeling offers a fresh perspective, though practical validation in finance is needed."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；将Sheaf Diffusion和同调学应用于公平性建模，提供统一处理个体和群体偏差的方法，具有理论新颖性。",
+      "• 实盘坑: 高；图模型和同调学可能增加实现复杂度，且缺乏金融场景的具体验证，实际部署风险较大。",
+      "• 复现难度: 中高；需要专业知识在动力系统和公平性基准上复现，但提供了SHAP值等可解释性工具，有助于调试。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2601.08781v1",
+    "title": "Fast and explainable clustering in the Manhattan and Tanimoto distance",
+    "pdf_url": "https://arxiv.org/pdf/2601.08781v1",
+    "published": "2026-01-13",
+    "crawled_at": "2026-01-14 20:02:19",
+    "ai_score": 7.2,
+    "translated_title": "曼哈顿距离与谷本距离下的快速可解释聚类算法",
+    "summary_en": [
+      "• Model Architecture: CLASSIX algorithm extended to support Manhattan and Tanimoto distances by replacing principal component sorting with appropriate vector norms and using triangle inequality for search termination; Tanimoto distance employs a sharper intersection inequality for performance boost.",
+      "• Data used: Real-world chemical fingerprint benchmark dataset (specific chemical compounds not detailed in abstract).",
+      "• Performance metrics: CLASSIX Tanimoto achieves ~30x speedup over Taylor-Butina algorithm and ~80x speedup over DBSCAN while producing higher-quality clusters on chemical fingerprint data."
+    ],
+    "summary_cn": [
+      "• 核心模型: CLASSIX算法扩展至曼哈顿距离和谷本距离，通过向量范数排序替代主成分分析，结合三角不等式终止搜索；谷本距离采用更严格的交集不等式提升性能。",
+      "• 数据来源: 真实世界化学指纹基准数据集（摘要未具体说明化合物类型）。",
+      "• 主要结论: 在化学指纹数据上，CLASSIX谷本距离版本比Taylor-Butina算法快约30倍，比DBSCAN快约80倍，且聚类质量更高。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate—efficient clustering for high-dimensional data like chemical fingerprints could enhance feature engineering in quantitative finance, particularly for drug discovery or materials science portfolios.",
+      "• Implementation Risk: High—algorithm depends on distance metric selection (Manhattan/Tanimoto) which may not generalize well to financial time-series data without careful adaptation.",
+      "• Novelty: Limited—extension of existing CLASSIX framework to non-Euclidean distances is incremental; sharper inequality for Tanimoto distance is the main theoretical contribution."
+    ],
+    "verdict_cn": [
+      "• 创新点: 有限—将CLASSIX算法扩展至非欧几里得距离属于渐进式改进；谷本距离的严格交集不等式是主要理论贡献。",
+      "• 实盘坑: 高风险—算法性能高度依赖距离度量选择，金融时间序列数据可能不适用曼哈顿或谷本距离，需大量调参和验证。",
+      "• 复现难度: 中等—算法逻辑清晰，但需要化学指纹数据或类似高维稀疏数据进行测试，金融数据适配可能增加复杂度。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2601.08777v1",
+    "title": "Asymptotic Universal Alignment: A New Alignment Framework via Test-Time Scaling",
+    "pdf_url": "https://arxiv.org/pdf/2601.08777v1",
+    "published": "2026-01-13",
+    "crawled_at": "2026-01-14 20:02:44",
+    "ai_score": 8.5,
+    "translated_title": "渐近通用对齐：通过测试时缩放的新对齐框架",
+    "summary_en": [
+      "• Model Architecture: Introduces a novel framework for aligning large language models (LLMs) via test-time scaling, where models produce k≥1 candidate responses per prompt, and users select their preferred one. It defines (k,f(k))-robust alignment and asymptotic universal alignment (U-alignment), with optimal convergence rate characterized as f(k)=k/(k+1).",
+      "• Data used: The paper is theoretical and does not specify empirical data; it relies on mathematical proofs and game-theoretic analysis to establish results, focusing on synthetic or hypothetical user preferences in heterogeneous settings.",
+      "• Performance metrics: Evaluates alignment through win rates against other single-output models, showing that optimal methods achieve U-alignment at rate f(k)=k/(k+1), while existing methods like Nash learning from human feedback (NLHF) can underperform with win rates capped near 1/2 due to lack of output diversity."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出基于测试时缩放的新对齐框架，模型为每个提示生成k≥1个候选响应，用户选择偏好响应，定义(k,f(k))-鲁棒对齐和渐近通用对齐(U-alignment)，最优收敛率为f(k)=k/(k+1)。",
+      "• 数据来源: 论文为理论性研究，未指定实证数据；依赖数学证明和博弈论分析，基于异构用户偏好的合成或假设场景。",
+      "• 主要结论: 最优方法能以f(k)=k/(k+1)的速率实现U-alignment，而现有方法如Nash学习人类反馈(NLHF)因输出多样性不足，胜率上限接近1/2，无法充分利用测试时缩放优势。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for personalized AI applications in finance, such as tailored investment advice or risk assessment, by enabling models to adapt to diverse user preferences through scalable response generation, though direct trading alpha may require integration with market data.",
+      "• Implementation Risk: Moderate to high risk due to theoretical nature; practical deployment needs robust user feedback mechanisms and computational resources for generating multiple responses, with challenges in real-time scaling and preference elicitation in noisy environments.",
+      "• Novelty: High novelty in formalizing test-time scaling for alignment, introducing symmetric multi-player games to achieve optimal rates, and critiquing existing methods like NLHF for diversity collapse, offering a fresh perspective on LLM personalization."
+    ],
+    "verdict_cn": [
+      "• 创新点: 创新性地形式化测试时缩放对齐，提出对称多玩家对齐游戏实现最优速率，批判现有方法如NLHF因多样性崩溃而性能受限，为LLM个性化提供新思路。",
+      "• 实盘坑: 理论性强，实盘应用需解决用户反馈收集、计算资源需求高、实时缩放挑战，以及在嘈杂环境中偏好提取的困难，风险中等偏高。",
+      "• 复现难度: 高难度，需深入博弈论和数学证明知识，实现对称Nash均衡策略和自博弈学习动态，缺乏开源代码或实证数据支持，复现复杂。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2601.08763v1",
+    "title": "Rewarding the Rare: Uniqueness-Aware RL for Creative Problem Solving in LLMs",
+    "pdf_url": "https://arxiv.org/pdf/2601.08763v1",
+    "published": "2026-01-13",
+    "crawled_at": "2026-01-14 20:03:03",
+    "ai_score": 8.2,
+    "translated_title": "奖励罕见：面向LLM创造性问题解决的独特性感知强化学习",
+    "summary_en": [
+      "• Model Architecture: Proposes Uniqueness-Aware Reinforcement Learning (UARL), a rollout-level objective that uses an LLM-based judge to cluster solutions by high-level strategies and reweights policy advantages inversely with cluster size to reward novel correct strategies.",
+      "• Data used: Evaluated on mathematics, physics, and medical reasoning benchmarks, with large sampling budgets to measure pass@k and AUC@K metrics across diverse problem sets.",
+      "• Performance metrics: Consistently improves pass@k across sampling budgets and increases AUC@K without sacrificing pass@1, while sustaining exploration and uncovering more diverse solution strategies at scale."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出独特性感知强化学习（UARL），通过基于LLM的评判器按高层策略聚类解决方案，并按聚类大小反比加权策略优势，以奖励新颖的正确策略。",
+      "• 数据来源: 在数学、物理和医学推理基准上进行评估，使用大采样预算测量不同问题集的pass@k和AUC@K指标。",
+      "• 主要结论: 在保持pass@1的同时，持续提升pass@k和AUC@K，支持探索并大规模发现更多样化的解决方案策略。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for tasks requiring diverse reasoning patterns, such as quantitative strategy generation or alternative scenario analysis, where exploration collapse limits traditional RL approaches.",
+      "• Implementation Risk: Moderate; relies on accurate LLM-based clustering of high-level strategies, which may introduce noise or bias in reward assignment, potentially affecting policy stability.",
+      "• Novelty: Strong; addresses exploration collapse in RL for LLMs by explicitly rewarding rare correct strategies at the rollout level, moving beyond token-level regularization to enhance solution diversity."
+    ],
+    "verdict_cn": [
+      "• 创新点: 针对LLM中RL的探索崩溃问题，提出在rollout层面显式奖励罕见正确策略，通过高层策略聚类和反比加权，增强解决方案多样性。",
+      "• 实盘坑: 依赖基于LLM的高层策略聚类准确性，可能引入奖励分配噪声或偏差，影响策略稳定性，需谨慎调参。",
+      "• 复现难度: 中等；需要实现LLM评判器和聚类机制，但方法框架清晰，基准数据集公开，可复现性较好。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2601.08760v1",
+    "title": "Adaptive Requesting in Decentralized Edge Networks via Non-Stationary Bandits",
+    "pdf_url": "https://arxiv.org/pdf/2601.08760v1",
+    "published": "2026-01-13",
+    "crawled_at": "2026-01-14 20:03:20",
+    "ai_score": 7.8,
+    "translated_title": "基于非平稳多臂老虎机的去中心化边缘网络自适应请求策略",
+    "summary_en": [
+      "• Model Architecture: Proposes AGING BANDIT WITH ADAPTIVE RESET algorithm combining adaptive windowing with periodic monitoring to handle non-stationary reward distributions in decentralized edge networks",
+      "• Data used: Simulation-based validation with synthetic data modeling time-sensitive clients, access nodes, and servers in edge computing environments",
+      "• Performance metrics: Theoretical guarantees showing near-optimal performance in terms of age of information reduction, validated through simulation experiments comparing against classical bandit approaches"
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出AGING BANDIT WITH ADAPTIVE RESET算法，结合自适应窗口和周期性监控处理去中心化边缘网络中的非平稳奖励分布",
+      "• 数据来源: 基于合成数据的仿真验证，模拟边缘计算环境中时间敏感客户端、接入节点和服务器的交互",
+      "• 主要结论: 算法在信息年龄减少方面达到接近最优性能，理论保证和仿真实验均优于传统老虎机方法"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - addresses real-time optimization in edge networks but limited direct financial applications; could inform latency-sensitive trading systems",
+      "• Implementation Risk: High - decentralized partially observable setting with history-dependent rewards creates significant practical deployment challenges",
+      "• Novelty: Good - combines adaptive windowing with periodic monitoring specifically for non-stationary bandits in edge computing contexts"
+    ],
+    "verdict_cn": [
+      "• 创新点: 较好 - 针对边缘计算中的非平稳奖励问题，提出自适应重置机制，在去中心化部分可观测环境下有理论创新",
+      "• 实盘坑: 高 - 历史依赖的奖励过程和客户端间耦合效应在实际部署中难以准确建模，监控机制可能引入额外延迟",
+      "• 复现难度: 中等 - 算法描述清晰但需要精确模拟边缘网络环境，奖励函数的非平稳特性增加实验复杂性"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2601.08733v1",
+    "title": "A Novel Approach to Explainable AI with Quantized Active Ingredients in Decision Making",
+    "pdf_url": "https://arxiv.org/pdf/2601.08733v1",
+    "published": "2026-01-13",
+    "crawled_at": "2026-01-14 20:03:39",
+    "ai_score": 7.2,
+    "translated_title": "基于量化决策中活性成分的可解释人工智能新方法",
+    "summary_en": [
+      "• Model Architecture: Hybrid quantum-classical framework combining Quantum Boltzmann Machines (QBMs) with strongly entangling layers and Classical Boltzmann Machines (CBMs) as baseline using contrastive divergence",
+      "• Data used: Binarised and dimensionally reduced MNIST dataset with Principal Component Analysis (PCA) preprocessing",
+      "• Performance metrics: QBMs achieved 83.5% classification accuracy vs. 54% for CBMs, with lower entropy in feature attributions (1.27 vs. 1.39) indicating clearer feature importance identification"
+    ],
+    "summary_cn": [
+      "• 核心模型: 量子-经典混合框架，结合具有强纠缠层的量子玻尔兹曼机(QBMs)和使用对比散度的经典玻尔兹曼机(CBMs)作为基线",
+      "• 数据来源: 经过二值化和降维处理的MNIST数据集，采用主成分分析(PCA)进行预处理",
+      "• 主要结论: QBMs在分类准确率(83.5% vs. 54%)和特征重要性识别清晰度(熵值1.27 vs. 1.39)上均优于CBMs，展示了量子-经典混合模型在准确性和可解释性上的双重优势"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - quantum-enhanced interpretability could improve factor selection in complex financial models, but MNIST dataset relevance to finance is limited",
+      "• Implementation Risk: High - quantum hardware dependency, hybrid circuit complexity, and scalability concerns for real-time trading applications",
+      "• Novelty: Significant - pioneering integration of quantum computing principles with explainable AI frameworks, though experimental scale is small"
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著 - 首次将量子计算原理与可解释AI框架结合，为量子机器学习在金融领域的应用开辟新路径",
+      "• 实盘坑: 高 - 量子硬件依赖性强，混合电路复杂，实时交易场景下的可扩展性存疑，MNIST数据与金融实际差距较大",
+      "• 复现难度: 高 - 需要量子计算实验环境，强纠缠层实现复杂，对比散度与梯度显著性图的工程化挑战大"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2601.08726v1",
+    "title": "Model-Agnostic Solutions for Deep Reinforcement Learning in Non-Ergodic Contexts",
+    "pdf_url": "https://arxiv.org/pdf/2601.08726v1",
+    "published": "2026-01-13",
+    "crawled_at": "2026-01-14 20:03:57",
+    "ai_score": 7.8,
+    "translated_title": "非遍历环境下深度强化学习的模型无关解决方案",
+    "summary_en": [
+      "• Model Architecture: Extends traditional RL frameworks to incorporate explicit temporal dependence in function approximation, allowing networks to process temporal trajectory information without modifying environmental feedback mechanisms.",
+      "• Data used: Simulated non-ergodic environments where ensemble averages diverge from time-average growth rates, demonstrating failure of standard deep RL implementations to recover optimal policies.",
+      "• Performance metrics: Shows improved policy optimization by aligning value function estimation with intrinsic growth rates rather than expected-value formulations, achieving consistency with process dynamics in non-ergodic settings."
+    ],
+    "summary_cn": [
+      "• 核心模型: 扩展传统强化学习框架，在函数逼近中引入显式时间依赖性，使网络能够处理时间轨迹信息而无需改变环境反馈机制。",
+      "• 数据来源: 模拟非遍历环境，其中集合平均与时间平均增长率出现分歧，证明标准深度强化学习实现无法恢复最优策略。",
+      "• 主要结论: 通过将价值函数估计与内在增长率而非期望值公式对齐，改进了策略优化，在非遍历环境中实现了与过程动态的一致性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - addresses fundamental limitation in RL for non-stationary financial markets where ergodicity assumptions often fail, potentially improving long-term portfolio growth strategies.",
+      "• Implementation Risk: High - requires careful calibration of temporal dependence mechanisms and validation across diverse non-ergodic scenarios; performance sensitive to trajectory sampling methods.",
+      "• Novelty: Significant - introduces model-agnostic temporal adaptation without reward transformations, offering new approach to RL in environments where Bellman equation assumptions break down."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著 - 在不进行奖励变换的情况下引入模型无关的时间适应机制，为贝尔曼方程假设失效的环境提供了强化学习新方法。",
+      "• 实盘坑: 高 - 需要精细校准时间依赖机制并在多样化非遍历场景中验证；性能对轨迹采样方法敏感，市场结构变化可能破坏适应性。",
+      "• 复现难度: 中等 - 核心思想清晰但需要构建合适的非遍历环境模拟和深度RL实现，时间依赖集成需要架构调整和超参数优化。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2601.08724v1",
+    "title": "Kernel Learning for Regression via Quantum Annealing Based Spectral Sampling",
+    "pdf_url": "https://arxiv.org/pdf/2601.08724v1",
+    "published": "2026-01-13",
+    "crawled_at": "2026-01-14 20:04:18",
+    "ai_score": 7.2,
+    "translated_title": "基于量子退火谱采样的回归核学习方法",
+    "summary_en": [
+      "• Model Architecture: Proposes a QA-in-the-loop kernel learning framework that uses quantum annealing to sample from a restricted Boltzmann machine (RBM) spectral distribution, generates random Fourier features via Gaussian-Bernoulli transformation, and employs Nadaraya-Watson regression with squared-kernel weights to avoid negative values.",
+      "• Data used: Evaluated on multiple benchmark regression datasets (specific datasets not named in abstract), comparing performance against baseline Gaussian-kernel Nadaraya-Watson regression.",
+      "• Performance metrics: Reports decrease in training loss, structural changes in kernel matrix, and improvements in R² and RMSE over baseline; increasing random features at inference further enhances accuracy."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出量子退火闭环核学习框架，通过量子退火从受限玻尔兹曼机谱分布采样，经高斯-伯努利变换生成随机傅里叶特征，采用平方核权重的Nadaraya-Watson回归避免负值问题。",
+      "• 数据来源: 在多个基准回归数据集上进行实验（摘要未具体说明数据集名称），与基线高斯核Nadaraya-Watson回归进行对比。",
+      "• 主要结论: 训练损失降低，核矩阵结构改变，R²和RMSE指标优于基线；推理时增加随机特征数量可进一步提升精度。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - The method adapts kernels to data via quantum sampling, potentially capturing non-linear patterns better than fixed kernels, but real-world financial data complexity may limit gains.",
+      "• Implementation Risk: High - Relies on quantum annealing hardware which is noisy, finite-temperature, and not widely accessible; squared-kernel weights introduce computational overhead and may over-smooth predictions.",
+      "• Novelty: High - Integrates quantum annealing directly into kernel learning loop rather than as mere sampling substitute, using RBM spectral modeling and Gaussian-Bernoulli transformation for continuous frequency mapping."
+    ],
+    "verdict_cn": [
+      "• 创新点: 较高 - 将量子退火直接嵌入核学习循环，而非仅作为采样替代，采用RBM谱建模和高斯-伯努利变换实现连续频率映射，结构设计新颖。",
+      "• 实盘坑: 高 - 依赖量子退火硬件，存在噪声和有限温度问题，设备普及度低；平方核权重增加计算成本，可能导致预测过度平滑。",
+      "• 复现难度: 高 - 需要量子退火设备或模拟器，RBM训练和谱采样过程复杂，基准数据集未具体说明，难以直接验证金融场景效果。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
     "id": "2601.07834v1",
     "title": "A Complete Decomposition of Stochastic Differential Equations",
     "pdf_url": "https://arxiv.org/pdf/2601.07834v1",
