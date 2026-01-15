@@ -1,5 +1,347 @@
 [
   {
+    "id": "2601.09708v1",
+    "title": "Fast-ThinkAct: Efficient Vision-Language-Action Reasoning via Verbalizable Latent Planning",
+    "pdf_url": "https://arxiv.org/pdf/2601.09708v1",
+    "published": "2026-01-14",
+    "crawled_at": "2026-01-15 20:01:29",
+    "ai_score": 8.2,
+    "translated_title": "Fast-ThinkAct：通过可言语化潜在规划实现高效视觉-语言-动作推理",
+    "summary_en": [
+      "• Model Architecture: Fast-ThinkAct is an efficient reasoning framework that uses verbalizable latent reasoning to achieve compact planning, distilling from a teacher model with a preference-guided objective to align manipulation trajectories.",
+      "• Data used: The paper mentions extensive experiments across diverse embodied manipulation and reasoning benchmarks, but does not specify exact datasets; likely includes standard VLA benchmarks like ALFRED, RoboTHOR, or similar.",
+      "• Performance metrics: Achieves up to 89.3% reduced inference latency compared to state-of-the-art reasoning VLAs, while maintaining strong performance in long-horizon planning, few-shot adaptation, and failure recovery."
+    ],
+    "summary_cn": [
+      "• 核心模型: Fast-ThinkAct采用可言语化潜在推理框架，通过从教师模型蒸馏学习，结合偏好引导目标对齐操作轨迹，实现紧凑高效的规划。",
+      "• 数据来源: 论文提及在多样化的具身操作和推理基准上进行广泛实验，但未明确具体数据集；可能包括ALFRED、RoboTHOR等标准VLA基准。",
+      "• 主要结论: 相比最先进的推理VLA模型，推理延迟降低高达89.3%，同时保持有效的长时程规划、少样本适应和失败恢复能力。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for real-time robotic control and autonomous systems where low latency is critical; could be adapted for algorithmic trading systems requiring fast decision-making under uncertainty.",
+      "• Implementation Risk: Moderate risk due to reliance on teacher-student distillation which may introduce biases; real-world deployment in dynamic environments could face scalability issues.",
+      "• Novelty: Novel approach of verbalizable latent planning for efficiency, but builds on existing CoT and VLA techniques; the distillation method is incremental rather than groundbreaking."
+    ],
+    "verdict_cn": [
+      "• 创新点: 引入可言语化潜在规划以提高推理效率，但核心仍基于现有链式思维和VLA技术；蒸馏方法属于渐进式改进而非突破性创新。",
+      "• 实盘坑: 依赖教师-学生蒸馏可能引入偏差；在动态环境中的实际部署可能面临可扩展性问题，延迟降低的代价可能是规划精度的牺牲。",
+      "• 复现难度: 中等难度，需要实现复杂的蒸馏框架和偏好引导目标，但论文未提供完整代码或详细超参数，可能增加复现挑战。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2601.09706v1",
+    "title": "Value-Aware Numerical Representations for Transformer Language Models",
+    "pdf_url": "https://arxiv.org/pdf/2601.09706v1",
+    "published": "2026-01-14",
+    "crawled_at": "2026-01-15 20:01:49",
+    "ai_score": 7.5,
+    "translated_title": "面向Transformer语言模型的值感知数值表示方法",
+    "summary_en": [
+      "• Model Architecture: Introduces a value-aware numerical representation that augments standard tokenized inputs with a dedicated prefix token whose embedding is explicitly conditioned on the underlying numerical value, remaining compatible with existing tokenizers and decoder-only Transformer architectures.",
+      "• Data used: Evaluation conducted on arithmetic tasks across various numerical formats, tasks, and operand lengths, though specific datasets are not detailed in the abstract.",
+      "• Performance metrics: Outperforms baselines on arithmetic tasks, indicating improved numerical robustness and systematic error reduction in language models."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出一种值感知数值表示方法，通过为数值添加前缀标记，其嵌入向量显式编码数值大小，兼容现有分词器和仅解码器Transformer架构。",
+      "• 数据来源: 在算术任务上进行评估，涵盖多种数值格式、任务类型和操作数长度，但摘要中未具体说明数据集细节。",
+      "• 主要结论: 该方法在算术任务上优于基线模型，表明显式编码数值值是提高语言模型基本数值鲁棒性的有效且高效方式。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate potential for improving quantitative NLP tasks in finance, such as earnings report analysis or numerical reasoning in financial documents, by enhancing model accuracy on basic arithmetic and numerical understanding.",
+      "• Implementation Risk: Low to moderate risk; the approach is compatible with existing architectures, but integration into production systems may require careful tuning and validation across diverse financial datasets.",
+      "• Novelty: Novel in explicitly encoding numerical magnitude into token embeddings via a dedicated prefix, addressing a known limitation in Transformer models, though similar value-aware approaches exist in other contexts."
+    ],
+    "verdict_cn": [
+      "• 创新点: 创新性地通过前缀标记显式编码数值大小到嵌入向量中，直接解决Transformer模型处理数值时的符号化局限，提升数值鲁棒性。",
+      "• 实盘坑: 实盘应用中需注意对金融数据中复杂数值格式（如百分比、货币单位）的适配，以及模型在噪声数据下的泛化能力可能不足。",
+      "• 复现难度: 复现难度中等；方法架构简单，但需要精确实现数值到嵌入向量的映射，并可能依赖特定训练数据和超参数调优。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2601.09693v1",
+    "title": "Contrastive Geometric Learning Unlocks Unified Structure- and Ligand-Based Drug Design",
+    "pdf_url": "https://arxiv.org/pdf/2601.09693v1",
+    "published": "2026-01-14",
+    "crawled_at": "2026-01-15 20:02:08",
+    "ai_score": 8.5,
+    "translated_title": "对比几何学习解锁统一的结构与配体药物设计",
+    "summary_en": [
+      "• Model Architecture: ConGLUDe integrates a geometric protein encoder for whole-protein representations and implicit binding site embeddings with a fast ligand encoder, eliminating the need for pre-defined pockets through contrastive learning.",
+      "• Data used: Trained jointly on protein-ligand complexes and large-scale bioactivity data, enabling unified structure- and ligand-based learning without disjoint data sources.",
+      "• Performance metrics: Achieves state-of-the-art zero-shot virtual screening without pocket input, outperforms existing methods on target fishing, and demonstrates competitive ligand-conditioned pocket selection across diverse benchmarks."
+    ],
+    "summary_cn": [
+      "• 核心模型: ConGLUDe结合几何蛋白质编码器（生成全蛋白表示和隐含结合位点嵌入）与快速配体编码器，通过对比学习对齐配体与全局蛋白表示及候选结合位点。",
+      "• 数据来源: 联合训练于蛋白质-配体复合物和大规模生物活性数据，统一结构与配体方法，避免传统数据分离限制。",
+      "• 主要结论: 在无结合口袋输入的零样本虚拟筛选中达到最先进性能，在目标钓鱼任务中显著超越现有方法，并在配体条件口袋选择中表现竞争性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for drug discovery applications; unified model could reduce computational costs and improve hit rates in virtual screening, potentially accelerating early-stage drug development pipelines.",
+      "• Implementation Risk: Moderate; reliance on large-scale bioactivity data and protein-ligand complexes may limit applicability to novel targets with sparse data, and real-world validation beyond benchmarks is needed.",
+      "• Novelty: Significant; introduces a single contrastive geometric model that bridges structure- and ligand-based design, enabling joint training and removing pre-defined pocket requirements, a step toward foundation models in drug discovery."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出首个统一结构与配体方法的对比几何模型，通过联合训练和隐含口袋预测，突破传统数据分离限制，具有基础模型潜力。",
+      "• 实盘坑: 依赖大规模生物活性数据，对新靶点或数据稀疏场景适用性有限；零样本性能虽强，但实际药物发现中的复杂生物环境验证不足。",
+      "• 复现难度: 中等偏高；需要处理蛋白质几何编码和对比学习对齐，数据预处理和模型调优可能耗时，但开源代码可降低门槛。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2601.09692v1",
+    "title": "Routing with Generated Data: Annotation-Free LLM Skill Estimation and Expert Selection",
+    "pdf_url": "https://arxiv.org/pdf/2601.09692v1",
+    "published": "2026-01-14",
+    "crawled_at": "2026-01-15 20:02:32",
+    "ai_score": 7.8,
+    "translated_title": "基于生成数据的路由：免标注的LLM技能评估与专家选择",
+    "summary_en": [
+      "• Model Architecture: Introduces CASCAL, a query-only router that uses consensus voting to estimate model correctness and hierarchical clustering to identify model-specific skill niches, eliminating the need for ground-truth labels.",
+      "• Data used: Trains routers exclusively on generated queries and answers from high-level task descriptions produced by generator LLMs, with no reliance on real labeled data.",
+      "• Performance metrics: Evaluated across four diverse benchmarks and 12 models, showing CASCAL outperforms the best query-answer router by 4.6% absolute accuracy when trained on weak generator data, and query-only routers degrade slower than query-answer routers as generator quality decreases.",
+      "• Key findings: Identifies two critical generator characteristics—accurate self-answering and sufficient performance differentiation among models—and shows filtering for these improves generated data quality."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出CASCAL，一种仅使用查询的路由器，通过共识投票估计模型正确性，并通过层次聚类识别模型特定技能领域，无需真实标注数据。",
+      "• 数据来源: 完全基于生成器LLM从高级任务描述生成的查询和答案训练路由器，不依赖真实标注数据。",
+      "• 主要结论: 在四个不同基准和12个模型上评估，CASCAL在弱生成器数据上训练时，比最佳查询-答案路由器绝对准确率高4.6%，且随着生成器质量下降，仅查询路由器性能下降更慢。",
+      "• 关键发现: 识别出生成器的两个关键特性——准确自答和模型间足够性能差异，并展示基于此过滤可提升生成数据质量。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate—enables dynamic model selection in heterogeneous, unknown request distributions without labeled data, potentially improving LLM deployment efficiency in financial NLP tasks like sentiment analysis or report generation.",
+      "• Implementation Risk: High—relies heavily on generator LLM quality; poor generators produce ineffective training data, and consensus voting/hierarchical clustering add computational overhead in real-time routing.",
+      "• Novelty: High—introduces the RGD setting (routing with generated data) and CASCAL method, addressing a practical gap where ground-truth data is unavailable, with robust performance against generator degradation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高——提出RGD设置（基于生成数据的路由）和CASCAL方法，解决真实标注数据缺失的实际问题，性能对生成器质量下降具有鲁棒性。",
+      "• 实盘坑: 高——严重依赖生成器LLM质量；差生成器产生无效训练数据，且共识投票和层次聚类在实时路由中增加计算开销。",
+      "• 复现难度: 中等——需要访问多种LLM和基准数据集，但方法描述清晰，开源代码可降低难度；不过，生成器调优和过滤步骤可能复杂。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2601.09684v1",
+    "title": "Disentangling Task Conflicts in Multi-Task LoRA via Orthogonal Gradient Projection",
+    "pdf_url": "https://arxiv.org/pdf/2601.09684v1",
+    "published": "2026-01-14",
+    "crawled_at": "2026-01-15 20:02:53",
+    "ai_score": 7.8,
+    "translated_title": "通过正交梯度投影解耦多任务LoRA中的任务冲突",
+    "summary_en": [
+      "• Model Architecture: Ortho-LoRA introduces a gradient projection method tailored for LoRA's bipartite structure, dynamically projecting conflicting task gradients onto orthogonal complements within the LoRA subspace to mitigate interference.",
+      "• Data used: Extensive experiments conducted on the GLUE benchmark, a standard NLP evaluation dataset comprising multiple tasks like sentiment analysis, textual entailment, and question answering.",
+      "• Performance metrics: Ortho-LoRA outperforms standard joint training, recovering 95% of the performance gap between multi-task and single-task baselines with negligible computational overhead, as measured by task-specific accuracy and efficiency metrics."
+    ],
+    "summary_cn": [
+      "• 核心模型: Ortho-LoRA，一种针对LoRA双部分结构设计的梯度投影方法，通过动态将冲突任务梯度投影到正交补空间来减少任务干扰。",
+      "• 数据来源: 使用GLUE基准测试数据集进行实验，该数据集包含情感分析、文本蕴含和问答等多种NLP任务。",
+      "• 主要结论: Ortho-LoRA有效缓解了任务冲突，性能优于标准联合训练，恢复了多任务与单任务基线之间95%的性能差距，且计算开销可忽略。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; addresses a key limitation in parameter-efficient LLM deployment, potentially enabling more robust multi-task models for financial NLP applications like sentiment analysis or risk assessment, though direct alpha generation is indirect.",
+      "• Implementation Risk: Low to moderate; method is computationally lightweight and integrates with existing LoRA frameworks, but real-world deployment may face challenges with highly heterogeneous tasks or dynamic task distributions.",
+      "• Novelty: High; introduces a novel gradient projection technique specifically adapted for LoRA's structure, offering a fresh approach to mitigating negative transfer in multi-task learning with low-rank constraints."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；针对LoRA的双部分结构提出正交梯度投影方法，创新性地解决多任务学习中的负迁移问题，为低秩约束下的优化提供了新思路。",
+      "• 实盘坑: 中低；方法计算开销小，易于集成，但在处理高度异质任务或动态任务分布时可能效果受限，需进一步验证在复杂金融数据上的稳定性。",
+      "• 复现难度: 低；基于标准GLUE数据集和LoRA框架，代码和实验设置应较易复现，适合快速原型开发和测试。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2601.09654v1",
+    "title": "Exploring Fine-Tuning for Tabular Foundation Models",
+    "pdf_url": "https://arxiv.org/pdf/2601.09654v1",
+    "published": "2026-01-14",
+    "crawled_at": "2026-01-15 20:03:14",
+    "ai_score": 7.2,
+    "translated_title": "探索表格基础模型的微调方法",
+    "summary_en": [
+      "• Model Architecture: The paper examines Tabular Foundation Models (TFMs) with in-context learning capabilities, comparing four approaches: Zero-Shot, Meta-Learning, Supervised Fine-Tuning (SFT), and Parameter-Efficient Fine-Tuning (PEFT).",
+      "• Data used: Comprehensive benchmarks include TALENT, OpenML-CC18, and TabZilla datasets, analyzing factors such as data imbalance, size, and dimensionality across structured tabular data.",
+      "• Performance metrics: Evaluation covers accuracy, calibration quality, and fairness, with findings showing zero-shot TFMs achieve strong performance comparable to traditional methods, while fine-tuning benefits are model- and data-dependent, with SFT often reducing accuracy or calibration."
+    ],
+    "summary_cn": [
+      "• 核心模型: 研究表格基础模型（TFMs），具备上下文学习能力，对比零样本、元学习、监督微调（SFT）和参数高效微调（PEFT）四种方法。",
+      "• 数据来源: 使用TALENT、OpenML-CC18和TabZilla等基准数据集，分析数据不平衡、规模和维度等因素对结构化表格数据的影响。",
+      "• 主要结论: 零样本TFMs已表现出与传统方法相当的强性能，微调效果高度依赖模型和数据，SFT常降低准确性或校准质量，提供微调适用场景的实用指南。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the study offers insights into when fine-tuning TFMs can enhance performance, potentially guiding model selection for specific tabular data tasks in quantitative finance, but lacks direct trading applications.",
+      "• Implementation Risk: High; findings indicate fine-tuning can degrade accuracy or calibration, requiring careful validation on financial datasets to avoid overfitting or poor generalization in real-world scenarios.",
+      "• Novelty: High; this is the first comprehensive study of fine-tuning in TFMs across multiple benchmarks, addressing gaps in understanding how dataset characteristics affect outcomes, though it builds on existing TFM research."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；首次对TFMs微调进行全面研究，跨多个基准分析数据集特性对结果的影响，填补了该领域空白，但基于现有TFM研究扩展。",
+      "• 实盘坑: 高；微调可能降低准确性或校准质量，需在金融数据上谨慎验证，避免过拟合或泛化差，风险较大。",
+      "• 复现难度: 中等；使用公开数据集和标准方法，但需处理数据不平衡和维度问题，实验设置复杂，可能需调整超参数。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2601.09647v1",
+    "title": "Identifying Models Behind Text-to-Image Leaderboards",
+    "pdf_url": "https://arxiv.org/pdf/2601.09647v1",
+    "published": "2026-01-14",
+    "crawled_at": "2026-01-15 20:03:33",
+    "ai_score": 8.2,
+    "translated_title": "识别文本到图像排行榜背后的模型",
+    "summary_en": [
+      "• Model Architecture: The paper employs a centroid-based clustering method in image embedding space, leveraging distinctive model-specific signatures without requiring complex neural architectures or training data.",
+      "• Data used: The study utilizes 22 text-to-image models and 280 prompts, generating approximately 150,000 images for analysis, focusing on anonymized outputs from voting-based leaderboards.",
+      "• Performance metrics: The method achieves high accuracy in deanonymizing models, with a prompt-level distinguishability metric revealing near-perfect distinguishability for certain prompts, exposing systematic vulnerabilities in leaderboard anonymity."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用基于质心的聚类方法，在图像嵌入空间中分析模型生成的特征，无需复杂架构或训练数据，利用模型特有的签名进行识别。",
+      "• 数据来源: 使用22个文本到图像模型和280个提示，生成约15万张图像，数据来源于匿名化的投票排行榜输出。",
+      "• 主要结论: 该方法能高精度地解除模型匿名性，通过提示级可区分性指标揭示某些提示可导致近乎完美的可区分性，暴露了排行榜匿名性的根本安全缺陷。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the deanonymization technique could be adapted to detect model biases or anomalies in AI-generated financial data, potentially uncovering hidden patterns in market simulations or synthetic datasets.",
+      "• Implementation Risk: High; applying this to real-world financial systems may face challenges due to data privacy regulations, model variability, and the need for robust validation in dynamic environments.",
+      "• Novelty: High; the approach breaks anonymity in leaderboards without prompt control or training data, offering a novel perspective on model fingerprinting and security vulnerabilities in AI evaluation frameworks."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；无需提示控制或训练数据即可破解排行榜匿名性，为模型指纹识别和AI评估框架的安全漏洞提供了新视角。",
+      "• 实盘坑: 高；应用于实际金融系统可能面临数据隐私法规、模型变异性以及在动态环境中需要稳健验证的挑战。",
+      "• 复现难度: 中等；方法相对简单，基于聚类和嵌入空间分析，但需要大量图像数据和计算资源，复现可能受模型可用性和数据获取限制。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2601.09636v1",
+    "title": "PersonalAlign: Hierarchical Implicit Intent Alignment for Personalized GUI Agent with Long-Term User-Centric Records",
+    "pdf_url": "https://arxiv.org/pdf/2601.09636v1",
+    "published": "2026-01-14",
+    "crawled_at": "2026-01-15 20:03:51",
+    "ai_score": 7.8,
+    "translated_title": "PersonalAlign：基于长期用户中心记录的个性化GUI代理的层次化隐式意图对齐",
+    "summary_en": [
+      "• Model Architecture: Introduces Hierarchical Intent Memory Agent (HIM-Agent) with continuously updating personal memory that hierarchically organizes user preferences and routines for personalization.",
+      "• Data used: AndroidIntent benchmark with 775 user-specific preferences and 215 routines annotated from 20k long-term records across different users.",
+      "• Performance metrics: HIM-Agent improves execution performance by 15.7% and proactive performance by 7.3% compared to baseline agents like GPT-5, Qwen3-VL, and UI-TARS."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出层次化意图记忆代理（HIM-Agent），通过持续更新的个人记忆层次化组织用户偏好和习惯以实现个性化。",
+      "• 数据来源: 使用AndroidIntent基准数据集，包含来自不同用户的20k条长期记录，标注了775个用户特定偏好和215个习惯。",
+      "• 主要结论: HIM-Agent在AndroidIntent上显著提升执行性能15.7%和主动性能7.3%，优于GPT-5、Qwen3-VL和UI-TARS等基线模型。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for personalized automation in GUI interactions, enabling agents to anticipate user needs and improve efficiency in repetitive tasks.",
+      "• Implementation Risk: Moderate risk due to reliance on long-term user data collection and privacy concerns, plus potential scalability issues in real-world deployment.",
+      "• Novelty: Novel approach to hierarchical implicit intent alignment, addressing vague instructions and proactive assistance through persistent context from user records."
+    ],
+    "verdict_cn": [
+      "• 创新点: 创新性地提出层次化隐式意图对齐方法，通过长期用户记录解决模糊指令和主动辅助问题，提升GUI代理的个性化能力。",
+      "• 实盘坑: 依赖大量长期用户数据收集，存在隐私风险和数据可用性问题；实际部署中可能面临计算开销和实时性挑战。",
+      "• 复现难度: 中等难度，需要构建AndroidIntent基准和标注数据，但模型架构相对清晰，可基于现有GUI代理框架实现。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2601.09635v1",
+    "title": "LLM for Large-Scale Optimization Model Auto-Formulation: A Lightweight Few-Shot Learning Approach",
+    "pdf_url": "https://arxiv.org/pdf/2601.09635v1",
+    "published": "2026-01-14",
+    "crawled_at": "2026-01-15 20:04:11",
+    "ai_score": 7.8,
+    "translated_title": "用于大规模优化模型自动构建的LLM：一种轻量级少样本学习方法",
+    "summary_en": [
+      "• Model Architecture: LEAN-LLM-OPT framework uses a multi-agent LLM system with upstream agents dynamically constructing workflows and a downstream agent executing them for optimization formulation.",
+      "• Data used: Introduces two new benchmarks - Large-Scale-OR and Air-NRM - for evaluating large-scale optimization auto-formulation, with practical testing on Singapore Airlines revenue management scenarios.",
+      "• Performance metrics: Achieves strong performance on large-scale optimization modeling tasks, competitive with state-of-the-art approaches, with specific implementation using GPT-4.1 and open-source gpt-oss-20B models."
+    ],
+    "summary_cn": [
+      "• 核心模型: LEAN-LLM-OPT框架采用多智能体LLM系统，上游智能体动态构建工作流，下游智能体执行优化模型构建任务。",
+      "• 数据来源: 引入两个新基准数据集Large-Scale-OR和Air-NRM，并在新加坡航空收益管理实际场景中进行测试验证。",
+      "• 主要结论: 在大规模优化建模任务中表现优异，与最先进方法竞争力相当，通过分解任务和工具辅助减轻了LLM负担。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - automation of optimization model formulation could reduce research overhead and enable faster strategy iteration, but direct trading alpha generation unclear.",
+      "• Implementation Risk: High - LLM reliability issues, workflow construction complexity, and dependency on specific LLM versions (GPT-4.1) create operational vulnerabilities.",
+      "• Novelty: Significant - first comprehensive framework for LLM-assisted optimization auto-formulation with novel benchmark datasets and multi-agent orchestration approach."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首创LLM辅助优化自动构建框架，引入首个大规模优化基准数据集，采用动态工作流构建的多智能体架构设计新颖。",
+      "• 实盘坑: LLM输出稳定性问题严重，工作流动态构建可能引入不确定性，对特定LLM版本依赖性强，实际部署风险较高。",
+      "• 复现难度: 中等偏高 - 需要访问GPT-4.1等特定LLM，多智能体协调逻辑复杂，但代码和数据已开源，降低了部分门槛。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2601.09626v1",
+    "title": "From Prompt to Protocol: Fast Charging Batteries with Large Language Models",
+    "pdf_url": "https://arxiv.org/pdf/2601.09626v1",
+    "published": "2026-01-14",
+    "crawled_at": "2026-01-15 20:04:33",
+    "ai_score": 7.8,
+    "translated_title": "从提示到协议：利用大语言模型实现电池快速充电",
+    "summary_en": [
+      "• Model Architecture: Introduces two LLM-driven closed-loop methods: Prompt-to-Optimizer (P2O) uses LLMs to generate code for small neural-network-based protocols trained by an inner loop, while Prompt-to-Protocol (P2P) writes explicit functions for current and scalar parameters.",
+      "• Data used: The study employs realistic fast charging scenarios with battery cycling data, focusing on state of health (SOH) metrics under fast charging conditions, though specific dataset details are not provided in the abstract.",
+      "• Performance metrics: P2O outperforms neural networks designed by Bayesian optimization, evolutionary algorithms, and random search; both P2O and P2P achieve approximately 4.2% improvement in SOH over a state-of-the-art multi-step constant current baseline under matched evaluation budgets."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出两种基于大语言模型的闭环方法：Prompt-to-Optimizer (P2O) 利用LLM生成小型神经网络协议代码并通过内循环训练，Prompt-to-Protocol (P2P) 直接编写电流及其标量参数的显式函数。",
+      "• 数据来源: 采用真实快速充电场景下的电池循环数据，重点关注快速充电条件下的健康状态指标，但摘要中未提供具体数据集细节。",
+      "• 主要结论: P2O在性能上超越贝叶斯优化、进化算法和随机搜索设计的神经网络；P2O和P2P在相同评估预算下，相比最先进的多步恒流基线，健康状态指标提升约4.2%。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - The 4.2% SOH improvement in battery fast charging could translate to enhanced energy storage efficiency and lifespan in applications like grid storage or EV charging, but direct financial alpha in trading is limited without specific market linkages.",
+      "• Implementation Risk: High - LLM-driven optimization in experimental settings faces challenges such as reproducibility, computational costs, and integration with existing battery management systems; real-world deployment requires extensive validation beyond controlled studies.",
+      "• Novelty: High - The approach of using LLMs to expand protocol functional forms and incorporate language-based constraints in battery optimization is innovative, bridging NLP with experimental design in a non-differentiable, high-cost domain."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高 - 利用大语言模型扩展协议函数形式，在非可微、高成本实验环境中融入语言约束，将NLP与电池优化设计结合，方法新颖。",
+      "• 实盘坑: 高 - 实验环境中的LLM驱动优化存在可复现性、计算成本高、与现有电池管理系统集成困难等风险；实际部署需超出控制研究的广泛验证。",
+      "• 复现难度: 中高 - 需要访问LLM API、电池实验设施和特定数据集；方法细节如内循环训练和协议评估可能复杂，增加复现挑战。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
     "id": "2601.08828v1",
     "title": "Motion Attribution for Video Generation",
     "pdf_url": "https://arxiv.org/pdf/2601.08828v1",
