@@ -1,5 +1,351 @@
 [
   {
+    "id": "2601.11516v1",
+    "title": "Building Production-Ready Probes For Gemini",
+    "pdf_url": "https://arxiv.org/pdf/2601.11516v1",
+    "published": "2026-01-16",
+    "crawled_at": "2026-01-19 20:01:30",
+    "ai_score": 7.5,
+    "translated_title": "为Gemini构建生产就绪的探针",
+    "summary_en": [
+      "• Model Architecture: Introduces new probe architectures designed to handle long-context distribution shifts, specifically addressing the challenge from short-context to long-context inputs, with multimax highlighted as a solution for context length issues.",
+      "• Data used: Evaluated in the cyber-offensive domain, testing robustness against production-relevant shifts including multi-turn conversations, static jailbreaks, and adaptive red teaming, with training on diverse distributions for broad generalization.",
+      "• Performance metrics: Demonstrates that a combination of architecture choice and diverse training achieves broad generalization, and pairing probes with prompted classifiers achieves optimal accuracy at low computational cost due to probe efficiency.",
+      "• Deployment impact: Findings informed successful deployment of misuse mitigation probes in user-facing instances of Gemini, Google's frontier language model, showing practical application."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出新的探针架构，专门处理从短上下文到长上下文的分布偏移，其中multimax被强调为解决上下文长度问题的方案。",
+      "• 数据来源: 在网络安全攻击领域进行评估，测试对生产相关偏移的鲁棒性，包括多轮对话、静态越狱和自适应红队攻击，使用多样化分布进行训练以实现广泛泛化。",
+      "• 主要结论: 架构选择和多样化训练相结合可实现广泛泛化，探针与提示分类器配对能以低计算成本达到最佳准确率，成果已成功部署于Gemini的用户实例中。",
+      "• 自动化进展: 早期结果显示，使用AlphaEvolve自动化改进探针架构搜索和自适应红队攻击，表明部分AI安全研究已可自动化。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the paper addresses a critical gap in misuse mitigation for frontier models, with practical deployment in Gemini suggesting real-world applicability, but the focus on cyber-offensive domain may limit broader financial alpha extraction without adaptation.",
+      "• Implementation Risk: High; handling long-context distribution shifts is complex, and reliance on diverse training data and adaptive red teaming introduces operational challenges and potential vulnerabilities in dynamic environments like trading.",
+      "• Novelty: Moderate; while activation probes are established, the specific architectures for long-context shifts and integration with prompted classifiers offer incremental innovation, but the use of AlphaEvolve for automation adds a novel twist to AI safety research."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；针对前沿模型的误用缓解提出长上下文偏移处理架构，结合提示分类器优化准确率，但探针技术本身非全新，自动化工具AlphaEvolve的应用增添新意。",
+      "• 实盘坑: 高；长上下文处理复杂，多样化训练和自适应攻击依赖大量数据，在快速变化的市场环境中可能引入延迟和稳定性风险，部署成本较高。",
+      "• 复现难度: 中等；核心方法基于公开的探针技术，但需要特定架构实现和网络安全领域数据，自动化部分可能依赖专有工具，增加复现壁垒。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2601.11514v1",
+    "title": "ShapeR: Robust Conditional 3D Shape Generation from Casual Captures",
+    "pdf_url": "https://arxiv.org/pdf/2601.11514v1",
+    "published": "2026-01-16",
+    "crawled_at": "2026-01-19 20:01:52",
+    "ai_score": 8.2,
+    "translated_title": "ShapeR：从随意捕获中实现鲁棒的条件性3D形状生成",
+    "summary_en": [
+      "• Model Architecture: ShapeR employs a rectified flow transformer that conditions on sparse SLAM points, posed multi-view images, and machine-generated captions extracted from casually captured sequences using off-the-shelf visual-inertial SLAM, 3D detection, and vision-language models.",
+      "• Data used: The model is trained with on-the-fly compositional augmentations and a curriculum scheme spanning object- and scene-level datasets, and evaluated on a new benchmark of 178 in-the-wild objects across 7 real-world scenes with geometry annotations.",
+      "• Performance metrics: ShapeR achieves a 2.7x improvement in Chamfer distance compared to state-of-the-art methods, demonstrating significant outperformance in generating high-fidelity metric 3D shapes from noisy, occluded inputs."
+    ],
+    "summary_cn": [
+      "• 核心模型: ShapeR采用基于整流流的Transformer架构，通过结合稀疏SLAM点、多视角图像和机器生成描述作为条件输入，处理随意捕获的序列数据。",
+      "• 数据来源: 利用现成的视觉-惯性SLAM、3D检测和视觉语言模型提取数据，训练时采用动态组合增强和跨对象/场景级数据集的课程学习策略，并在包含178个真实场景对象的基准上评估。",
+      "• 主要结论: 在Chamfer距离指标上比现有方法提升2.7倍，显著优于现有技术，证明其在处理遮挡和噪声输入时生成高保真3D形状的有效性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for applications in autonomous systems, robotics, and augmented reality where real-time, robust 3D reconstruction from imperfect captures is critical, offering edge in dynamic environments.",
+      "• Implementation Risk: Moderate to high risk due to reliance on multiple off-the-shelf components (SLAM, detection, VLMs) which may introduce latency and integration challenges in production systems.",
+      "• Novelty: Novel in integrating multi-modal casual captures with a rectified flow transformer and curriculum training, addressing a gap in handling real-world, occluded data for 3D generation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 创新性地将随意捕获的多模态数据与整流流Transformer结合，通过课程学习处理真实世界遮挡问题，填补了现有3D生成方法在鲁棒性方面的空白。",
+      "• 实盘坑: 依赖多个现成组件（SLAM、检测、VLM）可能引入延迟和集成复杂性，在实时系统中部署存在风险，且基准数据规模有限（178个对象）。",
+      "• 复现难度: 中等偏高，需要整合视觉-惯性SLAM、3D检测和视觉语言模型，训练涉及动态增强和课程策略，对计算资源和数据准备要求较高。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2601.11505v1",
+    "title": "MetaboNet: The Largest Publicly Available Consolidated Dataset for Type 1 Diabetes Management",
+    "pdf_url": "https://arxiv.org/pdf/2601.11505v1",
+    "published": "2026-01-16",
+    "crawled_at": "2026-01-19 20:02:14",
+    "ai_score": 7.5,
+    "translated_title": "MetaboNet：用于1型糖尿病管理的最大公开整合数据集",
+    "summary_en": [
+      "• Model Architecture: This work does not propose a new model architecture but focuses on data consolidation and standardization. It establishes a unified data resource by integrating multiple publicly available T1D datasets into a standardized format, termed the MetaboNet dataset.",
+      "• Data used: The dataset comprises 3135 subjects and 1228 patient-years of overlapping continuous glucose monitoring (CGM) data and insulin pump dosing records. It also includes auxiliary information such as carbohydrate intake and physical activity when available, sourced from multiple existing T1D datasets.",
+      "• Performance metrics: The paper highlights the dataset's scale, being substantially larger than existing standalone benchmark datasets, and its broad coverage of glycemic profiles and demographics, which can yield more generalizable algorithmic performance compared to individual datasets."
+    ],
+    "summary_cn": [
+      "• 核心模型: 本文未提出新模型架构，而是专注于数据整合与标准化。通过将多个公开可用的1型糖尿病数据集整合为标准化格式，建立了统一的MetaboNet数据集资源。",
+      "• 数据来源: 数据集包含3135名受试者和1228患者年的重叠连续血糖监测（CGM）数据与胰岛素泵剂量记录。当可用时，还包括碳水化合物摄入和体力活动等辅助信息，来源于多个现有1型糖尿病数据集。",
+      "• 主要结论: 该数据集规模显著大于现有独立基准数据集，覆盖广泛的血糖谱和人口统计学特征，相比单个数据集能产生更具泛化性的算法性能。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate to high potential for generating alpha in healthcare or biotech-focused quantitative strategies, as it enables more robust and generalizable models for T1D management, which could lead to predictive insights for drug development or patient monitoring systems.",
+      "• Implementation Risk: High risk due to data access restrictions (DUA-governed subset requires application processes), potential data quality inconsistencies across sources, and the need for domain expertise in diabetes management to effectively utilize the dataset.",
+      "• Novelty: Low to moderate novelty; the consolidation of existing datasets into a standardized format is not groundbreaking, but the scale and accessibility improvements could accelerate research in T1D algorithm development."
+    ],
+    "verdict_cn": [
+      "• 创新点: 创新性较低至中等；将现有数据集整合为标准化格式并非突破性进展，但规模化和可访问性改进可能加速1型糖尿病算法研究。",
+      "• 实盘坑: 高风险，因数据访问受限（部分数据需申请使用协议）、跨来源数据质量可能不一致，且需糖尿病管理领域专业知识才能有效利用数据集。",
+      "• 复现难度: 中等难度；数据集公开可下载，但处理管道和标准化流程可能复杂，且依赖原始数据源的可用性和合规性。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2601.11500v1",
+    "title": "QUPID: A Partitioned Quantum Neural Network for Anomaly Detection in Smart Grid",
+    "pdf_url": "https://arxiv.org/pdf/2601.11500v1",
+    "published": "2026-01-16",
+    "crawled_at": "2026-01-19 20:02:36",
+    "ai_score": 7.5,
+    "translated_title": "QUPID：用于智能电网异常检测的分区量子神经网络",
+    "summary_en": [
+      "• Model Architecture: QUPID is a partitioned quantum neural network (PQNN) that distributes computational workloads to address scalability issues in quantum machine learning, with an extended version R-QUPID incorporating differential privacy for enhanced robustness.",
+      "• Data used: The paper does not specify exact datasets but mentions experimental results across various scenarios in smart grid environments, implying synthetic or real-world smart grid data involving cyber-physical threats, system faults, and adversarial manipulations.",
+      "• Performance metrics: QUPID and R-QUPID outperform traditional state-of-the-art ML models in anomaly detection, demonstrating improved detection capabilities and greater resilience to adversarial attacks, with R-QUPID maintaining performance even with differential privacy."
+    ],
+    "summary_cn": [
+      "• 核心模型: QUPID是一种分区量子神经网络（PQNN），通过分布式计算解决量子机器学习的可扩展性问题，其扩展版本R-QUPID集成了差分隐私以增强鲁棒性。",
+      "• 数据来源: 未明确指定具体数据集，但提及在智能电网多种场景下的实验结果，暗示使用涉及网络物理威胁、系统故障和对抗性操作的合成或真实智能电网数据。",
+      "• 主要结论: QUPID和R-QUPID在异常检测方面优于传统最先进的机器学习模型，显著提升了检测能力并增强了对对抗攻击的抵抗力，R-QUPID在加入差分隐私后仍保持性能。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; quantum-enhanced feature representations could uncover non-linear patterns in high-dimensional smart grid data that classical models miss, potentially leading to early detection of anomalies for trading energy derivatives or grid stability investments.",
+      "• Implementation Risk: High; quantum hardware is nascent and expensive, smart grid data access is restricted, and real-world deployment faces scalability and integration challenges with existing infrastructure.",
+      "• Novelty: High; partitioning framework addresses a key scalability bottleneck in QML, and integration of differential privacy with quantum models for robustness is innovative, though quantum advantage in practical settings remains unproven."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；分区框架解决了量子机器学习的关键可扩展性瓶颈，将差分隐私与量子模型结合以增强鲁棒性具有创新性，但实际场景中的量子优势尚未证实。",
+      "• 实盘坑: 高；量子硬件处于早期阶段且成本高昂，智能电网数据访问受限，实际部署面临与现有基础设施的可扩展性和集成挑战。",
+      "• 复现难度: 高；需要量子计算资源和专业领域知识，数据获取困难，且实验结果可能依赖于特定假设或合成数据，难以在传统环境中验证。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2601.11499v1",
+    "title": "On the Probability of First Success in Differential Evolution: Hazard Identities and Tail Bounds",
+    "pdf_url": "https://arxiv.org/pdf/2601.11499v1",
+    "published": "2026-01-16",
+    "crawled_at": "2026-01-19 20:03:00",
+    "ai_score": 7.8,
+    "translated_title": "差分进化中首次成功概率研究：风险恒等式与尾部边界",
+    "summary_en": [
+      "• Model Architecture: The paper introduces a conditional hazard framework for analyzing first-hitting times in Differential Evolution (DE), specifically applied to the L-SHADE algorithm with current-to-pbest/1 mutation. It constructs algorithmic witness events to derive explicit lower bounds on conditional hazards, separating theoretical constants from empirical frequencies.",
+      "• Data used: The study employs the CEC2017 benchmark suite for empirical validation, conducting Kaplan-Meier survival analysis across various functions and computational budgets to assess hitting time distributions.",
+      "• Performance metrics: The analysis identifies three empirical regimes: strongly clustered success with concentrated hitting times, approximately geometric tails where constant-hazard models are accurate, and intractable cases with no observed hits within evaluation horizons. It shows that constant-hazard bounds provide valid tail envelopes but practical behavior is governed by burst-like transitions."
+    ],
+    "summary_cn": [
+      "• 核心模型: 论文提出了一种条件风险框架来分析差分进化（DE）中的首次命中时间，特别应用于采用current-to-pbest/1变异的L-SHADE算法。通过构建算法见证事件，推导条件风险的显式下界，将理论常数与经验频率分离。",
+      "• 数据来源: 研究使用CEC2017基准套件进行实证验证，在不同函数和计算预算下进行Kaplan-Meier生存分析，以评估命中时间分布。",
+      "• 主要结论: 分析识别出三种经验机制：强聚类成功（命中时间集中）、近似几何尾部（常数风险模型准确）和难解案例（评估期内无命中）。结果表明，常数风险边界提供有效的尾部包络，但实际行为由突发式转变主导。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the framework offers a novel probabilistic perspective on optimization algorithm performance, which could inspire risk-aware algorithmic trading strategies, but direct financial applications are limited as it focuses on benchmark optimization rather than market data.",
+      "• Implementation Risk: High; the method relies on specific algorithmic structures (L-SHADE) and benchmark functions, making adaptation to dynamic financial environments challenging. The separation of theoretical constants from empirical events adds complexity in real-world deployment.",
+      "• Novelty: High; the conditional hazard approach diverges from traditional Markov-chain or drift analyses in DE, providing distribution-free identities and explicit tail bounds. The empirical regime classification offers fresh insights into algorithm behavior beyond worst-case bounds."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；条件风险方法区别于差分进化中传统的马尔可夫链或漂移分析，提供无分布恒等式和显式尾部边界。经验机制分类为算法行为提供了超越最坏情况边界的新见解。",
+      "• 实盘坑: 高；该方法依赖于特定算法结构（L-SHADE）和基准函数，适应动态金融环境具有挑战性。理论常数与经验事件的分离增加了实际部署的复杂性。",
+      "• 复现难度: 中等；论文提供了清晰的框架和实证结果，但需要专业优化知识来实现条件风险计算和见证事件构建，可能涉及复杂的概率建模和算法调整。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2601.11491v1",
+    "title": "Extractive summarization on a CMOS Ising machine",
+    "pdf_url": "https://arxiv.org/pdf/2601.11491v1",
+    "published": "2026-01-16",
+    "crawled_at": "2026-01-19 20:03:21",
+    "ai_score": 7.8,
+    "translated_title": "基于CMOS伊辛机的抽取式文本摘要",
+    "summary_en": [
+      "• Model Architecture: Proposes a hardware-aware Ising formulation for extractive summarization, implemented on a CMOS coupled oscillator-based Ising machine (COBI) with integer-valued, all-to-all spin couplings. Includes stochastic rounding, iterative refinement, and decomposition strategies to handle precision loss and large-scale problems.",
+      "• Data used: Evaluated on the CNN/DailyMail dataset, a standard benchmark for text summarization tasks.",
+      "• Performance metrics: Achieves 3-4.5x runtime speedup compared to brute-force methods, comparable to software Tabu search, with two to three orders of magnitude reduction in energy consumption while maintaining competitive summary quality."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出一种硬件感知的伊辛模型，用于抽取式摘要，在基于CMOS耦合振荡器的伊辛机（COBI）上实现，支持整数值全连接自旋耦合。",
+      "• 数据来源: 使用CNN/DailyMail数据集进行实验验证，这是文本摘要任务的常用基准数据集。",
+      "• 主要结论: 在有限精度整数耦合硬件上，该方法能生成高质量摘要，相比暴力方法实现3-4.5倍加速，能耗降低2-3个数量级，摘要质量保持竞争力。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate. The approach offers energy efficiency and speed advantages for edge deployment, but direct financial alpha generation is limited unless integrated into low-latency trading systems requiring real-time text processing.",
+      "• Implementation Risk: High. Relies on specialized CMOS Ising hardware (COBI) not widely available; quantization and decomposition strategies may introduce errors in real-world applications with noisy data.",
+      "• Novelty: High. Combines extractive summarization with Ising machines for low-power inference, introducing hardware-aware formulations and decomposition techniques not commonly seen in NLP literature."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将抽取式摘要问题映射到伊辛机硬件上求解，提出硬件感知的模型公式化和分解策略，在能效和速度方面有显著优势。",
+      "• 实盘坑: 依赖专用CMOS伊辛硬件（COBI），商业化部署成本高；量化误差和分解策略在真实噪声数据中可能导致性能下降。",
+      "• 复现难度: 较高。需要访问COBI硬件或模拟环境，且CNN/DailyMail数据集虽公开，但完整流水线实现涉及复杂的前后处理步骤。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2601.11473v1",
+    "title": "A Probabilistic Approach to Trajectory-Based Optimal Experimental Design",
+    "pdf_url": "https://arxiv.org/pdf/2601.11473v1",
+    "published": "2026-01-16",
+    "crawled_at": "2026-01-19 20:03:39",
+    "ai_score": 7.2,
+    "translated_title": "基于轨迹的最优实验设计的概率方法",
+    "summary_en": [
+      "• Model Architecture: Proposes a probabilistic framework where trajectories are modeled as random variables governed by a parametric Markov policy, replacing discrete path optimization with stochastic optimization over policy parameters.",
+      "• Data used: Numerical verification is conducted using a parameter identification problem common in model-based optimal experimental design, but specific datasets or real-world data are not detailed in the abstract.",
+      "• Performance metrics: The approach enables exploration of the utility function's distribution tail and treats the utility function as a black box, applicable to both linear and nonlinear inverse problems, with verification through numerical analysis."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用概率方法，将轨迹建模为受参数化马尔可夫策略控制的随机变量，通过随机优化替代离散路径优化，生成最优概率模型。",
+      "• 数据来源: 基于模型最优实验设计中广泛使用的参数识别问题进行数值验证，未提及具体数据集或实际数据。",
+      "• 主要结论: 该方法能探索效用函数分布的尾部，将效用函数视为黑箱，适用于线性和非线性逆问题，并通过数值分析验证了有效性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the probabilistic approach could enhance robustness in experimental design for financial models, but direct alpha generation is limited without specific market applications.",
+      "• Implementation Risk: High; treating utility functions as black boxes and relying on stochastic optimization may introduce computational complexity and stability issues in real-time trading environments.",
+      "• Novelty: Significant; the integration of probabilistic modeling with optimal experimental design offers a fresh perspective, though it builds on existing Markov and optimization techniques."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将概率建模与最优实验设计结合，通过随机优化处理路径问题，提供了一种处理非线性问题的通用框架。",
+      "• 实盘坑: 效用函数作为黑箱处理可能导致模型解释性差，随机优化在实时交易中计算开销大，稳定性风险高。",
+      "• 复现难度: 中等；需要专业知识在马尔可夫策略和数值优化，但缺乏具体数据细节可能增加复现挑战。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2601.11471v1",
+    "title": "Low-Rank Key Value Attention",
+    "pdf_url": "https://arxiv.org/pdf/2601.11471v1",
+    "published": "2026-01-16",
+    "crawled_at": "2026-01-19 20:04:00",
+    "ai_score": 8.5,
+    "translated_title": "低秩键值注意力机制",
+    "summary_en": [
+      "• Model Architecture: Introduces Low-Rank KV Adaptation (LRKV), a modified multi-head attention mechanism that uses shared full-rank KV projections with low-rank, head-specific residuals to reduce KV cache memory while preserving token-level resolution.",
+      "• Data used: Large-scale pretraining experiments (unspecified datasets) at the 2.5B parameter scale, comparing LRKV against standard attention, MQA/GQA, and MLA.",
+      "• Performance metrics: Achieves faster loss reduction, lower validation perplexity, and stronger downstream task performance; reduces KV cache by roughly half at 2.5B scale; achieves equivalent model quality with 20-25% less training compute (cumulative FLOPs)."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出低秩键值适应（LRKV），一种改进的多头注意力机制，通过共享全秩KV投影和低秩、头特定的残差，在保持令牌级分辨率的同时减少KV缓存内存。",
+      "• 数据来源: 在2.5B参数规模上进行大规模预训练实验（未指定具体数据集），对比LRKV与标准注意力、MQA/GQA和MLA。",
+      "• 主要结论: LRKV在损失减少速度、验证困惑度和下游任务性能上均优于基准模型；在2.5B规模下，KV缓存减少约一半；以20-25%更少的训练计算量（累计FLOPs）达到同等模型质量。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for reducing memory and compute bottlenecks in Transformer training and inference, directly applicable to scaling LLMs and improving efficiency in resource-constrained environments.",
+      "• Implementation Risk: Low risk as LRKV is a drop-in replacement for standard attention, but requires careful tuning of low-rank residuals and may face integration challenges in existing frameworks.",
+      "• Novelty: Novel approach that bridges KV-sharing and full independence, distinct from prior methods like MQA/GQA and MLA; introduces analysis in operator space to explain functional head diversity preservation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 创新性地结合共享KV投影和低秩残差，在KV缓存压缩和注意力头多样性之间取得平衡，区别于现有的MQA/GQA和MLA方法。",
+      "• 实盘坑: 作为即插即用方案风险较低，但低秩残差需精细调参，且在实际部署中可能面临与现有框架的兼容性问题。",
+      "• 复现难度: 中等难度，需要实现低秩KV适应机制并进行大规模预训练实验，但论文提供了清晰的架构描述和性能基准。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2601.11464v1",
+    "title": "MHA2MLA-VLM: Enabling DeepSeek's Economical Multi-Head Latent Attention across Vision-Language Models",
+    "pdf_url": "https://arxiv.org/pdf/2601.11464v1",
+    "published": "2026-01-16",
+    "crawled_at": "2026-01-19 20:04:21",
+    "ai_score": 7.8,
+    "translated_title": "MHA2MLA-VLM：实现DeepSeek经济型多头潜在注意力在视觉语言模型中的跨模态应用",
+    "summary_en": [
+      "• Model Architecture: MHA2MLA-VLM framework converts standard Multi-Head Attention (MHA) to Multi-Head Latent Attention (MLA) using modality-adaptive partial-RoPE and modality-decoupled low-rank approximation techniques.",
+      "• Data used: Experiments conducted on three representative VLMs with minimal supervised data (specific datasets not named in abstract).",
+      "• Performance metrics: Restores original model performance, significantly reduces KV cache footprint, integrates with KV quantization, and minimizes performance loss through output activation error minimization."
+    ],
+    "summary_cn": [
+      "• 核心模型: MHA2MLA-VLM框架，通过模态自适应部分RoPE和模态解耦低秩近似技术，将标准多头注意力转换为多头潜在注意力。",
+      "• 数据来源: 在三个代表性视觉语言模型上进行实验，使用少量监督数据（摘要中未具体说明数据集名称）。",
+      "• 主要结论: 恢复原始模型性能，显著减少KV缓存占用，与KV量化无缝集成，通过最小化输出激活误差减少性能损失。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - KV cache reduction could enable larger batch sizes or longer context windows in trading signal processing pipelines, potentially improving multimodal financial data analysis efficiency.",
+      "• Implementation Risk: High - Converting existing VLMs requires careful parameter tuning and validation; modality-specific compression might introduce subtle biases in financial text-image correlations.",
+      "• Novelty: Significant - First framework to adapt VLMs to MLA without costly pretraining; modality-aware compression approach addresses multimodal bottlenecks directly."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次提出无需昂贵预训练即可将视觉语言模型适配到MLA架构的框架，模态感知压缩方法直接解决多模态瓶颈问题。",
+      "• 实盘坑: 转换现有模型需要精细参数调优和验证，模态特定压缩可能在金融文本-图像相关性中引入微妙偏差，KV缓存减少的实际交易收益需量化验证。",
+      "• 复现难度: 中等偏高，需要访问原始VLMs和实现模态自适应部分RoPE及低秩近似技术，但论文提供了明确的技术框架。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2601.11460v1",
+    "title": "Learning Semantic-Geometric Task Graph-Representations from Human Demonstrations",
+    "pdf_url": "https://arxiv.org/pdf/2601.11460v1",
+    "published": "2026-01-16",
+    "crawled_at": "2026-01-19 20:04:39",
+    "ai_score": 7.5,
+    "translated_title": "从人类演示中学习语义-几何任务图表示",
+    "summary_en": [
+      "• Model Architecture: Combines Message Passing Neural Network (MPNN) encoder with Transformer-based decoder to decouple scene representation learning from action-conditioned reasoning about task progression",
+      "• Data used: Human demonstration datasets for bimanual manipulation tasks with high action and object variability",
+      "• Performance metrics: Evaluated on capturing task progression in complex manipulation scenarios, showing superiority over simpler sequence-based models",
+      "• Key innovation: Semantic-geometric task graph-representation encoding object identities, inter-object relations, and temporal geometric evolution"
+    ],
+    "summary_cn": [
+      "• 核心模型: 结合消息传递神经网络编码器与基于Transformer的解码器，分离场景表示学习与动作条件推理",
+      "• 数据来源: 人类演示数据集，专注于双手操作任务，具有高动作和对象变异性",
+      "• 主要结论: 语义-几何任务图表示在复杂操作任务中优于简单序列模型，支持长期任务推理",
+      "• 应用验证: 表示可迁移至物理机器人系统，用于在线动作选择和下游决策"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - structured task representations could enhance robotic trading systems by improving decision-making in complex multi-step processes",
+      "• Implementation Risk: High - requires extensive human demonstration data collection and may face challenges in real-time financial applications",
+      "• Novelty: Significant - semantic-geometric graph representation approach addresses joint learning of discrete structure and continuous geometry in task progression",
+      "• Practical limitations: Domain-specific to manipulation tasks, direct financial applications would require substantial adaptation"
+    ],
+    "verdict_cn": [
+      "• 创新点: 语义-几何任务图表示方法新颖，同时捕捉离散语义结构与连续几何演化，解决复杂任务表示难题",
+      "• 实盘坑: 数据依赖性强，需要大量人类演示数据；实时性要求高的金融场景可能面临性能瓶颈",
+      "• 复现难度: 中等偏高，需要构建复杂图神经网络架构和Transformer解码器，但开源框架支持较好",
+      "• 迁移挑战: 从机器人操作到金融决策的领域迁移需要重新设计表示和推理机制"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
     "id": "2601.10715v1",
     "title": "DInf-Grid: A Neural Differential Equation Solver with Differentiable Feature Grids",
     "pdf_url": "https://arxiv.org/pdf/2601.10715v1",
