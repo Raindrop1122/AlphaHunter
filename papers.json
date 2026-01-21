@@ -1,5 +1,353 @@
 [
   {
+    "id": "2601.14243v1",
+    "title": "Jet-RL: Enabling On-Policy FP8 Reinforcement Learning with Unified Training and Rollout Precision Flow",
+    "pdf_url": "https://arxiv.org/pdf/2601.14243v1",
+    "published": "2026-01-20",
+    "crawled_at": "2026-01-21 20:18:12",
+    "ai_score": 8.2,
+    "translated_title": "Jet-RL：通过统一的训练与推理精度流实现基于策略的FP8强化学习",
+    "summary_en": [
+      "• Model Architecture: Jet-RL is an FP8 RL training framework that employs a unified FP8 precision flow for both training and rollout phases, eliminating the need for inter-step calibration between different numerical formats.",
+      "• Data used: The paper does not specify particular datasets but focuses on RL tasks, likely involving long-horizon rollouts and challenging scenarios to test stability and efficiency.",
+      "• Performance metrics: Achieves up to 33% speedup in rollout, 41% speedup in training, and 16% end-to-end speedup over BF16 training, with stable convergence and negligible accuracy degradation."
+    ],
+    "summary_cn": [
+      "• 核心模型: Jet-RL是一个FP8强化学习训练框架，采用统一的FP8精度流，覆盖训练和推理阶段，避免不同数值格式间的校准开销。",
+      "• 数据来源: 未明确指定数据集，但侧重于强化学习任务，特别是长序列推理和挑战性场景，以测试稳定性和效率。",
+      "• 主要结论: 相比BF16训练，在推理阶段提速达33%，训练阶段提速达41%，端到端提速16%，同时保持稳定收敛和可忽略的精度损失。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for accelerating RL-based strategies in algorithmic trading, especially for real-time decision-making systems where speed and efficiency are critical.",
+      "• Implementation Risk: Moderate risk due to reliance on FP8 hardware support and potential integration challenges with existing RL pipelines; stability claims need validation in diverse environments.",
+      "• Novelty: High novelty as the first comprehensive study of FP8 RL training, identifying and solving the instability issues of mixed-precision approaches with a unified precision flow."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次全面研究FP8强化学习训练，揭示混合精度方法的稳定性问题，并提出统一的精度流解决方案，具有显著创新性。",
+      "• 实盘坑: 依赖FP8硬件支持，集成现有RL流程可能复杂；稳定性在多样化环境中的验证不足，实盘应用存在风险。",
+      "• 复现难度: 中等难度，需要FP8兼容的硬件和RL框架，但方法描述清晰，开源实现可降低复现门槛。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2601.14242v1",
+    "title": "APEX-Agents",
+    "pdf_url": "https://arxiv.org/pdf/2601.14242v1",
+    "published": "2026-01-20",
+    "crawled_at": "2026-01-21 20:18:33",
+    "ai_score": 7.2,
+    "translated_title": "APEX-Agents：AI智能体生产力指数",
+    "summary_en": [
+      "• Model Architecture: APEX-Agents benchmark evaluates AI agents on long-horizon, cross-application tasks using realistic work environments with files and tools, tested via Pass@1 metric",
+      "• Data used: Open-source benchmark with n=480 tasks, including prompts, rubrics, gold outputs, files, and metadata, derived from investment banking analysts, management consultants, and corporate lawyers",
+      "• Performance metrics: Gemini 3 Flash (Thinking=High) achieves highest score of 24.0%, followed by GPT-5.2, Claude Opus 4.5, and Gemini 3 Pro, all with high thinking settings",
+      "• Infrastructure: Archipelago infrastructure for agent execution and evaluation is open-sourced alongside the benchmark"
+    ],
+    "summary_cn": [
+      "• 核心模型: APEX-Agents基准测试评估AI智能体在长周期、跨应用任务中的表现，使用包含文件和工具的真实工作环境，通过Pass@1指标测试",
+      "• 数据来源: 开源基准包含480个任务，涵盖提示、评分标准、黄金输出、文件和元数据，源自投资银行分析师、管理顾问和企业律师的实际工作场景",
+      "• 主要结论: Gemini 3 Flash（高思考模式）以24.0%得分领先，其次是GPT-5.2、Claude Opus 4.5和Gemini 3 Pro，均采用高思考设置",
+      "• 基础设施: 同时开源Archipelago平台，用于智能体执行和评估"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - benchmark addresses practical AI agent productivity in finance/consulting domains, but low absolute scores (24.0% max) limit immediate trading edge; potential for automating analyst workflows if improved",
+      "• Implementation Risk: High - real-world deployment requires robust integration with existing systems; benchmark tasks may not fully capture market dynamics or regulatory constraints",
+      "• Novelty: High - first benchmark specifically designed for investment banking and consulting tasks with open-source infrastructure; fills gap in evaluating cross-application AI agents"
+    ],
+    "verdict_cn": [
+      "• 创新点: 高 - 首个针对投资银行和咨询任务设计的基准测试，开源基础设施填补了跨应用AI智能体评估的空白",
+      "• 实盘坑: 高 - 实际部署需与现有系统深度集成，基准任务可能未充分反映市场动态或监管限制，得分较低（最高24.0%）限制直接交易优势",
+      "• 复现难度: 中 - 开源基准和基础设施降低复现门槛，但需大量计算资源和专业领域知识来扩展或定制任务"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2601.14238v1",
+    "title": "Spatiotemporal Wildfire Prediction and Reinforcement Learning for Helitack Suppression",
+    "pdf_url": "https://arxiv.org/pdf/2601.14238v1",
+    "published": "2026-01-20",
+    "crawled_at": "2026-01-21 20:18:52",
+    "ai_score": 7.5,
+    "translated_title": "时空野火预测与强化学习在直升机灭火中的应用",
+    "summary_en": [
+      "• Model Architecture: FireCastRL combines a deep spatiotemporal model for wildfire ignition prediction with a pre-trained reinforcement learning (RL) agent for real-time suppression tactics in a physics-informed 3D simulation.",
+      "• Data used: The framework utilizes a large-scale, spatiotemporal dataset containing 9.5 million samples of environmental variables for wildfire prediction, which is publicly released.",
+      "• Performance metrics: The paper demonstrates the integration of deep learning and RL for both forecasting and tactical response, though specific quantitative metrics (e.g., prediction accuracy, suppression efficiency) are not detailed in the abstract."
+    ],
+    "summary_cn": [
+      "• 核心模型: FireCastRL框架结合深度时空模型进行野火点火预测，并使用预训练的强化学习代理在物理信息3D模拟中执行实时灭火战术。",
+      "• 数据来源: 基于包含950万个环境变量样本的大规模时空数据集，该数据集已公开。",
+      "• 主要结论: 深度学习与强化学习的结合可支持野火预测和战术响应，但摘要中未提供具体的性能指标细节。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the proactive AI framework could optimize wildfire suppression resource allocation, potentially reducing costs and damage, but direct financial alpha in markets is limited unless applied to insurance or commodity sectors.",
+      "• Implementation Risk: High; real-world deployment faces challenges such as simulation-to-reality gaps, data quality issues, and integration with existing emergency systems, which may hinder practical adoption.",
+      "• Novelty: Significant; the combination of spatiotemporal prediction with RL for tactical suppression in a physics-informed simulation is innovative, though building on existing deep learning and RL techniques in environmental applications."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著；将时空预测与强化学习结合于物理信息模拟中进行战术灭火，在环境应用领域具有创新性，但基于现有深度学习技术。",
+      "• 实盘坑: 高；实际部署面临模拟到现实的差距、数据质量问题和与现有应急系统集成的挑战，可能阻碍应用。",
+      "• 复现难度: 中等；公开数据集和框架描述有助于复现，但需要大量计算资源和领域专业知识来构建和训练模型。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2601.14235v1",
+    "title": "Opportunities in AI/ML for the Rubin LSST Dark Energy Science Collaboration",
+    "pdf_url": "https://arxiv.org/pdf/2601.14235v1",
+    "published": "2026-01-20",
+    "crawled_at": "2026-01-21 20:19:15",
+    "ai_score": 7.5,
+    "translated_title": "Rubin LSST暗能量科学合作中AI/ML的机遇",
+    "summary_en": [
+      "• Model Architecture: The paper surveys various AI/ML methodologies including Bayesian inference, physics-informed neural networks, foundation models, and LLM-driven agentic systems applied across cosmological workflows.",
+      "• Data used: Heterogeneous astronomical data from Vera C. Rubin Observatory's LSST, including images, catalogs, alerts, and cosmological simulations for dark energy and dark matter analysis.",
+      "• Performance metrics: Focuses on statistical power, scalability, operational reliability, uncertainty quantification, robustness to covariate shift, and reproducibility within scientific pipelines.",
+      "• Key findings: Identifies cross-cutting challenges in trustworthy AI/ML deployment for precision cosmology and prioritizes methodological research in Bayesian inference at scale, validation frameworks, and active learning."
+    ],
+    "summary_cn": [
+      "• 核心模型: 涵盖贝叶斯推断、物理信息神经网络、基础模型和LLM驱动的智能体系统等多种AI/ML方法，应用于宇宙学工作流。",
+      "• 数据来源: Vera C. Rubin天文台LSST的异构天文数据，包括图像、星表、警报以及用于暗能量和暗物质分析的宇宙学模拟。",
+      "• 主要结论: 识别了在精确宇宙学中可信AI/ML部署的跨领域挑战，并优先研究规模化贝叶斯推断、验证框架和主动学习等方法论。",
+      "• 应用场景: 从光度红移、瞬变天体分类到弱引力透镜推断和宇宙学模拟，贯穿DESC科学工作流程。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - AI/ML methods could enhance cosmological parameter estimation and anomaly detection in astronomical data, potentially leading to novel insights into dark energy and dark matter, but direct financial alpha generation is indirect.",
+      "• Implementation Risk: High - Deployment requires rigorous uncertainty quantification, robustness to model misspecification, and integration with legacy scientific pipelines, coupled with significant software, computing, and data infrastructure challenges.",
+      "• Novelty: Moderate - While the application of AI/ML to cosmology is growing, the paper's focus on cross-cutting challenges and emerging techniques like foundation models in this domain offers some fresh perspective.",
+      "• Scalability Concerns: Significant - Handling unprecedented data volumes from LSST demands scalable Bayesian inference and validation frameworks, posing operational hurdles."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等 - 将AI/ML应用于宇宙学数据分析和基础模型方法论探索有一定新意，但核心挑战如不确定性量化在领域内已有讨论。",
+      "• 实盘坑: 高 - 需克服模型误设稳健性、与现有科学流程集成、大规模数据基础设施等难题，部署风险较大。",
+      "• 复现难度: 高 - 依赖特定天文数据集（LSST）和复杂宇宙学模拟，且需要跨学科团队协作，复现成本高昂。",
+      "• 实用性局限: 直接金融应用较弱，更多侧重于科学发现而非交易策略生成。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2601.14234v1",
+    "title": "Q-learning with Adjoint Matching",
+    "pdf_url": "https://arxiv.org/pdf/2601.14234v1",
+    "published": "2026-01-20",
+    "crawled_at": "2026-01-21 20:19:33",
+    "ai_score": 8.2,
+    "translated_title": "伴随匹配的Q学习",
+    "summary_en": [
+      "• Model Architecture: Q-learning with Adjoint Matching (QAM) combines temporal-difference backup for critic learning with adjoint matching for policy optimization, specifically designed for continuous-action RL with expressive diffusion/flow-matching policies.",
+      "• Data used: Evaluated on hard, sparse reward tasks in both offline and offline-to-online RL settings, though specific datasets or environments are not detailed in the abstract.",
+      "• Performance metrics: Consistently outperforms prior approaches on challenging tasks, indicating improved sample efficiency and policy quality in sparse-reward scenarios."
+    ],
+    "summary_cn": [
+      "• 核心模型: QAM算法将时间差分备份与伴随匹配技术结合，针对连续动作强化学习中的扩散或流匹配策略进行高效优化，避免传统梯度方法的不稳定性。",
+      "• 数据来源: 在离线及离线到在线强化学习的稀疏奖励任务上进行测试，具体环境或数据集未在摘要中明确说明。",
+      "• 主要结论: 在困难任务上持续超越现有方法，证明其在稀疏奖励场景下具有更好的策略表达能力和学习效率。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for improving RL-based trading strategies in continuous action spaces, especially for sparse reward scenarios common in financial markets.",
+      "• Implementation Risk: Moderate risk due to reliance on adjoint matching—a relatively new technique that may require careful tuning and validation in real-world applications.",
+      "• Novelty: Significant novelty in addressing the long-standing challenge of gradient instability in diffusion/flow policies, offering an unbiased alternative to existing approximations."
+    ],
+    "verdict_cn": [
+      "• 创新点: 利用伴随匹配技术解决扩散策略梯度不稳定的核心难题，提供无偏且表达力强的策略优化方法，在RL领域具有突破性。",
+      "• 实盘坑: 伴随匹配技术较新，在金融实盘中可能面临超参数敏感、计算开销大及市场非平稳性适配等挑战。",
+      "• 复现难度: 中等偏高，需要实现复杂的伴随匹配算法并与TD学习结合，对工程和理论理解要求较高。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2601.14232v1",
+    "title": "KAGE-Bench: Fast Known-Axis Visual Generalization Evaluation for Reinforcement Learning",
+    "pdf_url": "https://arxiv.org/pdf/2601.14232v1",
+    "published": "2026-01-20",
+    "crawled_at": "2026-01-21 20:19:59",
+    "ai_score": 7.5,
+    "translated_title": "KAGE-Bench：用于强化学习的快速已知轴视觉泛化评估基准",
+    "summary_en": [
+      "• Model Architecture: Introduces KAGE-Env, a JAX-native 2D platformer environment that factorizes visual observations into independently controllable axes while keeping underlying dynamics fixed, enabling systematic analysis of visual generalization failures in pixel-based RL agents.",
+      "• Data used: Defines KAGE-Bench, a benchmark comprising six known-axis suites with 34 train-evaluation configuration pairs that isolate individual visual shifts (e.g., background, photometric, agent-appearance) without altering latent dynamics or rewards.",
+      "• Performance metrics: Evaluates using a standard PPO-CNN baseline, showing axis-dependent failures where background and photometric shifts often collapse success rates, while agent-appearance shifts are more benign; highlights that return alone can obscure generalization failures as some shifts preserve forward motion but break task completion.",
+      "• Technical implementation: Fully vectorized JAX implementation achieves up to 33M environment steps per second on a single GPU, enabling fast and reproducible sweeps over visual factors for efficient benchmarking."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出KAGE-Env，一个基于JAX的2D平台游戏环境，将视觉观察分解为独立可控的轴，同时保持底层动态固定，用于系统分析基于像素的强化学习代理的视觉泛化失败。",
+      "• 数据来源: 构建KAGE-Bench基准，包含六个已知轴套件，共34个训练-评估配置对，隔离单个视觉变化（如背景、光度、代理外观），而不改变潜在动态或奖励。",
+      "• 主要结论: 使用标准PPO-CNN基线评估显示轴依赖性失败，背景和光度变化常导致成功率崩溃，而代理外观变化相对温和；强调仅依赖回报可能掩盖泛化失败，因为某些变化保持前进运动但破坏任务完成。",
+      "• 技术实现: 全向量化JAX实现在单个GPU上每秒可达3300万环境步，支持对视觉因素的快速和可重复扫描，提升基准测试效率。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; provides a clean abstraction for isolating visual generalization failures in RL, which could inform robust agent design for real-world applications with visual noise, but direct financial alpha generation is limited as it focuses on benchmarking rather than trading strategies.",
+      "• Implementation Risk: Low to moderate; the JAX-native implementation ensures high efficiency and reproducibility, but reliance on synthetic 2D environments may not fully capture complexities of real-world visual data, posing risks if applied to financial domains without adaptation.",
+      "• Novelty: High; introduces a novel factorization approach to disentangle visual shifts from dynamics, addressing a gap in existing benchmarks that entangle multiple sources of shift, and enables fast evaluation through vectorized GPU acceleration, advancing systematic analysis in RL generalization."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；提出新颖的分解方法，将视觉变化与动态分离，解决现有基准中多源变化纠缠的问题，并通过向量化GPU加速实现快速评估，推动强化学习泛化的系统分析。",
+      "• 实盘坑: 中低；基于JAX的实现确保高效和可复现性，但依赖合成2D环境可能无法完全捕捉真实世界视觉数据的复杂性，若未经调整应用于金融领域存在风险。",
+      "• 复现难度: 低；代码开源且全向量化设计简化了复现过程，但需要JAX和GPU资源支持高速运行，可能增加初始设置成本。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2601.14228v1",
+    "title": "Attention-Based Offline Reinforcement Learning and Clustering for Interpretable Sepsis Treatment",
+    "pdf_url": "https://arxiv.org/pdf/2601.14228v1",
+    "published": "2026-01-20",
+    "crawled_at": "2026-01-21 20:20:17",
+    "ai_score": 7.8,
+    "translated_title": "基于注意力机制的离线强化学习与聚类用于可解释的脓毒症治疗",
+    "summary_en": [
+      "• Model Architecture: Integrates four modules: clustering-based patient stratification, synthetic data augmentation using VAE and diffusion models, offline RL agent with AWR and attention encoder, and LLM-powered rationale generation.",
+      "• Data used: Evaluated on MIMIC-III and eICU datasets, focusing on ICU patient trajectories including fluid/vasopressor administration.",
+      "• Performance metrics: Achieves high treatment accuracy with interpretable policy recommendations, validated through statistical methods and ensemble models for safety."
+    ],
+    "summary_cn": [
+      "• 核心模型: 集成聚类分层、VAE/扩散模型数据增强、离线强化学习（AWR+注意力编码器）和多模态大语言模型解释生成四模块。",
+      "• 数据来源: 基于MIMIC-III和eICU重症监护数据集，重点处理液体/血管加压药物等治疗轨迹。",
+      "• 主要结论: 在保证高治疗准确率的同时，提供可解释且安全的临床决策支持，通过统计验证和集成模型增强鲁棒性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; interpretable AI for clinical decision-making could translate to systematic edge in healthcare analytics or insurance risk modeling, but direct financial alpha is indirect.",
+      "• Implementation Risk: High; reliance on synthetic data augmentation raises validation concerns, and clinical deployment requires rigorous regulatory approval and real-world testing.",
+      "• Novelty: Strong; combines offline RL with attention mechanisms, diffusion models for data augmentation, and LLM-based explanation in a unified framework, though individual components are not entirely new."
+    ],
+    "verdict_cn": [
+      "• 创新点: 较强；将离线强化学习、注意力机制、扩散模型数据增强和LLM解释生成整合，但各组件单独看创新有限。",
+      "• 实盘坑: 高；合成数据可能引入偏差，临床落地需严格监管审批，且模型复杂度高可能导致过拟合或计算开销大。",
+      "• 复现难度: 中等；依赖公开数据集和标准深度学习库，但多模块集成和超参数调优需要较强工程能力。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2601.14226v1",
+    "title": "Deep Learning Approaches to Quantum Error Mitigation",
+    "pdf_url": "https://arxiv.org/pdf/2601.14226v1",
+    "published": "2026-01-20",
+    "crawled_at": "2026-01-21 20:20:36",
+    "ai_score": 7.5,
+    "translated_title": "深度学习在量子误差缓解中的应用",
+    "summary_en": [
+      "• Model Architecture: The paper systematically compares various deep learning architectures, including fully connected neural networks and transformers, identifying sequence-to-sequence attention-based models as the most effective for quantum error mitigation.",
+      "• Data used: The study utilizes both simulated data and real device data from IBM superconducting quantum processing units (QPU) with up to five qubits, testing across multiple circuit depths and circuit families.",
+      "• Performance metrics: The approach outperforms baseline error mitigation techniques, producing mitigated distributions closer to ideal outputs, with effective generalization across similar devices and transfer learning to different IBM QPUs without full retraining."
+    ],
+    "summary_cn": [
+      "• 核心模型: 系统比较了全连接神经网络和Transformer等多种深度学习架构，确定基于注意力的序列到序列模型在量子误差缓解中效果最佳。",
+      "• 数据来源: 使用模拟数据和IBM超导量子处理单元（QPU）的真实设备数据，测试涵盖最多五个量子比特和不同电路深度。",
+      "• 主要结论: 该方法在多个电路深度上优于其他基线误差缓解技术，能生成更接近理想输出的分布，并在相似设备间实现有效泛化和迁移学习。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate potential for improving quantum computing reliability in finance applications like portfolio optimization or risk modeling, but limited by small-scale quantum hardware (5 qubits) and lack of real-world financial data testing.",
+      "• Implementation Risk: High risk due to dependency on specific IBM QPU architectures, potential overfitting to limited datasets, and computational overhead of deep learning models in real-time quantum error mitigation scenarios.",
+      "• Novelty: Novel application of attention-based deep learning to quantum error mitigation, with contributions in cross-dataset generalization and transfer learning studies, though building on existing quantum and machine learning techniques."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将基于注意力的深度学习创新应用于量子误差缓解，在跨数据集泛化和迁移学习方面有贡献，但基于现有量子与机器学习技术。",
+      "• 实盘坑: 高度依赖特定IBM QPU架构，数据集有限可能导致过拟合，深度学习模型在实时量子误差缓解中计算开销大。",
+      "• 复现难度: 中等难度，需要访问IBM量子硬件或高质量模拟器，以及深度学习专业知识，但方法描述较系统。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2601.14209v1",
+    "title": "InT: Self-Proposed Interventions Enable Credit Assignment in LLM Reasoning",
+    "pdf_url": "https://arxiv.org/pdf/2601.14209v1",
+    "published": "2026-01-20",
+    "crawled_at": "2026-01-21 20:20:55",
+    "ai_score": 8.2,
+    "translated_title": "InT：自提干预实现大语言模型推理中的信用分配",
+    "summary_en": [
+      "• Model Architecture: Intervention Training (InT) paradigm where LLMs propose targeted corrections to their own reasoning traces, followed by supervised fine-tuning (SFT) and reinforcement learning (RL) fine-tuning.",
+      "• Data used: Mathematical reasoning datasets (specifically IMO-AnswerBench) with reference solutions available for verification and intervention generation.",
+      "• Performance metrics: Achieves nearly 14% accuracy improvement over a 4B-parameter base model on IMO-AnswerBench, outperforming larger models like gpt-oss-20b."
+    ],
+    "summary_cn": [
+      "• 核心模型: 干预训练（InT）范式，模型通过自提短小、有针对性的修正来引导推理轨迹，结合监督微调（SFT）和强化学习（RL）微调。",
+      "• 数据来源: 数学推理数据集（如IMO-AnswerBench），利用参考解进行验证和干预生成。",
+      "• 主要结论: 在IMO-AnswerBench上，相比4B参数基础模型提升近14%准确率，超越更大开源模型如gpt-oss-20b。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for improving LLM reasoning in quantitative finance applications, such as algorithmic trading strategy generation or risk assessment, by enabling precise credit assignment to intermediate steps.",
+      "• Implementation Risk: Moderate; relies on availability of reference solutions for verification, which may be scarce in real-world financial datasets, and requires careful tuning of intervention generation to avoid overfitting.",
+      "• Novelty: Significant; introduces a self-proposed intervention mechanism for fine-grained credit assignment, addressing a key limitation in standard RL for LLMs without needing complex process reward models."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著；提出自提干预机制实现细粒度信用分配，解决标准RL在LLM推理中的关键缺陷，无需复杂过程奖励模型。",
+      "• 实盘坑: 中等；依赖参考解进行验证，在真实金融数据中可能稀缺，且干预生成需精细调参以避免过拟合。",
+      "• 复现难度: 中等；需要数学推理数据集和RL微调基础设施，但开源代码和详细方法可降低门槛。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2601.14208v1",
+    "title": "Rig-Aware 3D Reconstruction of Vehicle Undercarriages using Gaussian Splatting",
+    "pdf_url": "https://arxiv.org/pdf/2601.14208v1",
+    "published": "2026-01-20",
+    "crawled_at": "2026-01-21 20:21:12",
+    "ai_score": 7.8,
+    "translated_title": "基于高斯泼溅的车辆底盘三维重建：考虑相机阵列的感知方法",
+    "summary_en": [
+      "• Model Architecture: End-to-end pipeline combining rig-aware Structure-from-Motion (SfM) with Gaussian splatting, featuring constrained matching strategy using DISK feature extractor and LightGlue matcher",
+      "• Data used: Synchronized video streams from three-camera rig capturing vehicle undercarriages as vehicles drive over the system",
+      "• Performance metrics: Achieves state-of-the-art quality in 3D reconstruction, generates photorealistic models that render in real-time, overcomes wide-angle lens distortion and low-parallax challenges"
+    ],
+    "summary_cn": [
+      "• 核心模型: 端到端流水线结合相机阵列感知的结构从运动与高斯泼溅技术，采用约束匹配策略集成DISK特征提取器和LightGlue匹配器",
+      "• 数据来源: 三相机阵列同步视频流，捕捉车辆驶过系统时的底盘图像",
+      "• 主要结论: 实现最先进的三维重建质量，生成可实时渲染的逼真模型，有效克服广角镜头畸变和低视差场景挑战"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - could enable automated vehicle inspection systems with potential applications in used car markets and insurance assessment",
+      "• Implementation Risk: High - requires specialized hardware (three-camera rig), precise calibration, and real-world deployment challenges",
+      "• Novelty: Significant - rig-aware SfM approach specifically designed for undercarriage reconstruction represents domain-specific innovation"
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著 - 针对车辆底盘重建的相机阵列感知SfM方法代表领域特定创新，约束匹配策略提升稀疏点云质量",
+      "• 实盘坑: 高 - 需要专用三相机阵列硬件，精确校准要求高，实际部署面临环境干扰和车辆运动变化挑战",
+      "• 复现难度: 中等偏高 - 需要DISK特征提取器和LightGlue匹配器等学习组件，高斯泼溅过程计算资源要求较高"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2601.11516v1",
     "title": "Building Production-Ready Probes For Gemini",
     "pdf_url": "https://arxiv.org/pdf/2601.11516v1",
