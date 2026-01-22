@@ -1,5 +1,365 @@
 [
   {
+    "id": "2601.15286v1",
+    "title": "Iterative Refinement Improves Compositional Image Generation",
+    "pdf_url": "https://arxiv.org/pdf/2601.15286v1",
+    "published": "2026-01-21",
+    "crawled_at": "2026-01-22 20:01:42",
+    "ai_score": 8.2,
+    "translated_title": "迭代优化提升组合式图像生成",
+    "summary_en": [
+      "• Model Architecture: Proposes an iterative test-time strategy where a text-to-image (T2I) model refines generations across multiple steps, guided by feedback from a vision-language model (VLM) acting as a critic in the loop. The approach is simple, requires no external tools or priors, and can be flexibly applied to various image generators and VLMs.",
+      "• Data used: Evaluated on benchmarks including ConceptMix (k=7), T2I-CompBench (3D-Spatial category), and Visual Jenga scene decomposition. The method leverages existing T2I models and VLMs without requiring new training data, focusing on inference-time improvements.",
+      "• Performance metrics: Achieved a 16.9% improvement in all-correct rate on ConceptMix (k=7), a 13.8% improvement on T2I-CompBench (3D-Spatial category), and a 12.5% improvement on Visual Jenga scene decomposition compared to compute-matched parallel sampling. Human evaluators preferred the method 58.7% of the time over 41.3% for the baseline."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出一种迭代测试时策略，文本到图像（T2I）模型通过多步逐步优化生成，由视觉语言模型（VLM）作为循环中的批评者提供反馈指导。该方法简单，无需外部工具或先验知识，可灵活应用于多种图像生成器和VLM。",
+      "• 数据来源: 在ConceptMix（k=7）、T2I-CompBench（3D空间类别）和Visual Jenga场景分解等基准测试上进行评估。该方法利用现有T2I模型和VLM，无需新训练数据，专注于推理时改进。",
+      "• 主要结论: 在ConceptMix（k=7）上全正确率提升16.9%，在T2I-CompBench（3D空间类别）上提升13.8%，在Visual Jenga场景分解上提升12.5%，相比计算匹配的并行采样。人类评估者更偏好该方法，偏好率为58.7%对比基线的41.3%。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for generating more accurate and faithful images from complex prompts, which could be leveraged in quantitative finance for data augmentation, synthetic data generation for training models, or visual analytics in market sentiment analysis. The iterative self-correction principle may enhance reliability in automated systems.",
+      "• Implementation Risk: Moderate risk due to dependency on the quality of the vision-language model critic; poor feedback could degrade performance. Computational overhead from multiple refinement steps may increase latency, impacting real-time applications. Integration with existing pipelines requires careful tuning to avoid compatibility issues.",
+      "• Novelty: Novel application of chain-of-thought reasoning from large language models to image generation, introducing an iterative feedback loop with a VLM critic. This approach is broadly applicable and simple, distinguishing it from prior methods like parallel sampling or increased denoising steps."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将大语言模型中的思维链推理应用于图像生成，引入视觉语言模型作为批评者的迭代反馈循环。该方法具有广泛适用性和简单性，区别于并行采样或增加去噪步数等现有方法。",
+      "• 实盘坑: 实施风险中等，依赖于视觉语言模型批评者的质量；反馈不佳可能导致性能下降。多步优化增加计算开销，可能影响实时应用延迟。与现有系统集成需精细调优以避免兼容性问题。",
+      "• 复现难度: 低至中等难度，因方法简单且无需外部工具，但需访问高质量的T2I和VLM模型，并可能涉及超参数调整以优化迭代步骤和反馈机制。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2601.15279v1",
+    "title": "MolecularIQ: Characterizing Chemical Reasoning Capabilities Through Symbolic Verification on Molecular Graphs",
+    "pdf_url": "https://arxiv.org/pdf/2601.15279v1",
+    "published": "2026-01-21",
+    "crawled_at": "2026-01-22 20:02:06",
+    "ai_score": 7.5,
+    "translated_title": "MolecularIQ：通过分子图符号验证表征化学推理能力",
+    "summary_en": [
+      "• Model Architecture: The paper introduces MolecularIQ, a benchmark framework for evaluating Large Language Models (LLMs) on molecular structure reasoning tasks, focusing on symbolic verification rather than traditional multiple-choice or knowledge-based assessments.",
+      "• Data used: The benchmark is built on molecular graphs, representing chemical structures, with tasks designed to be symbolically verifiable to avoid label leakage or bias from literature or surrogate sources.",
+      "• Performance metrics: MolecularIQ enables fine-grained evaluation, revealing capability patterns and localizing model failures to specific tasks and molecular structures, providing actionable insights into model strengths and limitations.",
+      "• Key innovation: It shifts evaluation from general chemical knowledge to reasoning over molecular graphs, addressing gaps in existing benchmarks that rely on potentially biased or leaky data."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出MolecularIQ基准框架，用于评估大语言模型在分子结构推理任务上的表现，专注于符号验证而非传统选择题或知识测试。",
+      "• 数据来源: 基于分子图数据，代表化学结构，任务设计为符号可验证，以避免文献或代理标签的泄漏或偏差。",
+      "• 主要结论: 通过细粒度评估揭示能力模式，将模型失败定位到特定任务和分子结构，为当前化学LLM的优势和局限提供可操作见解。",
+      "• 方法特点: 从一般化学知识评估转向分子图推理，弥补现有基准依赖有偏或泄漏数据的不足。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the benchmark could help develop more accurate chemistry LLMs for applications like drug discovery or materials science, potentially leading to alpha in biotech or chemical sectors if integrated into predictive models.",
+      "• Implementation Risk: High; symbolic verification on molecular graphs is complex and may not directly translate to financial markets without significant adaptation; risk of overfitting to benchmark tasks rather than real-world performance.",
+      "• Novelty: High; it introduces a novel approach to evaluating chemistry LLMs by focusing on verifiable reasoning over molecular structures, addressing limitations in existing benchmarks and offering a more rigorous assessment framework.",
+      "• Practical challenge: The benchmark's focus on symbolic tasks may limit generalizability to broader chemical reasoning or financial applications, requiring careful validation in target domains."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；通过专注于分子结构的可验证推理，引入新颖的化学LLM评估方法，弥补现有基准的不足，提供更严格的评估框架。",
+      "• 实盘坑: 高；分子图符号验证复杂，需大量适配才能应用于金融市场；存在过拟合基准任务而非实际性能的风险。",
+      "• 复现难度: 中等；基准框架公开可复现，但需要专业化学和计算资源，且任务设计可能限制在特定分子结构上，影响泛化能力。",
+      "• 应用局限: 符号任务焦点可能限制在更广泛化学推理或金融应用中的适用性，需在目标领域进行仔细验证。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2601.15275v1",
+    "title": "RayRoPE: Projective Ray Positional Encoding for Multi-view Attention",
+    "pdf_url": "https://arxiv.org/pdf/2601.15275v1",
+    "published": "2026-01-21",
+    "crawled_at": "2026-01-22 20:02:28",
+    "ai_score": 8.2,
+    "translated_title": "RayRoPE：用于多视角注意力的投影射线位置编码",
+    "summary_en": [
+      "• Model Architecture: RayRoPE introduces a projective ray positional encoding mechanism for multi-view transformers, using predicted 3D points along rays instead of ray directions for geometry-aware encoding, with SE(3)-invariant attention via query-frame projective coordinates and analytical uncertainty handling.",
+      "• Data used: Validated on novel-view synthesis and stereo depth estimation tasks, likely using CO3D dataset (mentioned for 15% LPIPS improvement) and potentially other multi-view image datasets with posed input images.",
+      "• Performance metrics: Shows consistent improvements over alternative position encoding schemes, including 15% relative improvement on LPIPS in CO3D, and demonstrates ability to incorporate RGB-D input for larger gains."
+    ],
+    "summary_cn": [
+      "• 核心模型: RayRoPE提出一种基于投影射线的位置编码方法，通过预测射线上的3D点而非方向实现几何感知编码，支持SE(3)不变性注意力，并包含不确定性分析机制。",
+      "• 数据来源: 在CO3D等数据集上进行新视角合成和立体深度估计任务验证，使用带姿态的输入图像集。",
+      "• 主要结论: 相比现有位置编码方案，RayRoPE在多项指标上取得显著提升（如CO3D上LPIPS指标相对提升15%），并能无缝整合RGB-D输入获得更大优势。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for computer vision applications requiring 3D scene understanding, particularly in autonomous driving, robotics, and AR/VR where multi-view processing is critical; the geometry-aware encoding could lead to more robust models.",
+      "• Implementation Risk: Moderate risk due to complexity of projective coordinate computations and uncertainty handling; integration with existing transformer architectures may require significant engineering effort.",
+      "• Novelty: Strong novelty in addressing specific gaps in multi-view positional encodings—combining ray-based representation with predicted 3D points and SE(3) invariance is a distinct contribution over prior absolute/relative schemes."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将射线表示与预测3D点结合，实现几何感知的位置编码，并引入SE(3)不变性注意力机制，在方法层面有实质性突破。",
+      "• 实盘坑: 投影坐标计算和不确定性分析可能增加计算复杂度，实际部署时需优化性能；多视角数据获取和标注成本较高。",
+      "• 复现难度: 中等偏高，需要实现射线投影、3D点预测及不确定性建模等模块，对3D几何和Transformer架构有较高要求。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2601.15254v1",
+    "title": "Many Experiments, Few Repetitions, Unpaired Data, and Sparse Effects: Is Causal Inference Possible?",
+    "pdf_url": "https://arxiv.org/pdf/2601.15254v1",
+    "published": "2026-01-21",
+    "crawled_at": "2026-01-22 20:02:50",
+    "ai_score": 7.8,
+    "translated_title": "多实验、少重复、非配对数据与稀疏效应：因果推断是否可行？",
+    "summary_en": [
+      "• Model Architecture: Proposes a GMM-type estimator with cross-fold sample splitting of instrument-covariate samples to handle many environments with few observations per environment, extending to sparse causal effects via ℓ₁-regularized estimation and post-selection refitting.",
+      "• Data used: Unpaired observational data where covariates X and outcome Y are observed under different experimental conditions (environments) but not jointly; either X or Y is observed per environment, with the environment acting as a high-dimensional instrument.",
+      "• Performance metrics: Theoretical consistency proven as the number of environments grows while sample size per environment remains constant; addresses failure of standard two-sample IV estimators in this sparse-data setting."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出基于工具变量-协变量样本交叉折叠拆分的GMM型估计器，适用于每个环境观测数少但环境数量多的场景，并通过ℓ₁正则化估计和后选择重拟合扩展至稀疏因果效应。",
+      "• 数据来源: 非配对观测数据，其中协变量X和结果Y在不同实验条件（环境）下观测但非联合观测；每个环境仅观测X或Y，环境作为高维工具变量。",
+      "• 主要结论: 在环境数量增长而每个环境样本量恒定的情况下，证明估计器的一致性；解决了标准两样本IV估计器在此稀疏数据设置中的失效问题。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; method enables causal inference in high-dimensional, sparse-data settings common in finance (e.g., cross-sectional asset returns with unobserved confounders), but real-world alpha depends on accurate environment definition and instrument validity.",
+      "• Implementation Risk: High; requires careful specification of environments as valid instruments, sensitive to hidden confounding assumptions, and computational complexity from cross-fold splitting and regularization may limit scalability.",
+      "• Novelty: Significant; addresses a niche but practical problem of unpaired data with many environments and few repetitions, combining IV regression with sample splitting and sparsity techniques, though builds on existing GMM and regularization literature."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著；针对多环境少重复的非配对数据问题，将工具变量回归与样本拆分及稀疏技术结合，填补了高维稀疏因果推断的空白，但基于现有GMM和正则化方法。",
+      "• 实盘坑: 高；环境作为工具变量的有效性难以保证，对隐藏混杂因素假设敏感，交叉折叠拆分和正则化的计算复杂度可能影响大规模应用。",
+      "• 复现难度: 中等；方法理论清晰但实现需精细调参，依赖环境定义和样本拆分策略，数据要求严格，可能需大量仿真验证。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2601.15249v1",
+    "title": "Recommending Best Paper Awards for ML/AI Conferences via the Isotonic Mechanism",
+    "pdf_url": "https://arxiv.org/pdf/2601.15249v1",
+    "published": "2026-01-21",
+    "crawled_at": "2026-01-22 20:03:13",
+    "ai_score": 7.8,
+    "translated_title": "通过等渗机制为ML/AI会议推荐最佳论文奖",
+    "summary_en": [
+      "• Model Architecture: The Isotonic Mechanism elicits authors' self-assessments as rankings to adjust raw review scores for optimal estimation of ground-truth paper quality, with extensions for overlapping authorship scenarios.",
+      "• Data used: Publicly accessible review data from ICLR (2019-2023) and NeurIPS (2021-2023) to validate convexity assumptions for best paper award utilities.",
+      "• Performance metrics: Simulation results demonstrate significant improvement in the quality of papers selected for awards compared to traditional methods.",
+      "• Theoretical foundation: Proves truthfulness under convex additive utility functions, with relaxed assumptions for single-quota authors (nondecreasing additive functions)."
+    ],
+    "summary_cn": [
+      "• 核心模型: 等渗机制通过收集作者对自身论文的排名评估，调整原始评审分数以优化真实质量估计，并扩展处理共同作者重叠情况。",
+      "• 数据来源: 使用ICLR（2019-2023年）和NeurIPS（2021-2023年）的公开评审数据验证最佳论文奖效用函数的凸性假设。",
+      "• 主要结论: 模拟结果显示该机制显著提升获奖论文质量，且在作者单配额情况下，即使效用函数仅为非递减可加函数也能保证真实性。",
+      "• 激励机制: 作者在凸可加效用函数下被激励如实报告，放松了先前研究中的严格假设。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - mechanism could improve selection accuracy in academic/industry award settings, but direct financial alpha generation is limited without market linkage.",
+      "• Implementation Risk: High - relies on author honesty and accurate self-assessment, with potential gaming in competitive environments; scalability to large conferences untested.",
+      "• Novelty: High - introduces isotonic mechanism to peer review with theoretical guarantees for truthfulness under relaxed conditions, addressing a growing pain point in ML conferences.",
+      "• Practical limitations: Assumes convex utility functions validated on limited datasets; real-world author behavior may deviate from theoretical models."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将等渗机制引入同行评审，在放松假设下保证作者真实性报告，针对ML会议评审痛点提供理论解决方案。",
+      "• 实盘坑: 高度依赖作者诚实度和自我评估准确性，竞争环境下易被博弈；大规模会议扩展性未经验证，效用函数假设可能不现实。",
+      "• 复现难度: 中等 - 核心算法相对清晰，但需要大量评审数据和作者参与，真实环境部署面临协调和信任挑战。",
+      "• 市场关联: 弱 - 主要针对学术奖项评选，缺乏直接金融市场应用，需二次开发才能产生交易alpha。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2601.15239v1",
+    "title": "Multi-context principal component analysis",
+    "pdf_url": "https://arxiv.org/pdf/2601.15239v1",
+    "published": "2026-01-21",
+    "crawled_at": "2026-01-22 20:03:33",
+    "ai_score": 7.5,
+    "translated_title": "多上下文主成分分析",
+    "summary_en": [
+      "• Model Architecture: MCPCA extends PCA to decompose data into factors shared across subsets of contexts, using a theoretical framework to identify common variation patterns without requiring full context overlap.",
+      "• Data used: Applied to gene expression data across multiple cancer types and contextualized word embeddings from language models across decades of debate texts.",
+      "• Performance metrics: Successfully revealed axes of variation shared across cancer subsets and tracked evolution of debate themes, outperforming methods that either combine all contexts or analyze contexts individually."
+    ],
+    "summary_cn": [
+      "• 核心模型: MCPCA是PCA的泛化框架，通过分解数据为跨上下文子集共享的因子，系统捕捉多环境下的共同变异模式。",
+      "• 数据来源: 使用跨多种癌症类型的基因表达数据，以及语言模型生成的上下文词嵌入（涵盖数十年辩论文本）。",
+      "• 主要结论: 在癌症数据中发现与肺癌进展相关的变异轴，在文本数据中映射出科学与虚构辩论的演变阶段，这些结果无法通过传统跨上下文或单上下文方法获得。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - could identify cross-context patterns in financial time series (e.g., regime shifts across asset classes) but requires careful adaptation to noisy market data.",
+      "• Implementation Risk: High - context definition is subjective, model may overfit to spurious correlations in financial applications, and computational complexity increases with context subsets.",
+      "• Novelty: Significant - first principled extension of PCA to multi-context settings, addresses a clear gap in factor recovery across heterogeneous data environments."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次系统化将PCA扩展到多上下文场景，解决了跨异质数据环境因子恢复的理论空白，方法具有数学严谨性。",
+      "• 实盘坑: 上下文定义在金融应用中高度主观（如市场状态划分），模型易受噪声数据干扰产生伪相关，计算复杂度随上下文子集数量指数增长。",
+      "• 复现难度: 中等 - 核心算法相对清晰，但需要高质量的多上下文标注数据，且超参数调优（如上下文聚类）对结果影响较大。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2601.15235v1",
+    "title": "Tracing 3D Anatomy in 2D Strokes: A Multi-Stage Projection Driven Approach to Cervical Spine Fracture Identification",
+    "pdf_url": "https://arxiv.org/pdf/2601.15235v1",
+    "published": "2026-01-21",
+    "crawled_at": "2026-01-22 20:03:59",
+    "ai_score": 7.8,
+    "translated_title": "在二维笔画中追踪三维解剖结构：一种多阶段投影驱动的颈椎骨折识别方法",
+    "summary_en": [
+      "• Model Architecture: End-to-end pipeline combining YOLOv8 for 3D region localization via optimized 2D projections (axial, sagittal, coronal), DenseNet121-Unet for multi-label segmentation using variance- and energy-based projections, and an ensemble of 2.5D Spatio-Sequential models for fracture detection analyzing both raw slices and projections per vertebra.",
+      "• Data used: 3D CT volumes of cervical vertebrae (C1-C7) for automated analysis, with validation through explainability studies (saliency maps) and interobserver variability analysis comparing model performance with expert radiologists.",
+      "• Performance metrics: Achieved 3D mIoU of 94.45% for localization, Dice score of 87.86% for segmentation, and fracture detection with vertebra-level F1 score of 68.15%, patient-level F1 score of 82.26%, ROC-AUC scores of 91.62% (vertebra-level) and 83.04% (patient-level)."
+    ],
+    "summary_cn": [
+      "• 核心模型: 端到端流程，结合YOLOv8通过优化二维投影（轴状、矢状、冠状）进行三维区域定位，DenseNet121-Unet利用基于方差和能量的投影进行多标签分割，以及集成2.5D时空序列模型分析每节椎骨的原始切片和投影以检测骨折。",
+      "• 数据来源: 颈椎（C1-C7）的三维CT体积数据，通过可解释性研究（显著性图）和与专家放射科医生模型性能比较的观察者间变异性分析进行验证。",
+      "• 主要结论: 该方法在定位上实现94.45%的3D mIoU，分割Dice分数为87.86%，骨折检测的椎骨级F1分数为68.15%，患者级F1分数为82.26%，ROC-AUC分数分别为91.62%（椎骨级）和83.04%（患者级）。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the approach reduces computational complexity via 2D projections while maintaining high performance, potentially applicable to other medical imaging tasks for efficiency gains, but direct financial alpha is limited as it's a medical application.",
+      "• Implementation Risk: High; relies on specialized 3D CT data and expert validation, with potential issues in generalizing to diverse patient populations or imaging conditions, and the ensemble model may increase deployment complexity.",
+      "• Novelty: Significant; innovative multi-stage projection-driven strategy combining 2D and 3D techniques for fracture detection, with explainability and interobserver analysis adding robustness, though similar methods exist in medical imaging research."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著；创新的多阶段投影驱动策略，结合二维和三维技术进行骨折检测，通过可解释性和观察者间分析增强鲁棒性，尽管医学影像研究中存在类似方法。",
+      "• 实盘坑: 高；依赖专业三维CT数据和专家验证，可能在泛化到不同患者群体或成像条件时存在问题，集成模型可能增加部署复杂性。",
+      "• 复现难度: 中等；需要获取和处理三维CT数据集，实现复杂的模型架构（如YOLOv8、DenseNet121-Unet、2.5D集成），但代码和细节在论文中可能提供，假设有计算资源。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2601.15212v1",
+    "title": "ZENITH: Automated Gradient Norm Informed Stochastic Optimization",
+    "pdf_url": "https://arxiv.org/pdf/2601.15212v1",
+    "published": "2026-01-21",
+    "crawled_at": "2026-01-22 20:04:22",
+    "ai_score": 7.5,
+    "translated_title": "ZENITH：基于梯度范数信息的自动化随机优化方法",
+    "summary_en": [
+      "• Model Architecture: ZENITH is a novel optimizer that adapts learning rates based on the temporal evolution of gradient norms, eliminating manual tuning or hyperparameter schedules.",
+      "• Data used: Evaluated on 6 CNN architectures across 6 image classification benchmarks, plus object detection, keypoint detection, and instance segmentation tasks using MS COCO dataset with R-CNN models.",
+      "• Performance metrics: Achieved higher test accuracy in lower wall-clock time than baselines in classification, and superior mAP in detection/segmentation tasks on COCO.",
+      "• Key feature: Compatibility with regularization techniques enables improved generalization without computational or memory overhead typical of adaptive optimizers."
+    ],
+    "summary_cn": [
+      "• 核心模型: ZENITH是一种基于梯度范数时间演化的自适应学习率优化器，无需手动调整学习率计划。",
+      "• 数据来源: 在6个CNN架构和6个图像分类基准上进行测试，并使用MS COCO数据集进行目标检测、关键点检测和实例分割评估。",
+      "• 主要结论: 在更短的运行时间内达到更高的测试准确率，在COCO任务上获得优于基线的mAP，且与正则化技术兼容提升泛化能力。",
+      "• 技术优势: 解决了现有自适应优化器的计算内存开销、正则化不兼容和次优学习率选择问题。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate—automated LR scheduling could reduce manual tuning costs in DL pipelines, but direct financial alpha generation is limited without specific market data applications.",
+      "• Implementation Risk: Low to moderate—method is architecture-agnostic and claims zero overhead, but real-world deployment may reveal hidden complexities in gradient norm stability.",
+      "• Novelty: High—leveraging temporal gradient norm evolution for LR adaptation is a fresh approach compared to momentum-based or second-order adaptive methods.",
+      "• Practical limitation: While benchmarks are comprehensive, lack of cross-domain validation (e.g., NLP, time-series) limits generalizability claims for non-vision tasks."
+    ],
+    "verdict_cn": [
+      "• 创新点: 利用梯度范数的时间演化自适应调整学习率，避免了传统自适应优化器的计算开销和正则化不兼容问题，思路新颖。",
+      "• 实盘坑: 梯度范数可能受噪声影响导致学习率不稳定，且未在金融时间序列等非视觉任务验证，实盘泛化风险较高。",
+      "• 复现难度: 中等—核心算法相对简洁，但需要精确实现梯度范数追踪和LR更新逻辑，基准测试的硬件环境依赖可能增加复现成本。",
+      "• 策略价值: 在自动化深度学习训练流程中有应用潜力，但直接转化为量化交易策略需进一步结合市场数据特征。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2601.15165v1",
+    "title": "The Flexibility Trap: Why Arbitrary Order Limits Reasoning Potential in Diffusion Language Models",
+    "pdf_url": "https://arxiv.org/pdf/2601.15165v1",
+    "published": "2026-01-21",
+    "crawled_at": "2026-01-22 20:04:43",
+    "ai_score": 8.2,
+    "translated_title": "灵活性陷阱：为何任意顺序限制扩散语言模型的推理潜力",
+    "summary_en": [
+      "• Model Architecture: Diffusion Large Language Models (dLLMs) with arbitrary token generation order, compared to traditional left-to-right autoregressive LLMs",
+      "• Data used: Not explicitly specified in abstract, but performance tested on GSM8K benchmark for mathematical reasoning",
+      "• Performance metrics: 89.1% accuracy on GSM8K with JustGRPO approach, demonstrating superior reasoning capability",
+      "• Core finding: Arbitrary order generation actually narrows reasoning boundaries by allowing models to bypass high-uncertainty tokens",
+      "• Proposed solution: JustGRPO (Group Relative Policy Optimization) that intentionally forgoes arbitrary order while retaining parallel decoding"
+    ],
+    "summary_cn": [
+      "• 核心模型: 扩散大语言模型(dLLMs)，支持任意顺序生成令牌，对比传统自回归LLMs",
+      "• 数据来源: 未在摘要中明确说明，但在GSM8K数学推理基准上进行性能测试",
+      "• 主要结论: 任意顺序生成反而缩小推理边界，模型利用灵活性规避关键高不确定性令牌",
+      "• 性能指标: JustGRPO方法在GSM8K上达到89.1%准确率，显著提升推理能力",
+      "• 解决方案: 提出JustGRPO优化方法，放弃任意顺序但保留并行解码能力"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High - challenges fundamental assumptions about model flexibility, offers new optimization approach for reasoning tasks",
+      "• Implementation Risk: Medium - requires careful tuning of GRPO parameters, potential instability in different task domains",
+      "• Novelty: High - counter-intuitive finding about flexibility trap, minimalist yet effective solution approach",
+      "• Scalability: Medium - parallel decoding retained but computational overhead of GRPO needs evaluation",
+      "• Market Impact: Medium-High - could influence how RL is applied to next-generation language models"
+    ],
+    "verdict_cn": [
+      "• 创新点: 高 - 揭示'灵活性陷阱'反直觉现象，挑战现有dLLM优化前提",
+      "• 实盘坑: 中 - GRPO参数调优复杂，不同任务领域可能表现不稳定",
+      "• 复现难度: 中 - 需要实现dLLM基础架构和GRPO优化，但方法相对简洁",
+      "• 风险点: 模型可能过度适应特定基准，泛化能力待验证",
+      "• 投资价值: 高 - 为语言模型推理优化提供新范式，可能影响AI推理赛道布局"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2601.15158v1",
+    "title": "Outcome-Based RL Provably Leads Transformers to Reason, but Only With the Right Data",
+    "pdf_url": "https://arxiv.org/pdf/2601.15158v1",
+    "published": "2026-01-21",
+    "crawled_at": "2026-01-22 20:05:02",
+    "ai_score": 8.2,
+    "translated_title": "基于结果的强化学习可证明引导Transformer进行推理，但仅适用于特定数据",
+    "summary_en": [
+      "• Model Architecture: Single-layer Transformers trained via Reinforcement Learning (RL) with outcome-based supervision on a synthetic graph traversal task requiring Chain-of-Thought (CoT) reasoning.",
+      "• Data used: Synthetic data with distributional properties emphasizing 'simple examples' (instances requiring fewer reasoning steps), validated on real-world mathematical reasoning tasks with language models.",
+      "• Performance metrics: Theoretical proof of convergence to structured, interpretable algorithms for graph traversal; empirical validation showing generalization to longer chains when training distribution includes sufficient simple examples."
+    ],
+    "summary_cn": [
+      "• 核心模型: 单层Transformer，通过基于结果的强化学习（RL）训练，用于需要链式思维（CoT）推理的合成图遍历任务。",
+      "• 数据来源: 合成数据，强调'简单示例'（需要较少推理步骤的实例）的分布特性，并在真实世界数学推理任务中通过语言模型验证。",
+      "• 主要结论: 理论证明模型能收敛到结构化、可解释的图遍历算法；实验验证当训练分布包含足够简单示例时，模型能泛化到更长链。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for systematic reasoning tasks in finance (e.g., option pricing, risk assessment) where intermediate steps are critical but rewards are sparse; enables interpretable AI strategies.",
+      "• Implementation Risk: Moderate due to reliance on specific data distributions ('simple examples'); may fail in noisy real-world datasets without careful curation.",
+      "• Novelty: Significant for bridging RL theory with practical CoT emergence in Transformers; provides mechanistic insights into sparse reward learning, advancing beyond empirical observations."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将RL理论与Transformer中CoT涌现的实践结合，为稀疏奖励学习提供机制性解释，超越经验观察。",
+      "• 实盘坑: 依赖特定数据分布（'简单示例'），在未经精心处理的嘈杂真实数据中可能失效；需高成本数据工程。",
+      "• 复现难度: 中等，理论部分基于合成任务，但实验扩展到真实语言模型，需专业知识在RL和Transformer调优。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
     "id": "2601.14243v1",
     "title": "Jet-RL: Enabling On-Policy FP8 Reinforcement Learning with Unified Training and Rollout Precision Flow",
     "pdf_url": "https://arxiv.org/pdf/2601.14243v1",
