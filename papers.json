@@ -1,5 +1,361 @@
 [
   {
+    "id": "2601.16205v1",
+    "title": "Counterfactual Training: Teaching Models Plausible and Actionable Explanations",
+    "pdf_url": "https://arxiv.org/pdf/2601.16205v1",
+    "published": "2026-01-22",
+    "crawled_at": "2026-01-23 20:01:25",
+    "ai_score": 7.8,
+    "translated_title": "反事实训练：为模型提供合理且可操作的解释",
+    "summary_en": [
+      "• Model Architecture: Proposes a novel training regime called counterfactual training that integrates counterfactual explanations directly into the training phase, focusing on minimizing divergence between learned representations and plausible, actionable explanations.",
+      "• Data used: The paper does not specify particular datasets but implies empirical demonstrations across typical machine learning benchmarks to validate the method's effectiveness.",
+      "• Performance metrics: Demonstrates improved adversarial robustness and inherently desirable counterfactual explanations through both theoretical analysis and empirical validation, though specific metrics like accuracy or robustness scores are not detailed in the abstract."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出一种名为反事实训练的新训练机制，将反事实解释直接融入训练阶段，旨在最小化学习表示与合理、可操作解释之间的差异。",
+      "• 数据来源: 未明确指定具体数据集，但暗示通过典型机器学习基准进行实证验证，以证明方法的有效性。",
+      "• 主要结论: 通过理论和实证分析，证明该方法能训练出提供固有理想反事实解释的模型，并增强对抗鲁棒性，但未在摘要中详述具体性能指标。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the method's focus on plausible and actionable explanations could enhance model interpretability and robustness in financial applications like risk assessment or algorithmic trading, potentially leading to more reliable predictions.",
+      "• Implementation Risk: High; integrating counterfactual training into existing systems may require significant computational resources and expertise, with challenges in defining plausible and actionable constraints for complex financial data.",
+      "• Novelty: High; shifts from post-hoc explanation methods to a training-phase approach, offering a proactive solution to improve model explanations and robustness, which is innovative in the machine learning interpretability field."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；从后处理解释方法转向训练阶段方法，主动提升模型解释性和鲁棒性，在机器学习可解释性领域具有创新性。",
+      "• 实盘坑: 高；将反事实训练集成到现有系统中可能需要大量计算资源和专业知识，且在定义复杂金融数据的合理、可操作约束方面存在挑战。",
+      "• 复现难度: 中等；方法概念清晰，但实现细节如具体算法和超参数未在摘要中提供，可能需要参考完整论文或进行额外实验来复现。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2601.16200v1",
+    "title": "Provable Robustness in Multimodal Large Language Models via Feature Space Smoothing",
+    "pdf_url": "https://arxiv.org/pdf/2601.16200v1",
+    "published": "2026-01-22",
+    "crawled_at": "2026-01-23 20:01:46",
+    "ai_score": 8.2,
+    "translated_title": "通过特征空间平滑实现多模态大语言模型的可证明鲁棒性",
+    "summary_en": [
+      "• Model Architecture: Proposes Feature-space Smoothing (FS) method that transforms any feature encoder into a smoothed variant with certified robustness guarantees, plus Purifier and Smoothness Mapper (PSM) plug-and-play module",
+      "• Data used: Extensive experiments across diverse MLLMs and downstream tasks (specific datasets not detailed in abstract)",
+      "• Performance metrics: Reduces Attack Success Rate (ASR) from nearly 90% to about 1% against white-box attacks, demonstrates superior empirical performance compared to adversarial training",
+      "• Theoretical foundation: Provides certified lower bound on feature cosine similarity under ℓ₂-bounded attacks, introduces Feature Cosine Similarity Bound (FCSB) metric"
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出特征空间平滑方法，将任意特征编码器转换为具有可证明鲁棒性保证的平滑变体，并引入净化器与平滑映射器即插即用模块",
+      "• 数据来源: 在多模态大语言模型和下游任务上进行广泛实验（摘要中未具体说明数据集）",
+      "• 主要结论: 将白盒攻击的成功率从近90%降至约1%，相比对抗训练展现出更优的实证性能",
+      "• 理论贡献: 在ℓ₂有界攻击下提供特征余弦相似度的可证明下界，引入特征余弦相似度界指标"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High - Certified robustness against adversarial attacks could protect quantitative models from manipulation in financial text/image analysis pipelines",
+      "• Implementation Risk: Moderate - Plug-and-play PSM module reduces deployment complexity, but certified bounds may be conservative in practice",
+      "• Novelty: Strong - Combines theoretical certification with practical plug-and-play enhancement, addresses critical vulnerability in MLLMs",
+      "• Scalability: Good - Method works with diverse MLLMs without retraining, suitable for production systems"
+    ],
+    "verdict_cn": [
+      "• 创新点: 将理论可证明鲁棒性与即插即用增强相结合，解决了多模态大语言模型的关键脆弱性问题",
+      "• 实盘坑: 可证明边界在实践中可能过于保守，特征平滑可能影响模型原始性能，需要仔细调参",
+      "• 复现难度: 中等 - 方法描述清晰，但需要实现高斯鲁棒性评分和净化器模块，实验设置细节可能影响结果",
+      "• 应用局限: 主要针对ℓ₂有界攻击，对其他攻击类型的保护效果需要进一步验证"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2601.16194v1",
+    "title": "A Rolling-Space Branch-and-Price Algorithm for the Multi-Compartment Vehicle Routing Problem with Multiple Time Windows",
+    "pdf_url": "https://arxiv.org/pdf/2601.16194v1",
+    "published": "2026-01-22",
+    "crawled_at": "2026-01-23 20:02:07",
+    "ai_score": 7.5,
+    "translated_title": "用于多隔间车辆路径问题与多时间窗的滚动空间分支定价算法",
+    "summary_en": [
+      "• Model Architecture: The paper proposes an exact branch-and-price (B&P) algorithm with a labeling algorithm for the pricing subproblem, enhanced by acceleration strategies to reduce symmetry, stabilize dual solutions, and improve branching. For scalability, a rolling-space B&P algorithm integrates clustering techniques to handle large instances.",
+      "• Data used: Computational experiments are conducted on instances inspired by a real-world industrial application, though specific datasets or sources are not detailed in the abstract.",
+      "• Performance metrics: The approach demonstrates effectiveness through extensive computational experiments, providing managerial insights for practical implementation, but exact metrics like runtime or solution quality are not specified in the abstract."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出精确的分支定价算法，结合标签算法解决定价子问题，并引入加速策略以减少对称性、稳定对偶解和改进分支过程。针对大规模实例，采用滚动空间分支定价算法集成聚类技术。",
+      "• 数据来源: 基于真实工业应用启发的实例进行实验，但摘要中未详细说明具体数据集或来源。",
+      "• 主要结论: 通过广泛计算实验验证了方法的有效性，为实际应用提供了管理见解，但未在摘要中明确性能指标如运行时间或解质量。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the algorithm addresses a niche operational problem (MCVRPMTW) with practical features like compartment flexibility and time windows, which could optimize logistics costs in specific industries, but direct financial alpha is limited without market data integration.",
+      "• Implementation Risk: High; the exact B&P algorithm is computationally intensive, and scalability relies on clustering heuristics, posing challenges for real-time deployment in dynamic environments. Real-world data variability and integration with existing systems add complexity.",
+      "• Novelty: Moderate; the extension to multi-compartment vehicles with multiple time windows and practical constraints is incremental, but the rolling-space approach and acceleration strategies offer some innovation in solving large-scale instances."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；将多隔间车辆与多时间窗结合，并引入滚动空间方法和加速策略，在解决大规模实例方面有一定新意，但整体属于经典问题的扩展。",
+      "• 实盘坑: 高；精确算法计算量大，依赖启发式聚类处理可扩展性，在动态环境中实时部署困难，且真实数据集成和系统兼容性风险较高。",
+      "• 复现难度: 中等；算法细节在摘要中概述，但需要实现分支定价、标签算法和聚类技术，对优化专业知识要求较高，可能需参考完整论文。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2601.16175v1",
+    "title": "Learning to Discover at Test Time",
+    "pdf_url": "https://arxiv.org/pdf/2601.16175v1",
+    "published": "2026-01-22",
+    "crawled_at": "2026-01-23 20:02:32",
+    "ai_score": 8.5,
+    "translated_title": "在测试时学习发现",
+    "summary_en": [
+      "• Model Architecture: TTT-Discover method using reinforcement learning at test time with a frozen LLM (OpenAI gpt-oss-120b) and Tinker API for training, designed for continuous reward problems.",
+      "• Data used: Test problems across mathematics (Erdős' minimum overlap, autocorrelation inequality), GPU kernel engineering (GPUMode competition), algorithm design (AtCoder competitions), and biology (single-cell analysis denoising).",
+      "• Performance metrics: Sets new state of the art in almost all attempted problems, including up to 2× faster GPU kernels, expert-reviewed solutions, and reproducible results with open models and code.",
+      "• Key innovation: Continual learning focused on producing one great solution per problem rather than average generalization, with cost-effective training (~few hundred dollars per problem)."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用TTT-Discover方法，在测试时通过强化学习结合冻结的LLM（OpenAI gpt-oss-120b）和Tinker API进行训练，针对连续奖励问题优化。",
+      "• 数据来源: 涵盖数学（Erdős最小重叠问题、自相关不等式）、GPU内核工程（GPUMode竞赛）、算法设计（AtCoder竞赛）和生物学（单细胞分析去噪）的测试问题。",
+      "• 主要结论: 在几乎所有尝试的问题中刷新了最先进水平，包括GPU内核速度提升高达2倍、专家评审的解决方案，以及使用开源模型和代码的可复现结果。",
+      "• 成本效益: 每个问题的测试时训练成本仅约几百美元，相比依赖封闭前沿模型的先前方法更具经济性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High, as it demonstrates state-of-the-art performance across diverse domains with open models, suggesting scalable discovery capabilities for scientific and engineering problems.",
+      "• Implementation Risk: Moderate; reliance on external APIs (Tinker) and specific LLM versions may introduce dependencies, but public code and reproducibility mitigate some risks.",
+      "• Novelty: Significant; introduces test-time training for discovery rather than generalization, a novel approach in continual learning with practical applications in competitive benchmarks.",
+      "• Limitations: Focus on continuous reward problems may restrict applicability to discrete or non-reward-based tasks, and expert review dependency could bias validation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 突出，将测试时训练应用于发现而非泛化，在持续学习中引入新范式，并在多领域竞赛中实现突破性性能。",
+      "• 实盘坑: 中等，依赖外部API（Tinker）和特定LLM版本可能带来集成风险，但公开代码和可复现性降低了部分操作难度。",
+      "• 复现难度: 低，使用开源模型和公开代码，成本可控（每个问题约几百美元），便于学术界和工业界验证与应用。",
+      "• 潜在局限: 专注于连续奖励问题，可能不适用于离散或无奖励任务，且专家评审依赖可能引入验证偏差。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2601.16174v1",
+    "title": "Beyond Predictive Uncertainty: Reliable Representation Learning with Structural Constraints",
+    "pdf_url": "https://arxiv.org/pdf/2601.16174v1",
+    "published": "2026-01-22",
+    "crawled_at": "2026-01-23 20:02:53",
+    "ai_score": 7.8,
+    "translated_title": "超越预测不确定性：基于结构约束的可靠表示学习",
+    "summary_en": [
+      "• Model Architecture: Proposes a framework for reliable representation learning that models representation-level uncertainty and incorporates structural constraints (e.g., sparsity, relational structure) as inductive biases, independent of specific architectures and compatible with various representation learning methods.",
+      "• Data used: No specific datasets mentioned in the abstract; the framework is described as general and applicable to diverse data types, with structural constraints adaptable to different domains (e.g., feature-group dependencies).",
+      "• Performance metrics: Not explicitly detailed in the abstract; the focus is on theoretical properties such as stability, calibration, and robustness to noise and structural perturbations, rather than empirical benchmarks."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出一个可靠表示学习框架，显式建模表示层不确定性，并利用结构约束（如稀疏性、关系结构）作为归纳偏置来正则化可行表示空间，不依赖特定架构，可与多种表示学习方法集成。",
+      "• 数据来源: 摘要中未提及具体数据集；框架被描述为通用，适用于多种数据类型，结构约束可适应不同领域（如特征组依赖）。",
+      "• 主要结论: 表示可靠性应被视为学习表示的一阶属性，通过不确定性感知正则化和结构约束，可鼓励表示具有预测性、稳定性、校准良好性以及对噪声和结构扰动的鲁棒性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the framework could enhance factor models or risk management by providing more reliable and robust representations, potentially improving signal stability in noisy financial data, but direct alpha generation is not its primary focus.",
+      "• Implementation Risk: High; integrating uncertainty-aware regularization and structural constraints into existing models requires careful tuning and domain-specific adaptation, with risk of increased complexity and computational overhead without guaranteed performance gains.",
+      "• Novelty: High; challenges the implicit assumption of deterministic representations in uncertainty estimation, introducing representation-level uncertainty as a first-class property and leveraging structural constraints for regularization, offering a fresh perspective in representation learning."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；挑战了不确定性估计中表示确定性的隐含假设，将表示层不确定性作为一阶属性引入，并利用结构约束进行正则化，为表示学习提供了新视角。",
+      "• 实盘坑: 高；将不确定性感知正则化和结构约束集成到现有模型中需要精细调参和领域特定适配，可能增加复杂性和计算成本，且性能提升不确定。",
+      "• 复现难度: 中高；框架独立于特定架构，但实现细节（如结构约束的定义和不确定性建模）可能模糊，需要较强的理论背景和实验设计能力来复现和验证。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2601.16158v1",
+    "title": "Domain-Incremental Continual Learning for Robust and Efficient Keyword Spotting in Resource Constrained Systems",
+    "pdf_url": "https://arxiv.org/pdf/2601.16158v1",
+    "published": "2026-01-22",
+    "crawled_at": "2026-01-23 20:03:16",
+    "ai_score": 8.2,
+    "translated_title": "面向资源受限系统的鲁棒高效关键词检测：领域增量持续学习",
+    "summary_en": [
+      "• Model Architecture: Dual-input CNN combining MFCC and Mel-spectrogram features with multi-stage denoising (wavelet transform + spectral subtraction), complete quantized model updates, and prototype-based sample selection.",
+      "• Data used: Noisy test datasets with varying recording conditions and noise levels, including clean data and environments down to -10 dB SNR.",
+      "• Performance metrics: 99.63% accuracy on clean data, maintains >94% accuracy across diverse noisy environments including extreme -10 dB SNR conditions.",
+      "• Training approach: Runtime sample selection using class prototypes and confidence filtering, pseudo-labeling combined with rehearsal buffer for incremental retraining."
+    ],
+    "summary_cn": [
+      "• 核心模型: 双输入CNN架构，融合MFCC和梅尔频谱特征，结合多阶段去噪（小波变换+谱减法），支持完整量化模型更新和原型驱动的样本选择机制。",
+      "• 数据来源: 包含不同噪声环境和录制条件的测试数据集，涵盖干净数据至-10 dB信噪比的极端噪声场景。",
+      "• 主要结论: 在干净数据上达到99.63%准确率，在多样化噪声环境中保持94%以上准确率，即使在-10 dB信噪比下仍表现鲁棒。",
+      "• 训练策略: 运行时通过类别原型和置信度筛选选择样本，结合伪标签和回放缓冲进行增量式模型重训练。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for edge computing applications requiring adaptive noise robustness - could enable more reliable voice interfaces in dynamic environments with minimal computational overhead.",
+      "• Implementation Risk: Moderate - prototype-based sample selection and pseudo-labeling in production environments may introduce error propagation, especially with limited labeled data in new domains.",
+      "• Novelty: Significant - complete quantized model updates in continual learning context is innovative, most prior work focuses on partial updates; integration of wavelet denoising with prototype learning is novel combination.",
+      "• Scalability concern: Framework assumes compact model architecture - may not generalize to larger models where complete updates become computationally prohibitive."
+    ],
+    "verdict_cn": [
+      "• 创新点: 在持续学习中实现完整量化模型更新是重要突破，传统方法通常只更新特定层；小波去噪与原型学习的结合具有新颖性。",
+      "• 实盘坑: 原型驱动的样本选择和伪标签机制在生产环境中可能导致误差累积，特别是在新领域标注数据有限时；多阶段去噪可能增加延迟。",
+      "• 复现难度: 中等偏高 - 需要精确实现小波变换与谱减法的集成，原型更新和样本选择机制的调参较为复杂，对噪声数据集的质量要求较高。",
+      "• 资源限制: 框架假设紧凑模型架构，对于更大模型可能不适用，完整更新会带来计算负担。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2601.16147v1",
+    "title": "Beat-ssl: Capturing Local ECG Morphology through Heartbeat-level Contrastive Learning with Soft Targets",
+    "pdf_url": "https://arxiv.org/pdf/2601.16147v1",
+    "published": "2026-01-22",
+    "crawled_at": "2026-01-23 20:03:37",
+    "ai_score": 7.2,
+    "translated_title": "Beat-SSL：通过基于心搏的软目标对比学习捕捉局部心电图形态",
+    "summary_en": [
+      "• Model Architecture: Beat-SSL is a contrastive learning framework that performs dual-context learning through rhythm-level and heartbeat-level contrasting with soft targets, designed to capture both global and local ECG characteristics.",
+      "• Data used: The paper does not specify the exact dataset but evaluates on two downstream tasks: multilabel classification for global rhythm assessment and ECG segmentation, suggesting use of standard ECG datasets with labeled data for these tasks.",
+      "• Performance metrics: Beat-SSL reached 93% of the performance of an ECG foundation model in multilabel classification and surpassed all other methods in the segmentation task by 4%, indicating strong transfer learning capabilities with limited labeled data."
+    ],
+    "summary_cn": [
+      "• 核心模型: Beat-SSL采用双上下文对比学习框架，结合节律级和心搏级对比，使用软目标来捕捉心电图信号的全局和局部特征，优化了传统硬目标对比的局限性。",
+      "• 数据来源: 论文未明确指定具体数据集，但基于两个下游任务进行评估：全局节律评估的多标签分类和心电图分割，暗示使用了标准心电图数据集进行实验。",
+      "• 主要结论: Beat-SSL在有限标注数据下表现出色，在多标签分类任务中达到心电图基础模型93%的性能，在分割任务中超越其他方法4%，证明了其有效性和泛化能力。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the method's ability to learn from limited labeled ECG data could be applied to medical signal analysis for early disease detection, but direct financial alpha generation is limited unless integrated into healthcare investment strategies.",
+      "• Implementation Risk: High; ECG data is domain-specific and may not generalize to financial time series without significant adaptation; soft targets and dual-context learning add complexity that could hinder real-time deployment in trading systems.",
+      "• Novelty: Moderate; the use of soft targets and heartbeat-level contrasting is innovative for ECG analysis, but contrastive learning itself is well-established in other domains, reducing overall breakthrough impact."
+    ],
+    "verdict_cn": [
+      "• 创新点: 采用软目标和心搏级对比，针对心电图信号的连续性特征进行优化，这在医疗信号处理中具有新意，但对比学习本身并非全新概念。",
+      "• 实盘坑: 高风险；心电图数据与金融时间序列差异大，模型泛化能力存疑；软目标和双上下文学习增加计算复杂度，可能影响实盘部署的实时性和稳定性。",
+      "• 复现难度: 中等；需要专业心电图数据集和标注，实验设置相对复杂，但开源代码和详细方法可降低复现门槛。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2601.16142v1",
+    "title": "Computing Fixpoints of Learned Functions: Chaotic Iteration and Simple Stochastic Games",
+    "pdf_url": "https://arxiv.org/pdf/2601.16142v1",
+    "published": "2026-01-22",
+    "crawled_at": "2026-01-23 20:03:59",
+    "ai_score": 7.2,
+    "translated_title": "计算学习函数的不动点：混沌迭代与简单随机博弈",
+    "summary_en": [
+      "• Model Architecture: The paper introduces a generalized dampened Mann iteration scheme for computing fixpoints of higher-dimensional functions over non-negative reals, relaxing constraints on parameter sequences to allow learning rates to converge to zero or not converge at all.",
+      "• Data used: The method focuses on situations where functions are not known precisely but can only be approximated, applicable to systems with quantitative semantics without specifying particular datasets.",
+      "• Performance metrics: The improved scheme enables chaotic iterations where only a subset of components is updated per step, making it suitable for higher-dimensional problems and relaxing conditions on convergence speed of function approximations.",
+      "• Additional application: The method applies to compute expected payoff in probabilistic models including simple stochastic games, extending beyond previous work."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出广义阻尼Mann迭代方案，用于计算非负实数上高维函数的不动点，放宽参数序列约束，允许学习率收敛至零或不收敛。",
+      "• 数据来源: 针对函数不精确已知、仅能近似的情况，适用于具有定量语义的系统，未指定具体数据集。",
+      "• 主要结论: 改进方案支持混沌迭代，每步仅更新部分组件，适用于高维问题，并放宽函数近似收敛速度的条件。",
+      "• 扩展应用: 方法可计算简单随机博弈等概率模型中的期望收益，超越先前研究范围。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the method's flexibility in handling approximate functions and chaotic updates could enhance optimization in quantitative finance models, but direct alpha generation is limited without specific financial applications.",
+      "• Implementation Risk: High; chaotic iterations and relaxed convergence conditions may lead to instability in real-world implementations, requiring careful tuning and validation in noisy financial data environments.",
+      "• Novelty: Significant; generalizing dampened Mann iteration to allow non-convergent learning rates and enabling chaotic updates is a theoretical advancement, though practical novelty in finance contexts is untested.",
+      "• Scalability: Good; the ability to tackle higher-dimensional problems via component-wise updates makes it scalable for complex financial systems, but computational efficiency needs empirical verification."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著；广义化阻尼Mann迭代，允许学习率不收敛，并支持混沌更新，是理论上的进步，但在金融场景的实际新颖性未经验证。",
+      "• 实盘坑: 高；混沌迭代和宽松收敛条件可能导致实际应用不稳定，需在嘈杂金融数据环境中精细调参和验证，风险较大。",
+      "• 复现难度: 中等；方法基于迭代方案，理论清晰，但实现中需处理高维函数近似和参数选择，可能增加复杂性和调试成本。",
+      "• 适用性: 有限；虽可扩展至高维问题，但缺乏针对金融数据的直接应用案例，需进一步适配才能用于量化策略。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2601.16139v1",
+    "title": "On the Intrinsic Dimensions of Data in Kernel Learning",
+    "pdf_url": "https://arxiv.org/pdf/2601.16139v1",
+    "published": "2026-01-22",
+    "crawled_at": "2026-01-23 20:04:21",
+    "ai_score": 7.8,
+    "translated_title": "核学习中数据内在维度的研究",
+    "summary_en": [
+      "• Model Architecture: Analyzes Kernel Ridge Regression (KRR) with two intrinsic dimension metrics - Minkowski dimension (d_ρ) and effective dimension (d_K) derived from Kolmogorov n-widths and kernel eigenvalues.",
+      "• Data used: Theoretical analysis on probability measures μ supported on domain Ω, with numerical experiments on fractal sets and distributions close to uniform.",
+      "• Performance metrics: Derives excess error bound of O(n^{-(2+d_K)/(2+2d_K)+ε}) for large n, and sample complexity of O(ε^{-d_ρ}log(1/ε)) for estimating n-widths with high probability."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于核岭回归（KRR），引入两种内在维度度量：由核诱导度量定义的Minkowski维度（d_ρ）和基于Kolmogorov n-宽度的有效维度（d_K）。",
+      "• 数据来源: 理论分析基于定义在域Ω上的概率测度μ，数值实验涉及分形集和接近均匀的分布。",
+      "• 主要结论: 证明了对于大样本量n，约束KRR的泛化误差界为O(n^{-(2+d_K)/(2+2d_K)+ε})，并提出了用有限样本估计n-宽度的算法，样本复杂度为O(ε^{-d_ρ}log(1/ε))。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - theoretical insights into kernel learning generalization could inform feature engineering or model selection in low-dimensional manifold settings, but direct trading alpha is limited.",
+      "• Implementation Risk: High - relies on estimating intrinsic dimensions from finite samples, which may be unstable in noisy financial data; fractal set analysis may not generalize to market regimes.",
+      "• Novelty: High - novel connection between Kolmogorov n-widths, kernel eigenvalues, and generalization bounds; introduces algorithm for dimension estimation with provable sample complexity."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高 - 首次将Kolmogorov n-宽度与核特征值衰减关联，为核学习泛化理论提供了新视角；提出可证明样本复杂度的维度估计算法。",
+      "• 实盘坑: 高 - 内在维度估计对样本噪声敏感，金融数据的高维噪声可能破坏低维流形假设；分形集结论在复杂市场机制中泛化性存疑。",
+      "• 复现难度: 中 - 理论推导严谨但算法实现需处理核矩阵计算和n-宽度优化，数值实验部分依赖特定分形结构，通用代码复现有一定挑战。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2601.16138v1",
+    "title": "Automatic Classification of Arabic Literature into Historical Eras",
+    "pdf_url": "https://arxiv.org/pdf/2601.16138v1",
+    "published": "2026-01-22",
+    "crawled_at": "2026-01-23 20:04:42",
+    "ai_score": 6.8,
+    "translated_title": "阿拉伯文学历史时期自动分类研究",
+    "summary_en": [
+      "• Model Architecture: Utilizes neural networks and deep learning techniques for automatic classification of Arabic texts into historical eras, examining setups from binary to 15-class classification.",
+      "• Data used: Employs two datasets derived from publicly available corpora (OpenITI and APCD), covering texts from pre-Islamic to modern eras, with consideration of both predefined historical eras and custom periodizations.",
+      "• Performance metrics: Achieves F1-scores of 0.83 and 0.79 on binary-era classification tasks using OpenITI and APCD datasets respectively, but performance degrades significantly to 0.20 on 15-era classification with OpenITI and 0.18 on 12-era classification with APCD."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用神经网络和深度学习技术，实现阿拉伯文本历史时期的自动分类，涵盖从二分类到15分类的多种设置。",
+      "• 数据来源: 基于两个公开语料库（OpenITI和APCD）构建的数据集，覆盖从伊斯兰前时期到现代时期的文本，并考虑预设历史时期和自定义分期。",
+      "• 主要结论: 在二分类任务中F1分数达到0.83和0.79，但在多分类任务中性能显著下降（15分类为0.20，12分类为0.18），表明模型在细粒度分类上存在挑战。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Limited direct financial alpha potential; primarily a linguistic/academic contribution with potential indirect applications in sentiment analysis or document dating for Arabic financial texts.",
+      "• Implementation Risk: High risk due to significant performance degradation in multi-class classification (F1-scores drop to 0.20-0.18), indicating poor generalization and reliability for practical deployment.",
+      "• Novelty: Moderate novelty in applying deep learning to Arabic text periodization beyond poetry, but lacks groundbreaking architectural innovations or cross-lingual transfer learning approaches."
+    ],
+    "verdict_cn": [
+      "• 创新点: 在阿拉伯文学历史分期自动分类领域填补了研究空白，特别是将深度学习应用于非诗歌文本，但缺乏突破性的模型架构或跨语言迁移学习创新。",
+      "• 实盘坑: 多分类任务性能急剧下降（F1分数低至0.20-0.18），表明模型泛化能力差，在实际部署中可靠性低，风险较高。",
+      "• 复现难度: 中等难度，依赖于公开语料库（OpenITI和APCD），但需要处理阿拉伯文本的预处理和标注，且性能复现可能受数据划分和超参数影响。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2601.15286v1",
     "title": "Iterative Refinement Improves Compositional Image Generation",
     "pdf_url": "https://arxiv.org/pdf/2601.15286v1",
