@@ -1,5 +1,365 @@
 [
   {
+    "id": "2601.16982v1",
+    "title": "AnyView: Synthesizing Any Novel View in Dynamic Scenes",
+    "pdf_url": "https://arxiv.org/pdf/2601.16982v1",
+    "published": "2026-01-23",
+    "crawled_at": "2026-01-26 20:01:24",
+    "ai_score": 8.2,
+    "translated_title": "AnyView：动态场景中任意新视角的合成",
+    "summary_en": [
+      "• Model Architecture: AnyView is a diffusion-based video generation framework that uses a generalist spatiotemporal implicit representation, minimizing inductive biases and geometric assumptions for dynamic view synthesis.",
+      "• Data used: The model leverages multiple data sources with varying supervision levels, including monocular (2D), multi-view static (3D), and multi-view dynamic (4D) datasets, enabling zero-shot novel video generation from arbitrary camera locations and trajectories.",
+      "• Performance metrics: AnyView shows competitive results on standard benchmarks and excels on the proposed AnyViewBench, a challenging benchmark for extreme dynamic view synthesis, where it maintains realistic, plausible, and spatiotemporally consistent outputs while baselines degrade significantly due to viewpoint overlap requirements."
+    ],
+    "summary_cn": [
+      "• 核心模型: AnyView 是一个基于扩散的视频生成框架，采用通用的时空隐式表示，减少归纳偏差和几何假设，专注于动态视角合成。",
+      "• 数据来源: 模型利用多源数据，包括单目（2D）、多视角静态（3D）和多视角动态（4D）数据集，支持从任意相机位置和轨迹进行零样本新视频生成。",
+      "• 主要结论: 在标准基准测试中表现竞争性，在提出的 AnyViewBench 极端动态视角合成基准上优势明显，能保持真实、合理和时空一致的输出，而基线方法因视角重叠要求而性能大幅下降。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for generating synthetic data in dynamic environments, useful for training AI models in finance for scenario simulation or anomaly detection in video-based market analysis, though direct trading alpha is indirect.",
+      "• Implementation Risk: Moderate to high risk due to reliance on diverse datasets and complex diffusion models, which may lead to scalability issues or inconsistent outputs in real-world applications without careful tuning.",
+      "• Novelty: Significant novelty in combining diffusion models with minimal geometric assumptions for dynamic view synthesis, and introducing AnyViewBench as a challenging benchmark, pushing the state of the art in video generation consistency."
+    ],
+    "verdict_cn": [
+      "• 创新点: 创新性地将扩散模型与最小几何假设结合用于动态视角合成，并引入 AnyViewBench 作为挑战性基准，推动视频生成一致性的前沿研究。",
+      "• 实盘坑: 依赖多样数据集和复杂扩散模型，可能导致可扩展性问题或实际应用中输出不一致，需精细调参，风险中等至高。",
+      "• 复现难度: 复现难度较高，需要处理多源数据和训练复杂的隐式表示模型，代码和模型的开源可能减轻部分难度，但仍需大量计算资源。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2601.16979v1",
+    "title": "A Scalable Measure of Loss Landscape Curvature for Analyzing the Training Dynamics of LLMs",
+    "pdf_url": "https://arxiv.org/pdf/2601.16979v1",
+    "published": "2026-01-23",
+    "crawled_at": "2026-01-26 20:01:44",
+    "ai_score": 8.2,
+    "translated_title": "用于分析大语言模型训练动态的可扩展损失景观曲率度量方法",
+    "summary_en": [
+      "• Model Architecture: Introduces critical sharpness (λ_c) and relative critical sharpness (λ_c^{1→2}) as computationally efficient curvature measures requiring fewer than 10 forward passes given update direction Δθ, validated on OLMo-2 models up to 7B parameters.",
+      "• Data used: Analyzes both pre-training and mid-training phases of OLMo-2 models, spanning large-scale training scenarios up to 7 billion parameters, with application to transition from pre-training to fine-tuning and data mixing strategies.",
+      "• Performance metrics: Successfully captures well-documented Hessian sharpness phenomena including progressive sharpening and Edge of Stability, providing first demonstration of these phenomena at scale for LLMs, enabling practical diagnosis of curvature dynamics and data composition guidance."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出临界锐度(λ_c)和相对临界锐度(λ_c^{1→2})作为计算高效的曲率度量方法，仅需给定更新方向Δθ的少于10次前向传播，在OLMo-2模型(最高70亿参数)上验证。",
+      "• 数据来源: 分析OLMo-2模型的预训练和中期训练阶段，涵盖高达70亿参数的大规模训练场景，应用于从预训练到微调的过渡及数据混合策略。",
+      "• 主要结论: 成功捕捉包括渐进锐化和稳定性边缘在内的Hessian锐度现象，首次在大语言模型规模上展示这些现象，为曲率动态诊断和数据组合选择提供实用工具。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High - Provides actionable insights for optimizing large-scale training dynamics, particularly valuable for hedge funds training proprietary LLMs for trading signals, with potential to improve training efficiency and model stability.",
+      "• Implementation Risk: Moderate - While computationally efficient compared to Hessian calculation, still requires access to model gradients and training dynamics, with dependency on specific update directions and potential sensitivity to hyperparameters.",
+      "• Novelty: Significant - First scalable curvature measure specifically designed for LLMs, addressing prohibitive computational cost of traditional Hessian sharpness calculation, with novel relative critical sharpness concept for multi-task optimization analysis."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著 - 首个专门为大语言模型设计的可扩展曲率度量方法，解决传统Hessian锐度计算的高计算成本问题，提出相对临界锐度新概念用于多任务优化分析。",
+      "• 实盘坑: 中等 - 虽比Hessian计算更高效，仍需访问模型梯度和训练动态，依赖特定更新方向，对超参数可能敏感，大规模部署需验证鲁棒性。",
+      "• 复现难度: 中等 - 方法相对简洁，但需要完整的训练基础设施和模型访问权限，验证大规模现象需要大量计算资源，开源实现可能有限。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2601.16976v1",
+    "title": "Latent Diffusion for Internet of Things Attack Data Generation in Intrusion Detection",
+    "pdf_url": "https://arxiv.org/pdf/2601.16976v1",
+    "published": "2026-01-23",
+    "crawled_at": "2026-01-26 20:02:08",
+    "ai_score": 7.5,
+    "translated_title": "基于潜在扩散模型的物联网攻击数据生成用于入侵检测",
+    "summary_en": [
+      "• Model Architecture: The paper proposes a Latent Diffusion Model (LDM) for generating synthetic IoT attack data, operating in a compressed latent space rather than directly in the high-dimensional data space to improve computational efficiency.",
+      "• Data used: Experiments were conducted on three representative IoT attack types: Distributed Denial-of-Service (DDoS), Mirai, and Man-in-the-Middle attacks, using real-world IoT traffic datasets with inherent class imbalance between benign and malicious samples.",
+      "• Performance metrics: The model was evaluated using both downstream IDS performance (F1-scores up to 0.99 for DDoS and Mirai attacks) and intrinsic generative quality metrics including distributional similarity, feature dependency preservation, and sample diversity measures.",
+      "• Computational efficiency: The LDM approach reduced sampling time by approximately 25% compared to diffusion models operating directly in data space while maintaining sample quality and diversity."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用潜在扩散模型（LDM）在压缩的潜在空间中生成物联网攻击数据，而非直接在原始高维数据空间操作，以提高计算效率。",
+      "• 数据来源: 使用包含分布式拒绝服务（DDoS）、Mirai和中间人攻击三种典型物联网攻击类型的真实流量数据集，这些数据集存在良性与恶意样本的类别不平衡问题。",
+      "• 主要结论: 使用LDM生成的合成攻击数据平衡训练集后，入侵检测系统性能显著提升，DDoS和Mirai攻击的F1分数最高达到0.99，且优于现有基线方法。",
+      "• 生成质量: 定量和定性分析表明，LDM能有效保持特征依赖关系，生成多样化样本，同时采样时间比直接在数据空间操作的扩散模型减少约25%。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - The approach addresses a practical problem (class imbalance in IoT security) with measurable performance improvements, but the direct financial alpha generation potential is limited to security-focused quantitative strategies or cybersecurity ETFs.",
+      "• Implementation Risk: High - Real-world deployment would face challenges including dataset specificity (limited to three attack types), potential overfitting to training distributions, and the need for continuous model updates as attack patterns evolve in dynamic IoT environments.",
+      "• Novelty: Moderate - While applying diffusion models to cybersecurity data generation is relatively novel, the core LDM architecture is well-established in computer vision, representing an adaptation rather than fundamental innovation.",
+      "• Scalability Concerns: The paper demonstrates effectiveness on specific attack types but doesn't adequately address how the approach would scale to the hundreds of evolving IoT attack vectors in production environments."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等 - 将潜在扩散模型应用于物联网攻击数据生成具有一定新颖性，但本质上是对计算机视觉领域成熟技术的迁移应用，而非底层算法突破。",
+      "• 实盘坑: 高风险 - 实际部署面临三大挑战：数据集局限性（仅三种攻击类型）、模型可能过拟合特定训练分布、物联网攻击模式快速演变需要持续模型更新。",
+      "• 复现难度: 中等 - 论文提供了清晰的实验框架和评估指标，但需要特定物联网攻击数据集和扩散模型专业知识，计算资源要求较高。",
+      "• 泛化能力: 未充分验证 - 方法在三种特定攻击类型上表现良好，但未证明能有效泛化到物联网环境中不断涌现的新攻击向量。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "IEEE Transactions on Information Forensics and Security",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2601.16971v1",
+    "title": "Auto-Regressive Masked Diffusion Models",
+    "pdf_url": "https://arxiv.org/pdf/2601.16971v1",
+    "published": "2026-01-23",
+    "crawled_at": "2026-01-26 20:02:31",
+    "ai_score": 8.2,
+    "translated_title": "自回归掩码扩散模型",
+    "summary_en": [
+      "• Model Architecture: ARMD unifies autoregressive training efficiency with diffusion-based parallel generation by reframing masked diffusion as a block-wise causal model, enabling strictly causal, permutation-equivariant architecture that computes all conditional probabilities across denoising steps in a single parallel forward pass.",
+      "• Data used: Standard language modeling benchmarks (specific datasets not named in abstract, but implied to be common NLP evaluation corpora like WikiText, Penn Treebank, or similar).",
+      "• Performance metrics: Achieves state-of-the-art performance on standard language modeling benchmarks, outperforming established diffusion baselines with significantly fewer training steps, and sets new benchmark for parallel text generation by bridging performance gap between parallel and sequential decoding."
+    ],
+    "summary_cn": [
+      "• 核心模型: ARMD通过将掩码扩散重构为块级因果模型，统一了自回归训练效率与扩散模型的并行生成能力，采用严格因果、置换等变架构，在单次并行前向传递中计算所有去噪步骤的条件概率。",
+      "• 数据来源: 标准语言建模基准（摘要中未具体命名，但暗示使用常见NLP评估语料库，如WikiText、Penn Treebank等）。",
+      "• 主要结论: 在标准语言建模基准上实现最先进性能，超越现有扩散基线且训练步数显著减少，通过并行流生成策略加速推理，有效弥合并行与顺序解码的性能差距。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for NLP/LLM applications requiring fast, coherent text generation (e.g., real-time trading signal interpretation, news summarization), with strided parallel generation offering inference speedups that could reduce latency in algorithmic systems.",
+      "• Implementation Risk: Moderate risk due to complexity of integrating causal and diffusion components; progressive permutation training scheme may require careful hyperparameter tuning, and real-world deployment needs validation beyond benchmarks.",
+      "• Novelty: Strong novelty in unifying autoregressive and diffusion paradigms with block-wise causal modeling and permutation-equivariant architecture, introducing innovative strided parallel generation for practical speed gains."
+    ],
+    "verdict_cn": [
+      "• 创新点: 通过块级因果建模和置换等变架构，创新性地统一自回归与扩散范式，提出跨步并行生成策略，在保持全局一致性的同时加速推理，具有显著的理论和实践突破。",
+      "• 实盘坑: 模型复杂度较高，因果与扩散组件集成可能引入不稳定因素；渐进置换训练方案需精细调参，基准测试外的实际数据性能待验证，并行生成在嘈杂市场环境中的鲁棒性存疑。",
+      "• 复现难度: 中等偏高，需实现严格因果架构和并行去噪计算，训练策略涉及多阶段优化，对计算资源和工程实现要求较高，可能限制快速迭代和应用部署。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2601.16955v1",
+    "title": "3D Molecule Generation from Rigid Motifs via SE(3) Flows",
+    "pdf_url": "https://arxiv.org/pdf/2601.16955v1",
+    "published": "2026-01-23",
+    "crawled_at": "2026-01-26 20:02:52",
+    "ai_score": 8.2,
+    "translated_title": "基于刚性基序的SE(3)流模型实现三维分子生成",
+    "summary_en": [
+      "• Model Architecture: Uses SE(3)-equivariant generative modeling with rigid-body motifs as structural units, extending frame-based protein generation techniques to general molecules",
+      "• Data used: Evaluated on GEOM-Drugs benchmark dataset for 3D molecular structures",
+      "• Performance metrics: Achieves comparable or superior results to state-of-the-art methods, with 2x to 10x reduction in generation steps and 3.5x compression in molecular representations compared to atom-based approaches",
+      "• Key innovation: Treats molecules as sets of rigid motifs rather than individual atoms, enabling more efficient 3D structure generation"
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用SE(3)等变生成模型，以刚性基序为结构单元，将基于框架的蛋白质生成技术扩展到通用分子",
+      "• 数据来源: 使用GEOM-Drugs基准数据集进行三维分子结构评估",
+      "• 主要结论: 在生成步骤上实现2-10倍加速，分子表示压缩3.5倍，在GEOM-Drugs上原子稳定性超过现有方法",
+      "• 技术突破: 将分子视为刚性基序集合而非单个原子，显著提升三维结构生成效率"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High - The 2-10x speedup in generation and 3.5x compression could enable real-time molecular screening for drug discovery applications",
+      "• Implementation Risk: Medium - SE(3)-equivariant models are mathematically complex and require specialized expertise to implement correctly",
+      "• Novelty: Significant - Combining rigid motifs with SE(3) flows for molecular generation represents a novel approach that bridges protein and small molecule generation techniques",
+      "• Practical limitation: Abstract doesn't specify computational requirements or scalability to very large molecular libraries"
+    ],
+    "verdict_cn": [
+      "• 创新点: 将刚性基序概念与SE(3)流模型结合，为三维分子生成提供了全新范式，突破了传统原子级方法的效率瓶颈",
+      "• 实盘坑: SE(3)等变模型数学复杂度高，实际部署需要大量调参和计算资源优化，可能面临收敛稳定性问题",
+      "• 复现难度: 中等偏高，需要熟练掌握几何深度学习框架和分子动力学知识，基准代码和超参数配置可能不完整",
+      "• 应用风险: 未明确说明对超大分子库的扩展性，实际工业应用可能面临内存和计算时间挑战"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2601.16936v1",
+    "title": "Is BatchEnsemble a Single Model? On Calibration and Diversity of Efficient Ensembles",
+    "pdf_url": "https://arxiv.org/pdf/2601.16936v1",
+    "published": "2026-01-23",
+    "crawled_at": "2026-01-26 20:03:14",
+    "ai_score": 4.5,
+    "translated_title": "BatchEnsemble是单一模型吗？论高效集成方法的校准与多样性",
+    "summary_en": [
+      "• Model Architecture: BatchEnsemble uses learned rank-1 perturbations applied to a shared base network to mimic ensemble behavior with reduced parameters and memory compared to Deep Ensembles.",
+      "• Data used: Experiments conducted on CIFAR10, CIFAR10-C, SVHN for general performance, and MNIST for controlled functional analysis of ensemble members.",
+      "• Performance metrics: Evaluated on accuracy, calibration, and out-of-distribution (OOD) detection; BatchEnsemble underperforms Deep Ensembles and closely tracks single model baselines.",
+      "• Key finding: Members show near-identical functions and parameters in controlled studies, indicating limited capacity to achieve distinct predictive modes."
+    ],
+    "summary_cn": [
+      "• 核心模型: BatchEnsemble通过向共享基础网络应用学习的秩-1扰动，以较低参数和内存成本模拟集成学习，但实际表现接近单一模型。",
+      "• 数据来源: 使用CIFAR10、CIFAR10-C、SVHN数据集评估性能，并在MNIST上进行受控功能分析。",
+      "• 主要结论: BatchEnsemble在准确性、校准和分布外检测方面表现不佳，成员在功能和参数空间高度相似，缺乏真正集成的多样性。",
+      "• 实验设计: 对比Deep Ensembles和单一模型基线，揭示BatchEnsemble未能有效实现集成学习的核心优势。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low; the paper demonstrates BatchEnsemble's failure to provide robust epistemic uncertainty, limiting its utility for risk-aware trading strategies that rely on ensemble diversity.",
+      "• Implementation Risk: High; adopting BatchEnsemble in production could lead to underestimated uncertainty and poor OOD detection, increasing model risk in dynamic markets.",
+      "• Novelty: Moderate; the study provides a critical analysis of an existing efficient ensemble method, but offers no new architectural improvements or solutions to the identified limitations.",
+      "• Practical implication: Highlights the trade-off between efficiency and ensemble effectiveness, cautioning against over-reliance on parameter-efficient methods for uncertainty estimation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；论文对现有高效集成方法进行了批判性分析，但未提出新的架构改进或解决方案，创新性有限。",
+      "• 实盘坑: 高；BatchEnsemble在实盘中可能导致不确定性低估和分布外检测失败，增加模型风险，不适合高风险交易环境。",
+      "• 复现难度: 低；方法基于标准深度学习框架，实验设计清晰，但结果揭示其性能缺陷，复现价值不高。",
+      "• 策略影响: 提醒量化研究需谨慎选择高效集成方法，避免因追求参数效率而牺牲模型多样性和风险控制能力。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2601.16933v1",
+    "title": "Reward-Forcing: Autoregressive Video Generation with Reward Feedback",
+    "pdf_url": "https://arxiv.org/pdf/2601.16933v1",
+    "published": "2026-01-23",
+    "crawled_at": "2026-01-26 20:03:33",
+    "ai_score": 7.8,
+    "translated_title": "奖励驱动：基于奖励反馈的自回归视频生成",
+    "summary_en": [
+      "• Model Architecture: Introduces an autoregressive video generation framework guided by reward signals, eliminating dependency on teacher models and focusing on direct reward optimization for temporal consistency.",
+      "• Data used: Evaluated on standard benchmarks including VBench, with performance metrics derived from heterogeneous distillation comparisons and visual fidelity assessments.",
+      "• Performance metrics: Achieves a total score of 84.92 on VBench, closely matching state-of-the-art autoregressive methods (84.31) while avoiding constraints of teacher architectures, and in some cases surpasses similarly sized bidirectional models."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出基于奖励信号的自回归视频生成方法，通过奖励引导生成过程，简化训练并保持高视觉保真度和时间一致性，无需依赖教师模型。",
+      "• 数据来源: 在标准基准测试（如VBench）上进行广泛实验，使用异构蒸馏比较和视觉质量评估来验证性能。",
+      "• 主要结论: 在VBench上获得84.92的总分，与最先进的自回归方法（84.31分）相当，并在某些情况下超越类似规模的双向模型，避免了教师架构的限制。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the method's scalability and efficiency in autoregressive generation could enable faster video synthesis for real-time applications, but direct financial alpha is limited without specific market data integration.",
+      "• Implementation Risk: High; reliance on reward signals introduces tuning complexity, and the absence of teacher models may lead to instability in diverse datasets, requiring careful calibration for robust deployment.",
+      "• Novelty: Significant; the approach innovatively uses reward feedback instead of teacher models for autoregressive video generation, offering a fresh perspective on training efficiency and model architecture simplification."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著；采用奖励信号而非教师模型来引导自回归视频生成，为训练效率和架构简化提供了新思路，具有较高的学术新颖性。",
+      "• 实盘坑: 高；奖励信号的依赖增加了调参复杂性，缺乏教师模型可能导致在不同数据集上的不稳定性，实盘部署需精细校准以避免性能波动。",
+      "• 复现难度: 中等；方法基于标准基准和公开数据，但奖励机制的设计和优化可能需要专业知识，复现过程有一定技术门槛。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2601.16922v1",
+    "title": "Group-realizable multi-group learning by minimizing empirical risk",
+    "pdf_url": "https://arxiv.org/pdf/2601.16922v1",
+    "published": "2026-01-23",
+    "crawled_at": "2026-01-26 20:03:53",
+    "ai_score": 7.2,
+    "translated_title": "通过最小化经验风险实现组可实现的多元组学习",
+    "summary_en": [
+      "• Model Architecture: The paper proposes a multi-group learning framework in the group-realizable setting, where concepts are realizable within groups. It focuses on empirical risk minimization over group-realizable concepts, which may have infinite VC dimension, contrasting with traditional agnostic approaches.",
+      "• Data used: The analysis is theoretical and does not specify empirical datasets. It assumes samples from groups with finite VC dimension, even if the family of groups is infinite, to study sample complexity improvements.",
+      "• Performance metrics: The primary metric is sample complexity, showing improved bounds in the group-realizable setting compared to agnostic learning. Computational tractability is assessed, indicating intractability for exact implementation and suggesting improper learning as an alternative."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出组可实现环境下的多元组学习框架，基于组可实现概念进行经验风险最小化，即使概念类可能具有无限VC维，以提升样本复杂度。",
+      "• 数据来源: 理论分析，未使用具体数据集；假设从具有有限VC维的组中采样，即使组族无限，以验证样本复杂度的改进。",
+      "• 主要结论: 在组可实现设置中，样本复杂度优于不可知学习；但精确实现计算不可行，建议采用非恰当学习作为替代方法。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the theoretical improvement in sample complexity could enhance model efficiency in group-based financial data (e.g., sector or region clustering), but lack of empirical validation limits immediate alpha generation.",
+      "• Implementation Risk: High; computational intractability of exact empirical risk minimization poses significant barriers, and reliance on improper learning may introduce approximation errors or instability in real-world applications.",
+      "• Novelty: Moderate; the extension to infinite groups with finite VC dimension is innovative, but the core idea of group-realizable learning builds on existing statistical learning theory, offering incremental rather than groundbreaking advances."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将组可实现学习扩展到无限组族但有限VC维的情况，理论上提升了样本复杂度，但创新性中等，基于现有统计学习理论的延伸。",
+      "• 实盘坑: 计算不可行性高，精确实现困难；非恰当学习替代可能引入近似误差，在金融市场动态环境中风险较大。",
+      "• 复现难度: 高；理论性强，缺乏实证代码或数据集，复现需深厚理论基础，且计算挑战可能阻碍实际应用。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2601.16907v1",
+    "title": "Calibrated Similarity for Reliable Geometric Analysis of Embedding Spaces",
+    "pdf_url": "https://arxiv.org/pdf/2601.16907v1",
+    "published": "2026-01-23",
+    "crawled_at": "2026-01-26 20:04:15",
+    "ai_score": 7.5,
+    "translated_title": "用于嵌入空间可靠几何分析的校准相似度方法",
+    "summary_en": [
+      "• Model Architecture: Uses isotonic regression trained on human similarity judgments to construct a monotonic transformation that calibrates raw cosine similarity scores without altering the embedding space geometry.",
+      "• Data used: Human similarity judgments for training the isotonic calibration; pretrained embedding spaces (unspecified datasets) for evaluation across seven perturbation types.",
+      "• Performance metrics: Achieves near-perfect calibration of absolute similarity values while preserving rank correlation (strong correlation with human judgments) and local stability (98% across perturbation types).",
+      "• Key insight: Characterizes isotonic calibration as an order-preserving reparameterization, proving invariance for order-based constructions like angular ordering and nearest neighbors."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于人类相似性判断训练等渗回归，构建单调变换来校准原始余弦相似度，不改变嵌入空间几何结构。",
+      "• 数据来源: 使用人类相似性判断数据进行校准训练；在预训练嵌入空间（未指定具体数据集）上评估，涵盖七种扰动类型。",
+      "• 主要结论: 实现绝对相似度值的近乎完美校准，同时保持排序相关性（与人类判断强相关）和局部稳定性（扰动类型下98%）。",
+      "• 理论贡献: 将等渗校准表征为保序重参数化，证明基于顺序的构造（如角度排序、最近邻）在此变换下不变。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; improves interpretability of embedding similarities for quantitative tasks like portfolio construction or sentiment analysis, but direct financial alpha generation is limited without domain-specific adaptation.",
+      "• Implementation Risk: Low to moderate; method is lightweight and preserves existing embeddings, reducing computational overhead, but relies on human judgment data that may be costly or biased in financial contexts.",
+      "• Novelty: High; introduces a novel calibration approach that addresses anisotropy in embedding spaces without altering geometric structure, offering a practical solution for reliable similarity analysis.",
+      "• Scalability: High; method is computationally efficient and can be applied to large-scale embedding datasets without retraining models, enhancing its utility in real-time applications."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；提出新颖的校准方法，解决嵌入空间中的各向异性问题，无需改变几何结构，为可靠相似度分析提供实用方案。",
+      "• 实盘坑: 中低；方法轻量级且保留现有嵌入，降低计算开销，但依赖人类判断数据，在金融场景中可能成本高或存在偏差。",
+      "• 复现难度: 低；基于等渗回归和标准嵌入空间，代码实现相对简单，但需要获取人类相似性判断数据进行训练。",
+      "• 应用局限: 中；虽提升相似度可解释性，但直接生成金融Alpha需领域特定适配，如结合市场数据或因子模型。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2601.16906v1",
+    "title": "The Trajectory Alignment Coefficient in Two Acts: From Reward Tuning to Reward Learning",
+    "pdf_url": "https://arxiv.org/pdf/2601.16906v1",
+    "published": "2026-01-23",
+    "crawled_at": "2026-01-26 20:04:39",
+    "ai_score": 7.8,
+    "translated_title": "轨迹对齐系数的双重作用：从奖励调优到奖励学习",
+    "summary_en": [
+      "• Model Architecture: Introduces Trajectory Alignment Coefficient (TAC) as a metric to evaluate reward function alignment with expert preferences, and proposes Soft-TAC, a differentiable approximation for training reward models.",
+      "• Data used: Human-subject study data from RL practitioners tuning reward weights in Lunar Lander environment, and human preference data from Gran Turismo 7 racing simulator.",
+      "• Performance metrics: TAC-guided tuning improved reward function performance and reduced cognitive workload in Lunar Lander; Soft-TAC-trained models produced more distinct behavioral policies than Cross-Entropy loss in Gran Turismo 7.",
+      "• Core contribution: Demonstrates TAC's dual utility as a practical tuning tool and a reward learning objective, addressing reward misspecification in RL."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出轨迹对齐系数（TAC）作为评估奖励函数与专家偏好对齐度的指标，并开发Soft-TAC作为可微近似用于训练奖励模型。",
+      "• 数据来源: 基于人类受试者在Lunar Lander环境中的奖励权重调优数据，以及Gran Turismo 7赛车模拟器中的人类偏好数据。",
+      "• 主要结论: TAC指导的调优在Lunar Lander中提升了奖励函数性能并降低了认知负荷；Soft-TAC训练的模型在Gran Turismo 7中比交叉熵损失产生了更独特的行为策略。",
+      "• 应用价值: 验证了TAC作为奖励调优工具和奖励学习目标的双重作用，缓解了强化学习中的奖励函数设计难题。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; TAC could enhance RL-based trading strategies by improving reward function alignment with financial objectives, but direct market applications are untested.",
+      "• Implementation Risk: High; Human preference data collection is costly and subjective; scaling to complex financial environments requires significant domain adaptation.",
+      "• Novelty: Strong; Differentiable TAC approximation (Soft-TAC) is innovative for reward learning, though the core TAC metric builds on existing preference alignment concepts.",
+      "• Practical limitations: Labor-intensive manual tuning persists even with TAC; validation in simple simulators may not generalize to noisy, high-stakes financial domains."
+    ],
+    "verdict_cn": [
+      "• 创新点: Soft-TAC作为可微的TAC近似方法在奖励学习中有新意，但TAC本身基于现有偏好对齐理论，创新性中等。",
+      "• 实盘坑: 人类偏好数据收集成本高且主观性强；金融环境复杂多变，模型泛化风险大；奖励函数设计仍依赖人工，效率瓶颈明显。",
+      "• 复现难度: 中等；需要人类专家数据或模拟环境，但方法描述清晰，在标准RL框架下可复现，不过金融数据适配需额外工程。",
+      "• 市场适用性: 有限；论文聚焦游戏模拟器，未涉及金融市场验证，直接应用于交易策略需大量调整和风险控制。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
     "id": "2601.16205v1",
     "title": "Counterfactual Training: Teaching Models Plausible and Actionable Explanations",
     "pdf_url": "https://arxiv.org/pdf/2601.16205v1",
