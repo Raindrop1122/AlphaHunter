@@ -1,5 +1,311 @@
 [
   {
+    "id": "2601.20861v1",
+    "title": "Evolutionary Strategies lead to Catastrophic Forgetting in LLMs",
+    "pdf_url": "https://arxiv.org/pdf/2601.20861v1",
+    "published": "2026-01-28",
+    "crawled_at": "2026-01-29 20:15:46",
+    "ai_score": 7.5,
+    "translated_title": "进化策略导致大语言模型灾难性遗忘",
+    "summary_en": [
+      "• Model Architecture: The paper analyzes Evolutionary Strategies (ES) as a gradient-free alternative to traditional gradient-based algorithms like GRPO for training Large Language Models (LLMs).",
+      "• Data used: The study evaluates ES on math and reasoning tasks, though specific datasets are not detailed in the abstract; it focuses on performance metrics and forgetting curves during training.",
+      "• Performance metrics: ES achieves performance close to GRPO on math and reasoning tasks with comparable compute budgets, but shows significant forgetting of prior abilities as update steps increase, measured via forgetting curves and update characteristics (e.g., ℓ₂ norm and sparsity)."
+    ],
+    "summary_cn": [
+      "• 核心模型: 分析进化策略（ES）作为无梯度替代方案，与传统基于梯度的算法（如GRPO）对比，用于训练大语言模型（LLMs）。",
+      "• 数据来源: 在数学和推理任务上评估ES，摘要未详述具体数据集；研究侧重于训练过程中的性能指标和遗忘曲线。",
+      "• 主要结论: ES在可比计算预算下，在数学和推理任务上性能接近GRPO，但随着更新步骤增加，表现出显著的先前能力遗忘，更新更不稀疏且ℓ₂范数更大。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; highlights a critical limitation of ES for continual learning in LLMs, which could inform strategies to avoid forgetting in online training scenarios, but direct alpha generation is limited as it's more diagnostic than prescriptive.",
+      "• Implementation Risk: High; ES leads to catastrophic forgetting, making it unsuitable for real-time or continual learning applications without mitigation, posing risks for deployment in dynamic environments.",
+      "• Novelty: Moderate; ES is a re-emerging technique, but the comprehensive analysis of its forgetting behavior and comparison to GRPO provides new insights into gradient-free algorithms' limitations for LLMs."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；ES作为重新兴起的无梯度方法，但其在LLMs中遗忘行为的全面分析及与GRPO的对比，为梯度自由算法的局限性提供了新见解。",
+      "• 实盘坑: 高；ES导致灾难性遗忘，不适合实时或持续学习应用，未缓解前在动态环境中部署风险大，可能破坏模型稳定性。",
+      "• 复现难度: 中等；基于标准ES和GRPO方法，但需要详细实验设置和任务数据，可能涉及复杂调参和计算资源。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2601.20854v1",
+    "title": "Exploring Transformer Placement in Variational Autoencoders for Tabular Data Generation",
+    "pdf_url": "https://arxiv.org/pdf/2601.20854v1",
+    "published": "2026-01-28",
+    "crawled_at": "2026-01-29 20:16:04",
+    "ai_score": 7.2,
+    "translated_title": "探索Transformer在变分自编码器中用于表格数据生成的位置安排",
+    "summary_en": [
+      "• Model Architecture: Investigates integrating Transformers into different components of a VAE (encoder, decoder, latent space) to capture complex feature interactions in tabular data, with attention to linear relationships in decoder blocks.",
+      "• Data used: Experiments conducted on 57 datasets from the OpenML CC18 suite, covering diverse tabular data scenarios for robust evaluation.",
+      "• Performance metrics: Focuses on trade-offs between fidelity and diversity in generated data, with empirical analysis of Transformer block similarity and linear approximations in decoder outputs."
+    ],
+    "summary_cn": [
+      "• 核心模型: 研究将Transformer集成到VAE的不同组件（编码器、解码器、潜在空间）中，以捕捉表格数据中的复杂特征交互，特别关注解码器块的线性关系。",
+      "• 数据来源: 使用OpenML CC18套件中的57个数据集进行实验，覆盖多样化的表格数据场景以确保评估的稳健性。",
+      "• 主要结论: 发现Transformer在潜在空间和解码器中的位置安排会导致生成数据的保真度与多样性之间的权衡，并观察到Transformer块间高度相似性及解码器输入输出的近似线性关系。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the approach could enhance synthetic data generation for training financial models, but direct alpha extraction from tabular market data is limited without specific financial applications.",
+      "• Implementation Risk: High; integrating Transformers into VAEs adds complexity, and the trade-off between fidelity and diversity may require careful tuning for real-world datasets, increasing deployment challenges.",
+      "• Novelty: Low to moderate; while combining Transformers with VAEs for tabular data is innovative, the paper lacks groundbreaking architectural insights, focusing more on empirical placement effects rather than novel mechanisms."
+    ],
+    "verdict_cn": [
+      "• 创新点: 较低至中等；将Transformer与VAE结合用于表格数据生成具有新意，但论文缺乏突破性的架构见解，主要关注位置安排的实证效果而非创新机制。",
+      "• 实盘坑: 高；Transformer集成增加了模型复杂性，保真度与多样性的权衡需针对实际数据集精细调参，部署风险较大，且未涉及金融数据的具体优化。",
+      "• 复现难度: 中等；基于公开数据集和标准框架，复现实验可行，但需要处理Transformer-VAE集成的技术细节和超参数调整，可能耗时较长。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2601.20852v1",
+    "title": "C3Box: A CLIP-based Class-Incremental Learning Toolbox",
+    "pdf_url": "https://arxiv.org/pdf/2601.20852v1",
+    "published": "2026-01-28",
+    "crawled_at": "2026-01-29 20:16:23",
+    "ai_score": 7.5,
+    "translated_title": "C3Box：基于CLIP的类增量学习工具箱",
+    "summary_en": [
+      "• Model Architecture: C3Box integrates traditional CIL methods, ViT-based CIL methods, and state-of-the-art CLIP-based CIL methods into a unified framework built on CLIP's pre-trained vision-language model architecture.",
+      "• Data used: The paper does not specify particular datasets, but CIL typically uses benchmark datasets like CIFAR-100, ImageNet, or COCO for evaluation; C3Box likely supports standard continual learning datasets.",
+      "• Performance metrics: While not detailed in the abstract, C3Box aims to provide reproducible experimentation with standardized configurations, enabling fair comparison of accuracy, forgetting rates, and computational efficiency across methods."
+    ],
+    "summary_cn": [
+      "• 核心模型: C3Box基于CLIP预训练模型，整合了传统CIL方法、基于ViT的CIL方法以及最先进的基于CLIP的CIL方法，形成一个统一的类增量学习框架。",
+      "• 数据来源: 论文未明确指定数据集，但类增量学习通常使用CIFAR-100、ImageNet或COCO等基准数据集进行评估；C3Box可能支持标准持续学习数据集。",
+      "• 主要结论: C3Box通过模块化设计和JSON配置，解决了现有CLIP-based CIL方法代码分散、配置不一致的问题，提供了可复现的实验平台，降低了工程开销。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; C3Box could enhance model adaptability in dynamic financial data environments (e.g., evolving market regimes or new asset classes), but direct alpha generation is limited as it's a toolbox rather than a trading strategy.",
+      "• Implementation Risk: Low to moderate; reliance on widely used open-source libraries and standardized pipelines reduces technical risk, but integration into live trading systems requires careful validation of CIL methods' stability and latency.",
+      "• Novelty: Moderate; the main innovation is the integration and standardization of existing CLIP-based CIL methods into a unified toolbox, addressing reproducibility issues rather than proposing new algorithmic breakthroughs."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；主要创新在于将分散的CLIP-based CIL方法整合到一个统一的工具箱中，通过JSON配置和标准化流程解决可复现性问题，而非提出新的算法突破。",
+      "• 实盘坑: 低到中等；依赖广泛使用的开源库降低了技术风险，但将CIL方法集成到实盘交易系统时，需验证模型在动态数据流中的稳定性、延迟和过拟合风险。",
+      "• 复现难度: 低；基于PyCIL的流线型设计和开源代码（https://github.com/LAMDA-CL/C3Box）使得复现相对容易，适合作为研究基准平台。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2601.20848v1",
+    "title": "Post-Training Fairness Control: A Single-Train Framework for Dynamic Fairness in Recommendation",
+    "pdf_url": "https://arxiv.org/pdf/2601.20848v1",
+    "published": "2026-01-28",
+    "crawled_at": "2026-01-29 20:16:40",
+    "ai_score": 8.2,
+    "translated_title": "训练后公平性控制：推荐系统中动态公平性的单次训练框架",
+    "summary_en": [
+      "• Model Architecture: Cofair introduces a shared representation layer with fairness-conditioned adapter modules to generate user embeddings tailored to different fairness levels, coupled with a user-level regularization term ensuring monotonic fairness improvements.",
+      "• Data used: Comprehensive experiments conducted on multiple datasets (specific datasets not named in abstract), tested with various backbone models to validate framework robustness.",
+      "• Performance metrics: Framework achieves comparable or superior fairness-accuracy trade-off curves compared to state-of-the-art baselines, enabling dynamic fairness adjustments without retraining for each new requirement."
+    ],
+    "summary_cn": [
+      "• 核心模型: Cofair采用共享表示层结合公平条件适配器模块，生成针对不同公平性水平的用户嵌入，并通过用户级正则化项保证公平性单调改进。",
+      "• 数据来源: 在多个数据集上进行综合实验（摘要未具体命名），使用不同骨干模型验证框架通用性。",
+      "• 主要结论: 框架在公平性-准确性权衡曲线上达到或超越现有最优基线，无需为每个新公平性要求重新训练，实现动态公平性控制。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - Framework enables rapid adaptation to changing regulatory or stakeholder fairness requirements in real-time recommendation systems, potentially reducing retraining costs and latency.",
+      "• Implementation Risk: High - User-level monotonic fairness guarantees require careful calibration; adversarial training components may introduce instability in production environments.",
+      "• Novelty: Significant - Single-train framework with post-training fairness control addresses a critical gap in dynamic fairness requirements, though adapter-based approaches are becoming more common in ML."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著 - 单次训练后公平性控制框架解决了动态公平性需求的关键缺口，适配器模块设计具有工程实用性。",
+      "• 实盘坑: 高 - 用户级单调公平性保证需要精细调参；对抗训练组件可能在生产环境中引入不稳定性；公平性指标与业务指标的平衡挑战。",
+      "• 复现难度: 中等 - 代码已公开，但需要理解对抗训练和正则化项的数学保证；多数据集实验要求较高计算资源。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2601.20845v1",
+    "title": "PatchFormer: A Patch-Based Time Series Foundation Model with Hierarchical Masked Reconstruction and Cross-Domain Transfer Learning for Zero-Shot Multi-Horizon Forecasting",
+    "pdf_url": "https://arxiv.org/pdf/2601.20845v1",
+    "published": "2026-01-28",
+    "crawled_at": "2026-01-29 20:16:57",
+    "ai_score": 8.7,
+    "translated_title": "PatchFormer：基于补丁的时间序列基础模型，采用分层掩码重建与跨领域迁移学习实现零样本多步预测",
+    "summary_en": [
+      "• Model Architecture: PatchFormer segments time series into patches and uses hierarchical masked reconstruction for self-supervised pretraining, with learnable aggregation across temporal scales and lightweight adapters for efficient transfer.",
+      "• Data used: Pretrained on up to 100 billion points across 24 benchmark datasets spanning weather, energy, traffic, finance, and healthcare domains.",
+      "• Performance metrics: Achieves 27.3% reduction in mean squared error compared to strong baselines in zero-shot multi-horizon forecasting, requires 94% less task-specific training data, and processes length-512 sequences 3.8x faster than full-sequence transformers."
+    ],
+    "summary_cn": [
+      "• 核心模型: PatchFormer将时间序列分割为补丁，采用分层掩码重建进行自监督预训练，通过可学习的跨时间尺度聚合和轻量级适配器实现高效迁移。",
+      "• 数据来源: 在涵盖天气、能源、交通、金融和医疗等领域的24个基准数据集上进行预训练，数据量高达1000亿个点。",
+      "• 主要结论: 在零样本多步预测中，相比强基线平均平方误差降低27.3%，任务特定训练数据需求减少94%，处理长度为512的序列速度比全序列Transformer快3.8倍。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for cross-domain zero-shot forecasting in finance, enabling rapid deployment on new assets or markets with minimal labeled data, particularly valuable for multi-horizon predictions.",
+      "• Implementation Risk: Dynamic masking and hierarchical reconstruction may introduce instability in real-time trading environments; cross-domain transfer could suffer from distribution shifts in volatile markets.",
+      "• Novelty: Combines patch-based segmentation with hierarchical masked reconstruction and cross-domain knowledge distillation, offering a scalable foundation model approach that reduces data dependency significantly."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将基于补丁的分割与分层掩码重建、跨领域知识蒸馏相结合，提供可扩展的基础模型方法，显著降低数据依赖性。",
+      "• 实盘坑: 动态掩码和分层重建在实时交易环境中可能引入不稳定性；跨领域迁移在波动市场中可能因分布偏移而失效。",
+      "• 复现难度: 中等偏高，需要处理大规模预训练数据（高达1000亿点）和复杂的掩码重建目标，但轻量级适配器设计有助于降低部署成本。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2601.20838v1",
+    "title": "Reward Models Inherit Value Biases from Pretraining",
+    "pdf_url": "https://arxiv.org/pdf/2601.20838v1",
+    "published": "2026-01-28",
+    "crawled_at": "2026-01-29 20:17:36",
+    "ai_score": 8.2,
+    "translated_title": "奖励模型从预训练中继承价值偏见",
+    "summary_en": [
+      "• Model Architecture: The study analyzes 10 leading open-weight reward models (RMs) initialized from large language models (LLMs), specifically comparing Llama and Gemma-based RMs. It demonstrates that RMs inherit representations from their base models, influencing their behavior along psychological axes.",
+      "• Data used: The research employs validated psycholinguistic corpora to measure human value dimensions. Experiments include training RMs with ablations for preference data source and quantity, using identical preference data and finetuning processes across models to isolate base model effects.",
+      "• Performance metrics: The study shows robust preferences: Llama RMs favor 'agency' and Gemma RMs favor 'communion' on the 'Big Two' psychological axes. These differences are traced back to logits of instruction-tuned and pre-trained models, with implicit reward scores derived from log-probability differences exhibiting the same biases."
+    ],
+    "summary_cn": [
+      "• 核心模型: 研究分析了10个领先的开源权重奖励模型（RMs），这些模型基于大型语言模型（LLMs）初始化，特别比较了基于Llama和Gemma的RMs，揭示了它们从基础模型中继承表征并影响行为。",
+      "• 数据来源: 使用经过验证的心理语言学语料库来测量人类价值维度，实验包括对偏好数据来源和数量进行消融训练，确保在不同模型间使用相同的偏好数据和微调过程以隔离基础模型影响。",
+      "• 主要结论: 研究发现Llama RMs在'Big Two'心理轴上偏好'能动性'，而Gemma RMs偏好'共融性'，这些差异可追溯到指令微调和预训练模型的logits，从对数概率差异推导的隐式奖励分数也表现出相同偏见。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the findings highlight that base model choice in RMs introduces systematic value biases, which could be exploited in NLP/LLM strategies by selecting models aligned with specific value orientations for targeted applications, though direct financial alpha may be limited.",
+      "• Implementation Risk: High; the durability of these biases despite identical training data suggests that pretraining stage safety and alignment efforts are critical, posing risks if overlooked in deployment, as RMs may not fully represent human preferences as intended.",
+      "• Novelty: High; the paper provides a comprehensive, empirical demonstration that RMs inherit value biases from pretraining, a previously understudied area, with implications for open-source development and alignment research, offering new insights into model behavior."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；论文通过实证研究首次全面揭示奖励模型从预训练中继承价值偏见，填补了该领域的研究空白，对开源开发和模型对齐有重要启示，提供了关于模型行为的新视角。",
+      "• 实盘坑: 高；即使使用相同训练数据，这些偏见仍持久存在，表明预训练阶段的安全性和对齐工作至关重要，若在部署中被忽视，可能导致奖励模型无法如预期代表人类偏好，带来实施风险。",
+      "• 复现难度: 中等；研究基于开源模型和验证语料库，方法透明，但需要访问多个领先的RMs和大量计算资源进行消融实验，复现需一定技术基础，但总体可行。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2601.20834v1",
+    "title": "Linear representations in language models can change dramatically over a conversation",
+    "pdf_url": "https://arxiv.org/pdf/2601.20834v1",
+    "published": "2026-01-28",
+    "crawled_at": "2026-01-29 20:17:54",
+    "ai_score": 7.8,
+    "translated_title": "语言模型中的线性表征在对话过程中会发生显著变化",
+    "summary_en": [
+      "• Model Architecture: The study examines linear representations in language models, focusing on how these evolve during simulated conversations across different model families and layers, without specifying a particular architecture but implying general applicability to transformer-based models.",
+      "• Data used: The research utilizes simulated conversations, including replaying conversation scripts written by different models, and compares these to contexts with sci-fi stories framed explicitly, indicating a mix of generated and curated textual data for analysis.",
+      "• Performance metrics: Findings show robust changes in linear representations, such as shifts in factuality dimensions, with adaptation weaker in non-conversational contexts, highlighting the dynamic nature of model responses over time."
+    ],
+    "summary_cn": [
+      "• 核心模型: 研究聚焦于语言模型中的线性表征，探讨其在模拟对话过程中的动态变化，适用于多种模型家族和层级，未指定具体架构但暗示基于Transformer的模型通用性。",
+      "• 数据来源: 使用模拟对话数据，包括重播由不同模型编写的对话脚本，并与明确标记为科幻故事的上下文进行比较，涉及生成和策划的文本数据。",
+      "• 主要结论: 线性表征在对话中会发生显著变化，如事实性维度的转换，这些变化在非对话语境中较弱，表明模型响应随上下文动态演化。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the findings on representational dynamics could inform strategies for adaptive NLP systems in trading contexts, such as real-time sentiment analysis or risk assessment that accounts for conversational shifts, but direct financial applications are not explored.",
+      "• Implementation Risk: High; the study highlights challenges for interpretability and steering, suggesting that static feature interpretations may be misleading, which could increase operational risks if applied without robust validation in live trading environments.",
+      "• Novelty: High; the paper introduces novel insights into how language model representations evolve dynamically over conversations, contrasting with static analysis approaches, and points to new research directions in model adaptation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；论文揭示了语言模型表征在对话中的动态演化，突破了静态分析的传统框架，为理解模型上下文适应提供了新视角。",
+      "• 实盘坑: 高；研究指出可解释性和引导的挑战，静态特征解释可能误导，在实盘应用中需谨慎验证以避免操作风险。",
+      "• 复现难度: 中等；方法基于模拟对话和线性表征分析，技术门槛较高，但数据可生成，复现需专业知识但可行。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2601.20830v1",
+    "title": "VSCOUT: A Hybrid Variational Autoencoder Approach to Outlier Detection in High-Dimensional Retrospective Monitoring",
+    "pdf_url": "https://arxiv.org/pdf/2601.20830v1",
+    "published": "2026-01-28",
+    "crawled_at": "2026-01-29 20:18:16",
+    "ai_score": 8.2,
+    "translated_title": "VSCOUT：一种用于高维回顾性监测中异常值检测的混合变分自编码器方法",
+    "summary_en": [
+      "• Model Architecture: VSCOUT combines an Automatic Relevance Determination Variational Autoencoder (ARD-VAE) with ensemble-based latent outlier filtering and changepoint detection, featuring a two-stage refinement process that retrains after removing flagged observations to stabilize the in-control latent manifold.",
+      "• Data used: The framework is designed for high-dimensional, non-Gaussian, and contamination-prone data from modern industrial and service processes, addressing challenges like heavy tails, multimodality, nonlinear dependencies, and sparse special-cause observations.",
+      "• Performance metrics: Extensive experiments across benchmark datasets show VSCOUT achieves superior sensitivity to special-cause structure while maintaining controlled false alarms, outperforming classical SPC procedures, robust estimators, and modern machine-learning baselines in terms of scalability, distributional flexibility, and resilience to complex contamination patterns."
+    ],
+    "summary_cn": [
+      "• 核心模型: VSCOUT采用自动相关确定变分自编码器（ARD-VAE）架构，结合基于集成的潜在异常值过滤和变点检测，通过两阶段精炼过程（先标记再重训练）来稳定控制内潜在流形。",
+      "• 数据来源: 针对现代工业和服务过程产生的高维、非高斯、易受污染数据，处理重尾、多模态、非线性依赖和稀疏特殊原因观测等挑战。",
+      "• 主要结论: 在基准数据集上的广泛实验表明，VSCOUT在保持可控误报率的同时，对特殊原因结构具有卓越的敏感性，优于经典SPC程序、鲁棒估计器和现代机器学习基线，展现出可扩展性、分布灵活性和对复杂污染模式的韧性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate to high; the method's ability to handle complex, high-dimensional data with distribution-free assumptions could uncover subtle anomalies in financial time series or alternative data streams, potentially leading to early signal detection for risk management or alpha generation in non-traditional datasets.",
+      "• Implementation Risk: High; the two-stage refinement and ensemble-based filtering require careful tuning and computational resources, with risks of overfitting in noisy environments or misalignment with real-time Phase II deployment needs in fast-paced markets.",
+      "• Novelty: Significant; the hybrid approach integrating ARD-VAE with outlier and changepoint filters for retrospective monitoring is innovative, addressing gaps in classical SPC by leveraging modern deep learning for robust baseline estimation in contaminated settings."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著；将ARD-VAE与异常值和变点过滤器结合用于回顾性监测的混合方法具有创新性，利用现代深度学习在污染环境中进行鲁棒基线估计，弥补了经典SPC的不足。",
+      "• 实盘坑: 高；两阶段精炼和基于集成的过滤需要精细调优和计算资源，在嘈杂环境中存在过拟合风险，或与快节奏市场中实时第二阶段部署需求不匹配。",
+      "• 复现难度: 中等偏高；ARD-VAE架构和集成过滤的实现需要专业知识，但论文提供了清晰框架，基准实验可复现，不过实际应用到金融数据可能需要额外适配和验证。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2601.20829v1",
+    "title": "Training Reasoning Models on Saturated Problems via Failure-Prefix Conditioning",
+    "pdf_url": "https://arxiv.org/pdf/2601.20829v1",
+    "published": "2026-01-28",
+    "crawled_at": "2026-01-29 20:18:34",
+    "ai_score": 7.8,
+    "translated_title": "通过失败前缀条件化在饱和问题上训练推理模型",
+    "summary_en": [
+      "• Model Architecture: Proposes failure-prefix conditioning method for RLVR training, where models are conditioned on prefixes from rare incorrect reasoning trajectories instead of original questions to expose failure-prone states.",
+      "• Data used: Saturated reasoning problems where standard RLVR training stalls due to poor accessibility of informative failures; uses incorrect reasoning trajectories as training prefixes.",
+      "• Performance metrics: Achieves performance gains comparable to training on medium-difficulty problems while maintaining token efficiency; reduces performance degradation under misleading failure prefixes; iterative approach unlocks additional gains after plateaus."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出失败前缀条件化方法，用于强化学习与可验证奖励训练，通过基于罕见错误推理轨迹的前缀而非原始问题来暴露模型于易失败状态。",
+      "• 数据来源: 使用饱和推理问题，其中标准训练因信息性失败难以访问而停滞；利用错误推理轨迹作为训练前缀。",
+      "• 主要结论: 在保持标记效率的同时，实现与中等难度问题训练相当的性能提升；减少在误导性失败前缀下的性能退化；迭代方法在平台期后解锁额外增益。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - method could enhance reasoning robustness in financial NLP tasks like earnings call analysis or risk assessment, but direct market alpha generation is limited without domain-specific adaptation.",
+      "• Implementation Risk: High - requires careful tuning of failure prefix selection and iterative refresh mechanisms; risk of overfitting to failure patterns if not properly balanced with correct reasoning adherence.",
+      "• Novelty: High - introduces a novel conditioning approach to address saturation in RLVR training, leveraging rare failure states to improve learning efficiency, though builds on existing RLVR frameworks."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高 - 提出新颖的条件化方法解决强化学习与可验证奖励训练中的饱和问题，利用罕见失败状态提升学习效率，但基于现有框架。",
+      "• 实盘坑: 高 - 需要精细调整失败前缀选择和迭代刷新机制；若未与正确推理保持平衡，存在过度拟合失败模式的风险。",
+      "• 复现难度: 中等 - 方法相对简单，但依赖饱和问题数据集和错误轨迹生成，可能需大量计算资源进行迭代训练。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
     "id": "2601.19897v1",
     "title": "Self-Distillation Enables Continual Learning",
     "pdf_url": "https://arxiv.org/pdf/2601.19897v1",
