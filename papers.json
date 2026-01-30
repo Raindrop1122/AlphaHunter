@@ -1,5 +1,357 @@
 [
   {
+    "id": "2601.22157v1",
+    "title": "Discovering Hidden Gems in Model Repositories",
+    "pdf_url": "https://arxiv.org/pdf/2601.22157v1",
+    "published": "2026-01-29",
+    "crawled_at": "2026-01-30 20:14:52",
+    "ai_score": 8.2,
+    "translated_title": "模型仓库中隐藏宝藏的发现",
+    "summary_en": [
+      "• Model Architecture: Focuses on fine-tuned models within the Llama-3.1-8B family, evaluating over 2,000 models from public repositories.",
+      "• Data used: Utilizes publicly available fine-tuned models from repositories, with performance tested on math tasks without specifying training datasets.",
+      "• Performance metrics: Identifies 'hidden gems' that improve math performance from 83.2% to 96.0% without increasing inference costs, demonstrating significant efficiency gains."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于Llama-3.1-8B家族的微调模型，评估了超过2000个公开仓库中的模型。",
+      "• 数据来源: 使用公开模型仓库中的微调模型，在数学任务上进行性能测试，未详细说明训练数据。",
+      "• 主要结论: 发现'隐藏宝藏'模型，将数学性能从83.2%提升至96.0%，且不增加推理成本，效率显著提升。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for identifying undervalued models that outperform popular ones, offering cost-effective performance improvements in NLP tasks.",
+      "• Implementation Risk: Moderate risk due to reliance on public repositories and potential variability in model quality; aggressive elimination schedules may miss some gems.",
+      "• Novelty: Novel formulation of model discovery as a Multi-Armed Bandit problem with accelerated Sequential Halving, reducing queries by 50x to 50 per candidate."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将模型发现问题建模为多臂老虎机，通过共享查询集和激进淘汰策略加速搜索，查询次数减少50倍。",
+      "• 实盘坑: 依赖公开仓库模型质量不稳定，激进淘汰可能遗漏优质模型；实际部署需考虑模型兼容性和维护成本。",
+      "• 复现难度: 中等难度，需要访问大量公开模型和计算资源进行评估，但算法描述清晰，可复现性较好。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2601.22156v1",
+    "title": "Hybrid Linear Attention Done Right: Efficient Distillation and Effective Architectures for Extremely Long Contexts",
+    "pdf_url": "https://arxiv.org/pdf/2601.22156v1",
+    "published": "2026-01-29",
+    "crawled_at": "2026-01-30 20:15:09",
+    "ai_score": 8.2,
+    "translated_title": "混合线性注意力正确实现：面向超长上下文的高效蒸馏与有效架构",
+    "summary_en": [
+      "• Model Architecture: Introduces HALO pipeline for distilling Transformer models into RNN-attention hybrid models and HypeNet architecture with novel HyPE position encoding scheme",
+      "• Data used: Conversion requires only 2.3B tokens (less than 0.01% of pre-training data), significantly less than previous methods requiring 10B+ tokens",
+      "• Performance metrics: Achieves comparable performance to original Transformer models while demonstrating superior long-context performance and efficiency",
+      "• Technical innovation: Addresses poor long-context performance in previous hybrid models while maintaining inference speed advantages"
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出HALO蒸馏流程将Transformer转换为RNN-注意力混合模型，以及采用新型HyPE位置编码的HypeNet架构",
+      "• 数据来源: 仅需23亿token进行转换（少于预训练数据的0.01%），远低于先前方法所需的100亿+ token",
+      "• 主要结论: 在保持与原始Transformer相当性能的同时，实现了更优的长上下文性能和效率",
+      "• 技术突破: 解决了先前混合模型在长上下文场景下性能不佳的问题，同时保持了推理速度优势"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Significant efficiency gains for long-context applications could enable new trading strategies using extended historical data or complex document analysis",
+      "• Implementation Risk: Limited validation on diverse model families beyond Qwen3 series; real-world deployment may reveal hidden computational bottlenecks",
+      "• Novelty: HyPE position encoding represents genuine architectural innovation; distillation efficiency breakthrough reduces adoption barrier substantially",
+      "• Practical consideration: 2.3B token requirement makes this approach economically viable for hedge funds with limited compute resources"
+    ],
+    "verdict_cn": [
+      "• 创新点: HyPE位置编码是真正的架构创新；蒸馏效率突破大幅降低了采用门槛",
+      "• 实盘坑: 仅在Qwen3系列上验证，其他模型家族适用性未知；实际部署可能暴露隐藏的计算瓶颈",
+      "• 复现难度: 中等偏高，需要理解混合架构设计和位置编码实现细节",
+      "• 应用价值: 长上下文效率提升为使用扩展历史数据或复杂文档分析的新交易策略提供了可能"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2601.22151v1",
+    "title": "Late Breaking Results: Conversion of Neural Networks into Logic Flows for Edge Computing",
+    "pdf_url": "https://arxiv.org/pdf/2601.22151v1",
+    "published": "2026-01-29",
+    "crawled_at": "2026-01-30 20:15:24",
+    "ai_score": 7.2,
+    "translated_title": "最新成果：将神经网络转换为逻辑流以用于边缘计算",
+    "summary_en": [
+      "• Model Architecture: Proposes converting neural networks into logic flows via decision trees, reducing multiply-accumulate (MAC) operations and using if-else structures for execution on CPUs.",
+      "• Data used: Experimental results based on simulated RISC-V CPU performance, though specific datasets or benchmarks are not detailed in the abstract.",
+      "• Performance metrics: Demonstrates up to 14.9% latency reduction on a simulated RISC-V CPU with no accuracy degradation, and the code is open-sourced on GitHub."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出将神经网络通过决策树转换为逻辑流，减少乘累加操作，利用if-else结构在CPU上执行。",
+      "• 数据来源: 基于模拟RISC-V CPU的性能实验，但摘要中未详细说明具体数据集或基准测试。",
+      "• 主要结论: 在模拟RISC-V CPU上实现高达14.9%的延迟降低，且无精度损失，代码已在GitHub开源。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; could enhance edge computing efficiency for low-latency applications, but limited to CPU-based systems and may not scale to high-frequency trading directly.",
+      "• Implementation Risk: High; relies on conversion to decision trees which may introduce complexity and overhead, and real-world deployment on diverse edge devices is untested.",
+      "• Novelty: Moderate; leverages CPU strengths for control flow logic, but similar approaches exist in model compression and hardware-aware optimization literature."
+    ],
+    "verdict_cn": [
+      "• 创新点: 利用CPU擅长控制流逻辑的特点，将神经网络转换为逻辑流，减少MAC操作，但类似方法在模型压缩领域已有探索。",
+      "• 实盘坑: 转换过程可能引入额外计算开销，且未在真实边缘设备上验证，实际部署风险较高。",
+      "• 复现难度: 低；代码开源，基于模拟环境，但需适配具体硬件和数据集，可能增加复现复杂性。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2601.22146v1",
+    "title": "FineInstructions: Scaling Synthetic Instructions to Pre-Training Scale",
+    "pdf_url": "https://arxiv.org/pdf/2601.22146v1",
+    "published": "2026-01-29",
+    "crawled_at": "2026-01-30 20:15:45",
+    "ai_score": 8.2,
+    "translated_title": "FineInstructions：将合成指令扩展至预训练规模",
+    "summary_en": [
+      "• Model Architecture: Proposes a novel pre-training approach where LLMs are trained from scratch solely using an instruction-tuning objective, bypassing traditional self-supervised next-word prediction.",
+      "• Data used: Generates billions of synthetic instruction-answer pairs by matching ~18M real user-written instruction templates with human-written source documents from unstructured pre-training corpora (e.g., internet-scale data).",
+      "• Performance metrics: Outperforms standard pre-training and other synthetic pre-training techniques on standard benchmarks measuring free-form response quality, based on controlled token-for-token training experiments.",
+      "• Key innovation: Transforms knowledge from pre-training documents into supervised synthetic data at scale, making training more in-distribution with downstream LLM usage (responding to prompts)."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出一种全新预训练方法，大语言模型仅使用指令微调目标从头训练，跳过传统的自监督下一词预测。",
+      "• 数据来源: 通过将约1800万个真实用户编写的指令模板与来自非结构化预训练语料库（如互联网规模数据）的人工编写源文档匹配，生成数十亿合成指令-答案对。",
+      "• 主要结论: 在衡量自由形式响应质量的标准基准测试中，基于受控的逐词训练实验，该方法优于标准预训练和其他合成预训练技术。",
+      "• 核心创新: 将预训练文档中的知识大规模转化为监督合成数据，使训练更符合下游大语言模型使用（响应提示）的分布内特性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High—scaling synthetic instruction data to pre-training levels could reduce reliance on limited supervised data, potentially leading to more efficient and effective LLM training with better alignment to user tasks.",
+      "• Implementation Risk: Moderate—generating billions of high-quality synthetic pairs requires robust template matching and document processing; risks include noise in synthetic data and computational costs for large-scale generation.",
+      "• Novelty: Significant—the approach innovates by fully replacing self-supervised pre-training with instruction-tuning from scratch, a paradigm shift that addresses data scarcity in supervised training.",
+      "• Practical challenge: Requires access to vast pre-training corpora and sophisticated NLP pipelines for template instantiation, which may limit applicability for smaller teams."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著——通过完全用从头开始的指令微调替代自监督预训练，实现范式转变，解决监督训练中的数据稀缺问题。",
+      "• 实盘坑: 中等——生成数十亿高质量合成对需要强大的模板匹配和文档处理；风险包括合成数据中的噪声和大规模生成的计算成本。",
+      "• 复现难度: 较高——需要访问大规模预训练语料库和复杂的自然语言处理流程进行模板实例化，可能限制较小团队的适用性。",
+      "• 潜在收益: 高——将合成指令数据扩展至预训练规模可能减少对有限监督数据的依赖，有望实现更高效、更有效的大语言模型训练，更好地适应用户任务。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2601.22141v1",
+    "title": "Routing the Lottery: Adaptive Subnetworks for Heterogeneous Data",
+    "pdf_url": "https://arxiv.org/pdf/2601.22141v1",
+    "published": "2026-01-29",
+    "crawled_at": "2026-01-30 20:16:04",
+    "ai_score": 8.2,
+    "translated_title": "路由彩票：面向异构数据的自适应子网络",
+    "summary_en": [
+      "• Model Architecture: Proposes Routing the Lottery (RTL), an adaptive pruning framework that discovers multiple specialized subnetworks (adaptive tickets) tailored to data classes, semantic clusters, or environmental conditions, addressing heterogeneity in real-world data.",
+      "• Data used: Evaluated across diverse datasets and tasks (specific datasets not named in abstract), demonstrating consistent performance improvements in balanced accuracy and recall metrics.",
+      "• Performance metrics: Outperforms single- and multi-model baselines in balanced accuracy and recall, uses up to 10 times fewer parameters than independent models, and exhibits semantically aligned subnetworks; identifies subnetwork collapse under aggressive pruning and introduces a subnetwork similarity score for label-free diagnosis of oversparsification."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出RTL自适应剪枝框架，通过发现多个针对数据类别、语义簇或环境条件定制的专用子网络（自适应彩票），解决现实数据异构性问题。",
+      "• 数据来源: 在多种数据集和任务上进行评估（摘要未具体命名），验证了模型在平衡准确率和召回率上的稳健性。",
+      "• 主要结论: RTL在平衡准确率和召回率上优于单模型和多模型基线，参数使用量比独立模型少10倍，子网络具有语义对齐性；识别了激进剪枝下的子网络崩溃现象，并引入子网络相似度评分进行无标签过稀疏诊断。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for improving model efficiency and performance in heterogeneous data environments, such as financial time series with regime shifts or multi-asset portfolios, by aligning model structure with data patterns; the subnetwork similarity score could aid in adaptive risk management.",
+      "• Implementation Risk: Moderate risk due to complexity in training multiple specialized subnetworks and potential instability under aggressive pruning; real-world deployment may require careful hyperparameter tuning and validation across diverse market conditions.",
+      "• Novelty: Novel in recasting pruning as a mechanism for data heterogeneity alignment, introducing adaptive tickets and subnetwork collapse diagnosis; advances beyond traditional Lottery Ticket Hypothesis by addressing multi-input specialization."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将剪枝重构为数据异构性对齐机制，引入自适应彩票和子网络崩溃诊断，超越传统彩票假设的单子网络假设，实现多输入专业化。",
+      "• 实盘坑: 训练多个专用子网络复杂度高，激进剪枝下可能不稳定；实盘需精细调参和跨市场验证，数据异构性定义可能模糊导致过拟合风险。",
+      "• 复现难度: 中等偏高，需实现自适应剪枝框架和多子网络训练，数据集和任务多样性要求高，但开源代码和详细实验可降低难度。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2601.22137v1",
+    "title": "PRISM: Distribution-free Adaptive Computation of Matrix Functions for Accelerating Neural Network Training",
+    "pdf_url": "https://arxiv.org/pdf/2601.22137v1",
+    "published": "2026-01-29",
+    "crawled_at": "2026-01-30 20:16:22",
+    "ai_score": 7.8,
+    "translated_title": "PRISM：用于加速神经网络训练的矩阵函数无分布自适应计算",
+    "summary_en": [
+      "• Model Architecture: PRISM combines adaptive polynomial approximation with randomized sketching, fitting polynomial surrogates via sketched least-squares problems at each iteration without requiring explicit eigendecompositions.",
+      "• Data used: The method is applied to matrix functions like square roots and orthogonalization in neural network training, tested empirically with Shampoo and Muon optimizers on unspecified datasets.",
+      "• Performance metrics: PRISM accelerates training when integrated into optimizers, adapting automatically to evolving spectra without explicit spectral bounds or singular value estimates."
+    ],
+    "summary_cn": [
+      "• 核心模型: PRISM结合自适应多项式逼近与随机化草图技术，通过草图最小二乘问题在每次迭代中拟合多项式代理，无需显式特征分解。",
+      "• 数据来源: 应用于神经网络训练中的矩阵函数（如平方根和正交化），在Shampoo和Muon优化器上进行了实证测试，具体数据集未明确说明。",
+      "• 主要结论: PRISM在集成到优化器时加速训练，能自动适应演化谱，无需显式谱界或奇异值估计。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; accelerates preconditioned gradient methods in neural network training, potentially improving convergence in deep learning applications, but limited to specific matrix functions.",
+      "• Implementation Risk: High; relies on iterative sketching and polynomial fitting, which may introduce numerical instability and increased computational overhead in real-time trading systems.",
+      "• Novelty: High; introduces a distribution-free adaptive framework combining polynomial approximation with randomized sketching, eliminating need for explicit spectral bounds, a novel approach in matrix function computation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；提出无分布自适应框架，结合多项式逼近与随机化草图，无需显式谱界，在矩阵函数计算中具有新颖性。",
+      "• 实盘坑: 高；依赖迭代草图和多项式拟合，可能在实时交易系统中引入数值不稳定性和计算开销增加的风险。",
+      "• 复现难度: 中等；方法基于标准矩阵运算，但自适应机制和草图技术可能增加实现复杂性，需谨慎调参。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2601.22136v1",
+    "title": "StepShield: When, Not Whether to Intervene on Rogue Agents",
+    "pdf_url": "https://arxiv.org/pdf/2601.22136v1",
+    "published": "2026-01-29",
+    "crawled_at": "2026-01-30 20:16:44",
+    "ai_score": 8.2,
+    "translated_title": "StepShield：何时干预而非是否干预恶意智能体",
+    "summary_en": [
+      "• Model Architecture: Introduces StepShield benchmark with three novel temporal metrics (Early Intervention Rate, Intervention Gap, Tokens Saved) and proposes HybridGuard cascaded detector combining LLM-based judge and static analyzer.",
+      "• Data used: 9,213 code agent trajectories including 1,278 annotated training pairs and 7,935-trajectory test set with realistic 8.1% rogue rate, grounded in six categories of real-world security incidents.",
+      "• Performance metrics: LLM-based judge achieves 59% EIR vs 26% for static analyzer (2.3x gap invisible to standard accuracy), HybridGuard reduces monitoring costs by 75% with projected $108M savings over five years at enterprise scale."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出StepShield基准测试框架，包含三种新型时序指标（早期干预率、干预间隔、节省令牌数），并设计HybridGuard级联检测器结合LLM法官与静态分析器。",
+      "• 数据来源: 9,213条代码智能体轨迹，含1,278条标注训练对和7,935条测试轨迹，恶意行为率8.1%贴近现实，基于六类真实安全事件构建。",
+      "• 主要结论: LLM法官早期干预率达59%而静态分析器仅26%（标准准确率指标完全无法捕捉此2.3倍差距），HybridGuard可降低75%监控成本，企业级五年累计节省预计1.08亿美元。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High - temporal detection metrics directly translate to cost savings (75% reduction) and economic value ($108M projection), enabling real-time risk mitigation in automated trading agents.",
+      "• Implementation Risk: Moderate - requires integration with existing agent monitoring systems, dependency on LLM performance consistency, and potential latency in cascaded detection architecture.",
+      "• Novelty: Significant - first benchmark shifting from binary 'whether' to temporal 'when' detection, revealing previously invisible performance gaps through innovative metrics like EIR and Tokens Saved."
+    ],
+    "verdict_cn": [
+      "• 创新点: 颠覆性 - 首次将智能体安全评估从二元“是否检测”转向时序“何时检测”，通过早期干预率等指标揭露传统准确率完全无法捕捉的性能差异。",
+      "• 实盘坑: 中等 - 需与现有监控系统深度集成，LLM法官的稳定性依赖模型微调，级联检测可能引入额外延迟影响高频场景。",
+      "• 复现难度: 较低 - 代码与数据已Apache 2.0开源，9K+轨迹数据集标注清晰，但需企业级计算资源处理LLM推理与实时检测流水线。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2601.22132v1",
+    "title": "Pay for Hints, Not Answers: LLM Shepherding for Cost-Efficient Inference",
+    "pdf_url": "https://arxiv.org/pdf/2601.22132v1",
+    "published": "2026-01-29",
+    "crawled_at": "2026-01-30 20:17:06",
+    "ai_score": 8.2,
+    "translated_title": "为提示付费，而非答案：面向成本高效推理的LLM引导框架",
+    "summary_en": [
+      "• Model Architecture: Introduces LLM Shepherding, a two-stage framework where a Large Language Model (LLM) generates a short prefix (hint) for a Small Language Model (SLM) to complete responses, with a predictor jointly deciding hint necessity and token count.",
+      "• Data used: Evaluated on mathematical reasoning benchmarks (GSM8K, CNK12) and code generation benchmarks (HumanEval, MBPP), using standard datasets without novel data collection.",
+      "• Performance metrics: Achieves 42-94% cost reduction compared to LLM-only inference and up to 2.8x cost reduction versus routing/cascading baselines while maintaining accuracy, with hints comprising 10-30% of full LLM response."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出LLM Shepherding框架，通过大语言模型（LLM）生成简短前缀（提示）供小语言模型（SLM）补全回答，采用两阶段预测器联合决策提示需求与令牌数量。",
+      "• 数据来源: 基于数学推理基准（GSM8K、CNK12）和代码生成基准（HumanEval、MBPP）进行评估，使用公开标准数据集，无新数据采集。",
+      "• 主要结论: 相比纯LLM推理，成本降低42-94%；相比路由/级联基线，成本最高降低2.8倍，同时保持准确性，提示仅占完整LLM响应的10-30%。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for quant firms leveraging LLMs in research or trading, as it enables scalable deployment of high-accuracy models at dramatically lower inference costs, potentially enhancing real-time analysis efficiency.",
+      "• Implementation Risk: Moderate; relies on accurate hint prediction and SLM compatibility, with risks in dynamic market conditions where hint quality may degrade, requiring robust fallback mechanisms.",
+      "• Novelty: Significant as the first work to exploit token-level budget control for SLM-LLM collaboration, generalizing routing and cascading approaches with a simple yet effective mechanism."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次利用令牌级预算控制实现SLM-LLM协作，通过简单提示机制泛化路由和级联方法，在数学和编码任务中表现突出。",
+      "• 实盘坑: 依赖提示预测准确性，市场动态变化可能导致提示质量下降，需设计容错机制；SLM与LLM的兼容性可能引入延迟风险。",
+      "• 复现难度: 中等；框架开源可能性高，但需调优预测器参数和集成现有基准，对计算资源要求较低，适合快速原型验证。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2601.22131v1",
+    "title": "SMOG: Scalable Meta-Learning for Multi-Objective Bayesian Optimization",
+    "pdf_url": "https://arxiv.org/pdf/2601.22131v1",
+    "published": "2026-01-29",
+    "crawled_at": "2026-01-30 20:17:29",
+    "ai_score": 7.8,
+    "translated_title": "SMOG：面向多目标贝叶斯优化的可扩展元学习",
+    "summary_en": [
+      "• Model Architecture: SMOG uses a multi-output Gaussian process with a structured joint prior across meta- and target tasks, featuring a flexible residual kernel for explicit objective correlation learning.",
+      "• Data used: Historical optimization data from related tasks (metadata) is leveraged to build meta-task Gaussian processes, which are cached for efficient scaling.",
+      "• Performance metrics: The model achieves linear scaling with the number of meta-tasks through hierarchical, parallel training and integrates seamlessly with standard multi-objective Bayesian optimization acquisition functions.",
+      "• Key innovation: Propagates metadata uncertainty into the target surrogate in a principled way, addressing the underexplored area of meta-learned priors for multi-objective Bayesian optimization."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于多输出高斯过程的SMOG模型，通过结构化联合先验和灵活残差核显式学习目标间相关性。",
+      "• 数据来源: 利用相关优化任务的历史数据（元数据）构建元任务高斯过程，并缓存以实现高效扩展。",
+      "• 主要结论: 模型通过分层并行训练实现与元任务数量的线性扩展，并能无缝集成标准多目标贝叶斯优化采集函数。",
+      "• 技术亮点: 以原则性方式将元数据不确定性传播到目标代理模型中，填补了多目标贝叶斯优化中元学习先验的研究空白。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - could enhance portfolio optimization and parameter tuning in multi-objective financial problems, but requires domain-specific adaptation.",
+      "• Implementation Risk: High - depends on availability of high-quality historical optimization data; real-world financial data may lack the structured metadata needed.",
+      "• Novelty: Significant - addresses a gap in combining meta-learning with multi-objective Bayesian optimization, though scalability claims need empirical validation.",
+      "• Practical limitations: Closed-form prior assumption may restrict flexibility in complex financial environments with non-Gaussian noise."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著 - 填补了元学习与多目标贝叶斯优化结合的研究空白，结构化先验设计具有理论新颖性。",
+      "• 实盘坑: 高 - 依赖高质量历史优化数据，金融实际数据往往缺乏所需的结构化元数据；高斯过程假设在复杂市场环境中可能受限。",
+      "• 复现难度: 中等 - 模块化设计降低了实现门槛，但需要处理元数据准备和核函数调优等工程挑战。",
+      "• 应用局限: 线性扩展性在超大规模元任务场景下仍需验证，金融实时优化可能受计算延迟影响。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2601.22129v1",
+    "title": "SWE-Replay: Efficient Test-Time Scaling for Software Engineering Agents",
+    "pdf_url": "https://arxiv.org/pdf/2601.22129v1",
+    "published": "2026-01-29",
+    "crawled_at": "2026-01-30 20:17:51",
+    "ai_score": 7.8,
+    "translated_title": "SWE-Replay：软件工程代理的高效测试时扩展方法",
+    "summary_en": [
+      "• Model Architecture: SWE-Replay introduces a novel test-time scaling technique that dynamically chooses between exploring from scratch or exploiting archived trajectories by branching at critical intermediate steps, without relying on external LLM-based quality estimates.",
+      "• Data used: The method is evaluated on SWE-Bench Verified, SWE-Bench Pro, and Multilingual datasets, which consist of software engineering tasks requiring code generation and repository exploration.",
+      "• Performance metrics: SWE-Replay reduces computational costs by up to 17.4% compared to naive scaling while maintaining or improving performance by up to 3.8% on SWE-Bench Verified, with generalizability validated on additional benchmarks."
+    ],
+    "summary_cn": [
+      "• 核心模型: SWE-Replay提出了一种创新的测试时扩展技术，通过动态选择从零探索或利用存档轨迹，在关键中间步骤分支，无需依赖外部基于LLM的质量估计。",
+      "• 数据来源: 该方法在SWE-Bench Verified、SWE-Bench Pro和Multilingual数据集上进行评估，这些数据集包含需要代码生成和仓库探索的软件工程任务。",
+      "• 主要结论: SWE-Replay在SWE-Bench Verified上将计算成本降低高达17.4%，同时性能保持或提升高达3.8%，并在其他基准测试中验证了泛化能力。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - The efficiency gains in test-time scaling could translate to cost savings in deploying LLM agents for software engineering tasks, but direct financial alpha is limited without integration into a broader trading or risk management pipeline.",
+      "• Implementation Risk: High - The method relies on dynamic trajectory selection and branching, which may introduce instability in real-world deployments, especially when handling complex, multi-step software tasks with varying repository structures.",
+      "• Novelty: High - SWE-Replay is the first technique to optimize test-time scaling by recycling prior trajectories and using repository exploration significance for branching, addressing limitations of existing value-based methods."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高 - SWE-Replay首次通过回收先前轨迹并利用仓库探索重要性进行分支，优化测试时扩展，解决了现有基于价值方法的局限性。",
+      "• 实盘坑: 高 - 该方法依赖动态轨迹选择和分支，在实际部署中可能引入不稳定性，特别是在处理具有不同仓库结构的复杂多步骤软件任务时。",
+      "• 复现难度: 中等 - 需要访问SWE-Bench数据集和现代LLM代理，但核心算法相对清晰，复现可能受计算资源和代理性能影响。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2601.20861v1",
     "title": "Evolutionary Strategies lead to Catastrophic Forgetting in LLMs",
     "pdf_url": "https://arxiv.org/pdf/2601.20861v1",
