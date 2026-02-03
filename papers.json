@@ -1,5 +1,357 @@
 [
   {
+    "id": "2602.02495v1",
+    "title": "Reward-free Alignment for Conflicting Objectives",
+    "pdf_url": "https://arxiv.org/pdf/2602.02495v1",
+    "published": "2026-02-02",
+    "crawled_at": "2026-02-03 20:21:28",
+    "ai_score": 7.8,
+    "translated_title": "冲突目标的无奖励对齐",
+    "summary_en": [
+      "• Model Architecture: RACO framework uses a novel clipped variant of conflict-averse gradient descent to resolve gradient conflicts in multi-objective alignment, operating directly on pairwise preference data without explicit reward models.",
+      "• Data used: Pairwise preference data for multi-objective tasks, specifically tested on summarization and safety alignment tasks across multiple LLM families (Qwen 3, Llama 3, Gemma 3).",
+      "• Performance metrics: Qualitative and quantitative evaluations show consistent improvement in Pareto trade-offs compared to existing multi-objective alignment baselines, with convergence guarantees to Pareto-critical points respecting user-specified objective weights.",
+      "• Theoretical contributions: Provides convergence guarantees and shows clipping can strictly improve convergence rate in two-objective settings, addressing instability in weighted loss methods."
+    ],
+    "summary_cn": [
+      "• 核心模型: RACO框架采用新颖的裁剪式冲突规避梯度下降变体，直接利用成对偏好数据解决多目标对齐中的梯度冲突，无需显式奖励模型。",
+      "• 数据来源: 多目标任务的成对偏好数据，在多个LLM家族（Qwen 3、Llama 3、Gemma 3）的摘要和安全对齐任务上进行测试。",
+      "• 主要结论: 相比现有多目标对齐基线，该方法在帕累托权衡方面持续改进，提供收敛保证至尊重用户指定权重的帕累托临界点。",
+      "• 实验验证: 通过启发式方法改进，在定性和定量评估中展示更好的兼容性和性能。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for NLP/LLM strategies requiring robust multi-objective alignment, as it directly addresses gradient conflicts without reward model distortions, potentially improving model stability and trade-off efficiency in real-world applications.",
+      "• Implementation Risk: Moderate; while reward-free approach reduces complexity, reliance on pairwise preference data may limit scalability, and convergence guarantees are theoretical, requiring empirical validation in diverse, noisy datasets.",
+      "• Novelty: Significant; introduces a clipped gradient descent variant specifically for conflict resolution in multi-objective settings, with theoretical convergence improvements, offering a fresh alternative to weighted loss and reward-based methods.",
+      "• Practical limitations: Heuristics-based improvements may lack generalizability, and experiments are limited to specific LLM families and tasks, raising questions about broader applicability across different model architectures and objectives."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出无奖励对齐框架，通过裁剪式梯度下降变体直接解决多目标冲突，避免奖励模型引入的偏好扭曲，理论收敛保证增强可信度。",
+      "• 实盘坑: 依赖成对偏好数据可能限制可扩展性，启发式改进缺乏普适性，实验范围较窄，需在更嘈杂数据中验证稳定性。",
+      "• 复现难度: 中等；框架相对简洁，但需精确实现裁剪机制和梯度冲突检测，理论收敛条件可能增加调参复杂度。",
+      "• 市场应用: 适用于需要精细权衡的LLM对齐场景，如金融文本生成中的准确性与合规性平衡，但需警惕数据偏差风险。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2602.02494v1",
+    "title": "MEG-XL: Data-Efficient Brain-to-Text via Long-Context Pre-Training",
+    "pdf_url": "https://arxiv.org/pdf/2602.02494v1",
+    "published": "2026-02-02",
+    "crawled_at": "2026-02-03 20:21:52",
+    "ai_score": 8.2,
+    "translated_title": "MEG-XL：通过长上下文预训练实现数据高效的大脑到文本转换",
+    "summary_en": [
+      "• Model Architecture: MEG-XL is a brain-to-text interface model pre-trained with 2.5 minutes of MEG (magnetoencephalography) context per sample, which is 5-300x longer than previous methods and equivalent to 191k tokens, designed to capture extended neural context for improved data-efficient generalization.",
+      "• Data used: The model utilizes MEG brain recordings from paralyzed patients, focusing on clinical applications where extensive training data is unavailable. Pre-training leverages statistical priors across subjects, with fine-tuning applied to word decoding tasks from brain data.",
+      "• Performance metrics: MEG-XL matches supervised performance with significantly less data (e.g., 1 hour vs. 50 hours), outperforms existing brain foundation models, and demonstrates that longer-context pre-training leads to better transferable representations for word decoding."
+    ],
+    "summary_cn": [
+      "• 核心模型: MEG-XL是一种基于长上下文预训练的大脑到文本接口模型，每个样本使用2.5分钟的MEG（脑磁图）上下文，比先前方法长5-300倍，相当于191k个令牌，旨在捕获扩展的神经上下文以提高数据效率。",
+      "• 数据来源: 模型使用瘫痪患者的MEG脑记录数据，针对临床应用中缺乏大量训练数据的情况，通过跨受试者的统计先验进行预训练，并在大脑数据的单词解码任务上进行微调。",
+      "• 主要结论: MEG-XL在少量数据下（如1小时对比50小时）达到监督性能，优于现有大脑基础模型，表明长上下文预训练有助于学习更易迁移的表示，提升单词解码效果。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for alpha in healthcare and neurotechnology sectors, as it enables efficient brain-computer interfaces with minimal data, potentially reducing costs and improving accessibility for paralyzed patients, but direct financial market applications are limited without further commercialization.",
+      "• Implementation Risk: Moderate to high risk due to reliance on specialized MEG hardware and clinical data, which may be scarce and expensive to acquire; regulatory hurdles in medical device approval could delay real-world deployment.",
+      "• Novelty: High novelty in extending context length for brain data pre-training, addressing a key limitation in prior work; however, the core idea of long-context learning is not entirely new in machine learning, though its application to MEG is innovative."
+    ],
+    "verdict_cn": [
+      "• 创新点: 在脑数据预训练中引入长上下文（2.5分钟），显著超越先前方法，创新性地利用扩展神经上下文提升数据效率，但长上下文学习本身在机器学习中并非全新概念。",
+      "• 实盘坑: 依赖昂贵的MEG设备和稀缺的临床数据，获取成本高；医疗设备监管审批复杂，可能阻碍实际应用；模型泛化到其他脑信号类型（如EEG）存在不确定性。",
+      "• 复现难度: 中等难度，代码和模型权重已开源，但需要专业MEG设备和患者数据，数据预处理和计算资源要求较高，可能限制广泛复现。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2602.02488v1",
+    "title": "RLAnything: Forge Environment, Policy, and Reward Model in Completely Dynamic RL System",
+    "pdf_url": "https://arxiv.org/pdf/2602.02488v1",
+    "published": "2026-02-02",
+    "crawled_at": "2026-02-03 20:22:14",
+    "ai_score": 7.8,
+    "translated_title": "RLAnything：在完全动态强化学习系统中锻造环境、策略和奖励模型",
+    "summary_en": [
+      "• Model Architecture: RLAnything is a reinforcement learning framework that dynamically forges environment, policy, and reward models through closed-loop optimization, integrating step-wise and outcome feedback signals for policy training and consistency feedback for reward model optimization.",
+      "• Data used: The framework leverages experience data from agent interactions in simulated environments (e.g., OSWorld, AlfWorld, LiveBench) and does not rely on human-labeled outcomes, using optimized reward-model signals instead.",
+      "• Performance metrics: RLAnything boosts Qwen3-VL-8B-Thinking by 9.1% on OSWorld, Qwen2.5-7B-Instruct by 18.7% on AlfWorld and 11.9% on LiveBench, with each added component consistently improving the overall system."
+    ],
+    "summary_cn": [
+      "• 核心模型: RLAnything是一个强化学习框架，通过闭环优化动态锻造环境、策略和奖励模型，整合逐步和结果反馈信号进行策略训练，并利用一致性反馈优化奖励模型。",
+      "• 数据来源: 使用模拟环境（如OSWorld、AlfWorld、LiveBench）中智能体交互的经验数据，不依赖人工标注结果，而是采用优化的奖励模型信号。",
+      "• 主要结论: 每个新增组件持续提升整体系统性能，在多个LLM和智能体任务中实现显著增益，例如在OSWorld上提升Qwen3-VL-8B-Thinking 9.1%，在AlfWorld和LiveBench上分别提升Qwen2.5-7B-Instruct 18.7%和11.9%。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate to high potential for enhancing agentic systems in dynamic environments through integrated feedback loops, but limited direct financial application without domain-specific adaptation.",
+      "• Implementation Risk: High risk due to complexity of closed-loop optimization and dependency on simulated environments, which may not generalize to real-world financial data with noise and non-stationarity.",
+      "• Novelty: Novel in dynamically forging all three RL components (environment, policy, reward) simultaneously, but builds on existing RL and feedback mechanisms without groundbreaking theoretical advances."
+    ],
+    "verdict_cn": [
+      "• 创新点: 创新在于同时动态锻造环境、策略和奖励模型，实现闭环优化，但理论基础基于现有强化学习和反馈机制，缺乏突破性进展。",
+      "• 实盘坑: 高风险，闭环优化复杂，依赖模拟环境，可能难以泛化到具有噪声和非平稳性的真实金融数据，且缺乏金融领域验证。",
+      "• 复现难度: 中等至高难度，需要模拟环境和LLM集成，代码开源但可能涉及大量计算资源和调参工作。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2602.02482v1",
+    "title": "Expanding the Capabilities of Reinforcement Learning via Text Feedback",
+    "pdf_url": "https://arxiv.org/pdf/2602.02482v1",
+    "published": "2026-02-02",
+    "crawled_at": "2026-02-03 20:22:38",
+    "ai_score": 8.2,
+    "translated_title": "通过文本反馈扩展强化学习能力",
+    "summary_en": [
+      "• Model Architecture: Proposes two novel methods - RLTF-SD (Self Distillation) trains single-turn policy to match feedback-conditioned second-turn generations, and RLTF-FM (Feedback Modeling) predicts feedback as auxiliary objective in multi-turn RL setup",
+      "• Data used: Leverages text feedback from users, annotators, and automated judges in real-world settings; evaluated on reasoning puzzles, competition math problems, and creative writing tasks without requiring expensive demonstrations",
+      "• Performance metrics: Both methods consistently outperform strong baselines across multiple benchmarks; demonstrates improved test-time single-turn performance despite feedback being unavailable during inference",
+      "• Theoretical foundation: Provides formal analysis of both proposed methods within the RLTF framework, establishing theoretical justification for text feedback as intermediate supervision signal"
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出两种创新方法 - RLTF-SD（自蒸馏）训练单轮策略匹配反馈条件下的第二轮生成，RLTF-FM（反馈建模）将反馈预测作为辅助目标",
+      "• 数据来源: 利用现实场景中用户、标注者和自动评判者的文本反馈，无需昂贵演示数据；在推理谜题、竞赛数学和创意写作任务上评估",
+      "• 主要结论: 两种方法在多个基准测试中均显著超越强基线；模型成功内化反馈信息，在推理时无反馈情况下仍能提升单轮性能",
+      "• 理论贡献: 为RLTF框架提供形式化分析，建立文本反馈作为中间监督信号的理论基础"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High - addresses critical gap between sparse binary rewards and expensive demonstrations; text feedback represents abundant, scalable supervision source with direct applications to trading signal refinement and risk assessment",
+      "• Implementation Risk: Medium - requires robust feedback collection infrastructure; potential noise in text feedback could degrade performance; multi-turn training adds computational complexity",
+      "• Novelty: Significant - formalizes RL from Text Feedback (RLTF) as new paradigm; bridges RL and distillation approaches; leverages natural human interaction patterns for scalable supervision",
+      "• Practical Limitations: Feedback availability only during training creates distribution shift challenges; requires careful prompt engineering for consistent feedback quality"
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著 - 形式化RLTF新范式，填补二元奖励与演示数据间的监督空白；巧妙利用文本反馈作为中间信号，兼具信息密度与可扩展性",
+      "• 实盘坑: 中等 - 需要稳定反馈收集系统；文本反馈噪声可能影响性能；多轮训练增加计算复杂度；训练-推理分布差异需仔细处理",
+      "• 复现难度: 中等偏高 - 需要构建文本反馈数据集和相应评估流程；多轮RL设置比标准RL更复杂；反馈质量对结果影响较大",
+      "• 应用前景: 广阔 - 可应用于交易策略优化、风险模型校准、市场情绪分析等金融场景，利用文本反馈提升模型决策质量"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2602.02474v1",
+    "title": "MemSkill: Learning and Evolving Memory Skills for Self-Evolving Agents",
+    "pdf_url": "https://arxiv.org/pdf/2602.02474v1",
+    "published": "2026-02-02",
+    "crawled_at": "2026-02-03 20:23:04",
+    "ai_score": 8.2,
+    "translated_title": "MemSkill：为自进化智能体学习和演化记忆技能",
+    "summary_en": [
+      "• Model Architecture: MemSkill employs a three-component system: a controller that learns to select relevant memory skills, an LLM-based executor that produces skill-guided memories, and a designer that periodically reviews hard cases and evolves the skill set through refinements and new skill proposals.",
+      "• Data used: Experiments conducted on LoCoMo, LongMemEval, HotpotQA, and ALFWorld datasets, which cover diverse interaction patterns and long history scenarios for evaluating memory extraction and consolidation capabilities.",
+      "• Performance metrics: MemSkill demonstrates improved task performance over strong baselines across all tested settings, with particular strength in generalization across different environments and interaction patterns.",
+      "• Key innovation: The system introduces a closed-loop procedure where both skill-selection policy and the skill set itself evolve through periodic review of hard cases, moving beyond static hand-designed memory operations."
+    ],
+    "summary_cn": [
+      "• 核心模型: MemSkill采用三组件架构：控制器学习选择相关记忆技能，基于LLM的执行器生成技能引导的记忆，设计器定期审查困难案例并通过改进和新技能提案演化技能集。",
+      "• 数据来源: 在LoCoMo、LongMemEval、HotpotQA和ALFWorld数据集上进行实验，涵盖多样化交互模式和长历史场景，用于评估记忆提取和整合能力。",
+      "• 主要结论: MemSkill在所有测试环境中均优于强基线方法，尤其在跨环境泛化能力方面表现突出，通过闭环演化机制实现了自适应记忆管理。",
+      "• 技术突破: 将静态手工设计的记忆操作重构为可学习和演化的记忆技能，形成控制器-执行器-设计器的闭环进化系统。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for systematic edge in memory-intensive LLM agent applications where adaptive memory management can reduce hallucination and improve long-context reasoning, particularly valuable for complex multi-step decision tasks.",
+      "• Implementation Risk: Moderate to high risk due to dependency on LLM quality for executor component, computational overhead from periodic skill evolution cycles, and potential instability during skill set transitions in production environments.",
+      "• Novelty: Significant novelty in reframing memory operations as learnable skills with evolutionary mechanisms, moving beyond static approaches to create self-improving memory systems for LLM agents.",
+      "• Practical limitations: Requires substantial training data for skill evolution, may face scalability issues with extremely long interaction histories, and skill evolution process adds latency that could impact real-time applications."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将记忆操作重构为可学习、可演化的技能系统，引入控制器-执行器-设计器闭环架构，实现记忆管理的自进化能力，突破传统静态方法的局限性。",
+      "• 实盘坑: 执行器组件严重依赖LLM质量，技能演化周期带来显著计算开销，生产环境中技能集切换可能引发系统不稳定，长历史场景下的可扩展性存疑。",
+      "• 复现难度: 中等偏高，需要构建完整的技能演化管道，获取足够的困难案例数据用于设计器训练，且多数据集实验设置增加了系统集成复杂度。",
+      "• 应用局限: 技能演化过程增加系统延迟，不适合实时性要求极高的场景，且演化机制可能引入不可预测的行为变化，增加生产环境风险。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2602.02473v1",
+    "title": "HumanX: Toward Agile and Generalizable Humanoid Interaction Skills from Human Videos",
+    "pdf_url": "https://arxiv.org/pdf/2602.02473v1",
+    "published": "2026-02-02",
+    "crawled_at": "2026-02-03 20:23:24",
+    "ai_score": 8.5,
+    "translated_title": "HumanX：从人类视频中实现敏捷且可泛化的人形机器人交互技能",
+    "summary_en": [
+      "• Model Architecture: HumanX integrates XGen (data generation pipeline) and XMimic (unified imitation learning framework) to synthesize diverse robot interaction data from human videos without task-specific rewards.",
+      "• Data used: Leverages human video demonstrations across five domains (basketball, football, badminton, cargo pickup, reactive fighting) to generate physically plausible robot data with scalable augmentation.",
+      "• Performance metrics: Achieves over 8 times higher generalization success than prior methods, transfers 10 skills zero-shot to a physical Unitree G1 humanoid, and enables complex maneuvers like pump-fake turnaround fadeaway jumpshots."
+    ],
+    "summary_cn": [
+      "• 核心模型: HumanX框架整合XGen（数据生成管道）和XMimic（统一模仿学习框架），从人类视频合成多样化机器人交互数据，无需任务特定奖励。",
+      "• 数据来源: 基于篮球、足球、羽毛球、货物拾取和反应性格斗五个领域的人类视频演示，生成物理合理的机器人数据并支持可扩展增强。",
+      "• 主要结论: 相比先前方法实现超过8倍的泛化成功率，零样本迁移10项技能至物理Unitree G1人形机器人，并完成如假动作转身后仰跳投等复杂动作。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for robotics and automation applications, enabling scalable skill acquisition from minimal human demonstrations, which could reduce training costs and improve adaptability in dynamic environments.",
+      "• Implementation Risk: Moderate risk due to reliance on video data quality and physical simulation accuracy; real-world deployment may face challenges in perception robustness and hardware limitations.",
+      "• Novelty: Significant novelty in combining video-based data generation with imitation learning for humanoid robots, eliminating task-specific reward engineering and demonstrating zero-shot transfer to physical systems."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将基于视频的数据生成与模仿学习结合用于人形机器人，消除任务特定奖励工程，实现零样本迁移至物理系统，具有突破性。",
+      "• 实盘坑: 依赖视频数据质量和物理模拟精度，实际部署可能面临感知鲁棒性不足和硬件限制等挑战，泛化到更复杂场景存在风险。",
+      "• 复现难度: 中等偏高，需要大量计算资源进行数据生成和训练，且依赖特定机器人硬件（如Unitree G1），开源代码和数据集可用性未知。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2602.02472v1",
+    "title": "SPARKLING: Balancing Signal Preservation and Symmetry Breaking for Width-Progressive Learning",
+    "pdf_url": "https://arxiv.org/pdf/2602.02472v1",
+    "published": "2026-02-02",
+    "crawled_at": "2026-02-03 20:23:42",
+    "ai_score": 8.2,
+    "translated_title": "SPARKLING：宽度渐进学习中信号保持与对称性破坏的平衡",
+    "summary_en": [
+      "• Model Architecture: SPARKLING framework for mid-stage width expansion in progressive learning, featuring RMS-scale consistency for signal preservation and asymmetric optimizer state resetting for symmetry breaking.",
+      "• Data used: Experiments conducted on Mixture-of-Experts (MoE) models across multiple width axes and optimizer families, though specific datasets are not detailed in the abstract.",
+      "• Performance metrics: Achieves up to 35% reduction in training cost under 2× width expansion, consistently outperforming training from scratch and prior methods limited to early-stage expansion."
+    ],
+    "summary_cn": [
+      "• 核心模型: SPARKLING框架，用于渐进学习中的中期宽度扩展，通过RMS尺度一致性保持信号，非对称优化器状态重置打破对称性。",
+      "• 数据来源: 基于混合专家（MoE）模型进行实验，涵盖多种宽度轴和优化器家族，但摘要未具体说明数据集细节。",
+      "• 主要结论: 在2倍宽度扩展下，训练成本降低高达35%，始终优于从头训练和仅限于早期扩展的现有方法。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for reducing computational overhead in large-scale model training, potentially enabling faster iteration and cost savings in production environments.",
+      "• Implementation Risk: Moderate; while the method shows robustness across optimizers, mid-stage expansion remains challenging, and real-world deployment may require fine-tuning for specific architectures.",
+      "• Novelty: Significant; addresses the understudied problem of width expansion in progressive learning, introducing a balanced approach to mitigate training instabilities and symmetry issues."
+    ],
+    "verdict_cn": [
+      "• 创新点: 针对渐进学习中宽度扩展的未充分研究问题，提出中期扩展的平衡方法，有效解决激活统计破坏和梯度对称性障碍。",
+      "• 实盘坑: 中期扩展仍具挑战性，实际部署可能需针对特定架构调整，且数据集细节未明确，影响泛化性评估。",
+      "• 复现难度: 中等；框架描述清晰，但依赖MoE模型实验，复现需相应硬件和优化器配置，可能增加复杂性。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2602.02469v1",
+    "title": "Age-Aware Edge-Blind Federated Learning via Over-the-Air Aggregation",
+    "pdf_url": "https://arxiv.org/pdf/2602.02469v1",
+    "published": "2026-02-02",
+    "crawled_at": "2026-02-03 20:24:06",
+    "ai_score": 7.8,
+    "translated_title": "基于空中聚合的年龄感知边缘盲联邦学习",
+    "summary_en": [
+      "• Model Architecture: Proposes an age-aware edge-blind federated learning system using over-the-air aggregation with multiple antennas at the parameter server (PS), employing maximum-ratio combining (MRC) without requiring channel state information (CSI) at devices, and implementing AgeTop-k selection to choose model coordinates based on magnitude and waiting time to fit within a single OFDM symbol.",
+      "• Data used: Experimental results likely based on standard federated learning datasets (e.g., MNIST, CIFAR-10) or synthetic data, as typical in wireless FL papers, though not explicitly specified in the abstract.",
+      "• Performance metrics: Convergence bound analysis shows trade-offs between compression error and channel noise; experiments demonstrate improved accuracy and convergence speed with more PS antennas, AgeTop-k outperforming random selection in good channels, and optimal k dependent on channel conditions (smaller k better in noisy settings)."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出一种年龄感知边缘盲联邦学习系统，采用空中聚合技术，参数服务器配备多天线，使用最大比合并（MRC）而无需设备端信道状态信息（CSI），并实施AgeTop-k选择算法，基于幅度和等待时间选取模型坐标以适配单个OFDM符号。",
+      "• 数据来源: 实验可能基于标准联邦学习数据集（如MNIST、CIFAR-10）或合成数据，这是无线FL论文的常见做法，但摘要中未明确说明。",
+      "• 主要结论: 收敛界分析揭示了压缩误差与信道噪声之间的权衡；实验表明，更多PS天线可显著提升精度和收敛速度，AgeTop-k在良好信道条件下优于随机选择，且最优k值取决于信道状况（噪声环境下较小k更佳）。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the approach could enhance efficiency in wireless FL applications, potentially reducing latency and improving model updates in distributed systems, but direct financial alpha generation is limited without specific market data integration.",
+      "• Implementation Risk: High; relies on multiple antennas and OFDM symbols in real-world wireless environments, which may face practical challenges like hardware costs, interference, and scalability issues in noisy or dynamic channels.",
+      "• Novelty: Moderate; combines age-aware selection with over-the-air FL and edge-blind design, offering a fresh take on resource allocation, but builds on existing FL and wireless communication concepts without groundbreaking theoretical advances."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；将年龄感知选择与空中联邦学习和边缘盲设计结合，在资源分配方面提供新思路，但基于现有FL和无线通信概念，缺乏突破性理论创新。",
+      "• 实盘坑: 高；依赖多天线和OFDM符号，在实际无线环境中可能面临硬件成本、干扰和可扩展性等挑战，特别是在噪声或动态信道中。",
+      "• 复现难度: 中等；需要模拟无线信道和多天线系统，实验设置相对标准，但实现AgeTop-k算法和收敛分析可能需专业知识，无公开代码会增加难度。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2602.02465v1",
+    "title": "MentisOculi: Revealing the Limits of Reasoning with Mental Imagery",
+    "pdf_url": "https://arxiv.org/pdf/2602.02465v1",
+    "published": "2026-02-02",
+    "crawled_at": "2026-02-03 20:24:27",
+    "ai_score": 7.5,
+    "translated_title": "MentisOculi：揭示基于心理意象推理的局限性",
+    "summary_en": [
+      "• Model Architecture: Evaluates frontier models transitioning from multimodal large language models (MLLMs) to unified multimodal models (UMMs) capable of native interleaved generation, with a focus on visual reasoning strategies including latent tokens and explicit generated imagery.",
+      "• Data used: Utilizes MentisOculi, a procedural, stratified suite of multi-step reasoning problems designed to challenge models with visual solutions, though specific dataset details are not provided in the abstract.",
+      "• Performance metrics: Finds that visual strategies generally fail to improve performance, with UMMs showing critical limitations such as compounding generation errors and inability to leverage ground-truth visualizations, despite having textual reasoning capacity."
+    ],
+    "summary_cn": [
+      "• 核心模型: 评估从多模态大语言模型（MLLMs）向能够原生交错生成的多模态统一模型（UMMs）过渡的前沿模型，重点关注包括潜在标记和显式生成图像在内的视觉推理策略。",
+      "• 数据来源: 使用MentisOculi，这是一个程序化、分层的多步推理问题套件，旨在通过视觉解决方案挑战模型，但摘要中未提供具体数据集细节。",
+      "• 主要结论: 发现视觉策略通常无法提升性能，UMMs存在关键局限性，如生成错误累积和无法利用真实可视化，尽管具备文本推理能力。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low; the paper identifies a significant gap in visual reasoning for frontier models, suggesting limited immediate alpha from visual thought applications in trading strategies, but highlights foundational work for future improvements.",
+      "• Implementation Risk: High; findings show models fail to leverage even ground-truth visualizations, indicating high risk in deploying such systems for real-time decision-making without robust error correction.",
+      "• Novelty: Moderate; introduces MentisOculi as a novel evaluation suite to probe visual reasoning, but the core finding of visual thoughts not benefiting reasoning is incremental, building on existing multimodal research."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；引入MentisOculi作为新颖的评估套件来探究视觉推理，但视觉思维无益于推理的核心发现是渐进式的，基于现有多模态研究。",
+      "• 实盘坑: 高；研究发现模型甚至无法利用真实可视化，表明在缺乏稳健错误纠正的情况下，部署此类系统进行实时决策存在高风险。",
+      "• 复现难度: 中等；MentisOculi套件可能需定制实现，但基于标准模型评估，复现核心实验在资源充足下可行。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2602.02458v1",
+    "title": "Conflict-Aware Client Selection for Multi-Server Federated Learning",
+    "pdf_url": "https://arxiv.org/pdf/2602.02458v1",
+    "published": "2026-02-02",
+    "crawled_at": "2026-02-03 20:24:44",
+    "ai_score": 7.2,
+    "translated_title": "面向多服务器联邦学习的冲突感知客户端选择",
+    "summary_en": [
+      "• Model Architecture: Proposes RL-CRP, a decentralized reinforcement learning framework with conflict risk prediction using categorical hidden Markov models for client selection in multi-server FL systems.",
+      "• Data used: Sparse historical client selection sequences from edge servers, with no specific dataset mentioned; experiments likely simulated based on FL benchmarks.",
+      "• Performance metrics: Evaluates reduction in inter-server conflicts, training latency, convergence speed, and communication cost; claims significant improvements in training efficiency."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出RL-CRP框架，结合去中心化强化学习和基于分类隐马尔可夫模型的冲突风险预测，优化多服务器联邦学习中的客户端选择。",
+      "• 数据来源: 使用边缘服务器的稀疏历史客户端选择序列，未指定具体数据集；实验可能基于联邦学习基准模拟。",
+      "• 主要结论: 有效减少服务器间冲突，显著提升训练效率，包括收敛速度和通信成本优化。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; addresses practical bottlenecks in multi-server FL deployment, potentially applicable to edge computing and IoT scenarios with distributed ML needs.",
+      "• Implementation Risk: High; relies on accurate conflict prediction and decentralized coordination, which may be unstable in real-world heterogeneous environments.",
+      "• Novelty: Limited; builds on existing FL and RL techniques, with incremental contribution in conflict-aware selection rather than groundbreaking methodology."
+    ],
+    "verdict_cn": [
+      "• 创新点: 有限；将冲突预测集成到多服务器联邦学习中，但核心方法基于现有强化学习和隐马尔可夫模型，缺乏突破性创新。",
+      "• 实盘坑: 高；依赖准确的冲突预测和去中心化协调，在真实异构环境中可能不稳定，且公平性奖励机制可能增加复杂度。",
+      "• 复现难度: 中等；需要模拟多服务器FL环境，但框架描述较清晰，复现可能可行但需调整参数。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2601.22157v1",
     "title": "Discovering Hidden Gems in Model Repositories",
     "pdf_url": "https://arxiv.org/pdf/2601.22157v1",
