@@ -1,5 +1,351 @@
 [
   {
+    "id": "2602.03846v1",
+    "title": "PLATE: Plasticity-Tunable Efficient Adapters for Geometry-Aware Continual Learning",
+    "pdf_url": "https://arxiv.org/pdf/2602.03846v1",
+    "published": "2026-02-03",
+    "crawled_at": "2026-02-04 20:19:25",
+    "ai_score": 8.2,
+    "translated_title": "PLATE：可塑性可调的高效适配器，用于几何感知的持续学习",
+    "summary_en": [
+      "• Model Architecture: PLATE introduces structured low-rank updates ΔW = B A Q⊤, where B and Q are computed from pretrained weights and frozen, while only A is trained on new tasks, leveraging geometric redundancy in pretrained networks.",
+      "• Data used: The method requires no access to old-task data, addressing practical barriers in foundation model adaptation where pretraining distributions are often unavailable, focusing on new-task data only.",
+      "• Performance metrics: PLATE provides explicit control over the plasticity-retention trade-off, reduces functional drift on old-data distributions, and offers improved worst-case retention guarantees without old-data access."
+    ],
+    "summary_cn": [
+      "• 核心模型: PLATE采用结构化低秩更新ΔW = B A Q⊤，其中B和Q从预训练权重计算并冻结，仅A在新任务上训练，利用预训练网络中的几何冗余。",
+      "• 数据来源: 该方法无需访问旧任务数据，解决了基础模型适应中预训练分布常不可用的实际问题，仅依赖新任务数据。",
+      "• 主要结论: PLATE提供对可塑性-保留权衡的显式控制，减少旧数据分布上的功能漂移，并在无旧数据访问的情况下提供改进的最坏情况保留保证。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for alpha generation in adaptive trading systems by enabling efficient model updates without historical data, reducing catastrophic forgetting in dynamic markets.",
+      "• Implementation Risk: Moderate risk due to reliance on pretrained model redundancy, which may vary across architectures and datasets, potentially limiting generalization.",
+      "• Novelty: Novel approach exploiting geometric redundancy for continual learning without old-task data, offering explicit plasticity control and structured updates, advancing beyond traditional adapter methods."
+    ],
+    "verdict_cn": [
+      "• 创新点: 创新性地利用几何冗余实现无旧任务数据的持续学习，提供显式可塑性控制和结构化更新，超越传统适配器方法。",
+      "• 实盘坑: 依赖预训练模型的冗余性，可能因架构和数据集差异而受限，影响泛化能力，实盘需谨慎验证。",
+      "• 复现难度: 中等难度，代码已开源，但需理解几何冗余计算和低秩更新实现，对深度学习框架和数学基础要求较高。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2602.03840v1",
+    "title": "Investigating Quantum Circuit Designs Using Neuro-Evolution",
+    "pdf_url": "https://arxiv.org/pdf/2602.03840v1",
+    "published": "2026-02-03",
+    "crawled_at": "2026-02-04 20:19:45",
+    "ai_score": 7.5,
+    "translated_title": "基于神经进化的量子电路设计研究",
+    "summary_en": [
+      "• Model Architecture: EXAQC (Evolutionary eXploration of Augmenting Quantum Circuits) - an evolutionary algorithm combining neuroevolution and genetic programming to jointly optimize gate types, qubit connectivity, parameterization, and circuit depth while respecting hardware/noise constraints",
+      "• Data used: Benchmark datasets for classification tasks (unspecified but implied standard quantum ML benchmarks) and target quantum states for emulation tasks",
+      "• Performance metrics: Achieved >90% accuracy on most classification benchmarks with limited computational budget, high fidelity scores for quantum state emulation, demonstrated hardware-efficient circuit designs"
+    ],
+    "summary_cn": [
+      "• 核心模型: EXAQC（增强量子电路的进化探索） - 结合神经进化和遗传编程的进化算法，联合优化门类型、量子比特连接性、参数化和电路深度，同时考虑硬件/噪声约束",
+      "• 数据来源: 分类任务的基准数据集（未具体说明但暗示为标准量子机器学习基准）和用于模拟任务的目标量子态",
+      "• 主要结论: 在有限计算预算下，大多数分类基准达到>90%准确率，量子态模拟获得高保真度分数，展示了硬件高效的电路设计"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - Evolutionary approaches could discover novel circuit architectures that outperform human-designed templates, potentially leading to better quantum algorithms for financial optimization problems",
+      "• Implementation Risk: High - Quantum hardware constraints and noise sensitivity make real-world deployment challenging; evolutionary algorithms are computationally expensive",
+      "• Novelty: Significant - First comprehensive application of neuroevolution to quantum circuit design with joint optimization of multiple architectural elements; bridges quantum computing and evolutionary computation"
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著 - 首次将神经进化全面应用于量子电路设计，实现多个架构元素的联合优化；桥接量子计算与进化计算领域",
+      "• 实盘坑: 高 - 量子硬件约束和噪声敏感性使实际部署困难；进化算法计算成本高昂；缺乏具体金融应用验证",
+      "• 复现难度: 中等 - 需要量子计算框架（Qiskit/Pennylane）和进化算法专业知识；但方法描述相对清晰，开源可能性高"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2602.03839v1",
+    "title": "Understanding and Exploiting Weight Update Sparsity for Communication-Efficient Distributed RL",
+    "pdf_url": "https://arxiv.org/pdf/2602.03839v1",
+    "published": "2026-02-03",
+    "crawled_at": "2026-02-04 20:20:08",
+    "ai_score": 8.2,
+    "translated_title": "理解并利用权重更新稀疏性实现通信高效的分布式强化学习",
+    "summary_en": [
+      "• Model Architecture: PULSE (Patch Updates via Lossless Sparse Encoding) - a lossless weight synchronization method that transmits only indices and values of modified parameters, avoiding floating-point drift inherent in additive delta schemes.",
+      "• Data used: Systematic empirical study of weight-update sparsity across training dynamics, off-policy delay, and model scale in distributed RL settings, with observations based on step-level and multi-step granularities rather than coarse checkpoint differences.",
+      "• Performance metrics: Achieves over 100x communication reduction (14 GB to ~108 MB), reduces bandwidth required for weight synchronization from 20 Gbit/s to 0.2 Gbit/s while maintaining bit-identical training dynamics and performance compared to full weight synchronization."
+    ],
+    "summary_cn": [
+      "• 核心模型: PULSE（通过无损稀疏编码的补丁更新）——一种无损权重同步方法，仅传输修改参数的索引和值，避免加法增量方案固有的浮点漂移。",
+      "• 数据来源: 对分布式强化学习中训练动态、离策略延迟和模型规模的权重更新稀疏性进行系统实证研究，基于步级和多步粒度而非粗略检查点差异。",
+      "• 主要结论: 更新稀疏性始终很高，在实际相关设置中经常超过99%；在带宽受限的去中心化环境中，通信减少超过100倍，同时保持与完整权重同步相同的训练动态和性能。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High - enables decentralized RL training to approach centralized throughput, potentially unlocking new distributed training architectures for LLM post-training that were previously bandwidth-prohibited.",
+      "• Implementation Risk: Moderate - requires careful handling of sparse update encoding/decoding and robustness to transmission errors, though the paper claims PULSE is robust to such issues.",
+      "• Novelty: Significant - first systematic study of weight-update sparsity at fine granularities in RL, with practical implementation (PULSE) that achieves dramatic communication reduction while maintaining training fidelity."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次在强化学习中系统研究细粒度权重更新稀疏性，提出PULSE实现100倍以上通信减少，同时保持训练保真度，为带宽受限的分布式LLM后训练提供新解决方案。",
+      "• 实盘坑: 需要精确的稀疏编码/解码实现，对传输错误敏感（尽管论文声称鲁棒），在真实网络环境中可能面临延迟和丢包挑战。",
+      "• 复现难度: 中等——核心算法相对简单，但需要复现其稀疏性观察并验证在不同RL任务和模型规模下的通用性。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2602.03825v1",
+    "title": "Robust Intervention Learning from Emergency Stop Interventions",
+    "pdf_url": "https://arxiv.org/pdf/2602.03825v1",
+    "published": "2026-02-03",
+    "crawled_at": "2026-02-04 20:20:30",
+    "ai_score": 7.8,
+    "translated_title": "基于紧急停止干预的鲁棒干预学习",
+    "summary_en": [
+      "• Model Architecture: Proposes Residual Intervention Fine-Tuning (RIFT), a residual fine-tuning algorithm that combines intervention feedback with a prior policy to resolve ambiguity in under-specified tasks.",
+      "• Data used: Human intervention data from autonomous systems testing, specifically emergency stop interventions, which are noisy and incomplete signals.",
+      "• Performance metrics: Theoretical analysis shows principled policy improvement under certain conditions, with experiments demonstrating robust and consistent improvement across various intervention strategies and prior policy qualities."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出残差干预微调（RIFT）算法，通过将干预反馈与先验策略结合，解决任务定义不明确时的模糊性问题。",
+      "• 数据来源: 使用自动驾驶系统测试中的人类干预数据，特别是紧急停止干预，这些数据通常存在噪声且不完整。",
+      "• 主要结论: 理论分析表明在特定条件下可实现原则性策略改进，实验验证了该算法在不同干预策略和先验策略质量下的鲁棒性和一致性改进。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - The approach could be adapted for algorithmic trading where human trader interventions signal model weaknesses, but direct financial application is limited.",
+      "• Implementation Risk: High - Relies heavily on quality of prior policy and intervention data; noisy financial data could lead to unstable learning.",
+      "• Novelty: High - Framing intervention learning as residual fine-tuning with theoretical guarantees is innovative, though building on existing RL fine-tuning concepts."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将干预学习重新定义为残差微调问题，并提供理论保证，这在强化学习领域具有显著创新性。",
+      "• 实盘坑: 高度依赖先验策略质量和干预数据准确性，金融市场噪声数据可能导致学习过程不稳定。",
+      "• 复现难度: 中等 - 需要构建模拟干预环境，但算法框架相对清晰，复现技术门槛适中。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2602.03823v1",
+    "title": "Preference-based Conditional Treatment Effects and Policy Learning",
+    "pdf_url": "https://arxiv.org/pdf/2602.03823v1",
+    "published": "2026-02-03",
+    "crawled_at": "2026-02-04 20:20:54",
+    "ai_score": 8.2,
+    "translated_title": "基于偏好的条件处理效应与策略学习",
+    "summary_en": [
+      "• Model Architecture: Introduces Conditional Preference-based Treatment Effect (CPTE) framework that requires only outcome rankings under preference rules, enabling flexible modeling of heterogeneous effects with multivariate, ordinal, or preference-driven outcomes.",
+      "• Data used: Synthetic and semi-synthetic experimental data to validate performance gains and practical impact of the proposed methods.",
+      "• Performance metrics: Demonstrates clear performance improvements through estimation strategies including matching, quantile, and distributional regression, with efficient influence-function estimators to correct plug-in bias and maximize policy value.",
+      "• Key innovation: Unifies applications such as conditional probability of necessity and sufficiency, conditional Win Ratio, and Generalized Pairwise Comparisons, providing interpretable targets and new identifiability conditions for previously unidentifiable estimands."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出条件偏好处理效应（CPTE）框架，仅需基于偏好规则对结果进行排序，支持多变量、有序或偏好驱动结果的异质性效应灵活建模。",
+      "• 数据来源: 使用合成和半合成实验数据验证方法性能，展示实际应用效果。",
+      "• 主要结论: 通过匹配、分位数和分布回归等估计策略实现性能提升，设计高效影响函数估计器校正插件偏差并最大化策略价值。",
+      "• 理论贡献: 统一条件必要性/充分性概率、条件胜率比和广义成对比较等应用，为先前不可识别估计量提供新的可识别条件。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - CPTE framework enables flexible modeling of heterogeneous treatment effects with preference-based outcomes, potentially uncovering subtle market inefficiencies in multi-dimensional outcome spaces, though direct financial application requires domain adaptation.",
+      "• Implementation Risk: High - Preference rule specification is subjective and may introduce model misspecification; efficient influence-function estimators add computational complexity; real-world financial data with clear preference rankings is scarce.",
+      "• Novelty: High - Introduces a novel preference-based framework that unifies multiple conditional treatment effect applications and addresses non-identifiability challenges through new theoretical conditions, representing significant methodological advancement in causal inference."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高 - 提出基于偏好的条件处理效应框架，统一多种应用场景并解决非可识别性问题，在因果推断方法学上有重要突破。",
+      "• 实盘坑: 高 - 偏好规则设定主观性强易导致模型误设；高效影响函数估计器计算复杂；金融市场中具有明确偏好排序的数据稀缺。",
+      "• 复现难度: 中高 - 需要精确实现匹配、分位数和分布回归等估计策略，偏好规则的工程化实现和高效影响函数估计器的优化调试存在技术挑战。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2602.03816v1",
+    "title": "SymPlex: A Structure-Aware Transformer for Symbolic PDE Solving",
+    "pdf_url": "https://arxiv.org/pdf/2602.03816v1",
+    "published": "2026-02-03",
+    "crawled_at": "2026-02-04 20:21:15",
+    "ai_score": 8.5,
+    "translated_title": "SymPlex：用于符号偏微分方程求解的结构感知Transformer",
+    "summary_en": [
+      "• Model Architecture: SymPlex combines a reinforcement learning framework with SymFormer, a structure-aware Transformer that uses tree-relative self-attention and grammar-constrained autoregressive decoding to generate syntactically valid symbolic expressions.",
+      "• Data used: The method operates without ground-truth expressions, relying solely on the PDE and its boundary conditions as input, eliminating the need for labeled training data.",
+      "• Performance metrics: Empirical results demonstrate exact recovery of non-smooth and parametric PDE solutions, showcasing the ability to produce interpretable, human-readable symbolic solutions directly in expression space."
+    ],
+    "summary_cn": [
+      "• 核心模型: SymPlex采用强化学习框架，结合SymFormer（一种结构感知Transformer），通过树相对自注意力和语法约束自回归解码生成语法有效的符号表达式。",
+      "• 数据来源: 该方法无需真实表达式作为训练数据，仅依赖偏微分方程及其边界条件作为输入，避免了标注数据的需求。",
+      "• 主要结论: 实验结果表明，该方法能精确恢复非光滑和参数化偏微分方程的解，直接在符号表达式空间中生成可解释、人类可读的解决方案。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for generating interpretable symbolic models in quantitative finance, such as for pricing derivatives or modeling complex market dynamics, where explicit parametric dependence is crucial.",
+      "• Implementation Risk: Moderate risk due to the complexity of integrating tree-structured decoding and reinforcement learning in production environments, which may require significant computational resources and expertise.",
+      "• Novelty: High novelty in combining structure-aware Transformers with grammar constraints for symbolic PDE solving, offering a fresh approach compared to traditional numerical or neural approximations."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将结构感知Transformer与语法约束结合用于符号偏微分方程求解，相比传统数值或神经近似方法，提供了新颖的解决方案，增强了表达能力和可解释性。",
+      "• 实盘坑: 实盘应用中可能面临树结构解码和强化学习集成的复杂性，需要大量计算资源和专业知识，可能导致部署延迟和成本增加。",
+      "• 复现难度: 中等偏高，因为涉及自定义Transformer架构和强化学习框架，需要深入理解符号处理和语法约束，但开源代码和详细论文可降低难度。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2602.03815v1",
+    "title": "Fast-Slow Efficient Training for Multimodal Large Language Models via Visual Token Pruning",
+    "pdf_url": "https://arxiv.org/pdf/2602.03815v1",
+    "published": "2026-02-03",
+    "crawled_at": "2026-02-04 20:21:35",
+    "ai_score": 8.2,
+    "translated_title": "通过视觉令牌剪枝实现多模态大语言模型的快慢高效训练",
+    "summary_en": [
+      "• Model Architecture: DualSpeed framework with fast-mode (visual token pruning via VTP plugins) and slow-mode (full visual sequence training) with mode isolator and self-distillation from fast to slow mode",
+      "• Data used: Not explicitly specified in abstract, but experiments conducted on LLaVA-1.5 and LLaVA-NeXT models suggesting standard multimodal training datasets",
+      "• Performance metrics: 2.1× training acceleration for LLaVA-1.5 and 4.0× for LLaVA-NeXT while retaining over 99% performance compared to baseline"
+    ],
+    "summary_cn": [
+      "• 核心模型: DualSpeed快慢双模框架，快模式集成视觉令牌剪枝(VTP)插件，慢模式训练完整视觉序列，通过模式隔离器和自蒸馏技术连接",
+      "• 数据来源: 未在摘要中明确说明，但基于LLaVA-1.5和LLaVA-NeXT的实验表明使用标准多模态训练数据集",
+      "• 主要结论: 在LLaVA-1.5上实现2.1倍训练加速，LLaVA-NeXT上实现4.0倍加速，同时保持99%以上的性能不退化"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - addresses real training efficiency pain point in MLLMs but limited to visual token reduction rather than broader architectural optimization",
+      "• Implementation Risk: High - dual-mode training adds complexity, mode switching logic could introduce instability, self-distillation effectiveness depends on fast-mode quality",
+      "• Novelty: Good - creative application of VTP to training phase with dual-mode approach to solve training-inference mismatch, though builds heavily on existing VTP methods"
+    ],
+    "verdict_cn": [
+      "• 创新点: 将视觉令牌剪枝(VTP)从推理扩展到训练阶段，通过快慢双模设计解决训练-推理不匹配问题，引入自蒸馏技术提升慢模式训练效率",
+      "• 实盘坑: 双模式切换逻辑复杂可能引入训练不稳定性，自蒸馏效果依赖快模式训练质量，视觉令牌剪枝可能损失细粒度视觉信息",
+      "• 复现难度: 中等 - 需要实现VTP插件、模式隔离器和自蒸馏机制，但代码已开源，基于现有LLaVA框架相对可行"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2602.03814v1",
+    "title": "Conformal Thinking: Risk Control for Reasoning on a Compute Budget",
+    "pdf_url": "https://arxiv.org/pdf/2602.03814v1",
+    "published": "2026-02-03",
+    "crawled_at": "2026-02-04 20:21:59",
+    "ai_score": 8.2,
+    "translated_title": "保形思维：计算预算下的推理风险控制",
+    "summary_en": [
+      "• Model Architecture: Introduces a dual-threshold stopping framework with an upper threshold for confident outputs and a novel parametric lower threshold for preemptively stopping unsolvable instances, using distribution-free risk control to optimize stopping mechanisms.",
+      "• Data used: Validation sets across diverse reasoning tasks and models, with empirical results demonstrating computational efficiency gains while adhering to user-specified risk targets.",
+      "• Performance metrics: Achieves computational efficiency improvements through lower threshold and ensemble stopping mechanisms, effectively balancing error rate control with compute minimization.",
+      "• Core methodology: Re-frames budget setting as risk control, limiting error rate while minimizing compute, with adaptive reasoning that spends tokens only when they improve reliability."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出双阈值停止框架，包括用于自信输出的上限阈值和用于预停止不可解实例的新型参数化下限阈值，采用无分布风险控制优化停止机制。",
+      "• 数据来源: 跨多种推理任务和模型的验证集，实证结果展示在遵守用户指定风险目标的同时实现计算效率提升。",
+      "• 主要结论: 通过下限阈值和集成停止机制实现计算效率改进，有效平衡错误率控制与计算最小化，将预算设置重新定义为风险控制问题。",
+      "• 技术方法: 使用自适应推理，仅在令牌能提高可靠性时使用，通过分布自由风险控制指定最优停止机制。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for reducing computational costs in LLM-based trading strategies while maintaining risk control, enabling more efficient deployment of reasoning models in real-time financial applications.",
+      "• Implementation Risk: Moderate risk due to dependency on validation set quality and the challenge of accurately estimating risk targets in dynamic market environments, with potential overfitting to specific reasoning tasks.",
+      "• Novelty: Significant novelty in re-framing compute budget as risk control problem and introducing parametric lower threshold for preemptive stopping, advancing adaptive reasoning techniques beyond simple confidence-based approaches.",
+      "• Practical limitations: Requires careful calibration of risk targets and may struggle with non-stationary data distributions common in financial markets, limiting immediate plug-and-play applicability."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将计算预算重新定义为风险控制问题，引入参数化下限阈值进行预停止，显著推进自适应推理技术，超越简单的基于置信度的方法。",
+      "• 实盘坑: 依赖验证集质量，在动态市场环境中准确估计风险目标具有挑战性，可能对特定推理任务过拟合，需谨慎校准风险目标。",
+      "• 复现难度: 中等难度，需要跨多种推理任务和模型的验证数据，实现双阈值停止框架和分布自由风险控制算法，但核心方法描述清晰可复现。",
+      "• 市场适用性: 在基于LLM的交易策略中降低计算成本潜力高，但需适应金融市场非平稳数据分布，可能限制即插即用适用性。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2602.03812v1",
+    "title": "Antidistillation Fingerprinting",
+    "pdf_url": "https://arxiv.org/pdf/2602.03812v1",
+    "published": "2026-02-03",
+    "crawled_at": "2026-02-04 20:22:20",
+    "ai_score": 8.2,
+    "translated_title": "反蒸馏指纹识别",
+    "summary_en": [
+      "• Model Architecture: Introduces Antidistillation Fingerprinting (ADFP), a gradient-based framework leveraging a proxy model to identify tokens that maximize fingerprint detectability in student models after fine-tuning, without requiring knowledge of the student's architecture.",
+      "• Data used: Evaluated on GSM8K (math reasoning) and OASST1 (dialogue) benchmarks, using teacher-student model pairs for distillation detection experiments.",
+      "• Performance metrics: Achieves significant Pareto improvement over state-of-the-art baselines, demonstrating stronger detection confidence with minimal utility degradation compared to heuristic perturbation methods."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出反蒸馏指纹识别（ADFP）框架，基于梯度方法利用代理模型识别能最大化学生模型微调后指纹可检测性的token，不依赖学生模型架构信息。",
+      "• 数据来源: 使用GSM8K（数学推理）和OASST1（对话）基准数据集，构建教师-学生模型对进行蒸馏检测实验。",
+      "• 主要结论: 相比现有启发式扰动方法，ADFP在检测置信度和模型效用之间实现帕累托改进，显著降低指纹识别对生成质量的负面影响。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High - addresses critical need in LLM ecosystem for detecting unauthorized model distillation, potentially enabling new IP protection strategies and model provenance verification services.",
+      "• Implementation Risk: Moderate - requires access to teacher model gradients and careful tuning of proxy model, but framework is architecture-agnostic and less dependent on specific student model knowledge.",
+      "• Novelty: Significant - moves beyond heuristic watermarking to principled gradient-based approach that aligns fingerprinting with student learning dynamics, representing conceptual advancement in model attribution."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将指纹识别目标与学生模型学习动态对齐，从启发式水印转向基于梯度的原理性方法，在模型归属领域实现概念突破。",
+      "• 实盘坑: 需要教师模型梯度访问权限，代理模型调优可能复杂，实际部署需考虑计算开销和对抗性攻击风险。",
+      "• 复现难度: 中等 - 框架描述清晰，但需要复现梯度采样和代理模型训练流程，实验设置对计算资源要求较高。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2602.03808v1",
+    "title": "Enhancing Imbalanced Node Classification via Curriculum-Guided Feature Learning and Three-Stage Attention Network",
+    "pdf_url": "https://arxiv.org/pdf/2602.03808v1",
+    "published": "2026-02-03",
+    "crawled_at": "2026-02-04 20:22:45",
+    "ai_score": 8.2,
+    "translated_title": "通过课程引导特征学习与三阶段注意力网络增强不平衡节点分类",
+    "summary_en": [
+      "• Model Architecture: CL3AN-GNN employs a three-stage attention mechanism (Engage, Enact, Embed) inspired by human learning, starting with simple structural features (1-hop neighborhoods, low-degree nodes, class-separable pairs) and progressively addressing complex aspects (multi-step connections, heterogeneous edges, minority-class boundaries) via adaptive attention weights and curriculum-aligned loss weighting.",
+      "• Data used: Evaluated on eight Open Graph Benchmark datasets covering social, biological, and citation networks, ensuring diverse graph types and imbalance scenarios for robust testing.",
+      "• Performance metrics: Shows consistent improvements in accuracy, F1-score, and AUC over state-of-the-art methods across all datasets, with faster convergence, better generalization to new imbalanced graphs, and interpretability via gradient stability and attention correlation learning curves."
+    ],
+    "summary_cn": [
+      "• 核心模型: CL3AN-GNN采用三阶段注意力机制（Engage、Enact、Embed），模拟人类学习过程，从简单结构特征（1跳邻域、低度节点、类可分对）逐步处理复杂图关系（多步连接、异质边、少数类边界），通过自适应注意力权重和课程对齐损失加权实现稳定学习。",
+      "• 数据来源: 使用八个Open Graph Benchmark数据集，涵盖社交、生物和引文网络，确保多样化的图类型和不平衡场景，以验证模型的鲁棒性。",
+      "• 主要结论: 在所有数据集上，模型在准确率、F1分数和AUC指标上均优于现有方法，收敛速度更快，对新不平衡图的泛化能力更强，并通过梯度稳定性和注意力相关性学习曲线提供可解释性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for generating alpha in graph-based financial applications (e.g., fraud detection, network risk analysis) by improving minority-class prediction in imbalanced settings, leading to better anomaly detection and edge-case performance.",
+      "• Implementation Risk: Moderate risk due to reliance on curriculum learning and multi-stage attention, which may require careful hyperparameter tuning and computational overhead for real-time deployment in dynamic financial graphs.",
+      "• Novelty: Strong novelty in integrating curriculum learning with GNNs for imbalance handling, offering a structured, interpretable approach that outperforms end-to-end methods, though attention mechanisms are not entirely new in GNN literature."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将课程学习与图神经网络结合处理不平衡问题，提出三阶段注意力机制，从简单到复杂渐进学习，结构清晰且可解释性强，在理论和实践上均有贡献。",
+      "• 实盘坑: 依赖课程学习和多阶段注意力，可能需精细调参和较高计算成本，在动态金融图中实时部署存在挑战；对初始嵌入（GCN/GAT）的敏感性可能影响稳定性。",
+      "• 复现难度: 中等难度，需实现三阶段注意力、课程损失加权和复杂图数据处理，但代码和数据集公开可降低门槛；实验细节（如超参数设置）需仔细复现以确保性能。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
     "id": "2602.02495v1",
     "title": "Reward-free Alignment for Conflicting Objectives",
     "pdf_url": "https://arxiv.org/pdf/2602.02495v1",
