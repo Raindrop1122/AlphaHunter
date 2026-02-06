@@ -1,5 +1,361 @@
 [
   {
+    "id": "2602.06043v1",
+    "title": "Shared LoRA Subspaces for almost Strict Continual Learning",
+    "pdf_url": "https://arxiv.org/pdf/2602.06043v1",
+    "published": "2026-02-05",
+    "crawled_at": "2026-02-06 20:19:03",
+    "ai_score": 8.2,
+    "translated_title": "共享LoRA子空间实现近乎严格的持续学习",
+    "summary_en": [
+      "• Model Architecture: Share constructs a single, shared low-rank subspace that dynamically updates to integrate knowledge from new tasks, enabling forward knowledge transfer while minimizing catastrophic interference.",
+      "• Data used: Experiments span image classification, natural language understanding, 3D pose estimation, and text-to-image generation, validating cross-modal applicability.",
+      "• Performance metrics: Achieves up to 100x parameter reduction and 281x memory savings over traditional LoRA methods, with performance comparable to jointly trained models; a single Share model can replace hundreds of task-specific LoRA adapters."
+    ],
+    "summary_cn": [
+      "• 核心模型: Share构建一个共享的低秩子空间，通过动态更新整合新任务知识，实现前向知识传递并减少灾难性遗忘。",
+      "• 数据来源: 实验涵盖图像分类、自然语言理解、3D姿态估计和文本到图像生成，验证了跨模态适用性。",
+      "• 主要结论: 相比传统LoRA方法，参数减少高达100倍，内存节省281倍，性能接近联合训练模型；单个Share模型可替代数百个任务特定LoRA适配器。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High scalability for lifelong learning in large-scale AI systems could enable adaptive trading strategies that evolve with market regimes without retraining, reducing computational costs.",
+      "• Implementation Risk: Dynamic subspace updates may introduce instability in real-time applications; cross-modal validation is promising but requires rigorous testing in financial datasets.",
+      "• Novelty: Introduces a novel mechanism for strict continual learning without data replay or multiple adapters, addressing a key limitation in parameter-efficient tuning methods."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出无需数据回放或多适配器的严格持续学习方法，通过共享子空间动态整合知识，解决参数高效调优的关键瓶颈。",
+      "• 实盘坑: 动态更新可能导致实时应用中的不稳定性；跨模态验证虽好，但需在金融数据上严格测试以确保鲁棒性。",
+      "• 复现难度: 中等偏高，涉及低秩子空间构建和动态更新机制，需要精细调参和跨任务验证，但开源代码可降低难度。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2602.06042v1",
+    "title": "Pseudo-Invertible Neural Networks",
+    "pdf_url": "https://arxiv.org/pdf/2602.06042v1",
+    "published": "2026-02-05",
+    "crawled_at": "2026-02-06 20:19:25",
+    "ai_score": 7.5,
+    "translated_title": "伪可逆神经网络",
+    "summary_en": [
+      "• Model Architecture: Introduces Surjective Pseudo-invertible Neural Networks (SPNN) that generalize the Moore-Penrose pseudo-inverse to nonlinear mappings, enabling tractable nonlinear pseudo-inverses with geometric properties like null-space projection.",
+      "• Data used: No specific datasets mentioned in the abstract; focuses on theoretical framework for zero-shot inverse problems across various degradation types (optical distortions, semantic abstractions like classification).",
+      "• Performance metrics: No quantitative results provided in abstract; claims to enable zero-shot inversion of complex nonlinear degradations and precise semantic control over generative outputs without retraining diffusion priors.",
+      "• Core contribution: Formalizes Non-Linear Back-Projection (NLBP) method that guarantees consistency constraints for nonlinear mappings via defined pseudo-inverse, expanding scope of zero-shot inverse problems beyond linear regimes."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出满射伪可逆神经网络（SPNN），将Moore-Penrose伪逆推广到非线性映射，实现具有零空间投影等几何性质的可处理非线性伪逆。",
+      "• 数据来源: 摘要中未提及具体数据集；专注于为零样本逆问题提供理论框架，涵盖多种退化类型（光学畸变、分类等语义抽象）。",
+      "• 主要结论: 通过定义的非线性伪逆形式化非线性反向投影方法，保证非线性映射的一致性约束，将零样本逆问题范围扩展到非线性退化场景。",
+      "• 应用扩展: 利用SPNN扩展零样本逆问题范围，实现对复杂非线性退化的零样本反演，无需重新训练扩散先验即可精确控制生成输出的语义。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - theoretical framework for nonlinear inverse problems could enable new signal extraction methods from degraded data, but abstract lacks empirical validation of financial applications.",
+      "• Implementation Risk: High - requires specialized architecture design (SPNN) and integration with diffusion models; nonlinear pseudo-inverse computation may be computationally intensive for real-time trading.",
+      "• Novelty: High - original generalization of pseudo-inverse to neural networks with formal geometric guarantees; extends diffusion-based null-space projection to nonlinear degradations.",
+      "• Practical limitations: Abstract-only analysis prevents assessment of scalability, convergence properties, or benchmark comparisons; financial degradation models would need custom development."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高 - 首次将伪逆系统推广到神经网络，形式化非线性反向投影的几何保证；将基于扩散的零空间投影方法扩展到非线性退化场景。",
+      "• 实盘坑: 高 - 需要专门设计SPNN架构并与扩散模型集成；非线性伪逆计算可能对实时交易计算密集；缺乏金融退化模型的具体实现。",
+      "• 复现难度: 中高 - 理论框架清晰但需要实现非线性伪逆算法和SPNN训练；扩散模型集成增加复杂性；未提供代码或实验细节增加复现不确定性。",
+      "• 量化适用性: 有限 - 专注于计算机视觉/生成模型的逆问题，需大量适配才能应用于市场数据退化恢复或信号提取。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2602.06038v1",
+    "title": "CommCP: Efficient Multi-Agent Coordination via LLM-Based Communication with Conformal Prediction",
+    "pdf_url": "https://arxiv.org/pdf/2602.06038v1",
+    "published": "2026-02-05",
+    "crawled_at": "2026-02-06 20:19:41",
+    "ai_score": 7.5,
+    "translated_title": "CommCP：基于LLM通信与保形预测的高效多智能体协调",
+    "summary_en": [
+      "• Model Architecture: CommCP is a decentralized LLM-based communication framework for multi-agent multi-task Embodied Question Answering (MM-EQA), using conformal prediction to calibrate messages and reduce receiver distractions.",
+      "• Data used: The framework is evaluated on a novel MM-EQA benchmark with diverse, photo-realistic household scenarios, including embodied questions, with data available on the project website.",
+      "• Performance metrics: Experimental results show CommCP significantly improves task success rate and exploration efficiency compared to baselines, as demonstrated in videos and code provided."
+    ],
+    "summary_cn": [
+      "• 核心模型: CommCP是一个基于LLM的去中心化通信框架，用于多智能体多任务具身问答（MM-EQA），采用保形预测校准消息以减少接收者干扰。",
+      "• 数据来源: 使用新颖的MM-EQA基准测试，包含多样化的照片级真实家庭场景和具身问题，数据可在项目网站获取。",
+      "• 主要结论: 实验表明，CommCP在任务成功率和探索效率上显著优于基线方法，相关视频和代码已公开。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the framework enhances multi-agent coordination in embodied AI, potentially applicable to robotic trading systems or automated data gathering in finance, but direct financial alpha is limited.",
+      "• Implementation Risk: High; real-world deployment requires robust hardware integration, real-time communication, and handling of noisy environments, posing scalability and reliability challenges.",
+      "• Novelty: High; introduces MM-EQA as a novel extension of EQA and integrates conformal prediction with LLM-based communication for improved reliability, though LLM applications in multi-agent settings are emerging."
+    ],
+    "verdict_cn": [
+      "• 创新点: 较高；提出MM-EQA作为EQA的新扩展，并结合保形预测与LLM通信提升可靠性，但多智能体LLM应用尚处早期阶段。",
+      "• 实盘坑: 高；实际部署需硬件集成、实时通信和环境噪声处理，存在可扩展性和可靠性风险，不适合直接金融应用。",
+      "• 复现难度: 中等；代码和数据已公开，但需要特定硬件和场景设置，复现可能受资源限制。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2602.06033v1",
+    "title": "Can vision language models learn intuitive physics from interaction?",
+    "pdf_url": "https://arxiv.org/pdf/2602.06033v1",
+    "published": "2026-02-05",
+    "crawled_at": "2026-02-06 20:19:58",
+    "ai_score": 6.5,
+    "translated_title": "视觉语言模型能否通过交互学习直觉物理？",
+    "summary_en": [
+      "• Model Architecture: Vision language models fine-tuned with reinforcement learning for interaction-based learning in physical environments.",
+      "• Data used: Simulated physical interaction data generated through reinforcement learning training, with tasks designed to test physical intuitions.",
+      "• Performance metrics: Within-task performance improves with interaction, but generalization to related tasks fails despite shared visual statistics and physical principles.",
+      "• Key finding: Interaction training does not lead to robust, generalizable physical rules, highlighting limitations in current approaches."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于强化学习的视觉语言模型，通过环境交互进行微调，以学习物理动态。",
+      "• 数据来源: 通过强化学习生成的模拟物理交互数据，任务设计用于测试物理直觉。",
+      "• 主要结论: 交互训练能提升任务内性能，但无法泛化到相关任务，即使任务共享视觉统计和物理原理。",
+      "• 研究意义: 揭示了当前模型在物理直觉学习上的局限性，强调需要更鲁棒的方法。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low; findings are negative, showing failure to generalize, which limits direct trading applications but may inform risk models for physical-world simulations.",
+      "• Implementation Risk: High; models require complex reinforcement learning setups and fail in generalization, making real-world deployment unreliable.",
+      "• Novelty: Moderate; builds on cognitive science hypotheses about interaction-based learning, but results are incremental and confirm existing limitations in AI physics understanding.",
+      "• Practical impact: Minimal for immediate trading; more relevant for long-term AI research in embodied cognition or simulation-based risk assessment."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；结合认知科学假设，探索交互学习对物理直觉的影响，但结果验证了现有局限，缺乏突破性发现。",
+      "• 实盘坑: 高；模型泛化能力差，依赖复杂强化学习环境，实际部署风险大，不适合直接用于交易策略。",
+      "• 复现难度: 中高；需要模拟物理环境和强化学习框架，数据生成和训练成本较高，但方法描述较清晰。",
+      "• 投资价值: 低；负向结果为主，对量化交易直接贡献有限，更适合学术研究参考。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2602.06030v1",
+    "title": "PhysicsAgentABM: Physics-Guided Generative Agent-Based Modeling",
+    "pdf_url": "https://arxiv.org/pdf/2602.06030v1",
+    "published": "2026-02-05",
+    "crawled_at": "2026-02-06 20:20:19",
+    "ai_score": 8.2,
+    "translated_title": "PhysicsAgentABM：基于物理引导的生成式智能体建模",
+    "summary_en": [
+      "• Model Architecture: PhysicsAgentABM combines symbolic agents with mechanistic transition priors, a multimodal neural transition model for temporal/interaction dynamics, and uncertainty-aware epistemic fusion for calibrated cluster-level transitions. Individual agents stochastically realize transitions under local constraints, decoupling population inference from entity-level variability.",
+      "• Data used: Experiments conducted across public health, finance, and social sciences domains using unspecified public datasets; the ANCHOR clustering strategy leverages cross-contextual behavioral responses with contrastive loss to reduce LLM calls by 6-8 times.",
+      "• Performance metrics: Demonstrates consistent gains in event-time accuracy and calibration over mechanistic, neural, and LLM baselines; achieves scalable simulation with improved calibration through population-level inference with neuro-symbolic fusion."
+    ],
+    "summary_cn": [
+      "• 核心模型: PhysicsAgentABM采用分层架构：状态专用符号智能体编码机制性转移先验，多模态神经转移模型捕获时间和交互动态，不确定性感知认知融合产生校准的集群级转移分布。个体智能体在局部约束下随机实现转移，解耦群体推断与实体级变异性。",
+      "• 数据来源: 在公共卫生、金融和社会科学领域进行实验，使用未指定的公共数据集；ANCHOR聚类策略基于跨上下文行为响应和对比损失，将LLM调用减少6-8倍。",
+      "• 主要结论: 在事件时间准确性和校准方面持续优于机制性、神经和LLM基线；通过群体级推断与神经符号融合，建立了可扩展且校准的LLM模拟新范式。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for systematic trading strategies requiring calibrated simulation of agent behaviors in financial markets; the uncertainty-aware fusion could improve risk-adjusted returns by better modeling non-stationary market dynamics.",
+      "• Implementation Risk: Moderate to high risk due to reliance on multimodal neural models and LLM-driven clustering; real-time deployment may face latency issues from ANCHOR's LLM calls despite reductions.",
+      "• Novelty: Significant novelty in re-architecting generative ABM around population-level inference with neuro-symbolic fusion; ANCHOR's contrastive loss for behavioral clustering is innovative but untested in high-frequency financial contexts."
+    ],
+    "verdict_cn": [
+      "• 创新点: 通过群体级推断与神经符号融合重构生成式ABM，具有显著创新性；ANCHOR基于行为响应的聚类策略和对比损失设计新颖，但未在高频金融场景验证。",
+      "• 实盘坑: 依赖多模态神经模型和LLM驱动聚类，实盘部署风险中高；ANCHOR的LLM调用虽减少，仍可能引入延迟问题；校准改进在极端市场条件下效果未知。",
+      "• 复现难度: 高难度，需要整合符号智能体、神经转移模型和不确定性融合；ANCHOR聚类策略依赖LLM API和对比损失调优，数据预处理和超参数优化复杂。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2602.06031v1",
+    "title": "AP-OOD: Attention Pooling for Out-of-Distribution Detection",
+    "pdf_url": "https://arxiv.org/pdf/2602.06031v1",
+    "published": "2026-02-05",
+    "crawled_at": "2026-02-06 20:20:38",
+    "ai_score": 8.2,
+    "translated_title": "AP-OOD：基于注意力池化的分布外检测方法",
+    "summary_en": [
+      "• Model Architecture: AP-OOD is a semi-supervised OOD detection method for natural language that uses attention pooling to aggregate token embeddings from language models, going beyond simple average-based aggregation to exploit token-level information.",
+      "• Data used: The method was evaluated on XSUM summarization and WMT15 En-Fr translation datasets, with performance measured in unsupervised settings using limited auxiliary outlier data.",
+      "• Performance metrics: AP-OOD achieves state-of-the-art results, reducing FPR95 from 27.84% to 4.67% on XSUM and from 77.08% to 70.37% on WMT15, demonstrating significant improvements in OOD detection accuracy."
+    ],
+    "summary_cn": [
+      "• 核心模型: AP-OOD是一种半监督的分布外检测方法，通过注意力池化聚合语言模型的令牌嵌入，利用令牌级信息超越简单的平均聚合。",
+      "• 数据来源: 在XSUM摘要和WMT15英法翻译数据集上进行评估，使用有限的辅助异常数据在无监督设置中测试。",
+      "• 主要结论: AP-OOD在文本OOD检测中达到新SOTA，将XSUM的FPR95从27.84%降至4.67%，WMT15从77.08%降至70.37%，显著提升检测性能。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for generating alpha in NLP-based trading strategies by improving model reliability and reducing false positives in anomaly detection, which can enhance risk-adjusted returns in sentiment analysis or news-based models.",
+      "• Implementation Risk: Moderate risk due to reliance on token-level embeddings and attention mechanisms, which may require fine-tuning for specific financial datasets and could be computationally intensive in real-time applications.",
+      "• Novelty: Novel approach with attention pooling for OOD detection, offering a flexible semi-supervised framework that interpolates between unsupervised and supervised settings, though it builds on existing language model techniques."
+    ],
+    "verdict_cn": [
+      "• 创新点: 采用注意力池化进行OOD检测，提供半监督框架灵活结合无监督和有监督设置，在令牌级信息利用上有新意，但基于现有语言模型技术。",
+      "• 实盘坑: 依赖令牌嵌入和注意力机制，需针对金融数据微调，计算开销可能较大，在实时交易中或面临延迟风险，且泛化到其他领域需验证。",
+      "• 复现难度: 中等难度，需要预训练语言模型和特定数据集，但论文方法描述清晰，开源代码可降低复现门槛，不过超参数调优可能复杂。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2602.06029v1",
+    "title": "Curiosity is Knowledge: Self-Consistent Learning and No-Regret Optimization with Active Inference",
+    "pdf_url": "https://arxiv.org/pdf/2602.06029v1",
+    "published": "2026-02-05",
+    "crawled_at": "2026-02-06 20:20:57",
+    "ai_score": 8.2,
+    "translated_title": "好奇心即知识：主动推理中的自洽学习与无遗憾优化",
+    "summary_en": [
+      "• Model Architecture: Active inference (AIF) framework using Expected Free Energy (EFE) minimization with a curiosity coefficient to balance epistemic (information gain) and pragmatic (task performance) values.",
+      "• Data used: Theoretical analysis based on Bayesian principles; real-world experiments mentioned but unspecified in abstract.",
+      "• Performance metrics: Self-consistent learning (Bayesian posterior consistency) and no-regret optimization (bounded cumulative regret) as theoretical guarantees.",
+      "• Key mechanism: Sufficient curiosity ensures both coherent learning and efficient decision-making, linking to Bayesian experimental design and optimization."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于期望自由能（EFE）最小化的主动推理（AIF）框架，通过好奇心系数平衡认知价值（信息增益）和实用价值（任务性能）。",
+      "• 数据来源: 基于贝叶斯原理的理论分析；摘要中提到真实世界实验但未具体说明。",
+      "• 主要结论: 首次为EFE最小化代理提供理论保证，证明足够的好奇心同时确保自洽学习（贝叶斯后验一致性）和无遗憾优化（有界累积遗憾）。",
+      "• 理论连接: 将AIF与经典贝叶斯实验设计和贝叶斯优化统一在一个理论框架内，分析依赖于初始不确定性、可识别性和目标对齐。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for hybrid learning-optimization problems in finance where exploration-exploitation trade-offs are critical, such as algorithmic trading or portfolio optimization with uncertain models.",
+      "• Implementation Risk: Moderate; tuning the curiosity coefficient requires careful calibration to avoid myopic exploitation or unnecessary exploration, and real-world validation is needed beyond theoretical guarantees.",
+      "• Novelty: Significant; first theoretical guarantees for AIF's EFE-minimizing agents, bridging active inference with established Bayesian methods and providing practical design guidelines.",
+      "• Limitations: Abstract lacks details on real-world experiments and specific applications, which may affect direct applicability to financial markets."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次为主动推理的EFE最小化代理提供理论保证，将好奇心机制与贝叶斯后验一致性和无遗憾优化直接关联，统一了多个经典框架。",
+      "• 实盘坑: 好奇心系数调优需精细校准，过度或不足均可能导致性能下降；理论保证需在复杂市场环境中验证，可能受噪声和非平稳性影响。",
+      "• 复现难度: 中等；基于贝叶斯原理，但实现AIF框架和EFE计算需要专业知识，真实世界实验细节缺失可能增加复现挑战。",
+      "• 应用前景: 在金融中适用于需平衡探索与利用的场景，如自适应交易策略或风险模型优化，但需定制化以适应市场特异性。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2602.06025v1",
+    "title": "Learning Query-Aware Budget-Tier Routing for Runtime Agent Memory",
+    "pdf_url": "https://arxiv.org/pdf/2602.06025v1",
+    "published": "2026-02-05",
+    "crawled_at": "2026-02-06 20:21:18",
+    "ai_score": 7.8,
+    "translated_title": "学习查询感知的预算层级路由以实现运行时智能体记忆",
+    "summary_en": [
+      "• Model Architecture: BudgetMem框架采用模块化设计，将记忆处理分为多个记忆模块，每个模块提供低/中/高三个预算层级，通过轻量级路由器进行跨模块的预算层级路由，该路由器作为紧凑的神经策略，使用强化学习训练，以实现任务性能与记忆构建成本之间的平衡。",
+      "• Data used: 研究在LoCoMo、LongMemEval和HotpotQA三个数据集上进行评估，这些数据集专注于长上下文记忆和问答任务，用于测试模型在不同预算设置下的性能。",
+      "• Performance metrics: 在优先性能（即高预算设置）时，BudgetMem超越强基线模型；在更紧的预算下，提供更好的准确率-成本前沿；分析揭示了不同层级策略（实现、推理、容量）在不同预算制度下的优势和适用场景。"
+    ],
+    "summary_cn": [
+      "• 核心模型: BudgetMem是一个运行时智能体记忆框架，采用模块化结构，每个记忆模块设有低/中/高三个预算层级，通过基于强化学习的轻量级路由器进行查询感知的路由决策，以优化性能与成本权衡。",
+      "• 数据来源: 使用LoCoMo、LongMemEval和HotpotQA数据集进行实验，这些数据集涵盖长记忆评估和复杂问答任务，验证模型在多样化场景下的有效性。",
+      "• 主要结论: BudgetMem在高预算设置下性能优于基线，在低预算下提供更优的准确率-成本平衡；研究还解析了不同层级策略（实现复杂度、推理行为、模型大小）在不同预算制度下的适用性，为实际部署提供指导。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: 中等偏高；该框架通过查询感知的预算控制，可能提升LLM代理在资源受限环境（如高频交易或实时决策）中的效率，但需进一步验证在金融数据上的泛化能力。",
+      "• Implementation Risk: 较高；依赖强化学习训练路由器可能引入不稳定性和过拟合风险，且模块化设计增加系统复杂性，实盘部署需考虑延迟和可扩展性问题。",
+      "• Novelty: 较高；首次将预算层级路由与运行时记忆结合，提供明确的性能-成本控制，并系统比较不同层级策略，为记忆系统设计提供新视角。"
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出BudgetMem框架，首次在运行时智能体记忆中引入查询感知的预算层级路由，通过模块化设计和强化学习优化，实现性能与成本的精细控制，具有较强理论贡献。",
+      "• 实盘坑: 路由器训练可能不稳定，影响决策一致性；模块化架构增加维护成本；在金融等高波动场景中，预算分配策略需动态调整，可能引入额外风险。",
+      "• 复现难度: 中等；框架设计相对清晰，但强化学习训练和模块集成需要专业知识，数据集和代码的公开程度将影响复现可行性。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2602.06022v1",
+    "title": "Correctness-Optimized Residual Activation Lens (CORAL): Transferrable and Calibration-Aware Inference-Time Steering",
+    "pdf_url": "https://arxiv.org/pdf/2602.06022v1",
+    "published": "2026-02-05",
+    "crawled_at": "2026-02-06 20:21:35",
+    "ai_score": 8.2,
+    "translated_title": "正确性优化的残差激活透镜（CORAL）：可迁移且校准感知的推理时引导方法",
+    "summary_en": [
+      "• Model Architecture: CORAL uses weight-decay MLP probes to extract distributed correctness signals from internal activations of large language models (LLMs), implementing regularized inference-time steering without retraining.",
+      "• Data used: Evaluated on three 7B-parameter models and tested on four held-out benchmarks: ARC-Challenge, HellaSwag, Math-MC, and OpenBookQA, focusing on multiple-choice question answering (MCQA) tasks.",
+      "• Performance metrics: Achieved average improvements of 10% in accuracy and 50% in expected calibration error (ECE) on primary models, with transfer gains of 14% accuracy and 49% ECE on held-out benchmarks."
+    ],
+    "summary_cn": [
+      "• 核心模型: CORAL采用权重衰减多层感知机探针，从大语言模型内部激活中提取分布式正确性信号，实现无需重新训练的推理时正则化引导。",
+      "• 数据来源: 基于三个70亿参数模型进行评估，并在四个保留基准测试集（ARC-Challenge、HellaSwag、Math-MC、OpenBookQA）上进行迁移测试，专注于多项选择题任务。",
+      "• 主要结论: 在原始模型上平均提升10%准确率和50%预期校准误差，在迁移测试中平均提升14%准确率和49%校准误差，验证了分布式信息提取的有效性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for improving LLM-based trading strategies by enhancing calibration and accuracy in decision-making tasks, reducing miscalibration risks in financial predictions.",
+      "• Implementation Risk: Moderate risk due to dependency on model internals and potential computational overhead during inference, though lightweight compared to retraining.",
+      "• Novelty: Introduces a novel approach to inference-time steering that directly optimizes correctness rather than proxies, with demonstrated transferability across benchmarks."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出直接优化正确性而非代理指标的推理时引导方法，利用正则化探针提取分布式信号，实现高可迁移性和校准感知。",
+      "• 实盘坑: 依赖模型内部激活，可能引入额外计算延迟；在动态市场环境中，校准改进的稳定性需进一步验证。",
+      "• 复现难度: 中等难度，需要访问模型内部激活和基准测试数据，但开源代码和详细方法可降低复现门槛。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2602.06021v1",
+    "title": "Diffusion Model's Generalization Can Be Characterized by Inductive Biases toward a Data-Dependent Ridge Manifold",
+    "pdf_url": "https://arxiv.org/pdf/2602.06021v1",
+    "published": "2026-02-05",
+    "crawled_at": "2026-02-06 20:21:54",
+    "ai_score": 7.5,
+    "translated_title": "扩散模型的泛化能力可通过数据依赖岭流形上的归纳偏置来表征",
+    "summary_en": [
+      "• Model Architecture: Proposes a log-density ridge manifold framework to characterize diffusion model generalization, analyzing inference dynamics as a reach-align-slide process around this manifold.",
+      "• Data used: Experiments conducted on synthetic multimodal distributions and MNIST latent diffusion, covering both low- and high-dimensional settings.",
+      "• Performance metrics: Quantifies how generated data relate to the ridge manifold during inference, with detailed analysis of normal and tangent motions that characterize inter-mode generations.",
+      "• Theoretical foundation: Includes analysis of random feature models to illustrate how inductive biases originate from architectural bias and training accuracy, evolving with inference dynamics."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出对数密度岭流形框架，将扩散模型推理过程描述为围绕该流形的'到达-对齐-滑动'三阶段动态。",
+      "• 数据来源: 使用合成多模态分布和MNIST潜在扩散进行实验验证，涵盖低维和高维场景。",
+      "• 主要结论: 扩散模型的泛化能力可通过数据依赖岭流形上的归纳偏置来定量表征，不同训练误差导致不同的法向和切向运动模式。",
+      "• 理论贡献: 通过随机特征模型示例，阐明扩散模型归纳偏置如何源于架构偏置与训练精度的组合，并随推理动态演化。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - provides novel framework for understanding diffusion model generalization, potentially useful for improving model selection and validation in generative finance applications.",
+      "• Implementation Risk: High - theoretical framework requires significant mathematical expertise to implement, and practical trading applications would need substantial adaptation.",
+      "• Novelty: High - original characterization of diffusion model inference as reach-align-slide process around data-dependent ridge manifold represents conceptual advance.",
+      "• Practical limitations: Framework currently validated only on simple synthetic and MNIST data, requires extension to complex financial time series for trading relevance."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出数据依赖岭流形框架，将扩散模型推理过程理论化为三阶段动态，为理解生成模型泛化提供了新视角。",
+      "• 实盘坑: 理论框架到交易应用的转化路径不明确，需要大量工程化工作；当前验证数据过于简单，金融时间序列适用性待验证。",
+      "• 复现难度: 高 - 需要深厚的微分几何和随机过程背景，岭流形构建和动态分析实现复杂，实验代码未公开。",
+      "• 量化价值: 中等 - 为评估生成模型性能提供了理论工具，但直接交易信号生成能力有限，更适合作为模型评估框架。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
     "id": "2602.04884v1",
     "title": "Reinforced Attention Learning",
     "pdf_url": "https://arxiv.org/pdf/2602.04884v1",
