@@ -1,5 +1,345 @@
 [
   {
+    "id": "2602.09018v1",
+    "title": "Robustness Is a Function, Not a Number: A Factorized Comprehensive Study of OOD Robustness in Vision-Based Driving",
+    "pdf_url": "https://arxiv.org/pdf/2602.09018v1",
+    "published": "2026-02-09",
+    "crawled_at": "2026-02-10 20:31:55",
+    "ai_score": 8.2,
+    "translated_title": "鲁棒性是一个函数而非数字：基于视觉驾驶中OOD鲁棒性的因子化综合研究",
+    "summary_en": [
+      "• Model Architecture: The study benchmarks Fully Connected (FC), Convolutional Neural Network (CNN), and Vision Transformer (ViT) policies, with a focus on training compact ViT heads on frozen foundation-model (FM) features to enhance out-of-distribution (OOD) robustness.",
+      "• Data used: Environments are decomposed along five axes—scene (rural/urban), season, weather, time (day/night), and agent mix—using controlled k-factor perturbations (k ∈ {0,1,2,3}) in the VISTA simulator, with variations in in-distribution (ID) support including scale, diversity, and temporal context.",
+      "• Performance metrics: Key metrics include success rates under OOD shifts, with findings such as ViT policies outperforming CNN/FC, FM-feature policies maintaining >85% success under three simultaneous changes, and non-FM models dropping below 50% under similar conditions; specific drops include ~31% for rural→urban and day→night shifts."
+    ],
+    "summary_cn": [
+      "• 核心模型: 研究对比了全连接（FC）、卷积神经网络（CNN）和视觉变换器（ViT）策略，重点在冻结基础模型（FM）特征上训练紧凑ViT头部以提升分布外（OOD）鲁棒性。",
+      "• 数据来源: 使用VISTA模拟器，沿五个轴分解环境——场景（乡村/城市）、季节、天气、时间（白天/夜晚）和智能体组合，采用受控k因子扰动（k ∈ {0,1,2,3}），并变化分布内（ID）支持包括规模、多样性和时间上下文。",
+      "• 主要结论: ViT策略在OOD鲁棒性上显著优于CNN/FC；FM特征策略在三个同时变化下保持>85%成功率，而非FM模型降至50%以下；最大单因子下降为乡村→城市和白天→夜晚（各约31%）；训练于冬季/雪天对单因子变化最鲁棒，乡村+夏季基线提供最佳整体OOD性能。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High, as the factorized approach to OOD robustness provides actionable design rules for autonomous driving policies, potentially leading to more reliable and scalable systems in real-world, variable conditions, with implications for hedge funds investing in AI-driven transportation tech.",
+      "• Implementation Risk: Moderate, due to the reliance on simulated data (VISTA) and the latency cost associated with FM features, which may hinder real-time deployment in autonomous vehicles; however, the study's insights on targeted exposure and multi-ID training could mitigate some risks.",
+      "• Novelty: Significant, with the paper introducing a comprehensive, multi-axis decomposition of OOD robustness beyond single-number metrics, offering novel findings on non-additive interactions and the effectiveness of FM features, though building on prior work in vision-based driving and transformer architectures."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著，论文提出超越单一数字指标的OOD鲁棒性多轴分解综合方法，揭示了非加性交互作用和FM特征的有效性等新发现，尽管基于先前视觉驾驶和变换器架构的研究。",
+      "• 实盘坑: 中等，由于依赖模拟数据（VISTA）和FM特征相关的延迟成本，可能阻碍自动驾驶车辆中的实时部署；但研究关于针对性暴露和多ID训练的见解可缓解部分风险。",
+      "• 复现难度: 中等，需要访问VISTA模拟器和基础模型特征，实验设置涉及受控扰动和多种训练变体，但方法描述详细，可能允许在类似环境中复现。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2602.09017v1",
+    "title": "Contact-Anchored Policies: Contact Conditioning Creates Strong Robot Utility Models",
+    "pdf_url": "https://arxiv.org/pdf/2602.09017v1",
+    "published": "2026-02-09",
+    "crawled_at": "2026-02-10 20:32:11",
+    "ai_score": 8.2,
+    "translated_title": "接触锚定策略：接触条件化构建强大的机器人效用模型",
+    "summary_en": [
+      "• Model Architecture: Introduces Contact-Anchored Policies (CAP) that replace language conditioning with spatial contact points, structured as a modular library of utility models rather than a monolithic policy.",
+      "• Data used: Trained with only 23 hours of demonstration data, leveraging EgoGym simulation benchmark for rapid iteration and failure mode identification.",
+      "• Performance metrics: Outperforms state-of-the-art Vision-Language-Action models by 56% in zero-shot evaluations, generalizes to novel environments and embodiments across three fundamental manipulation skills."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出接触锚定策略，用空间接触点替代语言条件化，构建模块化效用模型库而非单一策略。",
+      "• 数据来源: 仅使用23小时演示数据，通过EgoGym轻量仿真平台进行快速迭代和故障模式识别。",
+      "• 主要结论: 在零样本评估中超越先进视觉-语言-动作模型56%，泛化至新环境和机器人本体，覆盖三项基本操作技能。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for robotics and automation applications due to efficient data usage and robust generalization, but direct financial alpha limited to specialized automation sectors.",
+      "• Implementation Risk: Moderate risk; real-to-sim iteration reduces deployment failures, but hardware dependencies and environmental variability remain challenges.",
+      "• Novelty: Significant novelty in replacing abstract language with concrete physical contact conditioning, offering a more grounded approach to robot manipulation learning."
+    ],
+    "verdict_cn": [
+      "• 创新点: 用具体物理接触条件化替代抽象语言，提供更接地气的机器人操作学习方案，模块化设计增强可扩展性。",
+      "• 实盘坑: 硬件依赖性强，环境变异性高，仿真到现实的迁移仍存不确定性，可能影响实际部署稳定性。",
+      "• 复现难度: 中等难度；开源代码和数据集降低门槛，但需要机器人硬件和仿真环境支持，资源要求较高。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2602.09012v1",
+    "title": "Next-Gen CAPTCHAs: Leveraging the Cognitive Gap for Scalable and Diverse GUI-Agent Defense",
+    "pdf_url": "https://arxiv.org/pdf/2602.09012v1",
+    "published": "2026-02-09",
+    "crawled_at": "2026-02-10 20:32:30",
+    "ai_score": 7.2,
+    "translated_title": "下一代验证码：利用认知差距实现可扩展和多样化的GUI代理防御",
+    "summary_en": [
+      "• Model Architecture: Introduces a scalable defense framework called Next-Gen CAPTCHAs, built on a robust data generation pipeline that enables large-scale and easily scalable evaluations, with effectively unbounded CAPTCHA instances for backend-supported types.",
+      "• Data used: Leverages a data generation pipeline rather than static datasets, allowing for dynamic task creation that exploits the human-agent 'Cognitive Gap' in interactive perception, memory, decision-making, and action.",
+      "• Performance metrics: Addresses the collapse of traditional CAPTCHAs, where advanced models like Gemini3-Pro-High and GPT-5.2-Xhigh achieve up to 90% pass rates on complex logic puzzles, aiming to re-establish a robust distinction between biological users and artificial agents."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出名为Next-Gen CAPTCHAs的可扩展防御框架，基于强大的数据生成管道构建，支持大规模和易于扩展的评估，后端支持类型可生成几乎无限的验证码实例。",
+      "• 数据来源: 利用数据生成管道而非静态数据集，通过动态任务创建来利用人类与代理在交互感知、记忆、决策和行动中的'认知差距'。",
+      "• 主要结论: 针对传统验证码失效问题（先进模型在复杂逻辑谜题上通过率高达90%），旨在通过自适应直觉任务重新建立生物用户与人工代理之间的显著区别。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the framework addresses a critical security gap in the agentic era, but its effectiveness against rapidly evolving AI models is uncertain, and scalability may not directly translate to financial alpha without specific market applications.",
+      "• Implementation Risk: High; dynamic tasks requiring adaptive intuition could introduce user friction, increase false positives/negatives, and face challenges in real-time deployment across diverse web environments, potentially limiting adoption.",
+      "• Novelty: High; the approach innovatively exploits the 'Cognitive Gap' and uses a data generation pipeline for scalability, moving beyond static benchmarks to offer a more robust and diverse defense mechanism against advanced GUI agents."
+    ],
+    "verdict_cn": [
+      "• 创新点: 较高；利用'认知差距'概念和数据生成管道实现可扩展性，超越静态基准，为高级GUI代理提供更强大和多样化的防御机制，在安全领域具有新颖性。",
+      "• 实盘坑: 高；自适应直觉任务可能导致用户摩擦、误判率上升，且在不同网络环境中的实时部署面临挑战，可能限制实际应用和商业化潜力。",
+      "• 复现难度: 中等；框架依赖数据生成管道和动态任务设计，复现需构建类似基础设施，但核心概念清晰，技术细节若公开可实现部分验证。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2602.09009v1",
+    "title": "ANCRe: Adaptive Neural Connection Reassignment for Efficient Depth Scaling",
+    "pdf_url": "https://arxiv.org/pdf/2602.09009v1",
+    "published": "2026-02-09",
+    "crawled_at": "2026-02-10 20:32:47",
+    "ai_score": 8.2,
+    "translated_title": "ANCRe：自适应神经连接重分配以实现高效深度扩展",
+    "summary_en": [
+      "• Model Architecture: Introduces Adaptive Neural Connection Reassignment (ANCRe), a lightweight framework that parameterizes and learns residual connectivities from data, reassigning connections with <1% computational/memory overhead.",
+      "• Data used: Tested across large language models (pre-training), diffusion models, and deep ResNets, indicating broad applicability to foundation models and deep neural networks.",
+      "• Performance metrics: Demonstrates consistently accelerated convergence, boosted performance, and enhanced depth efficiency compared to conventional residual connections, with rigorous analysis showing exponential gaps in convergence rates."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出自适应神经连接重分配（ANCRe）框架，通过参数化学习残差连接结构，以<1%的计算/内存开销动态调整连接布局。",
+      "• 数据来源: 在大型语言模型预训练、扩散模型和深度ResNets上进行广泛数值测试，覆盖多种基础模型和深度网络架构。",
+      "• 主要结论: 相比传统残差连接，ANCRe能显著加速收敛、提升性能并增强深度利用效率，理论分析揭示连接布局对收敛行为有指数级影响。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for deep-learning-based trading strategies; improved convergence and depth efficiency could enhance model training speed and performance in time-sensitive applications like high-frequency prediction.",
+      "• Implementation Risk: Low to moderate; <1% overhead is negligible, but integration into existing pipelines may require architectural adjustments and careful hyperparameter tuning.",
+      "• Novelty: Significant; rethinks residual connections from an optimization perspective, introducing adaptive reassignment—a principled alternative to fixed connection schemes with proven exponential convergence benefits."
+    ],
+    "verdict_cn": [
+      "• 创新点: 从优化角度重新审视残差连接，提出自适应重分配机制，突破传统固定连接模式，理论证明能产生指数级收敛优势。",
+      "• 实盘坑: 集成到现有模型需调整架构，超参数调优可能复杂；虽开销低，但大规模部署时需验证稳定性。",
+      "• 复现难度: 中等；框架轻量且开源可能性高，但依赖具体实现细节和实验设置，需确保数值测试的可复现性。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2602.09008v1",
+    "title": "ShapeCond: Fast Shapelet-Guided Dataset Condensation for Time Series Classification",
+    "pdf_url": "https://arxiv.org/pdf/2602.09008v1",
+    "published": "2026-02-09",
+    "crawled_at": "2026-02-10 20:33:04",
+    "ai_score": 8.2,
+    "translated_title": "ShapeCond：用于时间序列分类的快速形状引导数据集压缩方法",
+    "summary_en": [
+      "• Model Architecture: ShapeCond introduces a shapelet-guided optimization framework for time series dataset condensation, leveraging local discriminative motifs (shapelets) to preserve temporal structure while achieving synthesis cost independent of sequence length.",
+      "• Data used: The method is evaluated on time series datasets including the Sleep dataset with 3,000 timesteps, demonstrating applicability to domains like finance and climate science where long sequences are common.",
+      "• Performance metrics: ShapeCond achieves up to 29× faster synthesis compared to prior state-of-the-art method CondTSC, and up to 10,000× speedup over naive shapelet usage, while improving downstream classification accuracy across extensive experiments."
+    ],
+    "summary_cn": [
+      "• 核心模型: ShapeCond采用基于形状引导的优化策略，利用形状（shapelets）捕获时间序列中的局部判别模式，实现合成成本与序列长度无关的高效数据集压缩。",
+      "• 数据来源: 在包含睡眠数据集（3,000个时间步）等多个时间序列数据集上进行测试，适用于金融、气候科学等需要处理长序列的领域。",
+      "• 主要结论: 相比现有最佳方法CondTSC，合成速度提升29倍，在睡眠数据集上比朴素形状方法快10,000倍，同时下游分类精度持续优于所有先前方法。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for generating alpha in time-series-based strategies by enabling rapid training on condensed datasets that preserve critical local patterns, reducing computational overhead in high-frequency or long-sequence financial applications.",
+      "• Implementation Risk: Moderate risk due to dependency on shapelet extraction quality; poor shapelet identification could degrade condensation effectiveness, and real-world financial data noise may challenge pattern preservation.",
+      "• Novelty: Significant novelty in bridging shapelet theory with dataset condensation for time series, offering a domain-specific solution that outperforms image-centric methods and achieves length-independent synthesis efficiency."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将形状理论融入时间序列数据集压缩，提出长度无关的合成成本，解决了现有图像中心方法在时间序列上的失效问题，具有领域特异性创新。",
+      "• 实盘坑: 形状提取质量是关键风险点，金融数据中的噪声和突变可能影响模式捕获；压缩后的数据集在复杂市场环境中的泛化能力需进一步验证。",
+      "• 复现难度: 中等难度，代码已开源，但形状引导优化策略的实现需要专业知识，且依赖高质量的时间序列预处理和形状检测算法。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2602.09006v1",
+    "title": "ARO: A New Lens On Matrix Optimization For Large Models",
+    "pdf_url": "https://arxiv.org/pdf/2602.09006v1",
+    "published": "2026-02-09",
+    "crawled_at": "2026-02-10 20:33:23",
+    "ai_score": 8.2,
+    "translated_title": "ARO：大型模型矩阵优化的新视角",
+    "summary_en": [
+      "• Model Architecture: ARO (Adaptively Rotated Optimization) is a matrix optimization framework that treats gradient rotation as a first-class design principle, performing normed steepest descent in a rotated coordinate system determined by a novel norm-informed policy.",
+      "• Data used: The paper evaluates ARO on LLM pretraining tasks with up to 8B activated parameters, using a rigorously controlled benchmarking protocol to reduce confounding and bias, though specific datasets are not detailed in the abstract.",
+      "• Performance metrics: ARO consistently outperforms AdamW by 1.3~1.35× and orthogonalization methods by 1.1~1.15× in LLM pretraining, with up to 8× overtrain budget and no evidence of diminishing returns."
+    ],
+    "summary_cn": [
+      "• 核心模型: ARO（自适应旋转优化）是一种矩阵优化框架，将梯度旋转作为核心设计原则，在由新型范数策略确定的旋转坐标系中执行范数最速下降。",
+      "• 数据来源: 论文在LLM预训练任务上评估ARO，激活参数高达80亿，采用严格控制的基准测试协议以减少混杂和偏差，但摘要中未详细说明具体数据集。",
+      "• 主要结论: ARO在LLM预训练中持续优于AdamW（1.3~1.35倍）和正交化方法（1.1~1.15倍），过训练预算高达8倍，且未显示收益递减迹象。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for improving training efficiency in large-scale LLM deployments, with demonstrated gains over state-of-the-art optimizers and scalability up to 8B parameters, suggesting applicability to cutting-edge model training.",
+      "• Implementation Risk: Moderate risk due to the complexity of integrating rotation-based updates into existing training pipelines and potential computational overhead from the norm-informed policy, though the abstract claims computational efficiency.",
+      "• Novelty: High novelty as ARO introduces a new paradigm beyond orthogonalization/whitening methods, framing optimization through rotational symmetries of residual streams, which could inspire advanced designs for cross-layer couplings."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高创新性，ARO超越正交化/白化方法，提出基于梯度旋转的新优化范式，并关联残差流的旋转对称性，为跨层耦合设计提供理论动机。",
+      "• 实盘坑: 中等风险，旋转更新可能增加实现复杂性，范数策略的计算开销需验证，且与现有优化器集成可能面临兼容性问题。",
+      "• 复现难度: 中等难度，需要复现严格的基准测试协议和旋转机制，但论文提供了框架细节，有助于降低复现门槛。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2602.09001v1",
+    "title": "DirMoE: Dirichlet-routed Mixture of Experts",
+    "pdf_url": "https://arxiv.org/pdf/2602.09001v1",
+    "published": "2026-02-09",
+    "crawled_at": "2026-02-10 20:33:42",
+    "ai_score": 8.2,
+    "translated_title": "DirMoE：基于狄利克雷路由的专家混合模型",
+    "summary_en": [
+      "• Model Architecture: DirMoE introduces a novel end-to-end differentiable routing mechanism built on a Dirichlet variational autoencoder framework, fundamentally disentangling expert selection (modeled by Bernoulli component) and expert contribution distribution (handled by Dirichlet component).",
+      "• Data used: The abstract does not specify particular datasets, but the methodology is designed for large-scale language models, suggesting application to standard NLP benchmarks like GLUE, SuperGLUE, or proprietary large corpora.",
+      "• Performance metrics: The paper claims DirMoE matches or exceeds other methods while improving expert specialization, with a variational ELBO objective that includes a direct sparsity penalty to control the number of active experts in expectation."
+    ],
+    "summary_cn": [
+      "• 核心模型: DirMoE提出了一种基于狄利克雷变分自编码器的端到端可微分路由机制，通过伯努利组件建模专家选择，狄利克雷组件处理专家贡献分配，解耦了传统Top-k+Softmax中的两个关键决策。",
+      "• 数据来源: 摘要未明确指定数据集，但方法针对大规模语言模型设计，暗示可应用于GLUE、SuperGLUE等标准NLP基准或专有大型语料库。",
+      "• 主要结论: DirMoE在匹配或超越现有方法的同时提升了专家专业化程度，其变分ELBO目标包含直接稀疏性惩罚，可精确控制期望激活专家数量。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for improving MoE-based LLM efficiency and performance through differentiable routing, which could translate to better model scaling and reduced computational costs in production systems.",
+      "• Implementation Risk: Moderate risk due to reliance on Gumbel-Sigmoid relaxation and implicit reparameterization techniques, which may introduce training instability or require careful hyperparameter tuning in practice.",
+      "• Novelty: Significant novelty in disentangling expert selection and contribution distribution using variational inference framework, offering a principled alternative to heuristic Top-k routing mechanisms."
+    ],
+    "verdict_cn": [
+      "• 创新点: 采用变分推断框架解耦专家选择与贡献分配，引入狄利克雷分布建模贡献权重，提供了比启发式Top-k路由更理论完备的解决方案。",
+      "• 实盘坑: 依赖Gumbel-Sigmoid松弛和隐式重参数化技术，可能导致训练不稳定；稀疏性惩罚的超参数调度需要精细调整，实际部署复杂度较高。",
+      "• 复现难度: 中等偏高，需要实现变分自编码器框架中的狄利克雷分布采样和ELBO优化，对深度学习框架的定制化要求较强。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2602.08998v1",
+    "title": "Universal Coefficients and Mayer-Vietoris Sequence for Groupoid Homology",
+    "pdf_url": "https://arxiv.org/pdf/2602.08998v1",
+    "published": "2026-02-09",
+    "crawled_at": "2026-02-10 20:34:00",
+    "ai_score": 2.5,
+    "translated_title": "群胚同调的通用系数与Mayer-Vietoris序列",
+    "summary_en": [
+      "• Model Architecture: Defines homology for ample groupoids using compactly supported Moore complex of the nerve, with coefficients in topological abelian groups, and constructs chain complexes $C_n(\\mathcal G;A) := C_c(\\mathcal G_n,A)$ with boundary maps $\\partial_n^A$.",
+      "• Data used: Theoretical framework based on algebraic topology and groupoid theory, with no empirical data; focuses on abstract mathematical structures like ample groupoids, discrete abelian groups, and locally compact spaces.",
+      "• Performance metrics: Proves universal coefficient short exact sequence for discrete coefficients, identifies obstruction for non-discrete coefficients via surjectivity conditions, and derives Mayer-Vietoris long exact sequence for explicit computations; demonstrates invariance under Kakutani equivalence and compatibility with standard reductions."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于神经的紧支撑Moore复形，定义ample群胚的同调，系数为拓扑阿贝尔群，构建链复形$C_n(\\mathcal G;A) := C_c(\\mathcal G_n,A)$和边界映射$\\partial_n^A$。",
+      "• 数据来源: 纯理论数学框架，无实证数据；依赖抽象结构如ample群胚、离散阿贝尔群和局部紧空间。",
+      "• 主要结论: 证明离散系数的通用系数短正合序列，通过满射条件识别非离散系数的障碍，推导Mayer-Vietoris长正合序列用于显式计算；展示在Kakutani等价下的不变性和与标准约化的兼容性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Extremely low; paper is pure mathematics with no direct financial applications, focusing on abstract homology theory rather than market data or predictive models.",
+      "• Implementation Risk: High; concepts like groupoid homology and topological abelian groups are highly specialized and not readily translatable to trading strategies or risk management systems.",
+      "• Novelty: Moderate within pure mathematics; extends universal coefficient theorems and Mayer-Vietoris sequences to groupoid homology, but offers no novel insights for quantitative finance or AI-driven strategies."
+    ],
+    "verdict_cn": [
+      "• 创新点: 在纯数学领域中等；将通用系数定理和Mayer-Vietoris序列推广到群胚同调，但未提供量化金融或AI策略的新见解。",
+      "• 实盘坑: 极高；群胚同调和拓扑阿贝尔群等概念高度专业化，难以转化为交易策略或风险管理系统，缺乏市场相关性。",
+      "• 复现难度: 高；需要深厚的代数拓扑和群胚理论背景，无代码或实证框架，不适合快速实盘应用。"
+    ],
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2602.08986v1",
+    "title": "Improving Detection of Rare Nodes in Hierarchical Multi-Label Learning",
+    "pdf_url": "https://arxiv.org/pdf/2602.08986v1",
+    "published": "2026-02-09",
+    "crawled_at": "2026-02-10 20:34:16",
+    "ai_score": 7.2,
+    "translated_title": "改进层次多标签学习中稀有节点的检测",
+    "summary_en": [
+      "• Model Architecture: Proposes a weighted loss objective for neural networks combining node-wise imbalance weighting with focal weighting components, leveraging ensemble uncertainties to emphasize rare hierarchical nodes rather than rare observations.",
+      "• Data used: Benchmark datasets for hierarchical multi-label classification tasks, with specific mention of challenging scenarios involving suboptimal encoders or limited data.",
+      "• Performance metrics: Reports improvements in recall by up to a factor of five and statistically significant gains in F1 score, demonstrating effectiveness in reaching deeper hierarchy levels for fine-grained classifications."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出一种加权损失目标，结合节点不平衡加权和焦点加权组件，利用集成不确定性强调稀有层次节点而非稀有观测数据。",
+      "• 数据来源: 基于层次多标签分类的基准数据集，包括编码器次优或数据有限的挑战性场景。",
+      "• 主要结论: 在基准数据集上，召回率提升高达五倍，F1分数有统计显著增益，有效支持更细粒度的分类深度。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; addresses a niche but persistent issue in hierarchical classification, potentially applicable to financial taxonomy or risk categorization tasks where rare events are critical, though direct trading alpha is limited.",
+      "• Implementation Risk: High; relies on ensemble uncertainties and hierarchical constraints, which may introduce complexity in real-world deployment and require careful tuning to avoid overfitting to rare nodes.",
+      "• Novelty: Moderate; combines existing techniques (node-wise weighting and focal loss) with a focus on hierarchical structures, but lacks groundbreaking algorithmic innovation compared to state-of-the-art methods."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；将节点不平衡加权与焦点损失结合，针对层次结构优化，但未超越现有先进方法的核心算法突破。",
+      "• 实盘坑: 高；依赖集成不确定性和层次约束，实际部署复杂，需精细调参以防对稀有节点过拟合，可能影响泛化能力。",
+      "• 复现难度: 中等；基于标准神经网络框架，但需处理层次数据和不确定性量化，增加实验复杂性。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2602.08983v1",
+    "title": "StretchTime: Adaptive Time Series Forecasting via Symplectic Attention",
+    "pdf_url": "https://arxiv.org/pdf/2602.08983v1",
+    "published": "2026-02-09",
+    "crawled_at": "2026-02-10 20:34:36",
+    "ai_score": 8.2,
+    "translated_title": "StretchTime：基于辛注意力的自适应时间序列预测",
+    "summary_en": [
+      "• Model Architecture: Introduces Symplectic Positional Embeddings (SyPE), a learnable encoding framework derived from Hamiltonian mechanics that generalizes rotary position embedding (RoPE) by extending the rotation group SO(2) to the symplectic group Sp(2,R), with an input-dependent adaptive warp module enabling end-to-end temporal coordinate dilation/contraction.",
+      "• Data used: Evaluated on standard multivariate time series forecasting benchmarks (specific datasets not named in abstract, but implied to include financial and biological rhythm data exhibiting non-stationary temporal dynamics).",
+      "• Performance metrics: Achieves state-of-the-art performance on these benchmarks, demonstrating superior robustness on datasets with non-stationary temporal dynamics and time-warped patterns."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出辛位置嵌入（SyPE），基于哈密顿力学推导的可学习编码框架，通过将旋转群SO(2)扩展为辛群Sp(2,R)来泛化旋转位置嵌入（RoPE），并引入输入依赖的自适应扭曲模块实现端到端时间坐标伸缩。",
+      "• 数据来源: 在标准多元时间序列预测基准数据集上进行评估（摘要中未具体命名，但暗示包括金融周期和生物节律等具有非平稳时间动态的数据）。",
+      "• 主要结论: 在基准测试中达到最先进性能，对表现出非平稳时间动态和时间扭曲模式的数据集展现出卓越的鲁棒性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for capturing non-linear temporal patterns in financial markets (e.g., shifting cycles, volatility clustering) that traditional transformers miss, potentially generating alpha in regimes with time-warped dynamics.",
+      "• Implementation Risk: Moderate to high risk due to computational complexity of symplectic group operations and adaptive warp module, which may increase training/inference costs and require careful hyperparameter tuning for real-world deployment.",
+      "• Novelty: Significant theoretical contribution by formalizing time-warping misalignment and proving RoPE's limitation, with SyPE offering a principled extension to Hamiltonian mechanics, though practical benefits over simpler adaptive methods need validation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 理论创新显著，形式化时间扭曲错配问题并证明RoPE的数学局限性，SyPE基于哈密顿力学提供原则性扩展，但相比简单自适应方法需验证实际优势。",
+      "• 实盘坑: 中等至高风险，辛群运算和自适应扭曲模块增加计算复杂度，可能推高训练/推理成本，且需精细超参调优以适应实盘环境。",
+      "• 复现难度: 中等难度，需实现辛群数学运算和自适应模块，但架构描述清晰，基准代码若开源可降低复现门槛。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
     "id": "2602.06964v1",
     "title": "Learning a Generative Meta-Model of LLM Activations",
     "pdf_url": "https://arxiv.org/pdf/2602.06964v1",
