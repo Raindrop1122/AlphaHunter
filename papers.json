@@ -1,5 +1,351 @@
 [
   {
+    "id": "2602.11151v1",
+    "title": "Diffusion-Pretrained Dense and Contextual Embeddings",
+    "pdf_url": "https://arxiv.org/pdf/2602.11151v1",
+    "published": "2026-02-11",
+    "crawled_at": "2026-02-12 20:20:27",
+    "ai_score": 8.2,
+    "translated_title": "扩散预训练的密集与上下文嵌入",
+    "summary_en": [
+      "• Model Architecture: Introduces pplx-embed family with diffusion-pretrained language model backbone using multi-stage contrastive learning and bidirectional attention for comprehensive context capture.",
+      "• Data used: Trained on web-scale retrieval data (unspecified exact datasets) with internal evaluation suite covering tens of millions of documents in real-world search scenarios.",
+      "• Performance metrics: pplx-embed-v1 achieves competitive results on MTEB (Multilingual v2, Code), MIRACL, BERGEN, and ToolRet benchmarks; pplx-embed-context-v1 sets new records on ConTEB benchmark."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于扩散预训练语言模型的多阶段对比学习框架，支持双向注意力机制，通过均值池化和后期分块策略优化长文档全局上下文保留。",
+      "• 数据来源: 使用网络规模检索数据进行训练，内部评估套件覆盖数千万文档的真实世界搜索场景，具体数据集未详细说明。",
+      "• 主要结论: pplx-embed-v1在多个多语言和代码检索基准上表现优异，pplx-embed-context-v1在ConTEB基准上创下新纪录，验证了模型在大规模生产环境中的有效性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for NLP-driven trading strategies requiring multilingual document retrieval and contextual understanding, especially in cross-market information aggregation.",
+      "• Implementation Risk: Moderate risk due to reliance on diffusion pretraining (computationally intensive) and lack of detailed training data disclosure, which may affect reproducibility and fine-tuning.",
+      "• Novelty: Novel integration of diffusion-based pretraining with contrastive learning for embeddings, offering improved bidirectional context capture over traditional methods, though not groundbreaking in core retrieval concepts."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将扩散预训练与对比学习结合用于嵌入模型，通过双向注意力机制增强上下文理解，在长文档处理上具有技术优势。",
+      "• 实盘坑: 扩散预训练计算成本高，可能影响部署效率；训练数据细节不透明，增加实盘应用的不确定性。",
+      "• 复现难度: 中等偏高，需要大量计算资源和专业NLP工程能力，开源模型可用但内部评估数据缺失可能限制优化。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2602.11150v1",
+    "title": "YOR: Your Own Mobile Manipulator for Generalizable Robotics",
+    "pdf_url": "https://arxiv.org/pdf/2602.11150v1",
+    "published": "2026-02-11",
+    "crawled_at": "2026-02-12 20:20:44",
+    "ai_score": 7.5,
+    "translated_title": "YOR：面向通用机器人学的低成本移动操作平台",
+    "summary_en": [
+      "• Model Architecture: YOR is an open-source mobile manipulator featuring an omnidirectional base, telescopic vertical lift, and dual arms with grippers for whole-body mobility and manipulation.",
+      "• Data used: The paper does not specify training data but demonstrates capabilities through task completion requiring coordinated control, bimanual manipulation, and autonomous navigation.",
+      "• Performance metrics: Achieves competitive functionality for mobile manipulation research at under 10,000 USD BOM cost, with modular design using off-the-shelf components."
+    ],
+    "summary_cn": [
+      "• 核心模型: YOR是一个开源移动操作机器人，采用全向底盘、伸缩式垂直升降机构和双机械臂夹爪，实现全身移动与操作能力。",
+      "• 数据来源: 未明确训练数据，通过完成需要协调控制、双手操作和自主导航的任务来展示性能。",
+      "• 主要结论: 在低于1万美元的材料成本下，提供与现有平台相媲美的移动操作研究功能，强调模块化和易组装性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Limited direct financial alpha, but could enable cost-effective robotics research that may lead to automation breakthroughs in logistics or manufacturing.",
+      "• Implementation Risk: High due to hardware dependency, potential reliability issues with low-cost components, and lack of detailed performance benchmarks.",
+      "• Novelty: Moderate - integrates existing technologies into an affordable, modular platform but lacks algorithmic or methodological innovation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等 - 将现有技术整合为低成本模块化平台，但缺乏算法或方法论上的突破。",
+      "• 实盘坑: 高 - 硬件依赖性强，低成本组件可能存在可靠性问题，且缺乏详细的性能基准测试。",
+      "• 复现难度: 中等 - 开源设计和现成组件降低门槛，但需要硬件组装和集成专业知识。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2602.11145v1",
+    "title": "SCRAPL: Scattering Transform with Random Paths for Machine Learning",
+    "pdf_url": "https://arxiv.org/pdf/2602.11145v1",
+    "published": "2026-02-11",
+    "crawled_at": "2026-02-12 20:21:03",
+    "ai_score": 7.5,
+    "translated_title": "SCRAPL：用于机器学习的随机路径散射变换",
+    "summary_en": [
+      "• Model Architecture: SCRAPL is a stochastic optimization scheme for efficient evaluation of multivariable scattering transforms, specifically implemented for the joint time-frequency scattering transform (JTFS) which demodulates spectrotemporal patterns at multiple scales and rates.",
+      "• Data used: Applied to unsupervised sound matching tasks using a granular synthesizer and the Roland TR-808 drum machine, with an initialization heuristic based on importance sampling to adapt to perceptual content of the dataset.",
+      "• Performance metrics: Improves neural network convergence and evaluation performance in differentiable digital signal processing (DDSP) applications, reducing computational cost compared to full scattering transforms."
+    ],
+    "summary_cn": [
+      "• 核心模型: SCRAPL是一种随机优化方案，用于高效评估多变量散射变换，特别是针对联合时频散射变换（JTFS），该变换在多个尺度和速率下解调频谱时间模式。",
+      "• 数据来源: 应用于无监督声音匹配任务，使用颗粒合成器和Roland TR-808鼓机，并基于重要性采样的初始化启发式方法以适应数据集的感知内容。",
+      "• 主要结论: 在可微分数字信号处理（DDSP）应用中提高了神经网络收敛性和评估性能，相比完整散射变换降低了计算成本。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; SCRAPL could enhance audio/speech processing models in finance for sentiment analysis or market noise filtering, but direct trading alpha is limited without financial data validation.",
+      "• Implementation Risk: High; stochastic optimization may introduce variance in training, and reliance on perceptual heuristics could be dataset-specific, requiring careful tuning for financial applications.",
+      "• Novelty: High; introduces a novel stochastic approach to scattering transforms, addressing computational bottlenecks in differentiable loss functions, with potential for broader machine learning optimization."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；提出了一种新颖的随机散射变换方法，解决了可微分损失函数中的计算瓶颈，具有广泛的机器学习优化潜力。",
+      "• 实盘坑: 高；随机优化可能引入训练方差，依赖感知启发式方法可能具有数据集特异性，金融应用需精细调参。",
+      "• 复现难度: 中等；提供Python包和代码，但需要音频处理专业知识，金融数据适配可能增加复杂性。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2602.11144v1",
+    "title": "GENIUS: Generative Fluid Intelligence Evaluation Suite",
+    "pdf_url": "https://arxiv.org/pdf/2602.11144v1",
+    "published": "2026-02-11",
+    "crawled_at": "2026-02-12 20:21:26",
+    "ai_score": 8.5,
+    "translated_title": "GENIUS：生成式流体智能评估套件",
+    "summary_en": [
+      "• Model Architecture: The paper introduces GENIUS, a benchmark suite designed to evaluate Generative Fluid Intelligence (GFI) in Unified Multimodal Models (UMMs), focusing on three primitives: inducing implicit patterns, executing ad-hoc constraints, and adapting to contextual knowledge.",
+      "• Data used: The benchmark includes tasks grounded entirely in immediate context, such as inferring personalized visual preferences, visualizing abstract metaphors, and simulating counter-intuitive physics, with the dataset and code available at https://github.com/arctanxarc/GENIUS.",
+      "• Performance metrics: Systematic evaluation of 12 representative models reveals significant performance deficits in GFI tasks, with diagnostic analysis showing failures stem from limited context comprehension rather than insufficient generative capability.",
+      "• Training intervention: The paper proposes a training-free attention intervention strategy to bridge the gap in context comprehension, aiming to enhance dynamic reasoning without additional model training."
+    ],
+    "summary_cn": [
+      "• 核心模型: 论文提出GENIUS基准套件，用于评估统一多模态模型（UMMs）的生成式流体智能（GFI），基于三个基本能力：诱导隐含模式、执行临时约束和适应上下文知识。",
+      "• 数据来源: 基准任务完全基于即时上下文设计，包括推断个性化视觉偏好、可视化抽象隐喻和模拟反直觉物理现象，数据集和代码发布于GitHub。",
+      "• 主要结论: 对12个代表性模型的系统评估显示，在GFI任务中存在显著性能缺陷，诊断分析表明失败源于有限的上下文理解而非生成能力不足。",
+      "• 干预策略: 提出无需训练的注意力干预方法，以弥补上下文理解差距，提升动态推理能力。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for developing models with enhanced dynamic reasoning capabilities, which could be applied to real-time financial scenario analysis and adaptive trading strategies, though direct alpha generation requires further integration with market data.",
+      "• Implementation Risk: Moderate risk due to reliance on context comprehension improvements; the training-free intervention may not generalize well across all model architectures or real-world noisy data, potentially limiting practical deployment.",
+      "• Novelty: High novelty in formalizing GFI and creating a benchmark that shifts focus from crystallized to fluid intelligence, offering a fresh perspective on model evaluation beyond knowledge recall, which could inspire new research directions in AI for finance."
+    ],
+    "verdict_cn": [
+      "• 创新点: 创新性地形式化生成式流体智能（GFI）概念，并建立基准套件，推动模型评估从结晶智能转向流体智能，为AI在动态环境中的应用提供新思路。",
+      "• 实盘坑: 实施风险中等，依赖上下文理解改进，无训练干预方法可能在不同模型架构或真实市场噪声数据中泛化能力有限，需谨慎验证。",
+      "• 复现难度: 复现难度较低，论文提供公开数据集和代码，便于快速测试和扩展，但需注意模型选择和任务适配可能影响结果一致性。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2602.11142v1",
+    "title": "Data-Efficient Hierarchical Goal-Conditioned Reinforcement Learning via Normalizing Flows",
+    "pdf_url": "https://arxiv.org/pdf/2602.11142v1",
+    "published": "2026-02-11",
+    "crawled_at": "2026-02-12 20:21:45",
+    "ai_score": 8.2,
+    "translated_title": "基于归一化流的数据高效分层目标条件强化学习",
+    "summary_en": [
+      "• Model Architecture: NF-HIQL introduces a hierarchical framework with normalizing flow policies at both high- and low-levels, replacing unimodal Gaussian policies to enable tractable log-likelihood computation and efficient sampling.",
+      "• Data used: Evaluated across diverse long-horizon tasks including locomotion, ball-dribbling, and multi-step manipulation from OGBench, focusing on offline or data-scarce regimes.",
+      "• Performance metrics: Consistently outperforms prior goal-conditioned and hierarchical baselines, demonstrating superior robustness under limited data and improved generalization with explicit KL-divergence bounds and PAC-style sample efficiency results."
+    ],
+    "summary_cn": [
+      "• 核心模型: NF-HIQL采用归一化流策略替代单峰高斯策略，构建分层目标条件强化学习框架，支持可处理的似然计算和高效采样。",
+      "• 数据来源: 在OGBench中的长时程任务（如运动控制、运球和多步操作）上进行评估，专注于离线或数据稀缺场景。",
+      "• 主要结论: 在有限数据下表现优于现有基线，通过理论保证（如KL散度边界和PAC样本效率）展示了更好的泛化能力和鲁棒性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for scalable, data-efficient hierarchical RL in complex tasks, with theoretical guarantees enhancing reliability for real-world applications like robotics or autonomous systems.",
+      "• Implementation Risk: Moderate risk due to complexity of normalizing flow integration and hierarchical training, which may require significant computational resources and expertise for stable deployment.",
+      "• Novelty: Significant novelty in combining normalizing flows with hierarchical RL to model multimodal behaviors, addressing key limitations in data efficiency and policy expressivity."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将归一化流与分层强化学习结合，创新性地解决数据效率和策略表达性不足的问题，支持多模态行为建模。",
+      "• 实盘坑: 实现风险较高，归一化流和分层训练复杂度大，可能需大量计算资源和调优才能稳定应用。",
+      "• 复现难度: 中等偏高，需深入理解归一化流和分层RL理论，代码实现和实验复现可能挑战较大。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2602.11141v1",
+    "title": "LCIP: Loss-Controlled Inverse Projection of High-Dimensional Image Data",
+    "pdf_url": "https://arxiv.org/pdf/2602.11141v1",
+    "published": "2026-02-11",
+    "crawled_at": "2026-02-12 20:22:03",
+    "ai_score": 7.2,
+    "translated_title": "LCIP：高维图像数据的损失控制逆投影",
+    "summary_en": [
+      "• Model Architecture: LCIP introduces a novel inverse projection method that can 'sweep' the data space under user control via two intuitive parameters, addressing the limitation of fixed surface-like structures in existing P⁻¹ methods.",
+      "• Data used: The paper demonstrates the method on image datasets for style transfer applications, though it claims generic applicability to any projection technique and dataset type.",
+      "• Performance metrics: The method is evaluated through extensive applications in image manipulation for style transfer, showing improved coverage of the data space compared to existing inverse projection approaches."
+    ],
+    "summary_cn": [
+      "• 核心模型: LCIP提出一种新的逆投影方法，通过两个直观的用户参数控制数据空间的“扫描”，解决了现有P⁻¹方法只能生成固定表面结构的局限性。",
+      "• 数据来源: 论文使用图像数据集进行风格迁移应用演示，但声称该方法适用于任何投影技术和数据集类型。",
+      "• 主要结论: 该方法在图像风格迁移中表现出比现有逆投影方法更好的数据空间覆盖能力，具有通用性和易实现性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - The method could enhance data augmentation and synthetic data generation for training ML models in finance, potentially improving model robustness in limited data scenarios.",
+      "• Implementation Risk: High - The abstract lacks concrete performance metrics and comparison benchmarks; real-world financial data complexity may challenge the claimed 'generic applicability'.",
+      "• Novelty: Significant - The 'sweeping' mechanism and user-controlled parameters represent a conceptual advance over fixed-structure inverse projection methods, though technical details are sparse."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著 - “扫描”机制和用户控制参数在概念上超越了固定结构的逆投影方法，但技术细节不足。",
+      "• 实盘坑: 高 - 摘要缺乏具体性能指标和对比基准；真实金融数据的复杂性可能挑战其声称的“通用适用性”。",
+      "• 复现难度: 中等 - 方法声称简单易实现，但缺少完整算法描述和开源代码，依赖论文中的有限信息可能增加复现不确定性。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2602.11139v1",
+    "title": "TabICLv2: A better, faster, scalable, and open tabular foundation model",
+    "pdf_url": "https://arxiv.org/pdf/2602.11139v1",
+    "published": "2026-02-11",
+    "crawled_at": "2026-02-12 20:22:28",
+    "ai_score": 8.5,
+    "translated_title": "TabICLv2：一个更好、更快、可扩展且开源的表格基础模型",
+    "summary_en": [
+      "• Model Architecture: TabICLv2 introduces architectural innovations including a scalable softmax in attention mechanisms to improve generalization to larger datasets without requiring prohibitive long-sequence pretraining, and it replaces AdamW with the Muon optimizer for optimized pretraining protocols.",
+      "• Data used: The model utilizes a novel synthetic data generation engine designed for high pretraining diversity, and it is evaluated on benchmarks such as TabArena and TALENT, with performance tested on million-scale datasets under 50GB GPU memory constraints.",
+      "• Performance metrics: TabICLv2 surpasses the current state-of-the-art RealTabPFN-2.5 (which is hyperparameter-tuned, ensembled, and fine-tuned on real data) on TabArena and TALENT benchmarks without any tuning, and it generalizes effectively to large datasets while being faster than RealTabPFN-2.5."
+    ],
+    "summary_cn": [
+      "• 核心模型: TabICLv2基于三个支柱构建：新型合成数据生成引擎、包括可扩展注意力softmax在内的架构创新，以及使用Muon优化器替代AdamW的优化预训练协议。",
+      "• 数据来源: 模型采用专为高预训练多样性设计的合成数据生成引擎，并在TabArena和TALENT基准上进行评估，测试了在50GB GPU内存下对百万级数据集的有效泛化能力。",
+      "• 主要结论: 在TabArena和TALENT基准上，未经调优的TabICLv2性能超越了当前最先进的RealTabPFN-2.5，且在处理大规模数据时速度更快、内存效率更高。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for generating alpha in quantitative strategies due to superior performance on tabular benchmarks without tuning, which could translate to better predictive models for financial datasets like stock returns or risk factors, but real-world financial data complexity may require further validation.",
+      "• Implementation Risk: Moderate risk as the model is open-source with inference code and weights released, but reliance on synthetic data for pretraining may introduce biases when applied to real financial data, and scalability to ultra-high-frequency trading needs testing.",
+      "• Novelty: High novelty with contributions in synthetic data generation, scalable attention mechanisms, and the Muon optimizer, positioning it as a state-of-the-art advancement in tabular foundation models, though incremental over prior work like TabICL."
+    ],
+    "verdict_cn": [
+      "• 创新点: 创新性高，包括合成数据生成引擎、可扩展注意力机制和Muon优化器，在表格基础模型领域实现显著突破，但相对于TabICL等前作属于渐进式改进。",
+      "• 实盘坑: 中等风险，开源代码和权重降低部署门槛，但合成数据预训练可能在实际金融数据中引入偏差，且需测试在高频交易等场景下的扩展性。",
+      "• 复现难度: 低难度，作者承诺开源研究，已发布推理代码和模型权重，预训练代码和数据引擎将后续提供，便于复现和定制化开发。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2602.11137v1",
+    "title": "Weight Decay Improves Language Model Plasticity",
+    "pdf_url": "https://arxiv.org/pdf/2602.11137v1",
+    "published": "2026-02-11",
+    "crawled_at": "2026-02-12 20:22:47",
+    "ai_score": 7.8,
+    "translated_title": "权重衰减提升语言模型可塑性",
+    "summary_en": [
+      "• Model Architecture: Large language models (LLMs) with standard transformer architecture, focusing on pretraining phase optimization",
+      "• Data used: Pretraining datasets (unspecified but typical for LLMs like web text corpora) and downstream fine-tuning tasks for evaluation",
+      "• Performance metrics: Validation loss during pretraining, downstream task performance gains after fine-tuning, and representation analysis metrics",
+      "• Key finding: Higher weight decay values during pretraining lead to better adaptability (plasticity) to downstream tasks despite potentially worse base model performance"
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于标准Transformer架构的大语言模型，重点研究预训练阶段的优化参数",
+      "• 数据来源: 未具体说明但采用典型LLM预训练数据集（如网络文本语料）及下游微调任务进行评估",
+      "• 主要结论: 预训练阶段使用更高的权重衰减值能显著提升模型在下游任务中的适应能力（可塑性），即使基础模型性能可能更差",
+      "• 机制分析: 权重衰减促进线性可分表示、正则化注意力矩阵并减少训练数据过拟合"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - identifies optimization parameter (weight decay) that improves fine-tuning adaptability, potentially applicable to multi-task LLM strategies",
+      "• Implementation Risk: Low-medium - weight decay is standard hyperparameter, but optimal values may vary across architectures and datasets",
+      "• Novelty: High - challenges conventional hyperparameter optimization focused solely on validation loss, introduces 'plasticity' as key metric for pretraining evaluation",
+      "• Practical limitation: Requires extensive retraining experiments to determine optimal weight decay values for specific use cases"
+    ],
+    "verdict_cn": [
+      "• 创新点: 突破性 - 首次系统研究预训练阶段权重衰减对下游适应性的影响，提出'可塑性'作为核心评估指标",
+      "• 实盘坑: 中等风险 - 需针对不同模型架构和任务进行大量实验确定最优权重衰减值，计算成本较高",
+      "• 复现难度: 中等 - 需要标准LLM预训练基础设施，但方法本身相对直接可复现",
+      "• 策略价值: 为多任务LLM优化提供新方向，但需结合具体应用场景验证效果"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2602.11133v1",
+    "title": "Just on Time: Token-Level Early Stopping for Diffusion Language Models",
+    "pdf_url": "https://arxiv.org/pdf/2602.11133v1",
+    "published": "2026-02-11",
+    "crawled_at": "2026-02-12 20:23:04",
+    "ai_score": 8.2,
+    "translated_title": "恰到好处：扩散语言模型的词级早停策略",
+    "summary_en": [
+      "• Model Architecture: Introduces a training-free, token-level early stopping method for diffusion language models that identifies convergence independently at each position using lightweight signals from model predictions and local context.",
+      "• Data used: Evaluated across diverse benchmarks including mathematical reasoning, general question answering, and scientific understanding tasks, though specific datasets are not detailed in the abstract.",
+      "• Performance metrics: Achieves state-of-the-art efficiency gains by substantially reducing the total number of diffusion steps required while preserving generation quality across multiple domains."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出一种无需训练的扩散语言模型词级早停方法，利用模型预测和局部上下文的轻量级信号独立判断每个位置的收敛性。",
+      "• 数据来源: 在数学推理、通用问答和科学理解等多个基准测试上进行评估，但摘要中未详细说明具体数据集。",
+      "• 主要结论: 该方法显著减少了扩散步骤总数，在保持生成质量的同时实现了最先进的效率提升，适用于多种任务领域。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for reducing computational costs in real-time text generation applications, particularly valuable for latency-sensitive trading signal generation or news analysis pipelines.",
+      "• Implementation Risk: Moderate risk due to reliance on model-specific signals; performance may degrade with different diffusion architectures or in noisy financial text environments.",
+      "• Novelty: Strong novelty in applying token-level early stopping to diffusion models, offering a practical efficiency improvement without task-specific fine-tuning."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将词级早停策略首次应用于扩散语言模型，通过轻量级信号实现自适应冻结，无需任务特定微调，创新性较强。",
+      "• 实盘坑: 依赖模型特定信号，在不同扩散架构或金融文本噪声环境下性能可能下降；实时部署需考虑收敛判断的延迟影响。",
+      "• 复现难度: 中等难度，需要理解扩散模型的内部预测机制，但方法描述清晰，开源实现可能性较高。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2602.11130v1",
+    "title": "From Circuits to Dynamics: Understanding and Stabilizing Failure in 3D Diffusion Transformers",
+    "pdf_url": "https://arxiv.org/pdf/2602.11130v1",
+    "published": "2026-02-11",
+    "crawled_at": "2026-02-12 20:23:26",
+    "ai_score": 8.7,
+    "translated_title": "从电路到动力学：理解并稳定3D扩散Transformer中的故障",
+    "summary_en": [
+      "• Model Architecture: Analyzes 3D diffusion transformers (specifically WaLa and Make-a-Shape architectures) for surface completion from sparse point clouds, focusing on cross-attention mechanisms in early denoising layers.",
+      "• Data used: Evaluates on GSO (Google Scanned Objects) and SimJEB datasets, covering diverse 3D object shapes and synthetic environments.",
+      "• Performance metrics: Reports catastrophic failure rates under small perturbations (Meltdown phenomenon) and stabilization rates up to 98.3% with proposed PowerRemap control method across DDPM and DDIM denoising strategies."
+    ],
+    "summary_cn": [
+      "• 核心模型: 研究3D扩散Transformer（如WaLa和Make-a-Shape架构），用于稀疏点云的表面补全，重点关注早期去噪层中的交叉注意力机制。",
+      "• 数据来源: 使用GSO（谷歌扫描对象）和SimJEB数据集，涵盖多样化的3D物体形状和合成环境。",
+      "• 主要结论: 发现模型在微小扰动下会出现灾难性故障（Meltdown现象），通过PowerRemap控制方法可将稳定率提升至98.3%，适用于DDPM和DDIM去噪策略。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High - Mechanistic interpretability approach (activation-patching) provides novel insights into diffusion model failures, enabling robust control methods like PowerRemap that could generalize to other conditional generation tasks in finance (e.g., time-series forecasting with sparse data).",
+      "• Implementation Risk: Moderate - While PowerRemap shows strong stabilization, real-world deployment requires careful tuning for specific datasets and architectures; failure modes might persist in unseen scenarios.",
+      "• Novelty: Significant - Links circuit-level analysis (cross-attention activations) to diffusion dynamics (bifurcations), offering a principled framework for diagnosing and fixing instability in generative models, which is underexplored in quantitative finance applications."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著 - 将电路级分析（交叉注意力激活）与扩散动力学（分岔）联系起来，为诊断和修复生成模型的不稳定性提供了原则性框架，在量化金融应用中尚未充分探索。",
+      "• 实盘坑: 中等 - PowerRemap虽能提升稳定性，但实际部署需针对特定数据集和架构精细调参；在未知场景中故障模式可能仍会存在。",
+      "• 复现难度: 中等偏高 - 需要专业知识实现激活修补和谱熵分析，但开源代码和标准数据集（GSO/SimJEB）可降低部分门槛。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
     "id": "2602.10117v1",
     "title": "Biases in the Blind Spot: Detecting What LLMs Fail to Mention",
     "pdf_url": "https://arxiv.org/pdf/2602.10117v1",
