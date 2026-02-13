@@ -1,5 +1,355 @@
 [
   {
+    "id": "2602.12279v1",
+    "title": "UniT: Unified Multimodal Chain-of-Thought Test-time Scaling",
+    "pdf_url": "https://arxiv.org/pdf/2602.12279v1",
+    "published": "2026-02-12",
+    "crawled_at": "2026-02-13 20:22:29",
+    "ai_score": 8.2,
+    "translated_title": "UniT：统一多模态思维链测试时扩展",
+    "summary_en": [
+      "• Model Architecture: UniT is a unified multimodal framework that integrates chain-of-thought reasoning, verification, and iterative refinement within a single model architecture, enabling both understanding and generation tasks.",
+      "• Data used: The framework employs agentic data synthesis to generate training trajectories, including short reasoning chains, generation sequences, and editing patterns, without specifying external datasets.",
+      "• Performance metrics: Key findings include generalization to longer inference chains, superior scalability and compute-efficiency of sequential reasoning over parallel sampling, and improved out-of-distribution visual reasoning through training on editing trajectories."
+    ],
+    "summary_cn": [
+      "• 核心模型: UniT是一个统一多模态框架，在单一架构中整合思维链推理、验证和迭代优化，支持理解和生成任务。",
+      "• 数据来源: 采用智能体数据合成方法生成训练轨迹，包括短推理链、生成序列和编辑模式，未依赖外部数据集。",
+      "• 主要结论: 模型在测试时能泛化到更长推理链；顺序推理比并行采样更具可扩展性和计算效率；通过编辑轨迹训练提升分布外视觉推理能力。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for improving multimodal AI systems in complex tasks like spatial reasoning and interactive object manipulation, which could enhance automated analysis in fields like autonomous systems or content generation.",
+      "• Implementation Risk: Moderate risk due to reliance on synthetic data and the complexity of integrating iterative refinement into unified models, which may lead to instability in real-world deployments.",
+      "• Novelty: Significant novelty in extending test-time scaling to multimodal contexts and combining chain-of-thought reasoning with unified architectures, addressing a gap in iterative refinement for multimodal tasks."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将测试时扩展范式引入多模态领域，结合思维链推理与统一模型架构，填补了多模态任务迭代优化的空白。",
+      "• 实盘坑: 依赖合成数据可能引入偏差，迭代优化机制在复杂场景下易导致计算开销大和收敛不稳定。",
+      "• 复现难度: 中等偏高，需要实现智能体数据合成和多轮推理集成，对硬件和算法调优要求较高。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2602.12274v1",
+    "title": "Function-Space Decoupled Diffusion for Forward and Inverse Modeling in Carbon Capture and Storage",
+    "pdf_url": "https://arxiv.org/pdf/2602.12274v1",
+    "published": "2026-02-12",
+    "crawled_at": "2026-02-13 20:22:57",
+    "ai_score": 8.2,
+    "translated_title": "函数空间解耦扩散模型在碳捕集与封存正反演建模中的应用",
+    "summary_en": [
+      "• Model Architecture: Fun-DDPS combines a single-channel diffusion model for geological parameter priors with a Local Neural Operator (LNO) surrogate for physics-consistent guidance, decoupling parameter recovery from data assimilation.",
+      "• Data used: Synthetic CCS modeling datasets were employed to validate the framework, focusing on subsurface flow characterization with sparse observations (e.g., 25% data availability).",
+      "• Performance metrics: Achieved 7.7% relative error in forward modeling with 25% observations (11x improvement over standard surrogates) and Jensen-Shannon divergence <0.06 in inverse modeling, with 4x sample efficiency gain over rejection sampling.",
+      "• Key innovation: First rigorous validation of diffusion-based inverse solvers against asymptotically exact Rejection Sampling posteriors, ensuring physically consistent realizations without high-frequency artifacts."
+    ],
+    "summary_cn": [
+      "• 核心模型: Fun-DDPS采用函数空间扩散模型与可微神经算子代理相结合的解耦架构，扩散模型学习地质参数先验分布，神经算子提供物理一致的动态场指导。",
+      "• 数据来源: 基于合成碳捕集与封存（CCS）建模数据集，模拟地下流动特征，重点处理稀疏观测数据（如仅25%可用数据）。",
+      "• 主要结论: 在仅25%观测数据下，正演建模相对误差降至7.7%（比标准代理方法提升11倍）；反演建模中Jensen-Shannon散度小于0.06，样本效率比拒绝采样提升4倍，且避免高频伪影。",
+      "• 技术突破: 首次对基于扩散的反演求解器进行严格验证，对比渐近精确的拒绝采样后验，确保物理一致性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for quantitative subsurface modeling in energy/commodities trading, enabling more accurate reservoir simulations and risk assessment in carbon markets with sparse data.",
+      "• Implementation Risk: Moderate due to reliance on synthetic data; real-world geological heterogeneity and sensor noise could degrade performance, requiring domain adaptation.",
+      "• Novelty: Significant in decoupling diffusion priors from physics surrogates, offering a robust framework for ill-posed inverse problems beyond CCS to other PDE-based systems.",
+      "• Scalability: Potential for high-dimensional applications, but computational cost of training diffusion models and neural operators may limit real-time deployment in trading contexts."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将扩散模型与神经算子解耦，创新性地处理稀疏数据下的反问题，为物理信息机器学习提供新范式，超越传统联合状态方法。",
+      "• 实盘坑: 依赖合成数据验证，实际地质复杂性和传感器噪声可能导致性能下降；模型训练计算开销大，难以满足高频交易实时性要求。",
+      "• 复现难度: 中等偏高，需搭建扩散模型和神经算子框架，对计算资源（GPU）和领域知识（地下流动PDE）要求较高，但代码开源可降低门槛。",
+      "• 应用局限: 主要针对CCS场景，泛化至金融时间序列需调整物理约束，可能引入过拟合风险。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2602.12273v1",
+    "title": "Learning to Control: The iUzawa-Net for Nonsmooth Optimal Control of Linear PDEs",
+    "pdf_url": "https://arxiv.org/pdf/2602.12273v1",
+    "published": "2026-02-12",
+    "crawled_at": "2026-02-13 20:23:23",
+    "ai_score": 7.8,
+    "translated_title": "学习控制：用于线性偏微分方程非光滑最优控制的iUzawa-Net",
+    "summary_en": [
+      "• Model Architecture: iUzawa-Net unrolls an inexact Uzawa method for saddle point problems, replacing classical preconditioners and PDE solvers with learnable neural networks.",
+      "• Data used: The paper validates performance on nonsmooth elliptic and parabolic optimal control problems, but does not specify training data sources or datasets.",
+      "• Performance metrics: The approach demonstrates promising numerical efficiency and enables real-time solutions for a class of nonsmooth optimal control problems of linear PDEs.",
+      "• Theoretical guarantees: The authors prove universal approximation properties and establish asymptotic ε-optimality for the iUzawa-Net.",
+      "• Framework versatility: The techniques offer a versatile framework for designing and analyzing various optimization-informed deep learning approaches to optimal control and other PDE-constrained optimization problems."
+    ],
+    "summary_cn": [
+      "• 核心模型: iUzawa-Net将非精确Uzawa方法展开，用可学习的神经网络替代经典预处理器和偏微分方程求解器。",
+      "• 数据来源: 论文在非光滑椭圆和抛物最优控制问题上验证性能，但未明确指定训练数据来源或数据集。",
+      "• 主要结论: 该方法展示了有前景的数值效率，能够为线性偏微分方程的一类非光滑最优控制问题提供实时解。",
+      "• 理论保证: 作者证明了iUzawa-Net的通用逼近性质和渐近ε最优性。",
+      "• 框架通用性: 该技术为设计和分析各种优化驱动的深度学习方法提供了通用框架，适用于最优控制和其他偏微分方程约束优化问题。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - The real-time solving capability for PDE-constrained optimization could be valuable for high-frequency trading models that require rapid recalibration of control parameters in dynamic environments.",
+      "• Implementation Risk: High - The approach requires specialized neural network design for each problem class, and the paper lacks details on training data requirements, computational resources, and robustness to market noise.",
+      "• Novelty: Significant - The integration of model-based optimization algorithms with data-driven deep learning creates a novel 'learning-to-control' paradigm that could outperform purely model-based or purely data-driven approaches in certain applications.",
+      "• Practical limitations: The focus on linear PDEs limits applicability to more complex nonlinear financial models, and the theoretical guarantees are asymptotic rather than finite-sample."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著 - 将基于模型的优化算法与数据驱动的深度学习相结合，创造了新颖的'学习控制'范式，在某些应用中可能优于纯模型或纯数据驱动方法。",
+      "• 实盘坑: 高 - 方法需要为每个问题类别设计专门的神经网络，论文缺乏训练数据需求、计算资源和市场噪声鲁棒性的细节。",
+      "• 复现难度: 中等偏高 - 需要深度学习和偏微分方程优化的专业知识，但论文提供了理论框架和数值验证，为复现提供了基础。",
+      "• 适用性限制: 专注于线性偏微分方程限制了在更复杂非线性金融模型中的应用，且理论保证是渐近的而非有限样本的。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2602.12271v1",
+    "title": "MonarchRT: Efficient Attention for Real-Time Video Generation",
+    "pdf_url": "https://arxiv.org/pdf/2602.12271v1",
+    "published": "2026-02-12",
+    "crawled_at": "2026-02-13 20:23:50",
+    "ai_score": 8.5,
+    "translated_title": "MonarchRT：实时视频生成的高效注意力机制",
+    "summary_en": [
+      "• Model Architecture: Monarch-RT uses a structured attention parameterization based on Monarch matrices, factorizing attention with block structure and an extended tiled Monarch parameterization to balance expressivity and computational efficiency, enhanced by custom Triton kernels for optimization.",
+      "• Data used: The paper does not specify datasets, but validates Monarch-RT on state-of-the-art models like Self-Forcing, focusing on real-time video generation tasks, likely using standard video datasets such as Kinetics or UCF-101 for benchmarking.",
+      "• Performance metrics: Achieves up to 95% attention sparsity without quality loss, outperforms FlashAttention-2/3/4 kernels with speedups of 1.4-11.8X on Nvidia GPUs (RTX 5090, H100, B200), enabling true real-time video generation at 16 FPS on a single RTX 5090."
+    ],
+    "summary_cn": [
+      "• 核心模型: Monarch-RT采用基于Monarch矩阵的结构化注意力参数化方法，通过块结构和扩展的平铺Monarch参数化分解注意力，在保持计算效率的同时实现高表达力，并利用自定义Triton内核进行优化。",
+      "• 数据来源: 论文未明确指定数据集，但在最先进模型（如Self-Forcing）上验证Monarch-RT，专注于实时视频生成任务，可能使用标准视频数据集（如Kinetics或UCF-101）进行基准测试。",
+      "• 主要结论: Monarch-RT在注意力稀疏度高达95%的情况下无质量损失，在Nvidia GPU（RTX 5090、H100、B200）上优于FlashAttention-2/3/4内核，速度提升1.4-11.8倍，首次在单RTX 5090上实现16 FPS的真正实时视频生成。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for alpha in real-time video generation applications, such as live streaming or autonomous systems, due to significant speed improvements and efficiency gains that could reduce computational costs and enable new use cases.",
+      "• Implementation Risk: Moderate risk due to reliance on custom Triton kernels and specific GPU architectures (e.g., RTX 5090), which may limit portability and require substantial engineering effort for deployment in diverse environments.",
+      "• Novelty: High novelty as it addresses a critical bottleneck in real-time video generation by proposing a structured attention method that outperforms prior sparse approximations, making it a pioneering work in sparse attention for this domain."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高创新性，针对实时视频生成中的注意力计算瓶颈，提出结构化Monarch矩阵参数化方法，有效结合周期结构和动态稀疏对应，超越现有稀疏注意力方法，是该领域的开创性工作。",
+      "• 实盘坑: 中等风险，依赖自定义Triton内核和特定GPU架构（如RTX 5090），可能限制可移植性，在多样化环境中部署需要大量工程优化，硬件依赖性较强。",
+      "• 复现难度: 高难度，需要深度理解Monarch矩阵和注意力机制，实现自定义内核和优化，对计算资源和专业知识要求较高，复现过程复杂且耗时。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2602.12267v1",
+    "title": "Self-Supervised Learning via Flow-Guided Neural Operator on Time-Series Data",
+    "pdf_url": "https://arxiv.org/pdf/2602.12267v1",
+    "published": "2026-02-12",
+    "crawled_at": "2026-02-13 20:24:14",
+    "ai_score": 8.2,
+    "translated_title": "基于流引导神经算子的时间序列数据自监督学习",
+    "summary_en": [
+      "• Model Architecture: Introduces Flow-Guided Neural Operator (FGNO), combining operator learning with flow matching for self-supervised training; uses Short-Time Fourier Transform to unify time resolutions and extracts hierarchical features from different network layers and flow times with varying noise strengths.",
+      "• Data used: Evaluated on three biomedical domains: BrainTreeBank (neural signal decoding), DREAMT (skin temperature prediction), and SleepEDF (sleep stage classification) under low-data regimes.",
+      "• Performance metrics: Achieved up to 35% AUROC gains in BrainTreeBank, 16% RMSE reductions in DREAMT, and over 20% improvement in accuracy and macro-F1 on SleepEDF; demonstrates robustness to data scarcity and superior representation learning."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出流引导神经算子（FGNO），结合算子学习与流匹配进行自监督训练；利用短时傅里叶变换统一时间分辨率，通过不同网络层和流时间（施加不同噪声强度）提取层次化特征。",
+      "• 数据来源: 在三个生物医学领域评估：BrainTreeBank（神经信号解码）、DREAMT（皮肤温度预测）和SleepEDF（低数据量下的睡眠阶段分类）。",
+      "• 主要结论: 在BrainTreeBank上AUROC提升高达35%，DREAMT上RMSE降低16%，SleepEDF上准确率和macro-F1提升超过20%；模型对数据稀缺具有鲁棒性，能学习更具表达力的时间序列表示。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for generating alpha in biomedical and healthcare applications due to robust performance under data scarcity and ability to extract versatile representations; could be adapted to financial time series for anomaly detection or regime switching models.",
+      "• Implementation Risk: Moderate risk; requires careful tuning of noise levels and flow times, and the use of clean inputs during inference may limit adaptability to noisy real-world data; biomedical focus may not directly translate to financial domains without domain adaptation.",
+      "• Novelty: High novelty in treating corruption level as a degree of freedom and combining operator learning with flow matching; eliminates randomness in inference by using clean inputs, differentiating from prior generative SSL methods."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将噪声水平作为表示学习的新自由度，结合算子学习与流匹配；使用干净输入进行推理以避免随机性，相比传统生成式自监督方法更具稳定性。",
+      "• 实盘坑: 中等风险；噪声水平和流时间需精细调参，且推理时使用干净输入可能限制对嘈杂现实数据的适应性；生物医学领域应用需经领域适配才能用于金融时间序列。",
+      "• 复现难度: 中等偏高；涉及复杂的算子学习和流匹配框架，需要处理多分辨率时间序列和层次化特征提取，对计算资源和专业知识要求较高。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2602.12262v1",
+    "title": "T3D: Few-Step Diffusion Language Models via Trajectory Self-Distillation with Direct Discriminative Optimization",
+    "pdf_url": "https://arxiv.org/pdf/2602.12262v1",
+    "published": "2026-02-12",
+    "crawled_at": "2026-02-13 20:24:34",
+    "ai_score": 7.8,
+    "translated_title": "T3D：通过轨迹自蒸馏与直接判别优化的少步扩散语言模型",
+    "summary_en": [
+      "• Model Architecture: Proposes T3D, a trajectory self-distillation framework for diffusion large language models (DLLMs) that incorporates Direct Discriminative Optimization (DDO), a reverse-KL objective for mode-seeking distillation.",
+      "• Data used: Not explicitly specified in the abstract, but likely uses standard text corpora for training DLLMs, with benchmarks mentioned for evaluation.",
+      "• Performance metrics: Outperforms strong few-step baselines and standard training under tight step budgets, substantially narrowing the gap to full-step decoding, though full-step remains superior."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出T3D框架，基于轨迹自蒸馏和直接判别优化（DDO），采用反向KL目标进行模式寻求蒸馏，优化少步解码的扩散大语言模型。",
+      "• 数据来源: 摘要未明确说明，但推测使用标准文本语料库训练扩散大语言模型，并在基准测试中进行评估。",
+      "• 主要结论: 在严格步数预算下，优于强少步基线和标准训练，显著缩小与全步解码的差距，为实用少步扩散大语言模型奠定基础。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; improves inference efficiency for DLLMs, potentially enabling faster text generation in applications like high-frequency trading signal processing, but limited by remaining gap to full-step performance.",
+      "• Implementation Risk: High; diffusion models are computationally intensive, and distillation may introduce instability; real-world deployment requires careful tuning and validation.",
+      "• Novelty: High; introduces trajectory self-distillation with DDO for DLLMs, a novel approach to reduce steps while maintaining quality, though building on existing distillation and diffusion techniques."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；将轨迹自蒸馏与直接判别优化结合用于扩散大语言模型，提出少步解码新方法，但基于现有蒸馏和扩散技术。",
+      "• 实盘坑: 高；扩散模型计算成本高，蒸馏可能引入不稳定性；实际部署需精细调参和验证，效率提升有限。",
+      "• 复现难度: 中等；开源代码可用，但需要大量计算资源和专业知识，扩散模型训练复杂，可能难以规模化应用。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2602.12259v1",
+    "title": "Think like a Scientist: Physics-guided LLM Agent for Equation Discovery",
+    "pdf_url": "https://arxiv.org/pdf/2602.12259v1",
+    "published": "2026-02-12",
+    "crawled_at": "2026-02-13 20:24:53",
+    "ai_score": 8.2,
+    "translated_title": "像科学家一样思考：用于方程发现的物理引导LLM智能体",
+    "summary_en": [
+      "• Model Architecture: KeplerAgent is an agentic framework that coordinates physics-based tools to extract intermediate structures (e.g., symmetries) and configures symbolic regression engines (PySINDy, PySR) with function libraries and structural constraints.",
+      "• Data used: Benchmarked on a suite of physical equation datasets, likely including synthetic or real-world physics data with varying noise levels to test robustness.",
+      "• Performance metrics: Achieves substantially higher symbolic accuracy and greater robustness to noisy data compared to both LLM and traditional baselines in equation discovery tasks."
+    ],
+    "summary_cn": [
+      "• 核心模型: KeplerAgent是一个智能体框架，通过物理工具提取中间结构（如对称性），并配置符号回归引擎（PySINDy、PySR）的函数库和结构约束。",
+      "• 数据来源: 基于一套物理方程基准数据集，可能包括合成或真实物理数据，并添加不同噪声水平以测试鲁棒性。",
+      "• 主要结论: 在方程发现任务中，相比LLM和传统基线，KeplerAgent实现了显著更高的符号准确性和对噪声数据的更强鲁棒性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for generating interpretable alpha factors in quantitative finance by discovering symbolic relationships in market data, enhancing model transparency and robustness.",
+      "• Implementation Risk: Moderate risk due to reliance on physics-based priors that may not generalize well to non-physical financial domains, requiring domain adaptation.",
+      "• Novelty: Novel in explicitly modeling the multi-step scientific reasoning process (infer properties first, then equations), moving beyond direct guessing from data."
+    ],
+    "verdict_cn": [
+      "• 创新点: 创新性地模拟了科学推理的多步过程（先推断属性，再推导方程），超越了直接从数据猜测的传统方法。",
+      "• 实盘坑: 依赖物理先验可能难以泛化到非物理的金融领域，需要领域适配，增加了实盘应用的不确定性。",
+      "• 复现难度: 中等难度，需集成多种工具（如PySINDy、PySR）和物理知识，但框架开源可能降低门槛。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2602.12253v1",
+    "title": "Is Online Linear Optimization Sufficient for Strategic Robustness?",
+    "pdf_url": "https://arxiv.org/pdf/2602.12253v1",
+    "published": "2026-02-12",
+    "crawled_at": "2026-02-13 20:25:17",
+    "ai_score": 8.5,
+    "translated_title": "在线线性优化是否足以实现策略鲁棒性？",
+    "summary_en": [
+      "• Model Architecture: The paper proposes black-box reductions that convert any online linear optimization (OLO) algorithm into a strategically robust no-regret bidding algorithm for repeated Bayesian first-price auctions, applicable in both known and unknown value distribution settings.",
+      "• Data used: The analysis is theoretical and does not rely on empirical datasets; it focuses on auction environments with T auctions and K possible bids, assuming Bayesian frameworks and addressing strategic robustness against seller manipulation.",
+      "• Performance metrics: For known value distributions, the algorithm achieves O(√(T log K)) regret with strategic robustness, improving K-dependence exponentially over prior work [KSS24]; for unknown distributions, it achieves high-probability O(√(T (log K + log(T/δ)))) regret while removing bounded density assumptions."
+    ],
+    "summary_cn": [
+      "• 核心模型: 本文提出黑盒归约方法，将任何在线线性优化（OLO）算法转换为策略鲁棒的无悔投标算法，适用于已知和未知价值分布的重复贝叶斯第一价格拍卖场景。",
+      "• 数据来源: 分析基于理论框架，不依赖实证数据；聚焦于具有T次拍卖和K个可能出价的拍卖环境，采用贝叶斯假设并针对卖方操纵的策略鲁棒性。",
+      "• 主要结论: 在已知价值分布下，算法实现O(√(T log K))遗憾并保持策略鲁棒性，在K依赖上指数级改进[KSS24]；在未知分布下，实现高概率O(√(T (log K + log(T/δ))))遗憾，同时去除了有界密度假设。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for algorithmic trading in auction-based markets (e.g., ad exchanges, treasury auctions) by enabling robust bidding strategies that resist manipulation, with improved efficiency over prior methods.",
+      "• Implementation Risk: Moderate risk due to theoretical nature; practical deployment requires calibration to real-world auction dynamics and value distributions, which may introduce performance deviations.",
+      "• Novelty: Significant novelty in bridging OLO algorithms to strategic robustness with black-box reductions, offering exponential improvements in regret bounds and relaxing assumptions compared to existing work."
+    ],
+    "verdict_cn": [
+      "• 创新点: 通过黑盒归约将OLO算法与策略鲁棒性结合，在遗憾边界上实现指数级改进，并放宽了先验假设，为拍卖算法设计提供新范式。",
+      "• 实盘坑: 理论性强，实盘需适配真实拍卖环境（如价值分布非平稳性、对手策略变化），可能面临校准挑战和性能波动风险。",
+      "• 复现难度: 中等难度；核心算法基于标准OLO框架，但需实现归约机制和拍卖模拟，对计算资源要求不高，适合快速原型验证。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2602.12250v1",
+    "title": "Community Concealment from Unsupervised Graph Learning-Based Clustering",
+    "pdf_url": "https://arxiv.org/pdf/2602.12250v1",
+    "published": "2026-02-12",
+    "crawled_at": "2026-02-13 20:25:36",
+    "ai_score": 7.5,
+    "translated_title": "基于无监督图学习的社区隐藏聚类方法",
+    "summary_en": [
+      "• Model Architecture: The paper proposes a perturbation strategy that rewires selected edges and modifies node features to reduce community distinctiveness leveraged by GNN message passing, outperforming the baseline DICE method.",
+      "• Data used: Experiments were conducted on synthetic benchmarks and real network graphs, with evaluations focusing on community concealment performance under identical perturbation budgets.",
+      "• Performance metrics: The method achieves median relative concealment improvements of approximately 20-45% across evaluated settings, demonstrating effectiveness in hiding sensitive communities from GNN-based clustering."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出一种扰动策略，通过重连选定边和修改节点特征来降低GNN消息传递利用的社区区分度，优于基线DICE方法。",
+      "• 数据来源: 在合成基准和真实网络图上进行实验，评估在相同扰动预算下的社区隐藏性能。",
+      "• 主要结论: 该方法在评估设置中实现约20-45%的中位数相对隐藏改进，有效保护敏感社区免受GNN聚类识别。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - The method addresses group-level privacy risks in graph data, which could be adapted for protecting proprietary trading strategies or sensitive financial network structures from reverse engineering.",
+      "• Implementation Risk: High - Real-world financial networks are dynamic and noisy; the perturbation strategy may degrade data utility or be detectable by adversarial models, limiting practical deployment.",
+      "• Novelty: Significant - It introduces a defensive framework for community concealment in unsupervised graph learning, identifying key factors like boundary connectivity and feature similarity that influence concealment effectiveness."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著 - 在无监督图学习中引入社区隐藏的防御框架，识别边界连通性和特征相似性等关键影响因素。",
+      "• 实盘坑: 高 - 真实金融网络动态且嘈杂；扰动策略可能降低数据效用或被对抗模型检测，限制实际部署。",
+      "• 复现难度: 中等 - 方法基于标准GNN和扰动技术，但需要精细调整参数以平衡隐藏效果和数据保真度。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2602.12247v1",
+    "title": "ExtractBench: A Benchmark and Evaluation Methodology for Complex Structured Extraction",
+    "pdf_url": "https://arxiv.org/pdf/2602.12247v1",
+    "published": "2026-02-12",
+    "crawled_at": "2026-02-13 20:26:01",
+    "ai_score": 8.5,
+    "translated_title": "ExtractBench：复杂结构化提取的基准与评估方法",
+    "summary_en": [
+      "• Model Architecture: ExtractBench is an evaluation framework that treats JSON Schemas as executable specifications, where each field declares its own scoring metric (e.g., exact match for identifiers, tolerance for quantities, semantic equivalence for names).",
+      "• Data used: The benchmark includes 35 PDF documents paired with JSON Schemas and human-annotated gold labels across economically valuable domains, yielding 12,867 evaluatable fields with schema complexities ranging from tens to hundreds of fields.",
+      "• Performance metrics: Baseline evaluations show that frontier models (GPT-5/5.2, Gemini-3 Flash/Pro, Claude 4.5 Opus/Sonnet) perform unreliably on realistic schemas, with performance degrading sharply as schema breadth increases, culminating in 0% valid output on a 369-field financial reporting schema across all tested models."
+    ],
+    "summary_cn": [
+      "• 核心模型: ExtractBench 是一个评估框架，将 JSON 模式视为可执行规范，每个字段声明其评分指标（如标识符的精确匹配、数量的容差、名称的语义等价）。",
+      "• 数据来源: 基准包括 35 个 PDF 文档，与 JSON 模式和人工标注的金标准配对，涵盖经济价值高的领域，产生 12,867 个可评估字段，模式复杂度从数十到数百个字段不等。",
+      "• 主要结论: 基线评估显示，前沿模型（GPT-5/5.2、Gemini-3 Flash/Pro、Claude 4.5 Opus/Sonnet）在现实模式上表现不可靠，性能随模式广度急剧下降，在 369 个字段的财务报告模式上所有测试模型输出有效性为 0%。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for alpha generation by identifying and exploiting inefficiencies in LLM-based extraction systems, particularly in financial reporting and other structured data domains where current models fail completely on complex schemas.",
+      "• Implementation Risk: Moderate to high risk due to the complexity of integrating the benchmark into existing pipelines and the need for custom scoring metrics per field, which may require significant engineering effort and domain expertise.",
+      "• Novelty: High novelty in addressing two critical gaps: lack of end-to-end benchmarks for PDF-to-JSON extraction at enterprise scale and principled methodology for nested extraction semantics, making it a pioneering tool in structured data evaluation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 填补了两个关键空白：缺乏企业级 PDF 到 JSON 提取的端到端基准，以及嵌套提取语义的原则性方法，使其成为结构化数据评估的开创性工具。",
+      "• 实盘坑: 实施风险中高，因为将基准集成到现有流程中复杂，且每个字段需要自定义评分指标，可能需要大量工程努力和领域专业知识。",
+      "• 复现难度: 中等难度，基准已开源，但需要处理多样化的 PDF 文档和复杂模式，可能涉及数据标注和模型调优的挑战。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2602.11151v1",
     "title": "Diffusion-Pretrained Dense and Contextual Embeddings",
     "pdf_url": "https://arxiv.org/pdf/2602.11151v1",
