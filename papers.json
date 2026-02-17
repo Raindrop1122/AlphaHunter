@@ -1,5 +1,363 @@
 [
   {
+    "id": "2602.15029v1",
+    "title": "Symmetry in language statistics shapes the geometry of model representations",
+    "pdf_url": "https://arxiv.org/pdf/2602.15029v1",
+    "published": "2026-02-16",
+    "crawled_at": "2026-02-17 20:22:41",
+    "ai_score": 8.2,
+    "translated_title": "语言统计中的对称性塑造模型表示的几何结构",
+    "summary_en": [
+      "• Model Architecture: Analyzes word embedding models, text embedding models, and large language models (LLMs) to study geometric structures in high-dimensional representations.",
+      "• Data used: Language co-occurrence statistics, specifically focusing on examples like calendar months, years, and cities' latitudes/longitudes in text corpora.",
+      "• Performance metrics: Demonstrates robustness of geometric structures under strong perturbations (e.g., removing sentences with co-occurring months) and at moderate embedding dimensions.",
+      "• Key finding: Proves that translation symmetry in language statistics governs the emergence of simple geometric structures like circles and manifolds in model representations.",
+      "• Theoretical framework: Shows robustness emerges when co-occurrence statistics are controlled by an underlying continuous latent variable, validated empirically across models."
+    ],
+    "summary_cn": [
+      "• 核心模型: 分析词嵌入模型、文本嵌入模型和大语言模型（LLMs），研究高维表示中的几何结构。",
+      "• 数据来源: 语言共现统计，特别关注文本语料库中的日历月份、年份和城市经纬度等示例。",
+      "• 主要结论: 证明语言统计中的平移对称性（如月份共现概率仅取决于时间间隔）控制着模型表示中简单几何结构（如圆形和流形）的出现。",
+      "• 鲁棒性验证: 即使在强烈扰动（如删除所有包含两个月份共现的句子）和中等嵌入维度下，这些结构仍能保持。",
+      "• 理论框架: 表明当共现统计由潜在连续变量集体控制时，鲁棒性自然出现，并在不同模型中进行了实证验证。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High—provides a theoretical foundation for interpreting LLM representations, potentially enabling better feature extraction for financial text analysis (e.g., temporal patterns in news).",
+      "• Implementation Risk: Moderate—requires careful adaptation to financial datasets; symmetry assumptions may not hold in noisy market data, risking overfitting.",
+      "• Novelty: Strong—links language statistics symmetry to geometric structures in embeddings, offering a principled explanation for observed phenomena in LLMs.",
+      "• Practical challenge: Empirical validation is limited to synthetic or curated examples; scaling to complex financial contexts (e.g., earnings reports) could be computationally intensive.",
+      "• Research impact: Could inform model design for NLP-based trading strategies by improving representation interpretability and robustness."
+    ],
+    "verdict_cn": [
+      "• 创新点: 强—将语言统计对称性与嵌入几何结构联系起来，为LLM中观察到的现象提供了理论解释，突破了传统黑箱视角。",
+      "• 实盘坑: 中等—对称性假设在嘈杂市场数据中可能不成立（如新闻中的非平稳时间模式），需警惕过拟合风险。",
+      "• 复现难度: 低—方法基于标准嵌入模型和统计测试，但扩展到金融领域需定制数据预处理和验证流程。",
+      "• 策略价值: 高—为基于NLP的量化策略（如情绪分析、事件驱动）提供了更可靠的表示学习基础，可能提升因子有效性。",
+      "• 局限性: 实证验证集中于简单示例（如月份），在复杂金融文本（如财报）中的泛化能力待验证。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2602.15028v1",
+    "title": "Long Context, Less Focus: A Scaling Gap in LLMs Revealed through Privacy and Personalization",
+    "pdf_url": "https://arxiv.org/pdf/2602.15028v1",
+    "published": "2026-02-16",
+    "crawled_at": "2026-02-17 20:22:55",
+    "ai_score": 8.2,
+    "translated_title": "长上下文，少聚焦：通过隐私与个性化揭示LLM中的扩展差距",
+    "summary_en": [
+      "• Model Architecture: Analyzes fixed-capacity Transformers with soft attention mechanisms, focusing on attention dilution under context scaling from 1K to 256K tokens.",
+      "• Data used: PAPerBench benchmark with approximately 29,000 instances and 377K evaluation questions across diverse privacy-critical and personalization scenarios.",
+      "• Performance metrics: Joint evaluation of personalization quality and privacy protection, revealing consistent degradation as context length increases.",
+      "• Theoretical analysis: Provides mathematical explanation of performance degradation as inherent limitation of soft attention in fixed-capacity architectures."
+    ],
+    "summary_cn": [
+      "• 核心模型: 分析固定容量Transformer的软注意力机制，关注上下文从1K到256K token扩展时的注意力稀释效应。",
+      "• 数据来源: PAPerBench基准测试，包含约29,000个实例和377K个评估问题，覆盖多样化隐私关键和个性化场景。",
+      "• 主要结论: 随着上下文长度增加，个性化和隐私保护性能一致下降，揭示了当前模型的扩展差距。",
+      "• 理论贡献: 通过注意力稀释理论解释性能下降，指出固定容量架构中软注意力的固有局限性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High - Identifies systematic weakness in current LLM architectures that could be exploited for model selection, risk assessment, and performance prediction in privacy-sensitive applications.",
+      "• Implementation Risk: Moderate - Benchmark is publicly available and reproducible, but real-world deployment requires careful validation across different model families and application domains.",
+      "• Novelty: Strong - First large-scale systematic study of context length effects on both privacy and personalization, with theoretical grounding in attention mechanisms.",
+      "• Scalability Concern: Significant - Findings suggest fundamental architectural limitations that may require new approaches for truly scalable long-context models."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次大规模系统研究上下文长度对隐私和个性化的双重影响，结合注意力稀释理论提供机制解释。",
+      "• 实盘坑: 基准测试虽公开可复现，但实际部署需验证不同模型家族和应用场景，性能下降模式可能因模型而异。",
+      "• 复现难度: 低 - 代码和数据完全开源，实验设计清晰，但需要大量计算资源处理256K token上下文。",
+      "• 策略价值: 识别当前LLM架构的系统性弱点，可用于隐私敏感场景的模型选择、风险评估和性能预测。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2602.15022v1",
+    "title": "Rethinking Diffusion Models with Symmetries through Canonicalization with Applications to Molecular Graph Generation",
+    "pdf_url": "https://arxiv.org/pdf/2602.15022v1",
+    "published": "2026-02-16",
+    "crawled_at": "2026-02-17 20:23:10",
+    "ai_score": 8.5,
+    "translated_title": "通过规范化重新思考扩散模型中的对称性及其在分子图生成中的应用",
+    "summary_en": [
+      "• Model Architecture: Introduces Canonical Diffusion/Flow framework that maps samples to canonical orbit representatives using geometric spectra-based canonicalization, trains unconstrained diffusion/flow models on canonical slices, and recovers invariant distributions via random symmetry transforms at generation time.",
+      "• Data used: Evaluated on molecular graph generation tasks under S_n × SE(3) symmetries, specifically tested on the challenging GEOM-DRUG dataset for 3D molecule generation.",
+      "• Performance metrics: CanonFlow achieves state-of-the-art performance on GEOM-DRUG, significantly outperforms equivariant baselines in 3D molecule generation with similar or less computation, and maintains large advantages in few-step generation scenarios."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出规范化扩散/流框架，通过基于几何谱的规范化将样本映射到规范轨道代表，在规范切片上训练无约束扩散/流模型，并在生成时通过随机对称变换恢复不变分布。",
+      "• 数据来源: 在S_n × SE(3)对称性下的分子图生成任务中评估，特别是在具有挑战性的GEOM-DRUG数据集上进行3D分子生成测试。",
+      "• 主要结论: 规范化扩散在3D分子生成任务中显著优于等变基线，计算量相似甚至更少；CanonFlow在GEOM-DRUG数据集上达到最先进性能，在少步生成中优势明显。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for generating novel molecular structures with correct symmetry properties, enabling more efficient discovery of drug candidates and materials with reduced computational overhead.",
+      "• Implementation Risk: Moderate risk due to reliance on accurate canonicalization mappings and potential sensitivity to symmetry group definitions; real-world molecular datasets may have additional complexities not captured by S_n × SE(3).",
+      "• Novelty: Significant novelty in challenging traditional equivariant approaches with canonicalization perspective, providing formal quotient-space theory and demonstrating practical advantages in molecular generation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 突破传统等变架构限制，提出规范化视角，通过商空间理论证明规范化生成模型的正确性、普适性和表达优势，为对称性处理提供新范式。",
+      "• 实盘坑: 规范化映射的准确性是关键风险点，实际分子数据可能包含超出S_n × SE(3)的复杂对称性；生成质量高度依赖随机对称变换的采样质量。",
+      "• 复现难度: 中等偏高，需要实现几何谱规范化算法和定制扩散/流架构，但论文提供了理论框架和具体实例，降低了部分复现门槛。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2602.15021v1",
+    "title": "Generalization from Low- to Moderate-Resolution Spectra with Neural Networks for Stellar Parameter Estimation: A Case Study with DESI",
+    "pdf_url": "https://arxiv.org/pdf/2602.15021v1",
+    "published": "2026-02-16",
+    "crawled_at": "2026-02-17 20:23:27",
+    "ai_score": 7.2,
+    "translated_title": "基于神经网络的恒星参数估计：从低分辨率到中分辨率光谱的泛化研究——以DESI为例",
+    "summary_en": [
+      "• Model Architecture: Investigates multilayer perceptrons (MLPs) pre-trained on low-resolution spectra (LAMOST LRS) and fine-tuned for moderate-resolution spectra (DESI MRS), comparing direct spectral training versus transformer-based embeddings.",
+      "• Data used: Utilizes LAMOST low-resolution spectra (LRS) for pre-training and DESI medium-resolution spectra (MRS) for fine-tuning and evaluation, focusing on stellar parameters like iron abundance ([Fe/H]).",
+      "• Performance metrics: Shows strong cross-survey generalization with MLPs pre-trained on LAMOST LRS, achieving competitive performance even without fine-tuning; fine-tuning further improves results, with transformer embeddings advantageous in metal-rich regimes but underperforming in metal-poor ones.",
+      "• Fine-tuning strategies: Evaluates residual-head adapters, LoRA, and full fine-tuning, finding optimal strategies vary by stellar parameter, highlighting context-dependent optimization."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用多层感知机（MLPs）进行预训练和微调，对比基于光谱直接训练与基于Transformer嵌入的方法，研究从低分辨率（LAMOST LRS）到中分辨率（DESI MRS）光谱的泛化能力。",
+      "• 数据来源: 使用LAMOST低分辨率光谱（LRS）进行预训练，DESI中分辨率光谱（MRS）进行微调和评估，重点关注铁丰度（[Fe/H]）等恒星参数。",
+      "• 主要结论: 预训练的MLPs在跨调查泛化中表现强劲，无需微调即可达到竞争性性能；微调可进一步提升结果，Transformer嵌入在富金属区域有优势，但在贫金属区域表现不佳。",
+      "• 微调策略: 评估残差头适配器、LoRA和全微调，发现最优策略因恒星参数而异，强调优化需考虑具体上下文。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; demonstrates robust cross-survey generalization with simple MLPs, applicable to financial data where model transfer between datasets (e.g., different markets or time periods) is needed, but lacks direct financial metrics or backtesting.",
+      "• Implementation Risk: High; relies on astronomical data (stellar spectra), which may not translate directly to financial time series due to differences in noise, frequency, and domain-specific features; fine-tuning strategies are parameter-dependent, increasing complexity.",
+      "• Novelty: Low to moderate; applies standard ML techniques (MLPs, transformers) to a niche domain (astrophysics), with incremental contributions in fine-tuning methods, but lacks groundbreaking algorithmic innovations or cross-disciplinary financial applications."
+    ],
+    "verdict_cn": [
+      "• 创新点: 较低至中等；将标准机器学习技术（如MLPs和Transformers）应用于天体物理领域，在微调方法上有增量贡献，但缺乏突破性算法创新或跨学科金融应用。",
+      "• 实盘坑: 高；依赖天文数据（恒星光谱），与金融时间序列在噪声、频率和领域特征上差异大，直接迁移风险高；微调策略参数依赖性强，增加实施复杂度。",
+      "• 复现难度: 中等；使用公开数据集（LAMOST和DESI）和标准模型，但需要领域专业知识处理光谱数据，且微调优化需精细调参，可能耗时。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2602.15014v1",
+    "title": "Scaling Beyond Masked Diffusion Language Models",
+    "pdf_url": "https://arxiv.org/pdf/2602.15014v1",
+    "published": "2026-02-16",
+    "crawled_at": "2026-02-17 20:23:40",
+    "ai_score": 7.8,
+    "translated_title": "超越掩码扩散语言模型的规模化研究",
+    "summary_en": [
+      "• Model Architecture: Investigates uniform-state and interpolating discrete diffusion methods as alternatives to Masked diffusion models, with scaling up to 1.7B parameters.",
+      "• Data used: Likely standard language modeling datasets (e.g., GSM8K for reasoning tasks), though specific datasets are not detailed in the abstract.",
+      "• Performance metrics: Evaluates using perplexity, FLOPs efficiency (12% improvement with cross-entropy objective), and speed-quality Pareto frontier, showing uniform-state diffusion outperforms on GSM8K despite worse perplexity."
+    ],
+    "summary_cn": [
+      "• 核心模型: 研究均匀状态和插值离散扩散方法作为掩码扩散模型的替代方案，模型规模扩展至17亿参数。",
+      "• 数据来源: 可能使用标准语言建模数据集（如GSM8K用于推理任务），但摘要中未详细说明具体数据集。",
+      "• 主要结论: 困惑度在扩散家族内具有参考价值，但在跨家族比较中可能产生误导；均匀状态扩散在GSM8K上表现优于自回归和掩码扩散模型，尽管验证困惑度较差。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; challenges the dominance of Masked diffusion and highlights trade-offs between likelihood and sampling speed, which could inform more efficient NLP model development for trading signals.",
+      "• Implementation Risk: High; diffusion models are computationally intensive, and the practical benefits of uniform-state diffusion need validation in real-world, low-latency financial applications.",
+      "• Novelty: High; presents the first scaling law study for alternative discrete diffusion methods and demonstrates that perplexity alone is insufficient for cross-algorithm comparison, offering new insights into model evaluation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次对替代离散扩散方法进行缩放定律研究，挑战了掩码扩散模型的绝对优势，并揭示了困惑度在跨算法比较中的局限性。",
+      "• 实盘坑: 扩散模型计算成本高，均匀状态扩散的实际优势在低延迟金融应用中需进一步验证，且数据集细节不足可能影响复现。",
+      "• 复现难度: 中等；提供了代码和模型检查点，但依赖大规模计算资源，且实验设置可能未完全公开，增加复现不确定性。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2602.15012v1",
+    "title": "Cold-Start Personalization via Training-Free Priors from Structured World Models",
+    "pdf_url": "https://arxiv.org/pdf/2602.15012v1",
+    "published": "2026-02-16",
+    "crawled_at": "2026-02-17 20:23:54",
+    "ai_score": 8.2,
+    "translated_title": "基于结构化世界模型训练无关先验的冷启动个性化方法",
+    "summary_en": [
+      "• Model Architecture: Pep decomposes cold-start elicitation into offline structure learning (learning a structured world model of preference correlations from complete profiles) and online Bayesian inference (training-free inference to select informative questions and predict complete preference profiles).",
+      "• Data used: Complete preference profiles across multiple domains including medical, mathematical, social, and commonsense reasoning tasks.",
+      "• Performance metrics: Achieves 80.8% alignment between generated responses and users' stated preferences versus 68.5% for RL, with 3-5x fewer interactions; changes follow-up questions 39-62% of the time when users give different answers versus 0-28% for RL; uses ~10K parameters versus 8B for RL."
+    ],
+    "summary_cn": [
+      "• 核心模型: Pep将冷启动偏好获取分解为离线结构学习（从完整偏好档案中学习结构化世界模型）和在线贝叶斯推断（无需训练的推断来选择信息性问题并预测完整偏好档案）。",
+      "• 数据来源: 跨医疗、数学、社交和常识推理等多个领域的完整用户偏好档案数据。",
+      "• 主要结论: 在用户偏好对齐度上达到80.8%（RL为68.5%），交互次数减少3-5倍；当用户给出不同答案时，后续问题调整率39-62%（RL为0-28%）；参数量仅约1万（RL为80亿）。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for personalized recommendation systems and user profiling applications where cold-start is critical; the 3-5x efficiency gain in interactions could translate to significant user engagement improvements.",
+      "• Implementation Risk: Moderate risk due to dependency on complete preference profiles for offline training; real-world applications may have sparse or noisy data that doesn't match the clean experimental setup.",
+      "• Novelty: Significant novelty in decomposing the problem into structure learning and inference phases, and demonstrating that training-free Bayesian methods outperform large-scale RL in exploiting factored preference structure."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将冷启动问题分解为结构学习和推断两阶段，证明无需训练的贝叶斯方法在利用偏好因子结构上优于大规模强化学习，参数量减少8000倍。",
+      "• 实盘坑: 离线训练依赖完整偏好档案，实际应用中数据可能稀疏或噪声大；多领域泛化能力未在真实商业场景验证。",
+      "• 复现难度: 中等偏低，模型架构相对简单（约1万参数），但需要高质量的完整偏好数据集进行离线训练。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2602.15010v1",
+    "title": "BPP: Long-Context Robot Imitation Learning by Focusing on Key History Frames",
+    "pdf_url": "https://arxiv.org/pdf/2602.15010v1",
+    "published": "2026-02-16",
+    "crawled_at": "2026-02-17 20:24:07",
+    "ai_score": 7.8,
+    "translated_title": "BPP：通过聚焦关键历史帧实现长上下文机器人模仿学习",
+    "summary_en": [
+      "• Model Architecture: Big Picture Policies (BPP) uses a vision-language model to detect minimal sets of meaningful keyframes from robot observation histories, projecting diverse rollouts onto compact task-relevant events to reduce distribution shift.",
+      "• Data used: Evaluated on four challenging real-world manipulation tasks and three simulation tasks, all requiring history conditioning, with training data covering diverse rollouts but limited coverage over possible histories.",
+      "• Performance metrics: Achieves 70% higher success rates than the best comparison method in real-world evaluations, demonstrating substantial improvement in generalization to out-of-distribution trajectories."
+    ],
+    "summary_cn": [
+      "• 核心模型: BPP采用视觉语言模型检测机器人观察历史中的关键帧最小集，将多样化轨迹投影到紧凑的任务相关事件上，以减少分布偏移。",
+      "• 数据来源: 在四个真实世界操作任务和三个仿真任务上进行评估，所有任务均需历史条件，训练数据覆盖多样化轨迹但历史空间覆盖有限。",
+      "• 主要结论: 在真实世界评估中比最佳对比方法成功率提高70%，显著提升了对分布外轨迹的泛化能力。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for improving robot policy generalization in history-dependent tasks by addressing spurious correlation issues, with demonstrated real-world performance gains.",
+      "• Implementation Risk: Moderate risk due to dependency on vision-language model accuracy for keyframe detection and potential computational overhead in real-time applications.",
+      "• Novelty: Novel approach to long-context imitation learning by focusing on key history frames rather than naive conditioning, addressing fundamental coverage problems in training."
+    ],
+    "verdict_cn": [
+      "• 创新点: 通过聚焦关键历史帧而非简单条件化，创新性地解决长上下文模仿学习中的训练覆盖问题，减少虚假相关性。",
+      "• 实盘坑: 依赖视觉语言模型的关键帧检测准确性，实时应用中可能存在计算开销风险，且任务泛化性需进一步验证。",
+      "• 复现难度: 中等难度，需集成视觉语言模型和机器人策略训练，但论文提供了具体方法框架，可基于开源工具实现。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2602.15008v1",
+    "title": "Efficient Sampling with Discrete Diffusion Models: Sharp and Adaptive Guarantees",
+    "pdf_url": "https://arxiv.org/pdf/2602.15008v1",
+    "published": "2026-02-16",
+    "crawled_at": "2026-02-17 20:24:22",
+    "ai_score": 8.7,
+    "translated_title": "离散扩散模型的高效采样：锐利且自适应的理论保证",
+    "summary_en": [
+      "• Model Architecture: Analyzes score-based discrete diffusion models under continuous-time Markov chain (CTMC) formulation, focusing on τ-leaping-based samplers for both uniform and masking noising processes.",
+      "• Data used: Theoretical analysis covers general discrete distributions with ambient dimension d and vocabulary size S; practical examples include hidden Markov models, image data, and random graphs to demonstrate sublinear convergence.",
+      "• Performance metrics: Establishes sharp convergence guarantees in Kullback-Leibler (KL) divergence with iteration complexity of Õ(d/ε) for uniform diffusion (eliminating dependence on S) and adaptive rates based on effective total correlation for masking diffusion, showing sublinear convergence for structured data."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于连续时间马尔可夫链（CTMC）的分数离散扩散模型，专注于τ-leaping采样器，分析均匀和掩码两种噪声过程。",
+      "• 数据来源: 理论分析针对一般离散分布，环境维度为d，词汇表大小为S；实际示例包括隐马尔可夫模型、图像数据和随机图，以验证收敛性。",
+      "• 主要结论: 为均匀扩散建立了Õ(d/ε)的迭代复杂度（消除对S的依赖），为掩码扩散引入了基于有效总相关的自适应收敛率，证明结构化数据可实现次线性收敛。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for structured data applications (e.g., HMMs, graphs) due to provable sublinear convergence and adaptation to low-dimensional structure without prior knowledge, potentially improving sampling efficiency in finance for sequential or graph-based models.",
+      "• Implementation Risk: Moderate; theoretical guarantees are robust with no boundedness/smoothness assumptions, but practical deployment requires accurate score entropy loss control and may face challenges in high-d environments despite reduced S-dependence.",
+      "• Novelty: Significant; introduces effective total correlation metric for masking diffusion, establishes matching algorithmic lower bounds, and improves existing bounds by factor d, advancing theoretical foundations of discrete diffusion models."
+    ],
+    "verdict_cn": [
+      "• 创新点: 引入有效总相关度量用于掩码扩散，建立匹配的算法下界，将现有界限改进d倍，显著推进离散扩散模型的理论基础。",
+      "• 实盘坑: 需精确控制分数熵损失，高维环境仍可能面临挑战；自适应收敛虽强，但依赖于数据内在结构，通用性待验证。",
+      "• 复现难度: 中等；理论框架清晰，但实现τ-leaping采样器和有效总相关计算需要专业知识，实验部分基于合成数据，实际应用需调整。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2602.15006v1",
+    "title": "Distributed Quantum Gaussian Processes for Multi-Agent Systems",
+    "pdf_url": "https://arxiv.org/pdf/2602.15006v1",
+    "published": "2026-02-16",
+    "crawled_at": "2026-02-17 20:24:34",
+    "ai_score": 7.2,
+    "translated_title": "多智能体系统的分布式量子高斯过程",
+    "summary_en": [
+      "• Model Architecture: Distributed Quantum Gaussian Process (DQGP) with quantum kernel embeddings in Hilbert spaces, using Distributed consensus Riemannian ADMM (DR-ADMM) for optimization in multi-agent systems.",
+      "• Data used: Real-world non-stationary elevation datasets from NASA's Shuttle Radar Topography Mission and synthetic datasets generated by Quantum Gaussian Processes.",
+      "• Performance metrics: Evaluated on quantum simulator in classical hardware, showing enhanced modeling capabilities and scalability compared to classical GPs, with potential computational speedups highlighted."
+    ],
+    "summary_cn": [
+      "• 核心模型: 分布式量子高斯过程（DQGP），利用量子计算将数据嵌入指数级大的希尔伯特空间，采用分布式共识黎曼交替方向乘子法（DR-ADMM）进行优化。",
+      "• 数据来源: 使用NASA航天飞机雷达地形任务（SRTM）的真实非平稳高程数据集，以及量子高斯过程生成的合成数据集。",
+      "• 主要结论: 在经典硬件的量子模拟器上验证，模型在复杂大规模场景中表现出优于经典高斯过程的建模能力和可扩展性，并预示量子硬件可能带来的计算加速。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; quantum-enhanced kernels could capture complex correlations in financial time-series or spatial data, but real quantum advantage is speculative without hardware validation.",
+      "• Implementation Risk: High; relies on quantum simulators and future quantum hardware, with DR-ADMM optimization adding complexity in distributed settings.",
+      "• Novelty: High; integrates quantum computing with distributed GPs and Riemannian optimization, though practical applications are limited to simulation-based proofs."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；首次将量子计算与分布式高斯过程结合，引入黎曼优化处理非欧几里得问题，在理论框架上有突破性。",
+      "• 实盘坑: 高；依赖量子模拟器和未成熟的量子硬件，优化算法复杂，在真实多智能体环境中部署风险大。",
+      "• 复现难度: 高；需要量子模拟器、专业数据集和分布式计算资源，代码和实验细节可能不完整，难以直接应用于金融场景。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2602.15004v1",
+    "title": "PDE foundation models are skillful AI weather emulators for the Martian atmosphere",
+    "pdf_url": "https://arxiv.org/pdf/2602.15004v1",
+    "published": "2026-02-16",
+    "crawled_at": "2026-02-17 20:24:49",
+    "ai_score": 7.8,
+    "translated_title": "PDE基础模型是火星大气层的高技能AI天气模拟器",
+    "summary_en": [
+      "• Model Architecture: Extends Poseidon PDE foundation model from 2D to 3D while preserving pretraining information, enabling adaptation to complex atmospheric systems.",
+      "• Data used: Trained on approximately 34 GB of Martian atmospheric data spanning four Martian years, with sparse initial conditions considered.",
+      "• Performance metrics: Achieves 34.4% performance improvement on held-out year compared to baseline, demonstrating effective transfer learning from PDE pretraining.",
+      "• Compute efficiency: Median training budget of 13 GPU hours shows practical feasibility for real-world deployment."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于Poseidon PDE基础模型，从二维扩展到三维，保留预训练信息，适用于复杂大气系统模拟。",
+      "• 数据来源: 使用约34GB的火星大气数据，覆盖四个火星年，考虑稀疏初始条件。",
+      "• 主要结论: 在保留年份上实现34.4%性能提升，证明PDE预训练能有效迁移到实际复杂问题。",
+      "• 计算效率: 中位数13 GPU小时的训练预算，显示实际部署可行性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for specialized domains like planetary science and climate modeling where data is scarce but PDE knowledge exists; transfer learning approach could reduce data requirements by 30-50% in similar applications.",
+      "• Implementation Risk: Moderate to high due to domain specificity; requires substantial adaptation for Earth-based financial applications where PDE structures differ significantly from atmospheric models.",
+      "• Novelty: Significant in combining PDE foundation models with real-world sparse data problems; represents a novel approach to data-efficient AI emulation in scientific domains.",
+      "• Scalability: Limited by the need for domain-specific PDE pretraining; not directly applicable to general financial time series without major architectural changes."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将PDE基础模型与真实世界稀疏数据问题结合，为科学领域数据高效AI模拟提供新思路。",
+      "• 实盘坑: 领域特异性强，迁移到金融应用需大幅调整PDE结构，火星大气模型与金融时间序列差异巨大。",
+      "• 复现难度: 中等偏高，需要获取火星大气数据和PDE预训练模型，计算资源要求相对合理但领域知识门槛高。",
+      "• 应用局限: 主要适用于行星科学等专业领域，金融直接应用价值有限，需重新设计PDE框架。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
     "id": "2602.13197v1",
     "title": "Imitating What Works: Simulation-Filtered Modular Policy Learning from Human Videos",
     "pdf_url": "https://arxiv.org/pdf/2602.13197v1",
