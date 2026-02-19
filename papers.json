@@ -1,5 +1,361 @@
 [
   {
+    "id": "2602.16709v1",
+    "title": "Knowledge-Embedded Latent Projection for Robust Representation Learning",
+    "pdf_url": "https://arxiv.org/pdf/2602.16709v1",
+    "published": "2026-02-18",
+    "crawled_at": "2026-02-19 20:18:36",
+    "ai_score": 7.8,
+    "translated_title": "知识嵌入的潜在投影用于鲁棒表示学习",
+    "summary_en": [
+      "• Model Architecture: Knowledge-embedded latent projection model that leverages semantic side information (pre-trained embeddings) to regularize representation learning, modeling column embeddings as smooth functions of semantic embeddings via RKHS mapping",
+      "• Data used: High-dimensional discrete data matrices (e.g., patient-feature matrices in EHRs) with imbalanced dimensions, where cohort sizes are limited but feature spaces are large due to medical coding systems",
+      "• Performance metrics: Estimation error bounds characterizing trade-off between statistical error and kernel projection approximation error, local convergence guarantees for non-convex optimization, validated through extensive simulation studies and real-world EHR application"
+    ],
+    "summary_cn": [
+      "• 核心模型: 知识嵌入潜在投影模型，利用语义侧信息（预训练嵌入）通过再生核希尔伯特空间映射将列嵌入建模为语义嵌入的平滑函数",
+      "• 数据来源: 高维离散数据矩阵（如电子健康记录中的患者-特征矩阵），维度不平衡，队列规模有限但特征空间因医疗编码系统而极大",
+      "• 主要结论: 提出计算高效的两步估计程序，结合核主成分分析的语义引导子空间构建与可扩展投影梯度下降，在模拟和真实EHR应用中验证有效性"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - method addresses imbalanced data regimes common in alternative datasets (EHRs, transaction logs), potentially improving feature extraction for alpha signals in sparse high-dimensional settings",
+      "• Implementation Risk: High - requires high-quality pre-trained semantic embeddings (domain-specific), non-convex optimization with local convergence guarantees may be sensitive to initialization, real-time deployment challenging due to kernel computations",
+      "• Novelty: Significant - integrates external knowledge embeddings as regularization in latent space models, novel RKHS-based mapping approach for column embeddings, two-step estimation procedure combining kernel PCA with projected gradient descent"
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著 - 将外部知识嵌入作为潜在空间模型的正则化项，基于RKHS的列嵌入映射方法新颖，结合核PCA与投影梯度下降的两步估计程序创新",
+      "• 实盘坑: 高 - 依赖高质量预训练语义嵌入（领域特定），非凸优化对初始化敏感，核计算导致实时部署困难，医疗数据隐私合规风险",
+      "• 复现难度: 中等偏高 - 需要领域特定预训练嵌入和核方法实现，两步优化程序需精细调参，EHR数据获取和处理复杂"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2602.16698v1",
+    "title": "Causality is Key for Interpretability Claims to Generalise",
+    "pdf_url": "https://arxiv.org/pdf/2602.16698v1",
+    "published": "2026-02-18",
+    "crawled_at": "2026-02-19 20:18:52",
+    "ai_score": 7.5,
+    "translated_title": "因果性是解释性主张泛化的关键",
+    "summary_en": [
+      "• Model Architecture: The paper does not propose a specific model architecture but critiques existing interpretability methods for large language models (LLMs), emphasizing the need for causal frameworks like Pearl's hierarchy and causal representation learning (CRL).",
+      "• Data used: No specific dataset is mentioned; the paper focuses on theoretical and methodological critiques of interpretability studies, using examples like activation patching and ablations as interventions.",
+      "• Performance metrics: The paper discusses behavioral metrics such as average change in token probabilities over prompts, but highlights limitations in verifying counterfactual claims without controlled supervision.",
+      "• Core argument: Causal inference provides a rigorous framework for mapping model activations to invariant structures, ensuring interpretability findings generalize beyond specific observations."
+    ],
+    "summary_cn": [
+      "• 核心模型: 本文未提出具体模型架构，而是批判现有大语言模型（LLM）解释性方法，强调需要如Pearl因果层次和因果表示学习（CRL）等因果框架。",
+      "• 数据来源: 未提及具体数据集；论文聚焦于解释性研究的理论和方法论批判，以激活修补和消融等干预为例。",
+      "• 主要结论: 因果推断为从模型激活到不变结构的映射提供了严谨框架，确保解释性发现能泛化到观察之外，避免过度解读。",
+      "• 方法论: 提出诊断框架，帮助从业者根据证据选择匹配的方法和评估，以支持可泛化的因果主张。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the paper offers a critical framework to improve interpretability in LLMs, which could enhance model transparency and reliability in financial NLP applications, but direct alpha generation is indirect.",
+      "• Implementation Risk: High; applying causal frameworks like CRL requires controlled supervision and strong assumptions, making real-world deployment in dynamic markets challenging and prone to overfitting.",
+      "• Novelty: Moderate; while causal approaches are not new, the application to LLM interpretability with Pearl's hierarchy provides a structured critique, but lacks empirical validation or novel algorithms.",
+      "• Generalizability: The emphasis on causal rigor could reduce spurious correlations in model interpretations, potentially leading to more robust AI strategies, but requires significant expertise to implement effectively."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；将Pearl因果层次应用于LLM解释性，提供结构化批判框架，但缺乏实证验证或新算法，更多是方法论整合而非突破。",
+      "• 实盘坑: 高；因果表示学习（CRL）等框架需强假设和受控监督，在动态金融市场中部署困难，易导致过拟合或误判，实操风险大。",
+      "• 复现难度: 中等；理论框架易于理解，但实现因果干预和验证反事实主张需大量数据和专业因果推理技能，复现成本较高。",
+      "• 应用价值: 对提升LLM透明度和可靠性有潜在帮助，可减少虚假关联，但直接生成阿尔法能力有限，更适合风险管理和模型优化。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2602.16697v1",
+    "title": "Protecting the Undeleted in Machine Unlearning",
+    "pdf_url": "https://arxiv.org/pdf/2602.16697v1",
+    "published": "2026-02-18",
+    "crawled_at": "2026-02-19 20:19:07",
+    "ai_score": 8.2,
+    "translated_title": "保护机器学习遗忘中未删除数据的安全性",
+    "summary_en": [
+      "• Model Architecture: The paper critiques existing machine unlearning frameworks that aim for 'perfect retraining' equivalence, proposing a new security definition that specifically protects undeleted data from leakage during deletion operations.",
+      "• Data used: The attack demonstration involves datasets where adversaries control ω(1) data points (asymptotically more than constant but sublinear), enabling reconstruction of nearly entire datasets through strategic deletion requests in certain computational tasks.",
+      "• Performance metrics: The proposed security definition is evaluated by its ability to support essential functionalities like bulletin boards, exact summations, and statistical learning while preventing reconstruction attacks that compromise undeleted data privacy."
+    ],
+    "summary_cn": [
+      "• 核心模型: 论文批判了追求'完美重训练'等效的现有机器学习遗忘框架，提出新的安全定义，专门保护未删除数据在删除操作期间免受泄露。",
+      "• 数据来源: 攻击演示涉及对手控制ω(1)个数据点（渐近多于常数但亚线性）的数据集，通过在特定计算任务中策略性删除请求，实现几乎完整数据集的重建。",
+      "• 主要结论: 现有机器学习遗忘定义要么易受重建攻击，要么过于限制无法支持精确求和等基本功能；新安全定义能在防止未删除数据泄露的同时支持公告板、求和及统计学习等关键操作。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for privacy-sensitive quantitative strategies where data deletion compliance is required (GDPR/CCPA), enabling secure model updates without compromising remaining dataset integrity.",
+      "• Implementation Risk: Moderate - requires fundamental changes to unlearning protocols and may introduce computational overhead; real-world deployment needs careful adversarial testing.",
+      "• Novelty: Significant - identifies critical flaw in 'perfect retraining' paradigm and provides formal security definition with practical functionality guarantees, advancing both theory and applied ML security."
+    ],
+    "verdict_cn": [
+      "• 创新点: 重大 - 首次系统揭示'完美重训练'范式的隐私漏洞，提出首个专门保护未删除数据的形式化安全定义，兼具理论严谨性和实际功能保证。",
+      "• 实盘坑: 中等 - 需重构现有遗忘协议架构，可能引入计算开销；实际部署需对抗性测试验证，合规场景实施复杂度较高。",
+      "• 复现难度: 中等偏高 - 攻击演示需要特定任务设置，新安全定义的完整实现涉及密码学原语和分布式计算协调，但核心论证可独立验证。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2602.16696v1",
+    "title": "Parameter-free representations outperform single-cell foundation models on downstream benchmarks",
+    "pdf_url": "https://arxiv.org/pdf/2602.16696v1",
+    "published": "2026-02-18",
+    "crawled_at": "2026-02-19 20:19:20",
+    "ai_score": 7.8,
+    "translated_title": "无参数表示法在单细胞下游基准测试中优于单细胞基础模型",
+    "summary_en": [
+      "• Model Architecture: The paper compares transformer-based foundation models (e.g., TranscriptFormer) with simple, interpretable pipelines using careful normalization and linear methods, without deep learning-based representations.",
+      "• Data used: Single-cell RNA sequencing (scRNA-seq) data, evaluated across multiple benchmarks including tasks like cell-type classification, disease-state prediction, and cross-species learning.",
+      "• Performance metrics: The simple pipelines achieve state-of-the-art (SOTA) or near SOTA performance, outperforming foundation models on out-of-distribution tasks involving novel cell types and organisms absent from training data."
+    ],
+    "summary_cn": [
+      "• 核心模型: 对比基于Transformer的基础模型（如TranscriptFormer）与使用仔细归一化和线性方法的简单、可解释流程，无需深度学习表示。",
+      "• 数据来源: 单细胞RNA测序（scRNA-seq）数据，在多个基准测试中评估，包括细胞类型分类、疾病状态预测和跨物种学习等任务。",
+      "• 主要结论: 简单流程在多个基准测试中达到或接近最先进性能，在涉及训练数据中未出现的新细胞类型和生物体的分布外任务上优于基础模型。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for alpha generation in biomedical and biotech sectors by enabling more efficient and interpretable models for cell analysis, reducing computational costs and improving out-of-distribution robustness.",
+      "• Implementation Risk: Moderate risk due to reliance on careful normalization and linear methods, which may require domain expertise and fine-tuning for specific datasets, potentially limiting scalability.",
+      "• Novelty: Moderate novelty; the paper challenges the trend towards complex deep learning models by demonstrating that simpler methods can match or exceed performance, highlighting the importance of rigorous benchmarking in the field."
+    ],
+    "verdict_cn": [
+      "• 创新点: 挑战复杂深度学习模型的趋势，证明简单方法在性能上可匹配或超越基础模型，强调严格基准测试的重要性，为单细胞分析提供更高效路径。",
+      "• 实盘坑: 依赖仔细归一化和线性方法，可能需要领域专业知识和针对特定数据集的微调，可能限制可扩展性，增加实施复杂性。",
+      "• 复现难度: 中等难度；方法基于公开的scRNA-seq数据和标准线性技术，但需要精确的归一化步骤和基准测试设置，可能涉及数据预处理挑战。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2602.16690v1",
+    "title": "Synthetic-Powered Multiple Testing with FDR Control",
+    "pdf_url": "https://arxiv.org/pdf/2602.16690v1",
+    "published": "2026-02-18",
+    "crawled_at": "2026-02-19 20:19:38",
+    "ai_score": 8.2,
+    "translated_title": "基于合成数据的多重检验与FDR控制",
+    "summary_en": [
+      "• Model Architecture: SynthBH is a synthetic-powered multiple testing procedure that leverages auxiliary or synthetic data alongside real experimental observations to enhance hypothesis testing. It adapts to the unknown quality of synthetic data, ensuring FDR control regardless of data quality while potentially boosting power when synthetic data are high-quality.",
+      "• Data used: The method utilizes real experimental observations combined with synthetic data from past related experiments or generated by generative models. It was tested on tabular outlier detection benchmarks and genomic analyses of drug-cancer sensitivity associations, with additional validation through controlled experiments on simulated data.",
+      "• Performance metrics: SynthBH guarantees finite-sample, distribution-free FDR control under a mild PRDS-type positive dependence condition, without requiring pooled-data p-values to be valid under the null. It demonstrates enhanced sample efficiency and potential power boosts with high-quality synthetic data, maintaining FDR at user-specified levels across varying data qualities."
+    ],
+    "summary_cn": [
+      "• 核心模型: SynthBH是一种基于合成数据的多重检验方法，结合真实实验观测与辅助或合成数据（如历史相关实验或生成模型生成的数据），以提升假设检验效率。模型能自适应合成数据的未知质量，确保FDR控制不受数据质量影响，并在高质量合成数据下可能增强统计功效。",
+      "• 数据来源: 使用真实实验观测数据，辅以来自历史相关实验或生成模型的合成数据。在表格异常检测基准和药物-癌症敏感性关联的基因组分析中进行了实证测试，并通过模拟数据的受控实验进一步验证其性质。",
+      "• 主要结论: SynthBH在温和的PRDS型正相关条件下，保证了有限样本、分布无关的FDR控制，且无需合并数据p值在零假设下有效。该方法能提升样本效率，在高质量合成数据下可能增强功效，同时无论数据质量如何，都能将FDR控制在用户指定水平。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for generating alpha in quantitative finance applications, such as anomaly detection in market data or drug screening for biotech investments, by safely leveraging synthetic data to improve hypothesis testing power and efficiency without compromising FDR control.",
+      "• Implementation Risk: Moderate risk due to reliance on synthetic data quality and the PRDS dependence condition; poor-quality synthetic data may not boost power, and real-world data dependencies might violate assumptions, potentially affecting FDR control in practice.",
+      "• Novelty: Significant novelty in integrating synthetic data into multiple testing frameworks with provable FDR guarantees, offering a distribution-free approach that adapts to data quality, which is uncommon in traditional methods and could inspire new statistical tools for data-rich environments."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将合成数据整合到多重检验框架中，并提供可证明的FDR保证，具有显著创新性。方法采用分布无关方式自适应数据质量，这在传统方法中不常见，可能为数据丰富环境开发新统计工具提供灵感。",
+      "• 实盘坑: 实施风险中等，依赖于合成数据质量和PRDS相关条件；低质量合成数据可能无法提升功效，且实际数据依赖关系可能违反假设，影响FDR控制的实践效果。在金融市场应用中，需谨慎验证数据生成模型的可靠性和市场条件的稳定性。",
+      "• 复现难度: 复现难度中等，需要获取或生成合成数据，并实现算法以处理真实与合成数据的结合。核心挑战在于确保PRDS条件满足和合成数据质量评估，但论文提供了理论证明和实证案例，可指导实现过程。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2602.16689v1",
+    "title": "Are Object-Centric Representations Better At Compositional Generalization?",
+    "pdf_url": "https://arxiv.org/pdf/2602.16689v1",
+    "published": "2026-02-18",
+    "crawled_at": "2026-02-19 20:19:57",
+    "ai_score": 8.2,
+    "translated_title": "以物体为中心的表示在组合泛化方面表现更优吗？",
+    "summary_en": [
+      "• Model Architecture: Compares object-centric (OC) representations (e.g., DINOv2-OC, SigLIP2-OC) against dense representations (e.g., DINOv2, SigLIP2) in vision encoders for Visual Question Answering tasks, with controlled variables like representation size and downstream model capacity.",
+      "• Data used: Employs three controlled visual benchmarks—CLEVRTex, Super-CLEVR, and MOVi-C—to test compositional generalization on unseen combinations of object properties, ensuring fair comparison by accounting for training data diversity and sample size.",
+      "• Performance metrics: Evaluates based on compositional generalization in harder vs. easier settings, sample efficiency (fewer images needed for OC models), and compute requirements (dense models require more downstream compute to match OC performance).",
+      "• Key finding: OC representations outperform dense ones in harder compositional generalization scenarios, especially when dataset size, data diversity, or compute is constrained, while dense models only excel in easier settings with ample data and compute."
+    ],
+    "summary_cn": [
+      "• 核心模型: 对比以物体为中心（OC）表示（如DINOv2-OC、SigLIP2-OC）与密集表示（如DINOv2、SigLIP2）在视觉问答任务中的表现，控制变量包括表示大小和下流模型容量。",
+      "• 数据来源: 使用三个受控视觉基准数据集——CLEVRTex、Super-CLEVR和MOVi-C，测试对未见物体属性组合的组合泛化能力，通过考虑训练数据多样性和样本量确保公平比较。",
+      "• 主要结论: OC表示在更难的组合泛化场景中表现更优，样本效率更高（需要更少图像），而密集表示仅在较易场景中超越OC，但需要更多下流计算资源。",
+      "• 泛化优势: 当数据集大小、数据多样性或计算资源受限时，OC表示提供更强的组合泛化能力，突显其在资源约束下的实用性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for applications requiring robust compositional reasoning in vision tasks, such as autonomous systems or financial surveillance, where OC models could reduce data and compute costs while improving generalization to novel scenarios.",
+      "• Implementation Risk: Moderate; OC models may require specialized architectures and fine-tuning for real-world deployment, and performance gains depend heavily on dataset characteristics and task difficulty, posing integration challenges in heterogeneous environments.",
+      "• Novelty: Moderate; the systematic comparison of OC vs. dense representations in controlled visual benchmarks is novel, but the core idea of OC representations for generalization is established in prior work, limiting groundbreaking insights.",
+      "• Scalability Concern: OC approaches might face limitations in scaling to extremely large or unstructured datasets, as their benefits diminish with abundant data and compute, potentially reducing long-term viability in data-rich domains."
+    ],
+    "verdict_cn": [
+      "• 创新点: 在受控视觉基准中系统比较OC与密集表示的组合泛化能力，提供量化证据支持OC在资源受限场景的优势，但核心概念基于现有研究，创新性中等。",
+      "• 实盘坑: 实际部署需定制架构和调优，性能提升高度依赖数据集特性和任务难度，在异构环境中集成可能面临挑战，且OC模型在数据丰富时优势减弱。",
+      "• 复现难度: 中等；需使用标准数据集和开源模型（如DINOv2、SigLIP2），但控制变量如数据多样性和计算资源可能增加实验复杂性，适合有经验的团队复现。",
+      "• 风险提示: OC模型在极端大规模或无结构数据中可扩展性有限，长期应用需权衡数据成本与泛化收益，可能不适用于所有金融视觉任务。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2602.16688v1",
+    "title": "On the Hardness of Approximation of the Fair k-Center Problem",
+    "pdf_url": "https://arxiv.org/pdf/2602.16688v1",
+    "published": "2026-02-18",
+    "crawled_at": "2026-02-19 20:20:16",
+    "ai_score": 8.5,
+    "translated_title": "关于公平k中心问题近似难度的研究",
+    "summary_en": [
+      "• Model Architecture: The paper analyzes the computational hardness of the fair k-center problem, a constrained variant of the classic k-center clustering problem where centers must be selected from predefined groups to ensure fairness across demographic partitions.",
+      "• Data used: The theoretical analysis does not involve empirical datasets but relies on complexity-theoretic reductions (e.g., from Vertex Cover or Set Cover) to establish NP-hardness results in general metric spaces.",
+      "• Performance metrics: The key result proves that achieving a (3-ε)-approximation for any ε>0 is NP-hard, even with only two groups, making the known polynomial-time 3-approximation algorithm optimal up to lower-order terms.",
+      "• Contrast with related problems: Highlights a sharp divergence from the k-supplier problem, where both unconstrained and fair variants admit factor-3 approximations, underscoring the unique computational barriers in fair k-center."
+    ],
+    "summary_cn": [
+      "• 核心模型: 研究公平k中心问题的计算复杂性，该问题在经典k中心聚类基础上引入分组约束，要求从每个群体中选取指定数量的中心点，以最小化最大距离。",
+      "• 数据来源: 基于理论计算复杂性分析，通过从顶点覆盖或集合覆盖等NP难问题进行归约，证明在一般度量空间中的近似难度，未使用实际数据集。",
+      "• 主要结论: 证明对于任意ε>0，实现(3-ε)-近似是NP难的，即使只有两个分组，这使得已知的3-近似多项式时间算法达到最优（忽略低阶项）。",
+      "• 问题对比: 与k-supplier问题形成鲜明对比，后者无论是否公平约束都存在3-近似算法，突显了公平k中心问题的独特计算障碍。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low direct alpha potential for quantitative trading, as this is a theoretical computer science paper focused on hardness proofs rather than algorithmic improvements or financial applications; may indirectly inform fairness-aware portfolio optimization if adapted to risk clustering.",
+      "• Implementation Risk: High implementation risk for trading strategies, since the results are inapproximability barriers rather than practical algorithms; any attempt to use fair k-center in finance would face NP-hardness, requiring heuristics that sacrifice optimality guarantees.",
+      "• Novelty: High novelty in resolving a long-standing open question about the tightness of the 3-approximation for fair k-center, providing the first hardness result that matches the known upper bound and extending to restricted settings like the one-per-group case.",
+      "• Practical Limitations: The theoretical focus limits immediate applicability; the hardness results assume general metrics, which may not hold in structured financial data (e.g., Euclidean spaces), potentially allowing better approximations in practice."
+    ],
+    "verdict_cn": [
+      "• 创新点: 解决了公平k中心问题近似比紧致性的长期开放问题，首次证明3-近似是紧的（NP难突破），即使只有两个分组或每组选一个中心的限制情况，填补了理论空白。",
+      "• 实盘坑: 高实盘风险，因为论文证明的是计算不可近似性而非提供有效算法；在金融应用中（如公平聚类选股）将面临NP难障碍，需依赖启发式方法且无法保证最优性。",
+      "• 复现难度: 低复现难度，论文基于理论归约证明，无需代码或数据复现；但将结果应用于实际交易需开发新算法，可能因金融数据结构性（如欧氏空间）而复杂化。",
+      "• 策略关联: 与Alpha-Factor策略潜在相关，若将公平约束引入因子聚类或风险分组，但需注意NP难性可能限制实时计算，更适合离线优化或近似处理。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2602.16684v1",
+    "title": "Retrieval-Augmented Foundation Models for Matched Molecular Pair Transformations to Recapitulate Medicinal Chemistry Intuition",
+    "pdf_url": "https://arxiv.org/pdf/2602.16684v1",
+    "published": "2026-02-18",
+    "crawled_at": "2026-02-19 20:20:29",
+    "ai_score": 7.8,
+    "translated_title": "基于检索增强基础模型的匹配分子对变换：重现药物化学直觉",
+    "summary_en": [
+      "• Model Architecture: Proposes a variable-to-variable foundation model trained on large-scale matched molecular pair transformations (MMPTs) with a retrieval-augmented framework (MMPT-RAG) that uses external reference analogs for contextual guidance during generation.",
+      "• Data used: Trained on large-scale MMP transformations from general chemical corpora and patent-specific datasets, enabling learning of diverse chemical edits and project-specific series.",
+      "• Performance metrics: Demonstrates improved diversity, novelty, and controllability in analog generation, with experiments showing recovery of realistic analog structures in practical discovery scenarios."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出基于大规模匹配分子对变换（MMPTs）训练的变量到变量基础模型，结合检索增强框架（MMPT-RAG），利用外部参考类似物进行上下文引导生成。",
+      "• 数据来源: 使用通用化学语料库和专利特定数据集中的大规模MMP变换进行训练，支持多样化学编辑和项目特定系列学习。",
+      "• 主要结论: 在类似物生成中展现出更高的多样性、新颖性和可控性，实验证明能在实际发现场景中恢复真实类似物结构。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the method enhances analog generation for drug discovery, potentially improving hit-to-lead optimization efficiency, but direct financial alpha in trading contexts is limited without integration into broader quantitative frameworks.",
+      "• Implementation Risk: High; requires domain-specific chemical data and expertise, with practical deployment in production drug discovery pipelines facing challenges in scalability and real-time performance.",
+      "• Novelty: Significant; introduces a retrieval-augmented approach to MMP-based generation, offering better controllability and generalization compared to prior ML methods, though building on existing foundation model trends."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著；将检索增强机制引入匹配分子对生成，相比现有方法提供更好的可控性和泛化能力，但基于基础模型趋势构建。",
+      "• 实盘坑: 高；依赖特定化学数据和专业知识，在实际药物发现流程中部署面临可扩展性和实时性能挑战。",
+      "• 复现难度: 中等；需要大规模化学数据集和计算资源，但模型架构相对标准，开源代码可能降低门槛。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2602.16673v1",
+    "title": "Neighborhood Stability as a Measure of Nearest Neighbor Searchability",
+    "pdf_url": "https://arxiv.org/pdf/2602.16673v1",
+    "published": "2026-02-18",
+    "crawled_at": "2026-02-19 20:20:44",
+    "ai_score": 7.2,
+    "translated_title": "邻域稳定性作为最近邻搜索能力的度量",
+    "summary_en": [
+      "• Model Architecture: Introduces two stability measures - Clustering-NSM (internal clustering quality measure) and Point-NSM (dataset clusterability measure) - based on nearest neighbor relationships rather than distances",
+      "• Data used: High-dimensional points in Euclidean space, applicable to various distance functions including inner product, with focus on clustering-based ANNS datasets",
+      "• Performance metrics: Predictive accuracy for ANNS performance, specifically measures how well clustering-based ANNS will perform on a given dataset without actually running the search algorithm",
+      "• Key innovation: First analytical framework to determine dataset 'searchability' for clustering-based ANNS, addressing a significant gap in the field"
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出两种稳定性度量 - 聚类邻域稳定性度量（内部聚类质量）和点邻域稳定性度量（数据集可聚类性），基于最近邻关系而非距离",
+      "• 数据来源: 欧几里得空间中的高维点，适用于包括内积在内的各种距离函数，专注于基于聚类的近似最近邻搜索数据集",
+      "• 主要结论: 两种度量共同预测基于聚类的近似最近邻搜索性能，仅通过数据点即可判断数据集是否适合此类搜索方法",
+      "• 理论贡献: 填补了该领域缺乏分析工具评估数据集'可搜索性'的空白，为算法选择提供理论依据"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - provides analytical framework for selecting optimal ANNS algorithms in high-dimensional financial data applications like factor analysis or portfolio optimization",
+      "• Implementation Risk: Low to moderate - measures are computationally tractable and don't require running actual ANNS algorithms, but real-world financial data may have different characteristics than academic datasets",
+      "• Novelty: High - first systematic approach to quantify 'searchability' of datasets for clustering-based ANNS, addressing a fundamental gap in the literature",
+      "• Practical limitations: Measures only predict suitability, don't provide actual search algorithms or guarantee optimal performance in all scenarios"
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次系统量化数据集对基于聚类的近似最近邻搜索的'可搜索性'，填补了该领域重要理论空白，具有方法论创新",
+      "• 实盘坑: 金融数据可能存在非平稳性、噪声和异常值，可能影响稳定性度量的预测准确性，需要实际验证",
+      "• 复现难度: 中等 - 算法概念清晰，但高维数据处理和最近邻关系计算需要专业实现，对计算资源有一定要求",
+      "• 应用局限: 仅提供预测框架，不包含具体搜索算法，实际性能还需结合具体算法优化"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2602.16666v1",
+    "title": "Towards a Science of AI Agent Reliability",
+    "pdf_url": "https://arxiv.org/pdf/2602.16666v1",
+    "published": "2026-02-18",
+    "crawled_at": "2026-02-19 20:20:57",
+    "ai_score": 7.2,
+    "translated_title": "迈向AI智能体可靠性的科学",
+    "summary_en": [
+      "• Model Architecture: The paper evaluates 14 agentic models across two complementary benchmarks, focusing on decomposing reliability into four dimensions: consistency, robustness, predictability, and safety.",
+      "• Data used: The study employs two complementary benchmarks designed to test AI agent performance in practical scenarios, though specific datasets are not detailed in the abstract.",
+      "• Performance metrics: Proposes twelve concrete metrics to holistically profile agent reliability, moving beyond single success scores to assess operational flaws like consistency across runs, perturbation resistance, predictable failure, and bounded error severity."
+    ],
+    "summary_cn": [
+      "• 核心模型: 评估了14个智能体模型，基于两个互补的基准测试，将可靠性分解为一致性、鲁棒性、可预测性和安全性四个维度。",
+      "• 数据来源: 使用两个互补的基准测试来模拟实际任务场景，但摘要中未具体说明数据集细节。",
+      "• 主要结论: 研究发现，尽管AI能力有所提升，但可靠性改进有限；新提出的12个指标能更全面地暴露智能体在实践中的失败模式，补充传统评估方法。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the reliability metrics could enhance risk management in AI-driven trading systems by predicting failure modes, but direct alpha generation is limited without financial application.",
+      "• Implementation Risk: High; integrating these metrics into live systems requires significant engineering effort and may introduce latency, with uncertain impact on performance in dynamic markets.",
+      "• Novelty: High; the holistic approach to decomposing reliability beyond accuracy scores is innovative, drawing from safety-critical engineering to address practical AI deployment gaps."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；从安全关键工程角度提出12个具体指标，系统性分解AI智能体可靠性，突破了传统单一成功度量的局限，具有方法论创新。",
+      "• 实盘坑: 高；将这些指标集成到实盘系统需大量工程优化，可能增加延迟，且市场动态性可能削弱其预测效果，风险较大。",
+      "• 复现难度: 中等；基准测试和模型细节可能公开，但实现全维度评估需跨团队协作，复现成本较高。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
     "id": "2602.15830v1",
     "title": "Ensemble-size-dependence of deep-learning post-processing methods that minimize an (un)fair score: motivating examples and a proof-of-concept solution",
     "pdf_url": "https://arxiv.org/pdf/2602.15830v1",
