@@ -1,5 +1,353 @@
 [
   {
+    "id": "2602.17664v1",
+    "title": "Sink-Aware Pruning for Diffusion Language Models",
+    "pdf_url": "https://arxiv.org/pdf/2602.17664v1",
+    "published": "2026-02-19",
+    "crawled_at": "2026-02-20 20:15:49",
+    "ai_score": 7.5,
+    "translated_title": "面向扩散语言模型的汇点感知剪枝",
+    "summary_en": [
+      "• Model Architecture: Proposes Sink-Aware Pruning for Diffusion Language Models (DLMs), which identifies and prunes unstable attention sink tokens based on their high variance across timesteps, unlike traditional methods that preserve sinks as in autoregressive LLMs.",
+      "• Data used: Not explicitly specified in the abstract; likely uses standard DLM datasets for evaluation, with code available on GitHub for reproducibility.",
+      "• Performance metrics: Achieves better quality-efficiency trade-off without retraining, outperforming prior pruning baselines under matched compute, indicating improved inference cost reduction."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出汇点感知剪枝方法，针对扩散语言模型，通过识别并剪枝不稳定的注意力汇点令牌，基于其在时间步间的高方差特性。",
+      "• 数据来源: 摘要未明确说明，可能使用标准DLM数据集进行评估，代码已在GitHub开源以支持复现。",
+      "• 主要结论: 在不重新训练的情况下，实现了更好的质量-效率权衡，在匹配计算条件下优于现有剪枝基线，有效降低推理成本。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the method reduces inference costs for DLMs, which could enhance efficiency in NLP applications like text generation, but direct financial alpha generation is limited without specific trading or market data integration.",
+      "• Implementation Risk: Low to moderate; the approach is code-available and builds on established pruning techniques, but risks include potential quality degradation in complex DLM tasks and dependency on model-specific sink dynamics.",
+      "• Novelty: High; challenges the assumption that attention sinks are essential in DLMs as in AR models, introducing a novel pruning strategy based on sink instability, offering a fresh perspective on DLM optimization."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；颠覆了注意力汇点在扩散模型中必须保留的传统假设，基于汇点不稳定性提出新剪枝策略，为DLM优化提供新思路。",
+      "• 实盘坑: 中低风险；代码开源且基于成熟剪枝技术，但风险包括复杂任务中可能的质量下降，以及对模型特定汇点动态的依赖。",
+      "• 复现难度: 低；代码已公开，方法描述清晰，但需具备DLM和剪枝背景知识，可能涉及调参以适配不同模型。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2602.17658v1",
+    "title": "MARS: Margin-Aware Reward-Modeling with Self-Refinement",
+    "pdf_url": "https://arxiv.org/pdf/2602.17658v1",
+    "published": "2026-02-19",
+    "crawled_at": "2026-02-20 20:16:02",
+    "ai_score": 7.5,
+    "translated_title": "MARS：基于边缘感知的奖励建模与自我优化",
+    "summary_en": [
+      "• Model Architecture: MARS is an adaptive, margin-aware augmentation and sampling framework that targets ambiguous preference pairs where the reward model is uncertain, using iterative hard-sample augmentation to refine training distributions.",
+      "• Data used: Relies on human-labeled preference data for reward modeling, with augmentation applied to low-margin (ambiguous) pairs to reduce dependency on costly human annotations.",
+      "• Performance metrics: Demonstrates consistent gains over uniform augmentation methods in robust reward modeling, supported by theoretical guarantees showing increased loss function curvature and improved conditioning."
+    ],
+    "summary_cn": [
+      "• 核心模型: MARS是一种自适应、边缘感知的数据增强和采样框架，专注于奖励模型不确定的模糊偏好对，通过迭代硬样本增强优化训练分布。",
+      "• 数据来源: 基于人类标注的偏好数据，通过增强低边缘（模糊）对来减少对昂贵人工标注的依赖。",
+      "• 主要结论: 在稳健奖励建模中，相比均匀增强方法，MARS表现出持续改进，理论保证显示其能增加损失函数曲率并改善条件性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; could enhance RLHF/RLAIF pipelines by improving reward model robustness, potentially leading to better policy optimization in trading or NLP applications, but direct financial alpha generation is indirect.",
+      "• Implementation Risk: High; relies on accurate identification of ambiguous preference pairs, which may be noisy in real-world data, and iterative refinement could increase computational costs and overfitting risks.",
+      "• Novelty: High; introduces margin-aware augmentation targeting failure modes, a novel approach compared to existing representation or semantic-level methods, with theoretical backing for improved conditioning."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；提出边缘感知增强策略，针对奖励模型的失败模式进行优化，相比现有方法在表示或语义层面操作更具针对性，并有理论支撑。",
+      "• 实盘坑: 高；依赖对模糊偏好对的准确识别，实际数据中可能噪声大，迭代优化可能增加计算成本和过拟合风险。",
+      "• 复现难度: 中等；框架概念清晰，但需要精细调参和大量计算资源来实施硬样本增强和迭代训练。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2602.17654v1",
+    "title": "Mine and Refine: Optimizing Graded Relevance in E-commerce Search Retrieval",
+    "pdf_url": "https://arxiv.org/pdf/2602.17654v1",
+    "published": "2026-02-19",
+    "crawled_at": "2026-02-20 20:16:16",
+    "ai_score": 8.2,
+    "translated_title": "挖掘与精炼：优化电商搜索检索中的分级相关性",
+    "summary_en": [
+      "• Model Architecture: Two-stage 'Mine and Refine' framework with Stage 1 using a multilingual Siamese two-tower retriever trained with label-aware supervised contrastive loss, and Stage 2 employing hard sample mining via ANN and multi-class circle loss to sharpen similarity boundaries between relevance levels.",
+      "• Data used: Large-scale e-commerce search data with graded relevance annotations (three-level guidelines), enhanced through human annotations, engagement-driven auditing, additive spelling augmentation, and synthetic query generation.",
+      "• Performance metrics: Extensive offline evaluations and production A/B tests showing statistically significant gains in retrieval relevance, user engagement, and business impact."
+    ],
+    "summary_cn": [
+      "• 核心模型: 两阶段'挖掘与精炼'框架，第一阶段使用多语言孪生双塔检索器结合标签感知监督对比损失，第二阶段通过ANN挖掘困难样本并采用多类圆形损失优化相关性层级间的相似度边界。",
+      "• 数据来源: 大规模电商搜索数据，基于三级相关性标注指南，结合人工标注、参与度驱动审核、拼写增强和合成查询生成进行数据增强。",
+      "• 主要结论: 离线评估和生产A/B测试均显示，该框架显著提升检索相关性、用户参与度和商业指标，具有统计显著性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for e-commerce and recommendation systems due to explicit modeling of graded relevance and robust embedding space refinement, potentially transferable to financial text analysis for sentiment or risk stratification.",
+      "• Implementation Risk: Moderate; reliance on policy-aligned LLM for annotation and engagement-driven auditing introduces dependency on quality human feedback and domain-specific tuning, with scalability concerns in non-e-commerce contexts.",
+      "• Novelty: Strong in combining contrastive learning with multi-class boundary sharpening and practical noise reduction techniques, though the two-stage approach builds upon existing retrieval paradigms rather than being fundamentally groundbreaking."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将分级相关性建模与对比学习结合，通过多类圆形损失明确优化相似度边界，并引入策略对齐的LLM标注和参与度驱动审核来降低噪声，提升检索鲁棒性。",
+      "• 实盘坑: 依赖人工标注和领域特定的策略对齐，可能在不同市场或产品类型中泛化能力受限；两阶段训练增加计算成本和部署复杂性。",
+      "• 复现难度: 中等偏高，需要大规模标注数据、多语言模型基础设施以及生产级A/B测试环境，对工程资源和领域专业知识要求较高。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2602.17646v1",
+    "title": "Multi-Round Human-AI Collaboration with User-Specified Requirements",
+    "pdf_url": "https://arxiv.org/pdf/2602.17646v1",
+    "published": "2026-02-19",
+    "crawled_at": "2026-02-20 20:16:31",
+    "ai_score": 8.2,
+    "translated_title": "基于用户指定需求的多轮人机协作",
+    "summary_en": [
+      "• Model Architecture: The paper introduces an online, distribution-free algorithm with finite sample guarantees that enforces user-defined constraints on counterfactual harm and complementarity in multi-round conversational AI interactions.",
+      "• Data used: The framework is evaluated across two interactive settings: LLM-simulated collaboration on a medical diagnostic task and a human crowdsourcing study on a pictorial reasoning task.",
+      "• Performance metrics: The algorithm maintains prescribed counterfactual harm and complementarity violation rates under nonstationary interaction dynamics, with tightening or loosening constraints producing predictable shifts in downstream human accuracy."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出一种在线、无分布算法，具有有限样本保证，可在多轮对话AI交互中强制执行用户定义的约束，包括反事实伤害和互补性。",
+      "• 数据来源: 在两种交互设置中评估：基于LLM模拟的医疗诊断任务协作和基于人类众包的图像推理任务研究。",
+      "• 主要结论: 该算法在非平稳交互动态下保持规定的反事实伤害和互补性违规率，调整约束可预测地影响下游人类准确性，无需建模或约束人类行为。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - The framework's ability to enforce user-specified constraints without modeling human behavior could enhance decision quality in high-stakes financial applications, such as risk assessment or trading strategy refinement, by preventing AI from undermining human expertise.",
+      "• Implementation Risk: High - The reliance on user-defined rules for harm and complementarity introduces subjectivity and potential mis-specification, which could lead to suboptimal performance or unintended consequences in real-world deployments, especially in fast-moving markets.",
+      "• Novelty: High - The paper's human-centric approach, formalizing counterfactual harm and complementarity via user-defined rules, and providing distribution-free guarantees in multi-round interactions, represents a significant advance over traditional AI collaboration models that often assume stationary human behavior."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高 - 通过用户定义规则形式化反事实伤害和互补性，并在多轮交互中提供无分布保证，相比传统假设人类行为平稳的AI协作模型有显著进步。",
+      "• 实盘坑: 高 - 用户定义规则依赖主观判断，可能导致规则误设，在快速变化的市场中引发性能下降或意外后果，实盘部署风险较大。",
+      "• 复现难度: 中等 - 算法设计清晰，但需要大量交互数据（如医疗诊断或图像推理任务）进行验证，在金融领域复现需适配特定任务和用户规则，有一定技术门槛。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2602.17645v1",
+    "title": "Pushing the Frontier of Black-Box LVLM Attacks via Fine-Grained Detail Targeting",
+    "pdf_url": "https://arxiv.org/pdf/2602.17645v1",
+    "published": "2026-02-19",
+    "crawled_at": "2026-02-20 20:16:49",
+    "ai_score": 8.5,
+    "translated_title": "通过细粒度细节目标推动黑盒LVLM攻击前沿",
+    "summary_en": [
+      "• Model Architecture: M-Attack-V2 builds on M-Attack with three modular enhancements: Multi-Crop Alignment (MCA) averages gradients from multiple local views per iteration, Auxiliary Target Alignment (ATA) uses a small auxiliary set from a semantically correlated distribution for smoother target manifold, and Patch Momentum with refined patch-size ensemble (PE+) replays historical crop gradients to strengthen transferable directions.",
+      "• Data used: The paper uses publicly available datasets for adversarial attacks on LVLMs, with code and data released at https://github.com/vila-lab/M-Attack-V2, but specific dataset names or sizes are not detailed in the abstract.",
+      "• Performance metrics: M-Attack-V2 substantially improves transfer-based black-box attacks on frontier LVLMs: success rates increase from 8% to 30% on Claude-4.0, from 83% to 97% on Gemini-2.5-Pro, and from 98% to 100% on GPT-5, outperforming prior black-box LVLM attacks."
+    ],
+    "summary_cn": [
+      "• 核心模型: M-Attack-V2基于M-Attack构建，包含三个模块化增强：多裁剪对齐（MCA）每迭代平均多个局部视图的梯度，辅助目标对齐（ATA）使用语义相关分布的小型辅助集以获得更平滑的目标流形，以及补丁动量与精炼补丁大小集成（PE+）重放历史裁剪梯度以增强可转移方向。",
+      "• 数据来源: 论文使用公开可用的数据集进行LVLM对抗攻击，代码和数据发布于https://github.com/vila-lab/M-Attack-V2，但摘要中未详细说明具体数据集名称或规模。",
+      "• 主要结论: M-Attack-V2显著提升了前沿LVLM的基于转移的黑盒攻击成功率：Claude-4.0从8%提升至30%，Gemini-2.5-Pro从83%提升至97%，GPT-5从98%提升至100%，优于先前的黑盒LVLM攻击方法。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for alpha generation in adversarial robustness testing and security applications, as improved black-box attacks can uncover vulnerabilities in frontier LVLMs used in financial NLP tasks, potentially leading to edge in model risk assessment or defensive strategies.",
+      "• Implementation Risk: Moderate risk due to reliance on transfer-based attacks which may have variable performance across different LVLM architectures or datasets; the method's effectiveness on proprietary or fine-tuned models in production environments is untested.",
+      "• Novelty: High novelty with innovative gradient-denoising approach addressing variance issues in local crop matching; the reformulation of local matching as asymmetric expectation and modular enhancements (MCA, ATA, Patch Momentum) provide a fresh perspective on stabilizing optimization for black-box attacks."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高创新性，通过梯度去噪方法解决局部裁剪匹配中的方差问题；将局部匹配重新表述为不对称期望，并引入模块化增强（MCA、ATA、补丁动量），为黑盒攻击的优化稳定性提供了新视角。",
+      "• 实盘坑: 中等风险，依赖于基于转移的攻击，在不同LVLM架构或数据集上性能可能波动；该方法在生产环境中的专有或微调模型上的有效性未经测试，可能影响实际部署的可靠性。",
+      "• 复现难度: 低至中等难度，代码和数据已公开，模块化设计便于复现，但需要理解复杂的梯度处理和LVLM攻击背景，可能对非专家构成挑战。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2602.17642v1",
+    "title": "A.R.I.S.: Automated Recycling Identification System for E-Waste Classification Using Deep Learning",
+    "pdf_url": "https://arxiv.org/pdf/2602.17642v1",
+    "published": "2026-02-19",
+    "crawled_at": "2026-02-20 20:17:02",
+    "ai_score": 7.2,
+    "translated_title": "A.R.I.S.：基于深度学习的电子废弃物自动回收识别系统",
+    "summary_en": [
+      "• Model Architecture: Uses YOLOx model for real-time classification of metals, plastics, and circuit boards in shredded e-waste.",
+      "• Data used: Not explicitly specified in abstract; likely involves labeled images of e-waste components for training the deep learning model.",
+      "• Performance metrics: Achieves 90% overall precision, 82.2% mean average precision (mAP), and 84% sortation purity in experimental evaluation.",
+      "• System integration: Combines deep learning with established sorting methods to enhance material recovery efficiency and reduce adoption barriers."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用YOLOx模型，实时分类电子废弃物中的金属、塑料和电路板。",
+      "• 数据来源: 摘要未明确说明，可能基于标记的电子废弃物组件图像进行深度学习训练。",
+      "• 主要结论: 实验评估显示总体精度达90%，平均精度均值(mAP)为82.2%，分选纯度为84%。",
+      "• 系统优势: 集成深度学习与传统分选方法，提高材料回收效率并降低先进回收技术的应用门槛。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; could improve efficiency in e-waste recycling, potentially reducing costs and environmental impact, but direct financial alpha is limited to niche applications.",
+      "• Implementation Risk: High; real-world deployment faces challenges like hardware durability, varying e-waste compositions, and scalability issues in industrial settings.",
+      "• Novelty: Low to moderate; uses established YOLOx model in a new application (e-waste sorting), but lacks groundbreaking algorithmic innovations.",
+      "• Market relevance: Aligns with sustainability trends, but may have slow adoption due to high capital costs and regulatory hurdles in recycling industries."
+    ],
+    "verdict_cn": [
+      "• 创新点: 较低；将成熟的YOLOx模型应用于电子废弃物分选新场景，但缺乏算法层面的突破性创新。",
+      "• 实盘坑: 高；实际部署面临硬件耐用性、电子废弃物成分多变及工业环境可扩展性等挑战。",
+      "• 复现难度: 中等；基于开源YOLOx框架，但需要特定数据集和硬件集成，可能增加复现复杂性。",
+      "• 应用局限: 专注于电子废弃物回收，市场较窄，直接金融Alpha潜力有限，依赖环保政策推动。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2602.17641v1",
+    "title": "FAMOSE: A ReAct Approach to Automated Feature Discovery",
+    "pdf_url": "https://arxiv.org/pdf/2602.17641v1",
+    "published": "2026-02-19",
+    "crawled_at": "2026-02-20 20:17:16",
+    "ai_score": 7.8,
+    "translated_title": "FAMOSE：一种基于ReAct范式的自动化特征发现方法",
+    "summary_en": [
+      "• Model Architecture: FAMOSE employs a ReAct-based agent framework that autonomously explores, generates, and refines features through iterative discovery and evaluation steps, integrating feature selection tools within the agent architecture.",
+      "• Data used: The paper focuses on tabular data for both regression and classification tasks, with experiments conducted on datasets containing more than 10K instances to demonstrate scalability.",
+      "• Performance metrics: FAMOSE achieves state-of-the-art performance for regression tasks by reducing RMSE by 2.0% on average and is near state-of-the-art for classification tasks, with ROC-AUC increasing by 0.23% on average for large datasets."
+    ],
+    "summary_cn": [
+      "• 核心模型: FAMOSE采用基于ReAct范式的智能体架构，通过迭代的特征发现与评估步骤自主探索、生成和优化特征，并在智能体中集成特征选择工具。",
+      "• 数据来源: 研究主要针对表格数据，涵盖回归和分类任务，实验在包含超过10K实例的数据集上进行，以验证其可扩展性。",
+      "• 主要结论: FAMOSE在回归任务上达到最先进水平，平均降低RMSE 2.0%；在分类任务上接近最先进水平，对于大型数据集平均提升ROC-AUC 0.23%。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate to high potential for generating novel alpha factors in quantitative finance, especially for feature engineering in tabular financial data, but requires rigorous backtesting in market conditions.",
+      "• Implementation Risk: High risk due to dependency on LLM context windows and iterative processes, which may introduce latency and computational costs unsuitable for real-time trading environments.",
+      "• Novelty: High novelty as the first application of an agentic ReAct framework to automated feature engineering, offering a structured approach to inventive feature discovery."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次将智能体ReAct框架应用于自动化特征工程，通过迭代记录有效与无效特征，引导LLM生成更具创新性的特征，在方法学上具有突破性。",
+      "• 实盘坑: 依赖LLM上下文窗口和迭代过程可能导致高延迟和高计算成本，不适合实时交易环境；特征稳定性在动态市场中的验证不足。",
+      "• 复现难度: 中等偏高，需要集成LLM、特征选择工具和评估框架，对计算资源和数据预处理要求较高，可能增加实施复杂性。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2602.17634v1",
+    "title": "Reverso: Efficient Time Series Foundation Models for Zero-shot Forecasting",
+    "pdf_url": "https://arxiv.org/pdf/2602.17634v1",
+    "published": "2026-02-19",
+    "crawled_at": "2026-02-20 20:17:29",
+    "ai_score": 7.8,
+    "translated_title": "Reverso：用于零样本预测的高效时间序列基础模型",
+    "summary_en": [
+      "• Model Architecture: Introduces Reverso, a family of small hybrid models that interleave long convolution and linear RNN layers (specifically DeltaNet layers), replacing large-scale transformers to achieve efficiency.",
+      "• Data used: Likely employs diverse time series datasets for training, though specific datasets are not detailed in the abstract; mentions data augmentation strategies to enhance performance.",
+      "• Performance metrics: Demonstrates that Reverso models match the performance of larger transformer-based models while being over a hundred times smaller, pushing the performance-efficiency Pareto frontier."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出Reverso系列模型，采用长卷积和线性RNN层（特别是DeltaNet层）的混合架构，替代大型Transformer，实现高效计算。",
+      "• 数据来源: 可能使用多样化的时间序列数据集进行训练，但摘要中未具体说明；提及数据增强策略以提升性能。",
+      "• 主要结论: Reverso模型在性能上匹配大型Transformer模型，同时模型大小缩小百倍以上，显著提升了性能-效率的帕累托前沿。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate to high; efficient zero-shot forecasting could reduce computational costs and enable rapid deployment across multiple time series domains, potentially uncovering cross-asset patterns.",
+      "• Implementation Risk: Low to moderate; simpler architecture may reduce overfitting and improve robustness, but reliance on specific data augmentation and inference strategies could introduce dependencies.",
+      "• Novelty: High; challenges the scaling paradigm in time series foundation models by demonstrating that small hybrid models can outperform or match large transformers, offering a fresh approach to efficiency."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；颠覆时间序列基础模型的规模化范式，证明小型混合模型能媲美大型Transformer，为高效建模提供新思路。",
+      "• 实盘坑: 中低；架构简化可能降低过拟合风险，但依赖特定数据增强和推理策略，在实盘数据分布变化时需谨慎验证。",
+      "• 复现难度: 低；模型基于公开的卷积和RNN层，代码和训练流程应较易复现，适合快速原型测试。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2602.17633v1",
+    "title": "When to Trust the Cheap Check: Weak and Strong Verification for Reasoning",
+    "pdf_url": "https://arxiv.org/pdf/2602.17633v1",
+    "published": "2026-02-19",
+    "crawled_at": "2026-02-20 20:17:43",
+    "ai_score": 7.8,
+    "translated_title": "何时信任廉价检查：推理中的弱验证与强验证",
+    "summary_en": [
+      "• Model Architecture: Introduces a formal framework for weak-strong verification policies in LLM reasoning, where weak verification uses cheap checks (e.g., self-consistency, proxy rewards) and strong verification involves user inspection and feedback.",
+      "• Data used: Theoretical analysis over a population of queries, with no specific dataset mentioned; focuses on algorithmic development and policy optimization.",
+      "• Performance metrics: Defines metrics for incorrect acceptance, incorrect rejection, and strong-verification frequency; shows optimal policies have a two-threshold structure and depend on calibration and sharpness.",
+      "• Algorithm: Develops an online algorithm that controls acceptance and rejection errors without assumptions on query stream, language model, or weak verifier."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出弱-强验证策略框架，弱验证使用廉价检查（如自一致性、代理奖励），强验证依赖用户检查和反馈。",
+      "• 数据来源: 基于查询群体的理论分析，未指定具体数据集；侧重于算法开发和策略优化。",
+      "• 主要结论: 最优策略具有双阈值结构，校准和锐度决定弱验证器的价值；在线算法可控制接受和拒绝错误。",
+      "• 性能指标: 定义错误接受、错误拒绝和强验证频率指标，验证策略有效性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; framework could enhance LLM-based trading systems by optimizing verification costs, but direct financial applications are not demonstrated.",
+      "• Implementation Risk: High; relies on accurate calibration of weak verifiers and user feedback, which may be noisy or inconsistent in real-world settings.",
+      "• Novelty: High; formalizes the weak-strong verification trade-off with theoretical guarantees and an online algorithm, advancing LLM reasoning efficiency.",
+      "• Scalability: Good; weak verification is fast and scalable, but strong verification remains resource-intensive, limiting high-frequency use."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；形式化弱-强验证权衡，提供理论保证和在线算法，提升LLM推理效率。",
+      "• 实盘坑: 高；依赖弱验证器的准确校准和用户反馈，实际中可能噪声大或不一致。",
+      "• 复现难度: 中等；算法描述清晰，但需要集成到现有LLM系统，且强验证成本高。",
+      "• 应用局限: 未直接涉及金融数据，需适配交易场景，验证延迟可能影响实时决策。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2602.17632v1",
+    "title": "SMAC: Score-Matched Actor-Critics for Robust Offline-to-Online Transfer",
+    "pdf_url": "https://arxiv.org/pdf/2602.17632v1",
+    "published": "2026-02-19",
+    "crawled_at": "2026-02-20 20:17:59",
+    "ai_score": 8.2,
+    "translated_title": "SMAC：基于分数匹配的演员-评论家算法，实现稳健的离线到在线迁移",
+    "summary_en": [
+      "• Model Architecture: SMAC (Score-Matched Actor-Critic) is an offline RL method that regularizes the Q-function during offline training to enforce a first-order derivative equality between the policy score and the action-gradient of the Q-function, aiming to connect offline and online maxima in the loss landscape.",
+      "• Data used: The method is evaluated on 6 D4RL benchmark tasks, which are standard datasets for offline reinforcement learning, containing pre-collected experience data from various continuous control environments.",
+      "• Performance metrics: SMAC achieves smooth transfer to online algorithms (Soft Actor-Critic and TD3) in all 6 tasks, with no immediate performance drop. In 4 out of 6 environments, it reduces regret by 34-58% compared to the best baseline, demonstrating improved offline-to-online transfer efficiency."
+    ],
+    "summary_cn": [
+      "• 核心模型: SMAC（分数匹配演员-评论家）是一种离线强化学习方法，通过在离线阶段正则化Q函数，强制策略分数与Q函数动作梯度之间的一阶导数相等，以连接损失景观中的离线和在线最大值。",
+      "• 数据来源: 使用6个D4RL基准任务进行评估，这些是离线强化学习的标准数据集，包含来自各种连续控制环境的预收集经验数据。",
+      "• 主要结论: SMAC在所有6个任务中实现向在线算法（Soft Actor-Critic和TD3）的平滑迁移，无性能立即下降。在4/6环境中，相比最佳基线，遗憾减少34-58%，提升了离线到在线迁移效率。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for applications in algorithmic trading where offline pre-training on historical data followed by online fine-tuning is common, as it addresses the critical issue of performance drop during transfer, potentially leading to more stable and profitable RL-based strategies.",
+      "• Implementation Risk: Moderate risk due to reliance on specific derivative matching and the D4RL benchmark; real-world financial data may introduce distribution shifts or noise not captured in controlled environments, requiring careful adaptation and validation.",
+      "• Novelty: Novel approach by explicitly regularizing the Q-function to bridge offline and online optimization landscapes, offering a fresh perspective on transfer learning in RL, though it builds upon existing actor-critic and score matching concepts."
+    ],
+    "verdict_cn": [
+      "• 创新点: 通过显式正则化Q函数来桥接离线和在线优化景观，为RL中的迁移学习提供了新视角，但基于现有演员-评论家和分数匹配概念构建。",
+      "• 实盘坑: 中等风险，依赖于特定导数匹配和D4RL基准；真实金融数据可能引入分布偏移或噪声，需谨慎调整和验证。",
+      "• 复现难度: 中等难度，需要实现复杂的导数匹配和正则化，但D4RL数据集和开源代码可能降低门槛，适合有RL经验的团队。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
     "id": "2602.16709v1",
     "title": "Knowledge-Embedded Latent Projection for Robust Representation Learning",
     "pdf_url": "https://arxiv.org/pdf/2602.16709v1",
