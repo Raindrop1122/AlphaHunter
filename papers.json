@@ -1,5 +1,361 @@
 [
   {
+    "id": "2602.20159v1",
+    "title": "A Very Big Video Reasoning Suite",
+    "pdf_url": "https://arxiv.org/pdf/2602.20159v1",
+    "published": "2026-02-23",
+    "crawled_at": "2026-02-24 20:20:43",
+    "ai_score": 8.2,
+    "translated_title": "一个非常大的视频推理套件",
+    "summary_en": [
+      "• Model Architecture: Introduces VBVR-Bench, a verifiable evaluation framework incorporating rule-based, human-aligned scorers for reproducible and interpretable diagnosis of video reasoning capabilities.",
+      "• Data used: Presents the Very Big Video Reasoning (VBVR) Dataset, spanning 200 curated reasoning tasks with over one million video clips, approximately three orders of magnitude larger than existing datasets.",
+      "• Performance metrics: Enables systematic study of video reasoning and its scaling behavior, observing early signs of emergent generalization to unseen reasoning tasks through large-scale scaling studies."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出VBVR-Bench评估框架，结合基于规则和人工对齐的评分器，实现可复现和可解释的视频推理能力诊断。",
+      "• 数据来源: 构建VBVR数据集，涵盖200个精选推理任务和超过100万个视频片段，规模比现有数据集大约三个数量级。",
+      "• 主要结论: 通过大规模扩展研究，观察到视频推理模型在未见任务上出现早期泛化迹象，为通用视频推理研究奠定基础。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for developing novel video-based predictive models in financial surveillance, market microstructure analysis, and behavioral pattern recognition from trading floor footage.",
+      "• Implementation Risk: Moderate to high risk due to computational intensity of video processing, data privacy concerns with real-world financial video data, and integration challenges with existing trading systems.",
+      "• Novelty: Significant novelty in creating the largest video reasoning dataset and benchmark, enabling systematic scaling studies previously impossible in this domain."
+    ],
+    "verdict_cn": [
+      "• 创新点: 创建了最大规模的视频推理数据集和基准测试套件，首次实现该领域系统性的扩展研究，填补了视频模型推理能力评估的空白。",
+      "• 实盘坑: 视频处理计算成本极高，金融视频数据存在隐私和安全风险，实际交易系统集成需要大量工程化改造。",
+      "• 复现难度: 中等难度，虽然数据和代码公开，但需要大量计算资源（GPU集群）处理百万级视频数据，基准测试框架的规则制定需要领域专家参与。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2602.20156v1",
+    "title": "Skill-Inject: Measuring Agent Vulnerability to Skill File Attacks",
+    "pdf_url": "https://arxiv.org/pdf/2602.20156v1",
+    "published": "2026-02-23",
+    "crawled_at": "2026-02-24 20:20:58",
+    "ai_score": 8.5,
+    "translated_title": "技能注入：评估智能体对技能文件攻击的脆弱性",
+    "summary_en": [
+      "• Model Architecture: The paper introduces SkillInject, a benchmark framework designed to evaluate the vulnerability of LLM agents to skill-based prompt injection attacks, focusing on context-aware authorization rather than model scaling or simple input filtering.",
+      "• Data used: SkillInject contains 202 injection-task pairs, ranging from obviously malicious injections to subtle, context-dependent attacks hidden in legitimate instructions, sourced from third-party skill files that extend agent capabilities.",
+      "• Performance metrics: The benchmark measures security in terms of harmful instruction avoidance and utility in terms of legitimate instruction compliance, with results showing up to 80% attack success rate for frontier models, including execution of data exfiltration, destructive actions, and ransomware-like behavior."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出SkillInject基准框架，用于评估LLM智能体对基于技能的提示注入攻击的脆弱性，强调上下文感知授权而非模型扩展或简单输入过滤。",
+      "• 数据来源: 包含202个注入-任务对，涵盖从明显恶意注入到隐藏在合法指令中的微妙、上下文相关攻击，源自扩展智能体能力的第三方技能文件。",
+      "• 主要结论: 当前智能体高度脆弱，前沿模型的攻击成功率高达80%，常执行数据窃取、破坏性操作和勒索软件类行为，问题无法通过模型扩展或简单过滤解决。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High, as the research identifies a critical vulnerability in the rapidly evolving LLM agent ecosystem, offering insights for developing robust security frameworks that could be monetized through proprietary risk management tools or secure agent platforms.",
+      "• Implementation Risk: Moderate to high, due to the complexity of context-aware authorization systems and the need for real-time monitoring in dynamic agent environments, which may increase operational costs and latency.",
+      "• Novelty: Significant, as it introduces the first benchmark for skill-based prompt injection, a novel attack vector in agent supply chains, and challenges conventional security approaches by highlighting limitations of model scaling and filtering."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次提出基于技能的提示注入基准，揭示智能体供应链中的新攻击面，挑战了依赖模型扩展和过滤的传统安全方法，具有前瞻性。",
+      "• 实盘坑: 上下文感知授权系统实施复杂，需实时监控动态环境，可能增加运营成本和延迟，且第三方技能文件管理难度大。",
+      "• 复现难度: 中等，基准数据公开可用，但构建攻击场景和评估框架需要专业知识，且前沿模型访问可能受限。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2602.20153v1",
+    "title": "JUCAL: Jointly Calibrating Aleatoric and Epistemic Uncertainty in Classification Tasks",
+    "pdf_url": "https://arxiv.org/pdf/2602.20153v1",
+    "published": "2026-02-23",
+    "crawled_at": "2026-02-24 20:21:13",
+    "ai_score": 8.5,
+    "translated_title": "JUCAL：分类任务中联合校准偶然不确定性和认知不确定性",
+    "summary_en": [
+      "• Model Architecture: JUCAL is a post-calibration algorithm that jointly calibrates aleatoric (label noise) and epistemic (model) uncertainty by optimizing two constants via negative log-likelihood (NLL) on validation data. It works with any trained ensemble of classifiers (e.g., transformers, CNNs, tree-based methods) without accessing internal parameters.",
+      "• Data used: Evaluated on various text classification tasks with ensembles of varying sizes and different ensembling strategies, using validation/calibration datasets for optimization.",
+      "• Performance metrics: Significantly outperforms state-of-the-art calibration methods, reducing NLL by up to 15% and predictive set size by up to 20%. An ensemble of size 5 with JUCAL can outperform temperature-scaled ensembles of size 50, reducing inference costs by up to 10 times."
+    ],
+    "summary_cn": [
+      "• 核心模型: JUCAL是一种后校准算法，通过优化验证数据上的负对数似然（NLL）来联合校准偶然不确定性（标签噪声）和认知不确定性（模型不确定性），适用于任何训练好的分类器集成（如Transformer、CNN、树方法），无需访问模型内部参数。",
+      "• 数据来源: 在多种文本分类任务上进行实验，使用不同大小和集成策略的集成模型，并利用验证/校准数据集进行优化。",
+      "• 主要结论: JUCAL显著优于现有校准方法，NLL降低高达15%，预测集大小减少高达20%。使用JUCAL的5个模型集成在NLL和预测集大小上可超越50个模型的温度缩放集成，推理成本降低高达10倍。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for improving predictive uncertainty calibration in ensemble models, which can enhance risk-adjusted returns in classification-based trading strategies by reducing overconfidence and underconfidence errors.",
+      "• Implementation Risk: Low risk as JUCAL is a lightweight post-processing method with minimal computational overhead, but depends on the quality of the base ensemble and validation data for calibration.",
+      "• Novelty: Novel in jointly balancing aleatoric and epistemic uncertainty, addressing a key shortcoming in existing methods like temperature scaling and conformal methods, with practical efficiency gains."
+    ],
+    "verdict_cn": [
+      "• 创新点: 创新性地联合校准偶然和认知不确定性，解决了温度缩放和保形方法等现有校准方法的主要缺陷，通过简单优化实现高效平衡。",
+      "• 实盘坑: 依赖基础集成模型和验证数据的质量，若数据分布偏移或模型性能差，校准效果可能下降；需确保校准数据集代表实盘环境。",
+      "• 复现难度: 低难度，JUCAL算法简单，代码实现直接，无需复杂训练或模型修改，易于在现有集成系统上部署。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2602.20152v1",
+    "title": "Behavior Learning (BL): Learning Hierarchical Optimization Structures from Data",
+    "pdf_url": "https://arxiv.org/pdf/2602.20152v1",
+    "published": "2026-02-23",
+    "crawled_at": "2026-02-24 20:21:28",
+    "ai_score": 7.8,
+    "translated_title": "行为学习（BL）：从数据中学习层次化优化结构",
+    "summary_en": [
+      "• Model Architecture: BL proposes a compositional utility function built from intrinsically interpretable modular blocks, each representing a utility maximization problem (UMP). It supports architectures from single UMPs to hierarchical compositions, with a smooth and monotone variant (IBL) ensuring identifiability.",
+      "• Data used: The paper does not specify particular datasets but claims empirical demonstrations on high-dimensional data, suggesting applicability to diverse scientific domains involving optimization.",
+      "• Performance metrics: BL demonstrates strong predictive performance, intrinsic interpretability, and scalability to high-dimensional data, with theoretical support including universal approximation properties and M-estimation analysis for IBL."
+    ],
+    "summary_cn": [
+      "• 核心模型: BL提出一种基于可解释模块化块构建的组合效用函数，每个块代表一个效用最大化问题（UMP），支持从单个UMP到层次化组合的架构，其平滑单调变体（IBL）保证可识别性。",
+      "• 数据来源: 论文未指定具体数据集，但声称在高维数据上进行了实证演示，表明适用于涉及优化的多种科学领域。",
+      "• 主要结论: BL在预测性能、内在可解释性和高维数据可扩展性方面表现强劲，理论支持包括通用逼近性质和IBL的M估计分析。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; BL's interpretable optimization structures could enhance factor modeling or portfolio optimization by providing transparent decision frameworks, but direct financial applications are not demonstrated.",
+      "• Implementation Risk: High; integrating BL into live trading requires significant adaptation, as the framework is general-purpose and not tailored to market dynamics, with potential issues in real-time performance and data integration.",
+      "• Novelty: High; BL uniquely unifies behavioral science-inspired optimization with machine learning, offering a novel approach to learning hierarchical structures, though its practical edge in finance remains unproven."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；BL将行为科学启发的优化与机器学习独特结合，提供学习层次化结构的新方法，但在金融中的实际优势未经验证。",
+      "• 实盘坑: 高；将BL集成到实盘交易需要大量调整，框架通用且未针对市场动态定制，实时性能和数据集成可能存在风险。",
+      "• 复现难度: 中等；代码已开源（pip install blnetwork），但依赖高维数据和优化领域专业知识，可能增加复现复杂性。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2602.20151v1",
+    "title": "Conformal Risk Control for Non-Monotonic Losses",
+    "pdf_url": "https://arxiv.org/pdf/2602.20151v1",
+    "published": "2026-02-23",
+    "crawled_at": "2026-02-24 20:21:43",
+    "ai_score": 7.5,
+    "translated_title": "非单调损失函数的保形风险控制",
+    "summary_en": [
+      "• Model Architecture: Extends conformal prediction framework to handle non-monotonic loss functions with multidimensional parameters, introducing stability-based guarantees that depend on algorithm behavior",
+      "• Data used: Applied to diverse domains including selective image classification datasets, tumor segmentation medical imaging data, and recidivism prediction datasets with overlapping demographic groups",
+      "• Performance metrics: Provides theoretical risk control guarantees rather than empirical performance metrics, with guarantees tightening for more stable algorithms and loosening for unstable ones",
+      "• Core contribution: Generalizes risk control beyond traditional monotonic loss settings, enabling applications to complex real-world problems where simple thresholding approaches fail"
+    ],
+    "summary_cn": [
+      "• 核心模型: 扩展保形预测框架，处理多维参数下的非单调损失函数，引入基于算法稳定性的风险控制保证",
+      "• 数据来源: 应用于多个领域：选择性图像分类数据集、肿瘤分割医学影像数据、包含重叠人口统计群体的再犯预测数据集",
+      "• 主要结论: 为不稳定算法提供较宽松的保证，为稳定算法提供较严格的保证，实现了对传统单调损失设置的泛化",
+      "• 技术突破: 解决了复杂现实问题中简单阈值方法失效的难题，特别是在重叠群体和多维参数场景下"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - enables more sophisticated risk control in trading strategies where loss functions are non-monotonic (e.g., options strategies with convex payoffs), but direct financial applications not demonstrated",
+      "• Implementation Risk: High - theoretical guarantees depend on algorithm stability which is difficult to quantify in practice, and multidimensional parameter optimization adds computational complexity",
+      "• Novelty: Significant - first systematic approach to conformal risk control for non-monotonic losses, bridging theoretical statistics with practical algorithm design",
+      "• Practical limitations: No empirical validation of tightness of bounds provided, and stability assessment remains challenging for complex models"
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次系统解决非单调损失的保形风险控制问题，将理论统计与实用算法设计结合，具有重要方法论突破",
+      "• 实盘坑: 算法稳定性难以量化评估，多维参数优化计算复杂，理论保证在实际应用中可能过于保守或难以验证",
+      "• 复现难度: 中等偏高 - 需要实现广义保形框架并评估算法稳定性，医学影像和再犯预测应用需要专业领域数据",
+      "• 策略适配: 更适合需要精细风险控制的复杂衍生品策略，而非传统股票因子模型"
+    ],
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2602.20132v1",
+    "title": "LAD: Learning Advantage Distribution for Reasoning",
+    "pdf_url": "https://arxiv.org/pdf/2602.20132v1",
+    "published": "2026-02-23",
+    "crawled_at": "2026-02-24 20:21:59",
+    "ai_score": 7.8,
+    "translated_title": "LAD：用于推理的学习优势分布",
+    "summary_en": [
+      "• Model Architecture: LAD (Learning Advantage Distributions) is a distribution-matching framework that replaces advantage maximization with learning the advantage-induced distribution, formulated as minimizing an f-divergence between policy-induced and advantage-induced distributions.",
+      "• Data used: Experiments conducted on math and code reasoning tasks across several LLM backbones, with a controlled bandit setting used for validation.",
+      "• Performance metrics: LAD reliably improves both accuracy and generative diversity in reasoning tasks, incurs no extra training cost compared to GRPO, and scales naturally to LLM post-training.",
+      "• Theoretical foundation: Establishes equivalence between optimal policy update and advantage-based target distribution, yielding gradient updates that increase likelihood for high-advantage responses while suppressing over-confident probability growth."
+    ],
+    "summary_cn": [
+      "• 核心模型: LAD（学习优势分布）是一个分布匹配框架，用学习优势诱导分布替代优势最大化，通过最小化策略诱导分布与优势诱导分布之间的f-散度实现。",
+      "• 数据来源: 在多个LLM骨干网络上进行数学和代码推理任务实验，使用受控赌博机设置进行验证。",
+      "• 主要结论: LAD在推理任务中可靠地提高了准确性和生成多样性，相比GRPO无额外训练成本，并能自然扩展到LLM后训练。",
+      "• 理论贡献: 建立了最优策略更新与基于优势的目标分布之间的等价性，产生梯度更新以增加高优势响应的可能性，同时抑制过度自信的概率增长。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - LAD addresses overfitting to dominant reward signals and improves generative diversity, which could enhance reasoning robustness in financial NLP applications like sentiment analysis or report generation.",
+      "• Implementation Risk: Low to moderate - The framework incurs no extra training cost and scales to LLM post-training, but integration with existing RL pipelines and hyperparameter tuning for f-divergence may pose challenges.",
+      "• Novelty: High - Replacing advantage maximization with distribution matching is a novel approach that prevents collapse without auxiliary entropy regularization, offering a fresh perspective on RL objectives for reasoning.",
+      "• Practical limitations: Validation primarily in controlled bandit and reasoning tasks; real-world financial applications with noisy, high-dimensional data remain untested."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高 - 用分布匹配替代优势最大化，无需额外熵正则化即可防止崩溃，为推理的RL目标提供了新视角。",
+      "• 实盘坑: 中低 - 无额外训练成本且可扩展至LLM后训练，但与现有RL流程集成及f-散度超参数调优可能存在挑战。",
+      "• 复现难度: 中 - 理论推导清晰，实验设置标准，但需适配具体LLM骨干和任务，金融场景的噪声数据验证不足。",
+      "• 应用前景: 在金融NLP如情感分析或报告生成中，提升推理多样性和鲁棒性，但需进一步实证。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2602.20126v1",
+    "title": "Adaptation to Intrinsic Dependence in Diffusion Language Models",
+    "pdf_url": "https://arxiv.org/pdf/2602.20126v1",
+    "published": "2026-02-23",
+    "crawled_at": "2026-02-24 20:22:14",
+    "ai_score": 8.2,
+    "translated_title": "扩散语言模型对内在依赖结构的自适应",
+    "summary_en": [
+      "• Model Architecture: Introduces a distribution-agnostic unmasking schedule for diffusion language models (DLMs) that randomizes the number of tokens revealed per iteration, adapting to unknown dependence structures without prior knowledge or hyperparameter tuning.",
+      "• Data used: Theoretical analysis focuses on general target data distributions with intrinsic dependence structures, measured via total correlation (TC) and dual total correlation (DTC), without specifying particular datasets.",
+      "• Performance metrics: Proves convergence guarantees in KL divergence scaling as Õ(TC/K) and Õ(DTC/K) for specific parameter choices, significantly improving prior theories and enabling sampling acceleration in the parallel-sampling regime (K < L, where L is sequence length)."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出一种分布无关的解码调度方法，用于扩散语言模型，通过随机化每轮迭代中揭示的token数量，自适应目标数据的内在依赖结构，无需先验知识或超参数调优。",
+      "• 数据来源: 理论分析基于具有内在依赖结构的一般目标数据分布，使用总相关性和对偶总相关性作为度量，未指定具体数据集。",
+      "• 主要结论: 证明了在特定参数选择下，采样收敛保证（以KL散度衡量）按Õ(TC/K)和Õ(DTC/K)缩放，显著优于先前理论，并在并行采样场景（K < L）中实现加速。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for accelerating inference in low-complexity distributions, which could reduce computational costs and latency in real-time NLP applications, offering a competitive edge in efficiency-sensitive trading strategies.",
+      "• Implementation Risk: Moderate risk due to reliance on theoretical guarantees that may not fully translate to practical performance across diverse datasets, and the need to estimate TC/DTC in real-world scenarios could introduce complexity.",
+      "• Novelty: High novelty in introducing randomized unmasking schedules and theoretical convergence bounds tied to intrinsic data dependence, advancing the understanding of DLM inference beyond deterministic approaches."
+    ],
+    "verdict_cn": [
+      "• 创新点: 创新性地提出随机化解码调度方法，并将收敛理论绑定到数据的内在依赖结构，突破了传统确定性方法的局限，为扩散模型的理论基础提供了新视角。",
+      "• 实盘坑: 实际应用中需估计总相关性和对偶总相关性，这可能增加计算开销和不确定性；理论保证在复杂数据分布下的泛化能力有待验证。",
+      "• 复现难度: 中等难度，核心算法相对简洁，但实现收敛保证和依赖结构估计可能需要专业知识，适合有扩散模型经验的团队。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2602.20122v1",
+    "title": "NanoKnow: How to Know What Your Language Model Knows",
+    "pdf_url": "https://arxiv.org/pdf/2602.20122v1",
+    "published": "2026-02-23",
+    "crawled_at": "2026-02-24 20:22:28",
+    "ai_score": 7.5,
+    "translated_title": "NanoKnow：如何了解你的语言模型知道什么",
+    "summary_en": [
+      "• Model Architecture: Uses nanochat family of small LLMs with fully open pre-training data, enabling transparent analysis of knowledge encoding mechanisms.",
+      "• Data used: Creates NanoKnow benchmark dataset by partitioning Natural Questions and SQuAD questions based on answer presence in nanochat's pre-training corpus, with eight nanochat checkpoints for experiments.",
+      "• Performance metrics: Measures closed-book accuracy influenced by answer frequency in pre-training data, external evidence mitigation effects, complementary parametric/external knowledge, and harmful impact of non-relevant information on accuracy."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用nanochat系列小型LLM，其预训练数据完全公开，为知识编码机制提供了透明分析基础。",
+      "• 数据来源: 基于Natural Questions和SQuAD构建NanoKnow基准数据集，根据答案是否出现在nanochat预训练语料中进行划分，使用八个nanochat检查点进行实验。",
+      "• 主要结论: 闭卷准确率受预训练数据中答案频率影响显著；外部证据可缓解频率依赖；参数知识与外部知识具有互补性；非相关信息会损害模型性能。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - Provides novel methodology for disentangling knowledge sources in LLMs, potentially useful for developing more transparent AI systems in finance where explainability matters.",
+      "• Implementation Risk: High - Relies on specialized small LLMs (nanochat) with fully open data, which may not scale to proprietary commercial models; findings may not generalize to larger closed-source models.",
+      "• Novelty: High - First systematic approach using fully transparent pre-training data to analyze knowledge encoding, addressing the 'black box' problem in LLM knowledge attribution."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高 - 首次利用完全透明的预训练数据系统分析LLM知识编码机制，为解决LLM知识归因的'黑箱'问题提供了新方法。",
+      "• 实盘坑: 高 - 依赖特定小型LLM（nanochat）和完全公开数据，难以扩展到商业闭源大模型；结论在金融实际应用中可能泛化性有限。",
+      "• 复现难度: 中 - 代码和数据已开源，但需要访问nanochat模型和特定预训练语料，实验设置相对复杂。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2602.20117v1",
+    "title": "ReSyn: Autonomously Scaling Synthetic Environments for Reasoning Models",
+    "pdf_url": "https://arxiv.org/pdf/2602.20117v1",
+    "published": "2026-02-23",
+    "crawled_at": "2026-02-24 20:22:45",
+    "ai_score": 7.8,
+    "translated_title": "ReSyn：为推理模型自主扩展合成环境",
+    "summary_en": [
+      "• Model Architecture: Introduces ReSyn, a pipeline for generating diverse reasoning environments with instance generators and verifiers, trained using reinforcement learning with verifiable rewards (RLVR) on a Qwen2.5-7B-Instruct model.",
+      "• Data used: Synthetic data generated by ReSyn covering tasks such as constraint satisfaction, algorithmic puzzles, and spatial reasoning, with verifier-based supervision replacing solution annotation.",
+      "• Performance metrics: Achieves consistent gains across reasoning benchmarks, including a 27% relative improvement on the challenging BBEH benchmark, and shows positive out-of-domain performance on math benchmarks.",
+      "• Key findings: Ablations demonstrate that both verifier-based supervision and increased task diversity significantly contribute to enhanced reasoning abilities in reasoning language models (RLMs)."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出ReSyn管道，通过实例生成器和验证器生成多样化推理环境，基于Qwen2.5-7B-Instruct模型，采用可验证奖励的强化学习（RLVR）进行训练。",
+      "• 数据来源: 使用ReSyn生成的合成数据，涵盖约束满足、算法谜题和空间推理等任务，以验证器监督替代解决方案标注。",
+      "• 主要结论: 在推理基准测试中实现一致提升，包括在挑战性BBEH基准上相对改进27%，并在数学基准测试中显示出跨领域性能增益。",
+      "• 实验验证: 消融研究表明，验证器监督和任务多样性均对提升推理语言模型（RLM）能力有显著贡献。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate to high; scaling synthetic environments with verifiers could enhance reasoning models for quantitative tasks like algorithmic trading or risk assessment, but direct financial application is untested.",
+      "• Implementation Risk: High; reliance on synthetic data generation and verifier design may introduce biases or scalability issues in real-world financial datasets, and the 7B model size may limit complex reasoning.",
+      "• Novelty: Moderate; RLVR is an emerging approach, but ReSyn's focus on environment diversity and verifier-based supervision offers incremental innovation over existing solution-centric methods.",
+      "• Practical limitations: The paper lacks validation on real-world financial data, and the performance gains, while notable, are on academic benchmarks with unclear transfer to market dynamics."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；RLVR方法在强化学习与推理结合方面有潜力，ReSyn通过环境多样性和验证器监督提供新思路，但非革命性突破。",
+      "• 实盘坑: 高；合成数据可能无法捕捉金融市场复杂性，验证器设计依赖人工规则，在实时交易中易产生过拟合或延迟问题。",
+      "• 复现难度: 中等；需要构建类似ReSyn的管道和验证器，但开源模型和基准测试可用，技术门槛相对可控。",
+      "• 应用风险: 未在金融数据上验证，性能提升限于学术基准，直接用于量化策略存在不确定性。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2602.20111v1",
+    "title": "Reliable Abstention under Adversarial Injections: Tight Lower Bounds and New Upper Bounds",
+    "pdf_url": "https://arxiv.org/pdf/2602.20111v1",
+    "published": "2026-02-23",
+    "crawled_at": "2026-02-24 20:23:05",
+    "ai_score": 8.2,
+    "translated_title": "对抗注入下的可靠弃权：紧下界与新上界",
+    "summary_en": [
+      "• Model Architecture: Introduces a potential-based framework driven by robust witnesses—small subsets of labeled examples that certify predictions while remaining resilient to adversarial contamination. The framework is instantiated using two combinatorial dimensions: inference dimension and a new relaxation called certificate dimension.",
+      "• Data used: Operates in the adversarial injection model where a stream of labeled examples is predominantly drawn i.i.d. from an unknown distribution but may be interspersed with adversarially chosen instances. Labels are always consistent with a fixed target concept (clean-label setting).",
+      "• Performance metrics: Achieves combined error bounds of O(d² log T) with oracle access to the distribution and Õ(√T) for distribution-agnostic algorithms. Proves a matching Ω(√T) lower bound for VC dimension 1, establishing a sharp separation between information regimes. For halfspaces in ℝ², obtains Õ(T²/³) using certificate dimension 3.",
+      "• Key contribution: Resolves the open question of whether the gap between distribution-aware and distribution-agnostic algorithms is fundamental by proving tight lower bounds and introducing new upper bounds via combinatorial dimensions."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出基于势能的框架，由鲁棒见证驱动——这些是标记示例的小子集，能在认证预测的同时抵抗对抗性污染。该框架通过两种组合维度实现：推理维度和新引入的证书维度。",
+      "• 数据来源: 采用对抗注入模型，其中标记示例流主要从未知分布中独立同分布抽取，但可能夹杂对抗性选择的实例。标签始终与固定目标概念一致（干净标签设置）。",
+      "• 主要结论: 证明VC维度为1时存在匹配的Ω(√T)下界，确立了分布感知与分布无关算法之间的尖锐分离。对于ℝ²中的半空间，使用证书维度3获得Õ(T²/³)的上界，这是该类别首个分布无关界限。",
+      "• 理论突破: 通过紧下界和新上界解决了分布感知与分布无关算法之间差距是否根本性的开放问题，为对抗环境下的学习提供了新工具。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for risk management and robust trading strategies, as the framework enables reliable abstention under adversarial conditions, which can be adapted to financial markets with noisy or manipulated data. The certificate dimension concept may inspire new anomaly detection methods.",
+      "• Implementation Risk: Moderate to high; the theoretical bounds are asymptotic and may require significant tuning for real-world applications. The clean-label assumption limits direct applicability to markets where label noise is common.",
+      "• Novelty: Strong; introduces the certificate dimension as a new combinatorial relaxation and provides the first distribution-agnostic bounds for halfspaces in ℝ², advancing the field of adversarial learning with abstention. The lower bound proof is technically rigorous and resolves a key open problem.",
+      "• Practical limitations: The model assumes labels are always consistent with a fixed concept, which may not hold in dynamic financial environments. Computational efficiency for high-dimensional data is not addressed."
+    ],
+    "verdict_cn": [
+      "• 创新点: 引入证书维度作为新的组合松弛，为对抗性学习提供新工具；证明紧下界解决开放问题，理论贡献显著；框架设计巧妙，鲁棒见证概念有潜力应用于金融异常检测。",
+      "• 实盘坑: 干净标签假设在金融市场中可能不成立，因标签噪声常见；渐近界限需大量调参才能实用；高维数据计算效率未讨论，实盘部署挑战大。",
+      "• 复现难度: 中等偏高；理论证明复杂，需深厚数学基础；算法实现依赖于组合维度计算，可能计算成本高；实验数据模拟要求高，真实市场数据适配需额外工作。",
+      "• 应用前景: 在风险管理领域潜力较大，可用于构建抗干扰交易策略；但需克服假设限制，并开发更高效的实现以适应高频或大规模数据。"
+    ],
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
     "id": "2602.18435v1",
     "title": "Assigning Confidence: K-partition Ensembles",
     "pdf_url": "https://arxiv.org/pdf/2602.18435v1",
