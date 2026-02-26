@@ -1,5 +1,349 @@
 [
   {
+    "id": "2602.22207v1",
+    "title": "Recovered in Translation: Efficient Pipeline for Automated Translation of Benchmarks and Datasets",
+    "pdf_url": "https://arxiv.org/pdf/2602.22207v1",
+    "published": "2026-02-25",
+    "crawled_at": "2026-02-26 20:21:57",
+    "ai_score": 7.5,
+    "translated_title": "翻译恢复：自动化基准测试与数据集翻译的高效流程",
+    "summary_en": [
+      "• Model Architecture: The framework employs a fully automated pipeline integrating Universal Self-Improvement (USI) and a novel multi-round ranking method called T-RANK for scalable, high-quality translation of datasets and benchmarks.",
+      "• Data used: The approach was applied to translate popular benchmarks and datasets into eight Eastern and Southern European languages, including Ukrainian, Bulgarian, Slovak, Romanian, Lithuanian, Estonian, Turkish, and Greek.",
+      "• Performance metrics: Evaluations using reference-based metrics and LLM-as-a-judge show that the translations surpass existing resources, resulting in more accurate downstream model assessment and preservation of original task structure and linguistic nuances."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用全自动化框架，结合通用自改进（USI）和新型多轮排序方法T-RANK，实现可扩展的高质量数据集和基准测试翻译。",
+      "• 数据来源: 应用于将流行基准测试和数据集翻译成八种东欧和南欧语言，包括乌克兰语、保加利亚语、斯洛伐克语、罗马尼亚语、立陶宛语、爱沙尼亚语、土耳其语和希腊语。",
+      "• 主要结论: 通过基于参考的指标和LLM作为评判者的评估，翻译质量超越现有资源，提升下游模型评估的准确性，并保持原始任务结构和语言细微差别。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the framework could enhance multilingual LLM evaluation accuracy, potentially leading to better model selection and performance in cross-lingual financial applications, but direct alpha generation is limited without specific trading contexts.",
+      "• Implementation Risk: High; automated translation pipelines may introduce errors or biases, and scalability to diverse languages or domains could be challenging, requiring robust validation to avoid misleading metrics in real-world deployments.",
+      "• Novelty: Moderate; while USI and T-RANK are innovative adaptations of test-time compute scaling, the core idea of improving benchmark translation is not entirely new, though the automated approach and focus on Eastern/Southern European languages add value."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；USI和T-RANK作为测试时计算扩展策略的创新应用，提升了翻译质量，但基准测试翻译改进的核心概念并非全新，自动化流程和东欧/南欧语言聚焦增加了实用性。",
+      "• 实盘坑: 高；自动化翻译可能引入错误或偏差，扩展到其他语言或领域存在挑战，需严格验证以避免在实际部署中产生误导性指标，影响模型评估可靠性。",
+      "• 复现难度: 中等；框架和基准测试已发布，便于复现，但需要大量计算资源和多语言数据支持，且T-RANK方法的调优可能复杂，增加实施门槛。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2602.22190v1",
+    "title": "GUI-Libra: Training Native GUI Agents to Reason and Act with Action-aware Supervision and Partially Verifiable RL",
+    "pdf_url": "https://arxiv.org/pdf/2602.22190v1",
+    "published": "2026-02-25",
+    "crawled_at": "2026-02-26 20:22:16",
+    "ai_score": 8.2,
+    "translated_title": "GUI-Libra：通过动作感知监督和部分可验证强化学习训练原生GUI智能体进行推理与行动",
+    "summary_en": [
+      "• Model Architecture: GUI-Libra introduces a tailored training recipe with three key components: action-aware supervised fine-tuning (SFT) that mixes reasoning-then-action and direct-action data with token reweighting, KL-regularized RLVR (Reinforcement Learning with Verifiable Rewards) to address partial verifiability, and success-adaptive scaling to downweight unreliable negative gradients.",
+      "• Data used: The authors construct and release a curated 81K GUI reasoning dataset through a specialized data construction and filtering pipeline, addressing the scarcity of high-quality, action-aligned reasoning data for native GUI agents.",
+      "• Performance metrics: GUI-Libra demonstrates consistent improvements in both step-wise accuracy and end-to-end task completion across diverse web and mobile benchmarks, showing enhanced offline-to-online predictability and stronger task-solving capabilities without costly online data collection."
+    ],
+    "summary_cn": [
+      "• 核心模型: GUI-Libra提出定制化训练方案，包括动作感知监督微调（混合推理-行动和直接行动数据并重加权令牌）、KL正则化RLVR以处理部分可验证性，以及成功自适应缩放以降低不可靠负梯度影响。",
+      "• 数据来源: 通过专门的数据构建和过滤流程，作者发布了一个精选的81K GUI推理数据集，解决了原生GUI智能体高质量动作对齐推理数据稀缺的问题。",
+      "• 主要结论: 在多样化的网页和移动端基准测试中，GUI-Libra在逐步准确性和端到端任务完成率上均表现出一致提升，表明无需昂贵在线数据收集即可显著增强任务解决能力。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate to high; the method addresses critical bottlenecks in GUI agent training (data scarcity and partial verifiability), potentially enabling more efficient automation of complex GUI tasks in financial platforms, trading interfaces, or data extraction pipelines, though direct financial alpha generation requires further domain adaptation.",
+      "• Implementation Risk: Medium; while the technical approach is sound, real-world deployment faces challenges such as GUI variability across different systems, latency requirements for real-time applications, and the need for extensive validation in production environments to ensure robustness against edge cases.",
+      "• Novelty: High; the paper introduces novel concepts like action-aware SFT and KL-regularized RLVR specifically tailored for GUI agents, moving beyond generic post-training pipelines and offering insights into stabilizing RL under partial verifiability, which could inspire similar approaches in other sequential decision-making domains."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高创新性；提出动作感知监督微调和KL正则化RLVR等新概念，专门针对GUI智能体设计，超越通用后训练流程，为部分可验证性下的强化学习稳定性提供新思路。",
+      "• 实盘坑: 中等风险；实际部署面临GUI系统变异性、实时应用延迟要求等挑战，需在生产环境中广泛验证以确保对边缘情况的鲁棒性，金融领域应用还需额外领域适配。",
+      "• 复现难度: 中等；方法依赖发布的81K数据集和代码，技术细节较清晰，但实现KL正则化和成功自适应缩放需较强工程能力，且基准测试环境搭建可能复杂。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2602.22188v1",
+    "title": "Surrogate models for Rock-Fluid Interaction: A Grid-Size-Invariant Approach",
+    "pdf_url": "https://arxiv.org/pdf/2602.22188v1",
+    "published": "2026-02-25",
+    "crawled_at": "2026-02-26 20:22:36",
+    "ai_score": 7.8,
+    "translated_title": "岩石-流体相互作用的代理模型：一种网格尺寸不变方法",
+    "summary_en": [
+      "• Model Architecture: The paper develops eight surrogate models, including four reduced-order models (ROMs) using dual neural networks (one for compression, one for prediction) and four single neural networks with grid-size invariance, specifically comparing UNet and UNet++ architectures for image-to-image prediction on larger computational domains than training data.",
+      "• Data used: The models are applied to simulate fluid flow in porous media with rock-fluid interactions, focusing on scenarios involving fluid-induced rock dissolution that results in non-static solid fields, using high-fidelity numerical PDE solutions as ground truth for training and validation.",
+      "• Performance metrics: The grid-size-invariant approach demonstrates good correlation between predicted and ground-truth values, reduces memory consumption during training, and outperforms the ROMs in predictive accuracy, with UNet++ showing superior performance over UNet for surrogate modeling tasks."
+    ],
+    "summary_cn": [
+      "• 核心模型: 开发了八种代理模型，包括四种基于双神经网络（压缩和预测）的降阶模型（ROM）和四种具有网格尺寸不变性的单神经网络，重点比较了UNet和UNet++架构在图像到图像预测中的应用。",
+      "• 数据来源: 使用高保真数值偏微分方程解作为训练和验证的真实数据，模拟多孔介质中的流体流动，特别是涉及流体诱导岩石溶解导致非静态固体场的挑战性场景。",
+      "• 主要结论: 网格尺寸不变方法在预测与真实值之间表现出良好相关性，降低了训练内存消耗，并在预测准确性上优于ROMs，其中UNet++在代理建模任务中性能优于UNet。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the grid-size-invariant approach could enhance computational efficiency for multi-query problems like uncertainty quantification in financial simulations (e.g., risk modeling or option pricing), but direct alpha generation is limited as it focuses on physical systems rather than market data.",
+      "• Implementation Risk: High; adapting the method to financial datasets requires significant domain adaptation, as it is designed for PDE-based rock-fluid interactions, and the non-static nature of financial data may pose challenges similar to the fluid-induced dissolution problem.",
+      "• Novelty: High; the introduction of grid-size invariance for surrogate models is a novel contribution, allowing inference on larger domains than training, which could inspire scalable deep learning models in finance for handling varying data resolutions or time scales."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；提出网格尺寸不变的代理模型框架，允许在比训练数据更大的计算域上进行推断，这在深度学习模型中具有新颖性，可能为金融领域处理不同数据分辨率或时间尺度提供启发。",
+      "• 实盘坑: 高；将该方法应用于金融数据集需要大量领域适应，因为它专为基于PDE的物理系统设计，金融数据的非静态特性可能带来类似流体诱导溶解问题的挑战，增加实施风险。",
+      "• 复现难度: 中等；模型架构（如UNet++）相对标准，但需要高保真数值数据作为真实值，且处理非静态固体场的应用场景增加了复杂性，可能限制在金融环境中的快速复现。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2602.22179v1",
+    "title": "Learning and Naming Subgroups with Exceptional Survival Characteristics",
+    "pdf_url": "https://arxiv.org/pdf/2602.22179v1",
+    "published": "2026-02-25",
+    "crawled_at": "2026-02-26 20:22:52",
+    "ai_score": 7.5,
+    "translated_title": "学习并命名具有异常生存特征的亚组",
+    "summary_en": [
+      "• Model Architecture: Sysurv is a fully differentiable, non-parametric method that leverages random survival forests to learn individual survival curves and automatically learns conditions to form interpretable rules for subgroup selection.",
+      "• Data used: Evaluated on a wide range of datasets, including a case study on cancer data, demonstrating applicability across diverse domains such as medicine and predictive maintenance.",
+      "• Performance metrics: Empirical evaluation shows that Sysurv reveals insightful and actionable survival subgroups, overcoming limitations of existing methods that require restrictive assumptions (e.g., proportional hazards) and pre-discretized features."
+    ],
+    "summary_cn": [
+      "• 核心模型: Sysurv是一种完全可微、非参数的方法，利用随机生存森林学习个体生存曲线，自动学习条件并组合成可解释的规则，以选择具有异常生存特征的亚组。",
+      "• 数据来源: 在多种数据集上进行评估，包括癌症数据的案例研究，展示了在医学和预测性维护等不同领域的适用性。",
+      "• 主要结论: 实证评估表明，Sysurv能揭示有洞察力和可操作的生存亚组，克服了现有方法需要限制性假设（如比例风险）和预离散化特征的局限性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the method could identify subgroups with exceptional survival characteristics in financial contexts (e.g., credit risk, asset longevity), but direct alpha generation is limited without specific financial applications.",
+      "• Implementation Risk: High; non-parametric approaches like random survival forests may be computationally intensive and require careful tuning for real-time deployment in trading systems.",
+      "• Novelty: High; the fully differentiable, interpretable rule-learning approach addresses gaps in existing subgroup discovery methods, offering a novel framework for survival analysis without restrictive assumptions."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；完全可微、可解释的规则学习方法填补了现有亚组发现方法的空白，提供了一种无需限制性假设的生存分析新框架。",
+      "• 实盘坑: 高；随机生存森林等非参数方法计算量大，在交易系统中实时部署需要精细调优，且缺乏金融特定应用可能限制直接收益。",
+      "• 复现难度: 中等；方法基于标准机器学习库（如随机森林），但实现可解释规则学习和集成可能需要专业知识，数据集可用性可能影响复现。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2602.22157v1",
+    "title": "Dynamic Personality Adaptation in Large Language Models via State Machines",
+    "pdf_url": "https://arxiv.org/pdf/2602.22157v1",
+    "published": "2026-02-25",
+    "crawled_at": "2026-02-26 20:23:08",
+    "ai_score": 7.8,
+    "translated_title": "基于状态机的大语言模型动态人格适应框架",
+    "summary_en": [
+      "• Model Architecture: Proposes a model-agnostic framework using state machines to represent latent personality states, with transition probabilities dynamically adapted to conversational context. Includes modular pipeline for continuous personality scoring that reconfigures system prompts based on dynamic state variables.",
+      "• Data used: Evaluated by operationalizing the Interpersonal Circumplex (IPC) in a medical education setting, though specific dataset details are not provided in the abstract.",
+      "• Performance metrics: System successfully adapts personality state to user inputs and influences user behavior for de-escalation training. Scoring pipeline maintains comparable precision with lightweight classifiers instead of large-scale LLMs."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出模型无关的动态人格模拟框架，使用状态机表示潜在人格状态，转移概率根据对话上下文动态调整。包含模块化的人格评分管道，将分数作为动态状态变量重新配置系统提示。",
+      "• 数据来源: 在医学教育场景中基于人际环状模型（IPC）进行评估，但摘要未提供具体数据集细节。",
+      "• 主要结论: 系统成功根据用户输入调整人格状态，并能影响用户行为以促进降级训练。评分管道使用轻量级分类器而非大规模LLM时仍保持可比精度。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - Framework could enhance interactive AI applications in education, customer support, and human-computer interaction by enabling dynamic personality modulation, potentially improving user engagement and outcomes.",
+      "• Implementation Risk: High - Model-agnostic approach is promising but requires robust personality scoring and state transition mechanisms; medical education evaluation may not generalize to financial contexts without significant adaptation.",
+      "• Novelty: Moderate - State machine approach for personality adaptation is innovative, but modular scoring pipeline and dynamic prompt reconfiguration build upon existing LLM steering techniques."
+    ],
+    "verdict_cn": [
+      "• 创新点: 使用状态机实现动态人格适应有一定新意，模块化评分管道设计允许灵活集成不同人格模型和LLM。",
+      "• 实盘坑: 人格评分和状态转移机制的可靠性是关键风险；医学教育场景的评估结果可能无法直接迁移到金融应用。",
+      "• 复现难度: 中等 - 框架设计为模型无关，但需要实现完整的状态机逻辑和评分管道，对工程实现要求较高。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2602.22146v1",
+    "title": "Provable Last-Iterate Convergence for Multi-Objective Safe LLM Alignment via Optimistic Primal-Dual",
+    "pdf_url": "https://arxiv.org/pdf/2602.22146v1",
+    "published": "2026-02-25",
+    "crawled_at": "2026-02-26 20:23:23",
+    "ai_score": 8.2,
+    "translated_title": "通过乐观原始对偶方法实现多目标安全大语言模型对齐的可证明最终迭代收敛",
+    "summary_en": [
+      "• Model Architecture: Proposes a universal primal-dual framework unifying safe-RLHF, one-shot, and multi-shot alignment algorithms, with an optimistic primal-dual (OPD) algorithm incorporating predictive updates for both primal and dual variables.",
+      "• Data used: The paper focuses on theoretical analysis and algorithmic framework development without specifying particular datasets; it addresses RLHF with expected reward constraints in the context of Large Language Models.",
+      "• Performance metrics: Establishes last-iterate convergence guarantees covering exact policy optimization in distributional space and convergence to a neighborhood of the optimal solution with gaps related to approximation error and bias under parameterized policies."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出一个通用的原始对偶框架，统一了安全RLHF、单次和多次对齐算法，并引入乐观原始对偶（OPD）算法，包含对原始变量和对偶变量的预测更新。",
+      "• 数据来源: 论文侧重于理论分析和算法框架开发，未指定具体数据集；处理具有期望奖励约束的RLHF，应用于大语言模型对齐。",
+      "• 主要结论: 建立了最终迭代收敛保证，涵盖分布空间中的精确策略优化，以及在参数化策略下收敛到最优解邻域，其间隙与近似误差和偏差相关。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for improving RLHF stability in practical applications by mitigating oscillations in constrained alignment objectives, which could enhance model alignment efficiency and reduce training instability.",
+      "• Implementation Risk: Moderate risk due to the theoretical nature of the work; practical implementation requires careful tuning of predictive updates and may face challenges in scaling to complex LLM environments.",
+      "• Novelty: Significant novelty in introducing optimism to primal-dual methods for RLHF, closing a theoretical gap between constrained RL and practical RLHF by providing last-iterate convergence guarantees."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将乐观方法引入RLHF的原始对偶算法中，通过预测更新稳定鞍点动力学，填补了约束强化学习与实用RLHF之间的关键理论空白。",
+      "• 实盘坑: 理论性较强，实际应用需精细调整预测更新参数，可能在大规模复杂LLM环境中面临计算和收敛挑战。",
+      "• 复现难度: 中等偏高，需要深入理解原始对偶优化和RLHF框架，算法实现涉及复杂的数学推导和参数化策略处理。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2602.22136v1",
+    "title": "SigmaQuant: Hardware-Aware Heterogeneous Quantization Method for Edge DNN Inference",
+    "pdf_url": "https://arxiv.org/pdf/2602.22136v1",
+    "published": "2026-02-25",
+    "crawled_at": "2026-02-26 20:23:41",
+    "ai_score": 7.5,
+    "translated_title": "SigmaQuant：面向边缘DNN推理的硬件感知异构量化方法",
+    "summary_en": [
+      "• Model Architecture: SigmaQuant is an adaptive layer-wise heterogeneous quantization framework that dynamically allocates different bitwidths to individual DNN layers based on hardware constraints and layer robustness, eliminating the need for exhaustive brute-force search.",
+      "• Data used: The paper does not specify particular datasets, but typical DNN benchmarks for edge deployment (e.g., ImageNet, CIFAR-10) are implied for evaluating quantization performance under resource constraints like memory, energy, and latency.",
+      "• Performance metrics: The framework aims to balance accuracy and resource usage efficiently, targeting metrics such as model compression ratio, inference latency reduction, energy consumption, and minimal accuracy degradation compared to uniform quantization at low bitwidths."
+    ],
+    "summary_cn": [
+      "• 核心模型: SigmaQuant是一种自适应层间异构量化框架，根据硬件约束和层鲁棒性动态分配不同位宽，避免暴力搜索设计空间。",
+      "• 数据来源: 未明确指定数据集，但隐含使用边缘部署的典型DNN基准（如ImageNet、CIFAR-10）来评估在内存、能耗和延迟等资源限制下的量化性能。",
+      "• 主要结论: 该框架能高效平衡精度和资源使用，在低比特量化下实现模型压缩、延迟降低和能耗优化，同时最小化精度损失。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; SigmaQuant could enhance edge AI deployment efficiency, potentially reducing operational costs and enabling new applications in resource-constrained environments, but direct financial alpha generation is indirect and depends on integration into broader systems.",
+      "• Implementation Risk: High; Adapting to diverse hardware conditions (memory, energy, latency) introduces complexity, and real-world deployment may face challenges in dynamic environments, hardware variability, and integration with existing DNN pipelines.",
+      "• Novelty: Moderate; The concept of heterogeneous quantization is not new, but SigmaQuant's adaptive approach without exhaustive search adds value by improving practicality and scalability for edge devices, though it builds on established quantization research."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；异构量化非新概念，但SigmaQuant的自适应方法无需暴力搜索，提升了边缘设备部署的实用性和可扩展性，属于增量改进。",
+      "• 实盘坑: 高；适应多样化硬件条件（内存、能耗、延迟）带来复杂性，实际部署可能面临动态环境、硬件变异和现有DNN流水线集成的挑战。",
+      "• 复现难度: 中等；框架描述较清晰，但需要具体硬件配置和数据集进行验证，可能涉及调参和优化以实现宣称的性能。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2602.22130v1",
+    "title": "Sample Complexity Bounds for Robust Mean Estimation with Mean-Shift Contamination",
+    "pdf_url": "https://arxiv.org/pdf/2602.22130v1",
+    "published": "2026-02-25",
+    "crawled_at": "2026-02-26 20:23:59",
+    "ai_score": 8.2,
+    "translated_title": "均值漂移污染下鲁棒均值估计的样本复杂度界限",
+    "summary_en": [
+      "• Model Architecture: The paper introduces a Fourier-based algorithmic framework that utilizes Fourier witnesses to detect and correct for mean-shift contamination in multivariate distributions.",
+      "• Data used: Theoretical analysis focuses on general base distributions (potentially multivariate) under mean-shift contamination, where an adversary replaces a constant fraction of samples with arbitrarily shifted versions.",
+      "• Performance metrics: Provides sample complexity upper and lower bounds that match qualitatively, showing sample-efficient estimation to any desired accuracy under mild spectral conditions on the characteristic function.",
+      "• Key contribution: Resolves an open question about sample complexity for general distributions in mean-shift contamination model, contrasting with Huber's model where consistent estimation is impossible."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于傅里叶分析的算法框架，引入傅里叶见证者概念，用于检测和校正多元分布中的均值漂移污染。",
+      "• 数据来源: 理论分析针对均值漂移污染模型下的通用基分布（可能为多元），其中对手用任意偏移版本替换恒定比例样本。",
+      "• 主要结论: 在特征函数的温和谱条件下，存在样本高效算法可将目标均值估计到任意精度，并提供了定性匹配的样本复杂度上下界。",
+      "• 理论突破: 解决了均值漂移污染模型中通用分布样本复杂度的开放问题，与Huber污染模型中无法实现一致估计形成对比。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - Fourier-based contamination detection could enhance outlier-robust factor models in non-Gaussian return environments, particularly for tail risk estimation.",
+      "• Implementation Risk: High - Requires precise knowledge of characteristic function spectral properties; real financial data may violate 'mild conditions' assumption.",
+      "• Novelty: High - Introduces Fourier witness concept and provides first general sample complexity bounds for mean-shift contamination beyond Gaussian/Laplace special cases.",
+      "• Practical limitation: Assumes constant contamination fraction known to algorithm; adaptive contamination rates in market regimes would break theoretical guarantees."
+    ],
+    "verdict_cn": [
+      "• 创新点: 较高 - 引入傅里叶见证者概念，首次为超越高斯/拉普拉斯特例的均值漂移污染提供通用样本复杂度界限。",
+      "• 实盘坑: 高 - 需要精确掌握特征函数谱特性；真实金融数据可能违反'温和条件'假设，且污染比例固定已知的假设不现实。",
+      "• 复现难度: 中高 - 傅里叶变换实现相对标准，但确定分布的特征函数谱条件需要领域专业知识，多元扩展计算复杂度较高。",
+      "• 市场适用性: 有限 - 更适合理论构建而非直接交易策略；可能应用于风险模型中的异常值检测，但需大量适配工作。"
+    ],
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2602.22124v1",
+    "title": "SWE-Protégé: Learning to Selectively Collaborate With an Expert Unlocks Small Language Models as Software Engineering Agents",
+    "pdf_url": "https://arxiv.org/pdf/2602.22124v1",
+    "published": "2026-02-25",
+    "crawled_at": "2026-02-26 20:24:16",
+    "ai_score": 8.2,
+    "translated_title": "SWE-Protégé：学习选择性协作专家解锁小语言模型作为软件工程代理",
+    "summary_en": [
+      "• Model Architecture: SWE-Protégé is a post-training framework that reframes software repair as an expert-protégé collaboration problem, where a small language model (SLM) learns to selectively seek guidance from a strong expert model, recognize stalled states, and follow through on expert feedback.",
+      "• Data used: The approach combines supervised fine-tuning on expert-augmented trajectories with agentic reinforcement learning, using data from SWE-bench tasks to train the model to avoid degenerative looping and unproductive expert collaboration.",
+      "• Performance metrics: Achieves 42.4% Pass@1 on SWE-bench Verified, a +25.4% improvement over prior SLM state-of-the-art, while using expert assistance sparsely (~4 calls per task and 11% of total tokens)."
+    ],
+    "summary_cn": [
+      "• 核心模型: SWE-Protégé是一个后训练框架，将软件修复重构为专家-学徒协作问题，小语言模型学习选择性寻求专家指导、识别停滞状态并执行反馈。",
+      "• 数据来源: 结合专家增强轨迹的监督微调和代理强化学习，使用SWE-bench任务数据训练模型以避免退化循环和无效专家协作。",
+      "• 主要结论: 在SWE-bench Verified上达到42.4% Pass@1，比先前小语言模型最佳性能提升25.4%，同时稀疏使用专家协助（约每任务4次调用和总令牌的11%）。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for cost-efficient automation in software engineering tasks, enabling SLMs to compete with larger models through selective expert collaboration, which could reduce operational costs and latency in production environments.",
+      "• Implementation Risk: Moderate risk due to dependency on expert model availability and quality, potential for overfitting to specific benchmarks like SWE-bench, and challenges in scaling to diverse real-world software repair scenarios.",
+      "• Novelty: Novel in reframing software repair as a collaboration problem and using agentic reinforcement learning to discourage degenerative behaviors, offering a fresh approach to enhancing SLM capabilities without full-scale model expansion."
+    ],
+    "verdict_cn": [
+      "• 创新点: 创新地将软件修复重构为协作问题，并利用代理强化学习抑制退化行为，为提升小语言模型能力提供新路径，避免完全模型扩展。",
+      "• 实盘坑: 依赖专家模型可用性和质量，可能过拟合于特定基准如SWE-bench，扩展到多样化实际软件修复场景存在挑战。",
+      "• 复现难度: 中等难度，需访问专家模型和SWE-bench数据，但框架设计相对清晰，开源实现可能降低门槛。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2602.22122v1",
+    "title": "Probing the Geometry of Diffusion Models with the String Method",
+    "pdf_url": "https://arxiv.org/pdf/2602.22122v1",
+    "published": "2026-02-25",
+    "crawled_at": "2026-02-26 20:24:32",
+    "ai_score": 8.2,
+    "translated_title": "使用弦方法探究扩散模型的几何结构",
+    "summary_en": [
+      "• Model Architecture: Introduces a framework based on the string method that computes continuous paths between samples by evolving curves under the learned score function of diffusion models, operating on pretrained models without retraining.",
+      "• Data used: Demonstrates applications on image diffusion models (likely trained on standard image datasets like ImageNet) and protein structure prediction models (trained on static protein structures).",
+      "• Performance metrics: Shows that minimum energy paths (MEPs) yield high-likelihood but unrealistic 'cartoon' images, while principal curves produce realistic morphing sequences despite lower likelihood; for proteins, computes physically plausible transition pathways between conformers."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于弦方法构建框架，利用预训练扩散模型的得分函数演化曲线，计算样本间的连续路径，无需重新训练模型。",
+      "• 数据来源: 应用于图像扩散模型（可能基于ImageNet等标准图像数据集）和蛋白质结构预测模型（基于静态蛋白质结构数据训练）。",
+      "• 主要结论: 最小能量路径产生高似然但不真实的'卡通'图像，而主曲线生成真实变形序列但似然较低；在蛋白质中，计算构象间物理合理的过渡路径。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for systematic exploration of learned distributions in diffusion models, enabling identification of modes and connectivity, which could enhance model interpretability and robustness in financial time-series or alternative data applications.",
+      "• Implementation Risk: Moderate; requires access to pretrained diffusion models and careful tuning of string method parameters (e.g., temperature regimes), with potential computational overhead for high-dimensional data.",
+      "• Novelty: Significant; adapts the string method from computational physics to diffusion models, offering a principled tool for probing modal structure beyond standard interpolations, with demonstrated cross-domain applicability."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将计算物理中的弦方法创新应用于扩散模型，提供系统探索学习分布几何结构的工具，超越传统插值方法，具有跨领域应用潜力。",
+      "• 实盘坑: 需依赖预训练扩散模型，参数调优复杂（如温度机制选择），高维数据计算成本可能较高，实际部署需谨慎验证。",
+      "• 复现难度: 中等；需要弦方法和扩散模型的专业知识，代码和实验细节若未充分公开可能增加复现挑战，但框架通用性较强。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
     "id": "2602.21204v1",
     "title": "Test-Time Training with KV Binding Is Secretly Linear Attention",
     "pdf_url": "https://arxiv.org/pdf/2602.21204v1",
