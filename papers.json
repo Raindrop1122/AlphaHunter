@@ -1,5 +1,347 @@
 [
   {
+    "id": "2602.23360v1",
+    "title": "Model Agreement via Anchoring",
+    "pdf_url": "https://arxiv.org/pdf/2602.23360v1",
+    "published": "2026-02-26",
+    "crawled_at": "2026-02-27 20:15:56",
+    "ai_score": 7.5,
+    "translated_title": "通过锚定实现模型一致性",
+    "summary_en": [
+      "• Model Architecture: The paper introduces a general anchoring technique to analyze model disagreement, applied to four algorithms: stacked aggregation, gradient boosting, neural network training with architecture search, and regression tree training.",
+      "• Data used: The analysis is theoretical and does not specify real-world datasets; it focuses on one-dimensional regression with squared error loss initially, then generalizes to multi-dimensional regression with strongly convex loss functions.",
+      "• Performance metrics: Model disagreement is measured as the expected squared difference in predictions between two independently trained models, with bounds proven to drive disagreement to zero based on parameters like number of models, iterations, architecture size, or tree depth."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出一种基于锚定的通用技术，用于分析模型分歧，应用于四种算法：堆叠聚合、梯度提升、带架构搜索的神经网络训练和回归树训练。",
+      "• 数据来源: 分析为理论性，未指定实际数据集；初始基于一维回归和平方误差损失，后推广到多维回归和强凸损失函数。",
+      "• 主要结论: 模型分歧定义为两个独立训练模型预测的期望平方差，通过参数（如模型数量、迭代次数、架构大小或树深度）证明可将分歧驱动至零。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the technique could enhance model stability in ensemble methods, potentially reducing prediction variance in financial models, but direct alpha generation is limited without empirical validation.",
+      "• Implementation Risk: High; theoretical bounds may not translate to real-world noisy data, and the generalization to multi-dimensional settings requires careful tuning of strongly convex loss functions.",
+      "• Novelty: Moderate; anchoring as an analytical tool is innovative for bounding disagreement, but the application to common algorithms is incremental rather than groundbreaking."
+    ],
+    "verdict_cn": [
+      "• 创新点: 锚定技术作为分析工具具有新意，能统一处理多种算法的模型分歧，但应用层面属于渐进式改进，非颠覆性突破。",
+      "• 实盘坑: 理论边界在真实嘈杂数据中可能失效，强凸损失函数的泛化需精细调参，实盘部署风险较高。",
+      "• 复现难度: 中等；理论推导清晰，但缺乏代码或实验细节，复现需较强数学背景和算法实现能力。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2602.23358v1",
+    "title": "A Dataset is Worth 1 MB",
+    "pdf_url": "https://arxiv.org/pdf/2602.23358v1",
+    "published": "2026-02-26",
+    "crawled_at": "2026-02-27 20:16:14",
+    "ai_score": 7.5,
+    "translated_title": "一个数据集价值1MB",
+    "summary_en": [
+      "• Model Architecture: PLADA (Pseudo-Labels as Data) method eliminates pixel transmission by transmitting only class labels for specific images from a preloaded reference dataset, with a pruning mechanism to filter semantically relevant images.",
+      "• Data used: Utilizes large, generic, unlabeled reference datasets (e.g., ImageNet-1K, ImageNet-21K) and tests on 10 diverse target datasets for classification tasks.",
+      "• Performance metrics: Achieves task knowledge transfer with payloads less than 1 MB while maintaining high classification accuracy across experiments."
+    ],
+    "summary_cn": [
+      "• 核心模型: PLADA（伪标签作为数据）方法，通过仅传输预加载参考数据集中特定图像的类别标签来消除像素传输，并引入剪枝机制筛选语义相关图像。",
+      "• 数据来源: 使用大型通用未标记参考数据集（如ImageNet-1K、ImageNet-21K），并在10个多样化目标数据集上进行分类任务测试。",
+      "• 主要结论: 在传输负载小于1 MB的情况下，成功实现任务知识传递，并在实验中保持高分类准确率。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; offers cost-efficient data serving for distributed learning, potentially reducing communication overhead in edge computing or federated learning scenarios, but direct financial alpha is limited.",
+      "• Implementation Risk: High; relies on clients having preloaded reference datasets, which may not be feasible in all environments, and pruning mechanism's effectiveness depends on dataset similarity.",
+      "• Novelty: High; introduces a novel approach to dataset distillation by eliminating pixel transmission entirely, focusing on label-based compression, which is innovative compared to traditional methods."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；提出了一种全新的数据集蒸馏方法，通过完全消除像素传输，仅基于标签进行压缩，相比传统方法具有显著创新性。",
+      "• 实盘坑: 高；依赖客户端预加载参考数据集，这在某些环境中可能不可行，且剪枝机制的效果受数据集相似性影响，存在实际部署风险。",
+      "• 复现难度: 中等；方法相对简洁，但需要访问大型参考数据集和多样化的目标数据集进行实验，复现可能受数据可用性限制。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2602.23353v1",
+    "title": "SOTAlign: Semi-Supervised Alignment of Unimodal Vision and Language Models via Optimal Transport",
+    "pdf_url": "https://arxiv.org/pdf/2602.23353v1",
+    "published": "2026-02-26",
+    "crawled_at": "2026-02-27 20:16:34",
+    "ai_score": 7.8,
+    "translated_title": "SOTAlign：基于最优传输的单模态视觉与语言模型半监督对齐方法",
+    "summary_en": [
+      "• Model Architecture: Two-stage framework with linear teacher for coarse alignment and optimal-transport-based divergence for refinement using unpaired data.",
+      "• Data used: Small number of image-text pairs (paired data) combined with large amounts of unpaired images and text in semi-supervised setting.",
+      "• Performance metrics: Significantly outperforms supervised and semi-supervised baselines across datasets and encoder pairs, demonstrating robust joint embeddings."
+    ],
+    "summary_cn": [
+      "• 核心模型: 两阶段框架，第一阶段使用线性教师从有限配对数据恢复粗略共享几何，第二阶段通过最优传输散度在未配对样本上精炼对齐。",
+      "• 数据来源: 少量图像-文本配对数据结合大量未配对图像和文本的半监督设置。",
+      "• 主要结论: 在多个数据集和编码器对上显著优于监督和半监督基线，学习到鲁棒的联合嵌入，有效利用未配对数据。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - reduces data dependency for multimodal alignment, potentially applicable to cross-modal financial data fusion with limited labeled examples.",
+      "• Implementation Risk: High - optimal transport computations can be computationally expensive; semi-supervised approach requires careful handling of unpaired data quality.",
+      "• Novelty: High - introduces semi-supervised optimal transport approach to multimodal alignment, addressing data scarcity while avoiding overconstraining target space."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将最优传输引入半监督多模态对齐，在数据稀缺下有效利用未配对样本，避免目标空间过度约束。",
+      "• 实盘坑: 最优传输计算复杂度高；未配对数据质量直接影响对齐效果；线性教师阶段可能引入偏差。",
+      "• 复现难度: 中等偏高，需要实现两阶段训练流程和最优传输优化，对计算资源要求较高。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2602.23349v1",
+    "title": "FlashOptim: Optimizers for Memory Efficient Training",
+    "pdf_url": "https://arxiv.org/pdf/2602.23349v1",
+    "published": "2026-02-26",
+    "crawled_at": "2026-02-27 20:16:58",
+    "ai_score": 8.5,
+    "translated_title": "FlashOptim：内存高效训练的优化器",
+    "summary_en": [
+      "• Model Architecture: FlashOptim introduces a suite of optimizations for mixed-precision training, including improved master weight splitting with tight quantization error bounds and companding functions for 8-bit optimizer state quantization, combined with 16-bit gradients.",
+      "• Data used: The paper evaluates performance on standard vision and language benchmarks, including Llama-3.1-8B finetuning, but does not specify exact datasets or data sources in the abstract.",
+      "• Performance metrics: FlashOptim reduces AdamW memory from 16 bytes to 7 bytes per parameter (or 5 bytes with gradient release) and cuts model checkpoint sizes by more than half, with no measurable quality degradation on tested tasks."
+    ],
+    "summary_cn": [
+      "• 核心模型: FlashOptim 是一套针对混合精度训练的优化技术，包括改进的主权重分割（利用量化误差紧界）和用于8位优化器状态量化的压扩函数，结合16位梯度。",
+      "• 数据来源: 论文在标准视觉和语言基准测试（包括Llama-3.1-8B微调）上进行评估，但摘要中未明确指定具体数据集或数据来源。",
+      "• 主要结论: FlashOptim 将AdamW内存从每参数16字节减少到7字节（或梯度释放时为5字节），模型检查点大小减半以上，且在测试任务中未观察到质量下降。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for alpha in deep learning strategies by enabling training of larger models (e.g., 7B+ parameters) on limited hardware, reducing memory costs by over 50%, which could lower operational expenses and accelerate research iterations.",
+      "• Implementation Risk: Moderate risk due to reliance on quantization techniques; potential issues include hardware compatibility, increased computational overhead from error correction, and scalability challenges with very large models or non-standard optimizers.",
+      "• Novelty: Significant novelty in combining master weight splitting with companding functions for 8-bit state quantization, offering a practical solution to memory bottlenecks while maintaining API compatibility and model quality."
+    ],
+    "verdict_cn": [
+      "• 创新点: 结合主权重分割和8位状态量化的压扩函数，显著降低内存使用（超50%），同时保持API兼容性和模型质量，针对大模型训练的内存瓶颈提供实用解决方案。",
+      "• 实盘坑: 依赖量化技术可能导致硬件兼容性问题、误差校正增加计算开销，以及超大模型或非标准优化器的可扩展性挑战，实盘部署需谨慎测试。",
+      "• 复现难度: 中等难度，需要实现量化误差界优化和压扩函数，但论文提供具体技术细节（如16位梯度、8位状态），且兼容标准优化器如SGD、AdamW、Lion，便于复现验证。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2602.23341v1",
+    "title": "Mean Estimation from Coarse Data: Characterizations and Efficient Algorithms",
+    "pdf_url": "https://arxiv.org/pdf/2602.23341v1",
+    "published": "2026-02-26",
+    "crawled_at": "2026-02-27 20:17:22",
+    "ai_score": 8.2,
+    "translated_title": "从粗粒度数据中进行均值估计：特征刻画与高效算法",
+    "summary_en": [
+      "• Model Architecture: The paper studies Gaussian mean estimation under coarse data, where true samples are drawn from a d-dimensional Gaussian with identity covariance but are only observed through partition sets containing them. It focuses on convex partitions and addresses identifiability conditions.",
+      "• Data used: The theoretical framework assumes coarse data generated from Gaussian distributions with unknown means, where each sample is revealed only as a set (partition element) rather than exact values. This models scenarios like measurement rounding or sensor limitations.",
+      "• Performance metrics: The work resolves two open questions: (1) characterizing when the mean is identifiable under convex partitions, and (2) establishing computationally efficient estimation algorithms under identifiability and convexity, contrasting with NP-hardness results for non-convex partitions."
+    ],
+    "summary_cn": [
+      "• 核心模型: 研究高斯均值估计问题，其中真实样本来自具有单位协方差的d维高斯分布，但仅通过包含样本的划分集合（粗粒度数据）进行观测，重点关注凸划分下的可识别性与算法设计。",
+      "• 数据来源: 理论分析基于从高斯分布生成的粗粒度数据，每个样本仅以集合形式（划分元素）呈现，模拟测量舍入、传感器限制或经济系统滞后等实际场景。",
+      "• 主要结论: 解决了两个关键开放问题：一是明确了在凸划分下均值可识别的条件；二是在可识别性和凸划分假设下，提出了计算高效的估计算法，与非凸划分下的NP难问题形成对比。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate—the theoretical insights into identifiability and efficient algorithms for coarse data could inform alpha generation in scenarios with imperfect or delayed data (e.g., economic indicators, sensor-based trading), but direct application to financial markets requires adaptation.",
+      "• Implementation Risk: High—the assumptions (e.g., Gaussian distributions with identity covariance, convex partitions) are restrictive for real-world financial data, which often exhibits non-Gaussianity, time-varying volatility, and complex dependencies, increasing model risk.",
+      "• Novelty: High—the paper advances prior work by Fotakis et al. [FKKT21] by fully characterizing identifiability and providing efficient algorithms under convexity, offering new theoretical guarantees in statistical estimation with coarse observations."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高—在Fotakis等人[FKKT21]的基础上，首次完整刻画了凸划分下均值的可识别性条件，并设计了计算高效的估计算法，为粗粒度数据统计推断提供了新的理论保证。",
+      "• 实盘坑: 高—模型假设（如单位协方差高斯分布、凸划分）过于理想化，金融数据常呈现非高斯性、时变波动和复杂依赖，直接应用可能导致显著偏差，需谨慎验证。",
+      "• 复现难度: 中—算法基于理论推导，可能涉及凸优化或统计方法，但缺乏实证代码或数据集，复现需较强数学背景，对量化团队构成一定挑战。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2602.23336v1",
+    "title": "Differentiable Zero-One Loss via Hypersimplex Projections",
+    "pdf_url": "https://arxiv.org/pdf/2602.23336v1",
+    "published": "2026-02-26",
+    "crawled_at": "2026-02-27 20:17:35",
+    "ai_score": 7.8,
+    "translated_title": "通过超单纯形投影实现可微的零一损失",
+    "summary_en": [
+      "• Model Architecture: Introduces Soft-Binary-Argmax operator via constrained optimization framework for smooth projection onto n,k-dimensional hypersimplex",
+      "• Data used: Not explicitly specified in abstract, but methodology applies to binary and multiclass classification systems",
+      "• Performance metrics: Achieves significant improvements in generalization under large-batch training by imposing geometric consistency constraints on output logits"
+    ],
+    "summary_cn": [
+      "• 核心模型: 通过约束优化框架引入Soft-Binary-Argmax算子，实现n,k维超单纯形的平滑投影",
+      "• 数据来源: 摘要未明确指定，但方法适用于二分类和多分类系统",
+      "• 主要结论: 通过对输出logits施加几何一致性约束，在大批量训练中显著提升泛化性能"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - addresses fundamental optimization challenge in classification but limited direct financial applications",
+      "• Implementation Risk: High - requires careful tuning of projection parameters and integration with existing gradient-based systems",
+      "• Novelty: High - novel differentiable approximation to zero-one loss with geometric constraints represents significant theoretical contribution"
+    ],
+    "verdict_cn": [
+      "• 创新点: 通过超单纯形投影实现零一损失的可微近似，解决了分类优化的核心难题",
+      "• 实盘坑: 投影参数调优复杂，与现有梯度系统的集成存在技术风险",
+      "• 复现难度: 中等 - 需要实现约束优化框架和雅可比矩阵计算，但数学推导清晰"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2602.23330v1",
+    "title": "Toward Expert Investment Teams:A Multi-Agent LLM System with Fine-Grained Trading Tasks",
+    "pdf_url": "https://arxiv.org/pdf/2602.23330v1",
+    "published": "2026-02-26",
+    "crawled_at": "2026-02-27 20:17:57",
+    "ai_score": 7.5,
+    "translated_title": "迈向专家投资团队：基于细粒度交易任务的多智能体LLM系统",
+    "summary_en": [
+      "• Model Architecture: Proposes a multi-agent LLM trading framework that decomposes investment analysis into fine-grained tasks, moving beyond coarse-grained instructions to improve workflow alignment and decision transparency.",
+      "• Data used: Evaluated on Japanese stock data, including price data, financial statements, news articles, and macroeconomic information, under a leakage-controlled backtesting setting to ensure realistic performance assessment.",
+      "• Performance metrics: Demonstrates significant improvement in risk-adjusted returns compared to conventional coarse-grained designs, with further analysis showing alignment between analytical outputs and downstream decision preferences as a key performance driver.",
+      "• Additional approach: Conducts standard portfolio optimization by exploiting low correlation with the stock index and variance of system outputs, achieving superior performance through this integration."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出一个多智能体LLM交易框架，将投资分析分解为细粒度任务，而非粗粒度指令，以提升工作流对齐和决策透明度。",
+      "• 数据来源: 使用日本股票数据进行评估，包括价格数据、财务报表、新闻文章和宏观经济信息，在泄漏控制的回测设置下进行实验。",
+      "• 主要结论: 细粒度任务分解显著提高了风险调整后收益，优于传统粗粒度设计；分析中间输出显示，分析输出与下游决策偏好的对齐是系统性能的关键驱动因素。",
+      "• 优化方法: 通过利用与股票指数的低相关性和系统输出的方差进行标准投资组合优化，实现了更优的性能表现。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate to high; the framework's fine-grained task decomposition and alignment focus could capture nuanced market signals, but reliance on Japanese data may limit generalizability to other markets without further validation.",
+      "• Implementation Risk: High; real-world deployment faces challenges such as data latency, model interpretability in complex multi-agent systems, and potential overfitting to historical Japanese market conditions.",
+      "• Novelty: Moderate; while multi-agent LLM systems are emerging, the explicit emphasis on fine-grained task decomposition and output-decision alignment adds a structured approach to agent design in trading contexts."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；多智能体LLM系统已有研究，但强调细粒度任务分解和输出-决策对齐，为交易场景中的智能体设计提供了结构化方法，具有一定新颖性。",
+      "• 实盘坑: 高；实际部署面临数据延迟、复杂多智能体系统的模型可解释性挑战，以及可能对日本历史市场条件的过拟合风险，需谨慎处理。",
+      "• 复现难度: 中等；框架描述清晰，但需要获取日本股票数据（价格、财务、新闻、宏观）并实现泄漏控制回测，技术门槛适中，但数据获取可能受限。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2602.23321v1",
+    "title": "Deep ensemble graph neural networks for probabilistic cosmic-ray direction and energy reconstruction in autonomous radio arrays",
+    "pdf_url": "https://arxiv.org/pdf/2602.23321v1",
+    "published": "2026-02-26",
+    "crawled_at": "2026-02-27 20:18:15",
+    "ai_score": 8.2,
+    "translated_title": "基于深度集成图神经网络的自主射电阵列中宇宙射线方向与能量概率重建方法",
+    "summary_en": [
+      "• Model Architecture: Graph Neural Network (GNN) with physics-informed architecture and input representation, using triggered antennas as graph nodes with physical relationships as edges, enhanced by ensemble methods for uncertainty estimation.",
+      "• Data used: Simulated voltage traces from ground-based radio detector arrays under realistic noise conditions, representing ultra-high-energy cosmic ray events, with domain shift considerations between simulation and reality.",
+      "• Performance metrics: Achieves angular resolution of 0.092° and electromagnetic energy reconstruction resolution of 16.4% on simulated data, with uncertainty quantification providing confidence intervals for predictions."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用图神经网络（GNN）架构，将触发天线表示为图结构节点，物理关系作为边，融入物理知识优化模型，结合集成方法进行不确定性估计。",
+      "• 数据来源: 基于地面射电探测器阵列的模拟电压轨迹数据，模拟超高能宇宙射线事件，包含真实噪声条件，并考虑仿真与现实的域偏移问题。",
+      "• 主要结论: 在模拟数据上实现0.092°的角度分辨率和16.4%的电磁能量重建分辨率，通过不确定性量化提供预测置信区间，提升模型可靠性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for applications requiring precise spatial and energy reconstruction in noisy environments, such as astrophysical signal processing or sensor network optimization, with potential transfer to financial time-series anomaly detection.",
+      "• Implementation Risk: Moderate due to reliance on simulated data with domain shift challenges; real-world deployment may require extensive calibration and robustness testing against unmodeled variations.",
+      "• Novelty: Strong integration of physics-informed GNNs with uncertainty estimation for probabilistic reconstruction, offering a hybrid approach that reduces training data requirements compared to purely data-driven methods."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将物理知识融入图神经网络架构与输入数据，结合集成方法进行不确定性估计，实现概率性重建，减少对纯数据驱动方法的大规模训练集依赖。",
+      "• 实盘坑: 依赖模拟数据，存在仿真与现实域偏移风险，实际部署需大量校准和鲁棒性测试，可能面临未建模变异的挑战。",
+      "• 复现难度: 中等偏高，需构建复杂的图结构数据管道和物理约束模型，集成不确定性估计增加计算复杂度，但开源代码可降低门槛。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2602.23320v1",
+    "title": "ParamMem: Augmenting Language Agents with Parametric Reflective Memory",
+    "pdf_url": "https://arxiv.org/pdf/2602.23320v1",
+    "published": "2026-02-26",
+    "crawled_at": "2026-02-27 20:18:36",
+    "ai_score": 8.2,
+    "translated_title": "ParamMem：通过参数化反思记忆增强语言智能体",
+    "summary_en": [
+      "• Model Architecture: ParamMem is a parametric memory module that encodes cross-sample reflection patterns into model parameters, integrated with episodic and cross-sample memory in the ParamAgent framework to enable temperature-controlled sampling for diverse reflection generation.",
+      "• Data used: The paper evaluates on code generation, mathematical reasoning, and multi-hop question answering tasks, though specific datasets are not detailed in the abstract, implying standard benchmarks in these domains.",
+      "• Performance metrics: Extensive experiments show consistent improvements over state-of-the-art baselines across multiple tasks, with additional analysis indicating sample efficiency, weak-to-strong transfer across model scales, and self-improvement without external models."
+    ],
+    "summary_cn": [
+      "• 核心模型: ParamMem是一个参数化记忆模块，将跨样本反思模式编码到模型参数中，结合ParamAgent框架中的情景和跨样本记忆，通过温度控制采样实现多样化反思生成。",
+      "• 数据来源: 基于代码生成、数学推理和多跳问答任务进行评估，摘要中未指定具体数据集，可能使用这些领域的标准基准。",
+      "• 主要结论: 实验表明在多个任务上持续优于最先进基线，分析显示ParamMem具有样本效率、支持跨模型规模的弱到强迁移，且无需外部模型即可自我改进。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for enhancing language agents in financial NLP applications, such as automated report generation or sentiment analysis, by reducing repetitive outputs and improving reasoning diversity, which could lead to more robust decision-making systems.",
+      "• Implementation Risk: Moderate risk due to reliance on temperature-controlled sampling, which may introduce instability in real-world deployments, and the need for extensive training data to encode effective reflection patterns, potentially limiting scalability.",
+      "• Novelty: Novel approach integrating parametric memory with episodic and cross-sample memory to address reflection diversity, offering a unique solution for self-improvement without external models, though builds on existing reflection-based agent frameworks."
+    ],
+    "verdict_cn": [
+      "• 创新点: 创新性地将参数化记忆与情景和跨样本记忆结合，通过温度控制采样解决反思多样性问题，提供无需外部模型的自我改进机制，但基于现有反思智能体框架。",
+      "• 实盘坑: 依赖温度控制采样可能在实际部署中引入不稳定性，且需要大量训练数据编码有效反思模式，可能限制可扩展性，增加实施复杂度。",
+      "• 复现难度: 中等难度，需要复现参数化记忆模块和集成框架，但基于标准NLP任务，代码和数据可能公开，技术细节需论文全文支持。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2602.23312v1",
+    "title": "Evaluating Zero-Shot and One-Shot Adaptation of Small Language Models in Leader-Follower Interaction",
+    "pdf_url": "https://arxiv.org/pdf/2602.23312v1",
+    "published": "2026-02-26",
+    "crawled_at": "2026-02-27 20:18:57",
+    "ai_score": 7.2,
+    "translated_title": "评估小语言模型在领导者-追随者交互中的零样本与单样本适应能力",
+    "summary_en": [
+      "• Model Architecture: Qwen2.5-0.5B small language model (SLM) with 0.5 billion parameters, evaluated under zero-shot and one-shot adaptation modes using prompt engineering and fine-tuning techniques.",
+      "• Data used: Novel benchmark dataset derived from published HRI database, augmented with synthetic samples to capture interaction-specific dynamics for leader-follower role classification.",
+      "• Performance metrics: Zero-shot fine-tuning achieved 86.66% classification accuracy with 22.2 ms latency per sample, significantly outperforming baseline and prompt-engineered approaches. One-shot modes showed performance degradation due to context length challenges."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用Qwen2.5-0.5B小语言模型（5亿参数），通过提示工程和微调两种策略，在零样本和单样本交互模式下进行领导者-追随者角色分类评估。",
+      "• 数据来源: 基于已发布的人机交互数据库构建新型基准数据集，通过合成样本增强以捕捉交互特定动态，专门用于角色分类任务。",
+      "• 主要结论: 零样本微调在保持低延迟（22.2毫秒/样本）的同时达到86.66%的分类准确率，显著优于基线和提示工程方法。单样本模式因上下文长度挑战出现性能下降。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - demonstrates SLMs can achieve real-time role classification with low latency, potentially applicable to edge-based trading signal interpretation or client interaction routing systems where response time is critical.",
+      "• Implementation Risk: High - performance degradation in one-shot modes reveals architectural limitations for complex dialogue contexts; edge deployment requires careful latency-accuracy trade-off management in dynamic environments.",
+      "• Novelty: Limited - while application to HRI is novel, the core techniques (fine-tuning SLMs, zero/one-shot adaptation) are well-established in NLP research; main contribution is systematic benchmarking in this specific domain."
+    ],
+    "verdict_cn": [
+      "• 创新点: 有限 - 将小语言模型应用于人机交互角色分类具有场景创新性，但核心技术（微调、零/单样本适应）属于NLP常规方法；主要贡献在于该特定领域的系统化基准测试。",
+      "• 实盘坑: 高风险 - 单样本模式性能下降暴露了模型架构对复杂上下文的处理局限；边缘部署需精细管理延迟-准确率权衡，动态环境中稳定性存疑。",
+      "• 复现难度: 中等 - 使用公开模型和相对标准的方法论，但需要构建特定交互数据集和边缘部署环境；性能结果对上下文长度敏感，复现需严格控制实验条件。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2602.22207v1",
     "title": "Recovered in Translation: Efficient Pipeline for Automated Translation of Benchmarks and Datasets",
     "pdf_url": "https://arxiv.org/pdf/2602.22207v1",
