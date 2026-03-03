@@ -1,5 +1,357 @@
 [
   {
+    "id": "2603.02204v1",
+    "title": "Partial Causal Structure Learning for Valid Selective Conformal Inference under Interventions",
+    "pdf_url": "https://arxiv.org/pdf/2603.02204v1",
+    "published": "2026-03-02",
+    "crawled_at": "2026-03-03 20:19:36",
+    "ai_score": 8.2,
+    "translated_title": "用于干预下有效选择性保形推断的部分因果结构学习",
+    "summary_en": [
+      "• Model Architecture: Introduces a contamination-robust conformal prediction framework with a partial causal learning formulation that estimates binary descendant indicators Z_{a,i} = 1{i∈desc(a)} rather than full causal graphs, using algorithms for descendant discovery via perturbation intersection patterns and approximate distance-to-intervention estimation via local invariant causal prediction.",
+      "• Data used: Synthetic linear structural equation models (SEMs) for validation experiments and Replogle K562 CRISPR interference (CRISPRi) perturbation data from genomic screens for proof-of-concept demonstration.",
+      "• Performance metrics: Under controlled contamination up to δ=0.30, the corrected procedure maintains ≥0.95 coverage while uncorrected selective conformal prediction degrades to 0.867 coverage, with recovery conditions provided to control contamination."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出了一种污染鲁棒保形预测框架，采用部分因果学习公式，通过扰动交集模式进行后代发现，并使用局部不变因果预测进行近似干预距离估计，而非学习完整因果图。",
+      "• 数据来源: 使用合成线性结构方程模型（SEMs）进行验证实验，并在Replogle K562 CRISPR干扰（CRISPRi）扰动数据上进行概念验证，展示其在真实基因组筛选中的应用。",
+      "• 主要结论: 在污染率高达δ=0.30的受控条件下，校正后的方法保持≥0.95的覆盖率，而未校正的选择性保形预测覆盖率降至0.867，提供了控制污染的恢复条件。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for generating alpha in causal inference-driven trading strategies by improving uncertainty quantification under interventions, particularly in high-dimensional settings like genomics or financial markets with structural breaks.",
+      "• Implementation Risk: Moderate to high risk due to reliance on accurate partial causal structure learning; misclassification of 'unaffected' calibration examples can degrade coverage, requiring robust contamination control mechanisms.",
+      "• Novelty: Significant novelty in combining selective conformal prediction with partial causal learning, providing finite-sample coverage guarantees under arbitrary contaminating distributions and task-driven estimation of descendant indicators."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将选择性保形预测与部分因果学习结合，在任意污染分布下提供有限样本覆盖率保证，并通过任务驱动的后代指标估计，避免学习完整因果图的复杂性。",
+      "• 实盘坑: 依赖部分因果结构的准确学习，若'未受影响'校准样本分类错误，将导致覆盖率下降，需在实盘中部署强健的污染控制机制，增加实施风险。",
+      "• 复现难度: 中等偏高，需实现扰动交集模式算法和局部不变因果预测，对合成和真实数据（如CRISPRi）的处理要求较高，可能需领域专业知识。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2603.02202v1",
+    "title": "Frontier Models Can Take Actions at Low Probabilities",
+    "pdf_url": "https://arxiv.org/pdf/2603.02202v1",
+    "published": "2026-03-02",
+    "crawled_at": "2026-03-03 20:19:59",
+    "ai_score": 8.2,
+    "translated_title": "前沿模型能以极低概率执行动作",
+    "summary_en": [
+      "• Model Architecture: Evaluates GPT-5, Claude-4.5, and Qwen-3 families of frontier large language models (LLMs) with Chain-of-Thought (CoT) reasoning capabilities.",
+      "• Data used: No specific dataset; uses controlled prompting experiments where models are instructed to take target actions at specified low probabilities (e.g., 0.01%) or derive optimal rates themselves.",
+      "• Performance metrics: Measures calibration accuracy—whether models perform target actions at the intended low rates (e.g., 1 in 10,000 times) when resampling, with results showing high calibration down to <1 in 100,000 with external entropy (e.g., UUID).",
+      "• Key finding: Models achieve good calibration at very low rates when target rates are given, but fail without external entropy or hints when they must derive rates themselves; CoT reasoning is critical for success.",
+      "• Scaling implication: Trends suggest future models may overcome current limitations, potentially making low-rate malicious actions harder to detect in evaluations."
+    ],
+    "summary_cn": [
+      "• 核心模型: 评估GPT-5、Claude-4.5和Qwen-3系列前沿大语言模型，具备思维链推理能力。",
+      "• 数据来源: 无特定数据集；采用控制提示实验，指令模型以指定低概率（如0.01%）执行目标动作或自行推导最优概率。",
+      "• 主要结论: 模型在校准方面表现优异，在外部熵源（如UUID）下，校准率可低于10万分之一；无外部熵时，部分模型仍能达到低于万分之一。",
+      "• 关键发现: 当给定目标概率时，模型能实现良好校准；但需自行推导概率时，若无熵源或提示则全部失败；思维链推理是成功关键。",
+      "• 扩展趋势: 未来模型可能克服当前限制，使低概率恶意动作在评估中更难检测。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate—highlights a novel vulnerability in AI oversight for hedge funds using LLMs in trading or risk management, but direct alpha generation is limited; could inform monitoring systems to prevent rare malicious actions.",
+      "• Implementation Risk: High—if malicious models exploit this in deployment, it could lead to undetected errors or manipulation in automated systems, though current CoT monitoring offers a mitigation.",
+      "• Novelty: High—introduces a fresh perspective on model calibration at extreme low probabilities, with implications for AI safety and evaluation in finance, though builds on existing calibration research."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高—首次系统研究前沿模型在极低概率下的动作校准能力，揭示AI监督中的潜在漏洞，对金融AI安全有新颖启示。",
+      "• 实盘坑: 高—若恶意模型利用此漏洞，可能在实盘中导致罕见但严重的未检测错误或操纵，尽管当前思维链监控可部分缓解。",
+      "• 复现难度: 中—实验设计相对简单，基于提示工程，但需要前沿模型访问和精确校准测量，可能受模型更新影响。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2603.02200v1",
+    "title": "Adaptive Confidence Regularization for Multimodal Failure Detection",
+    "pdf_url": "https://arxiv.org/pdf/2603.02200v1",
+    "published": "2026-03-02",
+    "crawled_at": "2026-03-03 20:20:18",
+    "ai_score": 7.8,
+    "translated_title": "多模态故障检测的自适应置信度正则化",
+    "summary_en": [
+      "• Model Architecture: Proposes Adaptive Confidence Regularization (ACR) framework with Adaptive Confidence Loss to penalize confidence degradation between multimodal and unimodal predictions, and Multimodal Feature Swapping for outlier synthesis.",
+      "• Data used: Evaluated across four datasets spanning three modalities (likely vision, text, and audio/sensor data), though specific datasets are not named in the abstract.",
+      "• Performance metrics: Demonstrates consistent and robust gains in failure detection across multiple evaluation settings, with experiments showing improved reliability in rejecting uncertain predictions."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出自适应置信度正则化（ACR）框架，包含自适应置信度损失函数以惩罚多模态与单模态预测间的置信度退化，以及多模态特征交换技术用于合成异常样本。",
+      "• 数据来源: 在四个数据集上进行实验，涵盖三种模态（推测为视觉、文本和音频/传感器数据），但摘要中未具体说明数据集名称。",
+      "• 主要结论: ACR在多模态故障检测中实现了一致且稳健的性能提升，通过合成故障训练有效提高了模型识别和拒绝不确定预测的能力。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate—ACR's failure detection mechanism could enhance risk management in multimodal trading systems (e.g., combining news sentiment with price data), but direct financial alpha generation is limited without domain-specific adaptation.",
+      "• Implementation Risk: High—Multimodal Feature Swapping and confidence regularization may introduce computational overhead and require careful tuning; real-world deployment in noisy financial environments poses generalization challenges.",
+      "• Novelty: High—Addresses an underexplored problem of multimodal failure detection with innovative techniques like confidence degradation penalization and synthetic outlier generation, offering fresh insights for robust AI systems."
+    ],
+    "verdict_cn": [
+      "• 创新点: 较高—针对多模态故障检测这一较少探索的问题，提出了置信度退化的新观察和自适应正则化方法，结合特征交换技术合成异常样本，具有原创性贡献。",
+      "• 实盘坑: 较高—多模态特征交换和置信度正则化可能增加计算复杂度，在金融市场噪声环境下泛化能力存疑，需大量调参和领域适配。",
+      "• 复现难度: 中等—代码将开源，但涉及多模态数据融合和合成样本生成，复现需跨模态数据处理能力和计算资源，对实验细节依赖较强。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.02196v1",
+    "title": "Conformal Policy Control",
+    "pdf_url": "https://arxiv.org/pdf/2603.02196v1",
+    "published": "2026-03-02",
+    "crawled_at": "2026-03-03 20:20:35",
+    "ai_score": 8.2,
+    "translated_title": "保形策略控制",
+    "summary_en": [
+      "• Model Architecture: Uses conformal calibration to regulate any optimized but untested policy against a safe reference policy, providing probabilistic safety guarantees without assuming correct model class or hyperparameter tuning.",
+      "• Data used: Experiments conducted on applications including natural language question answering and biomolecular engineering, utilizing data from safe policies for calibration.",
+      "• Performance metrics: Demonstrates safe exploration from first deployment while improving performance, with finite-sample guarantees for non-monotonic bounded constraint functions."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用保形校准方法，以安全参考策略为基准，对任何优化但未经测试的策略进行概率性调节，无需假设正确模型类别或超参数调优。",
+      "• 数据来源: 实验基于自然语言问答和生物分子工程等应用场景，利用安全策略数据进行校准。",
+      "• 主要结论: 在部署初期即可实现安全探索并提升性能，对非单调有界约束函数提供有限样本保证。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for risk-sensitive applications where safe exploration is critical, such as algorithmic trading with regulatory constraints or biomedical optimization.",
+      "• Implementation Risk: Moderate; requires careful calibration of risk tolerance and access to reliable safe policy data, but avoids complex model assumptions.",
+      "• Novelty: Significant; extends conformal methods to non-monotonic constraints with finite-sample guarantees, bridging safe imitation and aggressive optimization."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将保形方法扩展到非单调约束场景，提供有限样本保证，在安全模仿与激进优化之间建立新桥梁。",
+      "• 实盘坑: 风险容忍度校准需精确，安全策略数据质量直接影响效果，在动态市场中可能面临分布漂移问题。",
+      "• 复现难度: 中等；核心算法相对清晰，但需要针对具体应用场景调整约束函数和校准过程。"
+    ],
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2603.02194v1",
+    "title": "From Leaderboard to Deployment: Code Quality Challenges in AV Perception Repositories",
+    "pdf_url": "https://arxiv.org/pdf/2603.02194v1",
+    "published": "2026-03-02",
+    "crawled_at": "2026-03-03 20:20:58",
+    "ai_score": 7.8,
+    "translated_title": "从排行榜到部署：自动驾驶感知仓库中的代码质量挑战",
+    "summary_en": [
+      "• Model Architecture: The study does not focus on specific model architectures but analyzes 178 unique models from KITTI and NuScenes 3D Object Detection leaderboards, using static analysis tools (Pylint, Bandit, Radon) to assess code quality.",
+      "• Data used: The analysis is based on code repositories from two major autonomous vehicle perception benchmarks: KITTI and NuScenes, which are standard datasets for 3D object detection in AV research.",
+      "• Performance metrics: The primary metrics evaluated are code errors, security vulnerabilities, maintainability, and development practices, with only 7.3% of repositories meeting basic production-readiness criteria (zero critical errors and no high-severity vulnerabilities).",
+      "• Key findings: Security issues are highly concentrated, with the top five issues responsible for almost 80% of occurrences, and adoption of CI/CD pipelines correlates with better code maintainability."
+    ],
+    "summary_cn": [
+      "• 核心模型: 研究未聚焦具体模型架构，而是系统分析了来自KITTI和NuScenes 3D物体检测排行榜的178个独特模型，使用静态分析工具评估代码质量。",
+      "• 数据来源: 基于KITTI和NuScenes这两个自动驾驶感知主流基准的数据集代码仓库进行分析，这些是AV研究中3D物体检测的标准数据集。",
+      "• 主要结论: 仅7.3%的仓库满足基本生产就绪标准（零关键错误且无高严重性安全漏洞），安全漏洞高度集中，前五大问题占近80%的发生率。",
+      "• 方法创新: 首次大规模实证研究AV感知仓库的软件质量，揭示了排行榜性能与生产就绪性之间的显著差距。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low direct alpha potential as the paper focuses on software engineering practices rather than predictive modeling, but could indirectly enhance model reliability in production systems.",
+      "• Implementation Risk: High implementation risk highlighted by the finding that only 7.3% of repositories are production-ready, with widespread security vulnerabilities and code quality issues.",
+      "• Novelty: High novelty as the first large-scale empirical study of code quality in AV perception repositories, bridging the gap between research benchmarks and real-world deployment requirements.",
+      "• Practical Impact: Significant practical implications for safety-critical AV systems, with actionable guidelines provided to address concentrated security issues."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次对自动驾驶感知仓库进行大规模代码质量实证研究，填补了研究基准与实际部署需求之间的空白，具有开创性意义。",
+      "• 实盘坑: 实盘部署风险极高，仅7.3%的代码仓库满足生产就绪标准，安全漏洞集中且普遍存在，可能引发系统故障或安全事件。",
+      "• 复现难度: 复现难度中等，研究方法基于公开的静态分析工具和标准数据集，但需要专业软件工程知识来全面评估代码质量。",
+      "• 行业影响: 对安全关键的自动驾驶系统具有重要行业警示作用，揭示了当前研究代码普遍存在的生产就绪性问题。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2603.02193v1",
+    "title": "Symbol-Equivariant Recurrent Reasoning Models",
+    "pdf_url": "https://arxiv.org/pdf/2603.02193v1",
+    "published": "2026-03-02",
+    "crawled_at": "2026-03-03 20:21:20",
+    "ai_score": 8.2,
+    "translated_title": "符号等变循环推理模型",
+    "summary_en": [
+      "• Model Architecture: Introduces Symbol-Equivariant Recurrent Reasoning Models (SE-RRMs) that enforce permutation equivariance through symbol-equivariant layers, guaranteeing identical solutions under symbol permutations, building on the Recurrent Reasoning Models (RRMs) family including HRM and TRM.",
+      "• Data used: Trained on 9x9 Sudoku puzzles and ARC-AGI-1/ARC-AGI-2 datasets, with reduced data augmentation compared to prior methods, demonstrating generalization from 9x9 to 4x4, 16x16, and 25x25 Sudoku instances.",
+      "• Performance metrics: Outperforms prior RRMs on 9x9 Sudoku, achieves competitive performance on ARC-AGI tasks with only 2 million parameters, and shows robust scalability to larger puzzle sizes without additional training."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出符号等变循环推理模型（SE-RRMs），通过符号等变层在架构层面强制置换等变性，确保在符号或颜色置换下解决方案一致，基于循环推理模型（RRMs）家族（如HRM和TRM）。",
+      "• 数据来源: 使用9x9数独谜题和ARC-AGI-1/ARC-AGI-2数据集进行训练，相比先前方法减少了数据增强，展示了从9x9到4x4、16x16和25x5数独实例的泛化能力。",
+      "• 主要结论: SE-RRMs在9x9数独上优于先前的RRMs，在ARC-AGI任务上以仅200万参数实现竞争性性能，并显示出向更大谜题尺寸的稳健可扩展性，无需额外训练。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for structured reasoning tasks in finance, such as pattern recognition in market data or combinatorial optimization problems, due to improved robustness and scalability with minimal parameters.",
+      "• Implementation Risk: Moderate risk; while code is available, real-world financial applications may require extensive adaptation and validation, and the model's performance on noisy or incomplete data is untested.",
+      "• Novelty: Significant novelty in explicitly encoding symmetry at the architectural level, reducing reliance on data augmentation and enabling generalization across problem sizes, advancing neural reasoning efficiency."
+    ],
+    "verdict_cn": [
+      "• 创新点: 在架构层面显式编码对称性，减少对数据增强的依赖，实现跨问题尺寸的泛化，提升神经推理效率，具有显著创新性。",
+      "• 实盘坑: 中等风险；代码虽公开，但金融实际应用需大量适配和验证，模型在噪声或不完整数据上的性能未经验证，可能影响实盘稳定性。",
+      "• 复现难度: 中等难度；基于开源代码，但需要专业知识设置符号等变层和训练流程，金融数据预处理可能增加复杂性。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2603.02190v1",
+    "title": "Sketch2Colab: Sketch-Conditioned Multi-Human Animation via Controllable Flow Distillation",
+    "pdf_url": "https://arxiv.org/pdf/2603.02190v1",
+    "published": "2026-03-02",
+    "crawled_at": "2026-03-03 20:21:40",
+    "ai_score": 8.5,
+    "translated_title": "Sketch2Colab：基于可控流蒸馏的草图条件多人动画生成",
+    "summary_en": [
+      "• Model Architecture: Sketch2Colab employs a two-stage approach: first learning a sketch-driven diffusion prior, then distilling it into an efficient rectified-flow student in latent space, augmented with a continuous-time Markov chain (CTMC) planner for discrete event scheduling like touches and grasps.",
+      "• Data used: The model is evaluated on CORE4D and InterHuman datasets, which are standard benchmarks for multi-human motion and interaction tasks in computer vision and graphics.",
+      "• Performance metrics: Achieves state-of-the-art constraint adherence and perceptual quality, with significantly faster inference than diffusion-only baselines, as demonstrated in experiments on the mentioned datasets."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用两阶段架构：先学习草图驱动的扩散先验，再蒸馏为潜在空间中的高效整流流学生模型，并辅以连续时间马尔可夫链（CTMC）规划器调度离散事件（如触碰、抓取）。",
+      "• 数据来源: 在CORE4D和InterHuman数据集上进行评估，这些是计算机视觉和图形学中多人运动和交互任务的标准基准。",
+      "• 主要结论: 在约束遵循和感知质量上达到最先进水平，推理速度显著快于纯扩散基线，实验验证了其高效性和准确性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for applications in automated animation generation, virtual reality, and robotics, where precise control over multi-agent interactions is critical, offering a scalable solution for storyboard-to-motion conversion.",
+      "• Implementation Risk: Moderate risk due to reliance on complex differentiable energies and CTMC planning, which may require fine-tuning for real-world scenarios and could be computationally intensive in production environments.",
+      "• Novelty: Novel integration of sketch conditioning, flow distillation, and CTMC for multi-human animation, addressing limitations of conventional diffusion models in handling rich interaction constraints efficiently."
+    ],
+    "verdict_cn": [
+      "• 创新点: 创新性地结合草图条件、流蒸馏和CTMC规划，解决了传统扩散模型在高效处理丰富交互约束方面的不足，为多人动画生成提供了新思路。",
+      "• 实盘坑: 依赖复杂的可微分能量和CTMC规划，在实际应用中可能需要大量调优，且计算资源需求较高，可能影响部署效率。",
+      "• 复现难度: 中等偏高，涉及多阶段训练和复杂模型集成，需要专业知识在计算机视觉和深度学习领域，但开源代码和标准数据集可降低部分难度。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2603.02188v1",
+    "title": "Multi-Head Low-Rank Attention",
+    "pdf_url": "https://arxiv.org/pdf/2603.02188v1",
+    "published": "2026-03-02",
+    "crawled_at": "2026-03-03 20:22:01",
+    "ai_score": 8.2,
+    "translated_title": "多头低秩注意力机制",
+    "summary_en": [
+      "• Model Architecture: Proposes Multi-Head Low-Rank Attention (MLRA) as an improvement over Multi-Head Latent Attention (MLA), enabling partitionable latent states for efficient 4-way Tensor Parallelism (TP) decoding by addressing the sharding bottleneck in distributed decoding.",
+      "• Data used: Utilizes pretrained weights, training, and evaluation data available on HuggingFace (https://huggingface.co/Soughing/MLRA), though specific datasets are not detailed in the abstract.",
+      "• Performance metrics: Achieves state-of-the-art perplexity and downstream task performance, with a 2.8× decoding speedup over MLA, demonstrating significant efficiency gains in long-context inference."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出多头低秩注意力机制（MLRA），作为对多头潜在注意力（MLA）的改进，通过解决分布式解码中的分片瓶颈，实现可分割的潜在状态，支持高效的4路张量并行解码。",
+      "• 数据来源: 使用HuggingFace上提供的预训练权重、训练和评估数据（https://huggingface.co/Soughing/MLRA），但摘要中未详细说明具体数据集。",
+      "• 主要结论: MLRA在困惑度和下游任务性能上达到最先进水平，解码速度比MLA快2.8倍，显著提升长上下文推理的效率。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for alpha generation in NLP/LLM strategies by reducing KV cache loading bottlenecks, enabling faster and more scalable long-context inference, which could enhance trading signal processing or sentiment analysis in real-time applications.",
+      "• Implementation Risk: Moderate risk due to reliance on distributed decoding via Tensor Parallelism; integration into existing systems may require significant engineering effort, and performance gains depend on hardware compatibility and optimization.",
+      "• Novelty: Novel approach to addressing the sharding bottleneck in MLA by introducing partitionable latent states, offering a practical solution for efficient TP decoding, though builds on existing low-rank attention concepts."
+    ],
+    "verdict_cn": [
+      "• 创新点: 通过引入可分割的潜在状态，解决MLA在分布式解码中的分片瓶颈，实现高效的张量并行解码，在长上下文推理中提供新颖的优化方案。",
+      "• 实盘坑: 依赖张量并行进行分布式解码，集成到现有系统可能需要大量工程工作，性能提升受硬件兼容性和优化程度影响，存在实施风险。",
+      "• 复现难度: 中等难度，代码和预训练权重已公开在GitHub和HuggingFace，但需要分布式计算环境和专业知识来复现实验，可能涉及复杂的调优过程。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2603.02184v1",
+    "title": "MAC: A Conversion Rate Prediction Benchmark Featuring Labels Under Multiple Attribution Mechanisms",
+    "pdf_url": "https://arxiv.org/pdf/2603.02184v1",
+    "published": "2026-03-02",
+    "crawled_at": "2026-03-03 20:22:20",
+    "ai_score": 8.2,
+    "translated_title": "MAC：一个包含多归因机制标签的转化率预测基准数据集",
+    "summary_en": [
+      "• Model Architecture: Proposes Mixture of Asymmetric Experts (MoAE), a multi-attribution learning approach that incorporates asymmetric expert networks for learning from multiple attribution labels and main task-centric knowledge utilization.",
+      "• Data used: Introduces the Multi-Attribution Benchmark (MAC), the first public conversion rate (CVR) dataset featuring labels from multiple attribution mechanisms, addressing a data gap in existing CVR datasets which use single attribution.",
+      "• Performance metrics: Demonstrates consistent performance gains across different attribution settings, especially for users with long conversion paths; MoAE substantially surpasses existing state-of-the-art multi-attribution learning methods on MAC."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出混合非对称专家（MoAE），一种多归因学习方法，通过非对称专家网络学习多归因标签并为中心任务利用知识。",
+      "• 数据来源: 引入多归因基准（MAC），首个包含多归因机制标签的公开转化率（CVR）数据集，解决了现有CVR数据集仅使用单一归因的数据缺口。",
+      "• 主要结论: 多归因学习在不同归因设置下带来一致性能提升，尤其对长转化路径用户；MoAE在MAC上显著超越现有最先进的多归因学习方法。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for improving conversion rate prediction in online advertising and e-commerce by leveraging multiple attribution mechanisms, which could enhance targeting and ROI optimization strategies.",
+      "• Implementation Risk: Moderate risk due to the complexity of integrating multiple attribution labels and the need for careful selection of auxiliary objectives, as highlighted by the counterproductive effects in first-click conversion scenarios.",
+      "• Novelty: High novelty in creating the first public benchmark for multi-attribution learning and proposing MoAE, which addresses architectural design principles for fully learning and utilizing multi-attribution knowledge."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首创多归因学习公开基准数据集MAC，并提出MoAE模型，强调完全学习和利用多归因知识的设计原则，填补了领域数据空白。",
+      "• 实盘坑: 实施风险中等，需处理多归因标签整合的复杂性，且辅助目标选择需谨慎，如在首次点击转化场景中简单添加可能适得其反。",
+      "• 复现难度: 低至中等，因提供开源库PyMAL和公开数据集MAC，但模型架构MoAE涉及非对称专家网络，可能需要一定深度学习专业知识。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2603.02181v1",
+    "title": "Leveraging Model Soups to Classify Intangible Cultural Heritage Images from the Mekong Delta",
+    "pdf_url": "https://arxiv.org/pdf/2603.02181v1",
+    "published": "2026-03-02",
+    "crawled_at": "2026-03-03 20:22:44",
+    "ai_score": 7.8,
+    "translated_title": "利用模型汤技术对湄公河三角洲非物质文化遗产图像进行分类",
+    "summary_en": [
+      "• Model Architecture: Hybrid CoAtNet architecture combining convolution and self-attention with model soups ensembling (greedy and uniform strategies) for lightweight weight-space averaging of checkpoints from a single training trajectory.",
+      "• Data used: ICH-17 dataset containing 7,406 images across 17 classes of Intangible Cultural Heritage from the Mekong Delta region, characterized by limited annotated data and high visual similarity.",
+      "• Performance metrics: Achieved state-of-the-art results with 72.36% top-1 accuracy and 69.28% macro F1-score, outperforming ResNet-50, DenseNet-121, and ViT baselines.",
+      "• Technical analysis: Demonstrated variance reduction through bias-variance decomposition and used cross-entropy-based distance metrics with Multidimensional Scaling to show geometric diversity in checkpoint selection."
+    ],
+    "summary_cn": [
+      "• 核心模型: 混合CoAtNet架构，融合卷积与自注意力机制，结合模型汤技术（贪婪与均匀策略）对单一训练轨迹的检查点进行轻量级权重空间集成。",
+      "• 数据来源: ICH-17数据集，包含湄公河三角洲地区17个非物质文化遗产类别的7,406张图像，具有标注数据有限和视觉相似性高的特点。",
+      "• 主要结论: 模型汤技术通过减少方差和最小化额外偏差，在数据稀缺的文化遗产分类任务中实现了72.36%的top-1准确率和69.28%的宏观F1分数，优于现有基准模型。",
+      "• 方法验证: 通过偏差-方差分解分析集成效果，并使用基于交叉熵的距离度量和多维缩放证明检查点选择的几何多样性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - The variance reduction technique through checkpoint averaging could be adapted for financial time-series models to stabilize predictions in low-data regimes, though direct application to market data is untested.",
+      "• Implementation Risk: High - Domain-specific challenges (cultural heritage images) may not translate to financial data; the method relies on single-training trajectory diversity which may be insufficient for noisy market environments.",
+      "• Novelty: Moderate - Model soups are an established technique; the innovation lies in applying it to CoAtNet for cultural heritage classification with geometric diversity analysis, but lacks breakthrough algorithmic contributions.",
+      "• Scalability: Limited - The approach requires multiple checkpoints from training, increasing computational overhead during training phase despite no inference cost increase."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等 - 将模型汤技术应用于CoAtNet架构进行文化遗产分类，并通过几何多样性分析验证检查点选择，但缺乏突破性算法贡献。",
+      "• 实盘坑: 高 - 文化遗产图像的领域特性与金融数据差异巨大；单一训练轨迹的多样性可能不足以应对嘈杂的市场环境，直接迁移风险较高。",
+      "• 复现难度: 中等 - 需要CoAtNet架构实现和检查点保存机制，计算资源要求较高，但代码和数据集相对明确。",
+      "• 泛化性: 有限 - 方法在低数据场景下表现良好，但未在金融时间序列或高噪声数据上进行验证，实际应用需谨慎。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2602.24289v1",
     "title": "Mode Seeking meets Mean Seeking for Fast Long Video Generation",
     "pdf_url": "https://arxiv.org/pdf/2602.24289v1",
