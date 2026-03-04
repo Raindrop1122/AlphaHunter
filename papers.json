@@ -1,5 +1,358 @@
 [
   {
+    "id": "2603.03281v1",
+    "title": "CFG-Ctrl: Control-Based Classifier-Free Diffusion Guidance",
+    "pdf_url": "https://arxiv.org/pdf/2603.03281v1",
+    "published": "2026-03-03",
+    "crawled_at": "2026-03-04 20:19:46",
+    "ai_score": 8.2,
+    "translated_title": "CFG-Ctrl：基于控制的Classifier-Free扩散引导",
+    "summary_en": [
+      "• Model Architecture: CFG-Ctrl reinterprets Classifier-Free Guidance (CFG) as a control framework applied to continuous-time generative flows, introducing Sliding Mode Control CFG (SMC-CFG) with exponential sliding mode surfaces and switching control terms for nonlinear feedback correction.",
+      "• Data used: Experiments conducted on text-to-image generation models including Stable Diffusion 3.5, Flux, and Qwen-Image, though specific training datasets are not detailed in the abstract.",
+      "• Performance metrics: SMC-CFG demonstrates superior semantic alignment and enhanced robustness across wide guidance scales compared to standard CFG, with theoretical support from Lyapunov stability analysis for finite-time convergence."
+    ],
+    "summary_cn": [
+      "• 核心模型: CFG-Ctrl将Classifier-Free Guidance (CFG)重新解释为应用于连续时间生成流的控制框架，提出滑模控制CFG (SMC-CFG)，采用指数滑模面和切换控制项实现非线性反馈校正。",
+      "• 数据来源: 在Stable Diffusion 3.5、Flux和Qwen-Image等文本到图像生成模型上进行实验，但摘要中未详细说明具体训练数据集。",
+      "• 主要结论: SMC-CFG在语义对齐和鲁棒性方面优于标准CFG，尤其在较大引导尺度下表现更稳定，并通过Lyapunov稳定性分析理论上支持有限时间收敛。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate-high potential for improving diffusion model performance in generative tasks, particularly in text-to-image applications where semantic fidelity is critical; could enhance AI-generated content quality for trading signal visualization or synthetic data generation.",
+      "• Implementation Risk: High risk due to complexity of sliding mode control implementation and potential computational overhead; stability guarantees are theoretical and may not translate directly to all real-world scenarios.",
+      "• Novelty: High novelty in applying nonlinear control theory (sliding mode control) to diffusion model guidance, moving beyond linear control approaches that dominate current CFG variants; provides fresh theoretical framework for generative model optimization."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将非线性控制理论（滑模控制）应用于扩散模型引导，突破现有CFG变体主要依赖线性控制的局限，为生成模型优化提供新的理论框架。",
+      "• 实盘坑: 滑模控制实现复杂，计算开销可能较大；稳定性保证仅为理论分析，实际应用中可能面临收敛速度慢或参数敏感性问题。",
+      "• 复现难度: 中等偏高，需要深入理解控制理论和扩散模型架构，实验依赖特定文本到图像模型，代码和超参数调整可能具有挑战性。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2603.03280v1",
+    "title": "How to Peel with a Knife: Aligning Fine-Grained Manipulation with Human Preference",
+    "pdf_url": "https://arxiv.org/pdf/2603.03280v1",
+    "published": "2026-03-03",
+    "crawled_at": "2026-03-04 20:20:05",
+    "ai_score": 8.2,
+    "translated_title": "如何用刀削皮：将精细操作与人类偏好对齐",
+    "summary_en": [
+      "• Model Architecture: Two-stage pipeline combining force-aware imitation learning for robust initial policy and preference-based finetuning using learned reward model that blends quantitative metrics with human feedback",
+      "• Data used: 50-200 peeling trajectories across produce categories (cucumbers, apples, potatoes) with human preference annotations for qualitative evaluation",
+      "• Performance metrics: Over 90% average success rates on challenging produce, 40% improvement through preference finetuning, strong zero-shot generalization to unseen instances and out-of-distribution produce while maintaining >90% success"
+    ],
+    "summary_cn": [
+      "• 核心模型: 两阶段框架——第一阶段通过力感知模仿学习获得鲁棒初始策略，第二阶段通过结合定量指标与人类反馈的奖励模型进行偏好微调",
+      "• 数据来源: 50-200条削皮轨迹（黄瓜、苹果、土豆等），包含人类偏好标注用于定性评估",
+      "• 主要结论: 系统在挑战性果蔬上实现超过90%平均成功率，偏好微调带来高达40%性能提升，在未见实例和跨类别分布外产品上保持>90%成功率的零样本泛化能力"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High - framework addresses critical gap in subjective task evaluation through human-aligned reward modeling, applicable to numerous contact-rich manipulation domains beyond robotics",
+      "• Implementation Risk: Moderate - reliance on human preference data creates scaling bottlenecks; force-sensitive dynamics require specialized hardware and calibration",
+      "• Novelty: Significant - first demonstration of preference-based finetuning for continuous subjective tasks in manipulation, with impressive zero-shot generalization results"
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次将偏好微调应用于连续主观操作任务，通过人类对齐奖励模型解决定性评估难题，零样本泛化表现突出",
+      "• 实盘坑: 人类偏好数据依赖造成扩展瓶颈；力敏感动态需要专用硬件和校准；主观评估标准难以量化验证",
+      "• 复现难度: 中等偏高——需要力控机器人平台、人类标注管道、以及跨类别果蔬数据集；奖励模型训练对超参数敏感"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2603.03275v1",
+    "title": "Learning Demographic-Conditioned Mobility Trajectories with Aggregate Supervision",
+    "pdf_url": "https://arxiv.org/pdf/2603.03275v1",
+    "published": "2026-03-03",
+    "crawled_at": "2026-03-04 20:20:28",
+    "ai_score": 8.2,
+    "translated_title": "基于聚合监督学习人口统计条件化移动轨迹",
+    "summary_en": [
+      "• Model Architecture: ATLAS uses a weakly supervised approach with a trajectory generator fine-tuned to match observed regional aggregates while conditioning on demographics, leveraging theoretical analyses to identify key factors like demographic diversity and aggregate feature informativeness.",
+      "• Data used: Individual trajectories without demographic labels, region-level aggregated mobility features, and region-level demographic compositions from census data, validated on real trajectory data with demographic labels.",
+      "• Performance metrics: Substantially improves demographic realism over baselines (JSD ↓ 12%–69%) and closes much of the gap to strongly supervised training, with experiments demonstrating practical implications of the theory."
+    ],
+    "summary_cn": [
+      "• 核心模型: ATLAS采用弱监督方法，训练轨迹生成器并通过微调使其模拟的移动轨迹与观测到的区域聚合数据匹配，同时基于人口统计条件化，结合理论分析识别关键因素如人口多样性和聚合特征信息量。",
+      "• 数据来源: 使用无人口统计标签的个体轨迹、区域级聚合移动特征以及人口普查数据中的区域级人口统计构成，并在带有人口统计标签的真实轨迹数据上进行验证。",
+      "• 主要结论: 在人口统计真实性方面显著优于基线（JSD下降12%–69%），并大幅缩小了与强监督训练的差距，实验展示了理论的实际应用价值。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for generating synthetic mobility data that captures demographic heterogeneity, useful for applications in public health, urban planning, and targeted marketing, but direct financial alpha may be indirect and require integration with other models.",
+      "• Implementation Risk: Moderate risk due to reliance on region-level aggregated data and census compositions, which may introduce biases or inaccuracies; weak supervision could lead to suboptimal performance in highly heterogeneous populations.",
+      "• Novelty: Novel in addressing the data gap for demographic-conditioned trajectory generation without labeled data, combining weak supervision with theoretical insights, though similar approaches exist in other domains like image generation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 创新性地解决了无标签数据下人口统计条件化轨迹生成的数据缺口问题，结合弱监督和理论分析，但类似方法在其他领域如图像生成中已有应用。",
+      "• 实盘坑: 依赖区域级聚合数据和人口普查构成，可能引入偏差或不准确性；弱监督在高度异质人群中可能导致性能不佳，需谨慎处理数据质量。",
+      "• 复现难度: 中等难度，代码已开源，但需要获取和处理多源数据（如轨迹、聚合特征、人口统计），理论部分可能增加实现复杂性。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2603.03270v1",
+    "title": "Gravity Falls: A Comparative Analysis of Domain-Generation Algorithm (DGA) Detection Methods for Mobile Device Spearphishing",
+    "pdf_url": "https://arxiv.org/pdf/2603.03270v1",
+    "published": "2026-03-03",
+    "crawled_at": "2026-03-04 20:20:55",
+    "ai_score": 7.2,
+    "translated_title": "引力坠落：移动设备鱼叉式网络钓鱼中域名生成算法（DGA）检测方法的比较分析",
+    "summary_en": [
+      "• Model Architecture: The paper evaluates two string-analysis approaches (Shannon entropy and Exp0se) and two ML-based detectors (an LSTM classifier and COSSAS DGAD), focusing on their ability to detect DGA domains in smishing contexts.",
+      "• Data used: Introduces Gravity Falls, a semi-synthetic dataset derived from smishing links (2022-2025), capturing a single threat actor's evolution across four technique clusters, with Top-1M domains as benign baselines.",
+      "• Performance metrics: Results show strong tactic-dependence—high performance on randomized-string domains but drops on dictionary concatenation and themed combo-squatting, with low recall across multiple tool/cluster pairings.",
+      "• Key finding: Both traditional heuristics and recent ML detectors are ill-suited for consistently evolving DGA tactics in smishing, highlighting generalization gaps outside enterprise perimeters."
+    ],
+    "summary_cn": [
+      "• 核心模型: 评估了两种字符串分析方法（香农熵和Exp0se）和两种基于机器学习的检测器（LSTM分类器和COSSAS DGAD），专注于它们在短信钓鱼（smishing）场景中检测DGA域名的能力。",
+      "• 数据来源: 引入了Gravity Falls数据集，这是一个基于2022-2025年短信钓鱼链接的半合成数据集，捕捉了单个威胁行为者在四个技术集群中的演变，并以Top-1M域名作为良性基线。",
+      "• 主要结论: 性能高度依赖战术——在随机字符串域名上表现最佳，但在字典拼接和主题组合抢注变体上下降，多个工具/集群配对的召回率较低。",
+      "• 关键发现: 传统启发式方法和近期机器学习检测器均不适合Gravity Falls中观察到的持续演变的DGA战术，突显了在企业边界外的泛化差距。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low to moderate—the paper identifies critical gaps in DGA detection for smishing, which could inform risk models in mobile security or fraud detection, but direct trading alpha is limited as it focuses on cybersecurity rather than financial markets.",
+      "• Implementation Risk: High—the dataset is semi-synthetic and specific to a single threat actor, limiting generalizability; evolving DGA tactics pose ongoing adaptation challenges for real-world deployment.",
+      "• Novelty: Moderate—introduces Gravity Falls as a novel benchmark for smishing-driven DGA evaluation, addressing a gap in existing research that emphasizes malware C2 and email phishing, but methods (e.g., LSTM, entropy) are not groundbreaking.",
+      "• Reproducibility: Moderate—provides a reproducible benchmark, but reliance on proprietary or niche datasets (e.g., smishing links) may hinder independent validation and scaling."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等——引入了Gravity Falls作为短信钓鱼驱动DGA评估的新基准，填补了现有研究侧重于恶意软件C2和电子邮件钓鱼的空白，但方法（如LSTM、熵）并非突破性创新。",
+      "• 实盘坑: 高——数据集为半合成且针对单个威胁行为者，泛化能力有限；不断演变的DGA战术给实际部署带来持续适应挑战，可能增加误报或漏报风险。",
+      "• 复现难度: 中等——提供了可复现的基准，但对专有或小众数据集（如短信钓鱼链接）的依赖可能阻碍独立验证和扩展，需要特定领域数据访问权限。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2603.03269v1",
+    "title": "LoGeR: Long-Context Geometric Reconstruction with Hybrid Memory",
+    "pdf_url": "https://arxiv.org/pdf/2603.03269v1",
+    "published": "2026-03-03",
+    "crawled_at": "2026-03-04 20:21:16",
+    "ai_score": 8.5,
+    "translated_title": "LoGeR：基于混合内存的长上下文几何重建",
+    "summary_en": [
+      "• Model Architecture: LoGeR processes video streams in chunks with a hybrid memory module combining parametric Test-Time Training (TTT) memory for global coordinate stability and non-parametric Sliding Window Attention (SWA) for local alignment.",
+      "• Data used: Evaluated on standard benchmarks (e.g., KITTI) and a newly repurposed VBR dataset with sequences up to 19k frames, trained on 128-frame sequences.",
+      "• Performance metrics: Reduces ATE on KITTI by over 74%, outperforms prior state-of-the-art feedforward methods, and generalizes to thousands of frames during inference without post-optimization."
+    ],
+    "summary_cn": [
+      "• 核心模型: LoGeR采用分块处理视频流的架构，结合参数化测试时训练（TTT）内存和非参数化滑动窗口注意力（SWA）的混合内存模块，实现长序列的密集3D重建。",
+      "• 数据来源: 使用标准基准数据集（如KITTI）和新重用的VBR数据集（序列长达19k帧），训练数据为128帧序列。",
+      "• 主要结论: 在KITTI上降低ATE超过74%，优于现有前馈方法，无需后优化即可在推理时泛化至数千帧，实现全局一致的几何重建。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for applications in autonomous driving and robotics where long-context geometric consistency is critical, enabling real-time processing of extended video streams without drift.",
+      "• Implementation Risk: Moderate risk due to reliance on hybrid memory components which may increase computational overhead and require careful tuning for different sequence lengths.",
+      "• Novelty: Significant novelty in combining TTT memory for global frame anchoring with SWA for local precision, addressing scalability bottlenecks in recurrent and attention-based models."
+    ],
+    "verdict_cn": [
+      "• 创新点: 创新性地融合参数化与非参数化内存机制，有效解决长视频序列中的尺度漂移和边界对齐问题，突破传统方法的计算复杂度限制。",
+      "• 实盘坑: 混合内存模块可能引入额外计算负担，在实时系统中需优化内存管理；泛化至超长序列时，性能可能受训练数据分布影响。",
+      "• 复现难度: 中等偏高，需实现复杂的分块处理和内存交互逻辑，且依赖大规模视频数据集进行训练和验证。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.03259v1",
+    "title": "Physics-informed post-processing of stabilized finite element solutions for transient convection-dominated problems",
+    "pdf_url": "https://arxiv.org/pdf/2603.03259v1",
+    "published": "2026-03-03",
+    "crawled_at": "2026-03-04 20:21:36",
+    "ai_score": 7.8,
+    "translated_title": "基于物理信息的瞬态对流主导问题稳定有限元解后处理方法",
+    "summary_en": [
+      "• Model Architecture: Hybrid framework combining semi-discrete stabilized finite element method (SUPG with YZbeta shock-capturing) with PINN-based correction strategy for transient convection-diffusion-reaction equations",
+      "• Data used: Numerical solutions from stabilized finite element simulations at last K_s temporal snapshots near terminal time, with governing equations and boundary conditions as residual constraints",
+      "• Performance metrics: Demonstrated significant accuracy improvements at terminal time across five benchmark problems including boundary/interior layers, traveling waves, and nonlinear Burgers dynamics compared to standalone stabilized FEM"
+    ],
+    "summary_cn": [
+      "• 核心模型: 混合计算框架，将半离散稳定有限元法（SUPG加YZbeta激波捕捉）与基于PINN的修正策略结合，用于瞬态对流-扩散-反应方程",
+      "• 数据来源: 稳定有限元模拟在终端时间附近最后K_s个时间快照的数值解，以控制方程和边界条件作为残差约束",
+      "• 主要结论: 在五个基准问题（包括边界/内部层、行波和非线性Burgers动力学）上，相比独立稳定有限元解，终端时间精度显著提升"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - hybrid approach could improve numerical stability in high-gradient financial PDEs (e.g., option pricing with jumps, volatility surfaces), but direct trading alpha unclear",
+      "• Implementation Risk: High - requires integration of FEM and neural network pipelines, progressive training with adaptive loss weighting adds complexity, real-time deployment challenging",
+      "• Novelty: Selective PINN application near terminal time (vs. full space-time training) is clever optimization, but combination of established techniques (SUPG+PINN) rather than breakthrough"
+    ],
+    "verdict_cn": [
+      "• 创新点: 终端时间附近选择性应用PINN而非全时空训练，是计算效率的巧妙优化，但本质是SUPG与PINN现有技术的组合而非突破",
+      "• 实盘坑: 需要整合有限元和神经网络两套计算流程，渐进式训练与自适应损失加权增加复杂性，实时部署困难",
+      "• 复现难度: 较高 - 需要实现SUPG+YZbeta稳定化、随机傅里叶特征残差块、多基准问题验证，对计算资源要求不低"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "Computer Methods in Applied Mechanics and Engineering",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2603.03251v1",
+    "title": "Speculative Speculative Decoding",
+    "pdf_url": "https://arxiv.org/pdf/2603.03251v1",
+    "published": "2026-03-03",
+    "crawled_at": "2026-03-04 20:21:54",
+    "ai_score": 8.5,
+    "translated_title": "投机性投机解码",
+    "summary_en": [
+      "• Model Architecture: Introduces speculative speculative decoding (SSD) with Saguaro algorithm, using a draft model to predict verification outcomes and pre-emptively prepare speculations while verification is ongoing.",
+      "• Data used: Not explicitly specified in abstract; likely uses standard language model datasets (e.g., from open-source inference engines) for benchmarking.",
+      "• Performance metrics: Up to 2x faster than optimized speculative decoding baselines and up to 5x faster than autoregressive decoding with open-source inference engines."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出投机性投机解码（SSD）和Saguaro算法，利用草稿模型预测验证结果并预先准备推测，以并行化操作。",
+      "• 数据来源: 摘要未明确说明，可能使用标准语言模型数据集（如开源推理引擎中的数据集）进行基准测试。",
+      "• 主要结论: 相比优化的投机解码基线，速度提升高达2倍；相比自回归解码，在开源推理引擎上速度提升高达5倍。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for NLP/LLM applications, as it directly accelerates inference, potentially reducing latency and costs in real-time trading or sentiment analysis systems.",
+      "• Implementation Risk: Moderate; relies on accurate prediction of verification outcomes, which could introduce errors if draft model performance degrades in complex scenarios.",
+      "• Novelty: Significant; extends speculative decoding by parallelizing speculation and verification, addressing a sequential bottleneck with a novel pre-emptive approach."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著，通过并行化推测和验证操作，引入预判机制，突破传统投机解码的顺序依赖瓶颈。",
+      "• 实盘坑: 中等，依赖草稿模型对验证结果的准确预测，在复杂或动态环境中可能引入错误或延迟。",
+      "• 复现难度: 中等偏高，需要优化算法实现（如Saguaro）和集成到现有推理引擎中，可能涉及调参和硬件适配。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2603.03238v1",
+    "title": "On Geometry Regularization in Autoencoder Reduced-Order Models with Latent Neural ODE Dynamics",
+    "pdf_url": "https://arxiv.org/pdf/2603.03238v1",
+    "published": "2026-03-03",
+    "crawled_at": "2026-03-04 20:22:17",
+    "ai_score": 7.5,
+    "translated_title": "关于具有潜在神经ODE动力学的自编码器降阶模型中的几何正则化研究",
+    "summary_en": [
+      "• Model Architecture: Autoencoder reduced-order model with neural ODE for latent dynamics, focusing on geometric regularization during pre-training (near-isometry, stochastic gain penalty, curvature penalty, Stiefel projection).",
+      "• Data used: Advection-diffusion-reaction (ADR) equation in a fixed experimental setting, evaluating across multiple random seeds for robustness.",
+      "• Performance metrics: Latent-dynamics training difficulty (especially long-horizon rollouts), decoder smoothness, conditioning-related diagnostics, and rollout performance.",
+      "• Main findings: Stiefel projection consistently improves latent dynamics conditioning and rollout performance, while other regularizations often hinder downstream training despite local smoothness benefits."
+    ],
+    "summary_cn": [
+      "• 核心模型: 自编码器降阶模型，使用神经ODE建模潜在动力学，在预训练中应用四种几何正则化策略（近等距、随机增益惩罚、曲率惩罚、Stiefel投影）。",
+      "• 数据来源: 基于平流-扩散-反应（ADR）方程的固定实验设置，通过多个随机种子评估鲁棒性。",
+      "• 主要结论: Stiefel投影能持续改善潜在动力学的条件数相关诊断和滚动性能，而其他正则化方法虽提升局部解码器平滑性，却常阻碍下游训练，尤其在长时程预测中。",
+      "• 关键假设: 在该设置中，潜在几何不匹配的下游影响超过了解码器平滑性改进的益处。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; Stiefel projection shows promise for improving latent dynamics in reduced-order models, potentially applicable to time-series forecasting or system identification tasks in finance, but limited to specific PDE settings.",
+      "• Implementation Risk: High; Results are sensitive to regularization choices and experimental setup, with other methods (a-c) often degrading performance, indicating robustness issues in real-world applications.",
+      "• Novelty: Moderate; Combines geometric regularization with neural ODEs in autoencoders, but focuses on a narrow ADR equation case, lacking broader validation across diverse datasets or financial time series."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；将几何正则化与神经ODE结合于自编码器中，探索潜在表示对下游动力学训练的影响，但局限于特定PDE场景，金融应用创新性有限。",
+      "• 实盘坑: 高；正则化效果对设置敏感，方法(a)-(c)常导致性能下降，暗示在复杂市场数据中可能不稳定，需大量调参和验证。",
+      "• 复现难度: 中等；基于固定实验设置和ADR方程，代码和参数应可复现，但扩展到金融数据需调整模型架构和正则化策略，增加工程复杂度。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2603.03235v1",
+    "title": "The elbow statistic: Multiscale clustering statistical significance",
+    "pdf_url": "https://arxiv.org/pdf/2603.03235v1",
+    "published": "2026-03-03",
+    "crawled_at": "2026-03-04 20:22:35",
+    "ai_score": 8.2,
+    "translated_title": "肘部统计量：多尺度聚类统计显著性",
+    "summary_en": [
+      "• Model Architecture: ElbowSig formalizes the heuristic elbow method as a rigorous inferential framework using a normalized discrete curvature statistic derived from cluster heterogeneity sequences, evaluated against null distributions of unstructured data.",
+      "• Data used: Synthetic datasets for validation and empirical datasets for demonstration, compatible with various clustering methods including hard, fuzzy, and model-based clustering.",
+      "• Performance metrics: Maintains appropriate Type-I error control while providing power to resolve multiscale organizational structures typically obscured by single-resolution selection criteria."
+    ],
+    "summary_cn": [
+      "• 核心模型: ElbowSig将启发式肘部方法形式化为严格的推断框架，基于聚类异质性序列计算归一化离散曲率统计量，并与无结构数据的零分布进行比较。",
+      "• 数据来源: 使用合成数据集进行验证，实证数据集进行演示，兼容硬聚类、模糊聚类和基于模型的聚类等多种方法。",
+      "• 主要结论: 方法在控制I类错误的同时，能够解析多尺度组织结构，这些结构通常被单分辨率选择标准所掩盖。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for identifying statistically meaningful multiscale patterns in financial time series clustering that traditional methods miss, enabling better regime detection and anomaly identification.",
+      "• Implementation Risk: Moderate risk due to dependency on accurate null distribution modeling and sensitivity to heterogeneity sequence quality; requires careful calibration for noisy financial data.",
+      "• Novelty: Significant novelty in formalizing the heuristic elbow method with rigorous statistical inference and asymptotic analysis, providing algorithm-agnostic multiscale resolution."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将启发式肘部方法形式化为严格的统计推断问题，引入归一化离散曲率统计量，并推导了大样本和高维情况下的渐近性质。",
+      "• 实盘坑: 对零分布建模精度要求高，异质性序列质量直接影响结果，金融噪声数据下需额外稳健性处理。",
+      "• 复现难度: 中等难度，核心统计量计算直接，但需要生成准确的零分布和验证渐近性质，对计算资源有一定要求。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2603.03234v1",
+    "title": "Guiding Sparse Neural Networks with Neurobiological Principles to Elicit Biologically Plausible Representations",
+    "pdf_url": "https://arxiv.org/pdf/2603.03234v1",
+    "published": "2026-03-03",
+    "crawled_at": "2026-03-04 20:23:00",
+    "ai_score": 7.2,
+    "translated_title": "基于神经生物学原理引导稀疏神经网络以产生生物学合理的表征",
+    "summary_en": [
+      "• Model Architecture: Introduces a biologically inspired learning rule that integrates neurobiological principles including sparsity, lognormal weight distributions, and adherence to Dale's law without explicit enforcement",
+      "• Data used: Not specified in abstract, but likely standard image recognition datasets given the focus on generalization and few-shot learning scenarios",
+      "• Performance metrics: Demonstrates enhanced robustness against adversarial attacks and superior generalization, particularly in few-shot learning scenarios",
+      "• Key finding: Integration of neurobiological constraints leads to emergence of biologically plausible neural representations",
+      "• Research direction: Preliminary results suggest potential extension from feature-specific to task-specific encoding for neural resource allocation insights"
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出受神经生物学启发的学习规则，自然整合稀疏性、对数正态权重分布和戴尔定律等神经生物学原理，无需显式强制执行",
+      "• 数据来源: 摘要未明确说明，但鉴于关注泛化和少样本学习场景，可能使用标准图像识别数据集",
+      "• 主要结论: 整合神经生物学约束增强了对抗攻击的鲁棒性，在少样本学习中表现出优越的泛化能力，并产生生物学合理的神经表征",
+      "• 机制优势: 模型通过对齐核心神经生物学原理，实现了更高效的适应性学习机制",
+      "• 应用前景: 初步结果表明该方法可从特征特定编码扩展到任务特定编码，为复杂任务的神经资源分配提供见解"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - biologically inspired approaches could yield more robust models for financial time series with limited data, but direct alpha generation unproven",
+      "• Implementation Risk: High - neurobiological constraints may reduce model flexibility and require specialized optimization techniques not yet standardized in finance",
+      "• Novelty: Significant - integration of multiple neurobiological principles without explicit enforcement represents innovative approach to neural network regularization",
+      "• Practical limitations: Abstract lacks concrete implementation details and quantitative performance comparisons with state-of-the-art methods",
+      "• Research maturity: Early stage - preliminary results suggest promising direction but requires extensive validation across diverse tasks and datasets"
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著 - 无需显式强制执行即可整合多种神经生物学原理，为神经网络正则化提供了创新方法，区别于传统人工约束",
+      "• 实盘坑: 较高 - 神经生物学约束可能降低模型灵活性，需要专门的优化技术，金融领域尚未标准化；对抗攻击鲁棒性的提升在金融市场噪声环境中的有效性待验证",
+      "• 复现难度: 中等偏高 - 摘要缺乏具体实现细节和定量性能比较，生物启发学习规则的超参数调优可能复杂，需要神经科学和机器学习的交叉专业知识",
+      "• 策略适配性: 有限 - 方法更适用于数据稀缺场景，在高频交易等数据丰富环境中优势不明显；从特征编码到任务编码的扩展在金融多任务学习中潜力待挖掘",
+      "• 落地挑战: 生物学合理表征与金融可解释性的关联不明确，模型可能过度偏向神经科学合理性而牺牲金融预测性能"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
     "id": "2603.02204v1",
     "title": "Partial Causal Structure Learning for Valid Selective Conformal Inference under Interventions",
     "pdf_url": "https://arxiv.org/pdf/2603.02204v1",
