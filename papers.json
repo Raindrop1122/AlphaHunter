@@ -1,5 +1,359 @@
 [
   {
+    "id": "2603.05504v1",
+    "title": "RoboPocket: Improve Robot Policies Instantly with Your Phone",
+    "pdf_url": "https://arxiv.org/pdf/2603.05504v1",
+    "published": "2026-03-05",
+    "crawled_at": "2026-03-06 20:17:19",
+    "ai_score": 8.2,
+    "translated_title": "RoboPocket：用手机即时改进机器人策略",
+    "summary_en": [
+      "• Model Architecture: RoboPocket combines a Remote Inference framework with Augmented Reality (AR) Visual Foresight to visualize policy-predicted trajectories, enabling Robot-Free Instant Policy Iteration via consumer smartphones. It includes an asynchronous Online Finetuning pipeline for continuous policy updates.",
+      "• Data used: The system leverages handheld interfaces for scalable in-the-wild data acquisition, focusing on collecting demonstrations that target policy weaknesses identified through AR feedback, without requiring physical robot execution.",
+      "• Performance metrics: Experiments show RoboPocket doubles data efficiency compared to offline scaling strategies and boosts sample efficiency by up to 2× in distributed environments with minimal interactive corrections per person, adhering to data scaling laws."
+    ],
+    "summary_cn": [
+      "• 核心模型: RoboPocket采用远程推理框架结合增强现实（AR）视觉预测，通过智能手机可视化策略预测轨迹，实现无机器人即时策略迭代，并集成异步在线微调管道进行持续更新。",
+      "• 数据来源: 利用手持接口进行可扩展的野外数据采集，通过AR反馈识别策略弱点，针对性收集演示数据，无需物理机器人执行。",
+      "• 主要结论: 实验表明，RoboPocket相比离线扩展策略将数据效率提升一倍，在分布式环境中样本效率最高提升2倍，符合数据缩放定律，克服了长期效率瓶颈。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for scalable imitation learning in robotics and autonomous systems by enabling efficient, low-cost policy iteration without physical robots, which could translate to faster model deployment and reduced operational costs in real-world applications.",
+      "• Implementation Risk: Moderate risk due to reliance on consumer smartphone hardware and AR technology, which may introduce latency, accuracy issues, or compatibility challenges in diverse environments, potentially affecting real-time feedback and data quality.",
+      "• Novelty: Significant novelty in bridging the gap between interactive methods like DAgger and scalable data collection by eliminating the need for physical robot execution, offering a portable, cost-effective solution for policy improvement with immersive feedback."
+    ],
+    "verdict_cn": [
+      "• 创新点: 创新性地结合AR视觉预测和远程推理，实现无机器人即时策略迭代，解决了模仿学习中数据收集效率与交互成本之间的权衡，为可扩展学习提供了新范式。",
+      "• 实盘坑: 依赖消费级智能手机和AR技术可能带来延迟、精度问题或环境适应性挑战，影响实时反馈和数据可靠性，在复杂场景中可能存在实施风险。",
+      "• 复现难度: 中等难度，需要集成AR框架、异步微调管道和手持接口，但开源代码和详细实验可降低门槛，硬件要求相对较低（智能手机）。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2603.05500v1",
+    "title": "POET-X: Memory-efficient LLM Training by Scaling Orthogonal Transformation",
+    "pdf_url": "https://arxiv.org/pdf/2603.05500v1",
+    "published": "2026-03-05",
+    "crawled_at": "2026-03-06 20:17:40",
+    "ai_score": 7.5,
+    "translated_title": "POET-X：通过缩放正交变换实现内存高效的大语言模型训练",
+    "summary_en": [
+      "• Model Architecture: POET-X is a scalable variant of the POET framework that performs orthogonal equivalence transformations with reduced computational cost, enabling efficient training of large language models (LLMs) by optimizing weight matrices through spectrum-preserving transformations.",
+      "• Data used: The paper does not specify the exact datasets used for pretraining billion-parameter LLMs, but it implies standard LLM pretraining corpora were employed in experiments to demonstrate memory efficiency and throughput improvements.",
+      "• Performance metrics: POET-X achieves substantial improvements in throughput and memory efficiency, allowing pretraining of billion-parameter LLMs on a single Nvidia H100 GPU, whereas standard optimizers like AdamW run out of memory under the same settings, indicating significant resource savings."
+    ],
+    "summary_cn": [
+      "• 核心模型: POET-X 是 POET 框架的可扩展变体，通过正交等价变换优化权重矩阵，采用谱保持变换，显著降低计算成本，实现大语言模型的高效训练。",
+      "• 数据来源: 论文未明确指定用于预训练十亿参数大语言模型的具体数据集，但暗示在实验中使用了标准的大语言模型预训练语料库，以展示内存效率和吞吐量提升。",
+      "• 主要结论: POET-X 在吞吐量和内存效率方面取得显著改进，可在单个 Nvidia H100 GPU 上预训练十亿参数的大语言模型，而标准优化器如 AdamW 在相同设置下内存不足，表明资源节省效果明显。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate to high; POET-X's memory efficiency could enable training larger models with limited hardware, potentially leading to cost savings and faster iteration cycles in quantitative research applications, though direct financial alpha generation is not demonstrated.",
+      "• Implementation Risk: High; integrating POET-X into existing LLM pipelines may require significant engineering effort, and its stability and generalization benefits need validation across diverse datasets and model architectures beyond the reported experiments.",
+      "• Novelty: Moderate; while POET-X builds on the established POET framework, its scalable and memory-efficient variant addresses practical limitations, offering incremental innovation rather than groundbreaking theoretical advances."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；POET-X 在现有 POET 框架基础上，通过可扩展和内存高效的变体解决实际限制，提供了渐进式创新，而非突破性理论进展。",
+      "• 实盘坑: 高；将 POET-X 集成到现有大语言模型流程中可能需要大量工程工作，其稳定性和泛化优势需在报告实验之外的多样化数据集和模型架构上进行验证。",
+      "• 复现难度: 中等；论文提供了核心方法描述，但缺乏开源代码或详细实现细节，复现可能依赖于技术专长和计算资源，存在一定不确定性。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2603.05495v1",
+    "title": "Cheap Thrills: Effective Amortized Optimization Using Inexpensive Labels",
+    "pdf_url": "https://arxiv.org/pdf/2603.05495v1",
+    "published": "2026-03-05",
+    "crawled_at": "2026-03-06 20:17:58",
+    "ai_score": 8.2,
+    "translated_title": "廉价刺激：利用廉价标签实现高效摊销优化",
+    "summary_en": [
+      "• Model Architecture: Three-stage framework combining supervised pretraining with cheap imperfect labels followed by self-supervised refinement",
+      "• Data used: Modest numbers of inexact labels that only need to place model within basin of attraction, plus unlabeled data for self-supervised phase",
+      "• Performance metrics: 59x reduction in total offline cost, faster convergence, improved accuracy/feasibility/optimality across nonconvex constrained optimization, power-grid operation, and stiff dynamical systems",
+      "• Theoretical foundation: Merit-based criterion proving cheap labels sufficient when they position model in attraction basin"
+    ],
+    "summary_cn": [
+      "• 核心模型: 三阶段框架：先用廉价不完美标签进行监督预训练，再通过自监督学习进行精炼",
+      "• 数据来源: 仅需少量不精确标签将模型置于吸引盆地内，配合未标记数据进行自监督阶段",
+      "• 主要结论: 在非凸约束优化、电网运行和刚性动力系统等挑战性领域实现59倍离线成本降低，收敛更快，精度/可行性/最优性全面提升",
+      "• 理论支撑: 基于价值的准则证明廉价标签在将模型置于吸引盆地时即足够有效"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for optimization-heavy domains like portfolio optimization, derivatives pricing, and risk management where expensive simulations are common",
+      "• Implementation Risk: Moderate - requires careful tuning of cheap label quality and transition between supervised/self-supervised phases",
+      "• Novelty: Strong theoretical foundation bridging cheap supervision with self-supervised refinement, addressing fundamental trade-off in surrogate optimization",
+      "• Scalability: Excellent cost reduction (59x) makes previously prohibitive optimization problems tractable for quantitative strategies"
+    ],
+    "verdict_cn": [
+      "• 创新点: 理论证明廉价标签只需将模型置于吸引盆地即可有效，巧妙结合监督与自监督学习解决代理优化核心矛盾",
+      "• 实盘坑: 廉价标签质量阈值难以确定，三阶段转换需要精细调参，可能引入新的超参数敏感性",
+      "• 复现难度: 中等 - 需要构建特定领域的廉价标签生成流程，但框架本身通用性较强",
+      "• 应用局限: 对吸引盆地不明确或高度非凸的问题可能效果有限"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2603.05494v1",
+    "title": "Censored LLMs as a Natural Testbed for Secret Knowledge Elicitation",
+    "pdf_url": "https://arxiv.org/pdf/2603.05494v1",
+    "published": "2026-03-05",
+    "crawled_at": "2026-03-06 20:18:21",
+    "ai_score": 7.8,
+    "translated_title": "被审查大语言模型作为秘密知识提取的自然测试平台",
+    "summary_en": [
+      "• Model Architecture: The study evaluates open-weights LLMs from Chinese developers, specifically Qwen3 models, which are trained with censorship mechanisms to suppress politically sensitive topics, creating a natural testbed for dishonesty without artificial training.",
+      "• Data used: The research utilizes prompts and responses related to censored topics like Falun Gong and Tiananmen protests, along with generic honesty data for fine-tuning, and includes transcripts and code for reproducibility.",
+      "• Performance metrics: For honesty elicitation, techniques such as sampling without chat templates, few-shot prompting, and fine-tuning on generic honesty data reliably increase truthful responses, but none fully eliminate falsehoods. For lie detection, prompting the censored model to self-classify responses performs near an uncensored-model upper bound, with linear probes on unrelated data offering a cheaper alternative."
+    ],
+    "summary_cn": [
+      "• 核心模型: 研究基于中国开发者开发的开源权重大语言模型，特别是Qwen3模型，这些模型经过训练以审查政治敏感话题，如法轮功和天安门抗议，作为自然测试平台。",
+      "• 数据来源: 使用涉及审查话题的提示和响应数据，以及用于微调的通用诚实数据，并发布所有提示、代码和转录本以确保可复现性。",
+      "• 主要结论: 诚实提取技术中，无聊天模板采样、少样本提示和通用诚实数据微调能可靠提高真实响应，但无法完全消除虚假回答；谎言检测中，让审查模型自我分类响应表现接近未审查模型上限，线性探针提供更廉价替代方案。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the techniques for honesty elicitation and lie detection could be adapted for financial applications to detect model biases or hidden knowledge in trading algorithms, but direct alpha generation is limited due to the focus on censorship rather than market data.",
+      "• Implementation Risk: High; applying these methods in real-world financial settings risks regulatory issues if used to bypass compliance filters, and the transferability to frontier models like DeepSeek R1 is noted but not fully validated for quantitative tasks.",
+      "• Novelty: High; the paper innovatively uses naturally censored LLMs as a testbed, avoiding artificial dishonesty training, and provides empirical evaluations of elicitation and detection techniques with practical insights for model robustness."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；论文创新性地利用自然审查的大语言模型作为测试平台，避免人工构造的虚假训练，为模型鲁棒性提供实证评估和实用见解。",
+      "• 实盘坑: 高；在金融应用中实施这些方法可能面临监管风险，特别是如果用于绕过合规过滤器，且技术向前沿模型如DeepSeek R1的迁移性在量化任务中未充分验证。",
+      "• 复现难度: 中等；论文发布所有提示、代码和转录本，便于复现，但需要访问特定审查模型和敏感数据，可能增加操作复杂性。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2603.05488v1",
+    "title": "Reasoning Theater: Disentangling Model Beliefs from Chain-of-Thought",
+    "pdf_url": "https://arxiv.org/pdf/2603.05488v1",
+    "published": "2026-03-05",
+    "crawled_at": "2026-03-06 20:18:48",
+    "ai_score": 7.8,
+    "translated_title": "推理剧场：从思维链中分离模型信念",
+    "summary_en": [
+      "• Model Architecture: Analyzes two large language models (DeepSeek-R1 671B and GPT-OSS 120B) using activation probing, early forced answering, and CoT monitoring techniques to examine reasoning patterns.",
+      "• Data used: Evaluates on MMLU (easy recall-based questions) and GPQA-Diamond (difficult multihop reasoning questions) datasets to compare performance across different task difficulties.",
+      "• Performance metrics: Shows that final answers are decodable from activations much earlier in CoT than monitors can detect, especially for easy MMLU questions, with probe-guided early exit reducing tokens by up to 80% on MMLU and 30% on GPQA-Diamond while maintaining similar accuracy.",
+      "• Key finding: Identifies 'performative CoT' where models become confident early but continue generating tokens without revealing internal beliefs, contrasting with genuine reasoning in difficult tasks where inflection points (e.g., backtracking) correlate with large belief shifts."
+    ],
+    "summary_cn": [
+      "• 核心模型: 使用激活探测、早期强制回答和思维链监控技术，分析DeepSeek-R1 671B和GPT-OSS 120B两个大型语言模型的推理模式。",
+      "• 数据来源: 基于MMLU（简单回忆型问题）和GPQA-Diamond（困难多跳推理问题）数据集，评估不同任务难度下的表现差异。",
+      "• 主要结论: 发现模型在思维链中早期即可从激活中解码最终答案，尤其在简单MMLU问题上，而监控器无法及时检测；通过探测引导的早期退出，在MMLU上可减少高达80%的令牌，在GPQA-Diamond上减少30%，同时保持相似准确率。",
+      "• 关键发现: 识别出'表演性思维链'现象，即模型早期已确信答案但仍继续生成令牌而不暴露内部信念，与困难任务中的真实推理形成对比，其中转折点（如回溯）与信念大幅变化相关。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the method of activation probing for early exit could reduce computational costs in real-time trading systems using LLMs for decision-making, potentially improving latency and efficiency in high-frequency contexts.",
+      "• Implementation Risk: High; activation probing requires deep model access and may not generalize across different architectures or tasks, posing challenges for deployment in diverse financial applications without extensive validation.",
+      "• Novelty: High; introduces the concept of 'performative CoT' and demonstrates practical techniques to disentangle model beliefs from generated reasoning, offering new insights into LLM interpretability and efficiency optimization.",
+      "• Scalability Concern: Moderate; while token reduction is significant, the approach may be less effective for complex, non-standard financial reasoning tasks where genuine uncertainty is higher, limiting broad applicability."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；提出'表演性思维链'概念，并展示通过激活探测分离模型信念与生成推理的实用技术，为LLM可解释性和效率优化提供新视角。",
+      "• 实盘坑: 高；激活探测需要深度模型访问权限，且可能无法跨不同架构或任务泛化，在多样化金融应用中部署需大量验证，风险较大。",
+      "• 复现难度: 中等；依赖大型模型（如671B参数）和特定数据集（MMLU、GPQA-Diamond），实验设置复杂，但方法描述清晰，在资源充足下可复现。",
+      "• 应用局限: 中等；尽管令牌减少效果显著，但对于复杂、非标准金融推理任务，其有效性可能降低，限制了广泛适用性。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.05483v1",
+    "title": "SurvHTE-Bench: A Benchmark for Heterogeneous Treatment Effect Estimation in Survival Analysis",
+    "pdf_url": "https://arxiv.org/pdf/2603.05483v1",
+    "published": "2026-03-05",
+    "crawled_at": "2026-03-06 20:19:10",
+    "ai_score": 8.5,
+    "translated_title": "SurvHTE-Bench：生存分析中异质性治疗效果估计的基准测试",
+    "summary_en": [
+      "• Model Architecture: The paper introduces a comprehensive benchmark framework (SurvHTE-Bench) that systematically evaluates existing survival HTE methods, including Causal Survival Forests, survival meta-learners, and outcome imputation approaches, without proposing a new model architecture itself.",
+      "• Data used: The benchmark includes three types of datasets: (i) synthetic datasets with known ground truth, varying causal assumptions and survival dynamics; (ii) semi-synthetic datasets combining real-world covariates with simulated treatments and outcomes; and (iii) real-world datasets from a twin study (with known ground truth) and an HIV clinical trial.",
+      "• Performance metrics: The paper provides the first rigorous comparison of survival HTE methods across diverse conditions, focusing on evaluation under realistic assumption violations, with the goal of establishing fair, reproducible, and extensible assessment practices."
+    ],
+    "summary_cn": [
+      "• 核心模型: 本文未提出新模型，而是构建了一个基准测试框架（SurvHTE-Bench），用于系统评估现有生存HTE方法，如因果生存森林、生存元学习器和结果插补方法。",
+      "• 数据来源: 基准测试包含三类数据集：合成数据集（已知真实值，变化因果假设和生存动态）、半合成数据集（真实协变量与模拟治疗/结果结合）以及真实世界数据集（双胞胎研究和HIV临床试验）。",
+      "• 主要结论: 该研究首次在多样化条件下对生存HTE方法进行了严格比较，强调在现实假设违反下的评估，为因果生存方法提供了公平、可复现和可扩展的评估基础。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate to high; the benchmark enables more reliable identification of effective HTE methods in survival contexts, which could improve predictive models for precision medicine and policy-making, potentially leading to alpha in healthcare or biotech investments.",
+      "• Implementation Risk: Low; as a benchmark study, it focuses on evaluation rather than direct deployment, but users must ensure proper adaptation of the methods to specific datasets, with risk arising from data quality and causal assumption validity.",
+      "• Novelty: High; this is the first comprehensive benchmark for HTE estimation with censored outcomes, addressing a gap in fragmented evaluation practices and offering modular datasets with known ground truth for rigorous testing."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高创新性；首次为含删失结果的HTE估计提供全面基准测试，解决了评估实践碎片化的问题，并通过模块化数据集和已知真实值实现严格测试。",
+      "• 实盘坑: 中等风险；作为基准研究，不直接部署模型，但实际应用时需注意数据质量、因果假设的有效性以及方法在特定场景下的适配性，可能引入偏差。",
+      "• 复现难度: 低；代码和数据已公开在GitHub，便于复现和扩展，但用户需具备生存分析和因果推断的专业知识以正确使用基准测试。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2603.05480v1",
+    "title": "Thermodynamic Response Functions in Singular Bayesian Models",
+    "pdf_url": "https://arxiv.org/pdf/2603.05480v1",
+    "published": "2026-03-05",
+    "crawled_at": "2026-03-06 20:19:30",
+    "ai_score": 8.2,
+    "translated_title": "奇异贝叶斯模型中的热力学响应函数",
+    "summary_en": [
+      "• Model Architecture: The paper introduces a thermodynamic response framework for singular Bayesian models, including Gaussian mixtures, reduced-rank regression, and overparameterized neural networks, by using posterior tempering to deform the posterior distribution and generate response functions.",
+      "• Data used: The study employs canonical singular examples such as symmetric Gaussian mixtures, reduced-rank regression, and overparameterized neural networks, with empirical demonstrations of phase-transition-like behavior under tempering.",
+      "• Performance metrics: Key metrics include real log canonical threshold (RLCT) governing free-energy slope, singular fluctuation corresponding to curvature of tempered free energy, and WAIC measuring predictive fluctuation, all unified within the response framework."
+    ],
+    "summary_cn": [
+      "• 核心模型: 论文提出奇异贝叶斯模型的热力学响应框架，涵盖高斯混合模型、降秩回归和过参数化神经网络，通过后验温度调节变形后验分布并生成响应函数。",
+      "• 数据来源: 使用经典奇异示例，如对称高斯混合模型、降秩回归和过参数化神经网络，实证展示温度调节下的相变行为。",
+      "• 主要结论: 奇异学习理论中的经典量（如RLCT、奇异波动）获得热力学解释，WAIC、WBIC和奇异波动在统一响应框架内关联，可构建结构上有意义的序参数。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for developing novel complexity measures and predictive variability indicators in singular models, which could enhance model selection and risk assessment in financial applications like portfolio optimization or anomaly detection.",
+      "• Implementation Risk: Moderate to high risk due to the theoretical complexity of singular geometry and tempering techniques, requiring deep expertise in Bayesian statistics and thermodynamics for practical deployment.",
+      "• Novelty: High novelty in unifying WAIC, WBIC, and singular fluctuation within a thermodynamic framework, offering fresh insights into structural reorganization and phase transitions in overparameterized models."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将WAIC、WBIC和奇异波动统一于热力学响应框架，为过参数化模型的结构重组和相变提供新视角，创新性强。",
+      "• 实盘坑: 奇异几何和温度调节技术理论复杂，需深厚贝叶斯统计和热力学知识，实盘应用可能面临计算开销大和模型解释性挑战。",
+      "• 复现难度: 高难度，涉及高级数学概念和实证示例，需专业软件和大量计算资源，适合研究团队而非个人快速复现。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2603.05468v1",
+    "title": "Kraus Constrained Sequence Learning For Quantum Trajectories from Continuous Measurement",
+    "pdf_url": "https://arxiv.org/pdf/2603.05468v1",
+    "published": "2026-03-05",
+    "crawled_at": "2026-03-06 20:19:51",
+    "ai_score": 7.5,
+    "translated_title": "基于连续测量的量子轨迹克劳斯约束序列学习",
+    "summary_en": [
+      "• Model Architecture: Introduces a Kraus-structured output layer that converts hidden representations from various sequence backbones (RNN, GRU, LSTM, TCN, ESN, Mamba, Neural ODE) into completely positive trace preserving (CPTP) quantum operations, ensuring physically valid state updates.",
+      "• Data used: Stochastic trajectories characterized by parameter drift, simulating non-stationary regimes in quantum systems under continuous measurement.",
+      "• Performance metrics: Kraus-LSTM achieves the strongest results, improving state estimation quality by 7% over unconstrained counterparts while guaranteeing physically valid predictions.",
+      "• Key innovation: Addresses the limitation of standard stochastic master equation (SME) solvers and unconstrained neural models by enforcing physical constraints through the Kraus layer, enhancing stability and accuracy."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出克劳斯结构输出层，将多种序列骨干网络（RNN、GRU、LSTM、TCN、ESN、Mamba、Neural ODE）的隐藏表示转换为完全正迹保持（CPTP）量子操作，确保物理有效的状态更新。",
+      "• 数据来源: 基于参数漂移的随机轨迹，模拟连续测量下量子系统的非平稳状态。",
+      "• 主要结论: 克劳斯-LSTM在所有模型中表现最佳，将状态估计质量提升7%，并在非平稳状态下保证物理有效的预测。",
+      "• 技术优势: 通过克劳斯层强制物理约束，解决了标准随机主方程（SME）求解器和无约束神经模型的局限性，提高了稳定性和准确性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the method enhances quantum state estimation accuracy by 7% in non-stationary regimes, potentially applicable to quantum computing or sensing systems where precise real-time feedback is critical, but direct financial alpha generation is limited without specific market applications.",
+      "• Implementation Risk: High; requires expertise in quantum mechanics and deep learning, with challenges in adapting to noisy financial data and scaling to high-dimensional systems, plus dependency on accurate parameter drift modeling.",
+      "• Novelty: High; the Kraus-structured output layer is a novel approach to enforce physical constraints in sequence models, addressing a key gap in quantum trajectory reconstruction, though it builds on existing sequence architectures."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；克劳斯结构输出层是序列模型中强制物理约束的新方法，解决了量子轨迹重建的关键问题，但基于现有序列架构。",
+      "• 实盘坑: 高；需要量子力学和深度学习专业知识，适应嘈杂金融数据和扩展至高维系统存在挑战，且依赖准确的参数漂移建模。",
+      "• 复现难度: 中高；需要实现多种序列骨干和克劳斯层，但论文提供了具体架构，复现可能耗时且需专业计算资源。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2603.05440v1",
+    "title": "Latent Wasserstein Adversarial Imitation Learning",
+    "pdf_url": "https://arxiv.org/pdf/2603.05440v1",
+    "published": "2026-03-05",
+    "crawled_at": "2026-03-06 20:20:10",
+    "ai_score": 8.2,
+    "translated_title": "潜在Wasserstein对抗模仿学习",
+    "summary_en": [
+      "• Model Architecture: LWAIL combines adversarial imitation learning with Wasserstein distance in a dynamics-aware latent space, using an Intention Conditioned Value Function (ICVF) pre-trained on random state data to capture state transition structure.",
+      "• Data used: Requires only one or few state-only expert episodes (no action data needed), plus a small set of randomly generated state-only data for ICVF pre-training, significantly reducing demonstration requirements compared to traditional IL methods.",
+      "• Performance metrics: Outperforms prior Wasserstein-based IL and adversarial IL methods across multiple MuJoCo environments, achieving expert-level performance with minimal expert data."
+    ],
+    "summary_cn": [
+      "• 核心模型: LWAIL框架在动态感知潜在空间中计算Wasserstein距离，通过预训练的意图条件价值函数（ICVF）捕捉状态转移结构，实现仅状态分布匹配。",
+      "• 数据来源: 仅需1个或少量仅状态专家轨迹（无需动作数据），加上少量随机生成的仅状态数据用于ICVF预训练，大幅降低传统模仿学习的数据需求。",
+      "• 主要结论: 在多个MuJoCo环境中超越现有Wasserstein基IL和对抗IL方法，用极少专家数据达到专家级性能。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for applications where expert demonstrations are scarce or action data unavailable, such as robotics or autonomous systems with limited human supervision.",
+      "• Implementation Risk: Moderate risk due to reliance on ICVF pre-training quality and latent space stability; performance may degrade if state dynamics are poorly captured.",
+      "• Novelty: Significant novelty in combining dynamics-aware latent spaces with Wasserstein adversarial IL, enabling state-only imitation with minimal expert data, advancing beyond prior work."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将动态感知潜在空间与Wasserstein对抗模仿学习结合，实现仅状态模仿，数据效率显著提升，是模仿学习领域的重要突破。",
+      "• 实盘坑: ICVF预训练对随机状态数据敏感，若状态动态捕捉不佳，可能导致策略学习失败；潜在空间稳定性需严格验证。",
+      "• 复现难度: 中等偏高，需实现ICVF预训练和Wasserstein距离计算，对计算资源和调参经验有一定要求。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.05433v1",
+    "title": "On-Policy Self-Distillation for Reasoning Compression",
+    "pdf_url": "https://arxiv.org/pdf/2603.05433v1",
+    "published": "2026-03-05",
+    "crawled_at": "2026-03-06 20:20:35",
+    "ai_score": 8.2,
+    "translated_title": "基于策略自蒸馏的推理压缩方法",
+    "summary_en": [
+      "• Model Architecture: OPSDC (On-Policy Self-Distillation for Reasoning Compression) uses a single model conditioned with a 'be concise' instruction to generate teacher logits, then applies per-token reverse KL minimization on student rollouts without external supervision.",
+      "• Data used: Evaluated on MATH-500 and AIME 2024 datasets, using Qwen3-8B and Qwen3-14B models as base reasoning architectures.",
+      "• Performance metrics: Achieved 57-59% token reduction on MATH-500 with 9-16 point absolute accuracy improvement; on AIME 2024, 14B model gained 10 points accuracy with 41% compression.",
+      "• Key insight: Identifies that reasoning models produce redundant and harmful tokens that compound errors, enabling automatic compression of easy problems while preserving deliberation for hard ones."
+    ],
+    "summary_cn": [
+      "• 核心模型: OPSDC（基于策略自蒸馏推理压缩）采用单一模型，通过'简洁指令'生成教师logits，并在学生rollouts上应用逐token反向KL最小化，无需外部监督。",
+      "• 数据来源: 在MATH-500和AIME 2024数据集上评估，使用Qwen3-8B和Qwen3-14B作为基础推理模型。",
+      "• 主要结论: 在MATH-500上实现57-59%的token压缩，准确率提升9-16个百分点；在AIME 2024上，14B模型准确率提升10分，压缩率达41%。",
+      "• 核心发现: 推理模型产生冗余且有害的token会累积错误，该方法能自动压缩简单问题，同时保留复杂问题所需的思考过程。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High - demonstrates significant token reduction (41-59%) with accuracy improvements, suggesting efficiency gains for reasoning-intensive trading strategies without performance degradation.",
+      "• Implementation Risk: Moderate - relies on model's ability to self-distill effectively; may require careful tuning of 'be concise' instruction and KL divergence parameters for different domains.",
+      "• Novelty: Strong - introduces a simple yet effective self-distillation approach that eliminates need for token budgets or difficulty estimators, leveraging model's own concise behavior as training signal.",
+      "• Scalability Concern: Limited evaluation on only two models (Qwen3-8B/14B); unclear how method generalizes to other architectures or real-time financial reasoning tasks."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出无需真实答案、token预算或难度估计器的自蒸馏方法，利用模型自身简洁行为作为训练信号，实现自动问题难度感知压缩。",
+      "• 实盘坑: 依赖模型有效自蒸馏能力，'简洁指令'和KL散度参数需针对不同金融领域精细调优；压缩可能意外剔除关键推理步骤。",
+      "• 复现难度: 中等 - 方法概念简单（单模型+反向KL），但需要访问Qwen3模型和MATH/AIME数据集；金融场景适配需额外标注和测试。",
+      "• 泛化风险: 仅在Qwen3模型上验证，未测试其他架构或实时金融推理任务，实际部署可能存在性能波动。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
     "id": "2603.04399v1",
     "title": "SimpliHuMoN: Simplifying Human Motion Prediction",
     "pdf_url": "https://arxiv.org/pdf/2603.04399v1",
