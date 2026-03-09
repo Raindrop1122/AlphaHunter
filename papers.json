@@ -1,5 +1,351 @@
 [
   {
+    "id": "2603.06576v1",
+    "title": "BEVLM: Distilling Semantic Knowledge from LLMs into Bird's-Eye View Representations",
+    "pdf_url": "https://arxiv.org/pdf/2603.06576v1",
+    "published": "2026-03-06",
+    "crawled_at": "2026-03-09 20:18:34",
+    "ai_score": 8.2,
+    "translated_title": "BEVLM：将大语言模型的语义知识蒸馏到鸟瞰图表示中",
+    "summary_en": [
+      "• Model Architecture: BEVLM connects a spatially consistent Bird's-Eye View (BEV) representation with Large Language Models (LLMs) by distilling semantic knowledge from LLMs into BEV features, using BEV as unified inputs to LLMs for cross-view reasoning.",
+      "• Data used: The paper likely uses multi-view and multi-frame driving scene datasets with geometric annotations (e.g., for object detection), though specific datasets are not mentioned in the abstract.",
+      "• Performance metrics: BEVLM improves reasoning accuracy by 46% in cross-view driving scenes and enhances closed-loop end-to-end driving performance by 29% in safety-critical scenarios."
+    ],
+    "summary_cn": [
+      "• 核心模型: BEVLM通过将大语言模型（LLM）的语义知识蒸馏到鸟瞰图（BEV）表示中，连接空间一致的BEV与LLM，使用BEV特征作为LLM的统一输入进行跨视图推理。",
+      "• 数据来源: 可能使用多视图和多帧驾驶场景数据集，带有几何标注（如用于目标检测），但摘要中未提及具体数据集。",
+      "• 主要结论: BEVLM在跨视图驾驶场景中提高推理准确率46%，在安全关键场景中提升端到端闭环驾驶性能29%。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for improving autonomous driving systems by enhancing spatial reasoning and semantic understanding, which could lead to better decision-making in complex scenarios and reduce accidents.",
+      "• Implementation Risk: Moderate risk due to reliance on LLMs and BEV representations, which may require significant computational resources and fine-tuning for real-world deployment.",
+      "• Novelty: Novel approach of distilling semantic knowledge from LLMs into BEV representations to bridge the gap between spatial structure and semantic richness, addressing limitations in existing methods."
+    ],
+    "verdict_cn": [
+      "• 创新点: 创新性地将LLM的语义知识蒸馏到BEV表示中，弥补空间结构与语义丰富度之间的差距，解决现有方法在视觉处理分离和几何一致性方面的不足。",
+      "• 实盘坑: 依赖LLM和BEV表示，可能需要大量计算资源和精细调优，在实际部署中面临性能和稳定性挑战。",
+      "• 复现难度: 中等难度，需要集成LLM、BEV表示和驾驶数据集，但框架描述清晰，有助于复现。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.06572v1",
+    "title": "SCOPE: Scene-Contextualized Incremental Few-Shot 3D Segmentation",
+    "pdf_url": "https://arxiv.org/pdf/2603.06572v1",
+    "published": "2026-03-06",
+    "crawled_at": "2026-03-09 20:18:59",
+    "ai_score": 8.2,
+    "translated_title": "SCOPE：场景上下文增量少样本3D分割",
+    "summary_en": [
+      "• Model Architecture: SCOPE is a plug-and-play background-guided prototype enrichment framework that integrates with any prototype-based 3D segmentation method. It uses a class-agnostic segmentation model to extract high-confidence pseudo-instances from background regions to build a prototype pool, then retrieves and fuses relevant background prototypes with few-shot prototypes when novel classes arrive.",
+      "• Data used: Experiments conducted on ScanNet and S3DIS datasets, which are standard benchmarks for 3D point cloud segmentation in indoor scenes.",
+      "• Performance metrics: Achieves state-of-the-art performance with novel-class IoU improvements of up to 6.98% on ScanNet and 3.61% on S3DIS, and mean IoU improvements of 2.25% and 1.70% respectively, while maintaining low forgetting."
+    ],
+    "summary_cn": [
+      "• 核心模型: SCOPE是一个即插即用的背景引导原型增强框架，可与任何基于原型的3D分割方法集成。通过类无关分割模型从背景区域提取高置信度伪实例构建原型池，在新类别出现时检索并融合相关背景原型与少样本原型。",
+      "• 数据来源: 使用ScanNet和S3DIS数据集进行实验，这是室内场景3D点云分割的标准基准数据集。",
+      "• 主要结论: 在ScanNet和S3DIS上实现最先进性能，新类别IoU分别提升最高6.98%和3.61%，平均IoU分别提升2.25%和1.70%，同时保持低遗忘率。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - The method addresses a practical problem in 3D segmentation (incremental learning with few samples) and shows significant performance improvements, but direct financial applications are limited to specialized domains like autonomous driving or robotics where 3D perception is critical.",
+      "• Implementation Risk: Low to Moderate - The plug-and-play design reduces integration complexity, but reliance on high-quality background pseudo-instances could introduce noise in real-world scenarios with cluttered environments.",
+      "• Novelty: High - Effectively leverages unlabelled background information as a key cue for few-shot learning, a novel approach in 3D segmentation that mitigates catastrophic forgetting without retraining the backbone."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高 - 首次在3D分割中利用未标记背景信息作为少样本学习的关键线索，通过背景原型增强有效缓解灾难性遗忘，无需重新训练主干网络。",
+      "• 实盘坑: 中 - 依赖高质量背景伪实例提取，在复杂真实场景中可能引入噪声；虽然即插即用设计降低集成难度，但3D数据处理本身计算成本较高。",
+      "• 复现难度: 低 - 代码已开源，基于标准数据集和原型方法框架，实验设置清晰，适合快速验证和扩展。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2603.06567v1",
+    "title": "A recipe for scalable attention-based MLIPs: unlocking long-range accuracy with all-to-all node attention",
+    "pdf_url": "https://arxiv.org/pdf/2603.06567v1",
+    "published": "2026-03-06",
+    "crawled_at": "2026-03-09 20:19:22",
+    "ai_score": 8.5,
+    "translated_title": "可扩展注意力基MLIPs的配方：通过全对全节点注意力解锁长程精度",
+    "summary_en": [
+      "• Model Architecture: AllScAIP is an attention-based, energy-conserving MLIP model that scales to O(100 million) training samples, featuring an all-to-all node attention component for data-driven long-range interaction capture.",
+      "• Data used: The model was trained on up to 100 million samples from molecular systems, materials (OMat24), and catalysts (OC20), with extensive ablations in low-data/small-model regimes.",
+      "• Performance metrics: Achieves state-of-the-art energy/force accuracy on molecular systems, competitive results on materials and catalysts, and enables stable, long-timescale MD simulations with accurate experimental observables like density and heat of vaporization."
+    ],
+    "summary_cn": [
+      "• 核心模型: AllScAIP是一种基于注意力机制、能量守恒的MLIP模型，可扩展至O(1亿)训练样本，采用全对全节点注意力组件以数据驱动方式捕获长程相互作用。",
+      "• 数据来源: 使用高达1亿个样本进行训练，涵盖分子系统、材料（OMat24）和催化剂（OC20），并在低数据/小模型场景下进行了广泛消融实验。",
+      "• 主要结论: 在低数据/小模型场景下，归纳偏置提升样本效率；但随着数据和模型规模扩大，这些优势减弱甚至逆转，而全对全注意力对捕获长程相互作用至关重要。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for alpha in molecular dynamics simulations and materials science applications due to state-of-the-art accuracy and scalability, enabling novel insights into long-range interactions in large systems.",
+      "• Implementation Risk: Moderate risk due to computational demands of all-to-all attention at scale and potential challenges in integrating with existing physics-based frameworks, though energy conservation mitigates some instability.",
+      "• Novelty: Significant novelty in demonstrating that data-driven attention can outperform inductive biases at scale for long-range interactions, challenging current reliance on explicit physics-based terms in MLIPs."
+    ],
+    "verdict_cn": [
+      "• 创新点: 创新性地展示在规模化场景下，数据驱动的全对全注意力机制在捕获长程相互作用方面优于归纳偏置，挑战了当前MLIPs依赖显式物理项的主流做法。",
+      "• 实盘坑: 实盘风险中等，全对全注意力在规模化时计算需求高，且与现有物理基框架集成可能面临挑战，尽管能量守恒机制降低了部分不稳定性。",
+      "• 复现难度: 复现难度较高，需要大规模计算资源（如GPU集群）处理O(1亿)样本，且注意力机制的优化和调参可能复杂，但开源代码可降低门槛。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.06565v1",
+    "title": "Boosting deep Reinforcement Learning using pretraining with Logical Options",
+    "pdf_url": "https://arxiv.org/pdf/2603.06565v1",
+    "published": "2026-03-06",
+    "crawled_at": "2026-03-09 20:19:40",
+    "ai_score": 7.5,
+    "translated_title": "利用逻辑选项预训练提升深度强化学习",
+    "summary_en": [
+      "• Model Architecture: Hybrid Hierarchical RL (H^2RL) combines symbolic logical options with neural-based reinforcement learning in a two-stage framework, using pretraining to inject symbolic structure into deep policies.",
+      "• Data used: The paper employs standard reinforcement learning environments for empirical validation, focusing on long-horizon decision-making tasks without specifying custom datasets.",
+      "• Performance metrics: The method consistently improves long-horizon decision-making and outperforms neural, symbolic, and neuro-symbolic baselines in experimental evaluations."
+    ],
+    "summary_cn": [
+      "• 核心模型: 混合分层强化学习（H^2RL）采用两阶段框架，将符号逻辑选项与基于神经网络的强化学习结合，通过预训练将符号结构注入深度策略中。",
+      "• 数据来源: 使用标准强化学习环境进行实证验证，专注于长时程决策任务，未提及自定义数据集。",
+      "• 主要结论: 该方法能持续提升长时程决策能力，在实验中表现优于神经、符号及神经符号基线模型。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the hybrid approach addresses misalignment in deep RL agents, potentially improving robustness in complex decision-making tasks relevant to algorithmic trading.",
+      "• Implementation Risk: High; integrating symbolic logic with neural networks adds complexity, and scaling to real-world financial data with continuous variables may be challenging.",
+      "• Novelty: Moderate; the combination of logical options and pretraining is innovative, but builds on existing neuro-symbolic and hierarchical RL literature without groundbreaking theoretical advances."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；结合逻辑选项与预训练策略，针对深度强化学习的对齐问题提出混合方法，但未突破现有神经符号学习框架。",
+      "• 实盘坑: 高；符号与神经网络的集成增加系统复杂性，在连续金融数据上的扩展可能面临性能与稳定性挑战。",
+      "• 复现难度: 中等；方法依赖于标准RL环境，但实现混合架构需专业知识，开源代码或详细参数缺失可能增加复现成本。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.06563v1",
+    "title": "Convergence of Neural Network Policies for Risk--Reward Optimization",
+    "pdf_url": "https://arxiv.org/pdf/2603.06563v1",
+    "published": "2026-03-06",
+    "crawled_at": "2026-03-09 20:20:06",
+    "ai_score": 8.2,
+    "translated_title": "神经网络策略在风险-收益优化中的收敛性研究",
+    "summary_en": [
+      "• Model Architecture: Two coupled feedforward neural networks with constraint-enforcing output layers parametrize two-step feedback policies, handling discontinuous state dependencies and reducing constrained control to unconstrained parameter training.",
+      "• Data used: Training relies on simulated scenarios for multi-period stochastic control problems, with validation on large independent scenario sets to demonstrate out-of-sample robustness.",
+      "• Performance metrics: Convergence in probability of empirical optimum to true optimal value proven under mild regularity conditions, supported by numerical experiments showing close agreement between learned and reference control heat maps.",
+      "• Objective flexibility: Supports broad class of risk-reward objectives including terminal/path-dependent statistics, Conditional Value-at-Risk, and buffered probability of exceedance with optional moment dependence."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用两个耦合前馈神经网络，通过约束强制输出层参数化两步反馈策略，处理状态不连续性，将约束控制问题转化为无约束网络参数训练。",
+      "• 数据来源: 基于多期随机控制问题的模拟场景进行训练，使用大规模独立场景集验证样本外鲁棒性。",
+      "• 主要结论: 在温和正则条件下证明经验最优值以概率收敛于真实最优值，数值实验显示学习控制与参考控制热图高度一致，验证收敛行为。",
+      "• 方法优势: 模块化证明分离策略近似、控制递归传播和风险-收益目标标量化，支持包括CVaR和缓冲超限概率在内的多种风险函数。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - framework enables optimization of complex risk-reward tradeoffs in multi-period settings, potentially uncovering non-obvious control policies in constrained stochastic environments.",
+      "• Implementation Risk: High - discontinuous state policies and constraint enforcement layers introduce numerical stability challenges; convergence guarantees require careful tuning of network capacity and training samples.",
+      "• Novelty: Significant - theoretical convergence proof for neural network policies in risk-reward optimization with discontinuous feedback represents meaningful advancement over traditional parametric approaches.",
+      "• Practical limitations: Heavy reliance on scenario generation quality; computational intensity of training coupled networks may limit real-time applications in fast-moving markets."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著 - 为不连续反馈的神经网络策略提供风险-收益优化的理论收敛证明，超越传统参数化方法，模块化证明结构具有方法论价值。",
+      "• 实盘坑: 高 - 不连续状态策略和约束强制层带来数值稳定性挑战；收敛保证依赖网络容量和训练样本的精细调参，场景生成质量直接影响性能。",
+      "• 复现难度: 中等偏高 - 需要实现耦合网络架构和约束输出层，理论证明中的温和正则条件在实际中可能难以严格满足，计算资源要求较高。",
+      "• 市场适用性: 更适合中低频多期资产配置或风险管理场景，高频交易中计算延迟可能成为瓶颈。"
+    ],
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2603.06557v1",
+    "title": "Causal Interpretation of Neural Network Computations with Contribution Decomposition",
+    "pdf_url": "https://arxiv.org/pdf/2603.06557v1",
+    "published": "2026-03-06",
+    "crawled_at": "2026-03-09 20:20:27",
+    "ai_score": 8.2,
+    "translated_title": "神经网络计算因果解释：贡献分解法",
+    "summary_en": [
+      "• Model Architecture: CODEC (Contribution Decomposition) method using sparse autoencoders to decompose hidden-neuron contributions into sparse motifs, analyzing how neurons drive outputs rather than just activation patterns.",
+      "• Data used: Benchmark image-classification networks (unspecified datasets) and state-of-the-art models of neural activity in the vertebrate retina.",
+      "• Performance metrics: Reveals causal processes not detectable by activation analysis alone, shows contributions grow in sparsity and dimensionality across layers, and enables causal manipulations and interpretable visualizations of image components."
+    ],
+    "summary_cn": [
+      "• 核心模型: CODEC（贡献分解）方法，利用稀疏自编码器将隐藏神经元贡献分解为稀疏模式，直接分析神经元如何驱动输出而非仅关注激活模式。",
+      "• 数据来源: 基准图像分类网络（未指定具体数据集）和脊椎动物视网膜神经活动的最新模型。",
+      "• 主要结论: 贡献在层间呈现稀疏性和维度增长，正负效应逐渐解耦，CODEC能揭示激活分析无法检测的因果过程，支持网络输出的因果操控和可解释可视化。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for interpretable AI in finance—CODEC could enhance model transparency in risk prediction or algorithmic trading by revealing causal neuron contributions, potentially leading to more robust and controllable models.",
+      "• Implementation Risk: Moderate—sparse autoencoder integration adds complexity; real-world financial data noise may challenge motif decomposition, and computational overhead could limit high-frequency applications.",
+      "• Novelty: Significant—shifts focus from activation patterns to causal contributions, introducing 'contribution modes' as a new analytical unit; application to biological neural models demonstrates cross-domain utility."
+    ],
+    "verdict_cn": [
+      "• 创新点: 从激活模式转向因果贡献分析，提出'贡献模式'作为新分析单元，方法具有跨领域适用性（从人工网络到生物模型）。",
+      "• 实盘坑: 稀疏自编码器增加模型复杂度，金融数据噪声可能干扰模式分解，计算开销可能影响高频交易应用。",
+      "• 复现难度: 中等—需要实现CODEC框架和稀疏自编码器，但论文提供了方法论基础；生物模型应用可能需要领域专业知识。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2603.06555v1",
+    "title": "Hierarchical Industrial Demand Forecasting with Temporal and Uncertainty Explanations",
+    "pdf_url": "https://arxiv.org/pdf/2603.06555v1",
+    "published": "2026-03-06",
+    "crawled_at": "2026-03-09 20:20:45",
+    "ai_score": 7.8,
+    "translated_title": "具有时间和不确定性解释的分层工业需求预测",
+    "summary_en": [
+      "• Model Architecture: Introduces a novel interpretability method for hierarchical probabilistic time-series forecasting, adapting generic techniques to address hierarchical structures and uncertainty challenges.",
+      "• Data used: Semi-synthetic datasets based on real-world scenarios from a large chemical company, covering hierarchical demands for over ten thousand products.",
+      "• Performance metrics: Achieved significantly higher explainability accuracy compared to state-of-the-art industrial forecasting methods, with multiple real-world case studies validating efficacy."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出一种新颖的分层概率时间序列预测可解释性方法，通过调整通用技术解决分层结构和不确定性挑战。",
+      "• 数据来源: 基于大型化工公司真实场景生成的半合成数据集，涵盖超过一万种产品的分层需求。",
+      "• 主要结论: 该方法在可解释性准确性上显著优于现有工业预测方法，并通过多个实际案例验证了其在识别关键驱动因素和模式方面的有效性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - The interpretability framework could enhance model trust in supply chain forecasting, potentially improving decision-making in demand prediction scenarios.",
+      "• Implementation Risk: High - Real-world deployment faces challenges in scaling to diverse industrial hierarchies and integrating with existing forecasting pipelines.",
+      "• Novelty: Significant - Addresses the underexplored area of interpretability in hierarchical probabilistic forecasting, though builds on existing explainability techniques."
+    ],
+    "verdict_cn": [
+      "• 创新点: 在分层概率预测的可解释性方面具有显著创新，填补了工业应用中的关键空白。",
+      "• 实盘坑: 实际部署风险较高，需处理不同行业分层结构的复杂性，并与现有预测系统集成。",
+      "• 复现难度: 中等 - 方法基于现有可解释性技术调整，但需要大量领域特定数据和计算资源。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2603.06522v1",
+    "title": "Artificial Intelligence for Detecting Fetal Orofacial Clefts and Advancing Medical Education",
+    "pdf_url": "https://arxiv.org/pdf/2603.06522v1",
+    "published": "2026-03-06",
+    "crawled_at": "2026-03-09 20:21:10",
+    "ai_score": 8.2,
+    "translated_title": "人工智能检测胎儿口面裂并推进医学教育",
+    "summary_en": [
+      "• Model Architecture: The paper describes an artificial intelligence system trained on ultrasound images, likely using deep learning (e.g., CNN-based) for image classification, though specific architectural details are not provided in the abstract.",
+      "• Data used: The model was trained on 45,139 ultrasound images from 9,215 fetuses across 22 hospitals, indicating a large, multi-center dataset that enhances generalizability.",
+      "• Performance metrics: The AI system achieves sensitivity >93% and specificity >95% for diagnosing fetal orofacial clefts, matching senior radiologists and outperforming junior ones, with a 6% sensitivity improvement when used as a copilot.",
+      "• Additional impact: A pilot study with 24 radiologists and trainees shows the model accelerates expertise development for rare conditions, serving a dual purpose in diagnosis and training."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于深度学习的人工智能系统，用于超声图像分类，具体架构未详细说明，但可能采用卷积神经网络（CNN）等常见方法。",
+      "• 数据来源: 使用来自22家医院的9,215名胎儿的45,139张超声图像进行训练，数据集规模大且多中心，提高了模型的泛化能力。",
+      "• 主要结论: AI系统在诊断胎儿口面裂时敏感度>93%、特异度>95%，与资深放射科医生相当，显著优于初级医生，作为辅助工具可提升初级医生敏感度6%以上。",
+      "• 扩展应用: 针对24名放射科医生及学员的试点研究表明，该模型能加速罕见病种的专家培养，实现诊断与培训的双重目标。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate to high; the system addresses a critical gap in prenatal care by improving diagnostic accuracy and training efficiency in resource-limited settings, potentially reducing morbidity through early intervention.",
+      "• Implementation Risk: High; real-world deployment faces challenges such as integration with existing hospital systems, regulatory approvals (e.g., FDA for medical devices), and variability in ultrasound equipment and protocols across different hospitals.",
+      "• Novelty: Moderate; while AI in medical imaging is well-established, the dual focus on both diagnostic assistance and accelerating clinical expertise development for rare conditions adds a unique educational component, though similar copilot approaches exist in other fields."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；将AI应用于胎儿口面裂诊断虽非首创，但结合诊断辅助与加速罕见病专家培训的双重目标具有一定新颖性，类似“副驾驶”模式在其他领域已有应用。",
+      "• 实盘坑: 高；实际部署面临整合医院现有系统、获取医疗器械监管批准（如FDA）、以及不同医院超声设备和协议差异等挑战，可能影响推广效果。",
+      "• 复现难度: 中等；基于公开摘要，模型架构细节缺失，但使用大规模多中心数据集可部分降低复现难度；需注意数据隐私和伦理问题，可能增加实操复杂性。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "Nature Medicine or JAMA",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2603.06508v1",
+    "title": "When One Modality Rules Them All: Backdoor Modality Collapse in Multimodal Diffusion Models",
+    "pdf_url": "https://arxiv.org/pdf/2603.06508v1",
+    "published": "2026-03-06",
+    "crawled_at": "2026-03-09 20:21:32",
+    "ai_score": 7.8,
+    "translated_title": "当单一模态主导一切：多模态扩散模型中的后门模态崩溃",
+    "summary_en": [
+      "• Model Architecture: Investigates multimodal conditional diffusion models, focusing on backdoor attacks across text and image modalities. Introduces Trigger Modality Attribution (TMA) and Cross-Trigger Interaction (CTI) metrics to quantify backdoor behavior.",
+      "• Data used: Extensive experiments across diverse training configurations in multimodal conditional diffusion, though specific datasets are not detailed in the abstract.",
+      "• Performance metrics: Uses TMA and CTI to measure modality dominance and cross-modal interaction, revealing 'winner-takes-all' dynamics where backdoors rely on subset modalities."
+    ],
+    "summary_cn": [
+      "• 核心模型: 研究多模态条件扩散模型，重点关注文本和图像模态的后门攻击。引入触发模态归因（TMA）和跨触发交互（CTI）指标来量化后门行为。",
+      "• 数据来源: 在多模态条件扩散的多样化训练配置中进行广泛实验，但摘要中未详细说明具体数据集。",
+      "• 主要结论: 发现后门攻击常崩溃为子模态主导，跨模态交互可忽略甚至为负，挑战了协同漏洞的直觉，高攻击成功率常掩盖对子模态的根本依赖。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; identifies a critical blind spot in vulnerability assessments of multimodal AI, which could inform defensive strategies in AI-driven trading systems, but direct financial alpha is indirect.",
+      "• Implementation Risk: High; findings are theoretical and experimental, requiring validation in real-world multimodal models used in finance (e.g., for sentiment analysis or market prediction), with potential for false positives in risk assessment.",
+      "• Novelty: High; introduces novel metrics (TMA and CTI) and challenges the assumption of synergistic vulnerabilities in multimodal attacks, offering a principled foundation for mechanistic analysis."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；提出新指标（TMA和CTI），挑战多模态攻击中协同漏洞的假设，为机制分析奠定基础，揭示了当前评估中的关键盲点。",
+      "• 实盘坑: 高；结果基于实验，需在金融实际多模态模型（如情感分析或市场预测）中验证，风险评估可能存在误报，直接应用风险大。",
+      "• 复现难度: 中等；方法描述清晰，但依赖特定训练配置和未详述的数据集，复现需专业知识，可能受模型变体影响。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.06506v1",
+    "title": "Semantics-Aware Caching for Concept Learning",
+    "pdf_url": "https://arxiv.org/pdf/2603.06506v1",
+    "published": "2026-03-06",
+    "crawled_at": "2026-03-09 20:21:53",
+    "ai_score": 7.5,
+    "translated_title": "面向概念学习的语义感知缓存",
+    "summary_en": [
+      "• Model Architecture: Introduces a semantics-aware caching system that uses a subsumption-aware map to link concepts to instance sets via crisp set operations, designed to accelerate concept retrieval in iterative search processes.",
+      "• Data used: Evaluated on 5 datasets with 4 symbolic reasoners, 1 neuro-symbolic reasoner, and 5 popular pagination policies, covering diverse learning scenarios to test cache effectiveness.",
+      "• Performance metrics: Demonstrates runtime reductions by an order of magnitude for concept retrieval and concept learning, showing scalability from simple to complex problems requiring thousands of instance retrieval calls."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出语义感知缓存系统，基于包含感知映射，通过清晰集合操作将概念与实例集关联，优化迭代搜索中的概念检索效率。",
+      "• 数据来源: 使用5个数据集，结合4个符号推理器、1个神经符号推理器和5种分页策略进行实验，覆盖多种学习场景以验证缓存性能。",
+      "• 主要结论: 缓存能将概念检索和学习运行时间降低一个数量级，有效处理从简单到复杂（需数千次调用）的问题，适用于符号和神经符号推理器。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the caching approach could enhance efficiency in symbolic AI systems used for financial concept modeling, but direct trading alpha is limited without integration into predictive frameworks.",
+      "• Implementation Risk: Low to moderate; the method relies on existing reasoners and pagination policies, but real-world deployment may face challenges in dynamic environments with evolving data semantics.",
+      "• Novelty: High; introduces a novel semantics-aware caching mechanism that addresses runtime bottlenecks in concept learning, offering a scalable solution for both symbolic and neuro-symbolic applications."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；提出语义感知缓存机制，针对概念学习中的运行时瓶颈，提供可扩展解决方案，适用于符号和神经符号应用，具有显著新颖性。",
+      "• 实盘坑: 中低；方法依赖现有推理器和分页策略，但在动态数据语义变化的环境中部署可能面临适应性挑战，需谨慎测试。",
+      "• 复现难度: 低；基于标准数据集和公开推理器，实验设置清晰，复现相对容易，但需注意缓存策略的调优以实现最佳性能。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2603.05504v1",
     "title": "RoboPocket: Improve Robot Policies Instantly with Your Phone",
     "pdf_url": "https://arxiv.org/pdf/2603.05504v1",
