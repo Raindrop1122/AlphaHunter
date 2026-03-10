@@ -1,5 +1,349 @@
 [
   {
+    "id": "2603.08707v1",
+    "title": "Impermanent: A Live Benchmark for Temporal Generalization in Time Series Forecasting",
+    "pdf_url": "https://arxiv.org/pdf/2603.08707v1",
+    "published": "2026-03-09",
+    "crawled_at": "2026-03-10 20:19:23",
+    "ai_score": 8.2,
+    "translated_title": "Impermanent：时间序列预测中时间泛化能力的实时基准测试",
+    "summary_en": [
+      "• Model Architecture: The paper introduces a live benchmark framework called Impermanent that evaluates forecasting models through sequential scoring on continuously updated data streams, focusing on temporal robustness and distributional shift rather than static train-test splits.",
+      "• Data used: The benchmark is instantiated on GitHub open-source activity, specifically tracking the top 400 repositories by star count, with time series constructed from issues opened, pull requests opened, push events, and new stargazers, updated daily.",
+      "• Performance metrics: Evaluation shifts from one-off accuracy on frozen test sets to sustained performance over rolling windows, assessing temporal generalization, stability, and robustness to real-world changes like platform updates and external events."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出名为Impermanent的实时基准测试框架，通过连续更新的数据流对预测模型进行顺序评分，重点关注时间鲁棒性和分布偏移，而非静态训练-测试分割。",
+      "• 数据来源: 基于GitHub开源活动数据，具体追踪按星标数排名前400的仓库，从问题开启、拉取请求开启、推送事件和新星标者构建时间序列，每日更新。",
+      "• 主要结论: 评估从冻结测试集的一次性准确性转向滚动窗口上的持续性能，评估时间泛化能力、稳定性以及对平台更新和外部事件等现实世界变化的鲁棒性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate to high; the benchmark's focus on temporal generalization and live data streams could help identify models that maintain performance in dynamic environments, potentially uncovering alpha in time-series strategies sensitive to distributional shifts.",
+      "• Implementation Risk: High; the reliance on GitHub data introduces non-stationarity and noise from external factors (e.g., tooling changes, events), and the live nature requires continuous monitoring and adaptation, increasing operational complexity.",
+      "• Novelty: High; the paper innovates by moving beyond static benchmarks to a live, open-world evaluation, addressing contamination issues in foundation models and providing a concrete method to assess temporal robustness in forecasting."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高度创新；超越静态基准测试，转向实时、开放世界的评估，解决了基础模型中的污染问题，并为评估预测中的时间鲁棒性提供了具体方法。",
+      "• 实盘坑: 高风险；依赖GitHub数据引入了非平稳性和外部因素（如工具变更、事件）的噪声，实时性质需要持续监控和适应，增加了操作复杂性。",
+      "• 复现难度: 中等；代码和仪表板已开源，但设置实时数据流和滚动窗口评估需要技术基础设施，且GitHub数据的动态性可能使结果难以稳定复现。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.08706v1",
+    "title": "Agentic Critical Training",
+    "pdf_url": "https://arxiv.org/pdf/2603.08706v1",
+    "published": "2026-03-09",
+    "crawled_at": "2026-03-10 20:19:38",
+    "ai_score": 8.2,
+    "translated_title": "代理批判性训练",
+    "summary_en": [
+      "• Model Architecture: Agentic Critical Training (ACT) is a reinforcement learning paradigm that trains agents to identify better actions among alternatives by rewarding correct judgments, enabling autonomous development of reasoning about action quality.",
+      "• Data used: The method is evaluated across three challenging agent benchmarks, with performance compared against imitation learning, reinforcement learning, and knowledge distillation approaches, without requiring reasoning-specific training data.",
+      "• Performance metrics: ACT achieves an average improvement of 5.07 points over imitation learning, 4.62 points over reinforcement learning, and 2.42 points over knowledge distillation methods, while also demonstrating strong out-of-distribution generalization and improved performance on general reasoning benchmarks."
+    ],
+    "summary_cn": [
+      "• 核心模型: 代理批判性训练（ACT）是一种强化学习范式，通过奖励模型对行动质量的正确判断，训练代理在备选行动中识别更优选择，从而自主发展推理能力。",
+      "• 数据来源: 该方法在三个具有挑战性的代理基准测试中进行评估，对比了模仿学习、强化学习和知识蒸馏方法，无需特定推理训练数据。",
+      "• 主要结论: ACT在代理基准测试中平均比模仿学习提高5.07分，比强化学习提高4.62分，比知识蒸馏方法提高2.42分，同时展现出强大的分布外泛化能力，并在通用推理基准上提升性能。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for generating alpha in NLP/LLM strategies by enabling more reflective and capable agents that can generalize beyond training data, potentially improving decision-making in complex environments.",
+      "• Implementation Risk: Moderate risk due to the complexity of reinforcement learning paradigms and the need for robust reward design; performance may vary across different agent tasks and benchmarks.",
+      "• Novelty: Significant novelty in shifting from imitation-based reflection to autonomous reasoning development, addressing a fundamental limitation in current LLM agent training methods."
+    ],
+    "verdict_cn": [
+      "• 创新点: 从基于模仿的反思转向自主推理发展，解决了当前LLM代理训练方法的基本限制，具有显著的创新性。",
+      "• 实盘坑: 强化学习范式复杂，奖励设计需稳健，性能可能因不同代理任务和基准而异，存在中等实施风险。",
+      "• 复现难度: 中等偏高，需要精确实现ACT的强化学习框架和基准测试，但论文提供了清晰的性能对比，有助于复现验证。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.08687v1",
+    "title": "Split Federated Learning Architectures for High-Accuracy and Low-Delay Model Training",
+    "pdf_url": "https://arxiv.org/pdf/2603.08687v1",
+    "published": "2026-03-09",
+    "crawled_at": "2026-03-10 20:19:53",
+    "ai_score": 7.8,
+    "translated_title": "高精度低延迟模型训练的分割联邦学习架构",
+    "summary_en": [
+      "• Model Architecture: Proposes a hierarchical split federated learning (HSFL) architecture with three-tier structure (clients, local aggregators, central server) and two partitioning layers, optimizing partitioning layers and client-aggregator assignments through a joint optimization problem.",
+      "• Data used: Evaluated on public datasets (specific datasets not named in abstract), with simulation results demonstrating performance improvements.",
+      "• Performance metrics: Achieves 3% accuracy improvement, 20% delay reduction, and 50% overhead reduction compared to state-of-the-art SFL and HSFL schemes."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出分层分割联邦学习（HSFL）架构，采用三层结构（客户端、本地聚合器、中央服务器）和两个分割层，通过联合优化问题优化分割层和客户端-聚合器分配。",
+      "• 数据来源: 在公开数据集上进行评估（摘要中未具体命名数据集），通过仿真结果展示性能提升。",
+      "• 主要结论: 相比现有SFL和HSFL方案，实现3%的准确率提升、20%的延迟降低和50%的通信开销减少。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - The 3% accuracy improvement with significant delay/overhead reductions could enhance real-time trading models in latency-sensitive environments, though the abstract lacks concrete financial applications.",
+      "• Implementation Risk: High - The NP-hard optimization problem requires heuristic algorithms, which may not scale well in production with dynamic client networks and varying data distributions.",
+      "• Novelty: Moderate - While HSFL architectures exist, the explicit joint optimization of partitioning layers and assignments for accuracy-aware training is a novel contribution, though limited to simulation validation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 在现有HSFL架构基础上，首次通过联合优化分割层和客户端分配来显式提升模型精度，同时兼顾延迟和开销，提出首个精度感知的启发式算法。",
+      "• 实盘坑: NP难优化问题依赖启发式算法，在动态客户端网络和异构数据分布下可能不稳定；仿真结果未涉及实际金融数据或市场条件验证。",
+      "• 复现难度: 中等 - 需要实现三层HSFL架构和优化算法，但公开数据集和仿真环境降低了技术门槛，不过生产部署需考虑通信协议和硬件异构性。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2603.08683v1",
+    "title": "Benchmarking Language Modeling for Lossless Compression of Full-Fidelity Audio",
+    "pdf_url": "https://arxiv.org/pdf/2603.08683v1",
+    "published": "2026-03-09",
+    "crawled_at": "2026-03-10 20:20:10",
+    "ai_score": 7.5,
+    "translated_title": "语言建模在无损全保真音频压缩中的基准测试",
+    "summary_en": [
+      "• Model Architecture: Introduces Trilobyte, a byte-level tokenization schema for autoregressive language models (LMs) applied to raw audio waveforms, addressing vocabulary scaling from O(2^b) to O(1) for high bit depths.",
+      "• Data used: Benchmarks across diverse audio domains including music, speech, and bioacoustics, with sampling rates from 16kHz to 48kHz and bit depths of 8, 16, and 24-bit.",
+      "• Performance metrics: LMs consistently outperform FLAC and achieve state-of-the-art compression at 8-bit and 16-bit, but compression gains become more modest beyond 8-bit, with the first tractable 24-bit LM-based lossless compression demonstrated."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出Trilobyte，一种用于原始音频波形的字节级标记化方案，基于自回归语言模型（LMs），将词汇表规模从O(2^b)优化至O(1)，以处理高比特深度。",
+      "• 数据来源: 使用多领域音频数据，包括音乐、语音和生物声学，采样率覆盖16kHz至48kHz，比特深度为8位、16位和24位。",
+      "• 主要结论: 语言模型在8位和16位音频上持续优于FLAC并达到最先进压缩水平，但超过8位后压缩增益趋于平缓，首次实现了可处理的24位基于LM的无损压缩。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the method shows promise for niche applications in high-fidelity audio compression, but scalability to real-time or large-scale financial data streams is unproven and gains diminish at higher bit depths.",
+      "• Implementation Risk: High; the approach requires significant computational resources for training and inference, with potential latency issues in practical deployment, and reliance on raw waveforms may limit robustness in noisy environments.",
+      "• Novelty: High; the paper introduces a novel byte-level tokenization schema (Trilobyte) that enables tractable 24-bit LM-based compression, addressing a key limitation in prior work and expanding the applicability of LMs to full-fidelity audio."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；提出Trilobyte字节级标记化方案，首次实现可处理的24位基于LM的无损压缩，解决了先前工作中词汇表规模爆炸的问题，扩展了LM在全保真音频中的应用。",
+      "• 实盘坑: 高；方法需要大量计算资源进行训练和推理，实际部署中可能存在延迟问题，且依赖原始波形在嘈杂环境中的鲁棒性有限。",
+      "• 复现难度: 中等；核心算法描述清晰，但实现需处理高维音频数据和复杂模型训练，对硬件和专业知识要求较高。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.08682v1",
+    "title": "Structural Causal Bottleneck Models",
+    "pdf_url": "https://arxiv.org/pdf/2603.08682v1",
+    "published": "2026-03-09",
+    "crawled_at": "2026-03-10 20:20:25",
+    "ai_score": 7.5,
+    "translated_title": "结构因果瓶颈模型",
+    "summary_en": [
+      "• Model Architecture: Introduces structural causal bottleneck models (SCBMs) that assume causal effects between high-dimensional variables depend only on low-dimensional summary statistics (bottlenecks) of causes, providing a flexible framework for task-specific dimension reduction.",
+      "• Data used: No specific datasets mentioned in abstract; experimental illustrations likely involve synthetic or standard causal inference datasets to demonstrate estimation and transfer learning benefits.",
+      "• Performance metrics: Focuses on identifiability analysis, connection to information bottlenecks, and demonstrates benefits for effect estimation in low-sample transfer learning settings, suggesting improved efficiency in causal inference tasks."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出结构因果瓶颈模型（SCBMs），假设高维变量间的因果效应仅依赖于原因的低维摘要统计量（瓶颈），为任务特定降维提供灵活框架。",
+      "• 数据来源: 摘要未提及具体数据集；实验可能使用合成或标准因果推断数据集来展示估计方法和迁移学习优势。",
+      "• 主要结论: 分析了SCBMs的可识别性，将其与信息瓶颈理论连接，并证明在低样本迁移学习场景中，瓶颈有助于效应估计，提升因果推断效率。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; SCBMs could enhance causal inference in finance by reducing dimensionality for high-frequency or alternative data, potentially improving factor models or risk assessment, but direct alpha generation is unproven.",
+      "• Implementation Risk: High; relies on accurate bottleneck identification in noisy financial data, and transfer learning benefits may be limited in non-stationary markets, increasing model instability.",
+      "• Novelty: High; introduces a novel causal framework combining structural models with bottleneck concepts, offering an alternative to existing causal dimension reduction methods like causal representation learning."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；将结构因果模型与瓶颈概念结合，提出新框架，为因果降维提供替代方案，区别于现有因果表示学习或因果抽象学习。",
+      "• 实盘坑: 高；在嘈杂金融数据中准确识别瓶颈风险大，且迁移学习优势在非平稳市场中可能受限，导致模型不稳定。",
+      "• 复现难度: 中等；使用标准简单学习算法估计，但需要专业因果推断知识，实验数据未指定，可能增加复现复杂性。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.08679v1",
+    "title": "A New Lower Bound for the Random Offerer Mechanism in Bilateral Trade using AI-Guided Evolutionary Search",
+    "pdf_url": "https://arxiv.org/pdf/2603.08679v1",
+    "published": "2026-03-09",
+    "crawled_at": "2026-03-10 20:20:37",
+    "ai_score": 7.2,
+    "translated_title": "基于AI引导进化搜索的双边交易随机报价机制新下界",
+    "summary_en": [
+      "• Model Architecture: AlphaEvolve framework combining evolutionary algorithms with AI-guided search to explore value distribution space in bilateral trade mechanisms",
+      "• Data used: Synthetic value distributions generated through evolutionary search to identify worst-case instances for Random-Offerer mechanism performance",
+      "• Performance metrics: Achieved improved lower bound of 2.0749 for ratio GFT_FB/GFT_RO, surpassing previous 2.02 bound and disproving original 2.0 conjecture"
+    ],
+    "summary_cn": [
+      "• 核心模型: AlphaEvolve框架，融合进化算法与AI引导搜索，探索双边交易机制中的价值分布空间",
+      "• 数据来源: 通过进化搜索生成的合成价值分布，专门针对随机报价机制的最坏情况实例",
+      "• 主要结论: 将GFT_FB/GFT_RO比率下界提升至2.0749，突破先前2.02记录，证伪原始2.0猜想"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - provides theoretical bounds for mechanism design but limited direct trading signals; useful for algorithmic market making and auction design",
+      "• Implementation Risk: High - evolutionary search results are distribution-specific and may not generalize; computational intensity limits real-time application",
+      "• Novelty: Significant - first application of AI-guided evolutionary search to mechanism design lower bounds; methodology could transfer to other optimization problems"
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次将AI引导进化搜索应用于机制设计下界证明，方法论具有跨问题迁移潜力",
+      "• 实盘坑: 进化搜索结果高度依赖特定分布，泛化性存疑；计算复杂度高，难以实时部署",
+      "• 复现难度: 中等 - 需要复现AlphaEvolve框架和进化搜索过程，但论文方法描述相对完整"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.08676v1",
+    "title": "Momentum SVGD-EM for Accelerated Maximum Marginal Likelihood Estimation",
+    "pdf_url": "https://arxiv.org/pdf/2603.08676v1",
+    "published": "2026-03-09",
+    "crawled_at": "2026-03-10 20:20:50",
+    "ai_score": 7.5,
+    "translated_title": "动量SVGD-EM加速最大边际似然估计",
+    "summary_en": [
+      "• Model Architecture: Proposes Momentum SVGD-EM, an accelerated version of Stein variational gradient descent (SVGD) combined with Expectation-Maximization (EM), incorporating Nesterov acceleration in both parameter updates and probability measure spaces.",
+      "• Data used: Evaluated across various tasks of increasing difficulty, including low- and high-dimensional settings, though specific datasets are not detailed in the abstract.",
+      "• Performance metrics: Demonstrates consistent acceleration in convergence in terms of required iterations, showing effectiveness in both low- and high-dimensional scenarios."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出动量SVGD-EM，结合Stein变分梯度下降（SVGD）与期望最大化（EM），在参数更新和概率测度空间中引入Nesterov加速。",
+      "• 数据来源: 在多种难度递增的任务中进行评估，包括低维和高维设置，但摘要中未详细说明具体数据集。",
+      "• 主要结论: 在所需迭代次数方面实现一致加速收敛，在低维和高维场景中均显示有效性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; acceleration techniques could improve optimization efficiency in financial models like factor estimation or risk calibration, but direct alpha generation is limited without specific applications.",
+      "• Implementation Risk: High; integrating Nesterov acceleration with SVGD-EM adds complexity, requiring careful tuning of momentum parameters and stability in high-dimensional spaces.",
+      "• Novelty: Moderate; combines existing acceleration methods (Nesterov) with SVGD-EM, offering a practical enhancement rather than a groundbreaking theoretical advance."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；将Nesterov加速与SVGD-EM结合，提供实用优化改进，但非理论突破。",
+      "• 实盘坑: 高；动量参数调优复杂，高维稳定性风险大，可能增加计算开销和收敛不确定性。",
+      "• 复现难度: 中等；基于标准SVGD和EM框架，但加速实现需细致编码和超参数优化。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ICML",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2603.08667v1",
+    "title": "Characterization and upgrade of a quantum graph neural network for charged particle tracking",
+    "pdf_url": "https://arxiv.org/pdf/2603.08667v1",
+    "published": "2026-03-09",
+    "crawled_at": "2026-03-10 20:21:08",
+    "ai_score": 7.2,
+    "translated_title": "量子图神经网络在带电粒子径迹重建中的表征与升级",
+    "summary_en": [
+      "• Model Architecture: Hybrid quantum-classical graph neural network (QGNN) with interleaved classical feedforward networks and parameterized quantum circuits for hit connection classification between adjacent detector layers.",
+      "• Data used: Simulated high-luminosity dataset from proton collisions, with event graphs built from hits generated in tracking detector layers by produced particles.",
+      "• Performance metrics: Improved training behavior with better convergence toward final trained configuration, though specific quantitative metrics (accuracy, F1-score, etc.) are not detailed in the abstract.",
+      "• Key upgrades: Principal enhancements to the original QGNN design, focusing on characterization of classical-quantum component interplay."
+    ],
+    "summary_cn": [
+      "• 核心模型: 混合量子-经典图神经网络（QGNN），交替使用经典前馈网络和参数化量子电路，用于相邻探测器层间命中点连接分类。",
+      "• 数据来源: 基于质子碰撞模拟的高亮度数据集，事件图由探测器层中粒子产生的命中点构建。",
+      "• 主要结论: 训练行为改善，收敛性提升至最终训练配置，但未提供具体量化指标（如准确率、F1分数）。",
+      "• 升级重点: 对原始QGNN设计进行主要升级，重点表征经典与量子组件的相互作用。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate—quantum-enhanced GNNs could offer edge in high-dimensional particle tracking, but practical alpha generation in finance requires adaptation to noisy, real-world data beyond controlled simulations.",
+      "• Implementation Risk: High—quantum hardware limitations (noise, qubit count), integration complexity with classical systems, and scalability issues pose significant barriers to real-time deployment.",
+      "• Novelty: Moderate—hybrid quantum-classical architectures are emerging in ML research, but application to HEP tracking is innovative; however, the abstract lacks breakthrough algorithmic insights.",
+      "• Reproducibility Challenge: Medium—requires access to quantum simulators/hardware and specialized HEP datasets, though methodology upgrades are described."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等—将混合量子-经典架构应用于高能物理径迹重建是新颖方向，但缺乏突破性算法贡献；量子组件可能提升图神经网络的表示能力。",
+      "• 实盘坑: 高—量子硬件噪声、比特数限制、与经典系统集成复杂，且模拟数据到实盘金融数据的泛化能力未知，实时部署风险大。",
+      "• 复现难度: 中等—需量子模拟器/硬件和高能物理数据集，但方法升级描述较清晰；金融领域复现需大量数据适配和工程优化。",
+      "• 策略适配性: 低—直接应用于金融交易需重大修改，更适合探索性研究而非实盘策略。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2603.08660v1",
+    "title": "How Far Can Unsupervised RLVR Scale LLM Training?",
+    "pdf_url": "https://arxiv.org/pdf/2603.08660v1",
+    "published": "2026-03-09",
+    "crawled_at": "2026-03-10 20:21:25",
+    "ai_score": 7.2,
+    "translated_title": "无监督RLVR能将LLM训练扩展到何种程度？",
+    "summary_en": [
+      "• Model Architecture: The paper analyzes unsupervised reinforcement learning with verifiable rewards (URLVR) methods, classifying them into intrinsic (using model internal signals) and external (grounded in computational asymmetries) reward sources. It establishes a unified theoretical framework showing intrinsic methods converge toward sharpening the model's initial distribution.",
+      "• Data used: The study involves systematic experiments across various URLVR methods, though specific datasets are not detailed in the abstract. It mentions test-time training on small datasets for evaluating intrinsic rewards.",
+      "• Performance metrics: The research identifies a rise-then-fall pattern in intrinsic rewards across methods, with collapse timing determined by model prior rather than engineering choices. It proposes Model Collapse Step as a practical indicator for RL trainability and shows preliminary evidence that external reward methods may escape the confidence-correctness ceiling."
+    ],
+    "summary_cn": [
+      "• 核心模型: 论文分析了无监督可验证奖励强化学习（URLVR）方法，将其分为内在奖励（基于模型内部信号）和外部奖励（基于计算不对称性）两类，并建立了统一理论框架，表明内在方法会收敛于强化模型的初始分布。",
+      "• 数据来源: 研究通过系统实验覆盖多种URLVR方法，但摘要未详细说明具体数据集。提及在小数据集上进行测试时训练以评估内在奖励。",
+      "• 主要结论: 发现内在奖励在所有方法中均呈现先升后降的模式，崩溃时机由模型先验而非工程选择决定。提出模型崩溃步长作为RL可训练性的实用指标，并初步证据显示外部奖励方法可能突破置信度-正确性上限。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate. The paper provides a critical boundary analysis for intrinsic URLVR, which could inform risk management in LLM training strategies. However, the scalability limitations reduce immediate alpha generation potential.",
+      "• Implementation Risk: High. The catastrophic failure of intrinsic methods when confidence misaligns with correctness poses significant operational risks. External methods are only preliminarily explored, lacking robust validation.",
+      "• Novelty: High. The unified theoretical framework and Model Collapse Step metric offer fresh insights into RL scaling limits, though the core URLVR concept builds on existing unsupervised RL literature."
+    ],
+    "verdict_cn": [
+      "• 创新点: 较高。论文提出了统一理论框架和模型崩溃步长指标，为RL扩展限制提供了新见解，但URLVR核心概念基于现有无监督RL文献。",
+      "• 实盘坑: 高。内在方法在置信度与正确性不匹配时会发生灾难性失败，操作风险大。外部方法仅初步探索，缺乏稳健验证。",
+      "• 复现难度: 中等。系统实验设计可能复杂，但理论框架清晰，有助于指导复现。然而，具体数据集和超参数细节未在摘要中提供，可能增加不确定性。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.08658v1",
+    "title": "Context-free Self-Conditioned GAN for Trajectory Forecasting",
+    "pdf_url": "https://arxiv.org/pdf/2603.08658v1",
+    "published": "2026-03-09",
+    "crawled_at": "2026-03-10 20:21:38",
+    "ai_score": 7.2,
+    "translated_title": "基于自条件生成对抗网络的无上下文轨迹预测方法",
+    "summary_en": [
+      "• Model Architecture: Self-conditioned GAN with three distinct training settings for trajectory forecasting, leveraging discriminator's feature space to capture different behavioral modes.",
+      "• Data used: Two datasets - human motion trajectories and road agent trajectories (e.g., vehicles, pedestrians).",
+      "• Performance metrics: Outperforms previous context-free methods in least representative supervised labels, achieves global superiority in human motion, and performs well in road agents."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于自条件生成对抗网络（GAN）的无监督方法，通过判别器特征空间学习不同行为模式，提出三种训练设置。",
+      "• 数据来源: 人类运动轨迹数据集和道路智能体（如车辆、行人）轨迹数据集。",
+      "• 主要结论: 在代表性较弱的监督标签上优于现有无上下文方法，在人类运动数据上表现全局领先，在道路智能体数据上表现良好。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - could enhance predictive models for crowd dynamics or traffic flow in quantitative trading strategies, but limited by context-free approach.",
+      "• Implementation Risk: High - GAN training instability and mode collapse risks may affect reproducibility; real-world deployment requires robust validation.",
+      "• Novelty: Moderate - self-conditioned GAN is innovative for trajectory forecasting, but builds on existing GAN architectures without groundbreaking theoretical advances."
+    ],
+    "verdict_cn": [
+      "• 创新点: 自条件GAN在轨迹预测中的应用较新颖，能无监督学习行为模式，但整体架构仍基于传统GAN框架。",
+      "• 实盘坑: GAN训练不稳定性和模式崩溃风险高，无上下文限制可能降低实际市场预测的准确性。",
+      "• 复现难度: 中等偏高，需处理GAN调参复杂性和数据集适配问题，实验细节不足可能增加复现挑战。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2603.06576v1",
     "title": "BEVLM: Distilling Semantic Knowledge from LLMs into Bird's-Eye View Representations",
     "pdf_url": "https://arxiv.org/pdf/2603.06576v1",
