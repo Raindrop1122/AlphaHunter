@@ -1,5 +1,353 @@
 [
   {
+    "id": "2603.11046v1",
+    "title": "On Utility Maximization under Multivariate Fake Stationary Affine Volterra Models",
+    "pdf_url": "https://arxiv.org/pdf/2603.11046v1",
+    "published": "2026-03-11",
+    "crawled_at": "2026-03-12 20:20:07",
+    "ai_score": 7.5,
+    "translated_title": "基于多元伪平稳仿射Volterra模型的效用最大化研究",
+    "summary_en": [
+      "• Model Architecture: Multivariate fake stationary Volterra-Heston model with non-Markovian and non-semimartingale processes, solved via Riccati backward stochastic differential equations (BSDE) and time-dependent multivariate Riccati-Volterra equations.",
+      "• Data used: Theoretical framework with numerical results on a two-dimensional fake stationary rough Heston model; no empirical market data specified.",
+      "• Performance metrics: Optimal Merton strategies derived in semi-closed form, illustrating impact of stationary rough volatilities on portfolio optimization through numerical examples."
+    ],
+    "summary_cn": [
+      "• 核心模型: 多元伪平稳Volterra-Heston模型，采用非马尔可夫和非半鞅过程，通过Riccati倒向随机微分方程和时变多元Riccati-Volterra方程求解。",
+      "• 数据来源: 理论框架，基于二维伪平稳粗糙Heston模型的数值结果；未指定实际市场数据。",
+      "• 主要结论: 推导出半闭式最优Merton策略，数值示例展示了平稳粗糙波动率对投资组合优化的影响。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; extends Merton's problem to rough volatility settings, potentially capturing persistent volatility effects, but limited by theoretical focus and lack of empirical validation.",
+      "• Implementation Risk: High; non-Markovian and non-semimartingale processes complicate real-time calibration and execution, with semi-closed form solutions requiring numerical approximations.",
+      "• Novelty: Significant; integrates fake stationary affine Volterra models with BSDE methods for portfolio optimization, addressing gaps in classical stochastic control for rough volatility environments."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著；将伪平稳仿射Volterra模型与BSDE方法结合，用于投资组合优化，弥补了粗糙波动率环境下经典随机控制的不足。",
+      "• 实盘坑: 高；非马尔可夫和非半鞅过程使实时校准和执行复杂化，半闭式解需数值近似，可能引入误差。",
+      "• 复现难度: 中等；依赖高级数学工具如Riccati-Volterra方程，但提供了数值示例，有助于部分实现。"
+    ],
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2603.11045v1",
+    "title": "Neural Field Thermal Tomography: A Differentiable Physics Framework for Non-Destructive Evaluation",
+    "pdf_url": "https://arxiv.org/pdf/2603.11045v1",
+    "published": "2026-03-11",
+    "crawled_at": "2026-03-12 20:20:28",
+    "ai_score": 8.2,
+    "translated_title": "神经场热层析成像：基于可微分物理框架的无损评估方法",
+    "summary_en": [
+      "• Model Architecture: NeFTY parameterizes 3D diffusivity as a continuous neural field optimized through a differentiable physics solver, enforcing thermodynamic laws as hard constraints while maintaining memory efficiency for high-resolution 3D tomography.",
+      "• Data used: Experimental validation was conducted on synthetic data, with the framework designed for transient surface temperature measurements to reconstruct material properties.",
+      "• Performance metrics: The approach significantly improves accuracy in subsurface defect localization over baselines, effectively mitigating spectral bias and ill-posedness in inverse heat conduction problems."
+    ],
+    "summary_cn": [
+      "• 核心模型: NeFTY将三维扩散率参数化为连续神经场，通过可微分物理求解器进行优化，以硬约束形式强制执行热力学定律，同时保持高分辨率三维层析成像的内存效率。",
+      "• 数据来源: 使用合成数据进行实验验证，框架基于瞬态表面温度测量来重建材料属性。",
+      "• 主要结论: 该方法在亚表面缺陷定位精度上显著优于基线，有效缓解了逆热传导中的谱偏差和不适定性问题。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for quantitative edge in non-destructive testing applications, particularly in industrial inspection and material science, where accurate 3D defect reconstruction can lead to predictive maintenance advantages.",
+      "• Implementation Risk: Moderate risk due to reliance on synthetic data validation; real-world deployment may face challenges with noise, sensor limitations, and computational demands in high-resolution settings.",
+      "• Novelty: Strong novelty in combining neural fields with differentiable physics solvers for inverse problems, addressing limitations of traditional thermography and PINNs in transient diffusion scenarios."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将神经场与可微分物理求解器结合用于逆问题，解决了传统热成像和PINNs在瞬态扩散场景中的局限性，具有显著的算法创新。",
+      "• 实盘坑: 依赖合成数据验证，实际部署可能面临噪声、传感器限制和高分辨率下的计算需求挑战，风险中等。",
+      "• 复现难度: 复现难度较高，需要专业知识在可微分物理和神经场优化，以及处理逆热传导问题的数值求解器实现。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.11042v1",
+    "title": "V2M-Zero: Zero-Pair Time-Aligned Video-to-Music Generation",
+    "pdf_url": "https://arxiv.org/pdf/2603.11042v1",
+    "published": "2026-03-11",
+    "crawled_at": "2026-03-12 20:20:53",
+    "ai_score": 8.2,
+    "translated_title": "V2M-Zero：零配对时间对齐的视频到音乐生成",
+    "summary_en": [
+      "• Model Architecture: V2M-Zero uses a zero-pair approach that fine-tunes a text-to-music model on music-event curves derived from intra-modal similarity, then substitutes video-event curves at inference without cross-modal training or paired data.",
+      "• Data used: The method is evaluated on OES-Pub, MovieGenBench-Music, and AIST++ datasets, leveraging pretrained music and video encoders to compute event curves without requiring paired video-music data.",
+      "• Performance metrics: Achieves 5-21% higher audio quality, 13-15% better semantic alignment, 21-52% improved temporal synchronization, and 28% higher beat alignment on dance videos compared to paired-data baselines, with results validated via crowd-source subjective listening tests."
+    ],
+    "summary_cn": [
+      "• 核心模型: V2M-Zero采用零配对方法，通过预训练的音乐和视频编码器计算模态内相似性的事件曲线，微调文本到音乐模型后，在推理时替换为视频事件曲线，无需跨模态训练或配对数据。",
+      "• 数据来源: 在OES-Pub、MovieGenBench-Music和AIST++数据集上进行评估，利用预训练编码器生成事件曲线，不依赖配对视频-音乐数据。",
+      "• 主要结论: 相比配对数据基线，在音频质量、语义对齐、时间同步和节拍对齐方面实现显著提升，验证了通过模态内特征而非跨模态监督实现时间对齐的有效性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for applications in automated content creation (e.g., video editing, gaming, advertising) where temporal alignment is critical, but direct financial alpha may be limited to niche quant strategies involving multimedia data analysis.",
+      "• Implementation Risk: Moderate risk due to reliance on pretrained encoders and the need for high-quality video input; performance may degrade with noisy or low-resolution videos, and computational costs for real-time generation could be prohibitive.",
+      "• Novelty: Novel approach in leveraging intra-modal temporal structure for cross-modal alignment without paired data, offering a simpler and more scalable alternative to traditional supervised methods, though building on existing text-to-music models."
+    ],
+    "verdict_cn": [
+      "• 创新点: 创新性地利用模态内时间结构实现跨模态对齐，无需配对数据，简化了训练流程并提高了可扩展性，但基于现有文本到音乐模型构建。",
+      "• 实盘坑: 依赖预训练编码器，对视频输入质量敏感，噪声或低分辨率视频可能导致性能下降；实时生成的计算成本较高，可能限制实际应用。",
+      "• 复现难度: 中等难度，需要预训练的音乐和视频编码器以及文本到音乐模型，但开源代码和数据集可用性可能降低复现门槛。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2603.11021v1",
+    "title": "Leech Lattice Vector Quantization for Efficient LLM Compression",
+    "pdf_url": "https://arxiv.org/pdf/2603.11021v1",
+    "published": "2026-03-11",
+    "crawled_at": "2026-03-12 20:21:16",
+    "ai_score": 8.5,
+    "translated_title": "Leech格向量量化用于高效大语言模型压缩",
+    "summary_en": [
+      "• Model Architecture: Introduces Leech Lattice Vector Quantization (LLVQ), leveraging the 24-dimensional Leech lattice's optimal sphere packing properties for parameter block encoding, with extensions for indexing, angular search over lattice shells, and parallel dequantization kernels.",
+      "• Data used: Implicitly relies on standard LLM parameters (weights/activations) from pre-trained models; no specific dataset mentioned, focusing on compression of model parameters rather than training data.",
+      "• Performance metrics: Achieves state-of-the-art LLM quantization performance, outperforming recent methods like Quip#, QTIP, and PVQ, with improvements in compression efficiency and theoretical bounds."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出Leech格向量量化（LLVQ），利用24维Leech格的最优球堆积特性对参数块进行编码，扩展了索引、格壳角度搜索和并行反量化内核。",
+      "• 数据来源: 基于预训练大语言模型的参数（权重/激活值），未提及具体数据集，专注于模型参数的压缩而非训练数据。",
+      "• 主要结论: 在LLM量化性能上达到最先进水平，优于Quip#、QTIP和PVQ等方法，提升了压缩效率和理论界限。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High, as efficient LLM compression reduces inference costs and enables deployment on resource-constrained devices, potentially enhancing trading strategy scalability and latency in NLP-based models.",
+      "• Implementation Risk: Moderate; while the algorithm avoids explicit codebook storage, the complexity of Leech lattice operations and indexing may introduce computational overhead or integration challenges in production systems.",
+      "• Novelty: Significant, by applying the mathematically optimal Leech lattice to LLM quantization, bridging information theory and practical compression, though builds on existing lattice and Golay code foundations."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著，将数学上最优的Leech格应用于LLM量化，结合信息论和实际压缩，但基于现有格和Golay码基础。",
+      "• 实盘坑: 中等；算法避免显式码本存储，但Leech格操作和索引的复杂性可能在生产系统中引入计算开销或集成挑战。",
+      "• 复现难度: 较高，需要深入理解格理论和扩展Golay码构造，并行内核实现可能依赖特定硬件优化。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.11000v1",
+    "title": "Cross-Species Transfer Learning for Electrophysiology-to-Transcriptomics Mapping in Cortical GABAergic Interneurons",
+    "pdf_url": "https://arxiv.org/pdf/2603.11000v1",
+    "published": "2026-03-11",
+    "crawled_at": "2026-03-12 20:21:42",
+    "ai_score": 7.5,
+    "translated_title": "跨物种迁移学习用于皮层GABA能中间神经元电生理学-转录组学映射",
+    "summary_en": [
+      "• Model Architecture: Attention-based BiLSTM operating directly on structured IPFX feature-family representation, with cross-species transfer learning framework (pretrain on mouse, fine-tune on human)",
+      "• Data used: 3,699 mouse visual cortex neurons and 506 human neocortical neurons from Allen Institute Patch-seq datasets, focusing on GABAergic interneuron subclasses (Lamp5, Pvalb, Sst, Vip)",
+      "• Performance metrics: Improved human macro-F1 score in cross-species transfer setting compared to human-only training baseline, matching feature-engineered random forest baselines in mouse data",
+      "• Key innovation: Avoids sparse PCA preprocessing by using sequence models with attention mechanisms for feature-family-level interpretability"
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于注意力的双向LSTM模型，直接处理结构化IPFX特征族表示，采用跨物种迁移学习框架（小鼠预训练，人类微调）",
+      "• 数据来源: 艾伦研究所Patch-seq数据集，包含3,699个小鼠视觉皮层神经元和506个人类新皮层神经元，聚焦GABA能中间神经元亚类",
+      "• 主要结论: 跨物种迁移学习相比仅人类数据训练基线提升了人类数据宏F1分数，在小鼠数据中匹配特征工程随机森林基线性能",
+      "• 方法优势: 通过注意力机制实现特征族级可解释性，避免稀疏PCA预处理步骤"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - Cross-species transfer learning approach shows measurable gains but limited to specific neuroscience domain; potential for adaptation to financial cross-market/asset-class prediction tasks",
+      "• Implementation Risk: High - Requires specialized electrophysiological datasets with aligned subclass structures; human data scarcity (506 samples) limits statistical power and generalizability",
+      "• Novelty: Moderate - Attention-based sequence models for structured feature representation is innovative, but cross-species transfer in neuroscience has precedent; main contribution is application to electrophysiology-transcriptomics mapping",
+      "• Scalability Concerns: Limited by availability of aligned multi-species datasets; computational requirements for BiLSTM with attention may be substantial for large-scale applications"
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等 - 将注意力机制序列模型应用于结构化特征表示避免PCA预处理，跨物种迁移框架在神经科学领域有应用价值但非首创",
+      "• 实盘坑: 高 - 依赖对齐的跨物种电生理数据集，人类样本仅506个统计效力不足，模型对数据质量敏感，领域迁移到金融需重大调整",
+      "• 复现难度: 中等 - 需要获取艾伦研究所专业数据集和IPFX特征处理流程，但方法描述相对清晰，计算资源要求可控",
+      "• 扩展性: 有限 - 受限于对齐多物种数据可获得性，模型架构可能难以扩展到更复杂或更大规模预测任务"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.10995v1",
+    "title": "Factorized Neural Implicit DMD for Parametric Dynamics",
+    "pdf_url": "https://arxiv.org/pdf/2603.10995v1",
+    "published": "2026-03-11",
+    "crawled_at": "2026-03-12 20:22:02",
+    "ai_score": 8.2,
+    "translated_title": "参数化动力学的因子化神经隐式动态模态分解",
+    "summary_en": [
+      "• Model Architecture: Proposes a physics-coded neural field parameterization of the Koopman operator's spectral decomposition, learning a factorized flow operator that decouples spatial modes and temporal evolution.",
+      "• Data used: Demonstrates efficacy on a range of dynamics problems, implying synthetic or experimental spatiotemporal data from physical systems, though specific datasets are not detailed in the abstract.",
+      "• Performance metrics: Showcases accurate prediction of complex spatiotemporal phenomena, enabling stable long-term rollouts, interpolation across parameter spaces, and spectral analysis for dynamic behavior insights."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出基于Koopman算子谱分解的物理编码神经场参数化方法，学习解耦空间模式与时间演化的因子化流算子。",
+      "• 数据来源: 在多种动力学问题上验证有效性，暗示使用物理系统的合成或实验时空数据，但摘要未具体说明数据集。",
+      "• 主要结论: 模型能准确预测复杂时空现象，支持长期稳定推演、参数空间插值和谱分析，揭示系统动态行为。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for quantitative strategies involving spatiotemporal forecasting in physics-based systems (e.g., fluid dynamics, climate models), enabling efficient simulation and parameter sensitivity analysis.",
+      "• Implementation Risk: Moderate; requires expertise in neural fields and Koopman theory, and real-world data integration may face challenges with noise and scalability.",
+      "• Novelty: Significant; combines neural implicit representations with factorized DMD for parametric dynamics, offering a structured approach to learning spectral decompositions without explicit governing equations."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将神经隐式表示与因子化动态模态分解结合，用于参数化动力学，提供无需显式控制方程学习谱分解的结构化方法。",
+      "• 实盘坑: 需神经场和Koopman理论专业知识，实际数据集成可能受噪声和可扩展性挑战，实时控制应用尚待验证。",
+      "• 复现难度: 中等偏高；依赖复杂神经网络架构和物理编码，开源代码和详细超参数设置对成功复现至关重要。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2603.10992v1",
+    "title": "Bayesian Optimization with Gaussian Processes to Accelerate Stationary Point Searches",
+    "pdf_url": "https://arxiv.org/pdf/2603.10992v1",
+    "published": "2026-03-11",
+    "crawled_at": "2026-03-12 20:22:28",
+    "ai_score": 8.2,
+    "translated_title": "基于高斯过程的贝叶斯优化加速势能面驻点搜索",
+    "summary_en": [
+      "• Model Architecture: Unified Bayesian Optimization framework with Gaussian Process regression using derivative observations, inverse-distance kernels, and active learning. Extensions include Optimal Transport GP with farthest point sampling, MAP regularization via variance barrier, and adaptive trust radius.",
+      "• Data used: Derivative observations from potential energy surface evaluations, with random Fourier features enabling decoupled hyperparameter training for high-dimensional systems.",
+      "• Performance metrics: Reduces required evaluations by an order of magnitude while preserving theoretical accuracy, with improved efficiency and accuracy through extensions like oscillation detection and adaptive trust radius.",
+      "• Implementation: Pedagogical Rust code demonstrates identical Bayesian optimization loop across minimization, single-point saddle searches, and double-ended saddle searches."
+    ],
+    "summary_cn": [
+      "• 核心模型: 统一的贝叶斯优化框架，采用高斯过程回归结合导数观测、逆距离核和主动学习。扩展包括最优传输高斯过程、最远点采样、MAP正则化和自适应信任半径。",
+      "• 数据来源: 势能面评估中的导数观测数据，随机傅里叶特征实现高维系统超参数训练与预测解耦。",
+      "• 主要结论: 将所需评估次数减少一个数量级，同时保持理论精度；通过振荡检测和自适应信任半径等扩展提升准确性和效率。",
+      "• 应用范围: 最小化、单点鞍点搜索和双端鞍点搜索均使用相同的六步代理循环，仅内部优化目标和获取准则不同。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for computational chemistry and materials science applications where stationary point searches are computationally expensive; potential transfer to financial optimization problems with high-dimensional parameter spaces.",
+      "• Implementation Risk: Moderate; requires careful tuning of Gaussian Process hyperparameters and trust radius adaptation, with Rust implementation reducing but not eliminating deployment complexity.",
+      "• Novelty: Strong theoretical unification of diverse optimization tasks under single Bayesian framework, with innovative extensions like Optimal Transport GP and variance barrier regularization.",
+      "• Scalability: Random Fourier features enable favorable scaling for high-dimensional systems, but computational cost may still be prohibitive for real-time trading applications."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将多种优化任务统一到单一贝叶斯框架下，理论贡献显著；最优传输高斯过程和方差屏障正则化等扩展具有原创性。",
+      "• 实盘坑: 高斯过程超参数调优复杂，自适应信任半径可能引入不稳定；Rust代码虽好但金融系统集成仍需大量工程化。",
+      "• 复现难度: 中等偏高；需要深入理解贝叶斯优化和高斯过程理论，随机傅里叶特征和最优传输扩展增加实现复杂度。",
+      "• 应用局限: 主要针对计算化学领域，金融场景需验证；高维系统虽可扩展但实时性可能不足。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2603.10991v1",
+    "title": "ForwardFlow: Simulation only statistical inference using deep learning",
+    "pdf_url": "https://arxiv.org/pdf/2603.10991v1",
+    "published": "2026-03-11",
+    "crawled_at": "2026-03-12 20:22:51",
+    "ai_score": 7.5,
+    "translated_title": "ForwardFlow：基于深度学习的纯模拟统计推断",
+    "summary_en": [
+      "• Model Architecture: Proposes a branched neural network with collapsing layers that reduce datasets to summary statistics, followed by fully connected layers to approximate parameter estimates, using a single summary network for frequentist inference.",
+      "• Data used: Simulated datasets generated from parametric models during training, with varying sample sizes, contaminated data, and data requiring algorithmic reconstruction to achieve robustness and approximation properties.",
+      "• Performance metrics: Demonstrates finite sample exactness, robustness to data contamination, and algorithm approximation (e.g., approximating an EM-algorithm for genetic data) in simulations, though lacks real-world validation or benchmark comparisons."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出分支神经网络结构，包含压缩层将数据集降维为摘要统计量，再通过全连接层近似参数估计，用于频率统计推断。",
+      "• 数据来源: 训练阶段基于参数模型生成模拟数据，包括不同样本量、污染数据和需算法重构的数据，以增强鲁棒性。",
+      "• 主要结论: 在模拟中展示参数估计的有限样本精确性、对数据污染的鲁棒性及算法近似能力（如自动近似遗传数据的EM算法），但未提供实际数据验证。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the simulation-only approach could reduce computational costs in complex models (e.g., high-dimensional finance), but lacks empirical proof in financial datasets or alpha generation.",
+      "• Implementation Risk: High; reliance on simulated data may not generalize to real-world market noise, and the branched architecture could be prone to overfitting without robust regularization.",
+      "• Novelty: Moderate; builds on existing deep learning for inverse problems, but the focus on frequentist models and branched structure offers incremental innovation over prior Bayesian flow-based methods."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将深度学习应用于频率统计模型的纯模拟推断，分支网络结构在理论上有一定新意，但整体属于现有技术的扩展。",
+      "• 实盘坑: 依赖模拟数据训练，可能无法适应真实市场的高噪声和非平稳性，模型泛化能力存疑，实盘应用风险高。",
+      "• 复现难度: 中等；需要生成大量模拟数据并设计分支网络，但论文未提供完整代码或超参数细节，可能增加复现挑战。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.10987v1",
+    "title": "MCMC Informed Neural Emulators for Uncertainty Quantification in Dynamical Systems",
+    "pdf_url": "https://arxiv.org/pdf/2603.10987v1",
+    "published": "2026-03-11",
+    "crawled_at": "2026-03-12 20:23:17",
+    "ai_score": 7.8,
+    "translated_title": "基于MCMC信息神经模拟器的动态系统不确定性量化",
+    "summary_en": [
+      "• Model Architecture: Introduces a decoupled approach where MCMC sampling of model parameters is used as input to neural network training, rather than sampling network weights directly. Two specific architectures are presented: a quantile emulator for prediction and an autoencoder-based ODE network emulator for flexible trajectory estimation.",
+      "• Data used: The method is applied to dynamical systems with parametric uncertainty, where direct parameter screening or random sampling is computationally expensive. Training data is generated from physical models using MCMC to sample from the model-parameter distribution, avoiding evaluations at unphysical parameter values.",
+      "• Performance metrics: The surrogate achieves uncertainty quantification comparable to the underlying physical model but with significantly reduced computation time. A mathematical analysis is provided to relate potential performance loss to measurable distribution mismatch, offering transparency in evaluation."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出一种解耦方法，通过MCMC采样模型参数作为神经网络训练的输入，而非直接采样网络权重。具体包括用于预测的分位数模拟器和基于自编码器的ODE网络模拟器，用于灵活估计不同参数下的轨迹路径。",
+      "• 数据来源: 应用于具有参数不确定性的动态系统，通过MCMC从模型参数分布中采样生成训练数据，避免在非物理参数值上进行评估，解决了直接参数筛选或随机采样导致计算成本高的问题。",
+      "• 主要结论: 模拟器在不确定性量化方面达到与底层物理模型相当的水平，但计算时间大幅减少。提供数学分析将潜在性能损失与可测量的分布不匹配关联起来，增强了方法的透明度和可解释性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate. The method could enhance risk modeling in quantitative finance by providing efficient uncertainty quantification for complex dynamical systems (e.g., in options pricing or volatility forecasting), but direct alpha generation is limited without specific financial applications.",
+      "• Implementation Risk: High. Integrating MCMC with neural networks introduces computational complexity and potential convergence issues; the reliance on accurate prior distributions for model parameters may not hold in noisy financial data, increasing model risk.",
+      "• Novelty: High. The decoupling of uncertainty quantification from network architecture and the use of MCMC-informed training are innovative, offering a transparent and flexible approach that is agnostic to neural network choice, though similar ideas exist in Bayesian deep learning."
+    ],
+    "verdict_cn": [
+      "• 创新点: 较高。将不确定性量化与网络架构解耦，并通过MCMC信息训练输入模型参数分布，提供了一种透明且灵活的方法，不依赖于特定神经网络选择，在贝叶斯深度学习领域有类似思路但应用新颖。",
+      "• 实盘坑: 高。MCMC与神经网络的结合增加了计算复杂性和收敛风险；依赖模型参数的准确先验分布在嘈杂的金融数据中可能不成立，提升模型风险；需要大量调参以确保性能。",
+      "• 复现难度: 中等。方法描述清晰，但实现需专业知识在MCMC采样和神经网络训练之间协调；开源代码或详细实验设置未提及，可能增加复现障碍。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2603.10985v1",
+    "title": "The Discrete Charm of the MLP: Binary Routing of Continuous Signals in Transformer Feed-Forward Layers",
+    "pdf_url": "https://arxiv.org/pdf/2603.10985v1",
+    "published": "2026-03-11",
+    "crawled_at": "2026-03-12 20:23:48",
+    "ai_score": 8.2,
+    "translated_title": "MLP的离散魅力：Transformer前馈层中连续信号的二进制路由",
+    "summary_en": [
+      "• Model Architecture: Analyzes MLP layers in GPT-2 Small (124M parameters), revealing binary routing mechanisms where specific neurons act as consensus architectures (e.g., 7 default-ON neurons and 1 exception handler) with 93-98% mutual exclusivity, forming a binary switch for token processing decisions.",
+      "• Data used: Implicitly uses standard language model training data (not specified in abstract), with analysis focused on internal activations and routing patterns across transformer layers (L1-11) in GPT-2.",
+      "• Performance metrics: Shows functional validation through causal experiments: removing MLP at consensus breakdown costs 43.3% perplexity vs. 10.1% at full consensus (4x difference). Binary vs. continuous feature comparison yields 79.2% vs. 78.8% accuracy for routing decisions, with continuous activations providing additional magnitude information (R^2 = 0.36 vs. 0.22)."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于GPT-2 Small（1.24亿参数）的MLP层分析，揭示二进制路由机制：特定神经元（如7个默认开启神经元和1个异常处理器）形成共识架构，互斥率达93-98%，实现令牌处理决策的二进制开关。",
+      "• 数据来源: 未明确指定，但隐含使用标准语言模型训练数据，分析重点在于GPT-2中Transformer层（L1-11）的内部激活和路由模式。",
+      "• 主要结论: 通过因果实验验证路由功能：共识崩溃时移除MLP导致困惑度增加43.3%，而完全共识时仅增加10.1%（差异超4倍）。二进制与连续特征比较显示路由决策准确率分别为79.2%和78.8%，连续激活提供额外幅度信息（R^2为0.36 vs. 0.22）。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for NLP/LLM optimization strategies; binary routing insights could enable more efficient model pruning, activation sparsification, or novel architectures that reduce computational overhead while maintaining performance, potentially lowering inference costs in trading signal generation.",
+      "• Implementation Risk: Moderate; findings are specific to GPT-2 Small and may not generalize to larger models or different architectures without further validation. Real-time deployment in trading systems requires robust testing to avoid performance degradation from over-simplification.",
+      "• Novelty: Significant; introduces a binary routing characterization complementing piecewise-affine theory, with empirical evidence (e.g., cross-validated polynomial fits never exceed R^2 = 0.06) challenging smooth approximations and offering fresh perspectives on transformer internals."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著；提出二进制路由特征补充分段仿射理论，实证证据（如交叉验证多项式拟合R^2不超过0.06）挑战平滑近似，为Transformer内部机制提供新视角。",
+      "• 实盘坑: 中等；结果基于GPT-2 Small，可能不泛化至更大模型或不同架构，需进一步验证。交易系统实时部署需严格测试，避免过度简化导致性能下降。",
+      "• 复现难度: 低至中等；方法依赖标准模型和内部激活分析，技术门槛可控，但需精细调参和计算资源来验证跨层模式。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
     "id": "2603.09974v1",
     "title": "Task Aware Modulation Using Representation Learning for Upsaling of Terrestrial Carbon Fluxes",
     "pdf_url": "https://arxiv.org/pdf/2603.09974v1",
