@@ -1,5 +1,361 @@
 [
   {
+    "id": "2603.12261v1",
+    "title": "The Latent Color Subspace: Emergent Order in High-Dimensional Chaos",
+    "pdf_url": "https://arxiv.org/pdf/2603.12261v1",
+    "published": "2026-03-12",
+    "crawled_at": "2026-03-13 20:19:01",
+    "ai_score": 7.5,
+    "translated_title": "潜在颜色子空间：高维混沌中的涌现秩序",
+    "summary_en": [
+      "• Model Architecture: The paper analyzes the Variational Autoencoder (VAE) latent space of FLUX.1, a text-to-image generation model, focusing on color representation. It introduces the Latent Color Subspace (LCS) interpretation, which identifies structures corresponding to Hue, Saturation, and Lightness in the latent space.",
+      "• Data used: The study utilizes the FLUX.1 model, which is trained on large-scale image-text datasets (e.g., LAION-5B or similar), though specific datasets are not detailed in the abstract. The analysis is based on latent-space manipulations without additional training data.",
+      "• Performance metrics: The method demonstrates the ability to predict and control color in generated images through closed-form latent-space manipulations, verified by qualitative assessments of color accuracy and control, but quantitative metrics are not provided in the abstract."
+    ],
+    "summary_cn": [
+      "• 核心模型: 该研究基于FLUX.1的变分自编码器（VAE）潜在空间，提出潜在颜色子空间（LCS）解释，揭示颜色（色调、饱和度、亮度）在潜在空间中的结构化表示。",
+      "• 数据来源: 使用FLUX.1模型，该模型在大规模图像-文本数据集（如LAION-5B）上训练，但摘要中未指定具体数据集；分析仅依赖潜在空间操作，无需额外数据。",
+      "• 主要结论: 通过闭式潜在空间操作，LCS能够预测并显式控制生成图像的颜色，验证了颜色编码的结构化理解，为细粒度图像控制提供无训练方法。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low direct alpha potential for financial markets, as the focus is on image generation rather than financial data; however, it could inspire latent-space interpretability techniques for time-series or high-dimensional financial models, offering indirect value in model explainability.",
+      "• Implementation Risk: High risk due to reliance on specific model architectures (FLUX.1 VAE) and lack of quantitative benchmarks; real-world application in finance would require adaptation to noisy, non-stationary data, increasing complexity and uncertainty.",
+      "• Novelty: Moderate novelty in introducing a training-free, closed-form method for color control in text-to-image models, but limited to a niche application; the concept of latent subspace analysis is not new, though its application to color representation is incremental."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出无训练的闭式潜在空间操作方法，用于文本到图像模型中的颜色控制，在可解释性方面有贡献，但创新性中等，主要针对特定模型（FLUX.1）的颜色子空间分析。",
+      "• 实盘坑: 高风险，依赖FLUX.1特定架构，缺乏量化性能指标；金融应用需处理噪声和非平稳数据，适配难度大，实际效果不确定。",
+      "• 复现难度: 中等难度，代码已开源，但需FLUX.1模型和环境设置；潜在空间操作涉及数学推导，可能需专业知识，复现过程相对直接但非 trivial。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2603.12255v1",
+    "title": "Spatial-TTT: Streaming Visual-based Spatial Intelligence with Test-Time Training",
+    "pdf_url": "https://arxiv.org/pdf/2603.12255v1",
+    "published": "2026-03-12",
+    "crawled_at": "2026-03-13 20:19:21",
+    "ai_score": 7.8,
+    "translated_title": "Spatial-TTT：基于测试时训练的流式视觉空间智能",
+    "summary_en": [
+      "• Model Architecture: Hybrid architecture with test-time training (TTT) adapting fast weights, large-chunk updates parallel with sliding-window attention, and spatial-predictive mechanism using 3D spatiotemporal convolution for geometric correspondence and temporal continuity.",
+      "• Data used: Constructed dataset with dense 3D spatial descriptions to guide model updates for memorizing and organizing global 3D spatial signals in a structured manner.",
+      "• Performance metrics: Achieves state-of-the-art performance on video spatial benchmarks, demonstrating improved long-horizon spatial understanding through extensive experiments."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用混合架构，结合测试时训练（TTT）动态调整快速权重，并行大块更新与滑动窗口注意力机制，并引入基于3D时空卷积的空间预测机制以增强几何对应和时序连续性。",
+      "• 数据来源: 构建了包含密集3D空间描述的数据集，用于指导模型更新，以结构化方式记忆和组织全局3D空间信号。",
+      "• 主要结论: 在视频空间基准测试中达到最先进性能，通过大量实验验证了其在长时程空间理解方面的改进。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; could enhance spatial-temporal modeling in algorithmic trading for market microstructure analysis or event-driven strategies, but direct financial application unclear.",
+      "• Implementation Risk: High; requires dense 3D spatial data and complex TTT adaptation, posing scalability and real-time processing challenges in financial environments.",
+      "• Novelty: High; innovative use of TTT for streaming spatial intelligence with hybrid architecture and spatial-predictive mechanisms, though limited to visual domains without explicit financial adaptation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 较高；将测试时训练（TTT）应用于流式空间智能，结合混合架构和空间预测机制，在视觉领域具有新颖性，但缺乏金融场景的直接适配。",
+      "• 实盘坑: 高；依赖密集3D空间数据和复杂TTT调整，在金融环境中面临可扩展性和实时处理挑战，数据获取和计算成本可能成为瓶颈。",
+      "• 复现难度: 中等；需要构建特定数据集和实现复杂架构，但方法描述相对清晰，复现可行但资源密集。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2603.12248v1",
+    "title": "Matching Features, Not Tokens: Energy-Based Fine-Tuning of Language Models",
+    "pdf_url": "https://arxiv.org/pdf/2603.12248v1",
+    "published": "2026-03-12",
+    "crawled_at": "2026-03-13 20:19:43",
+    "ai_score": 8.2,
+    "translated_title": "匹配特征而非标记：基于能量的语言模型微调",
+    "summary_en": [
+      "• Model Architecture: Introduces Energy-Based Fine-Tuning (EBFT) with strided block-parallel sampling for generating multiple rollouts from nested prefixes concurrently, enabling efficient on-policy policy-gradient updates through batched feature extraction.",
+      "• Data used: Evaluated across Q&A coding, unstructured coding, and translation tasks, though specific datasets are not detailed in the abstract; likely uses standard benchmarks for these domains.",
+      "• Performance metrics: EBFT matches RLVR and outperforms Supervised Fine-Tuning (SFT) on downstream accuracy while achieving lower validation cross-entropy than both methods, indicating improved sequence-level behavior without task-specific verifiers."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出基于能量的微调（EBFT），采用跨步块并行采样从嵌套前缀并发生成多个展开，通过批量特征提取实现高效的在策略策略梯度更新。",
+      "• 数据来源: 在问答编码、非结构化编码和翻译任务上进行评估，可能使用这些领域的标准基准数据集，但摘要中未具体说明。",
+      "• 主要结论: EBFT在匹配RLVR的同时，在下游准确率上超越监督微调（SFT），且验证交叉熵低于两种方法，表明无需任务特定验证器即可改善序列级行为。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for improving language model performance in sequence-level tasks by optimizing feature matching rather than token prediction, which could enhance semantic coherence and reduce hallucination in financial text generation or coding applications.",
+      "• Implementation Risk: Moderate risk due to reliance on efficient sampling techniques and on-policy updates, which may require significant computational resources and careful hyperparameter tuning for stable training in real-world scenarios.",
+      "• Novelty: Novel approach combining energy-based modeling with feature-matching objectives for fine-tuning, offering a theoretical connection to KL-regularized methods and practical advantages over traditional cross-entropy training without needing external verifiers."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将基于能量的建模与特征匹配目标结合用于微调，理论连接KL正则化方法，无需外部验证器即可超越传统交叉熵训练，在序列级优化上具有突破性。",
+      "• 实盘坑: 依赖高效采样技术和在策略更新，计算资源需求高，超参数调优复杂，在实际部署中可能面临训练不稳定和扩展性挑战。",
+      "• 复现难度: 中等偏高，需要实现跨步块并行采样和批量特征提取，对硬件和代码优化要求较高，但开源实现可能降低门槛。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.12246v1",
+    "title": "Examining Reasoning LLMs-as-Judges in Non-Verifiable LLM Post-Training",
+    "pdf_url": "https://arxiv.org/pdf/2603.12246v1",
+    "published": "2026-03-12",
+    "crawled_at": "2026-03-13 20:20:06",
+    "ai_score": 7.5,
+    "translated_title": "在不可验证的LLM后训练中检验推理型LLM作为评判者的能力",
+    "summary_en": [
+      "• Model Architecture: The study compares non-reasoning and reasoning LLM judges in a reinforcement-learning-based alignment framework, using GPT-OSS-120B as a 'gold-standard' judge to train smaller models.",
+      "• Data used: Controlled synthetic setting with preference annotations generated by the gold-standard judge; evaluation includes Arena-Hard benchmark and adversarial outputs.",
+      "• Performance metrics: Reasoning judges lead to policies that achieve strong performance when evaluated by the gold-standard judge, while non-reasoning judges cause reward hacking.",
+      "• Key finding: Reasoning-judge-trained policies learn to generate adversarial outputs that deceive other LLM-judges on benchmarks, highlighting potential manipulation risks."
+    ],
+    "summary_cn": [
+      "• 核心模型: 研究比较了非推理型和推理型LLM评判者在基于强化学习的对齐框架中的表现，使用GPT-OSS-120B作为'黄金标准'评判者来训练较小模型。",
+      "• 数据来源: 采用受控合成设置，由黄金标准评判者生成偏好标注；评估包括Arena-Hard基准和对抗性输出。",
+      "• 主要结论: 推理型评判者训练的模型在黄金标准评判者评估下表现强劲，而非推理型评判者易导致奖励黑客行为。",
+      "• 关键发现: 推理型评判者训练的模型学会生成对抗性输出，能在基准测试中欺骗其他LLM评判者，突显操纵风险。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the study identifies reasoning judges as more robust in non-verifiable domains, but adversarial outputs may limit real-world applicability and require careful validation.",
+      "• Implementation Risk: High; reward hacking with non-reasoning judges and deception by reasoning-judge-trained policies pose significant risks in deployment, potentially leading to unreliable model outputs.",
+      "• Novelty: Moderate; the focus on reasoning judges in non-verifiable LLM post-training is innovative, but the use of synthetic data and known benchmarks reduces groundbreaking impact."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；研究在不可验证的LLM后训练中聚焦推理型评判者，但依赖合成数据和已知基准降低了突破性。",
+      "• 实盘坑: 高；非推理型评判者的奖励黑客问题和推理型评判者训练的模型的欺骗行为在部署中风险大，可能导致输出不可靠。",
+      "• 复现难度: 中等；受控合成设置和黄金标准评判者使用增加了复杂性，但方法描述清晰，可基于公开资源部分复现。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.12244v1",
+    "title": "Separable neural architectures as a primitive for unified predictive and generative intelligence",
+    "pdf_url": "https://arxiv.org/pdf/2603.12244v1",
+    "published": "2026-03-12",
+    "crawled_at": "2026-03-13 20:20:29",
+    "ai_score": 8.2,
+    "translated_title": "可分离神经架构作为统一预测与生成智能的基础组件",
+    "summary_en": [
+      "• Model Architecture: Introduces Separable Neural Architecture (SNA) that formalizes factorizable representations through additive, quadratic, and tensor-decomposed models with constraints on interaction order and tensor rank",
+      "• Data used: Applied across four domains: autonomous navigation via reinforcement learning, inverse generation of multifunctional microstructures, distributional modeling of turbulent flow, and neural language modeling",
+      "• Performance metrics: Demonstrates compositional versatility by unifying deterministic and distributional representations while mitigating nonphysical drift in chaotic systems",
+      "• Key innovation: Establishes structural analogy between chaotic spatiotemporal dynamics and linguistic autoregression through coordinate-aware formulation"
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出可分离神经架构(SNA)，通过加性、二次和分解张量模型形式化可分解表示，约束交互阶数和张量秩",
+      "• 数据来源: 应用于四个领域：强化学习的自主导航、多功能微结构的逆向生成、湍流的分布建模、神经语言建模",
+      "• 主要结论: 通过坐标感知公式揭示混沌时空动力学与语言自回归之间的结构类比，统一确定性和分布性表示",
+      "• 技术优势: 在保持离散序列适用性的同时，减轻确定性算子的非物理漂移特性"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High - SNA's factorizable structure could identify latent market regimes and cross-asset relationships that monolithic models miss, particularly in high-dimensional financial time series",
+      "• Implementation Risk: Medium-High - Requires careful tuning of interaction order and tensor rank constraints; coordinate selection for financial applications is non-trivial",
+      "• Novelty: Significant - Unifies physical and linguistic modeling paradigms through separability principle; coordinate-aware approach is genuinely innovative",
+      "• Practical limitation: Domain adaptation from physical systems to financial markets requires substantial feature engineering and validation"
+    ],
+    "verdict_cn": [
+      "• 创新点: 通过可分离性原则统一物理和语言建模范式，坐标感知方法具有实质性创新，建立跨领域结构类比",
+      "• 实盘坑: 金融应用中的坐标选择复杂，交互阶数和张量秩约束需要精细调参，市场制度转换可能破坏分离性假设",
+      "• 复现难度: 中等偏高，需要实现张量分解和约束优化，但论文提供了清晰的数学框架和四个应用案例",
+      "• 风险提示: 从物理系统到金融市场的领域适应需要大量特征工程，分离性在非平稳金融环境中的稳健性待验证"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2603.12240v1",
+    "title": "BiGain: Unified Token Compression for Joint Generation and Classification",
+    "pdf_url": "https://arxiv.org/pdf/2603.12240v1",
+    "published": "2026-03-12",
+    "crawled_at": "2026-03-13 20:20:54",
+    "ai_score": 8.2,
+    "translated_title": "BiGain：面向联合生成与分类的统一令牌压缩方法",
+    "summary_en": [
+      "• Model Architecture: BiGain introduces a training-free, plug-and-play framework with two frequency-aware operators: Laplacian-gated token merging for selective merging based on spectral smoothness, and Interpolate-Extrapolate KV Downsampling for controlled downsampling of keys/values while preserving queries.",
+      "• Data used: Evaluated on ImageNet-1K, ImageNet-100, Oxford-IIIT Pets, and COCO-2017 datasets using DiT- and U-Net-based diffusion model backbones, including Stable Diffusion 2.0.",
+      "• Performance metrics: On ImageNet-1K with 70% token merging, BiGain increased classification accuracy by 7.15% and improved FID by 0.34 (1.85%), demonstrating enhanced speed-accuracy trade-offs while maintaining or improving generation quality under comparable acceleration."
+    ],
+    "summary_cn": [
+      "• 核心模型: BiGain采用无训练、即插即用框架，包含两个频率感知算子：基于拉普拉斯门控的令牌合并（选择性合并频谱平滑令牌）和插值-外推KV下采样（可控下采样键/值，保留查询）。",
+      "• 数据来源: 在ImageNet-1K、ImageNet-100、Oxford-IIIT Pets和COCO-2017数据集上评估，使用基于DiT和U-Net的扩散模型骨干，包括Stable Diffusion 2.0。",
+      "• 主要结论: 在ImageNet-1K上，70%令牌合并时，BiGain将分类准确率提升7.15%，FID改善0.34（1.85%），在加速条件下平衡了生成质量与判别能力，首次联合优化扩散模型的生成与分类任务。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for multi-modal AI systems requiring efficient inference; the frequency separation principle could generalize to other token-based models (e.g., transformers) for edge deployment in real-time trading signal processing.",
+      "• Implementation Risk: Moderate; plug-and-play design reduces integration complexity, but performance depends on backbone architecture and dataset characteristics, potentially requiring calibration for specific applications.",
+      "• Novelty: Significant as the first framework to jointly address generation and classification in accelerated diffusion models, introducing frequency-aware compression with balanced spectral retention as a novel design rule."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次在加速扩散模型中联合优化生成与分类，提出频率分离原则和平衡频谱保留的设计规则，具有理论突破性。",
+      "• 实盘坑: 性能依赖于骨干模型和数据集，需针对特定任务（如金融时间序列生成）进行调优；无训练特性可能限制在动态环境中的适应性。",
+      "• 复现难度: 中等；开源代码和标准数据集便于验证，但频率算子的实现细节（如拉普拉斯门控）需谨慎处理以确保结果一致性。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.12237v1",
+    "title": "STAMP: Selective Task-Aware Mechanism for Text Privacy",
+    "pdf_url": "https://arxiv.org/pdf/2603.12237v1",
+    "published": "2026-03-12",
+    "crawled_at": "2026-03-13 20:21:20",
+    "ai_score": 8.2,
+    "translated_title": "STAMP：面向文本隐私的选择性任务感知机制",
+    "summary_en": [
+      "• Model Architecture: STAMP introduces a token-level privacy framework that selectively allocates privacy budgets based on token importance to downstream tasks and privacy sensitivity, using a polar mechanism that perturbs only embedding directions on the unit sphere while preserving magnitude.",
+      "• Data used: Evaluated on SQuAD (question answering), Yelp (sentiment analysis), and AG News (text classification) datasets to demonstrate cross-domain applicability.",
+      "• Performance metrics: Achieves superior privacy-utility trade-offs across varying per-token privacy budgets, with decoding via cosine nearest-neighbor search aligning perturbation geometry with decoding geometry.",
+      "• Key innovation: Unlike isotropic noise mechanisms, the polar mechanism maintains semantic neighborhoods in embedding space, better preserving downstream utility while providing fine-grained, group-wise noise control."
+    ],
+    "summary_cn": [
+      "• 核心模型: STAMP采用令牌级隐私框架，根据令牌对下游任务的重要性和隐私敏感性选择性分配隐私预算，通过极坐标机制仅扰动单位球上的嵌入方向而保持幅度不变。",
+      "• 数据来源: 在SQuAD（问答）、Yelp（情感分析）和AG News（文本分类）数据集上进行评估，展示跨领域适用性。",
+      "• 主要结论: 在不同每令牌隐私预算下实现更优的隐私-效用权衡，通过余弦最近邻搜索解码，使扰动几何与解码几何对齐。",
+      "• 技术特点: 与各向同性噪声机制不同，极坐标机制保持嵌入空间中的语义邻域，更好地保留下游效用，同时提供细粒度的组级噪声控制。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for financial NLP applications where privacy-preserving text analysis is critical, such as processing sensitive client communications or regulatory documents while maintaining analytical accuracy.",
+      "• Implementation Risk: Moderate risk due to dependency on accurate token importance and sensitivity estimation; misclassification could lead to either privacy leaks or utility degradation in real-world deployments.",
+      "• Novelty: Strong novelty in combining task-aware token importance with privacy sensitivity for selective budget allocation, and introducing the polar mechanism as a geometrically-aligned alternative to isotropic noise.",
+      "• Practical limitations: Requires task-specific representations for importance scoring, which may limit generalization to unseen tasks without retraining or adaptation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将任务感知的令牌重要性与隐私敏感性结合进行选择性预算分配，引入极坐标机制作为各向同性噪声的几何对齐替代方案，创新性强。",
+      "• 实盘坑: 依赖准确的令牌重要性和敏感性估计，分类错误可能导致隐私泄露或效用下降；需要任务特定表示进行重要性评分，可能限制泛化能力。",
+      "• 复现难度: 中等难度，需实现令牌级隐私预算分配和极坐标机制，但论文提供了清晰的框架描述和实验设置，复现可行性较高。",
+      "• 应用前景: 在金融NLP中处理敏感文本（如客户通信、监管文件）时具有高潜力，但需验证在嘈杂金融数据上的鲁棒性。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.12231v1",
+    "title": "Temporal Straightening for Latent Planning",
+    "pdf_url": "https://arxiv.org/pdf/2603.12231v1",
+    "published": "2026-03-12",
+    "crawled_at": "2026-03-13 20:21:41",
+    "ai_score": 7.5,
+    "translated_title": "潜在规划中的时间拉直方法",
+    "summary_en": [
+      "• Model Architecture: Introduces a joint learning framework with an encoder and predictor, incorporating a curvature regularizer to encourage locally straightened latent trajectories, improving Euclidean distance as a proxy for geodesic distance in latent space.",
+      "• Data used: Evaluated on a suite of goal-reaching tasks, though specific datasets are not detailed in the abstract; likely involves simulated or robotic environments common in latent planning research.",
+      "• Performance metrics: Demonstrates higher success rates across tasks, with gradient-based planning becoming more stable and effective due to reduced curvature in the latent representations."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用编码器与预测器联合学习框架，引入曲率正则化器以促进潜在轨迹的局部拉直，优化潜在空间中欧几里得距离作为测地距离的代理。",
+      "• 数据来源: 基于一系列目标达成任务进行评估，具体数据集未在摘要中说明，可能涉及潜在规划研究中常见的模拟或机器人环境。",
+      "• 主要结论: 通过降低曲率，提高了梯度规划稳定性，并在多个任务中显著提升了成功率，验证了时间拉直对表示学习的有效性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the method could enhance planning efficiency in algorithmic trading by improving latent representations for sequential decision-making, but direct financial applications are untested.",
+      "• Implementation Risk: High; relies on specific curvature regularization and joint training, which may be sensitive to hyperparameters and require extensive tuning for real-world deployment.",
+      "• Novelty: High; innovatively applies perceptual straightening from neuroscience to machine learning, offering a fresh approach to representation learning for planning tasks."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高; 将神经科学中的感知拉直假设引入机器学习，为规划任务的表示学习提供了新颖视角，具有跨学科启发性。",
+      "• 实盘坑: 高; 曲率正则化和联合训练可能对超参数敏感，在复杂金融环境中部署需大量调整，稳定性风险较大。",
+      "• 复现难度: 中等; 模型架构相对清晰，但依赖于特定任务数据和调优，复现可能需模拟环境支持，有一定技术门槛。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2603.12230v1",
+    "title": "Security Considerations for Artificial Intelligence Agents",
+    "pdf_url": "https://arxiv.org/pdf/2603.12230v1",
+    "published": "2026-03-12",
+    "crawled_at": "2026-03-13 20:22:07",
+    "ai_score": 7.5,
+    "translated_title": "人工智能代理的安全考量",
+    "summary_en": [
+      "• Model Architecture: Analyzes frontier AI agent architectures that challenge traditional code-data separation, authority boundaries, and execution predictability, creating new security vulnerabilities.",
+      "• Data used: Based on Perplexity's operational experience with general-purpose agentic systems deployed to millions of users and thousands of enterprises in controlled and open-world environments.",
+      "• Performance metrics: Identifies principal attack surfaces across tools, connectors, hosting boundaries, and multi-agent coordination, with emphasis on indirect prompt injection, confused-deputy behavior, and cascading failures in workflows.",
+      "• Defensive measures: Assesses current defenses as a layered stack including input-level and model-level mitigations, sandboxed execution, and deterministic policy enforcement for high-consequence actions.",
+      "• Research gaps: Highlights standards and research needs including adaptive security benchmarks, policy models for delegation and privilege control, and secure multi-agent system design aligned with NIST principles."
+    ],
+    "summary_cn": [
+      "• 核心模型: 分析前沿AI代理架构，挑战传统代码-数据分离、权限边界和执行可预测性，创造新的安全漏洞模式。",
+      "• 数据来源: 基于Perplexity在受控和开放环境中向数百万用户和数千家企业部署通用代理系统的运营经验。",
+      "• 主要结论: 识别工具、连接器、托管边界和多代理协调的主要攻击面，重点关注间接提示注入、混淆代理行为和长时工作流中的级联故障。",
+      "• 防御措施: 评估当前防御作为分层堆栈，包括输入级和模型级缓解、沙箱执行以及高后果行动的确定性策略执行。",
+      "• 研究缺口: 强调标准和研究需求，包括自适应安全基准、委托和权限控制策略模型，以及符合NIST原则的安全多代理系统设计指导。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - Provides systematic security framework for AI agents that could inform risk management in automated trading systems, but lacks direct financial application.",
+      "• Implementation Risk: High - Agent architectures introduce unpredictable failure modes (confidentiality, integrity, availability) that could lead to catastrophic losses in high-stakes environments.",
+      "• Novelty: Moderate - While mapping attack surfaces for AI agents is timely, the paper adapts existing security concepts (e.g., confused-deputy) rather than introducing groundbreaking new theory.",
+      "• Practical limitations: Based on Perplexity's proprietary experience rather than peer-reviewed research, limiting reproducibility and generalizability across different AI systems."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等 - 将传统安全概念（如混淆代理）系统应用于AI代理环境，但缺乏突破性理论贡献。",
+      "• 实盘坑: 高 - 代理架构引入不可预测的故障模式（机密性、完整性、可用性），在量化交易等高风险环境中可能导致灾难性损失。",
+      "• 复现难度: 中等 - 基于Perplexity专有运营经验而非同行评审研究，不同AI系统的可复现性和普适性受限。",
+      "• 策略价值: 有限 - 为AI代理安全提供框架，可间接支持风险管理，但缺乏直接金融应用或交易信号。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2603.12228v1",
+    "title": "Neural Thickets: Diverse Task Experts Are Dense Around Pretrained Weights",
+    "pdf_url": "https://arxiv.org/pdf/2603.12228v1",
+    "published": "2026-03-12",
+    "crawled_at": "2026-03-13 20:22:29",
+    "ai_score": 7.8,
+    "translated_title": "神经丛林：多样化任务专家密集分布于预训练权重周围",
+    "summary_en": [
+      "• Model Architecture: The paper proposes a novel perspective on pretrained models, viewing them as distributions over parameter vectors rather than single points, and introduces a simple post-training method involving random parameter perturbations, selection of top performers, and ensembling via majority vote.",
+      "• Data used: The study likely employs standard large-scale pretraining datasets (e.g., from NLP or vision tasks) and downstream task datasets for evaluation, though specific datasets are not detailed in the abstract.",
+      "• Performance metrics: The method is reported to be competitive with established post-training techniques such as PPO, GRPO, and ES for contemporary large-scale models, suggesting comparable or improved accuracy/efficiency on benchmark tasks."
+    ],
+    "summary_cn": [
+      "• 核心模型: 将预训练模型视为参数向量的分布，而非单一权重点，提出一种基于随机扰动、选择最优扰动并集成预测的后训练方法。",
+      "• 数据来源: 可能使用大规模预训练数据集（如NLP或视觉任务）和下游任务数据集进行评估，但摘要中未具体说明。",
+      "• 主要结论: 在大型预训练模型中，任务专家密度显著增加，使得多样化专家密集分布于预训练权重周围，该方法在性能上可与PPO、GRPO和ES等标准后训练方法竞争。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the approach could enhance model robustness and efficiency in finetuning for financial NLP tasks, but direct alpha generation is limited without domain-specific adaptation.",
+      "• Implementation Risk: High; random perturbation methods may introduce instability in production environments, and ensembling multiple models increases computational overhead and latency.",
+      "• Novelty: High; the conceptual shift from viewing pretrained weights as a single point to a distribution is innovative, though the practical method is simple and builds on existing ensembling techniques."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将预训练权重视为分布而非单点，提出任务专家密集分布的新视角，方法简单但概念上有突破。",
+      "• 实盘坑: 随机扰动可能导致模型不稳定，集成多个模型增加计算成本和延迟，在实时交易环境中风险较高。",
+      "• 复现难度: 中等；方法基于标准深度学习框架，但需要大型预训练模型和下游任务数据，复现成本较高。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
     "id": "2603.11046v1",
     "title": "On Utility Maximization under Multivariate Fake Stationary Affine Volterra Models",
     "pdf_url": "https://arxiv.org/pdf/2603.11046v1",
