@@ -1,5 +1,347 @@
 [
   {
+    "id": "2603.13228v1",
+    "title": "PhysMoDPO: Physically-Plausible Humanoid Motion with Preference Optimization",
+    "pdf_url": "https://arxiv.org/pdf/2603.13228v1",
+    "published": "2026-03-13",
+    "crawled_at": "2026-03-16 20:24:21",
+    "ai_score": 7.8,
+    "translated_title": "PhysMoDPO：基于偏好优化的人形机器人物理合理运动生成",
+    "summary_en": [
+      "• Model Architecture: PhysMoDPO integrates a Direct Preference Optimization (DPO) framework with a Whole-Body Controller (WBC) to fine-tune diffusion models, ensuring generated motions are both physically plausible and aligned with text instructions.",
+      "• Data used: The method leverages large-scale human motion datasets for initial diffusion model training, supplemented by physics-based and task-specific rewards to generate preference-labeled trajectories for DPO training.",
+      "• Performance metrics: Experiments on text-to-motion and spatial control tasks show consistent improvements in physical realism and task-related metrics on simulated robots, with significant gains in zero-shot motion transfer and real-world deployment on a G1 humanoid robot."
+    ],
+    "summary_cn": [
+      "• 核心模型: PhysMoDPO采用直接偏好优化（DPO）框架，结合全身控制器（WBC）微调扩散模型，确保生成的运动既符合物理规律又忠实于文本指令。",
+      "• 数据来源: 基于大规模人体运动数据集训练初始扩散模型，并通过物理和任务特定奖励生成带偏好标签的轨迹用于DPO训练。",
+      "• 主要结论: 在文本到运动和空间控制任务中，PhysMoDPO在模拟机器人上显著提升了物理真实性和任务相关指标，并在零样本运动迁移和真实世界G1人形机器人部署中表现出色。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for robotics and animation applications by bridging the gap between generative AI and physical execution, enabling more reliable real-world deployment of AI-generated motions.",
+      "• Implementation Risk: Moderate risk due to dependency on accurate physics simulations for reward design and the complexity of integrating WBC into training pipelines, which may require specialized robotics expertise.",
+      "• Novelty: Novel integration of DPO with WBC for motion generation, moving beyond hand-crafted heuristics to optimize directly for physical plausibility, though builds on established diffusion and reinforcement learning techniques."
+    ],
+    "verdict_cn": [
+      "• 创新点: 创新地将DPO与WBC结合用于运动生成，超越手工启发式方法，直接优化物理合理性，但基于现有扩散和强化学习技术。",
+      "• 实盘坑: 依赖精确物理仿真进行奖励设计，且WBC集成到训练流程复杂，需要机器人学专业知识，可能增加实施难度和成本。",
+      "• 复现难度: 中等偏高，需大规模运动数据、物理仿真环境和机器人硬件，代码和训练细节未完全公开，可能影响复现效率。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.13227v1",
+    "title": "Representation Learning for Spatiotemporal Physical Systems",
+    "pdf_url": "https://arxiv.org/pdf/2603.13227v1",
+    "published": "2026-03-13",
+    "crawled_at": "2026-03-16 20:24:36",
+    "ai_score": 7.5,
+    "translated_title": "时空物理系统的表示学习",
+    "summary_en": [
+      "• Model Architecture: The paper evaluates general-purpose self-supervised methods, including joint embedding predictive architectures (JEPAs) that learn in latent space, compared to traditional pixel-level prediction models for spatiotemporal physical systems.",
+      "• Data used: The study focuses on spatiotemporal physical systems, though specific datasets are not detailed in the abstract; it likely involves simulated or real-world physics data for tasks like parameter estimation.",
+      "• Performance metrics: Effectiveness is measured by accuracy on downstream scientific tasks, such as estimation of governing physical parameters, rather than next-frame prediction accuracy, with JEPAs outperforming pixel-level methods."
+    ],
+    "summary_cn": [
+      "• 核心模型: 评估通用自监督方法，包括在潜在空间中学习的联合嵌入预测架构（JEPAs），与传统像素级预测模型对比，用于时空物理系统。",
+      "• 数据来源: 基于时空物理系统，可能涉及模拟或真实物理数据，用于参数估计等下游任务，具体数据集未在摘要中详述。",
+      "• 主要结论: JEPAs在物理参数估计等下游任务上表现优于像素级方法，表明潜在空间学习能提供更物理相关的表示，而并非所有物理建模方法都优于通用自监督方法。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the focus on downstream tasks like parameter estimation could inform predictive models for physical systems in finance (e.g., weather or commodity markets), but direct alpha generation is limited without specific financial applications.",
+      "• Implementation Risk: High; reliance on self-supervised learning and latent representations may introduce complexity and instability in real-world deployments, with compounding errors in autoregressive rollouts being a known pitfall.",
+      "• Novelty: Moderate; shifting from next-frame prediction to downstream tasks offers a fresh perspective, but the use of JEPAs and self-supervised methods is not entirely new in machine learning research."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；从下一帧预测转向下游任务（如参数估计）提供了新视角，但JEPAs和自监督方法在机器学习中并非全新。",
+      "• 实盘坑: 高；自监督学习和潜在表示可能增加复杂性和不稳定性，自回归展开中的误差累积是已知风险，实盘应用需谨慎验证。",
+      "• 复现难度: 中等；代码已开源，但依赖特定物理数据和自监督训练，可能需要调整以适应金融数据，复现过程有一定技术门槛。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2603.13186v1",
+    "title": "Learnability and Privacy Vulnerability are Entangled in a Few Critical Weights",
+    "pdf_url": "https://arxiv.org/pdf/2603.13186v1",
+    "published": "2026-03-13",
+    "crawled_at": "2026-03-16 20:24:50",
+    "ai_score": 7.2,
+    "translated_title": "可学习性与隐私漏洞在少数关键权重中纠缠",
+    "summary_en": [
+      "• Model Architecture: Proposes a fine-tuning mechanism that identifies and rewinds only a small fraction of critical weights in neural networks to preserve privacy, rather than updating all weights.",
+      "• Data used: Extensive experiments likely conducted on standard datasets (e.g., image or text datasets) for membership inference attacks, though specific datasets are not detailed in the abstract.",
+      "• Performance metrics: Evaluates resilience against Membership Inference Attacks while maintaining utility, with outperforming results in most cases compared to prior approaches."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出一种微调机制，通过评分关键权重并仅重绕这些权重来保护隐私，避免更新所有神经网络权重。",
+      "• 数据来源: 基于广泛实验，可能使用标准数据集（如图像或文本数据集）进行成员推理攻击测试，但摘要中未指定具体数据集。",
+      "• 主要结论: 在大多数情况下，该机制表现出优于现有方法的抗攻击能力，同时保持模型效用，减少不必要的性能损失。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the approach could enhance privacy-preserving models in finance for sensitive data handling, but direct alpha generation is limited without specific financial applications.",
+      "• Implementation Risk: High; identifying critical weights accurately in complex models is challenging, and fine-tuning may introduce instability or overfitting in real-world deployments.",
+      "• Novelty: High; the insight that privacy vulnerability and utility are entangled in a few weights based on location, not value, is innovative and addresses cost and misalignment issues in prior methods."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；提出权重重要性源于位置而非数值的新见解，并设计仅重绕关键权重的微调机制，有效降低隐私保护成本。",
+      "• 实盘坑: 高；在复杂模型中精确识别关键权重难度大，微调可能引发不稳定或过拟合，实际部署风险较高。",
+      "• 复现难度: 中等；方法概念清晰，但需要大量实验验证和调优，对计算资源和数据集要求较高。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.13180v1",
+    "title": "MXNorm: Reusing MXFP block scales for efficient tensor normalisation",
+    "pdf_url": "https://arxiv.org/pdf/2603.13180v1",
+    "published": "2026-03-13",
+    "crawled_at": "2026-03-16 20:25:04",
+    "ai_score": 8.2,
+    "translated_title": "MXNorm：重用MXFP块尺度实现高效张量归一化",
+    "summary_en": [
+      "• Model Architecture: MXNorm is a drop-in replacement for RMSNorm that estimates root mean square (RMS) using only block scales from MXFP8 casting, eliminating separate reduction computations.",
+      "• Data used: Validated on pre-training of Llama 3 models with 125M, 1B, and 8B parameters, comparing against baseline RMSNorm with MXFP8 matrix multiplications.",
+      "• Performance metrics: Achieves 32x reduction in normalization size, up to 2.4x kernel speedup via torch.compile, and 1.3%-2.6% speedup in Llama 3 8B transformer layers for MXFP8/NVFP4."
+    ],
+    "summary_cn": [
+      "• 核心模型: MXNorm作为RMSNorm的直接替代，利用MXFP8转换中的块尺度估计均方根，无需单独计算归约操作。",
+      "• 数据来源: 基于Llama 3模型的预训练验证，涵盖125M、1B和8B参数规模，对比基线RMSNorm与MXFP8矩阵乘法。",
+      "• 主要结论: 实现归一化计算量减少32倍，内核加速最高达2.4倍，在Llama 3 8B的MXFP8/NVFP4层中带来1.3%-2.6%的整体加速。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for quant strategies leveraging low-precision accelerators; reduces latency in inference/training pipelines, potentially enhancing high-frequency model updates.",
+      "• Implementation Risk: Moderate; depends on MXFP8 hardware adoption and may introduce numerical instability in edge cases despite minimal accuracy loss shown.",
+      "• Novelty: Significant; clever reuse of existing block scales bypasses traditional reduction bottlenecks, addressing a key imbalance in modern accelerator designs."
+    ],
+    "verdict_cn": [
+      "• 创新点: 巧妙复用MXFP8块尺度，避免额外归约计算，直接针对加速器设计不平衡痛点，技术路径简洁高效。",
+      "• 实盘坑: 依赖MXFP8硬件普及，边缘数值稳定性未充分测试，大规模部署可能暴露隐藏误差累积风险。",
+      "• 复现难度: 中等；需MXFP8支持环境，但代码层面改动小，基于torch.compile易于集成，适合快速原型验证。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2603.13163v1",
+    "title": "Towards Faithful Multimodal Concept Bottleneck Models",
+    "pdf_url": "https://arxiv.org/pdf/2603.13163v1",
+    "published": "2026-03-13",
+    "crawled_at": "2026-03-16 20:25:16",
+    "ai_score": 7.8,
+    "translated_title": "迈向可信的多模态概念瓶颈模型",
+    "summary_en": [
+      "• Model Architecture: f-CBM framework built on vision-language backbone with differentiable leakage loss and Kolmogorov-Arnold Network prediction head",
+      "• Data used: Applied to both image and text or text-only datasets, making it versatile across modalities",
+      "• Performance metrics: Achieves best trade-off between task accuracy, concept detection, and leakage reduction compared to existing approaches"
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于视觉-语言骨干网络构建的f-CBM框架，包含可微泄漏损失和Kolmogorov-Arnold网络预测头",
+      "• 数据来源: 应用于图像和文本或纯文本数据集，实现跨模态通用性",
+      "• 主要结论: 在任务准确性、概念检测和泄漏减少方面达到最佳平衡，优于现有方法"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - addresses leakage issue in interpretable models which could improve model trustworthiness for regulatory/compliance applications",
+      "• Implementation Risk: High - requires careful tuning of leakage loss and KAN head, multimodal integration adds complexity",
+      "• Novelty: Good - first to jointly address concept detection and leakage in multimodal CBMs, novel use of KAN for expressiveness"
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次在多模态CBM中联合处理概念检测和泄漏问题，创新性地使用KAN网络增强表达能力",
+      "• 实盘坑: 泄漏损失和KAN头需要精细调参，多模态集成增加系统复杂性，实际部署可能面临性能瓶颈",
+      "• 复现难度: 中等偏高 - 需要复现完整的视觉-语言骨干网络和KAN架构，实验设置细节可能影响结果"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.13115v1",
+    "title": "ZO-SAM: Zero-Order Sharpness-Aware Minimization for Efficient Sparse Training",
+    "pdf_url": "https://arxiv.org/pdf/2603.13115v1",
+    "published": "2026-03-13",
+    "crawled_at": "2026-03-16 20:25:38",
+    "ai_score": 7.8,
+    "translated_title": "ZO-SAM：用于高效稀疏训练的零阶锐度感知最小化方法",
+    "summary_en": [
+      "• Model Architecture: ZO-SAM integrates zero-order optimization within the Sharpness-Aware Minimization (SAM) framework, requiring only a single backpropagation step during perturbation and selectively using zero-order gradient estimations to reduce computational cost by half compared to traditional SAM.",
+      "• Data used: The abstract does not specify datasets, but the method is designed for sparse neural network training, applicable to standard deep learning benchmarks (e.g., image classification, NLP tasks) in resource-constrained environments.",
+      "• Performance metrics: ZO-SAM reduces gradient variance, stabilizes training, accelerates convergence, and improves robustness under distribution shift, particularly effective at high sparsity levels where existing methods suffer from noisy gradients."
+    ],
+    "summary_cn": [
+      "• 核心模型: ZO-SAM将零阶优化整合到锐度感知最小化（SAM）框架中，在扰动期间仅需单次反向传播，选择性使用零阶梯度估计，相比传统SAM减少一半计算成本。",
+      "• 数据来源: 摘要未明确指定数据集，但该方法适用于稀疏神经网络训练，可应用于资源受限环境中的标准深度学习基准（如图像分类、NLP任务）。",
+      "• 主要结论: ZO-SAM降低梯度方差，稳定训练过程，加速收敛，并在分布偏移下提高鲁棒性，尤其在高稀疏度场景中有效解决现有方法的梯度噪声问题。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; ZO-SAM's efficiency gains in sparse training could enable faster model development and deployment in quant strategies, but direct financial alpha generation is indirect and depends on application to specific trading models.",
+      "• Implementation Risk: High; integrating zero-order methods with SAM introduces complexity, and sparse training in finance requires careful handling of noisy market data, potentially leading to unstable performance in live trading.",
+      "• Novelty: High; the combination of zero-order optimization and SAM for sparse training is innovative, addressing computational bottlenecks not previously solved in this context, though it builds on established optimization literature."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；将零阶优化与SAM结合用于稀疏训练是创新方法，解决了该领域未解决的计算瓶颈问题，但基于现有优化理论构建。",
+      "• 实盘坑: 高；零阶方法与SAM整合增加复杂性，金融稀疏训练需谨慎处理噪声市场数据，可能导致实盘性能不稳定。",
+      "• 复现难度: 中等；方法描述清晰，但实现需深度学习优化专业知识，稀疏训练调参可能耗时，依赖特定框架支持。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.13109v1",
+    "title": "BoSS: A Best-of-Strategies Selector as an Oracle for Deep Active Learning",
+    "pdf_url": "https://arxiv.org/pdf/2603.13109v1",
+    "published": "2026-03-13",
+    "crawled_at": "2026-03-16 20:25:55",
+    "ai_score": 7.8,
+    "translated_title": "BoSS：作为深度主动学习预言机的最佳策略选择器",
+    "summary_en": [
+      "• Model Architecture: BoSS is an ensemble-based oracle strategy that constructs candidate batches using multiple selection strategies and selects the batch with the highest predicted performance gain. It is designed to be scalable for large datasets and deep neural networks.",
+      "• Data used: The evaluation focuses on large-scale datasets with many classes, though specific datasets are not named in the abstract. The approach is tested in active learning scenarios with varying annotation budgets.",
+      "• Performance metrics: BoSS outperforms existing oracle strategies in terms of performance gain. State-of-the-art AL strategies show significant gaps compared to oracle performance, especially in complex, large-scale settings."
+    ],
+    "summary_cn": [
+      "• 核心模型: BoSS是一种基于集成的方法，通过组合多种选择策略生成候选批次，并选择预测性能增益最高的批次作为预言机输出。",
+      "• 数据来源: 评估基于大规模、多类别的数据集，但摘要中未具体命名数据集，重点测试在不同标注预算下的主动学习场景。",
+      "• 主要结论: BoSS在性能增益上优于现有预言机策略；当前最先进的主动学习策略与预言机性能仍有明显差距，尤其是在大规模复杂数据集中；集成方法可能有助于解决策略性能不一致的问题。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate. BoSS provides a robust benchmark for evaluating AL strategies, which could indirectly improve model selection in data-efficient training pipelines, but direct alpha generation is limited as it relies on ground-truth information unavailable in real scenarios.",
+      "• Implementation Risk: High. The oracle nature of BoSS makes it impractical for live deployment since it requires access to ground-truth labels, limiting its use to simulation or research settings only.",
+      "• Novelty: Moderate. The ensemble approach to oracle construction is innovative for scalability, but the core idea of using multiple strategies is not entirely new; the main contribution lies in addressing limitations of existing oracles in large-scale contexts."
+    ],
+    "verdict_cn": [
+      "• 创新点: 通过集成多种选择策略构建可扩展的预言机，解决了现有预言机在大规模数据集和深度神经网络上的扩展性问题，方法设计灵活，易于集成新策略。",
+      "• 实盘坑: 作为预言机策略，依赖不可得的真实标签信息，无法直接应用于实际交易或生产环境，仅适用于研究或模拟评估，实盘价值有限。",
+      "• 复现难度: 中等。方法描述清晰，但需要实现多种基础选择策略并进行大规模数据集测试，计算资源要求较高，可能增加复现成本。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.13092v1",
+    "title": "Breaking the Tuning Barrier: Zero-Hyperparameters Yield Multi-Corner Analysis Via Learned Priors",
+    "pdf_url": "https://arxiv.org/pdf/2603.13092v1",
+    "published": "2026-03-13",
+    "crawled_at": "2026-03-16 20:26:10",
+    "ai_score": 8.2,
+    "translated_title": "突破调优壁垒：零超参数通过学习先验实现多角点分析",
+    "summary_en": [
+      "• Model Architecture: Foundation model pre-trained on millions of regression tasks with attention mechanism for in-context learning and knowledge transfer across PVT corners",
+      "• Data used: Trained on millions of regression tasks, processes 1152D features reduced to 48D via automated feature selector, validates circuits across 25+ Process-Voltage-Temperature corners",
+      "• Performance metrics: Achieves mean MREs as low as 0.11%, matches state-of-the-art accuracy with zero hyperparameter tuning, reduces total validation cost by over 10×"
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于数百万回归任务预训练的基础模型，采用注意力机制实现上下文学习和跨PVT角点的知识迁移",
+      "• 数据来源: 训练数据来自数百万回归任务，通过自动特征选择器将1152维特征降至48维，验证电路覆盖25+个工艺-电压-温度角点",
+      "• 主要结论: 实现平均相对误差低至0.11%，在零超参数调优下达到最先进精度，总验证成本降低超过10倍"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High - eliminates hyperparameter tuning barrier that plagues AI-based circuit validation, enabling rapid iteration and cost reduction in semiconductor design",
+      "• Implementation Risk: Medium - foundation model dependency creates black-box concerns, attention mechanism's cross-corner transfer requires validation on diverse circuit types",
+      "• Novelty: Significant - replaces engineered priors with learned priors, introduces in-context learning to circuit validation without retraining, breaks fundamental trade-off between automation and accuracy"
+    ],
+    "verdict_cn": [
+      "• 创新点: 用学习先验替代工程先验，将上下文学习引入电路验证无需重新训练，突破自动化与精度的根本权衡",
+      "• 实盘坑: 基础模型依赖导致黑箱问题，注意力机制的跨角点知识迁移需在多样化电路类型上验证",
+      "• 复现难度: 中等 - 需要数百万回归任务的预训练数据和计算资源，但开源可能降低门槛"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2603.13085v1",
+    "title": "Influence Malleability in Linearized Attention: Dual Implications of Non-Convergent NTK Dynamics",
+    "pdf_url": "https://arxiv.org/pdf/2603.13085v1",
+    "published": "2026-03-13",
+    "crawled_at": "2026-03-16 20:26:27",
+    "ai_score": 8.2,
+    "translated_title": "线性化注意力中的影响可塑性：非收敛NTK动力学的双重含义",
+    "summary_en": [
+      "• Model Architecture: Linearized attention mechanism with exact correspondence to a data-dependent Gram-induced kernel, analyzed through the Neural Tangent Kernel (NTK) framework.",
+      "• Data used: Natural image datasets (implied from context, though not explicitly specified in abstract).",
+      "• Performance metrics: Spectral amplification result showing attention transformation cubes the Gram matrix's condition number, requiring width m = Ω(κ^6) for convergence to infinite-width NTK limit.",
+      "• Key finding: Attention exhibits 6–9× higher influence malleability than ReLU networks, with dual implications for task alignment and adversarial susceptibility."
+    ],
+    "summary_cn": [
+      "• 核心模型: 线性化注意力机制，通过神经正切核（NTK）框架分析，与数据依赖的Gram诱导核精确对应。",
+      "• 数据来源: 自然图像数据集（从上下文推断，摘要中未明确指定）。",
+      "• 主要结论: 注意力变换使Gram矩阵条件数立方化，收敛到无限宽度NTK极限需要宽度m = Ω(κ^6)，远超实际可行宽度。",
+      "• 关键发现: 注意力比ReLU网络具有6–9倍更高的影响可塑性，既能减少近似误差，又增加对抗性操纵的脆弱性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High—the identification of influence malleability as a double-edged sword could inform robust attention-based trading models that exploit task structure while mitigating adversarial risks in financial time series.",
+      "• Implementation Risk: Moderate—the non-convergence result suggests practical challenges in scaling linearized attention for high-dimensional financial data, but the theoretical insights may guide architecture design.",
+      "• Novelty: Strong—the paper provides a rigorous theoretical analysis of linearized attention's NTK dynamics, revealing a fundamental trade-off not previously characterized in the literature."
+    ],
+    "verdict_cn": [
+      "• 创新点: 通过NTK框架首次严格证明线性化注意力的非收敛性，提出影响可塑性概念，揭示注意力机制在任务对齐与对抗脆弱性间的根本权衡。",
+      "• 实盘坑: 条件数立方化导致收敛宽度要求不切实际，在金融高维数据中可能放大噪声，需谨慎设计注意力层以避免过拟合或稳定性问题。",
+      "• 复现难度: 中等—理论分析基于标准NTK框架，但实验部分未详细描述，复现需自行实现线性化注意力并验证谱放大结果。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.13069v1",
+    "title": "Fractals made Practical: Denoising Diffusion as Partitioned Iterated Function Systems",
+    "pdf_url": "https://arxiv.org/pdf/2603.13069v1",
+    "published": "2026-03-13",
+    "crawled_at": "2026-03-16 20:26:44",
+    "ai_score": 8.2,
+    "translated_title": "分形实用化：去噪扩散作为分区迭代函数系统",
+    "summary_en": [
+      "• Model Architecture: The paper reinterprets deterministic DDIM reverse chains as Partitioned Iterated Function Systems (PIFS), with self-attention identified as the natural primitive for contraction in this framework.",
+      "• Data used: The analysis is theoretical and geometric, focusing on the mathematical structure of diffusion models rather than specific datasets; it derives computable quantities (contraction threshold, expansion function, global threshold) without requiring model evaluation.",
+      "• Performance metrics: The framework provides three geometric quantities that fully characterize denoising dynamics, explaining the two-regime behavior (global context assembly at high noise and fine-detail synthesis at low noise) and enabling analytical determination of the Kaplan-Yorke dimension via a discrete Moran equation."
+    ],
+    "summary_cn": [
+      "• 核心模型: 将确定性DDIM反向链重新解释为分区迭代函数系统（PIFS），自注意力机制被识别为该框架中收缩的自然原语。",
+      "• 数据来源: 分析基于理论和几何结构，关注扩散模型的数学框架而非具体数据集；推导出无需模型评估的可计算几何量（收缩阈值、扩展函数、全局阈值）。",
+      "• 主要结论: 该框架提供了三个完全表征去噪动态的几何量，解释了扩散模型的两阶段行为（高噪声下的全局上下文组装和低噪声下的精细细节合成），并通过离散Moran方程解析确定Kaplan-Yorke维数。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for systematic design of diffusion models in financial time-series generation or anomaly detection, as the geometric optimization criteria could lead to more efficient and interpretable architectures.",
+      "• Implementation Risk: Moderate; while the theoretical insights are robust, translating geometric optimizations into practical trading models requires careful validation against market data and may face challenges in dynamic environments.",
+      "• Novelty: Significant; the PIFS framework provides a unified mathematical lens for diffusion models, offering explicit design criteria that explain empirical choices like cosine schedules and Min-SNR loss, bridging theory and practice."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著；PIFS框架为扩散模型提供了统一的数学视角，提供了解释余弦调度和Min-SNR损失等经验选择的显式设计标准，连接了理论与实践。",
+      "• 实盘坑: 中等；虽然理论见解稳健，但将几何优化转化为实际交易模型需对市场数据进行仔细验证，在动态环境中可能面临挑战。",
+      "• 复现难度: 中等偏高；需要扎实的数学背景（分形几何、动力系统）来理解和应用几何量，但框架提供了无需模型评估的计算方法，降低了部分实验负担。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
     "id": "2603.12261v1",
     "title": "The Latent Color Subspace: Emergent Order in High-Dimensional Chaos",
     "pdf_url": "https://arxiv.org/pdf/2603.12261v1",
