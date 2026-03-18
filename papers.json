@@ -1,5 +1,353 @@
 [
   {
+    "id": "2603.16867v1",
+    "title": "Efficient Reasoning on the Edge",
+    "pdf_url": "https://arxiv.org/pdf/2603.16867v1",
+    "published": "2026-03-17",
+    "crawled_at": "2026-03-18 20:22:34",
+    "ai_score": 8.2,
+    "translated_title": "边缘设备上的高效推理",
+    "summary_en": [
+      "• Model Architecture: Proposes a lightweight approach combining LoRA adapters with supervised fine-tuning for small LLMs, enhanced by budget forcing via reinforcement learning to reduce response length, and includes dynamic adapter-switching and KV-cache sharing strategies for on-device inference.",
+      "• Data used: Experiments conducted on Qwen2.5-7B model, with reasoning traces likely derived from larger models for distillation, though specific datasets (e.g., problem-solving tasks) are not detailed in the abstract.",
+      "• Performance metrics: Achieves efficient and accurate reasoning under strict resource constraints, with significant reduction in response length and minimal accuracy loss, demonstrated through videos on mobile devices, but exact metrics (e.g., token savings, latency improvements) are unspecified."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出轻量级方法，结合LoRA适配器和监督微调，用于小型LLM，通过强化学习进行预算强制以减少响应长度，并引入动态适配器切换和KV缓存共享策略。",
+      "• 数据来源: 基于Qwen2.5-7B模型进行实验，推理轨迹可能来自大型模型的蒸馏，但未在摘要中详细说明具体数据集（如复杂问题解决任务）。",
+      "• 主要结论: 在严格资源约束下实现高效准确的推理，响应长度显著减少且精度损失最小，通过移动设备演示视频验证，但未提供精确指标（如令牌节省、延迟改进）。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for edge deployment in financial applications like real-time risk assessment or mobile trading assistants, enabling low-latency, cost-effective reasoning without cloud dependency, but scalability to diverse market conditions is untested.",
+      "• Implementation Risk: Moderate risk due to reliance on reinforcement learning for budget forcing, which may introduce instability in production environments, and the dynamic adapter-switching mechanism could add complexity in real-time inference scenarios.",
+      "• Novelty: Novel integration of LoRA adapters with reinforcement learning for length reduction and KV-cache sharing for memory efficiency, but builds on existing distillation and edge computing techniques, lacking breakthrough innovations in core reasoning algorithms."
+    ],
+    "verdict_cn": [
+      "• 创新点: 新颖地将LoRA适配器与强化学习结合以减少长度，并采用KV缓存共享提升内存效率，但基于现有蒸馏和边缘计算技术，核心推理算法缺乏突破性创新。",
+      "• 实盘坑: 依赖强化学习进行预算强制可能在生产环境中引入不稳定性，动态适配器切换机制在实时推理场景中增加复杂性，且未测试多样化市场条件下的可扩展性。",
+      "• 复现难度: 中等难度，需要访问Qwen2.5-7B模型和推理轨迹数据，强化学习调优可能耗时，但开源代码和详细方法可降低障碍。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.16866v1",
+    "title": "ManiTwin: Scaling Data-Generation-Ready Digital Object Dataset to 100K",
+    "pdf_url": "https://arxiv.org/pdf/2603.16866v1",
+    "published": "2026-03-17",
+    "crawled_at": "2026-03-18 20:22:51",
+    "ai_score": 7.5,
+    "translated_title": "ManiTwin：将数据生成就绪的数字对象数据集扩展至10万",
+    "summary_en": [
+      "• Model Architecture: ManiTwin is an automated pipeline that transforms a single image into a simulation-ready 3D asset with semantic annotations, physical properties, and manipulation proposals.",
+      "• Data used: The pipeline processes single images to generate 3D assets, resulting in ManiTwin-100K, a dataset of 100K high-quality annotated 3D assets with language descriptions and functional annotations.",
+      "• Performance metrics: Experiments show the pipeline provides efficient asset synthesis and annotation, and the dataset offers high-quality, diverse assets for manipulation data generation, random scene synthesis, and VQA data generation."
+    ],
+    "summary_cn": [
+      "• 核心模型: ManiTwin是一个自动化流程，将单张图像转换为具备语义标注、物理属性和操作建议的仿真就绪3D资产。",
+      "• 数据来源: 基于单张图像处理生成3D资产，构建了ManiTwin-100K数据集，包含10万个高质量标注的3D资产，附带语言描述和功能注释。",
+      "• 主要结论: 实验表明该流程能高效合成和标注资产，数据集为操作数据生成、随机场景合成和VQA数据生成提供了高质量、多样化的资产基础。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; enables scalable simulation data for robotic manipulation, which could improve training efficiency and policy learning in automated systems, but direct financial alpha is indirect.",
+      "• Implementation Risk: High; relies on accurate 3D reconstruction from single images, which may introduce errors in physical properties and manipulation proposals, affecting downstream applications.",
+      "• Novelty: High; addresses a key bottleneck in simulation-based learning by automating asset creation at scale, though similar pipelines exist in computer vision."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高; 通过自动化大规模资产创建，解决了基于仿真的学习中的数据瓶颈问题，但类似流程在计算机视觉领域已有先例。",
+      "• 实盘坑: 高; 依赖单张图像的3D重建准确性，物理属性和操作建议可能引入误差，影响下游应用效果。",
+      "• 复现难度: 中等; 流程自动化程度高，但需要大量计算资源和图像数据，开源代码和数据集可降低门槛。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2603.16857v1",
+    "title": "Long-Horizon Traffic Forecasting via Incident-Aware Conformal Spatio-Temporal Transformers",
+    "pdf_url": "https://arxiv.org/pdf/2603.16857v1",
+    "published": "2026-03-17",
+    "crawled_at": "2026-03-18 20:23:12",
+    "ai_score": 7.8,
+    "translated_title": "基于事故感知的保形时空变换器实现长时域交通预测",
+    "summary_en": [
+      "• Model Architecture: Spatio-Temporal Transformer (STT) with Adaptive Conformal Prediction (ACP) for multi-horizon forecasting with calibrated uncertainty, incorporating a piecewise Coefficient of Variation (CV) strategy and dynamic adjacency matrix construction using log-normal distribution for hour-to-hour traveltime variability.",
+      "• Data used: Ohio Department of Transportation (ODOT) traffic count data and crash records, including incident clearance time, weather conditions, speed violations, work zones, and roadway functional class; validated via SUMO simulations in Columbus, Ohio network with Monte Carlo simulations for travel-time distributions.",
+      "• Performance metrics: Improved long-horizon accuracy and well-calibrated prediction intervals compared to baseline methods, demonstrated through experiments on extended trips and Vehicle Under Test (VUT) scenarios."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用时空变换器（STT）结合自适应保形预测（ACP），通过分段变异系数策略和基于对数正态分布的动态邻接矩阵，实现多时域交通预测与校准不确定性。",
+      "• 数据来源: 使用俄亥俄州交通部（ODOT）的交通计数数据和事故记录，包括事故清除时间、天气条件、超速违规、施工区域和道路功能等级；通过SUMO模拟在哥伦布网络进行验证，并应用蒙特卡洛模拟获取旅行时间分布。",
+      "• 主要结论: 实验表明，相比基线方法，该模型在长时域预测精度和预测区间校准方面表现更优，适用于车辆测试（VUT）场景。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate potential for alpha generation in traffic-dependent strategies (e.g., logistics, ride-sharing optimization) due to improved long-horizon forecasting with uncertainty calibration, but direct financial application is limited without market linkage.",
+      "• Implementation Risk: High risk due to reliance on specific ODOT data and SUMO simulations, which may not generalize to other regions or real-time trading environments; incident data integration adds complexity and potential latency issues.",
+      "• Novelty: Novel integration of ACP with STT for traffic forecasting and dynamic graph construction using incident severity signals, but core transformer architecture is not groundbreaking in finance contexts."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将自适应保形预测（ACP）与时空变换器（STT）结合用于交通预测，并利用事故严重性信号构建动态图，但核心变换器架构在金融领域并非突破性创新。",
+      "• 实盘坑: 高度依赖特定ODOT数据和SUMO模拟，泛化能力有限；事故数据集成增加复杂性，可能导致实时交易中的延迟问题。",
+      "• 复现难度: 中等偏高，需要获取详细的交通和事故数据集，并搭建复杂的模拟环境，对计算资源和领域专业知识要求较高。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2603.16849v1",
+    "title": "GIST: Gauge-Invariant Spectral Transformers for Scalable Graph Neural Operators",
+    "pdf_url": "https://arxiv.org/pdf/2603.16849v1",
+    "published": "2026-03-17",
+    "crawled_at": "2026-03-18 20:23:31",
+    "ai_score": 8.5,
+    "translated_title": "GIST：用于可扩展图神经算子的规范不变谱变换器",
+    "summary_en": [
+      "• Model Architecture: GIST (Gauge-Invariant Spectral Transformers) uses random projections to achieve O(N) complexity while preserving gauge invariance through inner-product-based attention on projected embeddings, enabling discretization-invariant learning with bounded mismatch error.",
+      "• Data used: Standard graph benchmarks (e.g., PPI dataset) and mesh-based Neural Operator benchmarks including DrivAerNet and DrivAerNet++ datasets with up to 750K nodes.",
+      "• Performance metrics: Achieves 99.50% micro-F1 on PPI, matches state-of-the-art on graph benchmarks, and sets new standards on aerodynamic prediction tasks with large-scale mesh data."
+    ],
+    "summary_cn": [
+      "• 核心模型: GIST（规范不变谱变换器）通过随机投影实现O(N)复杂度，利用基于内积的注意力机制在投影嵌入上保持规范不变性，支持有界误差的离散不变学习。",
+      "• 数据来源: 标准图基准（如PPI数据集）和基于网格的神经算子基准，包括DrivAerNet和DrivAerNet++数据集，节点数高达75万。",
+      "• 主要结论: 在PPI上达到99.50% micro-F1，在图基准上匹配最先进水平，并在大规模网格数据的气动预测任务中创下新纪录。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for cross-resolution parameter transfer in neural operator applications, enabling scalable and robust models for complex physical systems like aerodynamics, which could translate to improved predictive accuracy in financial time-series or network data.",
+      "• Implementation Risk: Moderate risk due to reliance on random projections and theoretical guarantees of bounded error; practical deployment may require careful tuning for specific datasets to avoid performance degradation in real-world noisy environments.",
+      "• Novelty: Significant novelty in combining gauge invariance with efficient spectral methods, addressing a critical gap in transformer architectures for graph and mesh data, though building on established transformer and neural operator frameworks."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将规范不变性与高效谱方法结合，解决了图/网格数据中变换器架构的关键缺陷，支持跨分辨率参数迁移，具有理论上的误差界保证。",
+      "• 实盘坑: 依赖随机投影可能引入不稳定性，实际部署需针对特定数据精细调参，在噪声环境中性能可能下降，计算复杂度虽低但内存需求可能较高。",
+      "• 复现难度: 中等难度，需要实现随机投影和规范不变注意力机制，但基于现有变换器和神经算子代码库，开源实现和详细实验可降低门槛。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.16846v1",
+    "title": "Dynamic Meta-Layer Aggregation for Byzantine-Robust Federated Learning",
+    "pdf_url": "https://arxiv.org/pdf/2603.16846v1",
+    "published": "2026-03-17",
+    "crawled_at": "2026-03-18 20:23:50",
+    "ai_score": 7.8,
+    "translated_title": "面向拜占庭鲁棒联邦学习的动态元层聚合方法",
+    "summary_en": [
+      "• Model Architecture: FedAOT employs a meta-learning-inspired adaptive aggregation framework that dynamically weights client updates based on reliability scores, eliminating the need for predefined thresholds or restrictive attack assumptions.",
+      "• Data used: The paper evaluates performance across diverse datasets (though specific datasets are not named in the abstract), testing against various attack types including multi-label flipping and untargeted poisoning attacks.",
+      "• Performance metrics: Experimental results demonstrate substantial improvements in model accuracy and resilience against Byzantine attacks while maintaining computational efficiency, with effective generalization to previously unseen scenarios."
+    ],
+    "summary_cn": [
+      "• 核心模型: FedAOT采用元学习启发的自适应聚合框架，基于客户端更新的可靠性动态分配权重，无需预定义阈值或限制性攻击假设。",
+      "• 数据来源: 在多种数据集上进行评估（摘要中未具体命名），测试了包括多标签翻转和无目标投毒攻击在内的多种攻击类型。",
+      "• 主要结论: 实验结果表明，FedAOT显著提升了模型准确性和抗攻击鲁棒性，同时保持计算效率，并能有效泛化到未见过的攻击场景。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - The defense mechanism could enhance security in distributed financial models (e.g., fraud detection across banks), but direct trading alpha generation is limited without specific market applications.",
+      "• Implementation Risk: High - Real-world deployment faces challenges like scalability with thousands of clients, latency in dynamic weighting, and potential evasion by sophisticated adversaries adapting to the aggregation logic.",
+      "• Novelty: Significant - The meta-learning approach to adaptive aggregation without predefined thresholds addresses a key gap in existing defenses, offering generalization across diverse attack types, though it builds upon established FL and Byzantine robustness concepts."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著 - 采用元学习实现无需预定义阈值的自适应聚合，填补了现有防御方法的空白，能泛化应对多种攻击类型，但基于已有联邦学习和拜占庭鲁棒性概念构建。",
+      "• 实盘坑: 高 - 实际部署面临可扩展性挑战（如处理数千客户端）、动态加权延迟问题，以及复杂对手可能适应聚合逻辑进行规避的风险。",
+      "• 复现难度: 中等 - 框架概念清晰，但实现需处理元学习优化和动态权重计算，对计算资源和攻击模拟环境有一定要求。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.16842v1",
+    "title": "Stochastic Resetting Accelerates Policy Convergence in Reinforcement Learning",
+    "pdf_url": "https://arxiv.org/pdf/2603.16842v1",
+    "published": "2026-03-17",
+    "crawled_at": "2026-03-18 20:24:09",
+    "ai_score": 7.8,
+    "translated_title": "随机重置加速强化学习中的策略收敛",
+    "summary_en": [
+      "• Model Architecture: Combines stochastic resetting (intermittent return to fixed reference state) with reinforcement learning frameworks, tested in both tabular grid environments and continuous control tasks using neural-network-based value approximation.",
+      "• Data used: Simulated environments including tabular grid setups and continuous control tasks with sparse rewards, focusing on policy convergence metrics rather than raw performance data.",
+      "• Performance metrics: Measures acceleration of policy convergence rates, reduction in training time, and enhancement of value propagation efficiency compared to standard RL without resetting.",
+      "• Key finding: Resetting accelerates convergence even when it doesn't reduce search time for diffusive agents, indicating a novel mechanism beyond classical first-passage optimization."
+    ],
+    "summary_cn": [
+      "• 核心模型: 将随机重置机制（间歇性返回固定参考状态）与强化学习框架结合，在表格网格环境和基于神经网络的连续控制任务中进行测试。",
+      "• 数据来源: 模拟环境数据，包括表格网格设置和奖励稀疏的连续控制任务，重点关注策略收敛指标而非原始性能数据。",
+      "• 主要结论: 随机重置能加速策略收敛，即使不减少纯扩散智能体的搜索时间，这表明了一种超越经典首次通过优化的新机制。",
+      "• 机制解释: 通过截断长而无信息的轨迹来增强价值传播，同时保留最优策略，与时间折扣不同。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - introduces a novel optimization principle from statistical mechanics to RL, potentially applicable to exploration-challenged trading environments with sparse rewards.",
+      "• Implementation Risk: High - stochastic resetting requires careful tuning of resetting rates and reference states; may destabilize learning in complex, non-stationary financial markets.",
+      "• Novelty: Significant - first application of stochastic resetting theory to adaptive learning systems, bridging statistical physics and machine learning with clear empirical demonstrations.",
+      "• Practical limitations: Tested only in controlled simulated environments; real-world financial applications would face challenges with defining appropriate reset states and dealing with market microstructure effects."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次将统计力学中的随机重置理论应用于自适应学习系统，为强化学习提供了新的优化原理，具有跨学科创新价值。",
+      "• 实盘坑: 重置率和参考状态需要精细调参，在复杂非平稳金融市场中可能破坏学习稳定性；稀疏奖励环境与实盘连续信号存在差异。",
+      "• 复现难度: 中等 - 核心算法相对简单，但需要构建合适的模拟环境进行测试；金融场景的适配需要大量领域知识。",
+      "• 应用局限: 仅在受控模拟环境中验证，实盘应用需解决重置状态定义、市场微观结构影响等实际问题。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2603.16829v1",
+    "title": "Conditional Distributional Treatment Effects: Doubly Robust Estimation and Testing",
+    "pdf_url": "https://arxiv.org/pdf/2603.16829v1",
+    "published": "2026-03-17",
+    "crawled_at": "2026-03-18 20:24:31",
+    "ai_score": 8.5,
+    "translated_title": "条件分布处理效应：双重稳健估计与检验",
+    "summary_en": [
+      "• Model Architecture: Proposes a novel estimand for conditional distributional treatment effects (CDTEs) that captures covariate-dependent impacts beyond averages, such as variance or tail risks, using a doubly robust estimator with minimax optimal local asymptotic properties.",
+      "• Data used: Implicitly designed for observational or experimental data with treatment assignments, outcomes, and covariates, applicable to settings where treatments affect entire outcome distributions heterogeneously across subpopulations.",
+      "• Performance metrics: Develops a test for global homogeneity of conditional potential outcome distributions with provably valid type 1 error and consistency against fixed alternatives, outperforming maximum mean discrepancy (MMD) by accommodating broader discrepancies.",
+      "• Additional details: Provides exact closed-form expressions for two natural discrepancies (including MMD) and a computationally efficient, permutation-free algorithm for testing, enhancing practical implementation."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出条件分布处理效应（CDTE）的新估计量，捕捉协变量依赖的分布影响（如方差或尾部风险），采用双重稳健估计器，具有局部渐近极小极大最优性。",
+      "• 数据来源: 适用于观察性或实验性数据，包含处理分配、结果变量和协变量，处理异质性影响整个结果分布的场景。",
+      "• 主要结论: 开发了条件潜在结果分布全局同质性检验，具有可证明的有效第一类错误和固定备择一致性，超越最大均值差异（MMD），处理更广泛差异。",
+      "• 技术细节: 提供两种自然差异（包括MMD）的精确闭式表达式，以及计算高效、无需置换的检验算法，提升实际应用性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for strategies targeting tail risks or variance-based anomalies, as CDTEs enable identification of subpopulation-specific distributional shifts beyond average effects, potentially uncovering hidden market inefficiencies.",
+      "• Implementation Risk: Moderate; doubly robust estimation reduces sensitivity to model misspecification, but real-world data may have unobserved confounders or measurement errors, requiring careful validation in financial datasets.",
+      "• Novelty: Significant; first test with guarantees for global homogeneity in this setting, offering closed-form solutions and permutation-free testing, advancing beyond MMD-based methods in causal inference literature.",
+      "• Practical considerations: Computationally efficient algorithm lowers barriers, but integration into live trading systems needs robust backtesting and adaptation to high-frequency or noisy market data."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著；首次提供条件分布全局同质性检验的保证，超越MMD方法，在因果推断领域引入闭式表达式和无置换算法，理论贡献突出。",
+      "• 实盘坑: 中等；双重稳健性降低模型误设风险，但金融数据可能存在未观测混杂或噪声，需在实盘中验证协变量选择和分布假设的稳健性。",
+      "• 复现难度: 较低；论文提供清晰算法和表达式，易于代码实现，但需确保数据预处理和估计器调参符合实际场景，避免过拟合或计算偏差。",
+      "• 应用挑战: 高效算法适合实时分析，但整合到交易系统需考虑市场微观结构影响，如流动性变化或事件驱动异常，可能稀释分布效应。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2603.16817v1",
+    "title": "Is Conformal Factuality for RAG-based LLMs Robust? Novel Metrics and Systematic Insights",
+    "pdf_url": "https://arxiv.org/pdf/2603.16817v1",
+    "published": "2026-03-17",
+    "crawled_at": "2026-03-18 20:24:49",
+    "ai_score": 8.2,
+    "translated_title": "基于RAG的LLMs的保形事实性是否稳健？新指标与系统性洞察",
+    "summary_en": [
+      "• Model Architecture: Analyzes RAG-based LLMs with conformal factuality filtering, comparing lightweight entailment-based verifiers against LLM-based confidence scorers across multiple model families.",
+      "• Data used: Evaluates on three benchmarks (unspecified but implied as standard factuality datasets) with held-out calibration data, testing robustness to distribution shifts and distractors.",
+      "• Performance metrics: Introduces novel informativeness-aware metrics to assess task utility under conformal filtering, measuring factuality-informativeness trade-offs, computational efficiency (FLOPs), and robustness to distribution mismatches."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于检索增强生成（RAG）的大语言模型（LLMs），结合保形事实性过滤框架，对比轻量级蕴含验证器与基于LLM的置信度评分器。",
+      "• 数据来源: 使用三个基准数据集（未具体说明，但暗示为标准事实性数据集）和保留校准数据，测试分布偏移和干扰项下的鲁棒性。",
+      "• 主要结论: 保形过滤在高事实性水平下因输出空洞导致实用性低；保形保证对分布偏移和干扰项不稳健；轻量级验证器在性能相当下计算效率提升超100倍。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for hedge funds using RAG in automated research or risk assessment, as lightweight verifiers offer ~100x FLOPs reduction with maintained accuracy, enabling scalable, cost-efficient fact-checking pipelines.",
+      "• Implementation Risk: Moderate to high due to fragility of conformal guarantees under distribution shifts; requires precise calibration data matching deployment conditions, which is challenging in dynamic financial markets with non-stationary data.",
+      "• Novelty: Significant for proposing informativeness-aware metrics that address vacuous outputs, exposing factuality-informativeness trade-offs, and systematically benchmarking robustness—key for real-world reliability beyond academic settings."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出信息量感知指标，解决保形过滤中输出空洞问题，系统性分析分布偏移和干扰项下的鲁棒性，为实际应用提供新评估维度。",
+      "• 实盘坑: 保形保证对数据分布敏感，需校准数据紧密匹配部署环境，在金融市场数据非平稳下易失效；高事实性水平导致实用性下降，可能影响决策质量。",
+      "• 复现难度: 中等，依赖标准基准和模型家族，但轻量级验证器设计简化了计算需求，易于在现有RAG流程中集成测试。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.16800v1",
+    "title": "RaDAR: Relation-aware Diffusion-Asymmetric Graph Contrastive Learning for Recommendation",
+    "pdf_url": "https://arxiv.org/pdf/2603.16800v1",
+    "published": "2026-03-17",
+    "crawled_at": "2026-03-18 20:25:06",
+    "ai_score": 8.2,
+    "translated_title": "RaDAR：基于关系感知扩散非对称图对比学习的推荐系统",
+    "summary_en": [
+      "• Model Architecture: RaDAR combines graph generative models for global structure capture with relation-aware denoising models for edge refinement, featuring asymmetric contrastive learning with global negative sampling, diffusion-guided augmentation through progressive noise injection/denoising, and dynamic edge weight adjustment based on latent node semantics.",
+      "• Data used: Three public benchmarks (specific datasets not named in abstract, but typical for recommendation systems like MovieLens, Amazon, or Yelp).",
+      "• Performance metrics: Outperforms state-of-the-art methods consistently across benchmarks, with particular strength under noisy and sparse conditions (exact metrics like RMSE, NDCG, or Recall not specified in abstract)."
+    ],
+    "summary_cn": [
+      "• 核心模型: RaDAR框架整合图生成模型（捕获全局结构）和关系感知去噪模型（优化噪声边），采用非对称对比学习、扩散引导增强和动态边权重调整三大创新机制。",
+      "• 数据来源: 三个公开基准数据集（摘要未具体命名，推测为推荐系统常用数据集如MovieLens、Amazon或Yelp）。",
+      "• 主要结论: 在噪声和稀疏条件下显著优于现有最优方法，验证了框架在增强鲁棒性和泛化能力方面的有效性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for improving recommendation accuracy in sparse/noisy real-world data (e.g., e-commerce, streaming), but direct financial alpha generation requires integration with trading signals or user behavior monetization models.",
+      "• Implementation Risk: Moderate to high risk due to computational complexity of diffusion processes and dynamic edge refinement; real-time deployment in production systems may face scalability challenges.",
+      "• Novelty: Strong novelty in combining diffusion models with graph contrastive learning for recommendation, addressing specific gaps in semantic consistency and data sparsity with asymmetric learning and relation-aware mechanisms."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将扩散模型与图对比学习结合，引入非对称对比和关系感知边优化，有效解决传统方法中结构信号失真和语义不一致问题，创新性较高。",
+      "• 实盘坑: 扩散过程的计算开销大，动态边调整可能增加训练复杂度；在真实稀疏场景下的泛化性能仍需大规模数据验证，存在过拟合风险。",
+      "• 复现难度: 中等偏高，需实现扩散引导增强和全局负采样等非标准组件，对图神经网络和对比学习有较高技术要求，代码和超参调优可能较复杂。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2603.16798v1",
+    "title": "High-Dimensional Gaussian Mean Estimation under Realizable Contamination",
+    "pdf_url": "https://arxiv.org/pdf/2603.16798v1",
+    "published": "2026-03-17",
+    "crawled_at": "2026-03-18 20:25:23",
+    "ai_score": 8.2,
+    "translated_title": "可实现污染下的高维高斯均值估计",
+    "summary_en": [
+      "• Model Architecture: The paper studies Gaussian mean estimation under a realizable ε-contamination model, where an adversary can choose a missingness function r(x) between 0 and ε, causing each sample x to go missing with probability r(x). This model bridges Missing Completely At Random (MCAR) and Missing Not At Random (MNAR).",
+      "• Data used: The analysis focuses on Gaussian distributions with identity covariance in ℝ^d, using theoretical samples under the contamination model without specific empirical datasets.",
+      "• Performance metrics: The work establishes an information-computation gap in the Statistical Query model, showing algorithms must use more samples than information-theoretically necessary or incur exponential runtime. It provides an algorithm with a sample-time tradeoff nearly matching the lower bound."
+    ],
+    "summary_cn": [
+      "• 核心模型: 研究可实现ε污染模型下的高斯均值估计，其中对手可选择缺失函数r(x)（0到ε之间），使每个样本x以概率r(x)缺失。该模型介于完全随机缺失（MCAR）和非随机缺失（MNAR）之间。",
+      "• 数据来源: 基于ℝ^d中具有单位协方差的高斯分布，使用污染模型下的理论样本，未涉及具体实证数据集。",
+      "• 主要结论: 在统计查询模型中建立了信息-计算差距，表明算法必须使用比信息理论上所需更多的样本或承担指数级运行时间。提供了一个样本-时间权衡接近下界的算法。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the theoretical insights into missing data mechanisms could inform robust statistical methods for financial data with systematic biases, but direct alpha generation is limited without empirical validation.",
+      "• Implementation Risk: High; the model assumes specific Gaussian distributions and contamination structures, which may not hold in real-world financial datasets, and the computational complexity poses challenges for high-dimensional applications.",
+      "• Novelty: High; the paper introduces a novel intermediate contamination model and establishes an information-computation gap, contributing to theoretical statistics with potential implications for missing data handling in quantitative finance."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；提出了一种新的中间污染模型，并建立了信息-计算差距，为理论统计学做出贡献，对量化金融中的缺失数据处理有潜在影响。",
+      "• 实盘坑: 高；模型假设特定高斯分布和污染结构，在真实金融数据中可能不成立，且高维应用的计算复杂性带来挑战。",
+      "• 复现难度: 中；算法描述清晰，但需要高维统计和计算理论的专业知识，且实证验证缺失可能增加不确定性。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
     "id": "2603.15617v1",
     "title": "HorizonMath: Measuring AI Progress Toward Mathematical Discovery with Automatic Verification",
     "pdf_url": "https://arxiv.org/pdf/2603.15617v1",
