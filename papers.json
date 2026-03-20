@@ -1,5 +1,362 @@
 [
   {
+    "id": "2603.19229v1",
+    "title": "NavTrust: Benchmarking Trustworthiness for Embodied Navigation",
+    "pdf_url": "https://arxiv.org/pdf/2603.19229v1",
+    "published": "2026-03-19",
+    "crawled_at": "2026-03-20 20:17:59",
+    "ai_score": 7.5,
+    "translated_title": "NavTrust：具身导航可信度基准测试",
+    "summary_en": [
+      "• Model Architecture: NavTrust is a unified benchmark framework that systematically corrupts input modalities (RGB, depth, and natural language instructions) to evaluate robustness in embodied navigation agents, including Vision-Language Navigation (VLN) and Object-Goal Navigation (OGN).",
+      "• Data used: The benchmark corrupts realistic scenarios by introducing diverse RGB-Depth corruptions and instruction variations, tested on seven state-of-the-art approaches, with base models such as Uni-NaVid and ETPNav.",
+      "• Performance metrics: Evaluates navigation performance degradation under corruptions, revealing substantial robustness gaps, and systematically assesses four mitigation strategies to enhance robustness against RGB-Depth and instruction corruptions.",
+      "• Deployment: Models were deployed on a real mobile robot, demonstrating improved robustness to corruptions in practical settings."
+    ],
+    "summary_cn": [
+      "• 核心模型: NavTrust是一个统一的基准测试框架，通过系统性地破坏输入模态（RGB、深度和自然语言指令）来评估具身导航代理（包括视觉语言导航和物体目标导航）的鲁棒性。",
+      "• 数据来源: 在现实场景中引入多样化的RGB-深度破坏和指令变化，对七种最先进方法进行测试，基础模型包括Uni-NaVid和ETPNav。",
+      "• 主要结论: 评估显示在破坏条件下导航性能显著下降，揭示了关键的鲁棒性差距，并系统评估了四种缓解策略以增强对RGB-深度和指令破坏的鲁棒性。",
+      "• 实际应用: 模型在真实移动机器人上部署，观察到对破坏的鲁棒性有所提升。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the benchmark identifies robustness gaps in embodied navigation, which could inform development of more reliable autonomous systems for applications like robotics or autonomous vehicles, but direct financial alpha is limited without specific trading applications.",
+      "• Implementation Risk: High; real-world deployment on mobile robots introduces practical challenges such as hardware variability, environmental unpredictability, and scalability issues, which may not be fully captured in benchmark settings.",
+      "• Novelty: High; NavTrust is the first unified benchmark to expose agents to diverse RGB-Depth corruptions and instruction variations, addressing a gap in existing evaluations focused on nominal conditions.",
+      "• Reproducibility: Moderate; while the framework is described, access to specific datasets, corruption methods, and implementation details may require additional resources, potentially hindering full replication."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；NavTrust是首个统一基准测试，将代理暴露于多样化的RGB-深度破坏和指令变化中，填补了现有评估仅关注名义条件的空白。",
+      "• 实盘坑: 高；在真实移动机器人上部署面临硬件变异性、环境不可预测性和可扩展性等实际挑战，基准测试可能未完全捕捉这些风险。",
+      "• 复现难度: 中等；框架描述清晰，但获取特定数据集、破坏方法和实施细节可能需要额外资源，可能影响完全复现。",
+      "• 应用前景: 中等；基准测试揭示了具身导航的鲁棒性差距，可为机器人或自动驾驶等应用提供参考，但缺乏直接金融交易应用，阿尔法潜力有限。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2603.19225v1",
+    "title": "FinTradeBench: A Financial Reasoning Benchmark for LLMs",
+    "pdf_url": "https://arxiv.org/pdf/2603.19225v1",
+    "published": "2026-03-19",
+    "crawled_at": "2026-03-20 20:18:15",
+    "ai_score": 7.2,
+    "translated_title": "FinTradeBench：面向大语言模型的金融推理基准测试",
+    "summary_en": [
+      "• Model Architecture: The paper introduces FinTradeBench, a benchmark framework for evaluating financial reasoning in LLMs, organized into three categories: fundamentals-focused, trading-signal-focused, and hybrid questions requiring cross-signal reasoning.",
+      "• Data used: The benchmark contains 1,400 questions grounded in NASDAQ-100 companies over a ten-year historical window, integrating company fundamentals from regulatory filings and trading signals from price dynamics.",
+      "• Performance metrics: The study evaluates 14 LLMs under zero-shot prompting and retrieval-augmented settings, showing a clear performance gap and highlighting that retrieval substantially improves reasoning over textual fundamentals but provides limited benefit for trading-signal reasoning."
+    ],
+    "summary_cn": [
+      "• 核心模型: 论文提出FinTradeBench基准测试框架，用于评估大语言模型在金融推理任务中的表现，包含基本面、交易信号和混合推理三类问题。",
+      "• 数据来源: 基于纳斯达克100指数成分股十年历史数据，整合公司基本面（监管文件）和交易信号（价格动态），构建了1,400个问题。",
+      "• 主要结论: 评估14个大语言模型发现，检索增强显著提升文本基本面推理能力，但对交易信号推理帮助有限，揭示当前模型在数值和时间序列推理上的根本挑战。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate—the benchmark identifies LLMs' weaknesses in numerical and time-series reasoning, which could guide development of specialized models for trading signal analysis, but direct alpha generation is limited without integrated trading strategies.",
+      "• Implementation Risk: High—relying on LLMs for real-time financial decision-making poses significant risks due to their poor performance on trading-signal reasoning and potential hallucinations in numerical data interpretation.",
+      "• Novelty: High—FinTradeBench is the first benchmark to integrate company fundamentals with trading signals, addressing a gap in existing financial QA benchmarks and providing a more comprehensive evaluation framework for financial LLMs."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高—首次将公司基本面与交易信号整合到基准测试中，填补现有金融问答基准的空白，为大语言模型在金融领域的应用提供更全面的评估框架。",
+      "• 实盘坑: 高—大语言模型在交易信号推理上表现不佳，且存在数值数据解释的幻觉风险，直接用于实时交易决策可能导致重大损失。",
+      "• 复现难度: 中等—基准测试数据基于公开的纳斯达克100指数成分股历史数据，但构建问题和评估流程涉及专家种子问题、多模型响应生成等复杂步骤，需要一定资源。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2603.19222v1",
+    "title": "Spectrally-Guided Diffusion Noise Schedules",
+    "pdf_url": "https://arxiv.org/pdf/2603.19222v1",
+    "published": "2026-03-19",
+    "crawled_at": "2026-03-20 20:18:31",
+    "ai_score": 7.8,
+    "translated_title": "基于频谱引导的扩散噪声调度方法",
+    "summary_en": [
+      "• Model Architecture: Proposes a novel noise schedule design for pixel diffusion models based on spectral analysis of individual images, replacing handcrafted schedules with theoretically derived bounds for minimum and maximum noise levels.",
+      "• Data used: Likely standard image datasets (e.g., ImageNet, CIFAR) for training diffusion models, with spectral properties computed per instance during inference.",
+      "• Performance metrics: Demonstrates improved generative quality, particularly in low-step sampling regimes, through experiments on single-stage pixel diffusion models."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出基于图像频谱特性的逐实例噪声调度方法，通过理论推导最小和最大噪声水平的边界，设计“紧凑”噪声调度以消除冗余步骤。",
+      "• 数据来源: 可能使用标准图像数据集（如ImageNet、CIFAR）训练扩散模型，在推理时计算每个实例的频谱属性。",
+      "• 主要结论: 实验表明，该方法在单阶段像素扩散模型中提高了生成质量，尤其在低步数采样场景下表现突出。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate—improves efficiency and quality in diffusion models, potentially applicable to generative tasks in finance (e.g., synthetic data generation for backtesting), but direct trading alpha is limited.",
+      "• Implementation Risk: High—requires per-instance spectral analysis, increasing computational overhead; real-time adaptation in production systems may be challenging.",
+      "• Novelty: High—introduces a principled, data-driven approach to noise schedule design, moving beyond manual tuning and offering theoretical grounding."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高—将噪声调度从手工调整转向基于频谱的理论推导，为扩散模型提供了数据驱动的优化方法，具有较强学术价值。",
+      "• 实盘坑: 高—逐实例计算频谱会增加推理延迟，在实时金融应用中可能不切实际；且依赖图像数据，泛化到其他模态（如时间序列）需额外工作。",
+      "• 复现难度: 中等—方法基于公开的扩散模型框架，但实现频谱分析和条件采样需要一定工程能力，理论部分可能增加调试复杂度。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.19221v1",
+    "title": "Online Learning and Equilibrium Computation with Ranking Feedback",
+    "pdf_url": "https://arxiv.org/pdf/2603.19221v1",
+    "published": "2026-03-19",
+    "crawled_at": "2026-03-20 20:18:52",
+    "ai_score": 7.8,
+    "translated_title": "基于排序反馈的在线学习与均衡计算",
+    "summary_en": [
+      "• Model Architecture: The paper introduces an online learning framework where the learner receives only ranking feedback over actions, rather than numeric utility values. It considers two ranking mechanisms: instantaneous-utility ranking and time-average-utility ranking, under full-information and bandit feedback settings. Algorithms are developed to achieve sublinear regret under assumptions like sublinear total variation in utility sequences.",
+      "• Data used: The study is theoretical and does not use specific datasets; it relies on simulated or adversarial environments typical in online learning research. An application to online large-language-model routing is mentioned as a demonstration, but no empirical data details are provided in the abstract.",
+      "• Performance metrics: The primary metric is external regret, with results showing sublinear regret is impossible in general for instantaneous-utility ranking feedback and under deterministic conditions for time-average-utility ranking. Algorithms achieve sublinear regret under additional assumptions, leading to approximate coarse correlated equilibrium in game-theoretic contexts."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出一种在线学习模型，学习者仅观察动作的排序反馈，而非数值效用反馈。考虑两种排序机制：基于瞬时效用的排序和基于时间平均效用的排序，涵盖完全信息和老虎机反馈设置。",
+      "• 数据来源: 研究为理论性，未使用具体数据集；依赖于在线学习中典型的模拟或对抗环境。摘要中提到在线大语言模型路由任务作为应用示例，但未提供实证数据细节。",
+      "• 主要结论: 在一般条件下，基于瞬时效用排序反馈无法实现次线性遗憾；在确定性较强的排序模型（如Plackett-Luce模型温度较小时），基于时间平均效用排序反馈也无法实现次线性遗憾。在效用序列具有次线性总变差等附加假设下，新算法能实现次线性遗憾，并导致近似粗相关均衡。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the framework addresses privacy and human-in-the-loop constraints by using ranking feedback, which could be applied to financial settings with limited numeric data, such as portfolio selection or market-making with ordinal preferences. However, the reliance on sublinear total variation assumptions may limit real-world applicability in volatile markets.",
+      "• Implementation Risk: High; the theoretical nature and lack of empirical validation in diverse financial datasets increase risk. Bandit feedback settings are computationally intensive, and the assumption of deterministic ranking models may not hold in noisy financial environments, potentially leading to poor performance in practice.",
+      "• Novelty: High; the focus on ranking feedback instead of numeric utility is innovative, bridging online learning and game theory with applications to equilibrium computation. The extension to full-information time-average utility ranking without additional assumptions is a notable theoretical contribution."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；使用排序反馈替代数值效用反馈，创新性地处理隐私和人在环约束，将在线学习与博弈论结合，应用于均衡计算。在完全信息时间平均效用排序反馈中无需附加假设的扩展是重要理论贡献。",
+      "• 实盘坑: 高；理论性强，缺乏多样化金融数据的实证验证，风险较大。老虎机反馈设置计算密集，确定性排序模型假设在嘈杂金融环境中可能不成立，实际性能可能不佳。",
+      "• 复现难度: 中等；算法基于标准在线学习框架，但需要实现排序机制和假设检验，如Plackett-Luce模型。在金融应用中，需适配市场数据，可能增加复杂性。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2603.19220v1",
+    "title": "Nemotron-Cascade 2: Post-Training LLMs with Cascade RL and Multi-Domain On-Policy Distillation",
+    "pdf_url": "https://arxiv.org/pdf/2603.19220v1",
+    "published": "2026-03-19",
+    "crawled_at": "2026-03-20 20:19:07",
+    "ai_score": 8.5,
+    "translated_title": "Nemotron-Cascade 2：基于级联强化学习和多领域同策略蒸馏的后训练大语言模型",
+    "summary_en": [
+      "• Model Architecture: 30B参数MoE模型，仅激活3B参数，采用级联强化学习（Cascade RL）和多领域同策略蒸馏技术",
+      "• Data used: 经过精心筛选的监督微调数据集，以及多领域推理和智能体任务数据用于扩展Cascade RL",
+      "• Performance metrics: 在IMO、IOI和ICPC世界总决赛中达到金牌水平，数学和编程推理性能接近前沿开源模型，智能密度比同类模型高20倍"
+    ],
+    "summary_cn": [
+      "• 核心模型: 30B参数的混合专家模型，仅激活3B参数，采用级联强化学习和多领域同策略蒸馏架构",
+      "• 数据来源: 精心筛选的监督微调数据集，以及扩展的推理和智能体领域数据用于级联强化学习训练",
+      "• 主要结论: 在IMO、IOI和ICPC三大竞赛中达到金牌水平，以20倍更少的参数实现接近前沿模型的推理能力"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: 高智能密度和高效参数利用可能为量化策略生成和复杂市场推理提供新工具，但需验证实际金融应用效果",
+      "• Implementation Risk: 级联RL和多领域蒸馏的复杂性可能导致训练不稳定，且开源检查点可能不包含完整训练流程",
+      "• Novelty: 级联RL扩展和多领域同策略蒸馏的组合创新，但核心思想仍建立在现有RL和蒸馏技术基础上"
+    ],
+    "verdict_cn": [
+      "• 创新点: 级联强化学习扩展到多领域，结合同策略蒸馏避免基准回归，但非根本性突破",
+      "• 实盘坑: 复杂训练流程难以复现，金融领域适配性未知，开源检查点可能缺失关键训练细节",
+      "• 复现难度: 高，需要大量计算资源和多领域专家知识，完整训练流程可能未完全公开"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2603.19219v1",
+    "title": "DriveTok: 3D Driving Scene Tokenization for Unified Multi-View Reconstruction and Understanding",
+    "pdf_url": "https://arxiv.org/pdf/2603.19219v1",
+    "published": "2026-03-19",
+    "crawled_at": "2026-03-20 20:19:22",
+    "ai_score": 7.5,
+    "translated_title": "DriveTok：用于统一多视角重建与理解的3D驾驶场景标记化方法",
+    "summary_en": [
+      "• Model Architecture: DriveTok uses vision foundation models to extract semantic features, applies 3D deformable cross-attention to generate scene tokens, and employs a multi-view transformer with multiple heads for RGB, depth, semantic reconstruction, and 3D occupancy prediction.",
+      "• Data used: Extensive experiments conducted on the widely used nuScenes dataset, which provides multi-view driving scene data with annotations for various tasks.",
+      "• Performance metrics: Demonstrates strong performance on image reconstruction, semantic segmentation, depth prediction, and 3D occupancy prediction tasks, indicating effective integration of semantic, geometric, and textural information."
+    ],
+    "summary_cn": [
+      "• 核心模型: DriveTok采用视觉基础模型提取语义特征，通过3D可变形交叉注意力生成场景标记，并利用多视角变换器及多头机制进行RGB、深度、语义重建和3D占用预测。",
+      "• 数据来源: 在广泛使用的nuScenes数据集上进行实验，该数据集提供多视角驾驶场景数据及多种任务标注。",
+      "• 主要结论: 在图像重建、语义分割、深度预测和3D占用预测任务上表现优异，表明其能有效整合语义、几何和纹理信息。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; could enhance autonomous driving systems by improving multi-view consistency and efficiency, but direct financial alpha generation is limited without integration into trading frameworks.",
+      "• Implementation Risk: High; relies on complex 3D deformable attention and multi-view transformers, which may be computationally expensive and require extensive tuning for real-world deployment.",
+      "• Novelty: Significant; introduces a unified 3D tokenizer for driving scenes, addressing inefficiencies in existing 2D methods, though builds on established vision-language-action models."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著；提出统一的3D驾驶场景标记化方法，解决现有2D方法的低效问题，但基于现有视觉-语言-动作模型构建。",
+      "• 实盘坑: 高；依赖复杂的3D可变形注意力和多视角变换器，计算成本高，实际部署需大量调优。",
+      "• 复现难度: 中等；需nuScenes数据集和高级视觉模型，但架构细节在论文中可能描述不足，增加复现挑战。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.19216v1",
+    "title": "DreamPartGen: Semantically Grounded Part-Level 3D Generation via Collaborative Latent Denoising",
+    "pdf_url": "https://arxiv.org/pdf/2603.19216v1",
+    "published": "2026-03-19",
+    "crawled_at": "2026-03-20 20:19:38",
+    "ai_score": 8.5,
+    "translated_title": "DreamPartGen：通过协同潜在去噪实现语义基础的部分级3D生成",
+    "summary_en": [
+      "• Model Architecture: Introduces Duplex Part Latents (DPLs) for joint geometry-appearance modeling and Relational Semantic Latents (RSLs) for inter-part dependencies, with synchronized co-denoising for consistency.",
+      "• Data used: Implicitly relies on text-3D paired datasets for training, though specific datasets are not mentioned in the abstract; likely uses standard 3D generation benchmarks.",
+      "• Performance metrics: Achieves state-of-the-art performance in geometric fidelity and text-shape alignment across multiple benchmarks, indicating strong quantitative results."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用双工部分潜在变量（DPLs）联合建模几何与外观，以及关系语义潜在变量（RSLs）捕捉部件间依赖，通过同步协同去噪确保一致性。",
+      "• 数据来源: 基于文本-3D配对数据集进行训练，可能使用标准3D生成基准，但摘要中未明确提及具体数据集。",
+      "• 主要结论: 在多个基准测试中实现几何保真度和文本-形状对齐的最先进性能，证明模型能生成连贯、可解释且与文本对齐的3D对象。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for applications in automated 3D content creation, virtual reality, and robotics, where part-aware generation can enhance interpretability and functionality.",
+      "• Implementation Risk: Moderate risk due to complexity of co-denoising processes and dependency on large-scale 3D-text datasets; may face challenges in real-time deployment.",
+      "• Novelty: Significant novelty in integrating semantic grounding with part-level generation, addressing gaps in existing methods that lack inter-part relations and text alignment."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将语义基础与部分级生成结合，通过RSLs捕捉语言驱动的部件间关系，解决了现有方法在语义和功能结构上的不足。",
+      "• 实盘坑: 协同去噪过程复杂，计算成本高；依赖大规模3D-文本数据，数据获取和标注可能成为瓶颈。",
+      "• 复现难度: 中等偏高，需要实现DPLs和RSLs的联合训练，以及同步去噪算法，对硬件和算法优化要求较高。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.19209v1",
+    "title": "Do VLMs Need Vision Transformers? Evaluating State Space Models as Vision Encoders",
+    "pdf_url": "https://arxiv.org/pdf/2603.19209v1",
+    "published": "2026-03-19",
+    "crawled_at": "2026-03-20 20:19:57",
+    "ai_score": 7.8,
+    "translated_title": "VLM是否需要视觉Transformer？评估状态空间模型作为视觉编码器",
+    "summary_en": [
+      "• Model Architecture: Compares transformer-based vision encoders (ViT-family) against state space model (SSM) vision backbones in large vision-language models (VLMs), using frozen backbones with lightweight connectors to language models.",
+      "• Data used: Evaluates on ImageNet-1K for initialization, and uses VQA (visual question answering) and grounding/localization tasks for performance assessment, with additional detection or segmentation training for adaptation.",
+      "• Performance metrics: SSM backbones achieve strongest overall performance across VQA and grounding/localization under matched ImageNet-1K initialization, remaining competitive after dense-task tuning while operating at smaller model scale.",
+      "• Key findings: Higher ImageNet accuracy or larger backbones do not reliably translate to better VLM performance; some visual backbones show instability in localization, addressed through proposed stabilization strategies."
+    ],
+    "summary_cn": [
+      "• 核心模型: 在大型视觉-语言模型（VLM）中，系统比较了基于Transformer的视觉编码器（ViT系列）与状态空间模型（SSM）视觉骨干，采用冻结骨干加轻量级连接器的架构。",
+      "• 数据来源: 使用ImageNet-1K进行初始化评估，并在VQA（视觉问答）和定位/接地任务上进行性能测试，辅以检测或分割训练进行模型适应。",
+      "• 主要结论: 在匹配的ImageNet-1K初始化下，SSM骨干在VQA和定位任务上表现最佳；经过密集任务调优后，SSM在更小模型规模下仍保持竞争力，且提出稳定化策略提升鲁棒性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate-high; SSM backbones offer computational efficiency and competitive performance in VLMs, potentially enabling faster inference and lower resource costs in multi-modal AI applications, though direct financial alpha requires further domain-specific validation.",
+      "• Implementation Risk: Medium; while SSMs show promise, their stability in localization tasks needs careful handling, and integration into existing VLM pipelines may require architectural adjustments, posing deployment challenges.",
+      "• Novelty: High; challenges the dominance of transformer-based vision encoders by introducing SSMs as a viable alternative, with systematic evaluation and stabilization strategies that address previously overlooked instability issues."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高创新性；首次系统评估SSM作为视觉编码器替代Transformer的可行性，挑战了VLM中视觉骨干的既定标准，并提出稳定化策略解决定位不稳定性问题。",
+      "• 实盘坑: 中等风险；SSM在定位任务中的不稳定性需额外处理，集成到现有VLM流程可能引发架构兼容性问题，且性能优势需在金融特定场景（如图表分析）中进一步验证。",
+      "• 复现难度: 中等；实验设置相对清晰，但需要复现ImageNet-1K初始化、密集任务调优和稳定化策略，对计算资源和多模态数据集有一定要求。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2603.19204v1",
+    "title": "Robustness, Cost, and Attack-Surface Concentration in Phishing Detection",
+    "pdf_url": "https://arxiv.org/pdf/2603.19204v1",
+    "published": "2026-03-19",
+    "crawled_at": "2026-03-20 20:20:17",
+    "ai_score": 7.5,
+    "translated_title": "钓鱼检测中的鲁棒性、成本与攻击面集中度研究",
+    "summary_en": [
+      "• Model Architecture: Evaluates Logistic Regression, Random Forests, Gradient Boosted Trees, and XGBoost on phishing detection, focusing on robustness under adversarial evasion rather than static accuracy.",
+      "• Data used: UCI Phishing Websites benchmark with 11,055 instances and 30 ternary features, providing a standardized dataset for comparative analysis.",
+      "• Performance metrics: Reports AUC ≥ 0.979 under static evaluation, but introduces new diagnostics: minimal evasion cost (MEC), evasion survival rate S(B), and robustness concentration index (RCI) to assess adversarial robustness.",
+      "• Key finding: Robustness converges across models under budgeted evasion, with median MEC = 2 and over 80% of evasions concentrating on three low-cost features, highlighting feature economics as the primary driver of security."
+    ],
+    "summary_cn": [
+      "• 核心模型: 评估逻辑回归、随机森林、梯度提升树和XGBoost在钓鱼检测中的应用，重点研究对抗性规避下的鲁棒性而非静态精度。",
+      "• 数据来源: 使用UCI钓鱼网站基准数据集，包含11,055个实例和30个三元特征，为比较分析提供标准化数据。",
+      "• 主要结论: 在预算化规避下，模型鲁棒性趋于一致，中位最小规避成本为2，超过80%的成功规避集中在三个低成本特征上，表明特征经济性是安全性的主要决定因素。",
+      "• 方法创新: 引入最小规避成本、规避存活率和鲁棒性集中指数等新诊断指标，形式化分析特征表示与成本模型对鲁棒性的影响。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the framework for cost-aware evasion analysis could inform security-focused trading strategies or fraud detection systems, but direct financial alpha is limited without market data integration.",
+      "• Implementation Risk: High; reliance on engineered website features may not generalize to real-time, evolving phishing tactics, and the static dataset overlooks dynamic adversarial adaptations in live environments.",
+      "• Novelty: High; introduces a formalized, economics-driven perspective on adversarial robustness, challenging the emphasis on model complexity and providing actionable diagnostics for security hardening.",
+      "• Practical limitation: The study's focus on feature manipulation under explicit budgets may oversimplify real-world attacker behavior, which often involves more sophisticated, multi-faceted evasion techniques."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；提出基于成本感知的规避分析框架，形式化研究特征经济性对鲁棒性的主导作用，突破传统模型复杂度的局限。",
+      "• 实盘坑: 高；依赖工程化网站特征，难以泛化至实时演变的钓鱼攻击，且静态数据集忽略动态对抗环境，实盘部署风险较大。",
+      "• 复现难度: 中等；使用公开基准数据和标准模型，复现技术门槛较低，但需注意特征处理和成本模型设定的细节，可能影响结果一致性。",
+      "• 策略价值: 有限；虽对安全检测有启发，但缺乏市场数据关联，直接转化为金融阿尔法的潜力较小，更适合风控或欺诈预防场景。"
+    ],
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2603.19198v1",
+    "title": "The Exponentially Weighted Signature",
+    "pdf_url": "https://arxiv.org/pdf/2603.19198v1",
+    "published": "2026-03-19",
+    "crawled_at": "2026-03-20 20:20:37",
+    "ai_score": 8.2,
+    "translated_title": "指数加权签名",
+    "summary_en": [
+      "• Model Architecture: Introduces Exponentially Weighted Signature (EWS), generalizing Exponentially Fading Memory signature using bounded linear operators for cross-channel coupling and richer memory dynamics (oscillatory, growth, regime-dependent).",
+      "• Data used: Evaluated on two SDE-based regression tasks (specific datasets not detailed in abstract).",
+      "• Performance metrics: Demonstrates expressivity gap between EWS and both classical signature and EFM on regression tasks (quantitative metrics not specified).",
+      "• Theoretical foundation: Shows EWS is unique solution to linear controlled differential equation on tensor algebra, generalizing state-space models and Laplace/Fourier transforms.",
+      "• Computational efficiency: Group-like structure enables efficient computation and gradient-based learning with generator parameterization."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出指数加权签名（EWS），通过有界线性算子推广指数衰减记忆签名，实现跨通道耦合和更丰富的记忆动态（振荡、增长、机制依赖）。",
+      "• 数据来源: 在两个基于随机微分方程（SDE）的回归任务上进行评估（摘要中未详细说明具体数据集）。",
+      "• 主要结论: EWS在回归任务上展现出比经典签名和EFM更强的表达能力，存在表达性差距。",
+      "• 理论贡献: EWS是张量代数上线性控制微分方程的唯一解，推广了状态空间模型及路径的拉普拉斯/傅里叶变换。",
+      "• 计算优势: 类群结构支持高效计算和基于梯度的学习，通过生成器参数化实现全半群作用。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High - EWS's ability to model cross-channel temporal dependencies and complex memory dynamics could capture nonlinear market microstructure effects in high-frequency or regime-switching environments.",
+      "• Implementation Risk: Moderate - Theoretical elegance but requires careful calibration of linear operators; real-world financial data may introduce stability issues not seen in SDE simulations.",
+      "• Novelty: Significant - Original generalization of signature methods with operator-based weighting; bridges differential equations, harmonic analysis, and machine learning in a unified framework.",
+      "• Practical limitations: Abstract lacks concrete financial applications; performance metrics are qualitative ('expressivity gap') rather than quantitative Sharpe ratios or backtest results.",
+      "• Integration challenge: Requires expertise in both signature calculus and operator theory; not plug-and-play for typical quant teams."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著 - 基于算子的加权机制原创性地推广了签名方法，统一了微分方程、调和分析和机器学习框架。",
+      "• 实盘坑: 中等 - 理论优美但线性算子需精细校准；真实金融数据的噪声和结构性断点可能引发模拟中未见的稳定性问题。",
+      "• 复现难度: 较高 - 需要签名计算和算子理论的双重专业知识；非典型量化团队可直接使用的即插即用方案。",
+      "• 应用风险: 摘要未提供具体金融场景验证；性能评估仅为定性（'表达性差距'），缺乏夏普比率或回测等量化指标。",
+      "• 扩展性: 类群结构和生成器参数化支持高效学习，但算子维度过高可能导致过拟合，需谨慎设计正则化。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
     "id": "2603.16867v1",
     "title": "Efficient Reasoning on the Edge",
     "pdf_url": "https://arxiv.org/pdf/2603.16867v1",
