@@ -1,5 +1,361 @@
 [
   {
+    "id": "2603.20193v1",
+    "title": "From Masks to Pixels and Meaning: A New Taxonomy, Benchmark, and Metrics for VLM Image Tampering",
+    "pdf_url": "https://arxiv.org/pdf/2603.20193v1",
+    "published": "2026-03-20",
+    "crawled_at": "2026-03-23 20:25:36",
+    "ai_score": 8.5,
+    "translated_title": "从掩码到像素与语义：VLM图像篡改检测的新分类法、基准与度量标准",
+    "summary_en": [
+      "• Model Architecture: The paper proposes a pixel-grounded training framework for Vision-Language Models (VLMs) that integrates per-pixel tamper detection with semantic classification and natural language description generation, moving beyond traditional mask-based approaches.",
+      "• Data used: Introduces a new benchmark dataset with per-pixel tamper maps and paired category supervision, covering edit primitives like replace, remove, splice, inpaint, attribute, and colorization across various semantic object classes.",
+      "• Performance metrics: Proposes novel evaluation metrics that quantify pixel-level correctness with localization confidence, measure true edit intensity, and assess tamper meaning understanding via semantics-aware classification and natural language descriptions for predicted regions.",
+      "• The framework re-evaluates existing segmentation/localization baselines on recent tamper detectors, revealing substantial over- and under-scoring with mask-only metrics and exposing failure modes on micro-edits and off-mask changes."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出基于像素的视觉语言模型训练框架，将像素级篡改检测与语义分类、自然语言描述生成相结合，超越传统掩码方法。",
+      "• 数据来源: 发布新基准数据集，包含像素级篡改图和配对类别监督，涵盖替换、移除、拼接、修复、属性修改、着色等多种编辑原语及语义对象类别。",
+      "• 主要结论: 现有基于掩码的度量标准存在显著高估或低估问题，新框架在微编辑和掩码外篡改检测上表现更优，为篡改定位、语义分类和描述建立了严格标准。",
+      "• 性能评估: 提出量化像素级正确性、定位置信度、真实编辑强度的新度量标准，并通过语义感知分类和自然语言描述评估篡改语义理解能力。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for detecting subtle financial document tampering, invoice fraud, or manipulated market visuals where pixel-level precision and semantic understanding are critical for quantitative analysis.",
+      "• Implementation Risk: Moderate risk due to dependency on large-scale pixel-annotated datasets which may be scarce in financial domains; real-time processing of high-resolution images could pose computational challenges.",
+      "• Novelty: Significant novelty in reformulating tampering detection from coarse region labels to pixel-grounded, meaning-aware tasks with integrated language descriptions, advancing beyond traditional computer vision approaches.",
+      "• Practical Limitations: Requires extensive retraining for domain-specific financial applications; natural language description component may need refinement for technical financial terminology."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将篡改检测从粗粒度区域标签重构为像素级、语义感知任务，集成语言描述，在分类法和评估协议上实现突破性创新。",
+      "• 实盘坑: 金融领域缺乏大规模像素标注数据集；高分辨率图像实时处理可能带来计算负担；自然语言描述组件需针对金融术语优化。",
+      "• 复现难度: 中等偏高，需要复现基准数据集和训练框架，但代码已开源；金融场景迁移需额外标注和微调工作。",
+      "• 应用前景: 在财务报表篡改、交易凭证验证、市场视觉数据真实性检测等场景具有明确应用价值，但需解决领域适应性问题。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "CVPR",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.20189v1",
+    "title": "MeanFlow Meets Control: Scaling Sampled-Data Control for Swarms",
+    "pdf_url": "https://arxiv.org/pdf/2603.20189v1",
+    "published": "2026-03-20",
+    "crawled_at": "2026-03-23 20:25:50",
+    "ai_score": 7.5,
+    "translated_title": "MeanFlow与控制相遇：扩展采样数据控制用于群体系统",
+    "summary_en": [
+      "• Model Architecture: Introduces a control-space learning framework based on MeanFlow for swarm steering under linear time-invariant dynamics, focusing on finite-horizon minimum-energy control coefficients.",
+      "• Data used: Utilizes simulated or experimental data from swarm systems operating in sampled-data form, where control inputs are updated intermittently over finite intervals.",
+      "• Performance metrics: Emphasizes scalability for few-step swarm steering, consistency with sampled-data structure, and adherence to prescribed dynamics and actuation maps by construction."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于MeanFlow的控制空间学习框架，针对线性时不变动力学下的群体引导，参数化有限时域最小能量控制系数。",
+      "• 数据来源: 采样数据形式的群体系统模拟或实验数据，控制输入在有限间隔内间歇更新。",
+      "• 主要结论: 提供可扩展的少步群体引导方法，与真实控制系统的采样数据结构一致，并通过构造确保动态和驱动映射的遵循。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; offers a structured approach to swarm control that could be adapted for algorithmic trading in high-frequency or multi-agent systems, but direct financial applications are limited.",
+      "• Implementation Risk: High; requires precise modeling of system dynamics and sampling intervals, with potential instability in real-world noisy environments or non-linear extensions.",
+      "• Novelty: Significant; integrates MeanFlow with control theory for sampled-data systems, introducing a stop-gradient training objective and integral/differential representations for control coefficients."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将MeanFlow与控制理论结合，针对采样数据系统提出控制系数学习框架，具有积分表示和局部微分恒等式。",
+      "• 实盘坑: 高; 需要精确的系统动力学和采样间隔建模，在现实噪声环境或非线性扩展中可能不稳定，金融应用转化复杂。",
+      "• 复现难度: 中等; 基于模拟数据可复现，但依赖于特定动力学假设和采样机制，实际部署需大量调参和验证。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.20184v1",
+    "title": "Kolmogorov-Arnold causal generative models",
+    "pdf_url": "https://arxiv.org/pdf/2603.20184v1",
+    "published": "2026-03-20",
+    "crawled_at": "2026-03-23 20:26:05",
+    "ai_score": 7.8,
+    "translated_title": "Kolmogorov-Arnold因果生成模型",
+    "summary_en": [
+      "• Model Architecture: KaCGM uses Kolmogorov-Arnold Networks (KANs) to parameterize structural equations in causal generative models, enabling interpretable decomposition and visualization of parent-child relationships.",
+      "• Data used: Mixed-type tabular data from synthetic benchmarks, semi-synthetic datasets, and a real-world cardiovascular case study for validation.",
+      "• Performance metrics: Competitive performance against state-of-the-art methods in distributional matching and independence diagnostics of exogenous variables, assessed using observational data alone."
+    ],
+    "summary_cn": [
+      "• 核心模型: KaCGM采用Kolmogorov-Arnold网络（KAN）参数化结构方程，实现因果生成模型的可解释分解和可视化。",
+      "• 数据来源: 混合类型表格数据，包括合成基准、半合成数据集和真实世界心血管案例研究。",
+      "• 主要结论: 在分布匹配和外生变量独立性诊断方面，与最先进方法相比具有竞争力，支持在表格决策场景中的可信部署。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; interpretable causal mechanisms could enhance factor discovery in tabular financial data, but limited to observational queries without explicit high-frequency or arbitrage applications.",
+      "• Implementation Risk: High; reliance on KANs may introduce computational complexity and stability issues in real-time trading environments, requiring careful validation.",
+      "• Novelty: Significant; integrates Kolmogorov-Arnold networks with causal generative models for functional transparency, a novel approach in auditability-focused domains."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将Kolmogorov-Arnold网络与因果生成模型结合，实现功能透明性，在可审计性领域具有新颖性。",
+      "• 实盘坑: 依赖KAN可能带来计算复杂性和稳定性问题，在实时交易环境中需谨慎验证，且仅限于观测性查询。",
+      "• 复现难度: 中等；代码已开源，但需要处理混合类型数据和复杂的因果推断流程，可能增加实施门槛。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.20179v1",
+    "title": "AI Agents Can Already Autonomously Perform Experimental High Energy Physics",
+    "pdf_url": "https://arxiv.org/pdf/2603.20179v1",
+    "published": "2026-03-20",
+    "crawled_at": "2026-03-23 20:26:23",
+    "ai_score": 8.2,
+    "translated_title": "AI代理已能自主执行实验高能物理研究",
+    "summary_en": [
+      "• Model Architecture: Claude Code AI agent integrated with Just Furnish Context (JFC) framework for autonomous analysis pipeline execution, featuring literature-based knowledge retrieval and multi-agent review mechanisms.",
+      "• Data used: Open datasets from ALEPH, DELPHI, and CMS experiments covering electroweak, QCD, and Higgs boson measurements in high energy physics.",
+      "• Performance metrics: Successfully automated all stages of typical HEP analysis including event selection, background estimation, uncertainty quantification, statistical inference, and paper drafting with minimal expert input.",
+      "• Key finding: Current AI agents significantly outperform community expectations, capable of handling diverse analysis structures beyond narrowly scoped workflows."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于Claude Code的AI代理，集成Just Furnish Context (JFC)框架，具备文献知识检索和多代理审查功能，实现全流程自主分析。",
+      "• 数据来源: ALEPH、DELPHI和CMS实验的公开数据集，涵盖电弱相互作用、量子色动力学和希格斯玻色子测量。",
+      "• 主要结论: AI代理已能自动化完成高能物理分析全流程（事件选择、本底估计、不确定性量化、统计推断、论文撰写），仅需少量专家指导。",
+      "• 技术突破: 证明现有AI能力远超物理学家预期，可处理超出预设范围的多样化分析结构。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High - Autonomous analysis agents could revolutionize quantitative research by automating repetitive coding tasks, freeing researchers for higher-value insight generation and novel method development.",
+      "• Implementation Risk: Moderate - Framework requires integration with existing HEP datasets and execution environments; validation of AI-generated analyses remains critical for scientific credibility.",
+      "• Novelty: Significant - JFC framework demonstrates practical multi-agent workflow for complex scientific analysis beyond typical narrow AI applications in finance or NLP.",
+      "• Scalability: Promising - Architecture designed for generalizable application across different physics analyses and potentially adaptable to financial quantitative research pipelines."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出首个能自主执行完整高能物理分析的多代理框架，突破传统AI在科学领域的有限应用范围。",
+      "• 实盘坑: 需与现有实验数据平台深度集成；AI生成分析的验证体系尚未成熟，存在科学可信度风险。",
+      "• 复现难度: 中等偏高——需要获取三大实验的公开数据集，搭建JFC框架环境，并配置Claude Code代理的访问权限。",
+      "• 迁移价值: 该自主分析架构可适配量化金融研究流程，自动化因子挖掘、回测验证等重复性编码工作。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2603.20172v1",
+    "title": "Measuring Faithfulness Depends on How You Measure: Classifier Sensitivity in LLM Chain-of-Thought Evaluation",
+    "pdf_url": "https://arxiv.org/pdf/2603.20172v1",
+    "published": "2026-03-20",
+    "crawled_at": "2026-03-23 20:26:50",
+    "ai_score": 8.2,
+    "translated_title": "测量忠实度取决于如何测量：LLM思维链评估中的分类器敏感性",
+    "summary_en": [
+      "• Model Architecture: The study employs three distinct classifier architectures for evaluating chain-of-thought faithfulness: a regex-only detector, a two-stage regex-plus-LLM pipeline, and an independent Claude Sonnet 4 judge, applied across 12 open-weight models spanning 9 families and parameter sizes from 7B to 1T.",
+      "• Data used: Analysis is based on 10,276 influenced reasoning traces generated by the 12 models, covering diverse faithfulness constructs including sycophancy hints and grader hints, with systematic comparisons across classifier methodologies.",
+      "• Performance metrics: The classifiers produce significantly divergent overall faithfulness rates of 74.4%, 82.6%, and 69.7% on identical data, with non-overlapping 95% confidence intervals and per-model gaps ranging from 2.6 to 30.6 percentage points, all statistically significant (McNemar's test, p < 0.001).",
+      "• Key findings: Inter-classifier agreement measured by Cohen's kappa ranges from 0.06 ('slight') for sycophancy hints to 0.42 ('moderate') for grader hints, with systematic disagreements (e.g., 883 cases classified as faithful by pipeline but unfaithful by Sonnet judge vs. only 2 in reverse), and classifier choice can reverse model rankings (e.g., Qwen3.5-27B ranks 1st under pipeline but 7th under Sonnet judge)."
+    ],
+    "summary_cn": [
+      "• 核心模型: 研究采用三种分类器架构评估思维链忠实度：纯正则表达式检测器、两阶段正则表达式加LLM管道、独立Claude Sonnet 4评判器，应用于12个开源模型，涵盖9个家族，参数规模从7B到1T。",
+      "• 数据来源: 基于12个模型生成的10,276条受影响的推理轨迹，覆盖奉承提示和评分提示等不同忠实度构建，系统比较分类器方法。",
+      "• 主要结论: 分类器在相同数据上产生显著不同的总体忠实度（74.4%、82.6%、69.7%），置信区间不重叠，模型间差距达2.6-30.6个百分点，均统计显著；分类器选择可逆转模型排名（如Qwen3.5-27B在管道下排名第1，在Sonnet评判器下排名第7）。",
+      "• 方法论洞察: 不同分类器以不同严格程度操作忠实度构建（词汇提及vs.认知依赖），导致相同行为测量分歧，表明已发表忠实度数字无法跨研究比较，未来评估应报告多方法敏感性范围而非单点估计。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - The paper exposes critical flaws in current LLM faithfulness evaluation, which could inform more robust model selection for financial NLP tasks (e.g., sentiment analysis, report generation), but direct alpha generation is limited as it focuses on methodological critique rather than predictive modeling.",
+      "• Implementation Risk: High - Applying these findings requires developing custom classifiers with clear operational definitions, which introduces subjectivity and potential misalignment with specific use cases; reliance on inconsistent metrics could lead to flawed model deployment in production systems.",
+      "• Novelty: High - The systematic demonstration that faithfulness measurements are classifier-dependent and non-comparable across studies is a significant contribution, challenging the assumption of objective evaluation in LLM research and prompting methodological reforms in the field.",
+      "• Practical Implications: The work highlights the need for standardized evaluation protocols in LLM applications, which could reduce noise in model comparisons and improve reliability for tasks requiring high faithfulness, such as financial document analysis or automated reasoning."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高 - 系统证明忠实度测量依赖于分类器选择且跨研究不可比，颠覆LLM评估中客观性假设，推动方法论改革，对金融NLP任务（如报告生成）的模型选择有启示意义。",
+      "• 实盘坑: 高 - 实际应用需开发自定义分类器，引入主观性和用例错配风险；依赖不一致指标可能导致生产系统模型部署错误，增加操作复杂性。",
+      "• 复现难度: 中等 - 方法基于公开数据和模型，但需要精确复制分类器架构和评估流程，涉及大量计算资源（10,276条推理轨迹）和统计检验，可能受分类器实现细节影响。",
+      "• 策略价值: 中等 - 为量化团队提供评估LLM可靠性的框架，但直接阿尔法生成有限，更适合风险管理和模型验证环节，而非交易信号开发。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.20161v1",
+    "title": "Semantic Token Clustering for Efficient Uncertainty Quantification in Large Language Models",
+    "pdf_url": "https://arxiv.org/pdf/2603.20161v1",
+    "published": "2026-03-20",
+    "crawled_at": "2026-03-23 20:27:04",
+    "ai_score": 7.5,
+    "translated_title": "基于语义令牌聚类的大语言模型高效不确定性量化方法",
+    "summary_en": [
+      "• Model Architecture: Proposes Semantic Token Clustering (STC), which groups tokens into semantically consistent clusters using embedding clustering and prefix matching, then quantifies uncertainty based on probability mass aggregated over corresponding semantic clusters.",
+      "• Data used: Not explicitly specified in abstract, but experimental results likely involve standard NLP benchmarks or datasets for uncertainty quantification tasks.",
+      "• Performance metrics: Achieves performance comparable to state-of-the-art baselines while substantially reducing computational overhead, requiring only a single generation without auxiliary models."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出语义令牌聚类（STC）方法，通过嵌入聚类和前缀匹配将令牌分组为语义一致的簇，基于对应语义簇的概率质量聚合来量化不确定性。",
+      "• 数据来源: 摘要未明确说明，但实验可能使用标准NLP基准或不确定性量化任务的数据集。",
+      "• 主要结论: STC在性能上与最先进基线相当，同时显著降低计算开销，仅需单次生成且不依赖辅助模型。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; efficient uncertainty quantification could enhance LLM-based trading strategies by filtering unreliable outputs, but direct financial application is limited without domain-specific validation.",
+      "• Implementation Risk: Low to moderate; method is computationally efficient and model-agnostic, but clustering quality may vary with token embeddings and semantic consistency, potentially affecting reliability.",
+      "• Novelty: High; introduces a novel approach leveraging inherent semantic information in LLMs for uncertainty quantification without repeated sampling or auxiliary models, addressing a key efficiency gap."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；利用LLM内在语义信息进行不确定性量化，无需重复采样或辅助模型，创新性地解决了效率瓶颈。",
+      "• 实盘坑: 中低；聚类质量可能受令牌嵌入和语义一致性影响，需在金融领域数据上验证可靠性，且不确定性阈值设定需谨慎优化。",
+      "• 复现难度: 低；方法计算高效且模型无关，基于标准聚类和前缀匹配技术，易于实现和集成到现有LLM管道中。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.20155v1",
+    "title": "Beyond Single Tokens: Distilling Discrete Diffusion Models via Discrete MMD",
+    "pdf_url": "https://arxiv.org/pdf/2603.20155v1",
+    "published": "2026-03-20",
+    "crawled_at": "2026-03-23 20:27:19",
+    "ai_score": 7.5,
+    "translated_title": "超越单令牌：通过离散MMD蒸馏离散扩散模型",
+    "summary_en": [
+      "• Model Architecture: Introduces Discrete Moment Matching Distillation (D-MMD), a novel distillation method for discrete diffusion models that adapts successful continuous domain techniques to discrete spaces.",
+      "• Data used: Evaluated on both text and image datasets, demonstrating cross-modal applicability without specifying exact datasets in the abstract.",
+      "• Performance metrics: Maintains high quality and diversity compared to previous discrete distillation methods that collapse, with distilled generators potentially outperforming their teachers given sufficient sampling steps."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出离散矩匹配蒸馏（D-MMD），一种针对离散扩散模型的新型蒸馏方法，将连续域的成功技术适配到离散空间。",
+      "• 数据来源: 在文本和图像数据集上进行评估，展示了跨模态适用性，但摘要中未指定具体数据集。",
+      "• 主要结论: 相比先前易崩溃的离散蒸馏方法，D-MMD在足够采样步数下保持高质量和多样性，且蒸馏后的生成器可能超越其教师模型。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; distillation efficiency could accelerate discrete diffusion applications in NLP/LLM and image generation, potentially reducing computational costs for real-time systems.",
+      "• Implementation Risk: High; discrete diffusion models are inherently complex, and distillation stability (requiring 'sufficient sampling steps') introduces uncertainty in deployment.",
+      "• Novelty: Significant; bridges the gap between continuous and discrete diffusion distillation, addressing a known limitation in the field with a method that avoids collapse."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著；填补了连续与离散扩散蒸馏之间的空白，通过避免崩溃的方法解决了该领域的已知限制。",
+      "• 实盘坑: 高；离散扩散模型本质复杂，蒸馏稳定性（需'足够采样步数'）在部署中引入不确定性，可能影响实时性能。",
+      "• 复现难度: 中等；基于成熟连续域技术，但离散适配和超参数调优（如采样步数）可能增加实验复杂性。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.20149v1",
+    "title": "Enhancing Hyperspace Analogue to Language (HAL) Representations via Attention-Based Pooling for Text Classification",
+    "pdf_url": "https://arxiv.org/pdf/2603.20149v1",
+    "published": "2026-03-20",
+    "crawled_at": "2026-03-23 20:27:38",
+    "ai_score": 7.2,
+    "translated_title": "基于注意力池化增强超空间语言类比（HAL）表示用于文本分类",
+    "summary_en": [
+      "• Model Architecture: Integrates a learnable, temperature-scaled additive attention mechanism into the HAL representation pipeline, applying Truncated SVD to project sparse co-occurrence matrices into a dense latent space before attention pooling.",
+      "• Data used: Evaluated on the IMDB sentiment analysis dataset, a standard benchmark for binary sentiment classification tasks.",
+      "• Performance metrics: Achieves 82.38% test accuracy, representing a 6.74 percentage point absolute improvement over the mean pooling baseline (75.64%).",
+      "• Qualitative analysis: Attention weights successfully suppress stop-words and focus on sentiment-bearing tokens, enhancing model interpretability."
+    ],
+    "summary_cn": [
+      "• 核心模型: 在HAL表示流程中集成可学习的温度缩放加性注意力机制，通过截断SVD将稀疏共现矩阵投影到稠密潜在空间，再进行注意力池化。",
+      "• 数据来源: 使用IMDB情感分析数据集进行评估，这是情感分类任务的常用基准。",
+      "• 主要结论: 注意力池化方法在测试集上达到82.38%的准确率，相比传统均值池化基线（75.64%）绝对提升6.74个百分点。",
+      "• 模型解释性: 注意力权重能有效抑制停用词并聚焦于情感相关词汇，提高了模型的可解释性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - The attention mechanism's ability to focus on sentiment-bearing tokens could be adapted for financial sentiment analysis of news or social media, potentially improving signal extraction over bag-of-words approaches.",
+      "• Implementation Risk: High - HAL models are computationally expensive for large vocabularies; real-time application in trading requires significant optimization and may not scale well compared to modern transformer-based methods.",
+      "• Novelty: Low to Moderate - While the attention-augmented HAL approach is novel, the core HAL model is dated (1990s), and attention mechanisms are now standard in NLP; the main contribution is adapting old techniques with modern components.",
+      "• Practical Limitations: The 82.38% accuracy on IMDB is below state-of-the-art (often >90%), suggesting limited competitive edge in production environments."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等偏低 - 将注意力机制与经典HAL模型结合有一定新意，但HAL本身是90年代技术，注意力机制在NLP中已属常规操作，创新性有限。",
+      "• 实盘坑: 高 - HAL模型对大规模词汇表计算成本极高，实盘交易中实时处理新闻或社交媒体数据时，相比基于Transformer的现代方法，可扩展性差且优化难度大。",
+      "• 复现难度: 中等 - 方法描述清晰，但需要处理稀疏矩阵和SVD投影，对工程实现有一定要求；IMDB数据集公开可用，复现实验相对直接。",
+      "• 性能瓶颈: 在IMDB数据集上82.38%的准确率低于当前SOTA（通常>90%），实际应用中竞争力不足，可能仅适用于特定小规模场景。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2603.20132v1",
+    "title": "Revisiting Gene Ontology Knowledge Discovery with Hierarchical Feature Selection and Virtual Study Group of AI Agents",
+    "pdf_url": "https://arxiv.org/pdf/2603.20132v1",
+    "published": "2026-03-20",
+    "crawled_at": "2026-03-23 20:27:52",
+    "ai_score": 7.2,
+    "translated_title": "基于分层特征选择与AI代理虚拟研究组的基因本体知识发现再探",
+    "summary_en": [
+      "• Model Architecture: Proposes an agentic AI-based virtual study group framework with hierarchical feature selection mechanisms for knowledge discovery in Gene Ontology terms.",
+      "• Data used: Utilizes ageing-related Gene Ontology terms from four different model organisms, validated against existing research literature.",
+      "• Performance metrics: Majority of AI-generated scientific claims are supported by existing literature, with internal mechanisms playing a crucial role in the framework's effectiveness."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出基于代理AI的虚拟研究组框架，结合分层特征选择机制，用于基因本体术语的知识发现。",
+      "• 数据来源: 使用四种不同模式生物的衰老相关基因本体术语，并通过现有研究文献进行验证。",
+      "• 主要结论: AI代理生成的大部分科学主张得到现有文献支持，虚拟研究组内部机制在框架中发挥重要作用。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate potential for generating novel biological insights through automated knowledge discovery, but limited direct financial application without further adaptation.",
+      "• Implementation Risk: High risk due to reliance on complex AI agent coordination and biological validation processes, which may not scale well to financial datasets.",
+      "• Novelty: Novel integration of agentic AI with hierarchical feature selection for biological knowledge discovery, though the approach is still experimental and lacks robust quantitative benchmarks."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将代理AI与分层特征选择结合用于生物知识发现，具有一定新颖性，但方法尚处实验阶段。",
+      "• 实盘坑: 依赖复杂的AI代理协调和生物验证流程，风险较高，难以直接应用于金融数据。",
+      "• 复现难度: 中等偏高，需要专业知识设置AI代理和验证机制，且缺乏标准化性能指标。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2603.20115v1",
+    "title": "Conditioning Protein Generation via Hopfield Pattern Multiplicity",
+    "pdf_url": "https://arxiv.org/pdf/2603.20115v1",
+    "published": "2026-03-20",
+    "crawled_at": "2026-03-23 20:28:06",
+    "ai_score": 7.8,
+    "translated_title": "通过Hopfield模式多重性调节蛋白质生成",
+    "summary_en": [
+      "• Model Architecture: Uses stochastic attention mechanism with a single scalar parameter bias added to attention logits, enabling conditioning without retraining or architectural changes.",
+      "• Data used: Experiments conducted on five Pfam protein families (Kunitz, SH3, WW, Homeobox, Forkhead domains) and omega-conotoxin peptides targeting calcium channels, with curated seeding from 23 characterized binders.",
+      "• Performance metrics: Demonstrates monotonic relationship between geometric separation and calibration gap across fourfold range of geometries, generates over a thousand candidate sequences preserving pharmacophore and binding determinants."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于随机注意力机制，通过添加单个标量参数偏置到注意力对数，实现无需重新训练或架构修改的条件生成。",
+      "• 数据来源: 使用五个Pfam蛋白质家族（Kunitz、SH3、WW、Homeobox、Forkhead结构域）和靶向钙通道的ω-芋螺毒素肽进行实验，从23个特征化结合物中筛选种子序列。",
+      "• 主要结论: 发现几何分离与校准间隙之间存在单调关系，生成超过一千个候选序列，保留了主要药效团和所有实验确定的结合决定因素。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Enables rapid expansion of small experimental datasets into diverse candidate libraries for drug discovery and protein engineering applications.",
+      "• Implementation Risk: Calibration gap between internal representation and decoded sequence phenotype may limit practical utility for specific functional properties.",
+      "• Novelty: Introduces parameter-free conditioning method using Hopfield pattern multiplicity, addressing limitations of equal treatment in stochastic attention models."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出基于Hopfield模式多重性的无参数条件生成方法，解决了随机注意力模型中平等处理所有序列的局限性。",
+      "• 实盘坑: 内部表示与解码序列表型之间的校准间隙可能影响特定功能属性的实际应用效果。",
+      "• 复现难度: 方法简单且无需重新训练，但需要高质量的功能子集序列和适当的几何分离度量以确保生成质量。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
     "id": "2603.19229v1",
     "title": "NavTrust: Benchmarking Trustworthiness for Embodied Navigation",
     "pdf_url": "https://arxiv.org/pdf/2603.19229v1",
