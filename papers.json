@@ -1,5 +1,347 @@
 [
   {
+    "id": "2603.22286v1",
+    "title": "WorldCache: Content-Aware Caching for Accelerated Video World Models",
+    "pdf_url": "https://arxiv.org/pdf/2603.22286v1",
+    "published": "2026-03-23",
+    "crawled_at": "2026-03-24 20:28:15",
+    "ai_score": 8.2,
+    "translated_title": "WorldCache：面向加速视频世界模型的内容感知缓存",
+    "summary_en": [
+      "• Model Architecture: WorldCache introduces a Perception-Constrained Dynamical Caching framework with motion-adaptive thresholds, saliency-weighted drift estimation, optimal approximation via blending and warping, and phase-aware threshold scheduling across diffusion steps.",
+      "• Data used: Evaluated on Cosmos-Predict2.5-2B model using PAI-Bench dataset for video world model inference acceleration.",
+      "• Performance metrics: Achieves 2.3× inference speedup while preserving 99.4% of baseline quality, substantially outperforming prior training-free caching approaches."
+    ],
+    "summary_cn": [
+      "• 核心模型: WorldCache提出感知约束动态缓存框架，包含运动自适应阈值、显著性加权漂移估计、混合与变形优化近似以及扩散步骤中的相位感知阈值调度。",
+      "• 数据来源: 使用Cosmos-Predict2.5-2B模型在PAI-Bench数据集上进行评估，专注于视频世界模型的推理加速。",
+      "• 主要结论: 实现2.3倍推理加速，同时保持99.4%的基线质量，显著优于现有免训练缓存方法。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for accelerating video generation pipelines in trading signal visualization, market simulation environments, and real-time financial data rendering applications.",
+      "• Implementation Risk: Moderate risk due to dependency on specific diffusion transformer architectures and potential quality degradation in highly dynamic financial time-series data.",
+      "• Novelty: Significant novelty in motion-adaptive caching with perception constraints, addressing ghosting artifacts and motion inconsistencies that plague existing zero-order hold approaches."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出感知约束动态缓存机制，通过运动自适应阈值和相位感知调度解决现有静态缓存方法中的重影和运动不一致问题。",
+      "• 实盘坑: 依赖特定扩散变换器架构，在高度动态的金融时序数据中可能存在质量下降风险，需要针对金融数据特性进行适配。",
+      "• 复现难度: 中等难度，需要复现完整的视频世界模型框架和缓存机制，但代码已开源，技术细节相对透明。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.22283v1",
+    "title": "End-to-End Training for Unified Tokenization and Latent Denoising",
+    "pdf_url": "https://arxiv.org/pdf/2603.22283v1",
+    "published": "2026-03-23",
+    "crawled_at": "2026-03-24 20:28:36",
+    "ai_score": 8.2,
+    "translated_title": "统一分词与潜在去噪的端到端训练",
+    "summary_en": [
+      "• Model Architecture: UNITE introduces a Generative Encoder that serves as both image tokenizer and latent generator via weight sharing, enabling single-stage joint training of tokenization and generation tasks through two forward passes.",
+      "• Data used: The model was evaluated on image datasets (specifically ImageNet 256 x 256) and molecule modalities, demonstrating cross-modal applicability without requiring pretrained encoders like DINO.",
+      "• Performance metrics: Achieved near state-of-the-art performance with FID scores of 2.12 and 1.73 for Base and Large models on ImageNet 256 x 256, showing competitive results without adversarial losses."
+    ],
+    "summary_cn": [
+      "• 核心模型: UNITE采用生成式编码器架构，通过权重共享同时实现图像分词和潜在生成，支持单阶段联合训练，避免了传统潜在扩散模型的分阶段训练复杂性。",
+      "• 数据来源: 在图像数据集（如ImageNet 256 x 256）和分子模态上进行评估，展示了跨模态适用性，无需依赖预训练编码器（如DINO）。",
+      "• 主要结论: 在ImageNet 256 x 256上，Base和Large模型分别达到FID 2.12和1.73，接近当前最优性能，证明了从零开始联合训练分词与生成的可行性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for improving efficiency in generative AI pipelines by reducing training complexity and latency, which could translate to faster model iteration and deployment in quantitative strategies.",
+      "• Implementation Risk: Moderate risk due to reliance on novel architecture; performance may degrade on out-of-distribution data or require extensive hyperparameter tuning for real-world applications.",
+      "• Novelty: Significant novelty in unifying tokenization and generation as a single latent inference problem, offering a fresh perspective on latent space design without adversarial training."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将分词和生成统一为同一潜在推断问题，通过权重共享实现端到端训练，避免了分阶段训练的繁琐，在架构设计上具有突破性。",
+      "• 实盘坑: 模型依赖于新提出的生成式编码器，可能在非标准数据上表现不稳定，且超参数调优成本较高，实盘部署需谨慎验证。",
+      "• 复现难度: 中等偏高，需要实现复杂的联合训练流程和潜在空间对齐，但论文提供了清晰的架构描述，有助于降低复现门槛。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.22281v1",
+    "title": "ThinkJEPA: Empowering Latent World Models with Large Vision-Language Reasoning Model",
+    "pdf_url": "https://arxiv.org/pdf/2603.22281v1",
+    "published": "2026-03-23",
+    "crawled_at": "2026-03-24 20:28:57",
+    "ai_score": 7.8,
+    "translated_title": "ThinkJEPA：利用大型视觉语言推理模型增强潜在世界模型",
+    "summary_en": [
+      "• Model Architecture: Proposes a dual-temporal pathway framework combining a dense JEPA branch for fine-grained motion prediction with a uniformly sampled VLM 'thinker' branch for long-horizon semantic guidance, using a hierarchical pyramid representation extraction module to transfer VLM reasoning signals.",
+      "• Data used: Evaluated on hand-manipulation trajectory prediction datasets, likely action-conditioned video datasets with manipulation tasks, though specific datasets are not named in the abstract.",
+      "• Performance metrics: Outperforms both a strong VLM-only baseline and a JEPA-predictor baseline in experiments, yielding more robust long-horizon rollout behavior in trajectory prediction tasks."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出双时间路径框架，结合密集JEPA分支进行细粒度运动预测和均匀采样VLM'思考者'分支提供长时程语义指导，采用分层金字塔表示提取模块传递VLM推理信号。",
+      "• 数据来源: 基于手部操作轨迹预测数据集进行评估，可能涉及动作条件视频数据集，但摘要中未具体命名数据集。",
+      "• 主要结论: 在实验中优于纯VLM基线和JEPA预测器基线，在轨迹预测任务中展现出更稳健的长时程展开行为。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the integration of dense dynamics modeling with VLM semantic guidance could enhance predictive accuracy in video-based forecasting tasks, potentially applicable to surveillance or autonomous systems, but direct financial alpha generation is limited without specific market data adaptation.",
+      "• Implementation Risk: High; the dual-branch architecture and hierarchical representation extraction add complexity, requiring significant computational resources and careful tuning, with risks of overfitting on small action-conditioned datasets mentioned in the abstract.",
+      "• Novelty: Moderate; the combination of JEPA-style latent world models with VLM guidance is innovative, addressing limitations of each approach, but builds heavily on existing V-JEPA2 and VLM frameworks without groundbreaking architectural breakthroughs."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；将密集动态建模与VLM语义指导结合，创新性地解决各自局限性，但主要基于现有V-JEPA2和VLM框架，缺乏突破性架构创新。",
+      "• 实盘坑: 高；双分支架构和分层表示提取增加复杂性，需大量计算资源和精细调参，且摘要提到在小规模动作条件数据集上存在过拟合风险。",
+      "• 复现难度: 中等偏高；需要实现JEPA和VLM组件，集成双路径和金字塔模块，但依赖公开模型和数据集可能降低部分难度。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2603.22278v1",
+    "title": "The Dual Mechanisms of Spatial Reasoning in Vision-Language Models",
+    "pdf_url": "https://arxiv.org/pdf/2603.22278v1",
+    "published": "2026-03-23",
+    "crawled_at": "2026-03-24 20:29:23",
+    "ai_score": 7.5,
+    "translated_title": "视觉语言模型中空间推理的双重机制",
+    "summary_en": [
+      "• Model Architecture: The paper analyzes vision-language models (VLMs) with a language model backbone and a vision encoder, identifying two concurrent mechanisms for spatial reasoning: intermediate language layers represent content-independent spatial relations on visual tokens, while the vision encoder encodes object layouts globally across all image tokens.",
+      "• Data used: The study likely employs naturalistic images from standard multimodal datasets (e.g., COCO, VQA) for tasks like image captioning and visual question answering, though specific datasets are not detailed in the abstract.",
+      "• Performance metrics: Performance is evaluated on spatial reasoning tasks, with results showing that enhancing vision-derived spatial representations globally across image tokens improves spatial reasoning performance on naturalistic images.",
+      "• Main findings: The vision encoder is the dominant source of spatial information, with spatial signals distributed beyond object regions into background areas, and this mechanism plays a primary role in shaping model predictions compared to the secondary role of language model layers."
+    ],
+    "summary_cn": [
+      "• 核心模型: 研究视觉语言模型（VLMs），包括语言模型主干和视觉编码器，揭示空间推理的双重机制：语言模型中间层在视觉标记上表示内容无关的空间关系，而视觉编码器全局编码对象布局。",
+      "• 数据来源: 可能使用标准多模态数据集（如COCO、VQA）中的自然图像，用于图像描述和视觉问答等任务，但摘要中未指定具体数据集。",
+      "• 主要结论: 视觉编码器是空间信息的主要来源，空间信号分布在所有图像标记中，包括对象区域和背景区域，增强这些表示可提升自然图像上的空间推理性能。",
+      "• 机制分析: 语言模型机制在模型预测中起次要作用，而视觉编码器机制占主导地位，澄清了VLMs中空间关联的计算方式。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the insights into spatial reasoning mechanisms could inform the development of more robust VLMs for financial applications like document analysis or market sentiment from visual data, but direct alpha generation is limited without specific trading contexts.",
+      "• Implementation Risk: High; applying these findings to real-world financial systems requires integration with domain-specific data and models, and the global enhancement of spatial representations may increase computational complexity and overfitting risks in noisy financial environments.",
+      "• Novelty: Moderate; the identification of dual mechanisms and the emphasis on vision encoder dominance offer a nuanced view of VLM internals, but the core concepts build on existing multimodal research without groundbreaking theoretical advances."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；揭示了VLMs中空间推理的双重机制，强调视觉编码器的主导作用，为理解模型内部计算提供了新视角，但未提出颠覆性理论。",
+      "• 实盘坑: 高；将研究应用于金融实盘需结合领域特定数据和模型，全局增强空间表示可能增加计算复杂性和在嘈杂金融环境中的过拟合风险，直接生成阿尔法收益有限。",
+      "• 复现难度: 中等；基于标准VLMs和数据集，方法描述清晰，但需具体实现细节和计算资源，复现过程可能涉及调参和验证挑战。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2603.22276v1",
+    "title": "Scaling DoRA: High-Rank Adaptation via Factored Norms and Fused Kernels",
+    "pdf_url": "https://arxiv.org/pdf/2603.22276v1",
+    "published": "2026-03-23",
+    "crawled_at": "2026-03-24 20:29:47",
+    "ai_score": 8.2,
+    "translated_title": "扩展DoRA：通过分解范数和融合内核实现高秩适应",
+    "summary_en": [
+      "• Model Architecture: Weight-Decomposed Low-Rank Adaptation (DoRA) extends LoRA by decoupling weight magnitude from direction, but requires computing row-wise norm of W + sBA, which traditionally materializes dense [d_out, d_in] product BA.",
+      "• Data used: Evaluated on six 8-32B vision-language models (VLMs) across three NVIDIA GPUs (RTX 6000 PRO, H200, B200) with rank r=384 in bf16 precision.",
+      "• Performance metrics: Fused implementation achieves 1.5-2.0x faster inference and 1.5-1.9x faster gradient computation vs Hugging Face PEFT, with up to 7 GB lower peak VRAM; final-logit cosine similarity >0.9999 across all model/GPU pairs."
+    ],
+    "summary_cn": [
+      "• 核心模型: 权重分解低秩适应（DoRA）通过解耦权重幅度和方向扩展LoRA，但需要计算W + sBA的行范数，传统方法需生成稠密[d_out, d_in]乘积BA。",
+      "• 数据来源: 在六种8-32B视觉语言模型（VLMs）上测试，使用三种NVIDIA GPU（RTX 6000 PRO, H200, B200），秩r=384，bf16精度。",
+      "• 主要结论: 融合实现比Hugging Face PEFT推理快1.5-2.0倍，梯度计算快1.5-1.9倍，峰值VRAM降低达7 GB；所有模型/GPU对的最终logit余弦相似度>0.9999。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for quant funds using large VLMs, as 1.5-2.7x speedup and 7 GB VRAM reduction enable higher-rank adaptations previously infeasible on single GPUs, potentially improving model accuracy and training efficiency.",
+      "• Implementation Risk: Moderate; requires custom Triton kernels and integration into existing frameworks, though tested across multiple GPU architectures (L40S to B300) with stable numerical form to avoid catastrophic cancellation.",
+      "• Novelty: Strong systems contribution with factored norm (O(d_out r + r^2) intermediates) and fused kernels, but builds on established DoRA/LoRA concepts rather than novel algorithmic breakthroughs."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出分解范数（通过O(d_out r + r^2)中间计算消除稠密乘积）和融合Triton内核（将四内核DoRA组合为单次传递），系统优化显著。",
+      "• 实盘坑: 需定制Triton内核和框架集成，尽管在多种GPU架构上测试，但高秩适应（如r=384）仍可能受内存限制，尤其在多模块和检查点场景。",
+      "• 复现难度: 中等；依赖Triton和特定硬件优化，但论文提供详细微基准和性能数据，复现需工程资源。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2603.22273v1",
+    "title": "Decoupling Exploration and Policy Optimization: Uncertainty Guided Tree Search for Hard Exploration",
+    "pdf_url": "https://arxiv.org/pdf/2603.22273v1",
+    "published": "2026-03-23",
+    "crawled_at": "2026-03-24 20:30:10",
+    "ai_score": 8.5,
+    "translated_title": "解耦探索与策略优化：基于不确定性的树搜索用于困难探索任务",
+    "summary_en": [
+      "• Model Architecture: Proposes a novel paradigm that decouples exploration from exploitation using a tree-search strategy inspired by Go-With-The-Winner algorithm, paired with epistemic uncertainty measures to guide exploration without reinforcement learning during exploration phase.",
+      "• Data used: Evaluated on hard Atari benchmarks (Montezuma's Revenge, Pitfall!, Venture), MuJoCo Adroit dexterous manipulation tasks, and AntMaze environments using only image observations without expert demonstrations or offline datasets.",
+      "• Performance metrics: Explores an order of magnitude more efficiently than intrinsic motivation baselines, achieves state-of-the-art scores by wide margins on Atari benchmarks, and solves high-dimensional continuous action space tasks in sparse-reward settings from image observations alone."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出解耦探索与利用的新范式，采用受Go-With-The-Winner算法启发的树搜索策略，结合认知不确定性度量引导探索，在探索阶段完全绕过强化学习。",
+      "• 数据来源: 使用Atari困难基准（蒙特祖玛的复仇、陷阱、冒险）、MuJoCo灵巧操作任务和AntMaze环境，仅依赖图像观测，无需专家演示或离线数据集。",
+      "• 主要结论: 探索效率比内在动机基线高一个数量级，在Atari基准上以显著优势达到最先进分数，首次仅从图像观测解决稀疏奖励的高维连续动作空间任务。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High - The decoupling approach could revolutionize exploration efficiency in complex environments, potentially enabling discovery of novel trading patterns or market inefficiencies that traditional RL methods miss due to exploration overhead.",
+      "• Implementation Risk: Medium-High - While promising, the tree-search approach may face scalability issues in extremely high-dimensional financial datasets, and uncertainty estimation in non-stationary markets presents significant challenges.",
+      "• Novelty: High - First demonstration of solving high-dimensional continuous control tasks from pure image observations without demonstrations in sparse-reward settings represents a breakthrough in sample-efficient exploration."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次将探索与策略优化完全解耦，在探索阶段完全绕过强化学习，采用树搜索+不确定性引导的纯探索机制，在稀疏奖励的高维连续空间任务上取得突破性成果。",
+      "• 实盘坑: 树搜索算法在金融市场超高维数据中可能面临组合爆炸问题，不确定性度量在非平稳市场环境中难以稳定估计，探索发现的模式可能无法有效转化为可交易的Alpha信号。",
+      "• 复现难度: 中等偏高 - 需要实现复杂的树搜索算法和不确定性估计模块，但论文提供了清晰的范式框架，且不依赖特定领域知识或专家数据。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2603.22254v1",
+    "title": "Characterizing High-Capacity Janus Aminobenzene-Graphene Anode for Sodium-Ion Batteries with Machine Learning",
+    "pdf_url": "https://arxiv.org/pdf/2603.22254v1",
+    "published": "2026-03-23",
+    "crawled_at": "2026-03-24 20:30:32",
+    "ai_score": 8.2,
+    "translated_title": "基于机器学习的钠离子电池高容量Janus氨基苯-石墨烯负极特性研究",
+    "summary_en": [
+      "• Model Architecture: SpookyNet machine-learning force field (MLFF) combined with all-electron density-functional theory (DFT) calculations for room-temperature simulations of Na storage mechanisms.",
+      "• Data used: Computational simulations across state of charge for aminobenzene-functionalized Janus graphene (Na$_x$AB), comparing with hard carbon anode behavior.",
+      "• Performance metrics: Estimated gravimetric capacity of ~400 mAh g$^{-1}$, low operating voltage plateau at 0.15 V vs. Na/Na$^{+}$, Na diffusivities of ~10$^{-6}$ cm$^{2}$ s$^{-1}$ (2-3 orders higher than hard carbon), and negligible volume change."
+    ],
+    "summary_cn": [
+      "• 核心模型: SpookyNet机器学习力场(MLFF)结合全电子密度泛函理论(DFT)计算，用于室温下钠存储机制模拟。",
+      "• 数据来源: 对氨基苯功能化Janus石墨烯(Na$_x$AB)在不同荷电状态下的计算模拟，并与硬碳负极行为进行对比。",
+      "• 主要结论: 预测质量比容量约400 mAh g$^{-1}$，工作电压平台低至0.15 V vs. Na/Na$^{+}$，钠离子扩散系数约10$^{-6}$ cm$^{2}$ s$^{-1}$（比硬碳高2-3个数量级），体积变化可忽略。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High if material scales commercially—superior Na diffusivity and capacity could enable faster-charging, higher-energy-density SIBs for grid storage/EVs.",
+      "• Implementation Risk: Very high—computational predictions lack experimental validation; synthesis of Janus graphene with precise functionalization at scale is unproven.",
+      "• Novelty: Strong—MLFF+DFT approach for detailed storage mechanism elucidation in novel 2D materials, contrasting with empirical hard carbon studies."
+    ],
+    "verdict_cn": [
+      "• 创新点: 采用MLFF+DFT计算揭示新型Janus石墨烯材料的三阶段储钠机制，区别于传统硬碳的多阶段行为，方法学上有突破。",
+      "• 实盘坑: 纯计算预测缺乏实验验证；Janus石墨烯的精确功能化合成和大规模制备技术尚未成熟，产业化风险极高。",
+      "• 复现难度: 中等偏高—需要SpookyNet MLFF和DFT计算资源，但开源代码和标准流程可能降低门槛；材料合成部分难以复现。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2603.22248v1",
+    "title": "Confidence-Based Decoding is Provably Efficient for Diffusion Language Models",
+    "pdf_url": "https://arxiv.org/pdf/2603.22248v1",
+    "published": "2026-03-23",
+    "crawled_at": "2026-03-24 20:30:53",
+    "ai_score": 8.2,
+    "translated_title": "基于置信度的解码在扩散语言模型中具有可证明的高效性",
+    "summary_en": [
+      "• Model Architecture: Analyzes confidence-based decoding strategies for diffusion language models (DLMs), focusing on an entropy sum-based method that adaptively unmask tokens based on prediction confidence until cumulative entropy exceeds a threshold.",
+      "• Data used: Theoretical analysis framework does not specify empirical datasets; focuses on general target data distribution with entropy H(X_0), applicable to various language modeling tasks.",
+      "• Performance metrics: Achieves ε-accurate sampling in KL divergence with expected number of iterations O~(H(X_0)/ε), demonstrating substantial acceleration when data distribution has low entropy relative to sequence length."
+    ],
+    "summary_cn": [
+      "• 核心模型: 针对扩散语言模型（DLMs）的基于置信度的解码策略，提出一种基于熵和的解码方法，根据预测置信度自适应地解掩码令牌，直到累积熵超过阈值。",
+      "• 数据来源: 理论分析框架未指定具体数据集；关注具有熵H(X_0)的通用目标数据分布，适用于多种语言建模任务。",
+      "• 主要结论: 在KL散度下实现ε精确采样，期望迭代次数为O~(H(X_0)/ε)，当数据分布相对于序列长度具有低熵时，能显著加速采样过程。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for improving sampling efficiency in DLMs, especially for low-entropy data distributions, which could reduce computational costs in language generation tasks and enhance real-time applications.",
+      "• Implementation Risk: Moderate risk due to theoretical nature; practical implementation may face challenges in tuning entropy thresholds and integrating with existing DLM architectures, requiring empirical validation.",
+      "• Novelty: High novelty as the first theoretical analysis framework for confidence-based decoding in DLMs, providing foundational insights that could guide future decoding strategy designs and optimization."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次为扩散语言模型中的基于置信度解码提供理论分析框架，提出基于熵和的自适应解码策略，填补了该领域理论研究的空白。",
+      "• 实盘坑: 理论性强，实际部署可能面临熵阈值调优、与现有模型集成复杂度高的问题，需大量实验验证其泛化性和稳定性。",
+      "• 复现难度: 中等难度，核心算法相对清晰，但实现细节如熵计算和迭代控制需要精确编码，且依赖特定DML架构，可能增加复现成本。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.22235v1",
+    "title": "ShapDBM: Exploring Decision Boundary Maps in Shapley Space",
+    "pdf_url": "https://arxiv.org/pdf/2603.22235v1",
+    "published": "2026-03-23",
+    "crawled_at": "2026-03-24 20:31:13",
+    "ai_score": 7.2,
+    "translated_title": "ShapDBM：探索Shapley空间中的决策边界映射",
+    "summary_en": [
+      "• Model Architecture: Proposes ShapDBM, a technique that transforms data into Shapley space using Shapley values before applying dimensionality reduction (DR) to compute Decision Boundary Maps (DBMs).",
+      "• Data used: Implicitly targets complex machine learning classification datasets where standard DBMs suffer from mixed classes due to poor DR performance in high-dimensional spaces.",
+      "• Performance metrics: Claims similar or higher quality metric values compared to standard DBMs, with visibly more compact and easier-to-explore decision zones in visualizations."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出ShapDBM方法，先将数据通过Shapley值转换到Shapley空间，再进行降维以生成决策边界映射。",
+      "• 数据来源: 针对复杂机器学习分类数据集，传统方法在高维空间中降维易导致类别混合问题。",
+      "• 主要结论: 相比直接在原始数据空间计算DBM，新方法在质量指标上相当或更优，决策区域更紧凑、易于探索。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate—technique could enhance interpretability of ML models in finance (e.g., credit scoring, fraud detection), but direct alpha generation is limited without specific trading applications.",
+      "• Implementation Risk: High—depends on accurate Shapley value computation, which is computationally expensive for large datasets; integration into live systems requires robust DR and visualization pipelines.",
+      "• Novelty: Moderate—combines Shapley values (established in ML interpretability) with DBMs, but incremental rather than groundbreaking; similar to prior work on interpretable DR."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将Shapley值与决策边界映射结合，提升高维数据可视化质量，属于可解释机器学习领域的渐进式改进。",
+      "• 实盘坑: Shapley值计算复杂度高，大数据集下可能拖慢实时分析；降维效果依赖具体数据集，泛化能力待验证。",
+      "• 复现难度: 中等—需要实现Shapley值计算和降维算法，但开源工具（如SHAP）可降低门槛；论文未提供完整代码或超参数细节。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2603.22231v1",
+    "title": "One Model, Two Markets: Bid-Aware Generative Recommendation",
+    "pdf_url": "https://arxiv.org/pdf/2603.22231v1",
+    "published": "2026-03-23",
+    "crawled_at": "2026-03-24 20:31:31",
+    "ai_score": 8.2,
+    "translated_title": "一个模型，两个市场：基于出价的生成式推荐系统",
+    "summary_en": [
+      "• Model Architecture: GEM-Rec introduces control tokens to decouple ad placement decisions from item selection, enabling unified learning of semantic relevance and monetization objectives within a generative sequence framework.",
+      "• Data used: The model leverages interaction logs from commercial platforms, which inherently capture successful ad placement patterns and user engagement data for training.",
+      "• Performance metrics: Experiments demonstrate dynamic optimization for both semantic relevance and platform revenue, with proven allocation monotonicity ensuring higher bids weakly increase ad display likelihood without model retraining."
+    ],
+    "summary_cn": [
+      "• 核心模型: GEM-Rec采用控制令牌分离广告展示决策与物品选择，在生成式序列框架中统一学习语义相关性和商业化目标。",
+      "• 数据来源: 利用商业平台的交互日志进行训练，这些数据天然包含成功的广告投放模式和用户参与度信息。",
+      "• 主要结论: 实验证明系统能动态优化语义相关性和平台收入，并保证分配单调性——更高出价会弱增加广告展示概率，无需模型重新训练。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High - Bid-aware decoding enables real-time revenue optimization while maintaining relevance, potentially creating pricing advantages in ad auctions and recommendation systems.",
+      "• Implementation Risk: Moderate - Requires integration with real-time bidding systems and may face challenges in balancing revenue vs. user experience trade-offs in production environments.",
+      "• Novelty: Significant - First unified generative framework addressing both semantic retrieval and commercial monetization with provable allocation properties, advancing beyond traditional two-stage approaches."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次提出统一生成式框架同时处理语义检索和商业变现，通过控制令牌和出价感知解码实现理论保证的分配单调性。",
+      "• 实盘坑: 需要与实时竞价系统深度集成，在平衡收入与用户体验时可能面临工程复杂性，且依赖平台历史交互数据的质量。",
+      "• 复现难度: 中等偏高——需要获取商业平台的交互日志和出价数据，且生成式推荐系统的训练和推理基础设施要求较高。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
     "id": "2603.20193v1",
     "title": "From Masks to Pixels and Meaning: A New Taxonomy, Benchmark, and Metrics for VLM Image Tampering",
     "pdf_url": "https://arxiv.org/pdf/2603.20193v1",
