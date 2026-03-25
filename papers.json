@@ -1,5 +1,356 @@
 [
   {
+    "id": "2603.23496v1",
+    "title": "Estimating Flow Velocity and Vehicle Angle-of-Attack from Non-invasive Piezoelectric Structural Measurements Using Deep Learning",
+    "pdf_url": "https://arxiv.org/pdf/2603.23496v1",
+    "published": "2026-03-24",
+    "crawled_at": "2026-03-25 20:25:37",
+    "ai_score": 7.2,
+    "translated_title": "基于深度学习的非侵入式压电结构测量估计流速与飞行器攻角",
+    "summary_en": [
+      "• Model Architecture: Uses a convolutional neural network (CNN) trained to invert structural vibration responses from piezoelectric sensors to estimate velocity and angle-of-attack (AoA), with a short-window moving-median post-processing step to reduce variance.",
+      "• Data used: Data from 16 wind tunnel runs in Sandia's hypersonic wind tunnel, covering Mach~5 and Mach~8 conditions, zero and nonzero AoA configurations, and both constant and continuously varying operations, with temporally centered held-out intervals for training, validation, and testing.",
+      "• Performance metrics: After post-processing, achieves mean velocity error below 2.27 m/s (0.21%) and mean AoA error of 0.44° (8.25%) on held-out test data, demonstrating feasibility in a controlled laboratory environment."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用卷积神经网络（CNN），通过压电传感器捕获的结构振动响应反演估计流速和攻角，并引入短窗口移动中值后处理步骤以降低方差。",
+      "• 数据来源: 基于桑迪亚高超声速风洞的16次实验数据，涵盖马赫数~5和~8条件、零与非零攻角配置、恒定与连续变化操作，使用时间中心保留区间进行训练、验证和测试。",
+      "• 主要结论: 后处理后，在保留测试数据上实现平均流速误差低于2.27米/秒（0.21%）和平均攻角误差0.44°（8.25%），证明在受控实验室环境中振动基估计的可行性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low for direct financial applications; potential indirect value in aerospace or defense sectors for real-time monitoring and control, but limited to niche physical systems without clear market arbitrage or predictive edge.",
+      "• Implementation Risk: High due to reliance on controlled wind tunnel data and specialized piezoelectric hardware; real-world deployment faces challenges from environmental noise, sensor calibration, and generalization to diverse conditions.",
+      "• Novelty: Moderate; combines deep learning with non-invasive structural measurements for aerodynamic state estimation, offering an alternative to traditional flow instrumentation, but builds on existing CNN and sensor fusion techniques without groundbreaking algorithmic innovation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；将深度学习与非侵入式结构测量结合用于气动状态估计，提供传统流量仪表的替代方案，但基于现有CNN和传感器融合技术，无突破性算法创新。",
+      "• 实盘坑: 高；依赖受控风洞数据和专用压电硬件，实际部署面临环境噪声、传感器校准和多样化条件泛化等挑战，金融应用转化风险大。",
+      "• 复现难度: 中等至高；需要专业风洞设施和压电传感器阵列，数据采集和处理复杂，但模型架构相对标准，开源代码或详细方法可降低部分难度。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2603.23495v1",
+    "title": "VISion On Request: Enhanced VLLM efficiency with sparse, dynamically selected, vision-language interactions",
+    "pdf_url": "https://arxiv.org/pdf/2603.23495v1",
+    "published": "2026-03-24",
+    "crawled_at": "2026-03-25 20:25:53",
+    "ai_score": 8.2,
+    "translated_title": "按需视觉：通过稀疏、动态选择的视觉-语言交互增强VLLM效率",
+    "summary_en": [
+      "• Model Architecture: VISOR introduces a sparse interaction mechanism between image and text tokens, using a small set of strategically placed attention layers (efficient cross-attention for general context and dynamically selected self-attention layers for high-resolution reasoning) instead of visual token reduction.",
+      "• Data used: The paper mentions training on a range of computational budgets by varying the number of self-attention layers, but specific datasets are not detailed in the abstract; extensive experiments imply use of diverse benchmarks for evaluation.",
+      "• Performance metrics: VISOR drastically reduces computational cost while matching or exceeding state-of-the-art results across a diverse suite of benchmarks, with particular excellence in challenging tasks requiring detailed visual understanding."
+    ],
+    "summary_cn": [
+      "• 核心模型: VISOR采用稀疏交互机制，通过少量策略性放置的注意力层（高效跨注意力提供通用上下文，动态选择的自注意力层用于高分辨率推理）来减少视觉-语言交互，避免视觉令牌压缩。",
+      "• 数据来源: 论文提到通过变化自注意力层数量在不同计算预算上训练通用网络，但摘要中未指定具体数据集；广泛实验暗示使用了多样化基准进行评估。",
+      "• 主要结论: VISOR显著降低计算成本，同时在多样化基准上匹配或超越最先进结果，在需要精细视觉理解的挑战性任务中表现优异。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for alpha in applications requiring efficient high-resolution visual reasoning, such as real-time image analysis or multimodal trading signals, due to reduced inference cost without performance loss.",
+      "• Implementation Risk: Moderate risk due to reliance on dynamic policy mechanisms for computation allocation, which may introduce latency or instability in production environments; scalability to very large models is untested.",
+      "• Novelty: High novelty in challenging the visual token reduction paradigm and introducing sparse, dynamically selected interactions, offering a fresh approach to VLLM efficiency that preserves visual information."
+    ],
+    "verdict_cn": [
+      "• 创新点: 挑战视觉令牌压缩范式，引入稀疏、动态选择的交互机制，通过保留视觉信息提升VLLM效率，具有突破性思路。",
+      "• 实盘坑: 依赖动态策略机制分配计算，可能在生产环境中引入延迟或不稳定性；未测试超大规模模型的扩展性，存在部署风险。",
+      "• 复现难度: 中等难度，需要实现复杂的注意力层选择和动态策略，但基于标准VLLM框架，开源代码可降低门槛。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.23481v1",
+    "title": "VTAM: Video-Tactile-Action Models for Complex Physical Interaction Beyond VLAs",
+    "pdf_url": "https://arxiv.org/pdf/2603.23481v1",
+    "published": "2026-03-24",
+    "crawled_at": "2026-03-25 20:26:10",
+    "ai_score": 8.5,
+    "translated_title": "VTAM：超越视觉语言模型的复杂物理交互视频-触觉-动作模型",
+    "summary_en": [
+      "• Model Architecture: VTAM augments a pretrained video transformer with tactile streams via lightweight modality transfer finetuning, using a tactile regularization loss to prevent visual dominance in cross-modal attention.",
+      "• Data used: The model leverages unpaired video and tactile streams without requiring tactile-language paired data or independent tactile pretraining, enabling efficient cross-modal representation learning.",
+      "• Performance metrics: VTAM achieves a robust 90% average success rate in contact-rich manipulation tasks and outperforms the pi 0.5 baseline by 80% in challenging scenarios like potato chip pick-and-place requiring high-fidelity force awareness."
+    ],
+    "summary_cn": [
+      "• 核心模型: VTAM通过轻量级模态迁移微调，将触觉流集成到预训练的视频Transformer中，采用触觉正则化损失防止视觉主导跨模态注意力。",
+      "• 数据来源: 模型利用未配对的视频和触觉流数据，无需触觉-语言配对数据或独立的触觉预训练，实现高效的跨模态表示学习。",
+      "• 主要结论: 在接触丰富的操作任务中，VTAM平均成功率高达90%，在需要高保真力感知的挑战性场景（如薯片拾取放置）中，性能比基线提升80%。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for applications in robotic trading systems requiring precise physical interactions, such as automated warehouse operations or high-frequency trading hardware maintenance, where tactile feedback can correct visual estimation errors.",
+      "• Implementation Risk: Moderate risk due to reliance on specialized tactile sensors and the need for real-time multimodal fusion, which may introduce latency and hardware integration challenges in fast-paced environments.",
+      "• Novelty: Significant novelty in integrating tactile perception as a complementary grounding signal for world action models, addressing a critical gap in contact-rich scenarios beyond traditional visual-language models."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将触觉感知作为世界动作模型的补充基础信号，解决了传统视觉语言模型在接触丰富场景中的局限性，具有显著的跨模态融合创新。",
+      "• 实盘坑: 依赖专用触觉传感器，实时多模态融合可能引入延迟，硬件集成在快节奏环境中存在挑战，影响实盘部署的稳定性。",
+      "• 复现难度: 中等偏高，需要获取未配对的视频和触觉流数据，并实现轻量级模态迁移微调，触觉正则化损失的调优可能增加复现复杂性。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2603.23472v1",
+    "title": "Byzantine-Robust and Differentially Private Federated Optimization under Weaker Assumptions",
+    "pdf_url": "https://arxiv.org/pdf/2603.23472v1",
+    "published": "2026-03-24",
+    "crawled_at": "2026-03-25 20:26:25",
+    "ai_score": 7.8,
+    "translated_title": "弱假设下的拜占庭鲁棒与差分隐私联邦优化",
+    "summary_en": [
+      "• Model Architecture: Proposes Byz-Clip21-SGD2M algorithm integrating robust aggregation with double momentum and gradient clipping for federated learning",
+      "• Data used: Evaluated on CNN and MLP models trained on MNIST dataset for image classification tasks",
+      "• Performance metrics: Achieves high-probability convergence guarantees under L-smoothness and σ-sub-Gaussian gradient noise assumptions",
+      "• Key innovation: Relaxes unrealistic assumptions like bounded gradients while maintaining convergence rates comparable to state-of-the-art methods"
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出Byz-Clip21-SGD2M算法，结合鲁棒聚合、双动量机制和梯度裁剪技术",
+      "• 数据来源: 使用MNIST数据集训练CNN和MLP模型进行图像分类验证",
+      "• 主要结论: 在标准L-光滑性和σ-次高斯梯度噪声假设下证明高概率收敛保证",
+      "• 技术突破: 放宽了有界梯度等不现实假设，在拜占庭和差分隐私设置下提升效用保证"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - addresses critical vulnerabilities in federated learning but limited to academic datasets; real-world financial data applications unproven",
+      "• Implementation Risk: High - Byzantine robustness and DP mechanisms add computational overhead; convergence guarantees rely on theoretical assumptions that may not hold in practice",
+      "• Novelty: Significant - unified framework for DP and Byzantine robustness under weaker assumptions represents meaningful theoretical advancement",
+      "• Practical limitations: MNIST dataset is simplistic; lacks validation on complex financial time series or high-dimensional data"
+    ],
+    "verdict_cn": [
+      "• 创新点: 在弱假设下统一差分隐私与拜占庭鲁棒性框架，理论贡献显著",
+      "• 实盘坑: 计算开销较大，收敛保证依赖理论假设，金融数据适用性未验证",
+      "• 复现难度: 中等偏高，需要实现双动量机制和复杂裁剪策略，超参数调优挑战大",
+      "• 应用局限: 仅用MNIST简单数据集验证，缺乏金融时序数据或高维特征测试"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.23461v1",
+    "title": "End-to-End Efficient RL for Linear Bellman Complete MDPs with Deterministic Transitions",
+    "pdf_url": "https://arxiv.org/pdf/2603.23461v1",
+    "published": "2026-03-24",
+    "crawled_at": "2026-03-25 20:26:44",
+    "ai_score": 7.5,
+    "translated_title": "具有确定性转移的线性贝尔曼完备MDP的端到端高效强化学习",
+    "summary_en": [
+      "• Model Architecture: The algorithm leverages linear function approximation in Markov Decision Processes (MDPs) with deterministic transitions, stochastic initial states, and stochastic rewards, focusing on linear Bellman completeness where Bellman backups preserve linearity in value functions.",
+      "• Data used: The study utilizes simulated or theoretical MDP environments with finite, large, or infinite action spaces, requiring only standard argmax oracles for action selection in large/infinite cases, without specifying real-world datasets.",
+      "• Performance metrics: The algorithm achieves ε-optimal policy learning with sample and computational complexity polynomial in horizon, feature dimension, and 1/ε, demonstrating efficiency in both finite and large action spaces under the given assumptions."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于线性函数近化的强化学习算法，针对具有确定性转移、随机初始状态和随机奖励的马尔可夫决策过程，利用线性贝尔曼完备性确保贝尔曼备份保持值函数的线性结构。",
+      "• 数据来源: 使用模拟或理论MDP环境，支持有限、大或无限动作空间，对于大/无限动作空间仅需标准argmax预言机，未涉及实际数据集。",
+      "• 主要结论: 算法能够学习ε-最优策略，样本和计算复杂度在时间范围、特征维度和1/ε上呈多项式增长，在给定假设下对有限和大动作空间均高效。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the theoretical efficiency in linear Bellman complete MDPs with deterministic transitions could inspire new RL-based trading strategies, but real-world financial MDPs often involve stochastic transitions and complex dynamics, limiting direct applicability.",
+      "• Implementation Risk: High; the assumption of deterministic transitions is restrictive for most financial applications where market dynamics are inherently stochastic, and reliance on linear approximations may fail in non-linear environments like high-frequency trading.",
+      "• Novelty: Significant; it addresses computational efficiency gaps in prior work by eliminating strong oracle assumptions and handling large action spaces with standard oracles, contributing to RL theory, but practical novelty for finance is limited due to the narrow setting."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著；通过消除强预言机假设，仅需标准argmax预言机处理大动作空间，在计算效率上填补了先前研究的空白，对强化学习理论有贡献。",
+      "• 实盘坑: 高；确定性转移假设在金融应用中限制性强，市场动态通常随机，线性近似在非线性环境（如高频交易）中可能失效，实施风险大。",
+      "• 复现难度: 中等；算法基于理论MDP环境，复现需模拟设置，但假设条件严格，在实际金融数据上适配和验证可能复杂，需要额外工程工作。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2603.23459v1",
+    "title": "CSTS: A Canonical Security Telemetry Substrate for AI-Native Cyber Detection",
+    "pdf_url": "https://arxiv.org/pdf/2603.23459v1",
+    "published": "2026-03-24",
+    "crawled_at": "2026-03-25 20:26:59",
+    "ai_score": 7.5,
+    "translated_title": "CSTS：用于AI原生网络检测的规范安全遥测基板",
+    "summary_en": [
+      "• Model Architecture: CSTS is an entity-relational abstraction that enforces identity persistence, typed relationships, and temporal state invariants to address fragmented telemetry in AI-driven cybersecurity.",
+      "• Data used: The paper likely uses heterogeneous security telemetry data from cross-environment deployments, focusing on identity-centric detection across different network topologies.",
+      "• Performance metrics: CSTS improves cross-topology transfer for detection, prevents collapse under schema perturbation, and isolates semantic orientation instability for zero-day detection, clarifying layered portability requirements."
+    ],
+    "summary_cn": [
+      "• 核心模型: CSTS是一种实体关系抽象，强制身份持久性、类型化关系和时序状态不变性，以解决AI驱动网络安全中的碎片化遥测问题。",
+      "• 数据来源: 可能使用跨环境部署的异构安全遥测数据，专注于不同网络拓扑中的身份中心检测。",
+      "• 主要结论: CSTS提高了跨拓扑检测的迁移能力，防止模式扰动下的崩溃，并隔离语义方向不稳定性以进行零日检测，明确了分层可移植性要求。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; CSTS addresses a critical gap in AI-native cybersecurity by improving cross-environment detection transfer, which could enhance anomaly detection models in financial security applications.",
+      "• Implementation Risk: High; enforcing identity persistence and temporal invariants across heterogeneous environments requires significant data integration and schema alignment efforts, posing scalability challenges.",
+      "• Novelty: High; the entity-relational abstraction and focus on semantic orientation instability for zero-day detection offer a fresh perspective beyond traditional event-centric approaches in cybersecurity AI."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；CSTS通过实体关系抽象和关注零日检测的语义方向不稳定性，为网络安全AI提供了超越传统事件中心方法的新视角。",
+      "• 实盘坑: 高；在异构环境中强制身份持久性和时序不变性需要大量数据集成和模式对齐工作，存在可扩展性挑战。",
+      "• 复现难度: 中等；虽然模型概念清晰，但实现跨环境数据整合和验证检测性能可能需要特定网络安全数据集和复杂部署环境。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.23436v1",
+    "title": "Similarity-Aware Mixture-of-Experts for Data-Efficient Continual Learning",
+    "pdf_url": "https://arxiv.org/pdf/2603.23436v1",
+    "published": "2026-03-24",
+    "crawled_at": "2026-03-25 20:27:16",
+    "ai_score": 7.8,
+    "translated_title": "面向数据高效持续学习的相似性感知专家混合模型",
+    "summary_en": [
+      "• Model Architecture: Adaptive mixture-of-experts (MoE) framework built on pre-trained models with two key components: incremental global pooling (gradually introduces prompts over time to reduce noise) and instance-wise prompt masking (decomposes task samples into in-distribution vs. out-of-distribution categories).",
+      "• Data used: Experiments conducted across varying data volumes (simulating per-task data scarcity) and inter-task similarity levels (arbitrary overlapping patterns without prior knowledge).",
+      "• Performance metrics: Enhanced sample efficiency demonstrated through experiments; method shows broad applicability across different data scarcity and task overlap scenarios."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于预训练模型的自适应专家混合框架，包含增量全局池化（逐步引入提示以减少噪声）和实例级提示掩码（将任务样本分解为分布内与分布外类别）。",
+      "• 数据来源: 实验使用不同数据量（模拟每任务数据稀缺）和任务间相似度水平（任意重叠模式，无先验知识）的合成或基准数据集。",
+      "• 主要结论: 方法在数据稀缺和任务重叠场景下显著提升样本效率，具有广泛适用性；通过渐进式相似性感知机制有效平衡知识迁移与负迁移风险。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - addresses practical CL challenges (data scarcity + arbitrary task overlaps) that could translate to adaptive trading models in non-stationary markets, but direct financial application unclear.",
+      "• Implementation Risk: High - relies on complex MoE architecture and prompt-based mechanisms; sensitive to hyperparameter tuning and prompt initialization; real-world deployment requires careful calibration.",
+      "• Novelty: Significant - combines incremental global pooling with instance-wise prompt masking to dynamically handle task similarities; novel approach to prevent negative transfer in overlapping CL scenarios."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著 - 将增量全局池化与实例级提示掩码结合，动态处理任务相似性；在重叠持续学习场景中防止负迁移的新机制。",
+      "• 实盘坑: 高 - 依赖复杂专家混合架构和提示机制；超参数调整和提示初始化敏感；实际部署需精细校准，计算开销可能较大。",
+      "• 复现难度: 中等偏高 - 需要预训练模型基础和MoE实现经验；实验设置涉及多任务数据生成和相似度控制，但方法细节描述较清晰。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.23414v1",
+    "title": "SortedRL: Accelerating RL Training for LLMs through Online Length-Aware Scheduling",
+    "pdf_url": "https://arxiv.org/pdf/2603.23414v1",
+    "published": "2026-03-24",
+    "crawled_at": "2026-03-25 20:27:34",
+    "ai_score": 8.2,
+    "translated_title": "SortedRL：通过在线长度感知调度加速大语言模型的强化学习训练",
+    "summary_en": [
+      "• Model Architecture: SortedRL is an online length-aware scheduling strategy for RL training of LLMs, featuring a stateful controller and rollout buffer infrastructure that reorders rollout samples by output length to prioritize short samples for early updates, enabling large rollout batches and flexible update batches.",
+      "• Data used: Experiments conducted using LLaMA-3.1-8B and Qwen-2.5-32B models on diverse tasks including logical puzzles and math challenges such as AIME 24, Math 500, and Minerval, focusing on long chain-of-thought generation scenarios.",
+      "• Performance metrics: SortedRL reduces RL training bubble ratios by over 50% and achieves 3.9% to 18.4% superior performance over baselines given the same amount of data, demonstrating significant efficiency gains and improved model reasoning abilities."
+    ],
+    "summary_cn": [
+      "• 核心模型: SortedRL是一种在线长度感知调度策略，专为LLMs的RL训练设计，通过状态控制器和回放缓冲区基础设施，按输出长度重新排序样本，优先处理短样本以进行早期更新，支持大批量回放和灵活更新批次。",
+      "• 数据来源: 使用LLaMA-3.1-8B和Qwen-2.5-32B模型，在逻辑谜题和数学挑战（如AIME 24、Math 500、Minerval）等多样化任务上进行实验，侧重于长链思维生成场景。",
+      "• 主要结论: SortedRL将RL训练气泡比率降低超过50%，在相同数据量下性能比基线提升3.9%至18.4%，显著提高训练效率并增强模型推理能力。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for alpha generation in NLP/LLM-based trading strategies by accelerating RL training, enabling faster iteration on complex reasoning tasks that could improve predictive models for market sentiment or event analysis.",
+      "• Implementation Risk: Moderate risk due to reliance on specialized RL infrastructure and cache-based off-policy control, which may introduce complexity and require significant computational resources, potentially limiting scalability in production environments.",
+      "• Novelty: Novel approach combining length-aware scheduling with micro-curriculum construction and off-policy mechanisms, addressing a key bottleneck in RL for LLMs, though builds on existing RL optimization techniques."
+    ],
+    "verdict_cn": [
+      "• 创新点: 结合长度感知调度与微课程构建及离策略机制，针对LLMs RL训练中的关键瓶颈提出创新解决方案，但基于现有RL优化技术进行扩展。",
+      "• 实盘坑: 依赖专用RL基础设施和基于缓存的离策略控制，可能引入复杂性并需要大量计算资源，在生产环境中可扩展性受限，存在实施风险。",
+      "• 复现难度: 中等偏高，需要复现状态控制器和回放缓冲区等基础设施，以及对LLaMA和Qwen模型的访问，可能涉及专利或技术壁垒。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.23398v1",
+    "title": "Graph Energy Matching: Transport-Aligned Energy-Based Modeling for Graph Generation",
+    "pdf_url": "https://arxiv.org/pdf/2603.23398v1",
+    "published": "2026-03-24",
+    "crawled_at": "2026-03-25 20:27:55",
+    "ai_score": 8.2,
+    "translated_title": "图能量匹配：基于传输对齐的能量建模用于图生成",
+    "summary_en": [
+      "• Model Architecture: Graph Energy Matching (GEM) framework that learns a permutation-invariant potential energy function, combining transport-aligned guidance from noise to data with refinement in high-likelihood regions, plus an energy-based switch for sampling that transitions between gradient-guided transport and mixing regimes.",
+      "• Data used: Molecular graph benchmarks (specific datasets not named in abstract, but typical examples include QM9, ZINC, or MoleculeNet datasets for drug discovery applications).",
+      "• Performance metrics: Matches or exceeds strong discrete diffusion baselines on molecular graph benchmarks, demonstrating competitive sample quality and fidelity.",
+      "• Additional capabilities: Enables targeted inference-time exploration for compositional generation, property-constrained sampling, and geodesic interpolation between graphs due to explicit relative likelihood modeling."
+    ],
+    "summary_cn": [
+      "• 核心模型: 图能量匹配（GEM）框架，学习置换不变势能函数，结合从噪声到数据的传输对齐引导与高似然区域细化，并采用基于能量的切换机制进行采样，在梯度引导传输和混合机制间无缝过渡。",
+      "• 数据来源: 分子图基准数据集（摘要未具体命名，但通常包括QM9、ZINC或MoleculeNet等用于药物发现的常用数据集）。",
+      "• 主要结论: 在分子图基准测试中匹配或超越强离散扩散基线，样本质量和保真度具有竞争力，且通过显式相对似然建模支持推理时的定向探索，如组合生成、属性约束采样和图间测地插值。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for applications requiring controllable graph generation, such as drug discovery or materials design, due to explicit likelihood modeling enabling property-constrained sampling and compositional tasks, potentially outperforming diffusion models in targeted scenarios.",
+      "• Implementation Risk: Moderate; energy-based models are prone to training instabilities and spurious local minima, though GEM's transport-aligned approach and sampling protocol aim to mitigate these, but real-world deployment may still face convergence issues and computational overhead.",
+      "• Novelty: Significant; introduces a transport map optimization perspective inspired by the JKO scheme to bridge the fidelity gap between energy-based models and diffusion models for graphs, offering a fresh theoretical foundation and practical sampling improvements.",
+      "• Additional consideration: Limited empirical details in abstract; full paper needed to assess scalability to large graphs, generalization beyond molecular domains, and comparison with state-of-the-art graph generative models."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著；引入基于JKO方案的传输映射优化视角，弥合图生成中能量模型与扩散模型之间的保真度差距，提供新颖的理论基础和实用的采样改进，支持可控生成任务。",
+      "• 实盘坑: 中等；能量模型易受训练不稳定和伪局部极小值影响，尽管GEM的传输对齐方法和采样协议旨在缓解，但实际部署可能仍面临收敛问题和计算开销，且摘要缺乏实证细节，需全文评估。",
+      "• 复现难度: 中高；涉及复杂的能量函数设计和采样切换机制，需要深入理解传输理论和图神经网络，代码和超参数调优可能具有挑战性，尤其在大规模图数据上。",
+      "• 潜在风险: 摘要未指定具体数据集和基线模型，可能影响结果可复现性；应用范围目前局限于分子图，扩展到其他图领域（如社交网络或金融图谱）的可行性待验证。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.23361v1",
+    "title": "Central Dogma Transformer III: Interpretable AI Across DNA, RNA, and Protein",
+    "pdf_url": "https://arxiv.org/pdf/2603.23361v1",
+    "published": "2026-03-24",
+    "crawled_at": "2026-03-25 20:28:16",
+    "ai_score": 8.7,
+    "translated_title": "中心法则Transformer III：跨DNA、RNA和蛋白质的可解释AI",
+    "summary_en": [
+      "• Model Architecture: Two-stage Virtual Cell Embedder (VCE) with VCE-N for nuclear transcription and VCE-C for cytosolic translation, mirroring cellular compartmentalization.",
+      "• Data used: Five held-out genes for validation, plus in silico CD52 knockdown data approximating Alemtuzumab treatment; leverages unperturbed baseline data for gradient-based profiling.",
+      "• Performance metrics: Achieves per-gene RNA correlation r=0.843 and protein correlation r=0.969; protein supervision improves RNA performance from r=0.804 to 0.843 and increases CTCF enrichment by 30%.",
+      "• Key finding: Downstream tasks (protein prediction) regularize upstream representations, enhancing interpretability and enabling accurate prediction of 29/29 protein changes and rediscovery of 5/7 clinical side effects without clinical data."
+    ],
+    "summary_cn": [
+      "• 核心模型: 两阶段虚拟细胞嵌入器（VCE），VCE-N模拟细胞核转录，VCE-C模拟细胞质翻译，反映细胞空间区室化。",
+      "• 数据来源: 使用5个保留基因进行验证，结合模拟CD52敲低的计算机数据（近似Alemtuzumab治疗）；利用未扰动基线数据进行梯度分析。",
+      "• 主要结论: 下游任务（蛋白质预测）正则化上游表示，提升可解释性（CTCF富集增加30%），准确预测29/29蛋白质变化，无需临床数据即重新发现5/7已知临床副作用。",
+      "• 性能指标: 单基因RNA相关性r=0.843，蛋白质相关性r=0.969；蛋白质监督将RNA性能从r=0.804提升至0.843。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for biotech/pharma quant strategies—enables in silico screening of 2,361 genes without new experiments (r=0.939 for side effect profiling), potentially accelerating drug discovery and reducing clinical trial costs.",
+      "• Implementation Risk: Moderate—requires domain expertise in molecular biology for data integration and model tuning; validation on only five genes may limit generalizability to diverse biological contexts.",
+      "• Novelty: Significant—extends mechanism-oriented AI across the full central dogma (DNA→RNA→protein), demonstrating that protein supervision sharpens DNA-level interpretability, a key advance for interpretable biological AI.",
+      "• Practical challenge: Gradient-based profiling depends on high-quality unperturbed baseline data, which may be scarce or noisy in real-world applications, affecting scalability."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将机制导向AI扩展至完整中心法则（DNA→RNA→蛋白质），证明蛋白质监督能增强DNA层面可解释性（CTCF富集提升30%），为可解释生物AI提供新范式。",
+      "• 实盘坑: 仅基于5个基因验证，可能泛化性不足；梯度分析依赖高质量未扰动基线数据，实际应用中数据稀缺或噪声可能影响可扩展性。",
+      "• 复现难度: 中等偏高—需分子生物学领域知识整合数据并调优模型；虚拟细胞嵌入器架构复杂，计算资源要求较高，可能限制快速部署。",
+      "• 应用风险: 模型在模拟环境中表现优异，但真实生物系统复杂性（如表观遗传调控）可能引入偏差，需进一步体外/体内验证。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
     "id": "2603.22286v1",
     "title": "WorldCache: Content-Aware Caching for Accelerated Video World Models",
     "pdf_url": "https://arxiv.org/pdf/2603.22286v1",
