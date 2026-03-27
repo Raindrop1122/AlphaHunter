@@ -1,5 +1,361 @@
 [
   {
+    "id": "2603.25740v1",
+    "title": "Drive My Way: Preference Alignment of Vision-Language-Action Model for Personalized Driving",
+    "pdf_url": "https://arxiv.org/pdf/2603.25740v1",
+    "published": "2026-03-26",
+    "crawled_at": "2026-03-27 20:22:30",
+    "ai_score": 7.5,
+    "translated_title": "按我的方式驾驶：视觉-语言-动作模型的偏好对齐实现个性化驾驶",
+    "summary_en": [
+      "• Model Architecture: Drive My Way (DMW) is a Vision-Language-Action (VLA) framework that integrates user embeddings for long-term habit alignment and natural language instructions for short-term intent adaptation.",
+      "• Data used: Personalized driving dataset collected from multiple real drivers across diverse conditions, enabling learning of individual driving styles and preferences.",
+      "• Performance metrics: Evaluated on Bench2Drive benchmark, showing improved style instruction adaptation; user studies confirm generated behaviors are recognizable as each driver's own style."
+    ],
+    "summary_cn": [
+      "• 核心模型: Drive My Way (DMW) 是一个视觉-语言-动作 (VLA) 框架，通过用户嵌入对齐长期驾驶习惯，并结合自然语言指令适应短期意图。",
+      "• 数据来源: 从多名真实驾驶员在不同条件下收集的个性化驾驶数据集，用于学习个体驾驶风格和偏好。",
+      "• 主要结论: 在 Bench2Drive 基准测试中，DMW 提升了风格指令适应能力；用户研究表明其生成的行为可识别为每位驾驶员自身的风格。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; personalization in autonomous driving could enhance user adoption and safety, but direct financial alpha is indirect and long-term.",
+      "• Implementation Risk: High; real-world deployment faces challenges in data privacy, real-time adaptation latency, and generalization to unseen driving scenarios.",
+      "• Novelty: High; integrates VLA models with personalized embeddings for driving, addressing a gap in existing end-to-end systems that lack individual preference adaptation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；将 VLA 模型与个性化嵌入结合用于驾驶，填补了现有端到端系统缺乏个体偏好适应的空白。",
+      "• 实盘坑: 高；实际部署面临数据隐私、实时适应延迟以及对未见驾驶场景泛化能力的挑战。",
+      "• 复现难度: 中等；需要收集多驾驶员数据集和训练 VLA 模型，但代码和数据已公开，降低了技术门槛。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2603.25722v1",
+    "title": "No Hard Negatives Required: Concept Centric Learning Leads to Compositionality without Degrading Zero-shot Capabilities of Contrastive Models",
+    "pdf_url": "https://arxiv.org/pdf/2603.25722v1",
+    "published": "2026-03-26",
+    "crawled_at": "2026-03-27 20:22:48",
+    "ai_score": 8.2,
+    "translated_title": "无需硬负样本：概念中心化学习实现组合性而不损害对比模型的零样本能力",
+    "summary_en": [
+      "• Model Architecture: Introduces concept-centric learning with short caption parts aligned to images and parameter-free cross-modal attention-pooling for visual embeddings, using auxiliary contrastive losses without increasing inference cost.",
+      "• Data used: Utilizes standard NLP software to generate short concept-centric caption parts from existing training data, avoiding custom hard negative generation.",
+      "• Performance metrics: Achieves state-of-the-art (SOTA) performance on standard compositionality benchmarks while maintaining or improving zero-shot and retrieval capabilities, with no degradation in basic V&L model functions."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用概念中心化学习，通过短文本片段与图像对齐，结合无参数跨模态注意力池化获取视觉嵌入，使用辅助对比损失且不增加推理成本。",
+      "• 数据来源: 利用标准NLP软件从现有训练数据中生成短概念中心化文本片段，避免生成自定义硬负样本。",
+      "• 主要结论: 在标准组合性基准测试中达到SOTA性能，同时保持或提升零样本和检索能力，未损害基础V&L模型功能。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for improving multi-modal AI systems in finance by enhancing compositional reasoning without sacrificing zero-shot generalization, applicable to complex financial data analysis and anomaly detection.",
+      "• Implementation Risk: Low risk as modifications are simple and parameter-free, but dependency on NLP software for caption processing may introduce variability in real-world deployment.",
+      "• Novelty: Novel approach addressing root causes of compositionality limitations in V&L models through concept-centric alignment and attention-pooling, offering a practical alternative to hard negative methods."
+    ],
+    "verdict_cn": [
+      "• 创新点: 创新性地通过概念中心化对齐和注意力池化解决V&L模型组合性限制的根本原因，提供了一种替代硬负样本方法的实用方案。",
+      "• 实盘坑: 修改简单且无参数，风险较低，但依赖NLP软件处理文本可能在实际部署中引入变异性。",
+      "• 复现难度: 复现难度中等，代码已开源，但需要集成标准NLP工具和调整训练流程以实现概念中心化处理。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.25719v1",
+    "title": "Agent Factories for High Level Synthesis: How Far Can General-Purpose Coding Agents Go in Hardware Optimization?",
+    "pdf_url": "https://arxiv.org/pdf/2603.25719v1",
+    "published": "2026-03-26",
+    "crawled_at": "2026-03-27 20:23:16",
+    "ai_score": 8.2,
+    "translated_title": "用于高层次综合的智能体工厂：通用编码智能体在硬件优化中能走多远？",
+    "summary_en": [
+      "• Model Architecture: Two-stage pipeline with agent factory - Stage 1 decomposes designs into sub-kernels, applies pragma/code transformations, formulates ILP for global configuration; Stage 2 launches N expert agents exploring cross-function optimizations like pragma recombination, loop fusion, memory restructuring.",
+      "• Data used: 12 kernels from HLS-Eval and Rodinia-HLS benchmark suites, evaluated using Claude Code (Opus 4.5/4.6) with AMD Vitis HLS toolchain.",
+      "• Performance metrics: Mean 8.27× speedup over baseline (scaling 1-10 agents), with streamcluster exceeding 20× and kmeans reaching ~10×; demonstrates agent scaling as effective optimization axis.",
+      "• Key finding: Best designs often not from top-ranked ILP candidates, showing global optimization captures improvements missed by sub-kernel decomposition; agents rediscover known hardware patterns without domain-specific training."
+    ],
+    "summary_cn": [
+      "• 核心模型: 两阶段智能体工厂流水线 - 第一阶段将设计分解为子内核，应用编译指示/代码转换，构建整数线性规划进行全局配置；第二阶段启动N个专家智能体探索跨函数优化，如编译指示重组、循环融合、内存重构。",
+      "• 数据来源: 使用HLS-Eval和Rodinia-HLS基准套件中的12个内核，基于Claude Code (Opus 4.5/4.6)和AMD Vitis HLS工具链进行评估。",
+      "• 主要结论: 智能体数量从1扩展到10时，平均获得8.27倍加速比（基线对比），streamcluster超过20倍，kmeans约10倍；智能体无需领域特定训练即可重新发现已知硬件优化模式。",
+      "• 关键发现: 最佳设计通常不来自排名靠前的ILP候选方案，表明全局优化能捕捉子内核搜索遗漏的改进；智能体扩展成为HLS优化的实用有效维度。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High - demonstrates LLM-based agents can automate hardware optimization without domain expertise, potentially reducing FPGA/ASIC development cycles by 8-20×; scalable approach applicable to broader hardware synthesis problems.",
+      "• Implementation Risk: Medium-High - requires integration with proprietary HLS toolchains (AMD Vitis), agent coordination overhead may limit real-time applications; hardware synthesis errors could be catastrophic in production environments.",
+      "• Novelty: Significant - first systematic study of general-purpose coding agents for hardware optimization; agent factory architecture with ILP-guided exploration represents novel hybrid approach combining algorithmic optimization with LLM-based search.",
+      "• Practical limitation: Evaluation limited to 12 benchmarks; no comparison against state-of-the-art hardware-specific optimization tools; computational cost of running multiple agents not quantified."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著 - 首次系统研究通用编码智能体在硬件优化中的应用；智能体工厂架构结合ILP引导探索，代表算法优化与基于LLM搜索的混合新方法。",
+      "• 实盘坑: 中高 - 需与专有HLS工具链（AMD Vitis）集成，智能体协调开销可能限制实时应用；硬件综合错误在生产环境中可能造成灾难性后果。",
+      "• 复现难度: 中等 - 依赖Claude Code API和AMD工具链，智能体工厂实现复杂度较高；但方法论清晰，开源基准可用，具备可复现性。",
+      "• 扩展性: 良好 - 智能体数量可扩展（1-10个），架构支持并行探索；但未测试更大规模部署，计算资源需求未明确量化。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2603.25699v1",
+    "title": "Neural Network Conversion of Machine Learning Pipelines",
+    "pdf_url": "https://arxiv.org/pdf/2603.25699v1",
+    "published": "2026-03-26",
+    "crawled_at": "2026-03-27 20:23:34",
+    "ai_score": 7.2,
+    "translated_title": "机器学习流程的神经网络转换",
+    "summary_en": [
+      "• Model Architecture: Investigates transfer learning from random forest classifiers (teacher) to neural network students using various NN topologies, with random forest also used for hyper-parameter selection.",
+      "• Data used: Evaluated on 100 OpenML classification tasks where random forest has been a top-performing solution, covering diverse datasets.",
+      "• Performance metrics: Student NNs successfully mimic teacher random forests in majority of tasks when appropriate hyper-parameters are selected, demonstrating feasibility of pipeline conversion."
+    ],
+    "summary_cn": [
+      "• 核心模型: 研究从随机森林分类器（教师模型）到神经网络学生模型的迁移学习，探索多种神经网络拓扑结构，并利用随机森林进行超参数选择。",
+      "• 数据来源: 在100个OpenML分类任务上进行实验，这些任务中随机森林一直是表现最佳的解决方案之一，涵盖多样化数据集。",
+      "• 主要结论: 在大多数任务中，学生神经网络能够成功模仿教师随机森林的性能，前提是选择合适的超参数，证明了机器学习流程转换为神经网络的可行性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - Enables unified neural inference engine for multiple ML tasks, potentially improving deployment efficiency and enabling end-to-end optimization of hybrid pipelines.",
+      "• Implementation Risk: High - Success heavily depends on hyper-parameter selection and NN architecture choice; random forest guidance adds complexity and may not generalize across all domains.",
+      "• Novelty: Limited - Extends established student-teacher paradigm to non-neural teachers, but approach is incremental rather than groundbreaking; similar concepts exist in model compression literature."
+    ],
+    "verdict_cn": [
+      "• 创新点: 有限 - 将成熟的师生学习范式扩展到非神经网络教师模型，但属于渐进式改进而非突破性创新；模型压缩文献中已有类似概念。",
+      "• 实盘坑: 高 - 成功高度依赖超参数选择和神经网络架构，随机森林指导增加了复杂性，可能无法在所有领域泛化；统一推理引擎的实际性能增益待验证。",
+      "• 复现难度: 中等 - 需要OpenML数据集访问和随机森林/神经网络实现，但方法描述清晰；超参数调优过程可能耗时且计算资源密集。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2603.25692v1",
+    "title": "A Unified Memory Perspective for Probabilistic Trustworthy AI",
+    "pdf_url": "https://arxiv.org/pdf/2603.25692v1",
+    "published": "2026-03-26",
+    "crawled_at": "2026-03-27 20:23:52",
+    "ai_score": 7.5,
+    "translated_title": "概率可信人工智能的统一内存视角",
+    "summary_en": [
+      "• Model Architecture: Proposes a unified framework treating deterministic data access as a special case of stochastic sampling, analyzing both within memory systems for probabilistic AI workloads.",
+      "• Data used: Focuses on memory access patterns in AI systems, not specific datasets, examining interleaved deterministic and stochastic operations across models and data paths.",
+      "• Performance metrics: Introduces memory-level criteria including unified operation efficiency, distribution programmability, robustness to hardware non-idealities, and parallel compatibility, highlighting entropy-limited operation under high stochastic demand."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出统一框架，将确定性数据访问视为随机采样的特例，在内存系统中分析概率AI工作负载。",
+      "• 数据来源: 关注AI系统中的内存访问模式，而非具体数据集，研究跨模型和数据路径的确定性与随机性操作交织。",
+      "• 主要结论: 随机需求增加会降低有效数据访问效率，可能导致系统进入熵限制操作，需基于内存级标准评估架构。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; framework could optimize memory systems for probabilistic AI, potentially improving efficiency in trustworthy AI applications, but direct financial alpha generation is indirect.",
+      "• Implementation Risk: High; integrating probabilistic compute-in-memory approaches requires significant hardware redesign, with challenges in scalability, non-idealities, and compatibility with existing systems.",
+      "• Novelty: High; unified perspective linking deterministic and stochastic memory access is innovative, offering fresh insights into bottlenecks in probabilistic AI, though builds on existing compute-in-memory trends."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将确定性访问视为随机采样特例的统一视角新颖，为概率AI的内存瓶颈提供新见解，但基于现有存内计算趋势。",
+      "• 实盘坑: 实现风险高，需硬件重构集成概率存内计算，面临可扩展性、非理想性和兼容性挑战，短期内难落地。",
+      "• 复现难度: 中等偏高；理论框架可复现，但硬件实验依赖新兴技术，需专业设备和跨学科合作，实操复杂。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2603.25687v1",
+    "title": "On Neural Scaling Laws for Weather Emulation through Continual Training",
+    "pdf_url": "https://arxiv.org/pdf/2603.25687v1",
+    "published": "2026-03-26",
+    "crawled_at": "2026-03-27 20:24:14",
+    "ai_score": 7.8,
+    "translated_title": "基于持续训练的天气模拟神经缩放定律研究",
+    "summary_en": [
+      "• Model Architecture: Minimal, scalable Swin Transformer architecture adapted for weather forecasting tasks, using continual training with constant learning rates and periodic cooldowns.",
+      "• Data used: Weather forecasting datasets with systematic exploration of various model and dataset sizes under different compute budgets to construct IsoFLOP curves.",
+      "• Performance metrics: Models follow predictable scaling trends, outperform standard cosine learning rate schedules, enable accurate multi-step rollouts over longer forecast horizons, and achieve sharper predictions through spectral loss adjustments.",
+      "• Training strategy: Compute-optimal training regimes identified through systematic scaling experiments, with extrapolation to larger scales highlighting potential performance limits."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用最小化、可扩展的Swin Transformer架构，通过持续训练策略（恒定学习率+周期性冷却）进行天气预测建模。",
+      "• 数据来源: 天气预测数据集，系统探索不同计算预算下的模型规模与数据规模，构建IsoFLOP曲线。",
+      "• 主要结论: 模型遵循可预测的缩放规律，性能超越标准余弦学习率调度；冷却阶段可优化下游任务表现，实现更长的多步预测和更锐利的频谱损失调整。",
+      "• 资源效率: 通过缩放趋势外推识别计算最优训练方案，为高效资源分配提供诊断工具。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - demonstrates systematic approach to neural scaling in scientific ML with practical implications for weather forecasting efficiency, but direct financial alpha generation requires further domain adaptation.",
+      "• Implementation Risk: High - weather forecasting models require specialized domain knowledge and infrastructure; scaling laws may not directly translate to financial time series due to different data characteristics.",
+      "• Novelty: Significant - introduces continual training with cooldowns as efficient strategy for scientific ML scaling, with novel application of IsoFLOP curves to identify compute-optimal regimes in weather emulation.",
+      "• Practical limitations: Extrapolation to larger scales remains theoretical; real-world deployment requires validation against operational forecasting systems."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将神经缩放定律系统引入科学机器学习领域，提出持续训练+冷却的高效策略，创新应用IsoFLOP曲线识别计算最优方案。",
+      "• 实盘坑: 天气预测与金融时序数据特性差异显著，直接迁移风险高；需要专业气象基础设施和领域知识，部署成本较大。",
+      "• 复现难度: 中等 - 开源代码降低技术门槛，但需要大规模计算资源和天气数据集，对实验环境要求较高。",
+      "• 扩展性挑战: 缩放规律外推仍属理论假设，实际大规模应用需验证系统稳定性与预测精度衰减问题。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ICML",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.25673v1",
+    "title": "Longitudinal Digital Phenotyping for Early Cognitive-Motor Screening",
+    "pdf_url": "https://arxiv.org/pdf/2603.25673v1",
+    "published": "2026-03-26",
+    "crawled_at": "2026-03-27 20:24:37",
+    "ai_score": 7.5,
+    "translated_title": "基于纵向数字表型的早期认知-运动筛查",
+    "summary_en": [
+      "• Model Architecture: AI-driven longitudinal framework combining dimensionality reduction (t-SNE) and unsupervised clustering (K-Means++) to identify developmental phenotypes from tablet interaction data.",
+      "• Data used: Tablet-based interactions from children aged 18 months to 8 years, collected over multiple academic years across six cognitive-motor tasks including fine motor control and reaction time.",
+      "• Performance metrics: Identified three distinct performance profiles (low, medium, high) with >90% retention in low-performance cluster during early years, demonstrating high stability of early deficits.",
+      "• Key finding: Longitudinal tracking revealed persistent deficits in low-performance group without intervention, while higher-performance clusters showed greater variability potentially related to engagement factors."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用t-SNE降维与K-Means++无监督聚类相结合的AI纵向框架，从平板交互数据中识别发育表型。",
+      "• 数据来源: 18个月至8岁儿童的平板交互数据，跨多个学年收集，涵盖精细运动控制、反应时间等六项认知-运动任务。",
+      "• 主要结论: 识别出低、中、高三种性能表型，低性能集群在早期年份保持率>90%，表明早期缺陷具有高度稳定性；高性能集群则表现出更大变异性。",
+      "• 应用价值: 验证了无监督学习在触摸屏数据中揭示异质性发育路径的有效性，为早期筛查工具和个性化儿科干预提供了数据驱动基础。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - Digital biomarkers could enable early detection of developmental delays for targeted interventions, potentially creating predictive models for educational or healthcare applications.",
+      "• Implementation Risk: High - Requires longitudinal data collection over years, faces privacy/ethical concerns with pediatric data, and depends on consistent device/platform usage across diverse populations.",
+      "• Novelty: Good - Combines longitudinal digital phenotyping with unsupervised learning for developmental tracking, though similar approaches exist in other domains like geriatric monitoring.",
+      "• Scalability Challenge: Tablet-based data collection limits real-world applicability compared to passive smartphone sensing, and task design may not generalize across cultural contexts."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将纵向数字表型与无监督学习结合用于儿童发育追踪，在儿科数字生物标志物领域具有一定前沿性。",
+      "• 实盘坑: 数据收集周期长达数年，儿童数据隐私合规风险高，平板设备依赖性强导致实际部署成本较高。",
+      "• 复现难度: 中等 - 核心算法(t-SNE+K-Means++)相对标准，但需要长期纵向数据集和特定年龄段的平板交互任务设计。",
+      "• 泛化性局限: 基于平板的任务设计可能受文化、设备差异影响，在真实世界环境中的迁移能力有待验证。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "JAMA Pediatrics or Pediatrics (medical journal) or ACM CHI (HCI conference)",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.25670v1",
+    "title": "Uncertainty-Guided Label Rebalancing for CPS Safety Monitoring",
+    "pdf_url": "https://arxiv.org/pdf/2603.25670v1",
+    "published": "2026-03-26",
+    "crawled_at": "2026-03-27 20:25:01",
+    "ai_score": 7.8,
+    "translated_title": "基于不确定性引导的标签再平衡用于CPS安全监控",
+    "summary_en": [
+      "• Model Architecture: U-Balance uses a GatedMLP-based uncertainty predictor to extract distributional kinematic features from telemetry windows and outputs uncertainty scores, followed by an uncertainty-guided label rebalancing (uLNR) mechanism that probabilistically relabels safe windows with high uncertainty as unsafe to enrich the minority class without data synthesis, and trains a safety predictor on the rebalanced dataset.",
+      "• Data used: Evaluated on a large-scale UAV benchmark dataset with an extreme class imbalance of 46:1 safe-to-unsafe ratio, focusing on time-series CPS telemetry data.",
+      "• Performance metrics: Achieved a 0.806 F1 score, outperforming the strongest baseline by 14.3 percentage points, with moderate but significant correlation between behavioral uncertainty and safety outcomes, and maintained competitive inference efficiency as confirmed by ablation studies."
+    ],
+    "summary_cn": [
+      "• 核心模型: U-Balance采用基于GatedMLP的不确定性预测器，从遥测窗口提取分布运动学特征并输出不确定性分数，结合不确定性引导的标签再平衡（uLNR）机制，将高不确定性的安全窗口概率性重标记为不安全，以在不合成新数据的情况下丰富少数类样本，并在再平衡数据集上训练安全预测器。",
+      "• 数据来源: 使用大规模无人机基准数据集，安全与不安全事件比例为46:1，处理时间序列CPS遥测数据。",
+      "• 主要结论: 在极端类别不平衡下，U-Balance的F1分数达到0.806，比最强基线提升14.3个百分点，行为不确定性与安全结果存在中度但显著相关性，且推理效率保持竞争力。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the method addresses class imbalance in time-series safety monitoring, which could be adapted for anomaly detection in financial time-series data (e.g., fraud or market crashes), but direct alpha generation is limited as it focuses on safety rather than predictive returns.",
+      "• Implementation Risk: High; relies on accurate uncertainty estimation and telemetry data quality, which may not generalize well to noisy financial datasets, and the probabilistic relabeling could introduce label noise if uncertainty predictors are miscalibrated.",
+      "• Novelty: High; introduces behavioral uncertainty as a novel feature for rebalancing, avoiding synthetic data generation, which is a creative approach to handling imbalanced time-series, though similar concepts exist in uncertainty-aware ML."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；首次将行为不确定性用于标签再平衡，避免合成数据，针对时间序列类别不平衡问题提出新思路，但不确定性引导方法在机器学习中已有类似应用。",
+      "• 实盘坑: 高；依赖不确定性预测的准确性，在金融噪声数据中泛化能力存疑，概率性重标记可能引入标签噪声，且需高质量时序数据支持。",
+      "• 复现难度: 中等；模型架构相对标准（GatedMLP），但需要特定CPS遥测数据和不确定性标注，在金融领域复现需适配数据源和特征工程。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2603.25638v1",
+    "title": "Beyond Via: Analysis and Estimation of the Impact of Large Language Models in Academic Papers",
+    "pdf_url": "https://arxiv.org/pdf/2603.25638v1",
+    "published": "2026-03-26",
+    "crawled_at": "2026-03-27 20:25:27",
+    "ai_score": 7.5,
+    "translated_title": "超越Via：大型语言模型在学术论文中的影响分析与评估",
+    "summary_en": [
+      "• Model Architecture: The paper employs a direct and highly interpretable linear approach to analyze word usage patterns, accounting for differences between LLM models and prompts without specifying a particular neural network architecture.",
+      "• Data used: The analysis is based on arXiv papers, examining shifts in word frequency such as increased use of 'beyond' and 'via' in titles and decreased use of 'the' and 'of' in abstracts.",
+      "• Performance metrics: The study demonstrates that current classifiers struggle in multi-class classification tasks to accurately identify which specific LLM generated a text, highlighting limitations in detection methods.",
+      "• Key findings: Real-world LLM usage is heterogeneous and dynamic, with evolving word usage patterns across different models, and the paper quantitatively assesses these effects through statistical analysis."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用直接且高度可解释的线性方法，分析大型语言模型（LLM）对学术论文用词的影响，考虑不同模型和提示的差异，未指定具体神经网络架构。",
+      "• 数据来源: 基于arXiv论文数据集，分析标题和摘要中词汇使用频率的变化，如标题中'beyond'和'via'的增加，以及摘要中'the'和'of'的减少。",
+      "• 主要结论: 当前分类器在多类别分类任务中难以准确识别文本由哪个特定LLM生成，LLM使用呈现异质性和动态性，词汇使用模式随模型演变而变化。",
+      "• 方法特点: 通过定量评估，揭示LLM在学术写作中的实际影响，强调模型间相似性和差异性导致的检测挑战。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the paper identifies subtle linguistic shifts driven by LLMs that could inform detection algorithms for academic integrity or content analysis, but direct trading alpha is limited without financial application.",
+      "• Implementation Risk: High; the findings are specific to academic texts (arXiv papers), and generalizing to financial data or real-time markets would require significant adaptation and validation, with evolving LLM patterns adding uncertainty.",
+      "• Novelty: Moderate; the focus on word frequency changes like 'beyond' and 'via' offers a fresh perspective on LLM impact, but the linear approach and arXiv data are not groundbreaking compared to existing NLP research.",
+      "• Practical limitations: The study relies on static arXiv data, which may not capture real-time or diverse LLM usage in other domains, limiting immediate applicability to dynamic financial environments."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；通过分析'beyond'和'via'等词汇频率变化，揭示LLM对学术写作的细微影响，为检测模型提供新视角，但线性方法和arXiv数据在NLP领域不算突破性。",
+      "• 实盘坑: 高；研究基于学术论文数据，直接应用于金融市场需大量调整，LLM模式动态演变增加风险，且缺乏实时数据验证，实盘部署挑战大。",
+      "• 复现难度: 低；方法采用可解释的线性分析，数据来自公开arXiv，技术门槛不高，但需注意模型和提示差异的处理，复现相对 straightforward。",
+      "• 应用局限: 结果局限于学术文本，金融场景适用性待考，需结合领域特定数据和方法扩展，否则alpha生成能力有限。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2603.25635v1",
+    "title": "Anchored-Branched Steady-state WInd Flow Transformer (AB-SWIFT): a metamodel for 3D atmospheric flow in urban environments",
+    "pdf_url": "https://arxiv.org/pdf/2603.25635v1",
+    "published": "2026-03-26",
+    "crawled_at": "2026-03-27 20:25:45",
+    "ai_score": 8.2,
+    "translated_title": "锚定分支稳态风场变换器（AB-SWIFT）：一种用于城市环境三维大气流动的元模型",
+    "summary_en": [
+      "• Model Architecture: AB-SWIFT is a transformer-based model with an internal branched structure specifically designed for atmospheric flow modeling, addressing challenges in urban geometry variations and large mesh sizes.",
+      "• Data used: Trained on a specially designed database of atmospheric simulations around randomized urban geometries, incorporating unstable, neutral, and stable atmospheric stratifications.",
+      "• Performance metrics: Achieves the best accuracy on all predicted fields compared to state-of-the-art transformers and graph-based models, demonstrating superior performance in surrogate modeling for CFD applications."
+    ],
+    "summary_cn": [
+      "• 核心模型: AB-SWIFT是一种基于Transformer的模型，具有内部分支结构，专门为大气流动建模设计，解决了城市几何变化和大网格尺寸的挑战。",
+      "• 数据来源: 使用专门设计的大气模拟数据库进行训练，该数据库包含随机化城市几何结构以及不稳定、中性和稳定的大气分层条件。",
+      "• 主要结论: 在所有预测场中达到最佳精度，优于最先进的Transformer和图模型，展示了在CFD应用替代建模中的卓越性能。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for alpha generation in environmental finance, renewable energy trading, and urban planning applications by enabling rapid, accurate airflow predictions without costly CFD computations.",
+      "• Implementation Risk: Moderate risk due to dependency on specialized atmospheric simulation data and potential challenges in scaling to real-time applications or diverse geographic regions.",
+      "• Novelty: Significant novelty in combining transformer architecture with branched structures for 3D atmospheric flow, addressing specific urban modeling gaps not well-handled by existing deep learning surrogates."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将Transformer架构与分支结构结合用于三维大气流动建模，针对城市环境中的高几何变化和大网格问题提供了创新解决方案。",
+      "• 实盘坑: 依赖专门的大气模拟数据，可能难以扩展到实时应用或不同地理区域；模型复杂性和计算资源需求可能影响部署效率。",
+      "• 复现难度: 中等难度，需要访问大气模拟数据库和计算资源进行训练，但代码和数据已公开，有助于降低复现门槛。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
     "id": "2603.24594v1",
     "title": "Polynomial Speedup in Diffusion Models with the Multilevel Euler-Maruyama Method",
     "pdf_url": "https://arxiv.org/pdf/2603.24594v1",
