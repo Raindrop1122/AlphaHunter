@@ -1,5 +1,355 @@
 [
   {
+    "id": "2603.26657v1",
+    "title": "Tunable Soft Equivariance with Guarantees",
+    "pdf_url": "https://arxiv.org/pdf/2603.26657v1",
+    "published": "2026-03-27",
+    "crawled_at": "2026-03-30 20:31:23",
+    "ai_score": 8.2,
+    "translated_title": "可调软等变性的保证框架",
+    "summary_en": [
+      "• Model Architecture: Proposes a general framework for soft equivariant models by projecting model weights into a designed subspace, applicable to any pre-trained architecture like ViT and ResNet.",
+      "• Data used: Evaluated on multiple tasks including image classification (ImageNet benchmark), semantic segmentation, and human-trajectory prediction, using standard datasets for these domains.",
+      "• Performance metrics: Demonstrates improved performance while reducing equivariance error on competitive benchmarks, with theoretical bounds provided on induced equivariance error."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出通过将模型权重投影到设计子空间来构建软等变模型的通用框架，适用于任何预训练架构如ViT和ResNet。",
+      "• 数据来源: 在图像分类（ImageNet基准）、语义分割和人体轨迹预测等多个任务上进行评估，使用这些领域的标准数据集。",
+      "• 主要结论: 在竞争性基准测试中展示性能提升同时减少等变误差，并提供诱导等变误差的理论界限。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; soft equivariance tuning could enhance model robustness in financial time-series or alternative data analysis where strict symmetries are rare, potentially improving prediction stability.",
+      "• Implementation Risk: Low to moderate; method is architecture-agnostic and theoretically grounded, but real-world deployment requires careful calibration of equivariance degree across diverse market regimes.",
+      "• Novelty: High; introduces a tunable soft equivariance framework with theoretical guarantees, addressing a gap between strict equivariance constraints and real-world data variability in deep learning models."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；提出具有理论保证的可调软等变性框架，解决深度学习模型中严格等变约束与现实数据可变性之间的差距。",
+      "• 实盘坑: 中低；方法对架构无关且理论扎实，但实际部署需在不同市场机制中仔细校准等变程度，可能增加调参复杂性。",
+      "• 复现难度: 低；框架通用且基于预训练模型，代码实现相对直接，但需确保理论投影步骤的正确集成以避免性能下降。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2603.26653v1",
+    "title": "PerceptionComp: A Video Benchmark for Complex Perception-Centric Reasoning",
+    "pdf_url": "https://arxiv.org/pdf/2603.26653v1",
+    "published": "2026-03-27",
+    "crawled_at": "2026-03-30 20:31:41",
+    "ai_score": 7.8,
+    "translated_title": "PerceptionComp：面向复杂感知中心推理的视频基准测试",
+    "summary_en": [
+      "• Model Architecture: The paper introduces PerceptionComp, a benchmark dataset for evaluating multimodal large language models (MLLMs) on complex, long-horizon video reasoning tasks, requiring integration of multiple visual cues over time.",
+      "• Data used: The benchmark comprises 1,114 manually annotated questions on 279 videos from diverse domains including city walk tours, indoor villa tours, video games, and extreme outdoor sports, with 100% human annotation ensuring high-quality labels.",
+      "• Performance metrics: Human accuracy drops to 18.97% when rewatching is disallowed, while state-of-the-art MLLMs like Gemini-3-Flash achieve only 45.96% accuracy in a five-choice setting, highlighting significant performance gaps compared to simpler benchmarks."
+    ],
+    "summary_cn": [
+      "• 核心模型: 论文提出PerceptionComp基准测试，用于评估多模态大语言模型在复杂、长时程视频推理任务上的表现，要求模型整合跨时间的多个视觉证据。",
+      "• 数据来源: 基准包含279个视频上的1,114个手动标注问题，视频涵盖城市漫步、室内别墅导览、视频游戏和极限户外运动等多个领域，标注质量高。",
+      "• 主要结论: 人类在禁止重看的情况下准确率降至18.97%，而最佳模型Gemini-3-Flash在五选一设置中仅达到45.96%准确率，表明感知中心的长时程视频推理仍是主要瓶颈。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for developing advanced video analysis models that can outperform current MLLMs in complex reasoning tasks, potentially leading to edge in applications like surveillance, autonomous systems, or content analysis where temporal and spatial reasoning is critical.",
+      "• Implementation Risk: Moderate to high risk due to the complexity of the benchmark; models require significant computational resources and sophisticated architectures to handle long-horizon reasoning, which may not translate directly to real-time or scalable financial applications.",
+      "• Novelty: High novelty in creating a benchmark that specifically targets perception-centric reasoning with conjunctive and sequential logic, filling a gap in existing video QA datasets that often focus on simpler tasks."
+    ],
+    "verdict_cn": [
+      "• 创新点: 创新性地构建了一个专注于感知中心推理的基准测试，强调跨时间的组合逻辑和顺序逻辑，填补了现有视频问答数据集的空白，具有较高的学术价值。",
+      "• 实盘坑: 基准测试复杂度高，模型需要处理长时程推理和多模态融合，可能导致计算成本高昂和延迟问题，在实时金融应用中部署存在挑战。",
+      "• 复现难度: 中等难度，数据集已公开且标注详细，但模型训练和评估需要大量计算资源和专业知识，复现最佳结果可能受限于硬件和算法优化。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2603.26647v1",
+    "title": "An LP-based Sampling Policy for Multi-Armed Bandits with Side-Observations and Stochastic Availability",
+    "pdf_url": "https://arxiv.org/pdf/2603.26647v1",
+    "published": "2026-03-27",
+    "crawled_at": "2026-03-30 20:31:58",
+    "ai_score": 8.2,
+    "translated_title": "基于线性规划的采样策略：用于具有侧观测和随机可用性的多臂老虎机问题",
+    "summary_en": [
+      "• Model Architecture: UCB-LP-A policy combines Upper Confidence Bound (UCB) with Linear Programming (LP) to optimize exploration-exploitation trade-offs under stochastic availability constraints, using a bipartite graph to model side-observations between actions and unknowns.",
+      "• Data used: Numerical simulations demonstrate performance; theoretical analysis uses regret bounds derived from network structure and activation probabilities, without specifying real-world datasets but modeling scenarios like social networks with dynamic user availability.",
+      "• Performance metrics: Theoretical upper bound on regret characterizes impact of network structure and activation probabilities; simulations show UCB-LP-A outperforms heuristics ignoring side-information or availability constraints, indicating improved sample efficiency."
+    ],
+    "summary_cn": [
+      "• 核心模型: UCB-LP-A策略将上置信界（UCB）与线性规划（LP）结合，在随机可用性约束下优化探索-利用权衡，使用二分图建模动作与未知变量之间的侧观测关系。",
+      "• 数据来源: 通过数值模拟验证性能；理论分析基于网络结构和激活概率推导遗憾上界，未指定真实数据集，但模拟了如社交网络等动态可用性场景。",
+      "• 主要结论: 理论遗憾上界量化了网络结构和激活概率的影响；模拟显示UCB-LP-A优于忽略侧信息或可用性约束的启发式方法，提升了样本效率。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; applicable to systems with structural dependencies and volatility (e.g., social networks, ad placement), but direct financial alpha generation requires adaptation to market data and may be limited to niche algorithmic trading contexts.",
+      "• Implementation Risk: High; stochastic availability adds complexity, real-world activation sets may be non-stationary, and LP optimization could be computationally intensive in high-dimensional settings, risking scalability issues.",
+      "• Novelty: High; integrates side-observations with stochastic availability in MAB, a practical extension over prior constant-access assumptions, with LP-based sampling offering a structured approach to handle dynamic constraints."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；将侧观测与随机可用性结合于多臂老虎机中，超越了先前恒定访问的假设，基于线性规划的采样为处理动态约束提供了结构化方法。",
+      "• 实盘坑: 高；随机可用性增加复杂性，真实激活集可能非平稳，线性规划优化在高维场景中计算密集，存在可扩展性风险。",
+      "• 复现难度: 中等；模型理论清晰，但需实现二分图结构和LP求解器，模拟环境可搭建，但真实数据集成和参数调优可能挑战较大。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2603.26644v1",
+    "title": "Automatic Laplace Collapsed Sampling: Scalable Marginalisation of Latent Parameters via Automatic Differentiation",
+    "pdf_url": "https://arxiv.org/pdf/2603.26644v1",
+    "published": "2026-03-27",
+    "crawled_at": "2026-03-30 20:32:14",
+    "ai_score": 8.2,
+    "translated_title": "自动拉普拉斯坍缩采样：通过自动微分实现潜在参数的可扩展边缘化",
+    "summary_en": [
+      "• Model Architecture: ALCS combines automatic differentiation with nested sampling to marginalize high-dimensional latent variables via MAP optimization and Laplace approximation, reducing effective dimensionality from dθ+dz to dθ.",
+      "• Data used: Validated on benchmarks spanning hierarchical, time-series, and discrete-likelihood models, with performance assessed via evidence computation accuracy and scalability on GPU hardware.",
+      "• Performance metrics: Enables tractable Bayesian evidence computation in high-dimensional settings without hand-derived gradients, with parallelized MAP optimization and Hessian evaluation across live points for practical scalability."
+    ],
+    "summary_cn": [
+      "• 核心模型: ALCS框架结合自动微分与嵌套采样，通过MAP优化和拉普拉斯近似边缘化高维潜在变量，将有效维度从dθ+dz降至dθ。",
+      "• 数据来源: 在层次模型、时间序列和离散似然模型等基准测试套件上进行验证，评估证据计算准确性和GPU硬件上的可扩展性。",
+      "• 主要结论: 无需手动推导梯度或Hessian矩阵即可实现高维贝叶斯证据计算，通过跨活点并行化MAP优化和Hessian评估实现实用可扩展性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for complex Bayesian models in finance where latent variable marginalization is critical, such as stochastic volatility or hierarchical risk models, enabling efficient hyperparameter exploration.",
+      "• Implementation Risk: Moderate; relies on automatic differentiation frameworks (e.g., PyTorch/JAX) and GPU parallelization, which may introduce computational overhead or numerical instability in non-convex optimization scenarios.",
+      "• Novelty: Significant; integrates automatic differentiation with Laplace approximation and nested sampling in a scalable way, extending to non-Gaussian approximations like Student-t for heavy-tailed latents, reducing model-specific engineering."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将自动微分与拉普拉斯近似和嵌套采样可扩展集成，支持非高斯近似（如Student-t分布），显著减少模型特定工程需求。",
+      "• 实盘坑: 依赖自动微分框架和GPU并行化，在非凸优化场景中可能引入计算开销或数值不稳定性，需谨慎调参。",
+      "• 复现难度: 中等；需要熟悉自动微分库和嵌套采样实现，但开源代码和基准测试可降低门槛，适合量化团队内部开发。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2603.26632v1",
+    "title": "Machine Learning Transferability for Malware Detection",
+    "pdf_url": "https://arxiv.org/pdf/2603.26632v1",
+    "published": "2026-03-27",
+    "crawled_at": "2026-03-30 20:32:32",
+    "ai_score": 6.5,
+    "translated_title": "机器学习在恶意软件检测中的可迁移性研究",
+    "summary_en": [
+      "• Model Architecture: The study employs a preprocessing pipeline to unify EMBERv2 (2,381-dimensional) features, training paired models under two setups: EMBER + BODMAS and EMBER + BODMAS + ERMDS, likely using standard ML classifiers (e.g., Random Forest, SVM) without specifying deep learning architectures.",
+      "• Data used: Utilizes public malware datasets including EMBERv2, BODMAS, ERMDS, TRITIUM, INFERNO, and SOREL-20M, focusing on Portable Executable (PE) files to evaluate feature compatibility and generalization across distribution shifts.",
+      "• Performance metrics: Models are tested against TRITIUM, INFERNO, and SOREL-20M, with ERMDS also used for testing in the EMBER + BODMAS setup, assessing detection accuracy and transferability under different data preprocessing approaches."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用预处理流程统一EMBERv2（2,381维）特征，在EMBER + BODMAS和EMBER + BODMAS + ERMDS两种训练设置下训练配对模型，可能基于传统机器学习分类器。",
+      "• 数据来源: 使用公开恶意软件数据集，包括EMBERv2、BODMAS、ERMDS、TRITIUM、INFERNO和SOREL-20M，专注于可移植可执行（PE）文件。",
+      "• 主要结论: 评估不同数据预处理方法对ML模型检测PE文件的适用性，测试模型在TRITIUM、INFERNO和SOREL-20M上的性能，以解决特征兼容性和泛化问题。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low; the focus on malware detection has limited direct financial applications, though insights into transferability and generalization could inform risk models for cybersecurity threats in fintech, but no explicit alpha generation is demonstrated.",
+      "• Implementation Risk: High; reliance on public datasets with feature incompatibility issues may lead to poor generalization in real-world settings, and the lack of detailed model specifications increases deployment uncertainty.",
+      "• Novelty: Moderate; addresses feature compatibility in malware datasets, but the approach of preprocessing and testing across datasets is standard in ML research, with no groundbreaking techniques or novel architectures introduced."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；关注恶意软件数据集中的特征兼容性问题，但预处理和跨数据集测试方法在机器学习研究中较为常规，未引入突破性技术或新架构。",
+      "• 实盘坑: 高；依赖存在特征不兼容问题的公开数据集，可能导致实际场景中泛化能力差，且模型细节缺失增加部署风险。",
+      "• 复现难度: 中等；使用公开数据集和标准ML流程，但需要处理数据预处理和模型训练的具体实现，可能涉及复杂的特征工程。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2603.26629v1",
+    "title": "Context-specific Credibility-aware Multimodal Fusion with Conditional Probabilistic Circuits",
+    "pdf_url": "https://arxiv.org/pdf/2603.26629v1",
+    "published": "2026-03-27",
+    "crawled_at": "2026-03-30 20:32:49",
+    "ai_score": 8.2,
+    "translated_title": "基于条件概率电路的上下文特定可信度感知多模态融合",
+    "summary_en": [
+      "• Model Architecture: C²MF framework uses Conditional Probabilistic Circuits (CPC) to model per-instance source reliability through Context-Specific Information Credibility (CSIC), a KL-divergence-based measure computed exactly from CPC",
+      "• Data used: Evaluated on Conflict benchmark with class-specific corruptions deliberately inducing discrepancies between different modalities to test robustness under cross-modal conflicts",
+      "• Performance metrics: Improves predictive accuracy by up to 29% over static-reliability baselines in high-noise settings while preserving interpretability advantages of probabilistic circuit-based fusion",
+      "• Technical approach: Generalizes conventional static credibility estimates as a special case, enabling principled and adaptive reliability assessment that responds to situational factors like sensor degradation"
+    ],
+    "summary_cn": [
+      "• 核心模型: C²MF框架采用条件概率电路(CPC)建模实例级信源可靠性，通过上下文特定信息可信度(CSIC)实现精确计算",
+      "• 数据来源: 使用Conflict基准测试集，通过类别特定污染故意制造不同模态间的差异，评估跨模态冲突下的鲁棒性",
+      "• 主要结论: 在高噪声环境下比静态可靠性基线预测准确率提升达29%，同时保持概率电路融合的可解释性优势",
+      "• 技术特点: 将传统静态可信度估计推广为特例，实现基于KL散度的自适应可靠性评估机制"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for trading systems where multiple data sources (market data, news, social media) have varying reliability across different market regimes - could improve signal fusion during volatile periods",
+      "• Implementation Risk: Moderate-to-high risk due to computational complexity of probabilistic circuits and need for careful calibration of context-specific parameters in live trading environments",
+      "• Novelty: Significant advancement over static fusion methods by introducing instance-level reliability modeling through conditional probabilistic circuits - addresses fundamental limitation in multimodal AI systems",
+      "• Practical limitations: Requires substantial labeled conflict data for training, may struggle with completely novel corruption patterns not seen during training"
+    ],
+    "verdict_cn": [
+      "• 创新点: 突破传统静态融合方法，通过条件概率电路实现实例级可靠性建模，解决多模态AI系统中信源可靠性动态变化的核心问题",
+      "• 实盘坑: 概率电路计算复杂度较高，实时交易环境中上下文特定参数需要精细调校，对异常市场模式的泛化能力存疑",
+      "• 复现难度: 中等偏高，需要构建专门的Conflict基准数据集，条件概率电路的实现和优化需要较强的概率编程专业知识",
+      "• 应用局限: 对训练数据中未见的污染模式处理能力有限，在完全未知的市场异常情况下可能失效"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.26620v1",
+    "title": "Optimal Parlay Wagering and Whitrow Asymptotics: A State-Price and Implicit-Cash Treatment",
+    "pdf_url": "https://arxiv.org/pdf/2603.26620v1",
+    "published": "2026-03-27",
+    "crawled_at": "2026-03-30 20:33:05",
+    "ai_score": 8.2,
+    "translated_title": "最优串关投注与Whitrow渐近分析：状态价格与隐含现金处理",
+    "summary_en": [
+      "• Model Architecture: The paper presents a multiplicative parlay pricing model for independent multi-outcome events, using an implicit-cash viewpoint and state-price framework to derive optimal Kelly strategies.",
+      "• Data used: The analysis is theoretical and mathematical, focusing on independent events with multiplicative pricing, without empirical datasets but relying on probabilistic assumptions and low-edge regime expansions.",
+      "• Performance metrics: The key performance metric is the growth-rate loss from forbidding parlays, shown to be O(ε^4), and the deviation of optimal singles stakes from isolated one-event Kelly stakes at cubic order, explaining Whitrow's near-proportionality phenomenon."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用乘性串关定价模型，基于隐含现金视角和状态价格框架，推导独立多结果事件下的最优凯利策略。",
+      "• 数据来源: 理论分析，无实证数据，依赖概率假设和低边缘状态展开，研究独立事件下的最优投注组合。",
+      "• 主要结论: 禁止串关导致的增长率损失为O(ε^4)，最优单注投注与孤立单事件凯利策略的偏差仅为三次阶，解释了Whitrow的近似比例现象。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the theoretical insights into parlay optimization and low-edge regimes could inform sports betting or financial derivatives strategies, but direct alpha extraction is limited without empirical validation.",
+      "• Implementation Risk: High; the model assumes independent events and multiplicative pricing, which may not hold in real-world markets with correlations and complex pricing mechanisms, increasing practical implementation challenges.",
+      "• Novelty: High; the paper offers a transparent state-price proof of optimal Kelly strategies for parlays and a perturbative analysis of singles-only restrictions, providing new theoretical clarity and asymptotic results."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；通过状态价格框架提供串关最优凯利策略的简洁证明，并利用微扰展开分析禁止串关的影响，理论清晰且渐近结果新颖。",
+      "• 实盘坑: 高；模型假设事件独立和乘性定价，实际市场中事件相关性和复杂定价机制可能导致偏差，实施风险较大。",
+      "• 复现难度: 中等；数学推导明确，但需要专业量化背景来理解和应用，低边缘状态展开可能增加计算复杂性。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2603.26611v1",
+    "title": "Benchmarking Tabular Foundation Models for Conditional Density Estimation in Regression",
+    "pdf_url": "https://arxiv.org/pdf/2603.26611v1",
+    "published": "2026-03-27",
+    "crawled_at": "2026-03-30 20:33:27",
+    "ai_score": 8.2,
+    "translated_title": "基准测试表格基础模型在回归中的条件密度估计性能",
+    "summary_en": [
+      "• Model Architecture: The paper benchmarks three tabular foundation model variants (including TabPFN and TabICL) against parametric, tree-based, and neural CDE baselines for conditional density estimation (CDE) in regression tasks.",
+      "• Data used: Evaluation is conducted on 39 real-world datasets with training sizes ranging from 50 to 20,000 samples, plus a photometric redshift case study using SDSS DR18 with up to 500,000 galaxies.",
+      "• Performance metrics: Six metrics covering density accuracy (CDE loss, log-likelihood, CRPS), calibration, and computation time are used to assess performance across different sample sizes.",
+      "• Key finding: Foundation models achieve best CDE loss, log-likelihood, and CRPS on most datasets across all sample sizes, though calibration may lag behind task-specific neural baselines at larger sizes, suggesting post-hoc recalibration could enhance performance."
+    ],
+    "summary_cn": [
+      "• 核心模型: 研究基准测试了三种表格基础模型变体（包括TabPFN和TabICL），对比参数化、基于树和神经网络的CDE基线，用于回归任务中的条件密度估计。",
+      "• 数据来源: 在39个真实世界数据集上进行评估，训练规模从50到20,000样本不等，并利用SDSS DR18的光度红移案例研究，数据量高达500,000个星系。",
+      "• 主要结论: 基础模型在大多数数据集上，无论样本大小，均实现最佳CDE损失、对数似然和CRPS，但在较大样本量时，校准可能落后于特定任务的神经网络基线，表明事后重新校准可能提升性能。",
+      "• 应用案例: 在光度红移研究中，TabPFN仅用50,000训练星系就超越了所有基线在完整500,000星系数据集上的表现，突显其高效性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for generating alpha in quantitative strategies that rely on accurate uncertainty quantification, such as risk management or option pricing, by providing superior conditional density estimates with minimal tuning.",
+      "• Implementation Risk: Moderate risk due to potential calibration issues at larger sample sizes, which may require post-hoc recalibration steps, adding complexity and computational overhead in live trading environments.",
+      "• Novelty: Novel in systematically evaluating tabular foundation models for CDE, a less explored area compared to point prediction, and demonstrating their effectiveness as off-the-shelf estimators, bridging a gap in existing literature.",
+      "• Practical consideration: The models' ability to outperform with smaller datasets (e.g., 50,000 vs. 500,000 in case study) suggests cost-efficiency in data acquisition, but reliance on specific architectures like TabPFN may limit generalizability to all tabular data types."
+    ],
+    "verdict_cn": [
+      "• 创新点: 创新性地系统评估表格基础模型在条件密度估计中的应用，填补了现有文献中相对于点预测较少探索的空白，并证明其作为即用型估计器的有效性。",
+      "• 实盘坑: 在较大样本量时可能存在校准问题，需要事后重新校准步骤，这在实盘交易中增加复杂性和计算负担，可能影响实时性能。",
+      "• 复现难度: 中等难度，因为模型如TabPFN和TabICL是公开可用的，但基准测试涉及多种数据集和指标，需要大量计算资源进行复现和验证，且校准调整可能需要专业知识。",
+      "• 策略适用性: 适用于依赖精确不确定性量化的量化策略，如风险管理或期权定价，但需注意模型对特定数据类型的依赖性，可能不适用于所有表格数据场景。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2603.26604v1",
+    "title": "Hardware-Aware Tensor Networks for Real-Time Quantum-Inspired Anomaly Detection at Particle Colliders",
+    "pdf_url": "https://arxiv.org/pdf/2603.26604v1",
+    "published": "2026-03-27",
+    "crawled_at": "2026-03-30 20:33:42",
+    "ai_score": 7.2,
+    "translated_title": "面向粒子对撞机实时量子启发异常检测的硬件感知张量网络",
+    "summary_en": [
+      "• Model Architecture: Introduces a spaced matrix product operator (SMPO) and its cascaded variant for tensor network-based anomaly detection, optimized for FPGA hardware deployment with low latency suitable for trigger systems.",
+      "• Data used: Implicitly uses collider event data (high-dimensional feature spaces) from particle physics experiments, focusing on beyond Standard Model benchmarks for anomaly detection validation.",
+      "• Performance metrics: Achieves real-time anomaly detection with resources and latency consistent with trigger deployment in FPGA hardware, demonstrating sensitivity to various beyond Standard Model scenarios."
+    ],
+    "summary_cn": [
+      "• 核心模型: 开发了间隔矩阵乘积算子（SMPO）及其级联变体，基于张量网络实现异常检测，针对FPGA硬件优化，满足触发系统低延迟要求。",
+      "• 数据来源: 使用粒子对撞机实验产生的高维特征空间数据，以超出标准模型的基准场景进行异常检测验证。",
+      "• 主要结论: 在FPGA硬件上实现实时异常检测，资源消耗和延迟符合触发部署要求，对多种超出标准模型场景表现出敏感性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - quantum-inspired tensor networks could capture complex correlations in high-dimensional financial data for anomaly detection in market microstructure or fraud detection, but direct financial application requires validation.",
+      "• Implementation Risk: High - FPGA hardware deployment requires specialized engineering expertise; real-time constraints and resource limitations in edge environments pose significant technical challenges.",
+      "• Novelty: Moderate - combines quantum-inspired ML with hardware-aware optimization for edge deployment, but tensor networks for anomaly detection are not fundamentally new; innovation lies in the specific SMPO architecture and FPGA implementation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将量子启发机器学习与硬件感知优化结合，针对边缘计算环境设计SMPO架构，在FPGA上实现低延迟异常检测，具有一定交叉学科创新性。",
+      "• 实盘坑: FPGA部署需要硬件工程专业知识，实时性要求和资源限制在边缘环境中构成重大技术障碍；金融数据适配需要大量验证工作。",
+      "• 复现难度: 中等偏高 - 需要粒子物理实验数据或类似高维数据集，FPGA实现需要硬件开发能力，但算法原理相对清晰。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2603.26603v1",
+    "title": "Sustainability Is Not Linear: Quantifying Performance, Energy, and Privacy Trade-offs in On-Device Intelligence",
+    "pdf_url": "https://arxiv.org/pdf/2603.26603v1",
+    "published": "2026-03-27",
+    "crawled_at": "2026-03-30 20:34:00",
+    "ai_score": 7.8,
+    "translated_title": "可持续性并非线性：量化设备端智能的性能、能耗与隐私权衡",
+    "summary_en": [
+      "• Model Architecture: Analyzes eight LLMs ranging from 0.5B to 9B parameters, including standard dense models and Mixture-of-Experts (MoE) architectures, with focus on quantization techniques (importance-aware vs. mixed-precision).",
+      "• Data used: Empirical power metrics collected from a flagship Android device (Samsung Galaxy S25 Ultra) under realistic user conditions without root access, ensuring practical relevance.",
+      "• Performance metrics: Measures energy consumption, latency, memory footprint, and generation quality, identifying trade-offs between these factors in on-device deployment.",
+      "• Key findings: Reveals a quantization-energy paradox where quantization reduces memory but not energy, highlights MoE architectures as energy-efficient outliers, and identifies mid-sized models (e.g., Qwen2.5-3B) as optimal for balancing quality and sustainability."
+    ],
+    "summary_cn": [
+      "• 核心模型: 分析了从0.5B到9B参数的八个大语言模型，包括标准密集模型和混合专家（MoE）架构，重点关注量化技术（重要性感知与混合精度）。",
+      "• 数据来源: 从旗舰安卓设备（三星Galaxy S25 Ultra）在真实用户条件下收集的实证功耗数据，无需root权限，确保实用性。",
+      "• 主要结论: 揭示了量化-能耗悖论（量化减少内存但不节能），发现MoE架构在能耗上表现异常高效，并确定中型模型（如Qwen2.5-3B）在质量与可持续性间达到最佳平衡。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate—findings on MoE efficiency and mid-model sweet spots could inform edge-AI deployment strategies, but direct financial alpha is limited without market linkage.",
+      "• Implementation Risk: High—empirical results are device-specific (Galaxy S25 Ultra), and generalization to other hardware or real-time trading environments is uncertain.",
+      "• Novelty: Moderate—provides rare empirical energy profiling without root access, but the quantization paradox and MoE insights build on existing literature rather than breakthrough discoveries.",
+      "• Practical limitations: Study focuses on static benchmarks; dynamic workload adaptation and long-term battery degradation are unaddressed, reducing immediate applicability."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等——无需root的实证能耗分析具有实用性，但量化悖论和MoE效率基于现有研究，非突破性发现。",
+      "• 实盘坑: 高——结果依赖特定设备（Galaxy S25 Ultra），泛化到其他硬件或实时交易环境风险大，且未考虑动态负载。",
+      "• 复现难度: 中等——实验管道可重复，但需要相同高端设备和模型访问权限，成本较高。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2603.25740v1",
     "title": "Drive My Way: Preference Alignment of Vision-Language-Action Model for Personalized Driving",
     "pdf_url": "https://arxiv.org/pdf/2603.25740v1",
