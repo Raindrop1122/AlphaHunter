@@ -1,5 +1,345 @@
 [
   {
+    "id": "2603.28764v1",
+    "title": "Geometry-aware similarity metrics for neural representations on Riemannian and statistical manifolds",
+    "pdf_url": "https://arxiv.org/pdf/2603.28764v1",
+    "published": "2026-03-30",
+    "crawled_at": "2026-03-31 20:29:52",
+    "ai_score": 7.5,
+    "translated_title": "黎曼流形与统计流形上神经表示的几何感知相似性度量",
+    "summary_en": [
+      "• Model Architecture: Introduces Metric Similarity Analysis (MSA), a framework leveraging Riemannian geometry tools to compare intrinsic geometries of neural representations under the manifold hypothesis.",
+      "• Data used: No specific dataset mentioned; methodology is applied to deep networks with different learning regimes, nonlinear dynamics, and diffusion models as demonstration cases.",
+      "• Performance metrics: Demonstrates capability to disentangle features of neural computations, compare nonlinear dynamics, and investigate diffusion models through intrinsic geometry comparisons.",
+      "• Key innovation: Shifts from extrinsic to intrinsic geometry comparison using mathematical tools from differential geometry, addressing limitations of existing similarity measures."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出度量相似性分析（MSA）框架，利用黎曼几何工具在流形假设下比较神经表示的内在几何结构。",
+      "• 数据来源: 未指定具体数据集；方法应用于不同学习机制的深度网络、非线性动力学和扩散模型作为验证案例。",
+      "• 主要结论: MSA能够解耦深度网络中的神经计算特征、比较非线性动力学并研究扩散模型的内在几何差异。",
+      "• 数学基础: 基于微分几何的严格数学框架，克服现有相似性度量方法仅关注外在几何的局限性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - provides mathematical tools for understanding neural representations that could inform feature engineering or model selection in complex systems.",
+      "• Implementation Risk: High - requires expertise in differential geometry and manifold learning; computational complexity may be substantial for real-time applications.",
+      "• Novelty: High - introduces Riemannian geometry perspective to neural representation analysis, addressing fundamental limitations of existing similarity metrics.",
+      "• Practical limitations: Abstract methodology without concrete implementation details or benchmark comparisons against existing approaches."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将黎曼几何引入神经表示分析，从内在几何角度比较神经网络解决方案，数学基础扎实。",
+      "• 实盘坑: 需要微分几何和流形学习专业知识，计算复杂度高，缺乏具体实现细节和基准对比。",
+      "• 复现难度: 较高 - 依赖于抽象的数学框架，需要自行实现几何计算和流形嵌入算法。",
+      "• 应用局限: 方法论抽象，未提供具体数据集验证或与现有方法的性能对比，实盘应用路径不明确。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.28762v1",
+    "title": "On-the-fly Repulsion in the Contextual Space for Rich Diversity in Diffusion Transformers",
+    "pdf_url": "https://arxiv.org/pdf/2603.28762v1",
+    "published": "2026-03-30",
+    "crawled_at": "2026-03-31 20:30:10",
+    "ai_score": 8.2,
+    "translated_title": "基于上下文空间动态排斥的扩散变换器实现丰富多样性",
+    "summary_en": [
+      "• Model Architecture: Proposes a novel framework applying repulsion in the Contextual Space of Diffusion Transformers, intervening in multimodal attention channels during the transformer's forward pass between blocks where text conditioning is enriched with emergent image structure.",
+      "• Data used: Implicitly relies on standard Text-to-Image (T2I) diffusion model training datasets (e.g., LAION, COCO), though not explicitly specified; method is evaluated on modern diffusion models including 'Turbo' and distilled variants.",
+      "• Performance metrics: Demonstrates significantly richer diversity without sacrificing visual fidelity or semantic adherence; uniquely efficient with small computational overhead, effective in models where traditional trajectory-based interventions fail."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出在扩散变换器的上下文空间中应用排斥力的新框架，通过干预多模态注意力通道，在文本条件与图像结构融合的块间进行动态排斥。",
+      "• 数据来源: 基于标准文本到图像扩散模型训练数据集（如LAION、COCO），评估涵盖现代'Turbo'和蒸馏变体模型。",
+      "• 主要结论: 在保持视觉保真度和语义一致性的前提下，显著提升生成多样性；计算开销小，在传统轨迹干预失效的模型中仍有效。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for creative and generative AI applications requiring diverse outputs; addresses typicality bias in T2I models, potentially enhancing content generation for marketing, design, and entertainment sectors.",
+      "• Implementation Risk: Moderate; relies on specific transformer architectures and attention mechanisms, may not generalize to non-transformer diffusion models; requires careful tuning of repulsion parameters to avoid artifacts.",
+      "• Novelty: Significant; introduces on-the-fly repulsion in Contextual Space as a novel intervention method, bypassing costly optimization and structural disruption issues of existing diversity approaches."
+    ],
+    "verdict_cn": [
+      "• 创新点: 在上下文空间引入动态排斥机制，创新性地干预注意力通道，避免传统方法的结构破坏和优化成本问题。",
+      "• 实盘坑: 依赖特定变换器架构，泛化性受限；排斥参数需精细调优，否则易产生伪影；在非标准模型中效果可能下降。",
+      "• 复现难度: 中等；需基于现有扩散变换器代码库实现，但方法描述清晰，计算开销小，适合快速实验验证。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.28750v1",
+    "title": "Temporal Credit Is Free",
+    "pdf_url": "https://arxiv.org/pdf/2603.28750v1",
+    "published": "2026-03-30",
+    "crawled_at": "2026-03-31 20:30:27",
+    "ai_score": 7.5,
+    "translated_title": "时间信用是免费的",
+    "summary_en": [
+      "• Model Architecture: Proposes a method for recurrent networks that uses immediate derivatives instead of full Jacobian propagation (RTRL), with architectural rules for gradient normalization (e.g., requiring β² in nonlinear state updates without output bypass).",
+      "• Data used: Tested across ten architectures, real primate neural data, and streaming machine learning benchmarks.",
+      "• Performance metrics: Matches or exceeds full RTRL performance, scales to n = 1024 with 1000x less memory, using RMSprop for optimization."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出一种循环网络方法，使用即时导数而非完整雅可比传播（RTRL），并基于架构规则进行梯度归一化（如在无输出旁路的非线性状态更新中需β²）。",
+      "• 数据来源: 在十种架构、真实灵长类神经数据和流式机器学习基准上进行了测试。",
+      "• 主要结论: 性能匹配或超越完整RTRL，可扩展至n=1024且内存减少1000倍，使用RMSprop优化。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; reduces memory overhead in recurrent models, potentially enabling larger-scale real-time applications in time-series prediction or adaptive systems, but limited to specific architectural conditions.",
+      "• Implementation Risk: High; relies on precise gradient normalization rules that may be sensitive to hyperparameters and network design, increasing deployment complexity in production environments.",
+      "• Novelty: High; challenges conventional RTRL approaches by showing immediate derivatives suffice with proper handling, offering a fresh perspective on temporal credit assignment in recurrent networks."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；通过证明在适当处理下即时导数已足够，挑战了传统RTRL方法，为循环网络中的时间信用分配提供了新视角。",
+      "• 实盘坑: 高；依赖精确的梯度归一化规则，可能对超参数和网络设计敏感，增加了生产环境中的部署复杂性。",
+      "• 复现难度: 中等；方法基于标准优化器（如RMSprop），但需要仔细实现架构规则和梯度处理，可能涉及调试开销。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.28744v1",
+    "title": "Stop Probing, Start Coding: Why Linear Probes and Sparse Autoencoders Fail at Compositional Generalisation",
+    "pdf_url": "https://arxiv.org/pdf/2603.28744v1",
+    "published": "2026-03-30",
+    "crawled_at": "2026-03-31 20:30:48",
+    "ai_score": 7.5,
+    "translated_title": "停止探测，开始编码：为什么线性探测和稀疏自编码器在组合泛化中失败",
+    "summary_en": [
+      "• Model Architecture: The paper analyzes Sparse Autoencoders (SAEs) with fixed encoders versus classical sparse coding methods using per-sample iterative inference (e.g., FISTA). It highlights the amortisation gap in SAEs due to dictionary learning failures under superposition.",
+      "• Data used: The study employs controlled experiments with synthetic or simulated datasets to decompose failures under out-of-distribution (OOD) compositional shifts, testing across various training set sizes, latent dimensions, and sparsity levels.",
+      "• Performance metrics: SAEs show persistent failure in recovering latent factors under OOD shifts, with dictionary learning identified as the binding constraint. Oracle baselines demonstrate solvability with good dictionaries, reframing the issue from amortisation to dictionary learning challenges."
+    ],
+    "summary_cn": [
+      "• 核心模型: 分析稀疏自编码器（SAEs）与基于逐样本迭代推理（如FISTA）的经典稀疏编码方法，强调SAEs在叠加下的摊销差距源于字典学习失败。",
+      "• 数据来源: 使用合成或模拟数据集进行受控实验，分解在分布外（OOD）组合偏移下的失败，测试不同训练集大小、潜在维度和稀疏度水平。",
+      "• 主要结论: SAEs在OOD偏移下恢复潜在因子持续失败，字典学习被识别为关键约束；通过Oracle基线证明问题在良好字典下可解，将失败重新定义为字典学习而非摊销问题。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; insights into sparse representation learning under superposition could enhance interpretability and robustness in financial models, but direct alpha generation is limited without specific market applications.",
+      "• Implementation Risk: High; dictionary learning challenges and OOD failures pose significant risks for real-world deployment, requiring scalable solutions that are not yet proven in complex, noisy financial data.",
+      "• Novelty: High; reframes SAE failures as a dictionary learning problem rather than amortisation, offering a fresh perspective on sparse inference and compositional generalization in neural networks."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；将SAE失败重新定义为字典学习问题而非摊销问题，为神经网络中的稀疏推理和组合泛化提供新视角，挑战现有线性表示假设。",
+      "• 实盘坑: 高；字典学习挑战和OOD失败在复杂金融数据中风险大，需可扩展解决方案，当前方法在噪声环境下未经验证，易导致模型失效。",
+      "• 复现难度: 中等；受控实验设计清晰，但涉及合成数据和高级优化技术（如FISTA），需专业知识；实际金融数据应用可能增加复杂性。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.28743v1",
+    "title": "Rethinking Language Model Scaling under Transferable Hypersphere Optimization",
+    "pdf_url": "https://arxiv.org/pdf/2603.28743v1",
+    "published": "2026-03-30",
+    "crawled_at": "2026-03-31 20:31:07",
+    "ai_score": 8.2,
+    "translated_title": "基于可迁移超球优化的语言模型缩放再思考",
+    "summary_en": [
+      "• Model Architecture: Introduces HyperP (Hypersphere Parameterization) framework with Frobenius-sphere constraint using Muon optimizer, enabling stable scaling across width, depth, training tokens, and Mixture-of-Experts (MoE) granularity. • Data used: Training involves scaling laws analysis across compute budgets up to 6×10²¹ FLOPs, with transferable learning rates validated through extensive experiments. • Performance metrics: Achieves 1.58× compute efficiency over baseline at 6×10²¹ FLOPs, maintains bounded instability indicators (Z-values, output RMS, activation outliers), and improves MoE granularity scaling with SqrtGate mechanism."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出HyperP（超球参数化）框架，基于Frobenius球约束和Muon优化器，实现模型宽度、深度、训练token和MoE粒度的稳定缩放。 • 数据来源: 通过高达6×10²¹ FLOPs的计算预算进行缩放定律分析，验证了可迁移学习率的有效性。 • 主要结论: 在6×10²¹ FLOPs下实现1.58倍计算效率提升，所有不稳定性指标（Z值、输出RMS、激活异常值）保持有界且非递增，SqrtGate机制优化MoE粒度缩放。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for reducing training costs and improving stability in large-scale LLM deployments, with demonstrated compute efficiency gains and transferable stability across scales. • Implementation Risk: Moderate risk due to reliance on specialized Muon optimizer and hypersphere constraints, which may require significant infrastructure adjustments and expertise. • Novelty: Novel framework combining hypersphere optimization with scaling laws, introducing SqrtGate for MoE and proving weight decay as a no-op on Frobenius sphere, advancing beyond first-order optimizer limitations."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次将超球优化与缩放定律结合，提出HyperP框架和SqrtGate机制，证明Frobenius球上权重衰减无效，突破一阶优化器局限。 • 实盘坑: 依赖Muon优化器和超球约束，需调整基础设施和专业知识，可能增加部署复杂性和成本。 • 复现难度: 中等难度，需复现Muon优化器和超球约束，但代码已开源（GitHub），提供了实现基础。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.28739v1",
+    "title": "Expectation Error Bounds for Transfer Learning in Linear Regression and Linear Neural Networks",
+    "pdf_url": "https://arxiv.org/pdf/2603.28739v1",
+    "published": "2026-03-30",
+    "crawled_at": "2026-03-31 20:31:27",
+    "ai_score": 8.2,
+    "translated_title": "线性回归与线性神经网络中迁移学习的期望误差界",
+    "summary_en": [
+      "• Model Architecture: Analyzes two canonical linear models - ordinary least squares regression and under-parameterized linear neural networks with shared representations of width q ≤ K (where K is number of auxiliary tasks)",
+      "• Data used: Synthetic data simulated with controlled parameters to verify theoretical results; auxiliary data from related tasks for transfer learning",
+      "• Performance metrics: Exact closed-form expressions for expected generalization error with bias-variance decomposition; non-asymptotic expectation bounds on generalization error; globally optimal task weights with consistency guarantees",
+      "• Key contribution: New column-wise low-rank perturbation bound for random matrices that preserves fine-grained column structures, improving upon existing bounds"
+    ],
+    "summary_cn": [
+      "• 核心模型: 分析两种经典线性模型——普通最小二乘回归和宽度q≤K（K为辅助任务数）的欠参数化线性神经网络，后者具有共享表示",
+      "• 数据来源: 使用受控参数模拟的合成数据验证理论结果；迁移学习利用相关任务的辅助数据",
+      "• 主要结论: 推导了期望泛化误差的精确闭式表达式（含偏差-方差分解）；建立了非渐近期望误差界；获得了具有一致性保证的全局最优任务权重",
+      "• 理论突破: 证明了随机矩阵的列向低秩扰动新界，保留了细粒度列结构，改进了现有界限"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - provides rigorous theoretical framework for determining when auxiliary data improves generalization, potentially applicable to multi-task learning strategies in factor models or cross-asset prediction",
+      "• Implementation Risk: High - theoretical conditions for beneficial transfer are specific and may not hold in real financial data with non-linear relationships and regime changes",
+      "• Novelty: High - first non-vacuous sufficient condition for beneficial auxiliary learning in linear neural networks; new perturbation bound represents genuine mathematical contribution",
+      "• Practical limitations: Linear assumptions severely limit applicability to complex financial markets; synthetic verification lacks real-world validation"
+    ],
+    "verdict_cn": [
+      "• 创新点: 在线性神经网络中首次提出非平凡充分条件判断辅助学习何时有益；新的列向扰动界是实质性数学贡献，改进了随机矩阵理论",
+      "• 实盘坑: 线性假设严重脱离金融市场复杂性；理论条件在真实数据中难以满足；缺乏噪声、非平稳性和非线性关系的处理",
+      "• 复现难度: 中等——理论推导清晰，但最优任务权重的优化程序实现需要专业知识；合成数据实验容易复现，但金融应用验证困难",
+      "• 策略适配: 更适合理论指导而非直接交易策略；可能启发多任务风险模型或因子组合优化"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.28733v1",
+    "title": "See it to Place it: Evolving Macro Placements with Vision-Language Models",
+    "pdf_url": "https://arxiv.org/pdf/2603.28733v1",
+    "published": "2026-03-30",
+    "crawled_at": "2026-03-31 20:31:42",
+    "ai_score": 8.2,
+    "translated_title": "眼见为实：利用视觉语言模型演进宏单元布局",
+    "summary_en": [
+      "• Model Architecture: VeoPlace framework combines Vision-Language Models (VLMs) with evolutionary search strategy to guide macro placement without fine-tuning the VLM",
+      "• Data used: Open-source chip floorplanning benchmarks (10 for learning-based comparison, 8 for analytical placer evaluation)",
+      "• Performance metrics: Outperforms best prior learning-based approach on 9/10 benchmarks with >32% wirelength reduction; improves DREAMPlace performance on all 8 benchmarks with up to 4.3% gains"
+    ],
+    "summary_cn": [
+      "• 核心模型: VeoPlace框架将视觉语言模型与进化搜索策略结合，无需微调VLM即可指导宏单元布局",
+      "• 数据来源: 开源芯片布局规划基准测试（10个用于学习型方法对比，8个用于分析型布局器评估）",
+      "• 主要结论: 在10个基准测试中9个超越先前最佳学习型方法，线长减少超32%；在8个基准测试中全面提升DREAMPlace性能，最高增益4.3%"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High - VLMs' spatial reasoning capabilities could translate to other complex optimization problems in finance (portfolio allocation, trade execution optimization)",
+      "• Implementation Risk: Medium - Requires integration with existing EDA tools; evolutionary search adds computational overhead; VLM inference costs may be prohibitive for real-time applications",
+      "• Novelty: Significant - First application of foundation models to chip floorplanning; clever use of VLMs without fine-tuning reduces data dependency"
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次将基础模型应用于芯片布局规划；无需微调VLM的创新方法降低了数据依赖",
+      "• 实盘坑: 需与现有EDA工具集成；进化搜索增加计算开销；VLM推理成本可能阻碍实时应用",
+      "• 复现难度: 中等 - 需要访问开源基准测试和预训练VLM；进化算法参数调优需要专业知识"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.28718v1",
+    "title": "Stepwise Credit Assignment for GRPO on Flow-Matching Models",
+    "pdf_url": "https://arxiv.org/pdf/2603.28718v1",
+    "published": "2026-03-30",
+    "crawled_at": "2026-03-31 20:32:03",
+    "ai_score": 7.5,
+    "translated_title": "基于流匹配模型的GRPO逐步信用分配方法",
+    "summary_en": [
+      "• Model Architecture: Stepwise-Flow-GRPO extends Flow-GRPO by introducing stepwise credit assignment based on reward improvement per diffusion step, using Tweedie's formula for intermediate reward estimates and gain-based advantages, with a DDIM-inspired SDE for improved reward quality.",
+      "• Data used: The paper focuses on flow-matching models for image generation, likely using standard datasets like ImageNet or CIFAR-10 for training and evaluation, though specific datasets are not mentioned in the abstract.",
+      "• Performance metrics: The method achieves superior sample efficiency and faster convergence compared to uniform credit assignment, with improvements in reward quality while preserving stochasticity for policy gradients."
+    ],
+    "summary_cn": [
+      "• 核心模型: Stepwise-Flow-GRPO模型，在Flow-GRPO基础上引入基于每步奖励改进的逐步信用分配机制，利用Tweedie公式估计中间奖励，并采用增益优势函数和DDIM启发的SDE提升奖励质量。",
+      "• 数据来源: 基于流匹配模型的图像生成任务，可能使用ImageNet或CIFAR-10等标准数据集进行训练和评估，但摘要未明确提及具体数据来源。",
+      "• 主要结论: 该方法在样本效率和收敛速度上优于均匀信用分配，能更好地处理扩散生成中的时间结构（早期步骤决定内容，晚期步骤细化细节），避免奖励次优中间步骤。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the stepwise credit assignment could improve training efficiency for diffusion-based generative models in finance (e.g., synthetic data generation or market simulation), but direct trading alpha is limited without specific financial applications.",
+      "• Implementation Risk: High; integrating Tweedie's formula and custom SDEs adds complexity, and the method's performance may be sensitive to hyperparameters and reward design, increasing deployment challenges in production environments.",
+      "• Novelty: Good; the temporal-aware credit assignment addresses a known limitation in reinforcement learning for diffusion models, offering a principled approach to leverage stepwise improvements, though it builds on existing GRPO and flow-matching frameworks."
+    ],
+    "verdict_cn": [
+      "• 创新点: 较好；针对扩散模型生成过程中的时间结构（低频内容与高频细节），提出逐步信用分配机制，避免均匀奖励导致的次优学习，在强化学习与生成模型结合领域有增量贡献。",
+      "• 实盘坑: 较高；Tweedie公式和自定义SDE的引入增加了实现复杂度，奖励设计和超参数调优可能不稳定，在金融场景中需谨慎验证泛化性和计算开销。",
+      "• 复现难度: 中等；基于公开的Flow-GRPO和流匹配模型，但需实现步进奖励估计和增益优势函数，对强化学习和扩散模型有较高技术要求。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.28708v1",
+    "title": "GPU-Accelerated Optimization of Transformer-Based Neural Networks for Real-Time Inference",
+    "pdf_url": "https://arxiv.org/pdf/2603.28708v1",
+    "published": "2026-03-30",
+    "crawled_at": "2026-03-31 20:32:22",
+    "ai_score": 8.2,
+    "translated_title": "基于GPU加速的Transformer神经网络实时推理优化",
+    "summary_en": [
+      "• Model Architecture: Evaluates BERT-base (110M parameters) and GPT-2 (124M parameters) transformer models using NVIDIA TensorRT with a hybrid precision strategy (FP32 for softmax/layer normalization, FP16 for linear layers).",
+      "• Data used: Benchmarks across 360+ configurations with batch sizes 1-32 and sequence lengths 32-512; validates on SST-2 for accuracy and WikiText-2 for numerical stability, using random inputs to test NaN instability.",
+      "• Performance metrics: Achieves up to 64.4x speedup over CPU, sub-10 ms latency for single-sample inference, 63% memory reduction, and maintains high numerical fidelity (cosine similarity ≥0.9998) with 0.0% NaN rates in hybrid precision."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用BERT-base（1.1亿参数）和GPT-2（1.24亿参数）Transformer模型，结合NVIDIA TensorRT和混合精度策略（FP32用于softmax/层归一化，FP16用于线性层）。",
+      "• 数据来源: 在超过360种配置下进行基准测试（批量大小1-32，序列长度32-512）；使用SST-2验证精度，WikiText-2验证数值稳定性，随机输入测试NaN不稳定性。",
+      "• 主要结论: 实现最高64.4倍于CPU的加速，单样本推理延迟低于10毫秒，内存使用减少63%，混合精度下保持高数值保真度（余弦相似度≥0.9998）且NaN率为0.0%。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; provides practical optimizations for low-latency inference in real-time trading systems, but lacks direct financial application or alpha signal generation.",
+      "• Implementation Risk: Low; uses established tools (TensorRT) and modular containerization, with robust validation across GPU architectures, though deployment complexity may vary by environment.",
+      "• Novelty: Limited; focuses on engineering optimizations rather than novel algorithms, but offers detailed trade-off analysis and hybrid precision insights that are valuable for production systems."
+    ],
+    "verdict_cn": [
+      "• 创新点: 有限；主要集中于工程优化而非算法创新，但提供了详细的性能-精度权衡分析和混合精度策略，对生产系统有实用价值。",
+      "• 实盘坑: 低；使用成熟工具（TensorRT）和模块化容器化，跨GPU架构验证稳健，但部署复杂性可能因环境而异，需注意硬件兼容性。",
+      "• 复现难度: 中等；基于公开工具和详细配置，但需要特定GPU（如NVIDIA A100）和软件栈，可能涉及调优和调试工作。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2603.28681v1",
+    "title": "Functional Natural Policy Gradients",
+    "pdf_url": "https://arxiv.org/pdf/2603.28681v1",
+    "published": "2026-03-30",
+    "crawled_at": "2026-03-31 20:32:38",
+    "ai_score": 7.8,
+    "translated_title": "函数自然策略梯度",
+    "summary_en": [
+      "• Model Architecture: Proposes a cross-fitted debiasing device for policy learning from offline data, enabling √N regret even for policy classes with complexity greater than Donsker.",
+      "• Data used: Offline data (presumably historical observational data without active intervention), with no specific dataset mentioned in the abstract.",
+      "• Performance metrics: Achieves √N regret bound, factoring into plug-in policy error (governed by policy-class complexity) and environment nuisance factor (governed by environment dynamics complexity)."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出一种交叉拟合去偏装置，用于从离线数据中进行策略学习，即使策略类复杂度超过Donsker也能实现√N遗憾。",
+      "• 数据来源: 离线数据（推测为历史观测数据，无主动干预），摘要中未提及具体数据集。",
+      "• 主要结论: 遗憾界分解为插件策略误差（受策略类复杂度控制）和环境干扰因子（受环境动态复杂度控制），明确了两者之间的权衡关系。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate—enables robust policy learning from offline data with theoretical guarantees, potentially applicable to portfolio optimization or algorithmic trading strategies where historical data is abundant but interventions are costly.",
+      "• Implementation Risk: High—requires accurate estimation of nuisance parameters and product-of-errors remainder O(N^{-1/2}), which may be challenging in real-world financial environments with non-stationary dynamics.",
+      "• Novelty: Significant—introduces cross-fitted debiasing to handle high-complexity policy classes in offline learning, advancing beyond traditional Donsker-class limitations."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著—引入交叉拟合去偏技术处理离线学习中高复杂度策略类，突破传统Donsker类限制，理论贡献突出。",
+      "• 实盘坑: 高—需精确估计干扰参数和乘积误差余项O(N^{-1/2})，在非平稳金融环境中实现困难，数据质量要求苛刻。",
+      "• 复现难度: 中等—方法基于理论推导，但依赖特定假设（如乘积误差余项条件），在复杂市场数据中验证可能需大量调参。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
     "id": "2603.26657v1",
     "title": "Tunable Soft Equivariance with Guarantees",
     "pdf_url": "https://arxiv.org/pdf/2603.26657v1",
