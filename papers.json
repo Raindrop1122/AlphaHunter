@@ -1,5 +1,355 @@
 [
   {
+    "id": "2603.30036v1",
+    "title": "Aligned, Orthogonal or In-conflict: When can we safely optimize Chain-of-Thought?",
+    "pdf_url": "https://arxiv.org/pdf/2603.30036v1",
+    "published": "2026-03-31",
+    "crawled_at": "2026-04-01 20:31:20",
+    "ai_score": 7.5,
+    "translated_title": "对齐、正交或冲突：何时可以安全地优化思维链？",
+    "summary_en": [
+      "• Model Architecture: Proposes a conceptual framework modeling LLM post-training as an RL environment with reward decomposition into final-output and CoT-dependent terms, classifying them as 'aligned', 'orthogonal', or 'in-conflict' to predict CoT monitorability.",
+      "• Data used: Employs a set of RL environments for classification and trains LLMs within these environments to empirically validate the framework's predictions on CoT monitorability.",
+      "• Performance metrics: Evaluates how training affects CoT monitorability, finding that 'in-conflict' reward terms reduce monitorability and optimizing such terms is difficult, while aligned terms improve it and orthogonal terms have no effect."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出一个概念框架，将LLM后训练建模为RL环境，奖励分解为最终输出和CoT依赖项，分类为'对齐'、'正交'或'冲突'，以预测CoT可监控性。",
+      "• 数据来源: 使用一组RL环境进行分类，并在这些环境中训练LLMs，以实证验证框架对CoT可监控性的预测。",
+      "• 主要结论: 训练发现'冲突'奖励项会降低CoT可监控性且优化困难，'对齐'项改善可监控性，'正交'项无影响。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the framework offers insights into AI oversight via CoT monitoring, potentially aiding in developing more transparent and controllable AI systems for financial applications, but direct alpha generation is limited without specific market data integration.",
+      "• Implementation Risk: High; the abstract suggests empirical validation but lacks details on model specifics, training protocols, and scalability, raising risks in real-world deployment for high-stakes financial environments.",
+      "• Novelty: High; introduces a novel classification of reward terms in RL-based LLM training to predict CoT monitorability, addressing a key challenge in AI safety and oversight with potential cross-disciplinary impact."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；提出基于RL的LLM训练中奖励项分类的新框架，预测CoT可监控性，针对AI安全和监督的关键挑战，具有跨学科潜力。",
+      "• 实盘坑: 高；摘要提及实证验证但缺乏模型细节、训练协议和可扩展性信息，在金融高风险环境中部署风险较大。",
+      "• 复现难度: 中等；框架概念清晰，但需要具体RL环境和LLM训练设置，可能涉及复杂实验设计和计算资源。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.30035v1",
+    "title": "Reward-Based Online LLM Routing via NeuralUCB",
+    "pdf_url": "https://arxiv.org/pdf/2603.30035v1",
+    "published": "2026-03-31",
+    "crawled_at": "2026-04-01 20:31:35",
+    "ai_score": 7.2,
+    "translated_title": "基于奖励的在线大语言模型路由：神经UCB方法",
+    "summary_en": [
+      "• Model Architecture: Implements NeuralUCB (Neural Upper Confidence Bound) algorithm for cost-aware LLM routing, balancing exploration-exploitation tradeoffs in online decision-making.",
+      "• Data used: Evaluated on RouterBench dataset under simulated online setting, comparing against random, min-cost, and max-quality baselines.",
+      "• Performance metrics: Consistently outperforms random and min-cost baselines in utility reward; achieves substantially lower inference cost than max-quality reference while maintaining competitive reward."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用神经UCB算法进行成本感知的大语言模型路由，通过在线决策平衡探索与利用的权衡。",
+      "• 数据来源: 在RouterBench数据集上进行模拟在线环境评估，对比随机、最小成本和最高质量基准方法。",
+      "• 主要结论: 在效用奖励方面持续优于随机和最小成本基准；相比最高质量参考方法，显著降低推理成本同时保持竞争力奖励。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - demonstrates practical cost-reward optimization for LLM routing, but limited to simulated environments without real-world deployment validation.",
+      "• Implementation Risk: High - relies on accurate cost/reward estimation in dynamic environments; exploration challenges may lead to suboptimal routing in production systems.",
+      "• Novelty: Moderate - applies established NeuralUCB framework to LLM routing problem, but lacks groundbreaking algorithmic innovations beyond adaptation to this domain."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等 - 将成熟的神经UCB框架应用于LLM路由问题，但缺乏超越该领域适应的突破性算法创新。",
+      "• 实盘坑: 高 - 依赖动态环境中准确的成本/奖励估计；探索挑战可能导致生产系统中次优路由决策。",
+      "• 复现难度: 中等 - 基于公开RouterBench数据集和标准神经UCB实现，但需要精细调参和在线环境模拟基础设施。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2603.30033v1",
+    "title": "Tucker Attention: A generalization of approximate attention mechanisms",
+    "pdf_url": "https://arxiv.org/pdf/2603.30033v1",
+    "published": "2026-03-31",
+    "crawled_at": "2026-04-01 20:31:52",
+    "ai_score": 7.8,
+    "translated_title": "塔克注意力：近似注意力机制的泛化",
+    "summary_en": [
+      "• Model Architecture: Tucker Attention is a parameter-efficient self-attention scheme based on Tucker decomposition, which generalizes existing methods like MHA, GQA, and MLA by factorizing weight objects across embedding dimensions and attention heads.",
+      "• Data used: The paper evaluates Tucker Attention in LLM (Large Language Model) and ViT (Vision Transformer) test cases, though specific datasets are not detailed in the abstract.",
+      "• Performance metrics: Tucker Attention requires an order of magnitude fewer parameters than GQA and MLA while achieving comparable validation metrics, demonstrating high efficiency in parameter reduction."
+    ],
+    "summary_cn": [
+      "• 核心模型: 塔克注意力是一种基于塔克分解的参数高效自注意力机制，通过跨嵌入维度和注意力头分解权重对象，泛化了MHA、GQA和MLA等方法。",
+      "• 数据来源: 论文在LLM（大型语言模型）和ViT（视觉Transformer）测试案例中评估塔克注意力，但摘要中未详细说明具体数据集。",
+      "• 主要结论: 塔克注意力相比GQA和MLA，参数数量减少一个数量级，同时保持可比的验证指标，在参数效率方面表现优异。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the method reduces memory footprint and parameters, which could lower computational costs in trading models using attention mechanisms, but direct financial alpha generation is untested.",
+      "• Implementation Risk: Low to moderate; Tucker Attention is compatible with flash-attention and RoPE, easing integration, but requires careful tuning and may face challenges in real-time applications due to decomposition overhead.",
+      "• Novelty: High; it provides a unified theoretical framework for low-rank approximations in attention, offering insights into ranks of existing methods and enabling simplifications, though builds on established tensor decomposition concepts."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；提出塔克注意力作为自注意力低秩近似的泛化框架，统一了MHA、GQA和MLA等方法，并从经典低秩近似角度提供新解释，但基于已有张量分解理论。",
+      "• 实盘坑: 中低；兼容flash-attention和RoPE，集成风险较低，但分解操作可能增加计算延迟，在实时交易系统中需优化，且金融数据适配性未验证。",
+      "• 复现难度: 中；论文提供了泛化策略，但具体实现细节如分解参数设置可能依赖经验调整，需要较强的深度学习背景。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2603.30017v1",
+    "title": "Refined Detection for Gumbel Watermarking",
+    "pdf_url": "https://arxiv.org/pdf/2603.30017v1",
+    "published": "2026-03-31",
+    "crawled_at": "2026-04-01 20:32:08",
+    "ai_score": 7.2,
+    "translated_title": "Gumbel水印方案的精细化检测方法",
+    "summary_en": [
+      "• Model Architecture: Proposes a detection mechanism for the Gumbel watermarking scheme (Aaronson, 2022), focusing on statistical testing under i.i.d. next-token distribution assumptions.",
+      "• Data used: Theoretical analysis based on synthetic or simulated token distributions; no empirical dataset mentioned in the abstract.",
+      "• Performance metrics: Claims near-optimal detection performance in a problem-dependent sense among model-agnostic watermarking schemes.",
+      "• Core contribution: Refines existing watermarking by improving detection robustness without modifying the underlying generation model."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于Gumbel水印方案（Aaronson, 2022）的检测机制，在独立同分布的下一个令牌分布假设下进行优化。",
+      "• 数据来源: 未提及具体数据集，依赖理论分析和模拟令牌分布进行验证。",
+      "• 主要结论: 在模型无关的水印方案中，该检测机制在问题依赖意义上接近最优。",
+      "• 技术方法: 通过统计测试增强水印检测的准确性和鲁棒性，不改变生成模型本身。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low direct alpha; indirect value in detecting AI-generated text for compliance or risk management in financial NLP applications.",
+      "• Implementation Risk: High risk due to reliance on i.i.d. assumptions, which may not hold in real-world token distributions, limiting practical deployment.",
+      "• Novelty: Moderate; refines an existing scheme rather than introducing a breakthrough, but offers theoretical improvements in detection optimality.",
+      "• Scalability: Limited by computational overhead in real-time detection scenarios, potentially affecting high-frequency applications."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；在现有Gumbel水印方案基础上优化检测机制，提升理论最优性，但非颠覆性创新。",
+      "• 实盘坑: 高风险；依赖独立同分布假设，实际令牌分布可能不满足此条件，导致检测失效或误报。",
+      "• 复现难度: 中等；基于理论推导，代码实现可能较简单，但验证需要模拟环境，缺乏实证数据支持。",
+      "• 应用局限: 主要适用于文本生成水印检测，在金融领域直接应用场景狭窄，需结合其他技术。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2603.30002v1",
+    "title": "Tracking Equivalent Mechanistic Interpretations Across Neural Networks",
+    "pdf_url": "https://arxiv.org/pdf/2603.30002v1",
+    "published": "2026-03-31",
+    "crawled_at": "2026-04-01 20:32:23",
+    "ai_score": 7.8,
+    "translated_title": "追踪神经网络间的等效机制解释",
+    "summary_en": [
+      "• Model Architecture: Transformer-based models are used as the primary architecture for case studies, focusing on their internal representations and circuits.",
+      "• Data used: The paper does not specify particular datasets but relies on synthetic or standard benchmarks for neural network interpretability tasks, likely involving language or vision tasks.",
+      "• Performance metrics: The algorithm estimates interpretive equivalence based on representation similarity, with guarantees linking interpretations, circuits, and representations, but lacks quantitative benchmarks or comparison to baselines."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于Transformer的模型作为案例研究的主要架构，关注其内部表示和电路。",
+      "• 数据来源: 未指定具体数据集，可能使用合成数据或标准基准进行神经网络可解释性任务，涉及语言或视觉任务。",
+      "• 主要结论: 提出解释等效性概念，通过表示相似性估计等效性，并建立解释、电路和表示之间的理论保证。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the framework could enhance model transparency in trading strategies using neural networks, potentially improving risk assessment and strategy validation, but direct alpha generation is limited.",
+      "• Implementation Risk: High; the algorithm lacks empirical validation on real-world financial data, and the theoretical guarantees may not hold in noisy, non-stationary market environments.",
+      "• Novelty: High; introduces interpretive equivalence as a formal concept, addressing scalability in mechanistic interpretability, which is novel in the interpretability literature."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出解释等效性作为形式化概念，解决机制可解释性的可扩展性问题，在可解释性文献中具有新颖性。",
+      "• 实盘坑: 算法缺乏在真实金融数据上的实证验证，理论保证可能在噪声、非平稳市场环境中失效，风险较高。",
+      "• 复现难度: 中等；需要专业知识实现表示相似性估计和Transformer模型分析，但代码或详细参数未提供，可能增加复现挑战。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.29994v1",
+    "title": "Bridging Stochastic Control and Deep Hedging: Structural Priors for No-Transaction Band Networks",
+    "pdf_url": "https://arxiv.org/pdf/2603.29994v1",
+    "published": "2026-03-31",
+    "crawled_at": "2026-04-01 20:32:45",
+    "ai_score": 8.2,
+    "translated_title": "连接随机控制与深度对冲：无交易带网络的结构先验",
+    "summary_en": [
+      "• Model Architecture: Introduces two neural network architectures - NTBN-Delta (explicit delta-centring) and WW-NTBN (incorporates Whalley-Wilmott formula as structural prior with differentiable soft clamp) building on No-Transaction Band Network framework.",
+      "• Data used: Numerical experiments with European call options and bull call spreads under proportional transaction costs, testing across different transaction cost regimes without specifying real market data.",
+      "• Performance metrics: WW-NTBN shows faster convergence, closer matching to stochastic control no-transaction bands, and better generalization across transaction cost regimes compared to baseline approaches.",
+      "• Theoretical foundation: Bridges stochastic control framework (CARA utility, HJBQVI characterization) with deep hedging approaches, documenting breakdown of price linearity under transaction costs."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出两种神经网络架构 - NTBN-Delta（显式delta中心化）和WW-NTBN（将Whalley-Wilmott公式作为带宽结构先验，采用可微分软钳位），基于无交易带网络框架。",
+      "• 数据来源: 使用数值实验验证，针对比例交易成本下的欧式看涨期权和牛市看涨价差期权，测试不同交易成本制度，未使用真实市场数据。",
+      "• 主要结论: WW-NTBN收敛更快，更接近随机控制的无交易带，在不同交易成本制度下泛化能力更强，并记录了交易成本下价格线性关系的失效。",
+      "• 理论贡献: 连接随机控制框架（CARA效用、HJBQVI表征）与深度对冲方法，为神经网络提供理论指导的结构先验。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - structural priors from stochastic control could improve hedging efficiency in options markets with transaction costs, but limited to specific option types and cost structures.",
+      "• Implementation Risk: High - requires careful calibration of transaction cost parameters, soft clamp implementation, and validation across diverse market conditions beyond tested regimes.",
+      "• Novelty: Significant - bridges two traditionally separate approaches (stochastic control and deep learning) with differentiable structural priors, though builds heavily on existing NTBN framework.",
+      "• Practical limitations: Focuses on European options and bull call spreads only; real-world application would need extension to more complex derivatives and dynamic market conditions."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著 - 通过可微分结构先验连接随机控制与深度学习两大传统独立领域，为神经网络提供理论指导，但严重依赖现有NTBN框架。",
+      "• 实盘坑: 高 - 需要精确校准交易成本参数，软钳位实现复杂，且仅测试有限期权类型，需扩展至更复杂衍生品和动态市场条件。",
+      "• 复现难度: 中等 - 架构描述清晰，但需要实现HJBQVI求解和可微分软钳位，数值实验参数未完全公开可能增加复现挑战。",
+      "• 应用局限: 仅针对欧式期权和牛市价差，实际交易需扩展到更广泛期权品种和时变市场环境。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2603.29981v1",
+    "title": "Aligning Validation with Deployment: Target-Weighted Cross-Validation for Spatial Prediction",
+    "pdf_url": "https://arxiv.org/pdf/2603.29981v1",
+    "published": "2026-03-31",
+    "crawled_at": "2026-04-01 20:33:02",
+    "ai_score": 7.8,
+    "translated_title": "验证与部署对齐：面向空间预测的目标加权交叉验证",
+    "summary_en": [
+      "• Model Architecture: Proposes Target-Weighted Cross-Validation (TWCV), an importance-weighted estimator that uses calibration weighting to align validation task distributions with deployment distributions, addressing covariate shift and task-difficulty shift in spatial prediction.",
+      "• Data used: Simulation study with structured spatial data and a case study in environmental pollution mapping, focusing on spatial configurations and covariates as task descriptors.",
+      "• Performance metrics: Evaluates bias in deployment risk estimation; conventional and spatial estimators show substantial bias under distribution mismatch, while buffered TWCV remains approximately unbiased across scenarios."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出目标加权交叉验证（TWCV），通过校准加权调整验证损失权重，使验证任务分布与部署分布匹配，解决空间预测中的协变量偏移和任务难度偏移。",
+      "• 数据来源: 基于模拟空间数据和环境污染物映射案例研究，使用协变量和空间配置作为任务描述符。",
+      "• 主要结论: 传统及空间估计器在分布不匹配时存在显著偏差，而缓冲TWCV在不同场景下保持近似无偏，能更准确反映目标域预测风险。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; addresses a critical bias source in spatial prediction validation, potentially improving risk estimation for environmental or geospatial trading strategies, but direct financial alpha generation is limited.",
+      "• Implementation Risk: High; requires accurate characterization of deployment task distributions and adequate coverage support, which may be challenging in dynamic market environments with non-stationary data.",
+      "• Novelty: High; introduces a novel calibration weighting approach combined with spatially buffered resampling to handle task distribution mismatch, a recognized but under-addressed issue in spatial CV literature."
+    ],
+    "verdict_cn": [
+      "• 创新点: 较高；首次将校准加权与空间缓冲重采样结合，系统解决验证与部署任务分布不匹配问题，填补了空间交叉验证领域的理论空白。",
+      "• 实盘坑: 较高；依赖对部署分布的精确建模，在金融市场非平稳数据中可能难以稳定实现，且计算复杂度可能影响实时应用。",
+      "• 复现难度: 中等；方法描述清晰，但需要定制空间缓冲和加权校准模块，对工程实现有一定要求，适合有空间数据处理经验的团队。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2603.29977v1",
+    "title": "Quantifying Cross-Modal Interactions in Multimodal Glioma Survival Prediction via InterSHAP: Evidence for Additive Signal Integration",
+    "pdf_url": "https://arxiv.org/pdf/2603.29977v1",
+    "published": "2026-03-31",
+    "crawled_at": "2026-04-01 20:33:23",
+    "ai_score": 7.8,
+    "translated_title": "通过InterSHAP量化多模态胶质瘤生存预测中的跨模态交互：支持加性信号整合的证据",
+    "summary_en": [
+      "• Model Architecture: Adapted InterSHAP (Shapley interaction index) from classification to Cox proportional hazards models to quantify cross-modal interactions in four fusion architectures combining whole-slide image (WSI) and RNA-seq features.",
+      "• Data used: TCGA-GBM and TCGA-LGG datasets with n=575 samples, integrating histopathology (WSI) and transcriptomics (RNA-seq) data.",
+      "• Performance metrics: C-index ranged from 0.64 to 0.82 across architectures, with cross-modal interaction measured at 4.8% to 3.0%, showing an inverse relationship between predictive performance and interaction strength.",
+      "• Key finding: Variance decomposition revealed stable additive contributions (WSI≈40%, RNA≈55%, Interaction≈4%), indicating performance gains come from complementary signal aggregation rather than learned synergy."
+    ],
+    "summary_cn": [
+      "• 核心模型: 将InterSHAP（基于Shapley交互指数）从分类任务适配到Cox比例风险模型，用于量化四种融合架构（结合全切片图像和RNA-seq特征）中的跨模态交互。",
+      "• 数据来源: 使用TCGA-GBM和TCGA-LGG数据集，共575个样本，整合组织病理学（WSI）和转录组学（RNA-seq）数据。",
+      "• 主要结论: 发现预测性能（C指数0.64→0.82）与跨模态交互强度（4.8%→3.0%）呈负相关，方差分解显示稳定加性贡献（WSI≈40%，RNA≈55%，交互≈4%），表明性能提升源于互补信号聚合而非学习到的协同效应。",
+      "• 应用价值: 提供了一种实用的模型审计工具，用于比较融合策略，并重新定义了多模态融合中架构复杂性的作用。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the method offers a novel auditing tool for multimodal models, which could be adapted to financial time-series or alternative data fusion, but direct alpha generation is limited without specific market applications.",
+      "• Implementation Risk: High; adapting InterSHAP to survival models requires specialized expertise, and the inverse relationship finding may not generalize beyond biomedical data, posing validation challenges in finance.",
+      "• Novelty: High; first direct quantification of cross-modal interactions in survival prediction, challenging the assumption of synergistic benefits in multimodal deep learning, with potential for cross-disciplinary impact."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；首次在生存预测中直接量化跨模态交互，挑战了多模态深度学习必然受益于协同效应的假设，为模型审计提供了新工具。",
+      "• 实盘坑: 高；将InterSHAP适配到生存模型需专业领域知识，负相关发现可能不适用于金融数据，且缺乏直接的市场应用验证。",
+      "• 复现难度: 中等；基于公开TCGA数据集和标准融合架构，但需要处理多模态数据和实现InterSHAP扩展，技术门槛较高。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.29974v1",
+    "title": "Meteorology-Driven GPT4AP: A Multi-Task Forecasting LLM for Atmospheric Air Pollution in Data-Scarce Settings",
+    "pdf_url": "https://arxiv.org/pdf/2603.29974v1",
+    "published": "2026-03-31",
+    "crawled_at": "2026-04-01 20:33:43",
+    "ai_score": 7.8,
+    "translated_title": "气象驱动的GPT4AP：面向数据稀缺环境下大气污染的多任务预测大语言模型",
+    "summary_en": [
+      "• Model Architecture: GPT4AP uses a pre-trained GPT-2 backbone with frozen self-attention and feed-forward layers, adapting lightweight positional and output modules via Gaussian rank-stabilized low-rank adaptation (rsLoRA) for parameter efficiency.",
+      "• Data used: Evaluated on six real-world air quality monitoring datasets under few-shot (10% training data), zero-shot cross-station transfer, and long-term forecasting settings.",
+      "• Performance metrics: In few-shot regime, achieves average MSE/MAE of 0.686/0.442, outperforming DLinear (0.728/0.530) and ETSformer (0.734/0.505); in zero-shot transfer, attains 0.529/0.403 MSE/MAE; in long-term forecasting, maintains competitive MAE of 0.429."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于预训练GPT-2架构，冻结自注意力和前馈层，采用高斯秩稳定低秩适配（rsLoRA）微调轻量级位置和输出模块，实现参数高效的多任务预测框架。",
+      "• 数据来源: 使用六个真实空气质量监测数据集，在少样本（10%训练数据）、零样本跨站点迁移和长期预测三种场景下进行评估。",
+      "• 主要结论: 在数据稀缺环境下表现出色，少样本和零样本迁移性能优于传统时序模型，在数据充足时仍保持竞争力，验证了模型在有限监督和领域转移下的鲁棒性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate—demonstrates strong generalization in data-scarce settings, which could be adapted for financial forecasting with sparse or noisy data, but direct alpha generation requires domain-specific tuning and validation.",
+      "• Implementation Risk: High—relying on pre-trained GPT-2 may introduce biases or instability in financial time series; zero-shot transfer results are promising but untested in market conditions; parameter efficiency reduces computational cost but may limit model capacity.",
+      "• Novelty: Moderate—combines LLM adaptation with rsLoRA for multi-task forecasting in environmental science, offering a novel approach to data-efficient modeling, though similar techniques exist in NLP and time-series domains."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将大语言模型（GPT-2）与高斯秩稳定低秩适配（rsLoRA）结合，针对数据稀缺环境设计多任务预测框架，在少样本和零样本迁移上展现较强泛化能力。",
+      "• 实盘坑: 依赖预训练模型可能引入与金融市场不匹配的偏差；零样本迁移在真实交易场景中未经检验；参数高效化可能牺牲模型表达能力，影响复杂市场模式的捕捉。",
+      "• 复现难度: 中等—需要GPT-2预训练模型和rsLoRA实现，但代码和数据集未公开，且环境数据与金融数据的差异可能导致调优挑战。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2603.29972v1",
+    "title": "Do covariates explain why these groups differ? The choice of reference group can reverse conclusions in the Oaxaca-Blinder decomposition",
+    "pdf_url": "https://arxiv.org/pdf/2603.29972v1",
+    "published": "2026-03-31",
+    "crawled_at": "2026-04-01 20:34:00",
+    "ai_score": 7.5,
+    "translated_title": "协变量能否解释群体差异？Oaxaca-Blinder分解中参照组选择可逆转结论",
+    "summary_en": [
+      "• Model Architecture: The paper analyzes the Oaxaca-Blinder decomposition (OBD), a statistical method for decomposing group differences into explained (covariates) and unexplained (treatment effects) components, focusing on how the choice of reference group affects conclusions.",
+      "• Data used: The study employs both real-world datasets (unspecified but implied from empirical analyses) and simulated data to demonstrate the theoretical and practical implications of reference group selection in OBD.",
+      "• Performance metrics: The research quantifies the frequency of substantively different conclusions due to reference choice, finding it can occur in up to half of the parameter space theoretically, but is rare in empirical analyses due to data-generating process biases."
+    ],
+    "summary_cn": [
+      "• 核心模型: 本文研究Oaxaca-Blinder分解（OBD），一种将群体差异分解为可解释（协变量）和不可解释（处理效应）部分的统计方法，重点分析参照组选择如何影响结论。",
+      "• 数据来源: 研究结合真实世界数据集（未具体说明，但基于实证分析）和模拟数据，以展示OBD中参照组选择的理论与实际影响。",
+      "• 主要结论: 研究发现，参照组选择可导致实质性不同结论，理论上在高达一半的参数空间中发生，但在实证分析中罕见，因数据生成过程偏向于不改变结论的参数。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low; the paper is methodological and focuses on statistical robustness rather than direct trading signals, but could indirectly improve factor modeling by highlighting decomposition pitfalls in group comparisons (e.g., sector or geographic analyses).",
+      "• Implementation Risk: Moderate; while the decomposition technique is standard, the reference group sensitivity issue adds complexity to empirical applications, requiring careful validation in financial contexts like performance attribution.",
+      "• Novelty: Moderate; the systematic investigation of reference group effects in OBD is novel, but builds on known limitations of the method, offering incremental insights rather than groundbreaking advances."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；系统研究OBD中参照组选择的影响具有新意，但基于该方法的已知局限，提供渐进性见解而非突破性进展。",
+      "• 实盘坑: 中等；分解技术虽标准，但参照组敏感性增加了实证应用的复杂性，在绩效归因等金融场景中需谨慎验证。",
+      "• 复现难度: 低；方法基于标准统计技术，数据和模拟设置可复现，但需注意参数选择和现实数据偏差的影响。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2603.28764v1",
     "title": "Geometry-aware similarity metrics for neural representations on Riemannian and statistical manifolds",
     "pdf_url": "https://arxiv.org/pdf/2603.28764v1",
