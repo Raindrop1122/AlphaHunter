@@ -1,5 +1,345 @@
 [
   {
+    "id": "2604.02330v1",
+    "title": "ActionParty: Multi-Subject Action Binding in Generative Video Games",
+    "pdf_url": "https://arxiv.org/pdf/2604.02330v1",
+    "published": "2026-04-02",
+    "crawled_at": "2026-04-03 20:20:32",
+    "ai_score": 8.5,
+    "translated_title": "ActionParty：生成式视频游戏中的多主体动作绑定",
+    "summary_en": [
+      "• Model Architecture: ActionParty introduces subject state tokens as latent variables to persistently capture each subject's state, using a spatial biasing mechanism to jointly model state tokens and video latents, disentangling global frame rendering from individual action-controlled subject updates.",
+      "• Data used: The model is evaluated on the Melting Pot benchmark, which includes 46 diverse environments designed for multi-agent interaction testing.",
+      "• Performance metrics: Demonstrates the first video world model capable of controlling up to seven players simultaneously, with significant improvements in action-following accuracy and identity consistency, and robust autoregressive tracking through complex interactions."
+    ],
+    "summary_cn": [
+      "• 核心模型: ActionParty采用主体状态令牌作为潜在变量，通过空间偏置机制联合建模状态令牌和视频潜在表示，实现全局视频帧渲染与个体动作控制主体更新的解耦。",
+      "• 数据来源: 在Melting Pot基准测试上进行评估，该基准包含46个多样化的多智能体交互环境。",
+      "• 主要结论: 首次实现可同时控制多达七个玩家的视频世界模型，在动作跟随准确性和身份一致性方面显著提升，并能通过复杂交互进行稳健的自回归跟踪。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for generating synthetic multi-agent environments in algorithmic trading simulations, enabling testing of complex market interaction strategies with realistic agent behaviors.",
+      "• Implementation Risk: Moderate risk due to computational complexity of handling multiple agents simultaneously; real-time performance in high-frequency trading contexts may be challenging.",
+      "• Novelty: Novel approach to action binding in video diffusion models, addressing a fundamental limitation in existing single-agent world models by introducing persistent state tokens for multi-subject control."
+    ],
+    "verdict_cn": [
+      "• 创新点: 在视频扩散模型中引入多主体动作绑定机制，通过持久状态令牌解决现有单智能体世界模型的根本限制，实现多主体协同控制。",
+      "• 实盘坑: 同时处理多个主体导致计算复杂度较高，在高频交易等实时场景中性能可能受限，需优化推理速度。",
+      "• 复现难度: 中等偏高，需要复现复杂的空间偏置机制和多主体状态建模，且依赖Melting Pot基准环境，数据准备和模型训练成本较高。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2604.02324v1",
+    "title": "Grounded Token Initialization for New Vocabulary in LMs for Generative Recommendation",
+    "pdf_url": "https://arxiv.org/pdf/2604.02324v1",
+    "published": "2026-04-02",
+    "crawled_at": "2026-04-03 20:20:45",
+    "ai_score": 8.2,
+    "translated_title": "基于语言模型的生成式推荐中新词汇的接地令牌初始化",
+    "summary_en": [
+      "• Model Architecture: Proposes GTI (Grounded Token Initialization), a lightweight grounding stage that maps new tokens to distinct, semantically meaningful locations in the pretrained embedding space using paired linguistic supervision before fine-tuning.",
+      "• Data used: Evaluated on multiple generative recommendation benchmarks, including industry-scale and public datasets, with Semantic-ID tokens as domain-specific vocabulary extensions.",
+      "• Performance metrics: Outperforms mean initialization and existing auxiliary-task adaptation methods in most evaluation settings, with grounded embeddings producing richer inter-token structure that persists through fine-tuning."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出GTI（接地令牌初始化），一种轻量级接地阶段，在微调前使用配对语言监督将新令牌映射到预训练嵌入空间中的不同、语义有意义的位置。",
+      "• 数据来源: 在多个生成式推荐基准测试中评估，包括工业规模和公共数据集，使用语义ID令牌作为领域特定词汇扩展。",
+      "• 主要结论: 在大多数评估设置中优于均值初始化和现有辅助任务适应方法，接地嵌入产生更丰富的令牌间结构，在微调中持续存在。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for NLP-driven recommendation systems; GTI improves token representation quality, potentially enhancing recommendation accuracy and personalization in generative models.",
+      "• Implementation Risk: Moderate; requires paired linguistic supervision for grounding, which may be data-intensive or domain-specific, limiting scalability to new domains without such data.",
+      "• Novelty: Significant; introduces the Grounded Token Initialization Hypothesis and a systematic analysis of token initialization as a bottleneck, offering a practical solution with empirical validation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出接地令牌初始化假设，系统分析令牌初始化作为瓶颈问题，提供轻量级解决方案，实证验证优于现有方法。",
+      "• 实盘坑: 需要配对语言监督进行接地，可能数据密集或领域特定，在没有此类数据的新领域中可扩展性受限。",
+      "• 复现难度: 中等；方法相对简单，但依赖特定数据集和预训练模型，需调整超参数和接地策略以适应不同任务。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2604.02322v1",
+    "title": "Batched Contextual Reinforcement: A Task-Scaling Law for Efficient Reasoning",
+    "pdf_url": "https://arxiv.org/pdf/2604.02322v1",
+    "published": "2026-04-02",
+    "crawled_at": "2026-04-03 20:21:04",
+    "ai_score": 8.2,
+    "translated_title": "批量上下文强化：高效推理的任务缩放定律",
+    "summary_en": [
+      "• Model Architecture: Batched Contextual Reinforcement (BCR) is a minimalist, single-stage training paradigm that modifies the model structure to solve N problems simultaneously within a shared context window, using per-instance accuracy as the sole reward signal, without explicit length penalties or complex multi-stage pipelines.",
+      "• Data used: The method is evaluated across five major mathematical benchmarks, with experiments conducted on both 1.5B and 4B model families, focusing on tasks requiring Chain-of-Thought reasoning to assess efficiency and accuracy trade-offs.",
+      "• Performance metrics: BCR reduces token usage by 15.8% to 62.6% while maintaining or improving accuracy compared to baselines, demonstrating a novel task-scaling law where per-problem token usage decreases monotonically with increasing N, and accuracy degrades more gracefully than traditional methods."
+    ],
+    "summary_cn": [
+      "• 核心模型: 批量上下文强化（BCR）是一种极简的单阶段训练范式，通过结构修改使模型在共享上下文窗口中同时解决N个问题，仅以每个实例的准确性作为奖励信号，无需显式长度惩罚或复杂多阶段流程。",
+      "• 数据来源: 该方法在五个主要数学基准上进行评估，使用1.5B和4B模型家族进行实验，专注于需要链式思维推理的任务，以评估效率与准确性的权衡。",
+      "• 主要结论: BCR将令牌使用量减少15.8%至62.6%，同时保持或提高准确性，揭示了任务缩放定律：随着N增加，每个问题的令牌使用单调减少，准确性下降比基线更平缓，挑战了传统的准确性-效率权衡。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for alpha generation in NLP/LLM strategies by reducing inference costs by 15.8%-62.6% without accuracy loss, enabling scalable throughput control via N, which could lower operational expenses and enhance model deployment efficiency in quantitative trading applications.",
+      "• Implementation Risk: Moderate risk due to reliance on implicit token budget constraints that may not generalize across all task types or model architectures; potential instability if adversarial gradients emerge in non-mathematical domains, though the paper claims stability in tested scenarios.",
+      "• Novelty: High novelty in introducing a task-scaling law for efficient reasoning, challenging the accuracy-efficiency trade-off with a 'free lunch' phenomenon, and using implicit constraints to avoid catastrophic optimization collapse, offering a fresh alternative to explicit length penalties."
+    ],
+    "verdict_cn": [
+      "• 创新点: 引入任务缩放定律用于高效推理，通过隐式令牌预算约束实现“免费午餐”现象，挑战传统准确性-效率权衡，避免显式长度惩罚的对抗梯度和优化崩溃，为长度控制提供稳定替代方案。",
+      "• 实盘坑: 中等风险，隐式约束可能不适用于所有任务类型或模型架构；在非数学领域可能出现对抗梯度不稳定，尽管论文声称在测试场景中稳定，需进一步验证泛化能力。",
+      "• 复现难度: 低至中等难度，BCR采用极简单阶段训练，无需复杂管道，但需要调整共享上下文窗口和批量大小N，可能涉及计算资源优化，适合有LLM经验的团队快速实施。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2604.02313v1",
+    "title": "Topological Effects in Neural Network Field Theory",
+    "pdf_url": "https://arxiv.org/pdf/2604.02313v1",
+    "published": "2026-04-02",
+    "crawled_at": "2026-04-03 20:21:20",
+    "ai_score": 7.5,
+    "translated_title": "神经网络场论中的拓扑效应",
+    "summary_en": [
+      "• Model Architecture: Extends neural network field theory to topological settings by incorporating discrete parameters that label topological quantum numbers, enabling the formulation of field theory as a statistical ensemble of fields defined by network architecture and parameter density.",
+      "• Data used: Theoretical and mathematical constructs, including topological quantum numbers, spin-wave critical lines, vortices, and sigma model couplings on constant toroidal backgrounds, with no empirical or financial datasets mentioned.",
+      "• Performance metrics: Demonstrates recovery of the Berezinskii-Kosterlitz-Thouless transition, verification of T-duality in bosonic string theory, invariance under momentum-winding exchange on S^1, and enhancement of current algebra at self-dual radius, indicating robust theoretical validation."
+    ],
+    "summary_cn": [
+      "• 核心模型: 通过引入标记拓扑量子数的离散参数，将神经网络场论扩展到拓扑设置，将场论表述为由网络架构和参数密度定义的统计场系综。",
+      "• 数据来源: 基于理论和数学构造，如拓扑量子数、自旋波临界线、涡旋和恒定环面背景上的sigma模型耦合，未涉及实证或金融数据集。",
+      "• 主要结论: 成功恢复了Berezinskii-Kosterlitz-Thouless相变，验证了玻色弦理论中的T对偶性，展示了在S^1上动量与缠绕交换的不变性，并在自对偶半径处增强了当前代数。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low direct applicability to financial markets due to its abstract theoretical focus on topological quantum field theory and string theory, with no explicit financial modeling or alpha generation mechanisms presented.",
+      "• Implementation Risk: High risk for practical deployment in trading systems, as the paper lacks empirical validation, real-world data integration, or clear pathways to financial instrument modeling, making it speculative for quant finance applications.",
+      "• Novelty: High in theoretical physics and mathematical neuroscience, introducing innovative extensions of neural network field theory to topological contexts and verifying complex dualities, but novelty in finance is limited without adaptation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 在理论物理和数学神经科学领域具有高创新性，将神经网络场论扩展到拓扑设置并验证复杂对偶性，但在金融应用中创新有限，缺乏直接的市场建模。",
+      "• 实盘坑: 实盘风险高，论文缺乏实证验证、真实数据集成或明确的金融工具建模路径，难以直接应用于交易系统，可能导致资源浪费。",
+      "• 复现难度: 复现难度中等偏高，需要深厚的拓扑场论和字符串理论背景，但基于纯理论推导，无复杂数据或计算需求，适合学术验证而非金融实践。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.02309v1",
+    "title": "go-$m$HC: Direct Parameterization of Manifold-Constrained Hyper-Connections via Generalized Orthostochastic Matrices",
+    "pdf_url": "https://arxiv.org/pdf/2604.02309v1",
+    "published": "2026-04-02",
+    "crawled_at": "2026-04-03 20:21:36",
+    "ai_score": 8.2,
+    "translated_title": "go-$m$HC：通过广义正交随机矩阵直接参数化流形约束超连接",
+    "summary_en": [
+      "• Model Architecture: Introduces go-$m$HC, a novel exact parameterization method for doubly stochastic matrices using generalized orthostochastic matrices, scaling as O(d³) with a hyperparameter s for interpolation between efficiency and expressivity. It builds on Manifold-Constrained Hyper-Connections (mHC) for learned dynamic layer connectivity.",
+      "• Data used: Evaluated on synthetic stream-mixing tasks and validated in a 30M parameter GPT-style language model, with no specific dataset details provided in the abstract.",
+      "• Performance metrics: Achieves minimum theoretical loss on synthetic tasks, converges up to 10× faster than baselines, and shows improved expressivity in spectral analysis compared to Kronecker-factorized methods."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出go-$m$HC方法，基于广义正交随机矩阵理论，精确参数化双随机矩阵，复杂度为O(d³)，通过超参数s在计算效率与表达能力之间连续插值，扩展了流形约束超连接框架。",
+      "• 数据来源: 在合成流混合任务上进行测试，并在一个3000万参数的GPT风格语言模型中验证，摘要未提及具体数据集。",
+      "• 主要结论: 在合成任务中达到理论最小损失，收敛速度比基线快达10倍，谱分析显示比Kronecker分解方法更完整地填充Birkhoff多面体，提升了表达能力。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for improving model capacity in deep learning architectures by enabling efficient and exact parameterization of doubly stochastic matrices, which could enhance mixing in residual streams and lead to better performance in NLP/LLM applications.",
+      "• Implementation Risk: Moderate risk due to reliance on theoretical constructs like generalized orthostochastic matrices, which may require specialized optimization and integration into existing frameworks, though it composes with Kronecker methods to mitigate this.",
+      "• Novelty: High novelty in introducing an exact parameterization that scales polynomially (O(d³)) instead of factorially, addressing an open challenge in the field and offering a practical solution for scaling model dimensions."
+    ],
+    "verdict_cn": [
+      "• 创新点: 创新性地利用广义正交随机矩阵实现精确参数化，解决了双随机矩阵参数化的开放难题，复杂度从阶乘级降至多项式级，具有理论突破。",
+      "• 实盘坑: 依赖较新的数学理论，可能在实际部署中遇到优化困难或兼容性问题，需要精细调参和框架适配，但能与Kronecker方法结合降低风险。",
+      "• 复现难度: 中等偏高，涉及复杂矩阵理论和流形约束，代码实现需专业知识，但论文提供了明确的方法框架，有助于复现。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2604.02292v1",
+    "title": "Taming the Exponential: A Fast Softmax Surrogate for Integer-Native Edge Inference",
+    "pdf_url": "https://arxiv.org/pdf/2604.02292v1",
+    "published": "2026-04-02",
+    "crawled_at": "2026-04-03 20:21:51",
+    "ai_score": 7.5,
+    "translated_title": "驯服指数：面向整数原生边缘推理的快速Softmax替代方案",
+    "summary_en": [
+      "• Model Architecture: Introduces Head-Calibrated Clipped-Linear Softmax (HCCS), a bounded monotone surrogate for softmax using clipped linear mapping of max-centered attention logits with lightweight calibration parameters optimized per attention head.",
+      "• Data used: Calibration parameters are optimized offline based on a representative dataset, though specific datasets are not detailed in the abstract.",
+      "• Performance metrics: HCCS significantly exceeds speed performance of reference implementations (bfloat16 or LUT-based) on AMD AI Engines while maintaining competitive task accuracy on small or heavily quantized MHA workloads after quantization-aware retraining."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出头校准裁剪线性Softmax（HCCS），一种有界单调替代函数，通过裁剪线性映射最大中心化注意力对数，并针对每个注意力头优化轻量级校准参数。",
+      "• 数据来源: 校准参数基于代表性数据集离线优化，但摘要中未具体说明数据集细节。",
+      "• 主要结论: HCCS在AMD AI引擎上显著超越参考实现（bfloat16或LUT）的速度性能，同时在量化感知重训练后，在小型或重度量化MHA工作负载上保持有竞争力的任务精度。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; HCCS offers speed improvements for edge inference on specific hardware (AMD AI Engines), potentially reducing latency in real-time applications, but limited to small or heavily quantized models.",
+      "• Implementation Risk: High; dependency on AMD AI Engines' int8 MAC units limits portability, and quantization-aware retraining adds complexity and cost to deployment.",
+      "• Novelty: Moderate; HCCS introduces per-head calibration to softmax surrogates, but the core clipped-linear approximation is not fundamentally new; novelty lies in hardware-specific optimization for int8 processing."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；HCCS引入了针对每个注意力头的校准机制，但核心裁剪线性近似并非根本性创新，主要新颖性在于针对int8处理的硬件特定优化。",
+      "• 实盘坑: 高；依赖AMD AI引擎的int8 MAC单元限制了可移植性，量化感知重训练增加了部署的复杂性和成本。",
+      "• 复现难度: 中等；需要AMD AI引擎硬件和代表性数据集进行校准，但算法本身相对简单，复现技术门槛不高。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.02288v1",
+    "title": "Unifying Group-Relative and Self-Distillation Policy Optimization via Sample Routing",
+    "pdf_url": "https://arxiv.org/pdf/2604.02288v1",
+    "published": "2026-04-02",
+    "crawled_at": "2026-04-03 20:22:10",
+    "ai_score": 8.2,
+    "translated_title": "通过样本路由统一组相对与自蒸馏策略优化",
+    "summary_en": [
+      "• Model Architecture: Proposes Sample-Routed Policy Optimization (SRPO), a unified on-policy framework that routes correct samples to Group Relative Policy Optimization (GRPO) for reward-aligned reinforcement and failed samples to Self-Distillation Policy Optimization (SDPO) for targeted logit-level correction, with an entropy-aware dynamic weighting mechanism to suppress unreliable distillation targets.",
+      "• Data used: Evaluated across five benchmarks (unspecified but likely standard RLVR datasets) and two model scales, including Qwen3-8B, focusing on reinforcement learning with verifiable rewards (RLVR) for post-training large language models.",
+      "• Performance metrics: SRPO achieves rapid early improvement of SDPO and long-horizon stability of GRPO, surpassing peak performance of both baselines, raising five-benchmark average on Qwen3-8B by 3.4% over GRPO and 6.3% over SDPO, with moderate response lengths and up to 17.2% lower per-step compute cost."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出样本路由策略优化（SRPO），一个统一的在线策略框架，将正确样本路由到组相对策略优化（GRPO）进行奖励对齐强化，失败样本路由到自蒸馏策略优化（SDPO）进行目标对数级校正，并包含熵感知动态加权机制以抑制不可靠蒸馏目标。",
+      "• 数据来源: 在五个基准测试（未指定但可能为标准RLVR数据集）和两个模型规模（包括Qwen3-8B）上评估，专注于可验证奖励的强化学习（RLVR）用于后训练大型语言模型。",
+      "• 主要结论: SRPO实现了SDPO的快速早期改进和GRPO的长期稳定性，超越两个基线的峰值性能，在Qwen3-8B上将五个基准平均提升3.4%（相比GRPO）和6.3%（相比SDPO），响应长度适中，每步计算成本降低高达17.2%。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for improving RLVR efficiency in LLM fine-tuning, with demonstrated performance gains and compute savings, applicable to hedge funds using LLMs for NLP tasks like sentiment analysis or report generation, but limited to post-training scenarios.",
+      "• Implementation Risk: Moderate risk due to reliance on accurate sample routing and entropy weighting, which may be sensitive to hyperparameters and dataset characteristics; late-stage instability issues from SDPO are mitigated but not fully eliminated.",
+      "• Novelty: Novel in unifying GRPO and SDPO via sample routing with dynamic weighting, addressing specific flaws in both methods, but builds heavily on existing RLVR techniques without groundbreaking algorithmic innovation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 通过样本路由和动态加权统一GRPO和SDPO，解决自蒸馏的优化模糊性和信号退化问题，但创新性有限，主要基于现有RLVR技术组合优化。",
+      "• 实盘坑: 实施风险中等，样本路由和熵加权可能对超参数和数据集敏感，需精细调参；虽缓解SDPO的后期不稳定，但未完全根除，在复杂金融数据上泛化性待验证。",
+      "• 复现难度: 中等难度，需要实现GRPO和SDPO基线以及路由逻辑，但论文提供了清晰框架，开源代码可降低门槛；计算资源要求较高，适合有GPU集群的团队。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2604.02279v1",
+    "title": "The Self Driving Portfolio: Agentic Architecture for Institutional Asset Management",
+    "pdf_url": "https://arxiv.org/pdf/2604.02279v1",
+    "published": "2026-04-02",
+    "crawled_at": "2026-04-03 20:22:25",
+    "ai_score": 7.8,
+    "translated_title": "自动驾驶投资组合：机构资产管理的智能体架构",
+    "summary_en": [
+      "• Model Architecture: Multi-agent system with ~50 specialized agents for capital market assumptions, portfolio construction (20+ methods), critique/voting, researcher agent for new methods, and meta-agent for performance feedback and code/prompt optimization.",
+      "• Data used: Not explicitly specified, but implied to include historical returns, capital market data, and Investment Policy Statement constraints for autonomous governance.",
+      "• Performance metrics: Meta-agent compares past forecasts against realized returns to rewrite agent code and prompts, aiming for continuous improvement through iterative feedback loops."
+    ],
+    "summary_cn": [
+      "• 核心模型: 多智能体架构，包含约50个专业智能体，分别负责资本市场假设生成、投资组合构建（20+种方法）、相互评审/投票，以及研究型智能体提出新方法、元智能体进行性能反馈和代码/提示词优化。",
+      "• 数据来源: 未明确说明，但隐含使用历史回报数据、资本市场数据，以及投资政策声明作为自治系统的约束条件。",
+      "• 主要结论: 通过元智能体对比历史预测与实际回报，动态改写智能体代码和提示词，实现持续性能提升，将投资者角色从分析执行转向监督。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate-high; multi-agent critique/voting and meta-learning could capture complex market dynamics, but reliance on historical data may limit forward-looking alpha in regime shifts.",
+      "• Implementation Risk: High; ~50 agents require robust coordination, governance via Investment Policy Statement is untested at scale, and code/prompt rewriting introduces operational fragility.",
+      "• Novelty: High; agentic architecture shifts human role to oversight, with autonomous portfolio construction and self-improving meta-agent representing a paradigm shift in institutional asset management."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高度创新；智能体架构将人类角色转变为监督者，通过自治投资组合构建和自我优化的元智能体，代表了机构资产管理范式的重大转变。",
+      "• 实盘坑: 高风险；约50个智能体需强协调性，投资政策声明的治理机制未经验证，代码/提示词动态改写可能引入操作脆弱性。",
+      "• 复现难度: 高；多智能体系统复杂度高，需大量历史数据和精细调参，元学习反馈循环的实现技术门槛较高。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.02276v1",
+    "title": "De Jure: Iterative LLM Self-Refinement for Structured Extraction of Regulatory Rules",
+    "pdf_url": "https://arxiv.org/pdf/2604.02276v1",
+    "published": "2026-04-02",
+    "crawled_at": "2026-04-03 20:22:41",
+    "ai_score": 8.2,
+    "translated_title": "De Jure：基于迭代式LLM自优化的监管规则结构化提取方法",
+    "summary_en": [
+      "• Model Architecture: Four-stage pipeline: document normalization to structured Markdown, LLM-driven semantic decomposition into rule units, multi-criteria LLM-as-a-judge evaluation across 19 dimensions, and iterative repair with bounded regeneration budget.",
+      "• Data used: Three regulatory corpora spanning finance, healthcare, and AI governance domains, with no human annotation, domain-specific prompting, or gold data required.",
+      "• Performance metrics: Consistent monotonic improvement in extraction quality reaching peak performance within three judge-guided iterations; 73.8% preference over prior work in compliance QA at single-rule retrieval depth, rising to 84.0% under broader retrieval."
+    ],
+    "summary_cn": [
+      "• 核心模型: 四阶段全自动流水线：文档标准化为结构化Markdown、LLM驱动的语义分解为规则单元、基于19个维度的多标准LLM-as-a-judge评估、带有限再生预算的迭代修复机制。",
+      "• 数据来源: 金融、医疗和AI治理三个领域的监管文档语料库，无需人工标注、领域特定提示或黄金标准数据。",
+      "• 主要结论: 在金融领域实现提取质量的持续单调改进，三个法官引导迭代内达到峰值性能；在合规问答评估中，基于提取规则的响应在单规则检索深度下优于先前工作73.8%，宽检索下提升至84.0%。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for automated regulatory compliance monitoring and real-time rule extraction in financial markets, enabling systematic alpha generation through early detection of regulatory changes and automated compliance checks.",
+      "• Implementation Risk: Moderate to high risk due to dependency on LLM performance across diverse regulatory domains, potential for hallucination in rule extraction, and computational costs of iterative repair cycles.",
+      "• Novelty: Novel integration of LLM-as-a-judge with explicit 19-dimension evaluation criteria and bounded iterative repair, eliminating need for human annotation while maintaining interpretability and auditability."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次将LLM-as-a-judge与明确的19维度评估标准结合，引入有限迭代修复机制，在无需人工标注的情况下实现可解释、可审计的监管规则提取。",
+      "• 实盘坑: 依赖LLM在不同监管领域的泛化能力，规则提取可能存在幻觉风险；迭代修复的计算成本较高，可能影响实时性；监管文档的复杂嵌套结构可能挑战分解准确性。",
+      "• 复现难度: 中等偏高，需要复现四阶段流水线、设计19维度评估标准、实现有限预算迭代修复，且依赖高质量LLM模型和多样化监管语料库。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2604.02270v1",
+    "title": "Crystalite: A Lightweight Transformer for Efficient Crystal Modeling",
+    "pdf_url": "https://arxiv.org/pdf/2604.02270v1",
+    "published": "2026-04-02",
+    "crawled_at": "2026-04-03 20:22:57",
+    "ai_score": 8.2,
+    "translated_title": "Crystalite：用于高效晶体建模的轻量级Transformer",
+    "summary_en": [
+      "• Model Architecture: Crystalite is a lightweight diffusion Transformer with two key components: Subatomic Tokenization for compact chemically structured atom representation and Geometry Enhancement Module (GEM) that injects periodic minimum-image pair geometry directly into attention through additive geometric biases.",
+      "• Data used: The paper does not specify exact datasets but mentions evaluation on crystal structure prediction benchmarks, indicating use of standard materials science datasets like Materials Project or OQMD for training and testing.",
+      "• Performance metrics: Achieves state-of-the-art results on crystal structure prediction benchmarks, best S.U.N. discovery score among evaluated baselines, and substantially faster sampling than geometry-heavy alternatives like equivariant graph neural networks."
+    ],
+    "summary_cn": [
+      "• 核心模型: Crystalite是一种轻量级扩散Transformer，包含两个核心组件：用于紧凑化学结构原子表示的亚原子标记化（Subatomic Tokenization）和通过加法几何偏置直接注入周期性最小图像对几何的几何增强模块（GEM）。",
+      "• 数据来源: 未明确指定具体数据集，但提到在晶体结构预测基准上进行评估，暗示使用了材料科学标准数据集（如Materials Project或OQMD）进行训练和测试。",
+      "• 主要结论: 在晶体结构预测基准上达到最先进水平，在评估基线中获得最佳S.U.N.发现分数，且采样速度显著快于基于几何的替代方案（如等变图神经网络）。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for materials discovery applications in drug development, battery materials, and catalysts, where efficient generative modeling can accelerate R&D cycles and identify novel compounds with desirable properties.",
+      "• Implementation Risk: Moderate risk due to reliance on specialized materials science data and potential computational overhead from diffusion processes, though lightweight architecture mitigates some training costs.",
+      "• Novelty: Strong novelty in combining diffusion models with Transformer architecture for crystalline materials, introducing Subatomic Tokenization and GEM as simple yet effective inductive biases tailored to periodic structures."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将扩散模型与Transformer架构结合用于晶体材料，引入亚原子标记化和GEM作为针对周期性结构的简单而有效的归纳偏置，在轻量级设计中实现高效生成。",
+      "• 实盘坑: 依赖专业材料科学数据，数据获取和预处理可能复杂；扩散过程可能带来计算开销，尽管轻量级架构降低了部分训练成本。",
+      "• 复现难度: 中等难度，需要材料科学领域知识和标准数据集访问，但开源代码和详细方法描述应能降低复现障碍。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
     "id": "2604.01216v1",
     "title": "LAtent Phase Inference from Short time sequences using SHallow REcurrent Decoders (LAPIS-SHRED)",
     "pdf_url": "https://arxiv.org/pdf/2604.01216v1",
