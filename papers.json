@@ -1,5 +1,355 @@
 [
   {
+    "id": "2604.03226v1",
+    "title": "Enhancing Robustness of Federated Learning via Server Learning",
+    "pdf_url": "https://arxiv.org/pdf/2604.03226v1",
+    "published": "2026-04-03",
+    "crawled_at": "2026-04-06 20:25:49",
+    "ai_score": 7.2,
+    "translated_title": "通过服务器学习增强联邦学习的鲁棒性",
+    "summary_en": [
+      "• Model Architecture: Combines server learning with client update filtering and geometric median aggregation to enhance robustness against malicious attacks in federated learning.",
+      "• Data used: Utilizes small, potentially synthetic datasets on the server side, with client data that may not be independent and identically distributed (non-IID).",
+      "• Performance metrics: Demonstrates significant improvement in model accuracy even with over 50% malicious clients, showing resilience in adversarial scenarios."
+    ],
+    "summary_cn": [
+      "• 核心模型: 结合服务器学习、客户端更新过滤和几何中位数聚合，提升联邦学习对抗恶意攻击的鲁棒性。",
+      "• 数据来源: 服务器端使用小型、可能为合成的数据集，客户端数据可能非独立同分布（non-IID）。",
+      "• 主要结论: 在恶意客户端比例超过50%的情况下，模型精度仍能显著提升，显示出在对抗性场景下的强韧性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; robustness improvements could enhance model stability in adversarial financial environments, but direct alpha generation is limited.",
+      "• Implementation Risk: High; reliance on synthetic server data and non-IID client distributions introduces uncertainty in real-world deployment.",
+      "• Novelty: Moderate; combines existing techniques (server learning, geometric median) in a novel way for robustness, but lacks groundbreaking algorithmic innovation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；将服务器学习与几何中位数聚合结合用于鲁棒性提升，但缺乏突破性算法创新。",
+      "• 实盘坑: 高；依赖合成服务器数据和非IID客户端分布，在实际部署中可能引入不确定性。",
+      "• 复现难度: 中等；基于启发式算法，实验设置相对清晰，但需要处理恶意客户端模拟和合成数据生成。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2604.03208v1",
+    "title": "Hierarchical Planning with Latent World Models",
+    "pdf_url": "https://arxiv.org/pdf/2604.03208v1",
+    "published": "2026-04-03",
+    "crawled_at": "2026-04-06 20:26:02",
+    "ai_score": 8.2,
+    "translated_title": "基于潜在世界模型的分层规划",
+    "summary_en": [
+      "• Model Architecture: Hierarchical planning framework with latent world models at multiple temporal scales, enabling modular abstraction across diverse architectures and domains.",
+      "• Data used: Real-world robotic tasks (pick-and-place) and physics-based simulated environments (push manipulation, maze navigation) for zero-shot control evaluation.",
+      "• Performance metrics: Achieved 70% success rate on real-world pick-and-place tasks with only final goal specification (vs. 0% for single-level model), and up to 4x reduction in planning-time compute in simulations."
+    ],
+    "summary_cn": [
+      "• 核心模型: 多时间尺度潜在世界模型的分层规划框架，支持跨架构和领域的模块化抽象。",
+      "• 数据来源: 真实世界机器人任务（抓取放置）和基于物理的模拟环境（推动操作、迷宫导航），用于零样本控制评估。",
+      "• 主要结论: 在仅给定最终目标的情况下，真实世界抓取放置任务成功率提升至70%（单层模型为0%），模拟环境中规划计算时间减少高达4倍。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for robotics and autonomous systems trading strategies requiring long-horizon reasoning with reduced computational overhead.",
+      "• Implementation Risk: Moderate due to dependency on learned world model accuracy and scalability to complex real-world environments.",
+      "• Novelty: Significant in combining hierarchical planning with latent world models to address long-horizon control challenges, though building on existing MPC and world model literature."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将分层规划与潜在世界模型结合，有效解决长时域控制中的预测误差累积和搜索空间爆炸问题。",
+      "• 实盘坑: 依赖学习世界模型的准确性，在复杂真实环境中的扩展性存疑，可能面临过拟合或泛化不足风险。",
+      "• 复现难度: 中等偏高，需实现多尺度潜在模型和分层规划算法，对计算资源和领域专业知识要求较高。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2604.03205v1",
+    "title": "A Tsetlin Machine-driven Intrusion Detection System for Next-Generation IoMT Security",
+    "pdf_url": "https://arxiv.org/pdf/2604.03205v1",
+    "published": "2026-04-03",
+    "crawled_at": "2026-04-06 20:26:19",
+    "ai_score": 7.8,
+    "translated_title": "基于Tsetlin机器的入侵检测系统用于下一代IoMT安全",
+    "summary_en": [
+      "• Model Architecture: Proposes a Tsetlin Machine (TM)-based Intrusion Detection System (IDS) that uses propositional logic and rule-based machine learning for interpretable attack pattern modeling.",
+      "• Data used: Evaluated on the CICIoMT-2024 dataset, which includes multiple IoMT protocols and various cyberattack types, providing a comprehensive testbed for IoMT security.",
+      "• Performance metrics: Achieves 99.5% accuracy in binary classification and 90.7% in multi-class classification, outperforming traditional ML classifiers and state-of-the-art approaches.",
+      "• Interpretability features: Incorporates class-wise vote scores and clause activation heatmaps to enhance model trust and provide insights into decision-making processes."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出基于Tsetlin机器（TM）的入侵检测系统，采用命题逻辑和基于规则的机器学习方法，实现可解释的攻击模式建模。",
+      "• 数据来源: 使用CICIoMT-2024数据集进行评估，该数据集包含多种IoMT协议和网络攻击类型，为IoMT安全提供了全面的测试环境。",
+      "• 主要结论: 在二分类任务中达到99.5%的准确率，在多分类任务中达到90.7%的准确率，超越了传统机器学习分类器和现有最先进方法。",
+      "• 可解释性: 引入类别投票分数和子句激活热力图，增强模型可信度并提供决策过程的清晰洞察。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for cybersecurity applications in IoMT, where interpretability and high accuracy are critical for regulatory compliance and patient safety, but direct financial alpha generation is limited.",
+      "• Implementation Risk: Moderate risk due to reliance on the CICIoMT-2024 dataset, which may not fully represent real-world IoMT environments, and scalability concerns for high-frequency trading systems.",
+      "• Novelty: Novel in applying Tsetlin Machines to IoMT security, offering interpretability advantages over black-box models, but the core TM technique is not entirely new to ML research.",
+      "• Practical limitations: May face challenges in adapting to evolving attack vectors and integrating with existing financial infrastructure, reducing immediate hedge fund applicability."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将Tsetlin机器应用于IoMT安全领域，提供优于黑盒模型的可解释性，但TM技术本身在机器学习研究中并非全新。",
+      "• 实盘坑: 依赖CICIoMT-2024数据集，可能无法完全反映真实IoMT环境，且在高频交易系统中存在可扩展性问题。",
+      "• 复现难度: 中等难度，需要访问特定数据集和实现TM架构，但开源工具和详细方法可能降低技术壁垒。",
+      "• 金融应用局限: 在直接生成金融阿尔法方面有限，更适合网络安全而非交易策略，需进一步适配金融场景。"
+    ],
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.03203v1",
+    "title": "PR3DICTR: A modular AI framework for medical 3D image-based detection and outcome prediction",
+    "pdf_url": "https://arxiv.org/pdf/2604.03203v1",
+    "published": "2026-04-03",
+    "crawled_at": "2026-04-06 20:26:30",
+    "ai_score": 7.5,
+    "translated_title": "PR3DICTR：用于医学三维图像检测和结果预测的模块化AI框架",
+    "summary_en": [
+      "• Model Architecture: Modular framework built on PyTorch and MONAI with plug-and-play components for 3D medical image classification",
+      "• Data used: Designed for 3D medical imaging data (CT, MRI, etc.) supporting binary and event-based classification tasks",
+      "• Performance metrics: Framework reduces development burden through standardization while maintaining flexibility for custom implementations"
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于PyTorch和MONAI的模块化框架，支持三维医学图像分类的即插即用组件",
+      "• 数据来源: 专为三维医学影像数据（CT、MRI等）设计，支持二分类和基于事件的分类任务",
+      "• 主要结论: 通过标准化降低开发负担，同时保持自定义实现的灵活性，仅需两行代码即可运行"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - framework standardization could accelerate medical AI research but lacks specific trading applications",
+      "• Implementation Risk: High - medical imaging domain requires specialized expertise and regulatory compliance",
+      "• Novelty: Low - builds on existing tools (PyTorch/MONAI) rather than introducing breakthrough algorithms"
+    ],
+    "verdict_cn": [
+      "• 创新点: 较低 - 主要整合现有工具（PyTorch/MONAI）而非原创算法突破",
+      "• 实盘坑: 高 - 医学影像领域需要专业知识和监管合规，直接交易应用有限",
+      "• 复现难度: 低 - 基于标准化开源框架，技术门槛适中"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.03199v1",
+    "title": "Learning the Signature of Memorization in Autoregressive Language Models",
+    "pdf_url": "https://arxiv.org/pdf/2604.03199v1",
+    "published": "2026-04-03",
+    "crawled_at": "2026-04-06 20:26:49",
+    "ai_score": 8.5,
+    "translated_title": "自回归语言模型中记忆化特征的学习与识别",
+    "summary_en": [
+      "• Model Architecture: Introduces LT-MIA (Learned Transfer MIA), a sequence classification method using per-token distributional statistics, trained exclusively on transformer-based models but transfers zero-shot to Mamba (state-space), RWKV-4 (linear attention), and RecurrentGemma (gated recurrence).",
+      "• Data used: Utilizes unlimited labeled data generated by fine-tuning models on any corpus, where membership is known by construction, eliminating the need for shadow models and enabling training diversity and scale.",
+      "• Performance metrics: Achieves AUC scores of 0.963, 0.972, and 0.936 on Mamba, RWKV-4, and RecurrentGemma respectively, outperforming held-out transformers (0.908 AUC) and baseline methods with 2.8× higher TPR at 0.1% FPR on transformers, and transfers to code with 0.865 AUC despite training only on natural language texts."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出LT-MIA（学习迁移成员推理攻击），一种基于每词元分布统计的序列分类方法，仅在Transformer模型上训练，但零样本迁移至Mamba（状态空间）、RWKV-4（线性注意力）和RecurrentGemma（门控循环）等架构。",
+      "• 数据来源: 利用微调模型在任何语料库上生成的无限标记数据，其中成员关系通过构造已知，消除了影子模型需求，支持训练多样性和规模化。",
+      "• 主要结论: 发现微调语言模型产生跨架构家族和数据域可检测的记忆化不变特征，仅基于交叉熵损失的梯度下降，LT-MIA在Transformer上实现比最强基线高2.8倍的TPR（0.1% FPR），并迁移至代码领域（AUC 0.865）。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for detecting data leakage in proprietary models, enabling better risk assessment in financial NLP applications like sentiment analysis or report generation, potentially uncovering overfitting in fine-tuned models used for trading signals.",
+      "• Implementation Risk: Moderate; relies on access to model outputs and fine-tuning data, which may be limited in closed-source commercial systems, and generalization to unseen architectures could degrade in more diverse or adversarial settings.",
+      "• Novelty: Significant as the first transferable learned attack for membership inference, moving beyond hand-crafted heuristics to deep learning-based detection, with strong empirical evidence of cross-architectural invariance in memorization signatures."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次提出可迁移的学习式成员推理攻击，突破手工启发式方法，利用深度学习自动学习记忆化特征，实证显示跨架构家族（如Transformer、Mamba）的不变特征，具有零样本迁移能力。",
+      "• 实盘坑: 依赖模型输出和微调数据访问，在闭源商业系统中可能受限；跨架构泛化在更复杂或对抗性环境中可能下降，需谨慎评估实际部署的鲁棒性。",
+      "• 复现难度: 中等；代码和训练分类器已开源，但需要大量计算资源进行模型微调和训练，且数据生成过程可能涉及隐私或合规问题，增加实操复杂性。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2604.03197v1",
+    "title": "Real-Time Surrogate Modeling for Personalized Blood Flow Prediction and Hemodynamic Analysis",
+    "pdf_url": "https://arxiv.org/pdf/2604.03197v1",
+    "published": "2026-04-03",
+    "crawled_at": "2026-04-06 20:27:05",
+    "ai_score": 7.8,
+    "translated_title": "用于个性化血流预测和血流动力学分析的实时代理建模",
+    "summary_en": [
+      "• Model Architecture: Deep neural surrogate model trained to predict patient-specific arterial pressure and cardiac output (CO) from multivariate physiological parameters, enabling real-time hemodynamic prediction and parameter estimation.",
+      "• Data used: Parametric virtual cohort generated based on multivariate correlations from the large Asklepios clinical dataset, ensuring physiological parameter distributions are respected; applied to clinical data for central aortic hemodynamics estimation.",
+      "• Performance metrics: Capable of instantaneous hemodynamic prediction, drastically reduces cost of targeted synthetic dataset generation (e.g., hypertensive groups), and provides principled sampling of terminal resistance to minimize uncertainties of unmeasurable parameters.",
+      "• Additional insight: Framework allows for immediate rejection of non-physiological parameter combinations and determines theoretical information sufficient for solving the inverse problem of estimating CO."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于深度神经网络的代理模型，用于从多变量生理参数预测患者特异性动脉压和心输出量（CO），实现实时血流动力学预测和参数估计。",
+      "• 数据来源: 基于大型Asklepios临床数据集的多变量相关性生成参数化虚拟队列，确保生理参数分布合理；应用于临床数据以估计中心主动脉血流动力学。",
+      "• 主要结论: 模型能即时预测血流动力学，显著降低目标合成数据集生成成本（如高血压组），并通过原则性采样终端阻力来最小化不可测量参数的不确定性。",
+      "• 额外亮点: 框架允许立即拒绝非生理参数组合，并确定解决CO逆问题所需的足够理论信息。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; real-time hemodynamic prediction could enhance quantitative models in healthcare finance or biotech trading by improving risk assessment of cardiovascular-related assets, but direct market alpha is limited without specific financial applications.",
+      "• Implementation Risk: High; relies on clinical data quality and physiological assumptions, with potential overfitting to synthetic cohorts; integration into financial systems requires domain adaptation and validation against market variables.",
+      "• Novelty: Moderate; combines deep learning with cardiovascular modeling for surrogate-based parameter estimation, but similar approaches exist in medical ML; key innovation is systematic framework for reducing dataset generation costs."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；将深度学习与心血管建模结合用于基于代理的参数估计，但医学机器学习中已有类似方法；主要创新是系统性框架以降低数据集生成成本。",
+      "• 实盘坑: 高；依赖临床数据质量和生理假设，可能对合成队列过拟合；集成到金融系统需领域适应和针对市场变量的验证。",
+      "• 复现难度: 中等；需要访问大型临床数据集（如Asklepios）和计算资源训练深度神经网络，但方法描述较清晰，开源代码可降低难度。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.03191v1",
+    "title": "The Compression Gap: Why Discrete Tokenization Limits Vision-Language-Action Model Scaling",
+    "pdf_url": "https://arxiv.org/pdf/2604.03191v1",
+    "published": "2026-04-03",
+    "crawled_at": "2026-04-06 20:27:20",
+    "ai_score": 8.2,
+    "translated_title": "压缩差距：为何离散标记化限制视觉-语言-动作模型的扩展",
+    "summary_en": [
+      "• Model Architecture: Compares two VLA model types—Diffusion Policy (continuous action representation) and OAT (discrete tokenization via fixed-capacity codebook)—analyzing how scaling vision encoders affects downstream manipulation performance.",
+      "• Data used: Validates findings on the LIBERO benchmark, a physical AI manipulation dataset, with factorial experiments across multiple encoder scales and codebook sizes.",
+      "• Performance metrics: Measures performance improvements in percentage points; Diffusion Policy shows over 21 percentage point gains with encoder upgrades, while OAT gains are substantially attenuated, and codebook size experiments provide causal evidence for bottleneck effects."
+    ],
+    "summary_cn": [
+      "• 核心模型: 对比分析两种视觉-语言-动作模型架构：Diffusion Policy（连续动作表示）和OAT（通过固定容量码本进行离散标记化），探讨视觉编码器扩展对下游操作性能的影响。",
+      "• 数据来源: 基于LIBERO基准测试进行验证，这是一个物理AI操作数据集，通过多尺度编码器和码本大小的因子实验来支撑结论。",
+      "• 主要结论: 提出“压缩差距”信息论原则，指出在视觉-动作管道中，扩展行为受最紧信息瓶颈位置支配；连续动作模型中视觉编码器是约束，而离散化码本成为瓶颈时，编码器改进无法传递。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for physical AI and robotics applications; identifies critical bottleneck in VLA scaling that could inform model design to avoid wasted compute on encoder upgrades without downstream gains.",
+      "• Implementation Risk: Moderate; principle is theoretically sound and empirically validated, but real-world deployment may require adjustments for specific environments beyond LIBERO benchmark.",
+      "• Novelty: Strong; introduces novel 'Compression Gap' concept with clear causal experiments, shifting focus from uniform scaling to bottleneck analysis in Physical AI pipelines."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出“压缩差距”这一信息论新概念，通过严谨实验揭示离散标记化在VLA模型扩展中的根本限制，为物理AI模型设计提供新视角。",
+      "• 实盘坑: 离散动作模型（如OAT）在码本容量固定时，视觉编码器升级可能无法转化为性能提升，导致资源浪费；需谨慎评估瓶颈位置再投资。",
+      "• 复现难度: 中等；实验基于公开LIBERO基准，方法描述清晰，但需要复现多尺度编码器和码本调整实验，计算成本较高。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2604.03190v1",
+    "title": "Gradient Boosting within a Single Attention Layer",
+    "pdf_url": "https://arxiv.org/pdf/2604.03190v1",
+    "published": "2026-04-03",
+    "crawled_at": "2026-04-06 20:27:34",
+    "ai_score": 7.8,
+    "translated_title": "单注意力层内的梯度提升",
+    "summary_en": [
+      "• Model Architecture: Introduces gradient-boosted attention, which applies gradient boosting within a single attention layer by adding a second attention pass with learned projections to correct errors from the first pass, using a per-dimension gate as shrinkage parameter.",
+      "• Data used: Evaluated on a 10M-token subset of WikiText-103, a standard language modeling dataset.",
+      "• Performance metrics: Achieved test perplexity of 67.9, outperforming standard attention (72.2), Twicing Attention (69.6), and a parameter-matched wider baseline (69.0), with most benefits captured in two rounds."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出梯度提升注意力，在单注意力层内应用梯度提升原理，通过第二个注意力层学习投影来纠正第一个层的预测误差，使用逐维度门控作为收缩参数。",
+      "• 数据来源: 使用WikiText-103数据集的10M标记子集进行实验验证。",
+      "• 主要结论: 在语言建模任务中，梯度提升注意力将测试困惑度降至67.9，优于标准注意力（72.2）和Twicing注意力（69.6），且两轮迭代即可获得大部分性能提升。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate potential for improving transformer-based models in NLP tasks, particularly in language modeling where error correction can enhance prediction accuracy, but limited to specific architectures and may not generalize broadly.",
+      "• Implementation Risk: High risk due to increased computational complexity from additional attention passes and learned projections, which could impact training efficiency and scalability in real-time applications.",
+      "• Novelty: High novelty in integrating gradient boosting directly into attention mechanisms, offering a theoretical link to Friedman's gradient boosting machine and addressing limitations of standard attention in error correction."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将梯度提升机制嵌入注意力层，理论映射到Friedman的梯度提升机，解决了标准注意力无法自我纠错的缺陷，具有较高的算法创新性。",
+      "• 实盘坑: 计算开销增加，额外注意力层和投影学习可能导致训练延迟和资源消耗，在实盘高频场景中可能不适用。",
+      "• 复现难度: 中等难度，需要实现复杂的梯度提升注意力结构，但基于公开数据集和详细方法描述，复现可行性较高。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2604.03189v1",
+    "title": "Reflective Context Learning: Studying the Optimization Primitives of Context Space",
+    "pdf_url": "https://arxiv.org/pdf/2604.03189v1",
+    "published": "2026-04-03",
+    "crawled_at": "2026-04-06 20:27:50",
+    "ai_score": 8.2,
+    "translated_title": "反思性上下文学习：研究上下文空间的优化原语",
+    "summary_en": [
+      "• Model Architecture: Reflective Context Learning (RCL) framework with two core components - reflection module that converts trajectories and context into directional update signals, and mutation module that applies these signals to improve behavior in context space.",
+      "• Data used: Evaluated on AppWorld, BrowseComp+, and RewardBench2 benchmark environments designed for testing generalization across tasks and environments in agent learning.",
+      "• Performance metrics: Systematic improvements over strong baselines through optimization primitives including batching, improved credit-assignment signals, auxiliary losses, failure replay, and grouped rollouts for variance reduction.",
+      "• Additional analysis: Studied robustness to initialization, batch size effects, sampling strategies, curriculum approaches, optimizer-state variants, and model allocation strategies between optimization components."
+    ],
+    "summary_cn": [
+      "• 核心模型: 反思性上下文学习(RCL)框架，包含反思模块(将轨迹和上下文转换为方向性更新信号)和突变模块(应用信号改进上下文空间行为)。",
+      "• 数据来源: 在AppWorld、BrowseComp+和RewardBench2基准环境上进行评估，这些环境专门设计用于测试智能体在跨任务和环境中的泛化能力。",
+      "• 主要结论: 通过批处理、改进的信用分配信号、辅助损失、失败重放和分组滚动等优化原语，系统性地超越了强基线方法。",
+      "• 分析维度: 研究了初始化鲁棒性、批量大小影响、采样策略、课程学习方法、优化器状态变体以及不同优化组件间的模型分配策略。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High - provides systematic framework for improving context-based learning with transferable optimization principles that could enhance adaptive trading systems and portfolio management algorithms.",
+      "• Implementation Risk: Medium - requires careful tuning of multiple optimization primitives and their interactions; performance sensitive to task regimes and initialization conditions.",
+      "• Novelty: Significant - unified treatment of context optimization as a proper optimization problem rather than isolated algorithms; systematic extension of classical optimization techniques to context space.",
+      "• Practical Considerations: Framework is general but requires substantial computational resources for reflection and mutation cycles; real-time applications may face latency challenges."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将上下文优化重新定义为统一的优化问题而非孤立算法，系统地将经典优化技术扩展到上下文空间，提供了可迁移的优化原则。",
+      "• 实盘坑: 需要精细调整多个优化原语及其相互作用，性能对任务机制和初始化条件敏感，实时应用可能面临延迟挑战。",
+      "• 复现难度: 中等偏高，需要实现完整的反思-突变循环，基准环境(AppWorld等)可能非公开，优化原语的组合效果需要大量实验验证。",
+      "• 量化价值: 框架可应用于自适应交易系统和投资组合管理算法，但需要针对金融数据特点进行领域适配。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2604.03180v1",
+    "title": "PRISM: LLM-Guided Semantic Clustering for High-Precision Topics",
+    "pdf_url": "https://arxiv.org/pdf/2604.03180v1",
+    "published": "2026-04-03",
+    "crawled_at": "2026-04-06 20:28:06",
+    "ai_score": 7.8,
+    "translated_title": "PRISM：基于大语言模型引导的语义聚类实现高精度主题建模",
+    "summary_en": [
+      "• Model Architecture: PRISM employs a student-teacher pipeline where a lightweight sentence encoding model is fine-tuned using sparse labels generated by a large language model (LLM), followed by thresholded clustering in the embedding space to separate closely related topics within narrow domains.",
+      "• Data used: The framework is evaluated across multiple corpora of interest, utilizing web-scale text data for analysis, with sampling strategies to improve local geometry for cluster separability.",
+      "• Performance metrics: PRISM demonstrates improved topic separability over state-of-the-art local topic models and clustering on large frontier embedding models, while requiring only a small number of LLM queries for training, enhancing efficiency and interpretability."
+    ],
+    "summary_cn": [
+      "• 核心模型: PRISM采用师生架构，通过大语言模型（LLM）生成的稀疏标签微调轻量级句子编码模型，并结合阈值聚类在嵌入空间中分离紧密相关的主题。",
+      "• 数据来源: 基于多个感兴趣的语料库进行评估，利用网络规模文本数据进行分析，并通过采样策略优化局部几何结构以提升聚类可分性。",
+      "• 主要结论: PRISM在主题可分性上优于最先进的局部主题模型和大型前沿嵌入模型聚类，同时仅需少量LLM查询进行训练，提高了效率与可解释性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the framework's ability to track nuanced claims and subtopics online with high precision could enhance sentiment analysis and thematic investing strategies, but real-world financial data complexity may limit immediate alpha generation.",
+      "• Implementation Risk: High; reliance on LLM-generated labels introduces dependency on model accuracy and potential biases, while thresholded clustering may be sensitive to hyperparameter tuning and data distribution shifts in dynamic markets.",
+      "• Novelty: Significant; the integration of LLM supervision with lightweight clustering offers a novel approach to distill sparse signals into interpretable models, contributing to efficient topic discovery pipelines in NLP research."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著；将LLM监督与轻量级聚类结合，提出了一种新颖的稀疏信号蒸馏方法，提升了主题发现的效率与可解释性，在NLP领域具有贡献。",
+      "• 实盘坑: 高；依赖LLM生成标签可能引入模型偏差和准确性风险，阈值聚类对超参数调整和市场数据动态变化敏感，实盘应用需谨慎验证。",
+      "• 复现难度: 中等；框架结构清晰，但需处理LLM查询成本和数据采样策略，复现可能受计算资源和领域特定数据可用性影响。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
     "id": "2604.02330v1",
     "title": "ActionParty: Multi-Subject Action Binding in Generative Video Games",
     "pdf_url": "https://arxiv.org/pdf/2604.02330v1",
