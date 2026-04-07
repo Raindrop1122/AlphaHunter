@@ -1,5 +1,345 @@
 [
   {
+    "id": "2604.04930v1",
+    "title": "Early Stopping for Large Reasoning Models via Confidence Dynamics",
+    "pdf_url": "https://arxiv.org/pdf/2604.04930v1",
+    "published": "2026-04-06",
+    "crawled_at": "2026-04-07 20:31:46",
+    "ai_score": 7.5,
+    "translated_title": "基于置信度动态的大型推理模型早期停止方法",
+    "summary_en": [
+      "• Model Architecture: CoDE-Stop (Confidence Dynamics Early Stop) - an early stopping method that monitors intermediate answer confidence during chain-of-thought reasoning without requiring model modifications or additional training",
+      "• Data used: Evaluated on diverse reasoning and science benchmarks across multiple large reasoning models (specific datasets not named in abstract)",
+      "• Performance metrics: Achieves 25-50% reduction in total token usage compared to standard full-length reasoning while maintaining or improving accuracy; demonstrates more favorable accuracy-compute tradeoff than prior early stopping methods"
+    ],
+    "summary_cn": [
+      "• 核心模型: CoDE-Stop（置信度动态早期停止） - 通过监控推理过程中中间答案的置信度动态来决定何时停止推理，无需额外训练即可集成到现有模型中",
+      "• 数据来源: 在多个大型推理模型上使用多样化的推理和科学基准进行评估（摘要中未指定具体数据集名称）",
+      "• 主要结论: 相比标准完整长度推理减少25-50%的总令牌使用量，同时保持或提高准确性；相比现有早期停止方法实现更优的准确率-计算量权衡"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - addresses real computational cost concerns in production LLM systems; 25-50% token reduction translates directly to cost savings and latency improvements",
+      "• Implementation Risk: Low - method requires no model retraining or architectural changes; can be deployed as inference-time wrapper; risk lies in confidence calibration across different models/tasks",
+      "• Novelty: Moderate - early stopping for LLMs is established concept; innovation lies in using confidence dynamics rather than simple thresholds or fixed lengths; provides novel analysis of confidence patterns in correct vs incorrect reasoning"
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等 - 早期停止在LLM中已有研究，创新在于利用置信度动态而非简单阈值或固定长度；提供了正确与错误推理轨迹中置信度模式的新颖分析",
+      "• 实盘坑: 低到中等 - 无需模型重训练或架构修改，可作为推理时包装器部署；主要风险在于不同模型/任务间的置信度校准问题；需要验证跨领域泛化能力",
+      "• 复现难度: 低 - 方法描述清晰，无需复杂实现；主要依赖标准LLM推理接口和置信度提取；基准结果需要相应数据集访问权限"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2604.04923v1",
+    "title": "Stratifying Reinforcement Learning with Signal Temporal Logic",
+    "pdf_url": "https://arxiv.org/pdf/2604.04923v1",
+    "published": "2026-04-06",
+    "crawled_at": "2026-04-07 20:32:02",
+    "ai_score": 7.5,
+    "translated_title": "基于信号时序逻辑的分层强化学习",
+    "summary_en": [
+      "• Model Architecture: The paper introduces a stratification-based semantics for Signal Temporal Logic (STL), linking it to reinforcement learning by interpreting atomic predicates as membership tests in stratified spaces. This theoretical framework connects STL formulas to the geometry of decision spaces in deep reinforcement learning (DRL).",
+      "• Data used: The study applies the framework to Minigrid games, using latent embeddings from a DRL agent trained with STL robustness as the reward. No real-world financial or market data is mentioned, focusing instead on synthetic game environments for validation.",
+      "• Performance metrics: The paper proposes computationally efficient signatures to uncover stratification structures in embedding spaces, with preliminary evidence suggesting promise. However, specific quantitative results or benchmarks are not provided, limiting empirical validation."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出基于分层理论的信号时序逻辑（STL）语义学，将原子谓词解释为分层空间中的成员测试，为深度强化学习（DRL）嵌入空间提供新的理论分析框架。",
+      "• 数据来源: 使用Minigrid游戏作为实验环境，基于DRL智能体的潜在嵌入数据，其中STL公式的鲁棒性被用作奖励信号，未涉及实际市场数据。",
+      "• 主要结论: 理论框架揭示了STL公式与时空分层之间的对应关系，并开发了计算高效的签名方法，初步证据显示其在揭示嵌入空间分层结构方面具有潜力。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate—the stratification approach could enhance interpretability and efficiency in DRL for complex decision-making, but direct financial applications are speculative without market-specific adaptations.",
+      "• Implementation Risk: High—theoretical nature and lack of empirical validation in real-world settings pose significant risks; translating to trading strategies requires substantial engineering and domain expertise.",
+      "• Novelty: High—novel integration of stratification theory with STL and DRL offers fresh perspectives on embedding space geometry, though practical impact remains unproven."
+    ],
+    "verdict_cn": [
+      "• 创新点: 创新性地将分层理论与信号时序逻辑结合，为强化学习嵌入空间分析提供新视角，理论贡献突出，但应用转化尚不明确。",
+      "• 实盘坑: 高风险—理论框架缺乏实际市场验证，Minigrid游戏数据与金融环境差异大，实盘部署需大量定制和风险控制。",
+      "• 复现难度: 中等—方法基于公开的STL和DRL工具，但分层理论的数学深度可能增加实现复杂性，需要跨领域专业知识。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2604.04920v1",
+    "title": "PINNs in PDE Constrained Optimal Control Problems: Direct vs Indirect Methods",
+    "pdf_url": "https://arxiv.org/pdf/2604.04920v1",
+    "published": "2026-04-06",
+    "crawled_at": "2026-04-07 20:32:19",
+    "ai_score": 7.5,
+    "translated_title": "PINNs在PDE约束最优控制问题中的应用：直接法与间接法对比",
+    "summary_en": [
+      "• Model Architecture: Physics-informed neural networks (PINNs) with two formulations—direct (minimizing objective under state constraint) and indirect (based on first-order optimality system) for semilinear parabolic PDE optimal control.",
+      "• Data used: Numerical experiments on an Allen-Cahn control problem, comparing discretize-then-optimize adjoint method, direct PINN, and indirect PINN approaches without external datasets.",
+      "• Performance metrics: Indirect PINN better preserves PDE constraints and optimality structure, yields more accurate neural approximations than direct PINN, with implicit regularization producing smoother control profiles."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于物理信息神经网络（PINNs）的两种框架——直接法（在状态约束下最小化目标函数）和间接法（基于一阶最优性系统），用于半线性抛物型偏微分方程最优控制。",
+      "• 数据来源: 针对Allen-Cahn控制问题的数值实验，比较离散后优化伴随法、直接PINN和间接PINN方法，无需外部数据集。",
+      "• 主要结论: 间接PINN能更忠实保持PDE约束和最优性结构，比直接PINN产生更精确的神经网络近似，且具有隐式正则化效果使控制轮廓更平滑。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate—PINNs offer implicit regularization for smoother controls, potentially useful in continuous-time portfolio optimization or volatility surface modeling, but limited to academic PDE examples.",
+      "• Implementation Risk: High—requires careful tuning of neural network architecture and training for PDE constraints; indirect method more complex but more accurate, posing scalability challenges for real-time trading.",
+      "• Novelty: Moderate—applies PINNs to PDE-constrained optimal control with direct vs indirect comparison, but builds on existing PINN literature without groundbreaking theoretical advances."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将PINNs应用于PDE约束最优控制问题，系统比较直接法与间接法，为连续时间金融模型（如期权定价或风险控制）提供新数值工具。",
+      "• 实盘坑: 高——神经网络训练需精细调参以处理PDE约束，间接法虽准但计算复杂，可能难以扩展到高频交易或大规模资产组合。",
+      "• 复现难度: 中高——需要专业知识在PDE理论和神经网络实现，但论文提供了明确框架（如Allen-Cahn案例），代码开源可降低难度。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.04916v1",
+    "title": "Empowering Power Outage Prediction with Spatially Aware Hybrid Graph Neural Networks and Contrastive Learning",
+    "pdf_url": "https://arxiv.org/pdf/2604.04916v1",
+    "published": "2026-04-06",
+    "crawled_at": "2026-04-07 20:32:33",
+    "ai_score": 8.2,
+    "translated_title": "基于空间感知混合图神经网络与对比学习的电力中断预测增强方法",
+    "summary_en": [
+      "• Model Architecture: Spatially Aware Hybrid Graph Neural Networks (SA-HGNN) with contrastive learning, encoding spatial relationships of static features (land cover, infrastructure) and dynamic features (wind speed, precipitation).",
+      "• Data used: Utility service territories in Connecticut, Western Massachusetts, Eastern Massachusetts, and New Hampshire, incorporating both static infrastructure data and event-specific weather data.",
+      "• Performance metrics: Achieves state-of-the-art performance for power outage prediction across four utility service territories, demonstrating superior predictive accuracy compared to existing models."
+    ],
+    "summary_cn": [
+      "• 核心模型: 空间感知混合图神经网络（SA-HGNN）结合对比学习，编码静态特征（土地覆盖、基础设施）和动态特征（风速、降水）的空间关系。",
+      "• 数据来源: 康涅狄格州、西马萨诸塞州、东马萨诸塞州和新罕布什尔州的公用事业服务区域数据，包括静态基础设施和事件特定天气数据。",
+      "• 主要结论: 在四个公用事业服务区域中实现最先进的电力中断预测性能，通过对比学习处理极端天气事件的不平衡问题，生成位置特定嵌入。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for alpha generation in energy sector trading and infrastructure investment strategies by predicting outage impacts on grid reliability and asset valuations.",
+      "• Implementation Risk: Moderate risk due to dependency on high-quality spatial and weather data, and potential regulatory hurdles in accessing utility network data.",
+      "• Novelty: Significant novelty in combining spatial graph neural networks with contrastive learning for imbalanced extreme weather events, addressing a critical gap in existing outage prediction models."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将空间图神经网络与对比学习结合，处理极端天气事件的不平衡问题，生成位置特定嵌入，显著提升预测精度。",
+      "• 实盘坑: 依赖高质量空间和天气数据，获取公用事业网络数据可能面临监管障碍，模型对数据质量敏感。",
+      "• 复现难度: 中等难度，需要专业图神经网络和对比学习实现，以及特定区域的基础设施和天气数据，可能涉及数据获取挑战。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2604.04914v1",
+    "title": "Analyzing Symbolic Properties for DRL Agents in Systems and Networking",
+    "pdf_url": "https://arxiv.org/pdf/2604.04914v1",
+    "published": "2026-04-06",
+    "crawled_at": "2026-04-07 20:32:49",
+    "ai_score": 7.8,
+    "translated_title": "系统与网络中深度强化学习代理的符号属性分析",
+    "summary_en": [
+      "• Model Architecture: The paper introduces diffRL, a framework for analyzing symbolic properties (e.g., monotonicity, robustness) in DRL agents, leveraging existing DNN verification engines without proposing new neural architectures.",
+      "• Data used: The study employs three DRL-based control systems—adaptive video streaming, wireless resource management, and congestion control—using simulated or real-world networking data typical in systems research, though specific datasets are not detailed.",
+      "• Performance metrics: Results show symbolic properties provide broader coverage than point properties, uncover non-obvious counterexamples, and reveal trade-offs in verification solvers, with empirical analysis across training evolution and model size impacts."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出diffRL框架，用于分析DRL代理的符号属性（如单调性、鲁棒性），基于现有DNN验证引擎，未引入新神经网络架构。",
+      "• 数据来源: 使用三个DRL控制系统—自适应视频流、无线资源管理和拥塞控制—基于系统研究中典型的模拟或真实网络数据，但未指定具体数据集。",
+      "• 主要结论: 符号属性比点属性覆盖更广，能发现非明显反例，揭示验证求解器的实际权衡，并通过训练过程和模型大小影响进行实证分析。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; symbolic analysis could enhance safety and reliability in DRL-based trading systems (e.g., for risk management or execution), but direct financial alpha generation is limited without market-specific applications.",
+      "• Implementation Risk: High; integrating verification tools into live systems adds complexity, and scalability issues with DNN solvers may hinder real-time deployment in fast-paced environments like high-frequency trading.",
+      "• Novelty: Moderate; the concept of symbolic properties extends verification beyond point-based methods, but reliance on existing engines and lack of novel algorithmic breakthroughs reduce groundbreaking impact."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；符号属性分析扩展了验证范围，但依赖现有工具，缺乏算法突破，在金融领域应用需定制化。",
+      "• 实盘坑: 高；验证工具集成复杂，DNN求解器可扩展性问题可能影响实时性能，在高速交易环境中风险较大。",
+      "• 复现难度: 中等；框架开源可能性高，但需要专业知识在DRL和验证领域，且系统模拟数据可能难以直接迁移到金融市场。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2604.04908v1",
+    "title": "HI-MoE: Hierarchical Instance-Conditioned Mixture-of-Experts for Object Detection",
+    "pdf_url": "https://arxiv.org/pdf/2604.04908v1",
+    "published": "2026-04-06",
+    "crawled_at": "2026-04-07 20:33:08",
+    "ai_score": 7.2,
+    "translated_title": "HI-MoE：用于目标检测的分层实例条件专家混合模型",
+    "summary_en": [
+      "• Model Architecture: HI-MoE is a DETR-style object detection architecture with a two-stage routing mechanism: a lightweight scene router selects a scene-consistent expert subset, followed by an instance router assigning each object query to a small number of experts within that subset, enabling sparse computation aligned with instance-centric reasoning.",
+      "• Data used: Experiments are primarily conducted on the COCO dataset, with preliminary specialization analysis on LVIS, focusing on object detection tasks in diverse visual scenes.",
+      "• Performance metrics: HI-MoE outperforms a dense DINO baseline and simpler token-level or instance-only routing variants, showing particularly strong gains on small objects, though detailed quantitative metrics (e.g., mAP scores) are not specified in the abstract."
+    ],
+    "summary_cn": [
+      "• 核心模型: HI-MoE采用DETR风格的目标检测架构，引入两阶段路由机制：轻量级场景路由器选择场景一致的专家子集，实例路由器将每个对象查询分配给该子集中的少数专家，实现与实例中心推理匹配的稀疏计算。",
+      "• 数据来源: 实验主要基于COCO数据集进行，并在LVIS上进行了初步专业化分析，专注于多样视觉场景中的目标检测任务。",
+      "• 主要结论: HI-MoE在性能上优于密集DINO基线和更简单的令牌级或仅实例路由变体，特别是在小物体检测上表现出显著提升，但摘要中未提供具体量化指标（如mAP分数）。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate to high; the method's focus on instance-level routing in vision MoE could lead to more efficient and accurate object detection models, potentially applicable to real-time trading systems for visual data analysis (e.g., satellite imagery or surveillance feeds), but requires further validation beyond COCO/LVIS.",
+      "• Implementation Risk: High; the two-stage routing adds complexity, and sparse computation may introduce instability in training or inference, with current limitations noted in the abstract suggesting need for more extensive experiments and robustness checks.",
+      "• Novelty: High; the hierarchical, instance-conditioned approach is novel in vision MoE for object detection, addressing granularity misalignment in prior methods, though it builds on existing DETR and MoE concepts without groundbreaking theoretical advances."
+    ],
+    "verdict_cn": [
+      "• 创新点: 较高；该方法在视觉MoE中引入实例级分层路由，针对目标检测的粒度不匹配问题，提出新颖的两阶段设计，但基于现有DETR和MoE框架，缺乏理论突破。",
+      "• 实盘坑: 高；两阶段路由增加模型复杂性，稀疏计算可能导致训练或推理不稳定，摘要中提到的当前局限性表明需要更多实验验证和鲁棒性测试，实盘应用风险较大。",
+      "• 复现难度: 中等；基于标准数据集（COCO/LVIS）和DETR架构，复现基础实验可能可行，但优化路由机制和扩展至其他场景需要专业知识，存在一定技术门槛。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.04902v1",
+    "title": "Are Latent Reasoning Models Easily Interpretable?",
+    "pdf_url": "https://arxiv.org/pdf/2604.04902v1",
+    "published": "2026-04-06",
+    "crawled_at": "2026-04-07 20:33:21",
+    "ai_score": 7.5,
+    "translated_title": "潜在推理模型是否易于解释？",
+    "summary_en": [
+      "• Model Architecture: Examines two state-of-the-art latent reasoning models (LRMs) that perform reasoning through internal latent tokens rather than explicit natural language steps.",
+      "• Data used: Logical reasoning datasets, though specific datasets are not named in the abstract; analysis focuses on instances where models produce correct or incorrect predictions.",
+      "• Performance metrics: Finds LRMs often underutilize reasoning tokens (same answers without them), can decode gold reasoning traces 65-93% for correct predictions, and presents a method to decode verified natural language traces without prior knowledge."
+    ],
+    "summary_cn": [
+      "• 核心模型: 研究两种最先进的潜在推理模型（LRMs），通过内部潜在标记而非显式自然语言步骤进行推理。",
+      "• 数据来源: 逻辑推理数据集（摘要中未具体命名），分析模型产生正确或错误预测的实例。",
+      "• 主要结论: LRMs常未充分利用推理标记（无标记也能得出相同答案），对正确预测可解码出65-93%的黄金推理轨迹，并提出无需先验知识解码已验证自然语言轨迹的方法。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; findings suggest interpretability as a signal for prediction correctness, potentially useful for model monitoring in NLP/LLM strategies, but limited direct financial application.",
+      "• Implementation Risk: High; LRMs' underutilization of reasoning tokens raises doubts about their reliability, and decoding methods may not generalize well to complex real-world data.",
+      "• Novelty: Moderate; investigation into LRM interpretability is timely, but results are preliminary and based on logical datasets, lacking empirical validation in diverse scenarios."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；研究LRM可解释性及时，但结果基于逻辑数据集，缺乏多样化场景的实证验证。",
+      "• 实盘坑: 高；LRMs未充分利用推理标记引发可靠性疑虑，解码方法可能难以泛化至复杂现实数据。",
+      "• 复现难度: 中等；方法描述清晰，但依赖特定模型和数据集，需定制化实现。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.04898v1",
+    "title": "QED-Nano: Teaching a Tiny Model to Prove Hard Theorems",
+    "pdf_url": "https://arxiv.org/pdf/2604.04898v1",
+    "published": "2026-04-06",
+    "crawled_at": "2026-04-07 20:33:40",
+    "ai_score": 8.5,
+    "translated_title": "QED-Nano：训练微型模型证明高难度定理",
+    "summary_en": [
+      "• Model Architecture: QED-Nano is a 4B parameter model post-trained specifically for Olympiad-level mathematical proofs using a three-stage pipeline: supervised fine-tuning from DeepSeek-Math-V2, reinforcement learning with rubric-based rewards, and expanded RL with a reasoning cache that enables iterative summarize-and-refine cycles.",
+      "• Data used: The training utilizes the FineProofs-SFT and FineProofs-RL datasets, which include proof-writing styles distilled from DeepSeek-Math-V2 and reinforcement learning data with rubric-based rewards for mathematical reasoning.",
+      "• Performance metrics: QED-Nano surpasses larger open models like Nomos-1 and GPT-OSS-120B in proof-generation performance, approaches proprietary models such as Gemini 3 Pro, and achieves this at a fraction of the inference cost, demonstrating competitive reasoning on Olympiad-level math problems."
+    ],
+    "summary_cn": [
+      "• 核心模型: QED-Nano是一个40亿参数的模型，通过三阶段训练流程（监督微调、基于规则的强化学习、带推理缓存的扩展强化学习）专门针对奥林匹克数学证明进行后训练。",
+      "• 数据来源: 使用FineProofs-SFT和FineProofs-RL数据集，包括从DeepSeek-Math-V2蒸馏的证明写作风格和基于规则的强化学习数据。",
+      "• 主要结论: QED-Nano在证明生成性能上超越Nomos-1和GPT-OSS-120B等大型开源模型，接近Gemini 3 Pro等专有模型，且推理成本大幅降低，展示了在奥林匹克数学问题上的竞争力。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for developing cost-effective AI systems in quantitative finance that require complex logical reasoning, such as automated theorem proving for financial models or algorithmic trading strategy validation, due to its small size and competitive performance.",
+      "• Implementation Risk: Moderate risk; while the open pipeline enhances reproducibility, the reliance on specialized mathematical datasets and the complexity of the three-stage training may limit immediate deployment in financial applications without domain adaptation.",
+      "• Novelty: Significant novelty in combining supervised fine-tuning, rubric-based RL, and a reasoning cache for iterative proof refinement, offering a scalable approach to training small models for hard reasoning tasks previously dominated by large proprietary systems."
+    ],
+    "verdict_cn": [
+      "• 创新点: 结合监督微调、基于规则的强化学习和推理缓存进行迭代证明优化，为训练小型模型处理高难度推理任务提供了可扩展的新方法，突破了大型专有系统的垄断。",
+      "• 实盘坑: 中等风险；依赖专业数学数据集和三阶段训练的复杂性可能限制在金融领域的直接应用，需进行领域适配，且推理缓存机制在实时交易环境中可能引入延迟。",
+      "• 复现难度: 较低难度；作者发布了完整的QED-Nano流程，包括模型、数据集和代码，增强了可复现性，但需处理数据获取和计算资源，适合研究导向的团队。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.04894v1",
+    "title": "Rethinking Exploration in RLVR: From Entropy Regularization to Refinement via Bidirectional Entropy Modulation",
+    "pdf_url": "https://arxiv.org/pdf/2604.04894v1",
+    "published": "2026-04-06",
+    "crawled_at": "2026-04-07 20:33:54",
+    "ai_score": 7.8,
+    "translated_title": "重新思考RLVR中的探索：从熵正则化到通过双向熵调制的精炼",
+    "summary_en": [
+      "• Model Architecture: Proposes AsymGRPO, an exploratory framework that decouples modulation of positive and negative rollouts via bidirectional entropy modulation, building on group-relative advantage estimation.",
+      "• Data used: Experiments likely involve standard RLVR benchmarks with LLMs, though specific datasets are not detailed in the abstract; performance is evaluated against strong baselines in RLVR tasks.",
+      "• Performance metrics: Demonstrates superior performance compared to strong baselines, with potential synergy with existing entropy regularization methods, indicating improved exploration and reasoning capabilities."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出AsymGRPO框架，基于组相对优势估计，通过双向熵调制解耦正负rollouts的调节，实现熵的精炼。",
+      "• 数据来源: 未在摘要中指定具体数据集，但实验可能使用标准RLVR基准测试，涉及大型语言模型在强化学习任务中的表现。",
+      "• 主要结论: AsymGRPO在性能上优于强基线，展示出与现有熵正则化方法的协同潜力，有效缓解了受限探索问题。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; addresses a key limitation in RLVR (restricted exploration) with a novel entropy refinement approach, potentially enhancing LLM reasoning in financial NLP applications, but direct alpha generation is indirect.",
+      "• Implementation Risk: High; relies on complex entropy dynamics and group-relative advantage estimation, which may be sensitive to hyperparameters and require careful tuning in real-world deployments.",
+      "• Novelty: High; introduces the concept of entropy refinement by decomposing policy entropy into informative and spurious components, offering a fresh perspective beyond traditional entropy regularization."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；将策略熵分解为信息熵和虚假熵，提出熵精炼概念，超越传统熵正则化，为RLVR探索提供新思路。",
+      "• 实盘坑: 高；依赖复杂的熵动态和组相对优势估计，超参数敏感性强，在实际金融应用中可能难以稳定部署。",
+      "• 复现难度: 中高；需要深入理解熵调制和RLVR框架，实验细节未完全公开，可能增加复现挑战。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2604.04892v1",
+    "title": "Data Attribution in Adaptive Learning",
+    "pdf_url": "https://arxiv.org/pdf/2604.04892v1",
+    "published": "2026-04-06",
+    "crawled_at": "2026-04-07 20:34:08",
+    "ai_score": 7.5,
+    "translated_title": "自适应学习中的数据归因",
+    "summary_en": [
+      "• Model Architecture: Formalizes occurrence-level attribution for finite-horizon adaptive learning via a conditional interventional target, addressing feedback loops in online bandits, reinforcement learning, and language model post-training pipelines.",
+      "• Data used: Focuses on logged data from adaptive settings where training observations both update the learner and shift future data distributions, contrasting with static datasets used in standard attribution methods.",
+      "• Performance metrics: Proves that replay-side information cannot generally recover the attribution target, but identifies a structural class where the target is identifiable from logged data, establishing theoretical bounds."
+    ],
+    "summary_cn": [
+      "• 核心模型: 通过条件干预目标形式化有限时域自适应学习中的发生级归因，解决在线赌博机、强化学习和语言模型后训练流程中的反馈循环问题。",
+      "• 数据来源: 基于自适应环境中的日志数据，其中训练观测同时更新学习器并改变未来数据分布，区别于静态数据集的标准归因方法。",
+      "• 主要结论: 证明重放侧信息通常无法恢复归因目标，但识别出一个结构类别，其中目标可从日志数据中识别，建立了理论边界。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; addresses a critical gap in attribution for adaptive systems (e.g., RL-driven trading strategies), but theoretical focus limits immediate trading signal extraction.",
+      "• Implementation Risk: High; requires precise logging of adaptive data streams and structural assumptions, with real-world noise potentially violating identification conditions.",
+      "• Novelty: High; introduces a formal framework for attribution in adaptive learning, challenging standard static methods and offering new insights for feedback-aware models."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；为自适应学习中的归因引入形式化框架，挑战标准静态方法，为反馈感知模型提供新见解。",
+      "• 实盘坑: 高；需要精确记录自适应数据流和结构假设，现实世界噪声可能违反识别条件。",
+      "• 复现难度: 中高；理论证明严谨，但实际应用需定制数据管道和验证结构类别，实验细节有限。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
     "id": "2604.03226v1",
     "title": "Enhancing Robustness of Federated Learning via Server Learning",
     "pdf_url": "https://arxiv.org/pdf/2604.03226v1",
