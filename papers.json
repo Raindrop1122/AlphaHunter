@@ -1,5 +1,348 @@
 [
   {
+    "id": "2604.06169v1",
+    "title": "In-Place Test-Time Training",
+    "pdf_url": "https://arxiv.org/pdf/2604.06169v1",
+    "published": "2026-04-07",
+    "crawled_at": "2026-04-08 20:28:41",
+    "ai_score": 8.2,
+    "translated_title": "原位测试时训练",
+    "summary_en": [
+      "• Model Architecture: In-Place TTT modifies the final projection matrix of MLP blocks in LLMs as adaptable fast weights, enabling drop-in enhancement without full retraining. It uses a chunk-wise update mechanism compatible with context parallelism.",
+      "• Data used: The paper mentions experiments with contexts up to 128k tokens, suggesting use of long-context datasets, though specific datasets are not detailed in the abstract. Performance is validated through extensive experiments on autoregressive language modeling tasks.",
+      "• Performance metrics: A 4B-parameter model achieves superior performance on tasks with contexts up to 128k. When pretrained from scratch, it consistently outperforms competitive TTT-related approaches. Ablation studies provide insights into design choices."
+    ],
+    "summary_cn": [
+      "• 核心模型: 原位测试时训练框架，将LLM中MLP模块的最终投影矩阵作为可调快速权重，实现无需从头训练的即插即用增强。",
+      "• 数据来源: 实验涉及长达128k上下文的语言建模任务，可能使用长文本数据集，但摘要未具体说明数据集名称。",
+      "• 主要结论: 4B参数模型在128k上下文任务中表现优异；从头预训练时持续超越相关TTT方法；消融研究验证了设计有效性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for dynamic adaptation in real-time trading environments where market data streams continuously. Could enable LLMs to adjust to new financial narratives or regime shifts without retraining.",
+      "• Implementation Risk: Moderate risk due to dependency on specific MLP architectures; may not generalize to all LLM variants. Computational overhead during inference could impact latency-sensitive applications.",
+      "• Novelty: Significant novelty in aligning TTT objectives with next-token-prediction tasks and using in-place modifications. Represents a paradigm shift towards continual learning in LLMs."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将测试时训练目标与自回归语言建模任务对齐，理论依据强；原位修改机制避免昂贵重训练，架构设计巧妙。",
+      "• 实盘坑: 依赖特定MLP结构，泛化性存疑；推理时更新可能增加延迟，对高频交易不友好；长上下文处理的计算效率需验证。",
+      "• 复现难度: 中等偏高，需要深入理解LLM内部结构和TTT机制；实验环境要求高（如128k上下文），资源消耗大。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2604.06167v1",
+    "title": "Topological Characterization of Churn Flow and Unsupervised Correction to the Wu Flow-Regime Map in Small-Diameter Vertical Pipes",
+    "pdf_url": "https://arxiv.org/pdf/2604.06167v1",
+    "published": "2026-04-07",
+    "crawled_at": "2026-04-08 20:28:57",
+    "ai_score": 8.2,
+    "translated_title": "小直径垂直管道中涌流流的拓扑表征及对Wu流态图的无监督修正",
+    "summary_en": [
+      "• Model Architecture: Unsupervised framework combining Multiple Kernel Learning (MKL) with two Euler Characteristic Surface (ECS)-derived kernels (temporal alignment via L¹ distance and amplitude statistics) and gas velocity features for flow regime discovery.",
+      "• Data used: 37 unlabeled air-water trials from Montana Tech for initial calibration, 947 images from Texas A&M University for cross-facility validation, and 45 pseudo-trials from TAMU for performance testing.",
+      "• Performance metrics: Achieved 95.6% 4-class accuracy and 100% churn recall on TAMU data without labeled training, outperforming supervised baselines; quantified slug/churn transition at +3.81 m/s above Wu et al.'s (2017) prediction."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于多核学习（MKL）的无监督框架，融合欧拉特征曲面（ECS）衍生的两个核（时间对齐和振幅统计）与气体速度特征，用于流态发现。",
+      "• 数据来源: 蒙大拿理工的37个未标记气水试验用于校准，德州农工大学的947张图像用于跨设施验证，45个伪试验用于性能测试。",
+      "• 主要结论: 首次提供涌流流的数学定义，量化了小直径管道中涌流持久性被低估的问题（+3.81 m/s），无监督方法在TAMU数据上达到95.6%准确率和100%涌流召回率。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for energy/commodities trading where flow regime prediction impacts pipeline efficiency and risk; topology-based features could be adapted to other chaotic systems in finance (e.g., market microstructure).",
+      "• Implementation Risk: Moderate; requires domain-specific data (e.g., flow sensors or images), and real-time deployment in industrial settings may face latency issues; cross-facility validation reduces overfitting risk.",
+      "• Novelty: Significant; first topology-based mathematical definition of churn flow after 40+ years, demonstrating unsupervised methods can challenge mechanistic models without labeled data, a breakthrough in fluid dynamics."
+    ],
+    "verdict_cn": [
+      "• 创新点: 突破性：40多年来首次基于拓扑学定义涌流流，无监督方法无需标注数据即可挑战传统机理模型，在流体动力学领域具有里程碑意义。",
+      "• 实盘坑: 中等：依赖特定领域数据（如流量传感器或图像），工业实时部署可能面临延迟问题；需确保数据质量以避免噪声干扰。",
+      "• 复现难度: 中等偏高：需要专业流体实验设备获取数据，ECS和MKL的实现需较强计算数学背景，但开源代码可降低门槛。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "Physical Review Fluids",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2604.06165v1",
+    "title": "HaloProbe: Bayesian Detection and Mitigation of Object Hallucinations in Vision-Language Models",
+    "pdf_url": "https://arxiv.org/pdf/2604.06165v1",
+    "published": "2026-04-07",
+    "crawled_at": "2026-04-08 20:29:13",
+    "ai_score": 8.2,
+    "translated_title": "HaloProbe：视觉语言模型中物体幻觉的贝叶斯检测与缓解框架",
+    "summary_en": [
+      "• Model Architecture: HaloProbe employs a Bayesian framework that factorizes external description statistics (e.g., token position, object repetition) and internal decoding signals (e.g., attention weights) to estimate token-level hallucination probabilities, using balanced training to isolate internal evidence and combine it with learned priors.",
+      "• Data used: The paper likely utilizes standard vision-language datasets (e.g., COCO, Flickr30k) for evaluation, as implied by comparisons with state-of-the-art methods, though specific datasets are not detailed in the abstract.",
+      "• Performance metrics: Experiments show that HaloProbe-guided decoding reduces object hallucinations more effectively than intervention-based methods while preserving utility and fluency, indicating improved accuracy and robustness in image descriptions."
+    ],
+    "summary_cn": [
+      "• 核心模型: HaloProbe采用贝叶斯框架，分解外部描述统计（如词元位置、物体重复）和内部解码信号（如注意力权重），通过平衡训练隔离内部证据并结合学习先验，估计词元级幻觉概率。",
+      "• 数据来源: 可能基于标准视觉语言数据集（如COCO、Flickr30k）进行评估，但摘要中未具体说明，仅提及与前沿方法的比较。",
+      "• 主要结论: HaloProbe引导的解码在减少物体幻觉方面比干预式方法更有效，同时保持实用性和流畅性，提升了图像描述的准确性和鲁棒性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate to high; the non-invasive mitigation approach could enhance reliability in vision-language applications (e.g., automated reporting, surveillance analysis) without degrading model performance, potentially reducing errors in financial data interpretation from visual inputs.",
+      "• Implementation Risk: Low to moderate; as an external scoring signal, HaloProbe avoids modifying model internals, reducing integration complexity, but reliance on balanced training and Bayesian inference may require careful calibration for real-time deployment.",
+      "• Novelty: High; the paper introduces a novel Bayesian framework to address Simpson's paradox in attention-based detection, offering a principled solution to object hallucinations that outperforms prior intervention-based methods."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；提出贝叶斯框架解决注意力检测中的辛普森悖论，通过分解内外信号提供理论化解决方案，在物体幻觉检测上超越传统干预方法。",
+      "• 实盘坑: 低到中等；作为外部评分信号，避免修改模型内部，降低集成复杂度，但依赖平衡训练和贝叶斯推断，实时部署需精细校准，可能增加计算开销。",
+      "• 复现难度: 中等；框架基于标准数据集和模型，但实现贝叶斯因子化和平衡训练需要专业知识，开源代码和细节将影响可复现性。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2604.06160v1",
+    "title": "The Character Error Vector: Decomposable errors for page-level OCR evaluation",
+    "pdf_url": "https://arxiv.org/pdf/2604.06160v1",
+    "published": "2026-04-07",
+    "crawled_at": "2026-04-08 20:29:28",
+    "ai_score": 7.8,
+    "translated_title": "字符错误向量：用于页面级OCR评估的可分解错误",
+    "summary_en": [
+      "• Model Architecture: Introduces Character Error Vector (CEV), a bag-of-characters evaluator decomposable into parsing, OCR, and interaction error components, with implementations like SpACER (Spatially Aware Character Error Rate) and Character distribution method using Jensen-Shannon Distance.",
+      "• Data used: Validated on a dataset of archival newspapers with degraded images and complex layouts, comparing state-of-the-art end-to-end models against traditional pipeline approaches.",
+      "• Performance metrics: CEV bridges parsing metrics and local metrics like CER, achieving F1 score of 0.91 for predicting main error sources with thresholding, and shows traditional pipelines outperform end-to-end models in degraded scenarios."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出字符错误向量（CEV），一种可分解为解析、OCR和交互错误分量的字符袋评估器，支持SpACER（空间感知字符错误率）和基于Jensen-Shannon距离的字符分布方法实现。",
+      "• 数据来源: 使用包含退化图像和复杂布局的档案报纸数据集进行验证，对比了最先进的端到端模型与传统流水线方法。",
+      "• 主要结论: CEV在解析指标与局部指标（如CER）间架起桥梁，通过阈值处理可预测主要错误源（F1分数0.91），且传统流水线在退化场景中优于端到端模型。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; CEV's decomposability could enhance OCR error analysis in financial document processing (e.g., SEC filings), but direct trading alpha is limited without integration into broader NLP pipelines.",
+      "• Implementation Risk: High; requires character-level positioning for optimal use, and thresholding on 'easily available values' may introduce subjectivity, potentially affecting reproducibility in real-world applications.",
+      "• Novelty: High; addresses a gap in page-level OCR evaluation by enabling error decomposition, offering a practical tool for document understanding research with open-source Python library support."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；通过可分解错误机制填补了页面级OCR评估的空白，为文档理解研究提供了实用工具，并开源Python库支持。",
+      "• 实盘坑: 高；需字符级定位以实现最佳效果，且'易得值'阈值处理可能引入主观性，影响实际应用中的复现性和稳定性。",
+      "• 复现难度: 中等；论文提供了具体实现方法（如SpACER），但依赖特定数据集（档案报纸）和复杂布局，可能需适配才能应用于金融文档。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.06159v1",
+    "title": "Target Policy Optimization",
+    "pdf_url": "https://arxiv.org/pdf/2604.06159v1",
+    "published": "2026-04-07",
+    "crawled_at": "2026-04-08 20:29:43",
+    "ai_score": 8.2,
+    "translated_title": "目标策略优化",
+    "summary_en": [
+      "• Model Architecture: Introduces Target Policy Optimization (TPO), a reinforcement learning method that separates policy updates into two steps: constructing a target distribution q_i ∝ p_i^old exp(u_i) from scored completions, then fitting the policy via cross-entropy loss with gradient p^θ - q.",
+      "• Data used: Evaluated on tabular bandits, transformer sequence tasks, and billion-parameter LLM RLVR (Reinforcement Learning from Human Feedback) tasks, using synthetic and real-world datasets typical in RL benchmarks.",
+      "• Performance metrics: Matches performance of PG, PPO, GRPO, and DG on easy tasks; substantially outperforms them under sparse reward conditions, demonstrating robustness to reward sparsity."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出目标策略优化（TPO），将策略更新分解为两步：根据评分完成构建目标分布 q_i ∝ p_i^old exp(u_i)，然后通过交叉熵损失拟合策略，梯度为 p^θ - q。",
+      "• 数据来源: 在表格老虎机、Transformer序列任务和十亿参数LLM RLVR任务上进行评估，使用RL基准中典型的合成和真实数据集。",
+      "• 主要结论: 在简单任务上匹配PG、PPO、GRPO和DG的性能；在稀疏奖励条件下显著优于这些方法，显示出对奖励稀疏性的鲁棒性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for alpha generation in sparse-reward environments common in financial markets (e.g., rare event prediction, anomaly detection), where TPO's stability could outperform traditional RL methods.",
+      "• Implementation Risk: Moderate risk due to reliance on accurate scoring of completions; noisy or biased rewards could degrade performance, and computational cost for billion-parameter models may be prohibitive for real-time trading.",
+      "• Novelty: Novel separation of policy update steps addresses overshoot/undershoot issues in standard policy-gradient methods, offering a more controlled optimization approach, though builds on existing cross-entropy and distribution matching concepts."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将策略更新步骤分离，解决标准策略梯度方法中的过冲/欠冲问题，提供更可控的优化方法，但基于现有的交叉熵和分布匹配概念。",
+      "• 实盘坑: 依赖完成评分的准确性，噪声或偏差奖励可能降低性能；十亿参数模型的计算成本可能过高，不适合实时交易。",
+      "• 复现难度: 中等难度，代码已开源，但需要处理大规模RL任务和稀疏奖励设置，可能需调整超参数以适应特定金融应用。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2604.06155v1",
+    "title": "Toward Consistent World Models with Multi-Token Prediction and Latent Semantic Enhancement",
+    "pdf_url": "https://arxiv.org/pdf/2604.06155v1",
+    "published": "2026-04-07",
+    "crawled_at": "2026-04-08 20:29:58",
+    "ai_score": 7.8,
+    "translated_title": "通过多令牌预测与潜在语义增强构建一致世界模型",
+    "summary_en": [
+      "• Model Architecture: Introduces Latent Semantic Enhancement MTP (LSE-MTP), which combines Multi-Token Prediction (MTP) with ground-truth hidden state trajectories to anchor predictions, addressing structural hallucinations in standard MTP.",
+      "• Data used: Experiments conducted on synthetic graphs and real-world Manhattan Taxi Ride dataset to validate the method's effectiveness in bridging discrete tokens and continuous state representations.",
+      "• Performance metrics: LSE-MTP enhances representation alignment, reduces structural hallucinations, and improves robustness to perturbations compared to conventional Next-Token Prediction (NTP) and standard MTP."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出潜在语义增强多令牌预测（LSE-MTP），通过结合多令牌预测（MTP）与真实隐藏状态轨迹来锚定预测，解决标准MTP中的结构幻觉问题。",
+      "• 数据来源: 使用合成图和真实世界曼哈顿出租车行程数据集进行实验，验证方法在连接离散令牌和连续状态表示方面的有效性。",
+      "• 主要结论: LSE-MTP在表示对齐、减少结构幻觉和增强对扰动的鲁棒性方面优于传统下一令牌预测（NTP）和标准MTP。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; LSE-MTP could improve LLM-based trading strategies by enhancing internal consistency and reducing hallucinations, potentially leading to more reliable predictions in noisy financial data.",
+      "• Implementation Risk: High; integrating ground-truth hidden state trajectories requires access to high-quality labeled data, which may be scarce or expensive in real-world financial applications, increasing deployment complexity.",
+      "• Novelty: High; the theoretical analysis of MTP's gradient inductive bias and the novel LSE-MTP approach address a core limitation in LLM world modeling, offering a fresh perspective on representation learning."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；通过理论分析MTP的梯度归纳偏置并提出LSE-MTP方法，针对LLM世界建模的核心限制提供了新解决方案，在表示学习领域具有原创性。",
+      "• 实盘坑: 高；依赖真实隐藏状态轨迹需要高质量标注数据，在金融应用中可能难以获取或成本高昂，增加了实际部署的复杂性和风险。",
+      "• 复现难度: 中等；方法基于标准MTP框架，但需要合成图和真实数据集进行验证，复现可能涉及数据预处理和模型调优，对技术资源有一定要求。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2604.06135v1",
+    "title": "Shot-Based Quantum Encoding: A Data-Loading Paradigm for Quantum Neural Networks",
+    "pdf_url": "https://arxiv.org/pdf/2604.06135v1",
+    "published": "2026-04-07",
+    "crawled_at": "2026-04-08 20:30:16",
+    "ai_score": 7.8,
+    "translated_title": "基于测量的量子编码：量子神经网络的数据加载范式",
+    "summary_en": [
+      "• Model Architecture: Shot-Based Quantum Encoding (SBQE) distributes hardware shots according to a data-dependent classical distribution over multiple initial quantum states, creating a mixed-state representation with learnable shot counts as degrees of freedom. It's structurally equivalent to a multilayer perceptron with quantum circuit weights.",
+      "• Data used: Fashion MNIST (fashion image dataset) and Semeion (handwritten digits dataset) were used for benchmarking, with ten independent initializations per model to ensure statistical robustness.",
+      "• Performance metrics: Achieved 89.1% ± 0.9% test accuracy on Semeion (reducing error by 5.3% relative to amplitude encoding) and 80.95% ± 0.10% on Fashion MNIST (exceeding amplitude encoding by +2.0% and linear multilayer perceptron by +1.3%), all without data-encoding gates."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于测量的量子编码（SBQE）通过数据依赖的经典分布将硬件测量次数分配到多个初始量子态上，创建混合态表示，并将测量计数作为可学习自由度，结构上等效于具有量子电路权重的多层感知机。",
+      "• 数据来源: 使用Fashion MNIST（时尚图像数据集）和Semeion（手写数字数据集）进行基准测试，每个模型进行十次独立初始化以确保统计稳健性。",
+      "• 主要结论: 在Semeion上实现89.1% ± 0.9%的测试准确率（相对于幅度编码减少5.3%错误），在Fashion MNIST上实现80.95% ± 0.10%（超过幅度编码+2.0%，超过线性多层感知机+1.3%），且无需数据编码门。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - SBQE addresses a critical bottleneck in quantum machine learning (data loading) and shows competitive performance against classical baselines, but quantum hardware limitations and scalability to real-world financial datasets remain unproven.",
+      "• Implementation Risk: High - Requires stable quantum hardware with sufficient coherence time and shot budget; noise sensitivity and integration with existing financial infrastructure could pose significant challenges in production environments.",
+      "• Novelty: High - Introduces a novel encoding paradigm that leverages shot counts as learnable parameters, eliminating data-encoding gates and potentially reducing circuit depth, though the equivalence to classical networks raises questions about quantum advantage."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高 - 引入基于测量的编码范式，将测量计数作为可学习参数，消除数据编码门，可能降低电路深度，但与传统网络的等效性引发量子优势疑问。",
+      "• 实盘坑: 高 - 需要具备足够相干时间和测量预算的稳定量子硬件；噪声敏感性和与现有金融基础设施的集成可能在生产环境中构成重大挑战。",
+      "• 复现难度: 中高 - 论文提供了硬件兼容的实现协议，但依赖特定量子设备，且基准测试仅限于小规模图像数据集，扩展到高维金融数据的复现可能复杂。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.06126v1",
+    "title": "Gym-Anything: Turn any Software into an Agent Environment",
+    "pdf_url": "https://arxiv.org/pdf/2604.06126v1",
+    "published": "2026-04-07",
+    "crawled_at": "2026-04-08 20:30:32",
+    "ai_score": 8.5,
+    "translated_title": "Gym-Anything：将任意软件转化为智能体环境",
+    "summary_en": [
+      "• Model Architecture: Introduces Gym-Anything, a multi-agent framework where a coding agent writes setup scripts and configures software, while an independent audit agent verifies setup quality against checklists.",
+      "• Data used: Applies pipeline to 200 software applications based on U.S. GDP occupational taxonomy, creating CUA-World with over 10K long-horizon tasks configured with realistic data and train/test splits, including CUA-World-Long benchmark with tasks requiring over 500 steps.",
+      "• Performance metrics: Distilling successful trajectories into a 2B vision-language model outperforms models twice its size; using audit agent at test time improves Gemini-3-Flash performance on CUA-World-Long from 11.5% to 14.0%."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出Gym-Anything多智能体框架，编码智能体编写设置脚本并配置软件，独立审计智能体根据质量清单验证环境设置。",
+      "• 数据来源: 基于美国GDP职业分类，对200个软件应用构建CUA-World数据集，包含超过10K个长时程任务，配置真实数据及训练/测试划分，其中CUA-World-Long基准任务常需超过500步。",
+      "• 主要结论: 将成功轨迹蒸馏至20亿参数视觉语言模型，性能超越规模两倍的模型；测试时使用审计智能体反馈，将Gemini-3-Flash在CUA-World-Long上的表现从11.5%提升至14.0%。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for automating complex, economically valuable digital tasks across diverse software domains, enabling scalable agent training for real-world applications like medical science and engineering.",
+      "• Implementation Risk: Moderate due to reliance on multi-agent coordination and audit processes, which may introduce latency and complexity in production environments; quality of setup scripts and data realism are critical variables.",
+      "• Novelty: Significant in framing environment creation as a multi-agent task and applying auditing principles at both setup and test phases, addressing scalability issues in computer-use agent research."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将环境创建本身构建为多智能体任务，引入独立审计机制验证设置质量，并在测试阶段应用相同原则提供反馈，显著提升长时程任务的性能。",
+      "• 实盘坑: 多智能体协调和审计流程可能增加系统延迟和复杂性，设置脚本的质量和数据真实性是关键风险点，影响实际部署的稳定性和效率。",
+      "• 复现难度: 中等偏高，需整合大量软件应用和真实数据，多智能体框架的实现和审计机制的校准要求较高技术资源和时间投入。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2604.06123v1",
+    "title": "A Large-Scale Empirical Comparison of Meta-Learners and Causal Forests for Heterogeneous Treatment Effect Estimation in Marketing Uplift Modeling",
+    "pdf_url": "https://arxiv.org/pdf/2604.06123v1",
+    "published": "2026-04-07",
+    "crawled_at": "2026-04-08 20:30:51",
+    "ai_score": 8.2,
+    "translated_title": "营销提升建模中异质处理效应估计的元学习器与因果森林大规模实证比较",
+    "summary_en": [
+      "• Model Architecture: Compares four CATE estimators—S-Learner, T-Learner, X-Learner (all using LightGBM base learners), and Causal Forest (from EconML)—for uplift modeling in marketing applications.",
+      "• Data used: Utilizes the Criteo Uplift v2.1 dataset with 13.98 million customer records, featuring near-random treatment assignment (propensity AUC = 0.509) for strong internal validity.",
+      "• Performance metrics: Evaluates via Qini coefficient and cumulative gain curves; S-Learner achieves highest Qini score of 0.376, with top 20% of customers capturing 77.7% of incremental conversions (3.9x improvement over random targeting).",
+      "• Additional insights: SHAP analysis identifies covariate f8 as dominant HTE driver; Causal Forest uncertainty quantification shows 1.9% confident persuadables and 0.1% confident sleeping dogs."
+    ],
+    "summary_cn": [
+      "• 核心模型: 比较了四种CATE估计器——S-Learner、T-Learner、X-Learner（均使用LightGBM基础学习器）和因果森林（来自EconML），用于营销提升建模。",
+      "• 数据来源: 使用Criteo Uplift v2.1数据集，包含1398万条客户记录，处理分配接近随机（倾向得分AUC = 0.509），保证了因果估计的内部有效性。",
+      "• 主要结论: S-Learner表现最佳，Qini系数达0.376，预测CATE排名前20%的客户捕获了77.7%的增量转化，比随机目标提升3.9倍；SHAP分析显示协变量f8是主要HTE驱动因素；因果森林不确定性量化识别出1.9%的确定可说服客户和0.1%的确定沉睡客户。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for marketing and customer segmentation strategies; S-Learner's 3.9x improvement in targeting efficiency could translate to significant ROI gains in precision marketing campaigns.",
+      "• Implementation Risk: Moderate; reliance on large-scale datasets (13.98M records) and near-random treatment assignment may limit applicability to smaller or non-experimental datasets in finance.",
+      "• Novelty: Limited; paper provides systematic benchmarking at industrial scale but uses established methods; main contribution is empirical validation rather than methodological innovation.",
+      "• Practical considerations: SHAP analysis and uncertainty quantification add interpretability, but anonymized covariates (e.g., f8) reduce transparency for direct replication in other domains."
+    ],
+    "verdict_cn": [
+      "• 创新点: 有限；论文在工业规模上提供了系统性基准测试，但方法均为现有技术，主要贡献在于实证验证而非方法创新。",
+      "• 实盘坑: 中等；依赖大规模数据集（1398万条记录）和接近随机的处理分配，可能限制在金融领域小规模或非实验数据上的应用；匿名协变量（如f8）降低了跨领域复现的透明度。",
+      "• 复现难度: 低到中等；使用公开数据集（Criteo Uplift v2.1）和标准库（LightGBM, EconML），但需要处理大数据和确保因果假设，可能涉及计算资源挑战。",
+      "• 策略价值: 高；S-Learner的3.9倍目标效率提升在精准营销中可转化为显著ROI，适用于客户细分和个性化策略，但需调整以适应金融数据特性。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.06116v1",
+    "title": "Sequential Audit Sampling with Statistical Guarantees",
+    "pdf_url": "https://arxiv.org/pdf/2604.06116v1",
+    "published": "2026-04-07",
+    "crawled_at": "2026-04-08 20:31:05",
+    "ai_score": 7.2,
+    "translated_title": "具有统计保证的序贯审计抽样",
+    "summary_en": [
+      "• Model Architecture: Formulates audit sampling as a sequential testing problem for finite populations under sampling without replacement, with defined null/alternative hypotheses based on tolerable deviation rates, stopping rules, and exact sequential boundary conditions.",
+      "• Data used: Focuses on attribute auditing and deviation-rate auditing data, particularly for tests of controls in financial statement auditing, with calibration via Monte Carlo simulation at least-favorable deviation rates.",
+      "• Performance metrics: Provides ex ante control of decision error probabilities, approximates exact design through simulation for practical implementation, and allows computation of expected stopping times to optimize audit efficiency."
+    ],
+    "summary_cn": [
+      "• 核心模型: 将审计抽样构建为有限总体无放回抽样下的序贯检验问题，基于可容忍偏差率定义假设、停止规则和精确序贯边界条件。",
+      "• 数据来源: 适用于属性审计和偏差率审计数据，特别是财务报表审计中的控制测试，通过蒙特卡洛模拟在最不利偏差率下进行校准。",
+      "• 主要结论: 实现决策错误概率的事前控制，通过模拟近似精确设计以支持实际应用，并可计算预期停止时间以提升审计效率。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low direct alpha potential for trading strategies, but high value for risk management in auditing contexts by reducing sampling costs and improving decision accuracy under statistical guarantees.",
+      "• Implementation Risk: Moderate risk due to reliance on Monte Carlo simulation calibration and assumptions about finite populations; practical adoption may face challenges in integrating with existing audit workflows.",
+      "• Novelty: Novel in applying sequential testing theory to audit sampling with exact statistical guarantees, addressing a gap in current standards where sequential procedures are acknowledged but not fully explored statistically."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将序贯检验理论创新应用于审计抽样，提供精确统计保证，填补了当前标准中序贯程序被认可但统计设计未充分探索的空白。",
+      "• 实盘坑: 依赖蒙特卡洛模拟校准和有限总体假设，实际部署可能面临与现有审计流程整合的挑战，且对数据质量敏感。",
+      "• 复现难度: 中等难度，需要实现序贯边界条件和模拟校准，但论文提供了明确框架，适合有统计背景的团队复现。"
+    ],
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2604.04930v1",
     "title": "Early Stopping for Large Reasoning Models via Confidence Dynamics",
     "pdf_url": "https://arxiv.org/pdf/2604.04930v1",
