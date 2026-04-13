@@ -1,5 +1,345 @@
 [
   {
+    "id": "2604.09544v1",
+    "title": "Large Language Models Generate Harmful Content Using a Distinct, Unified Mechanism",
+    "pdf_url": "https://arxiv.org/pdf/2604.09544v1",
+    "published": "2026-04-10",
+    "crawled_at": "2026-04-13 20:40:18",
+    "ai_score": 8.5,
+    "translated_title": "大型语言模型通过独特统一机制生成有害内容",
+    "summary_en": [
+      "• Model Architecture: The study employs targeted weight pruning as a causal intervention to probe the internal organization of harmfulness in large language models (LLMs), revealing that harmful content generation depends on a compact set of weights distinct from benign capabilities.",
+      "• Data used: The paper does not specify particular datasets but focuses on analyzing the internal representations of LLMs through weight pruning techniques, likely using standard pre-trained models like GPT variants or similar architectures.",
+      "• Performance metrics: Key findings include that aligned models exhibit greater compression of harm generation weights compared to unaligned counterparts, and pruning these weights in narrow domains reduces emergent misalignment, demonstrating a dissociation between harmful generation and recognition capabilities."
+    ],
+    "summary_cn": [
+      "• 核心模型: 研究采用针对性权重剪枝作为因果干预手段，探究大型语言模型（LLMs）中有害内容的内部组织机制，发现有害内容生成依赖于一组紧凑的权重，与良性能力相分离。",
+      "• 数据来源: 论文未明确指定具体数据集，但通过权重剪枝技术分析LLMs的内部表示，可能使用GPT变体等标准预训练模型。",
+      "• 主要结论: 对齐模型比未对齐模型表现出更强的有害生成权重压缩，在窄域中剪枝这些权重可显著减少突发性错位，揭示有害生成与识别能力之间的解耦。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for developing more robust safety mechanisms in LLMs by targeting compact harm generation weights, which could lead to improved model alignment and reduced jailbreak vulnerabilities in financial NLP applications.",
+      "• Implementation Risk: Moderate risk due to the complexity of weight pruning interventions and potential unintended consequences on model performance; requires careful calibration to avoid degrading benign capabilities.",
+      "• Novelty: High novelty in using causal interventions to reveal a coherent internal structure for harmfulness, providing foundational insights for principled safety approaches beyond surface-level guardrails."
+    ],
+    "verdict_cn": [
+      "• 创新点: 采用因果干预方法揭示LLMs中有害内容的统一内部机制，为超越表面安全护栏的原则性安全方法提供基础性见解，具有高度创新性。",
+      "• 实盘坑: 权重剪枝干预复杂，可能对模型性能产生意外影响，需精细校准以避免损害良性能力，实施风险中等。",
+      "• 复现难度: 中等偏高，需要访问预训练LLMs和专业知识进行权重分析，但方法描述清晰，具备可复现性。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2604.09543v1",
+    "title": "ANTIC: Adaptive Neural Temporal In-situ Compressor",
+    "pdf_url": "https://arxiv.org/pdf/2604.09543v1",
+    "published": "2026-04-10",
+    "crawled_at": "2026-04-13 20:40:34",
+    "ai_score": 7.8,
+    "translated_title": "ANTIC：自适应神经时序原位压缩器",
+    "summary_en": [
+      "• Model Architecture: ANTIC is an end-to-end in situ compression pipeline combining an adaptive temporal selector for high-dimensional physics and a spatial neural compression module based on continual fine-tuning of neural fields to learn residual updates between adjacent snapshots.",
+      "• Data used: The method is applied to transient simulations modeling Navier-Stokes equations, magnetohydrodynamics, plasma physics, or binary black hole mergers, generating petabyte-to-exabyte scale data from high-resolution, spatiotemporally evolving fields governed by large-scale PDEs.",
+      "• Performance metrics: Experimental results demonstrate storage reductions of several orders of magnitude while maintaining physics accuracy, effectively alleviating the need for explicit on-disk storage of entire time-evolved trajectories."
+    ],
+    "summary_cn": [
+      "• 核心模型: ANTIC是一个端到端的原位压缩流水线，包含自适应时序选择器和基于神经场的空间神经压缩模块，通过持续微调学习相邻快照间的残差更新。",
+      "• 数据来源: 应用于Navier-Stokes方程、磁流体动力学、等离子体物理或双黑洞合并等瞬态模拟，处理由大规模高维偏微分方程控制的高分辨率时空演化场产生的PB至EB级数据。",
+      "• 主要结论: 实验显示存储减少达数个数量级，同时保持物理精度，显著降低了对完整时间演化轨迹的显式磁盘存储需求。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the adaptive compression technique could be adapted for high-frequency trading data streams to reduce storage and latency, but direct financial application is not demonstrated.",
+      "• Implementation Risk: High; in situ compression in HPC environments requires integration with simulation codes and real-time processing, posing significant engineering challenges and potential performance overhead.",
+      "• Novelty: High; the combination of adaptive temporal selection with neural field-based continual fine-tuning for residual learning in a single streaming pass is innovative for large-scale scientific data compression."
+    ],
+    "verdict_cn": [
+      "• 创新点: 较高；将自适应时序选择与基于神经场的持续微调残差学习结合，在单次流式处理中实现时空联合压缩，针对大规模科学数据具有新颖性。",
+      "• 实盘坑: 高；原位压缩需与模拟代码深度集成，实时处理要求高，工程实现复杂，可能引入性能开销和稳定性风险。",
+      "• 复现难度: 中等；方法依赖于特定物理模拟数据，但核心神经网络组件相对标准，复现需适配金融数据并解决实时流处理挑战。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.09537v1",
+    "title": "Case-Grounded Evidence Verification: A Framework for Constructing Evidence-Sensitive Supervision",
+    "pdf_url": "https://arxiv.org/pdf/2604.09537v1",
+    "published": "2026-04-10",
+    "crawled_at": "2026-04-13 20:40:54",
+    "ai_score": 7.5,
+    "translated_title": "案例基础证据验证：构建证据敏感监督的框架",
+    "summary_en": [
+      "• Model Architecture: The paper introduces a case-grounded evidence verification framework where a model receives local case context, external evidence, and a structured claim, and must decide if the evidence supports the claim. It uses a standard verifier trained with generated supervision examples, including support, non-support, counterfactual wrong-state, and topic-related negatives.",
+      "• Data used: The framework is instantiated in radiology, utilizing medical case contexts and evidence articles. Supervision is constructed automatically without manual evidence annotation, generating explicit support and semantically controlled non-support examples.",
+      "• Performance metrics: The learned verifier substantially outperforms case-only and evidence-only baselines, remains strong under correct evidence, and collapses when evidence is removed or swapped, indicating genuine evidence dependence. Performance transfers across unseen evidence articles and external case distributions but degrades under evidence-source shift and remains sensitive to backbone choice."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出案例基础证据验证框架，模型接收局部案例上下文、外部证据和结构化声明，判断证据是否支持声明。使用标准验证器，通过生成的监督示例（包括支持、非支持、反事实错误状态和主题相关负例）进行训练。",
+      "• 数据来源: 在放射学领域实例化，利用医学案例上下文和证据文章。监督通过自动生成构建，无需手动证据标注，生成明确的支持和语义控制的非支持示例。",
+      "• 主要结论: 验证器显著优于仅案例和仅证据基线，在正确证据下保持强劲，证据移除或交换时性能崩溃，表明真正的证据依赖性。性能可迁移到未见证据文章和外部案例分布，但在证据源偏移下下降，对骨干网络选择敏感。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the framework addresses a key bottleneck in evidence grounding by improving supervision to encode the causal role of evidence, which could enhance decision-making in financial models requiring evidence-based reasoning, such as in risk assessment or fraud detection.",
+      "• Implementation Risk: High; performance is sensitive to backbone choice and degrades under evidence-source shift, indicating robustness issues. The reliance on automatically generated supervision may introduce noise, and domain adaptation to finance could be challenging due to data specificity.",
+      "• Novelty: High; the introduction of case-grounded evidence verification with a supervision construction procedure that generates diverse negative examples without manual annotation is innovative. It tackles weak supervision and loose evidence-claim ties, offering a generalizable approach beyond radiology."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；提出案例基础证据验证框架，通过监督构建程序自动生成多样负例（如反事实错误状态和主题相关负例），无需手动标注，创新性地解决证据基础推理中的弱监督和证据-声明松散关联问题。",
+      "• 实盘坑: 高；性能对骨干网络选择敏感，证据源偏移下性能下降，表明鲁棒性不足。自动生成的监督可能引入噪声，且金融领域适配因数据特异性而具挑战性，实盘部署风险较大。",
+      "• 复现难度: 中等；框架在放射学实例化，数据和方法描述清晰，但需要特定领域数据（如案例上下文和证据文章）和计算资源训练验证器。自动监督生成步骤可能复杂，需精细调参以确保性能。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.09527v1",
+    "title": "Envisioning the Future, One Step at a Time",
+    "pdf_url": "https://arxiv.org/pdf/2604.09527v1",
+    "published": "2026-04-10",
+    "crawled_at": "2026-04-13 20:41:10",
+    "ai_score": 8.2,
+    "translated_title": "逐步展望未来",
+    "summary_en": [
+      "• Model Architecture: Autoregressive diffusion model that predicts sparse point trajectories through step-wise inference, focusing on underlying scene dynamics rather than dense appearance, with explicit modeling of uncertainty growth over time.",
+      "• Data used: OWM benchmark based on diverse in-the-wild videos for evaluating open-set motion prediction under real-world uncertainty, emphasizing trajectory distributions rather than fixed outcomes.",
+      "• Performance metrics: Matches or surpasses dense simulators in predictive accuracy while achieving orders-of-magnitude higher sampling speed, enabling fast rollout of thousands of diverse futures from a single image with physical plausibility and long-range coherence."
+    ],
+    "summary_cn": [
+      "• 核心模型: 自回归扩散模型，通过逐步推理预测稀疏点轨迹，专注于底层场景动态而非密集外观，显式建模随时间增长的不确定性。",
+      "• 数据来源: 基于多样化真实世界视频的OWM基准，用于评估现实不确定性下的开放集运动预测，强调轨迹分布而非固定结果。",
+      "• 主要结论: 在预测准确性上匹配或超越密集模拟器，同时实现数量级更高的采样速度，能从单张图像快速生成数千种多样未来，保持物理合理性和长程一致性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for applications requiring real-time scenario simulation in dynamic environments (e.g., autonomous systems, financial market modeling), due to efficient exploration of multi-modal futures and scalability.",
+      "• Implementation Risk: Moderate; reliance on sparse trajectories may miss fine-grained details critical in some domains, and real-world validation beyond the OWM benchmark is needed.",
+      "• Novelty: Significant; shifts focus from dense prediction to dynamics-centric representation, introducing step-wise inference over trajectories and explicit uncertainty modeling for open-set problems."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著；从密集预测转向以动态为中心的表征，引入轨迹的逐步推理和开放集问题的显式不确定性建模，突破传统方法瓶颈。",
+      "• 实盘坑: 中等；稀疏轨迹可能遗漏某些领域的关键细粒度细节，且需在OWM基准之外进行更广泛的现实世界验证，不确定性建模的校准风险存在。",
+      "• 复现难度: 中等偏高；需要处理复杂场景数据和实现自回归扩散模型，但开源代码和基准可降低部分门槛，硬件要求因高效采样而相对可控。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2604.09523v1",
+    "title": "Event-Driven Temporal Graph Networks for Asynchronous Multi-Agent Cyber Defense in NetForge_RL",
+    "pdf_url": "https://arxiv.org/pdf/2604.09523v1",
+    "published": "2026-04-10",
+    "crawled_at": "2026-04-13 20:41:29",
+    "ai_score": 8.2,
+    "translated_title": "基于事件驱动的时序图网络在NetForge_RL中实现异步多智能体网络防御",
+    "summary_en": [
+      "• Model Architecture: Introduces Continuous-Time Graph MARL (CT-GMARL) with Neural ODEs to process irregularly sampled alerts in a continuous-time Partially Observable Semi-Markov Decision Process (POSMDP) framework.",
+      "• Data used: Utilizes NLP-encoded SIEM telemetry from NetForge_RL simulator, which enforces Zero-Trust Network Access constraints and provides dual-mode evaluation (mock hypervisor for training, Docker hypervisor for live exploit testing).",
+      "• Performance metrics: Achieves converged median Blue reward of 57,135 (2.0x improvement over R-MAPPO, 2.1x over QMIX), restores 12x more compromised services than strongest baseline, and achieves median reward of 98,026 in zero-shot transfer to live Docker environment."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出连续时间图多智能体强化学习（CT-GMARL），采用神经常微分方程处理不规则采样的警报，适用于连续时间部分可观测半马尔可夫决策过程（POSMDP）。",
+      "• 数据来源: 基于NetForge_RL模拟器生成的NLP编码SIEM遥测数据，该模拟器强制执行零信任网络访问约束，并提供双模式评估（模拟管理程序用于训练，Docker管理程序用于实时漏洞测试）。",
+      "• 主要结论: CT-GMARL在收敛中位数蓝队奖励上达到57,135（比R-MAPPO提升2.0倍，比QMIX提升2.1倍），恢复的受损服务比最强基线多12倍，并在零样本迁移到实时Docker环境中获得98,026的中位数奖励。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for alpha generation in cybersecurity-focused quantitative strategies by enabling real-time, adaptive defense mechanisms that outperform traditional synchronous models, with demonstrated 2x reward improvements and robust zero-shot transfer.",
+      "• Implementation Risk: Moderate to high risk due to reliance on high-fidelity simulator NetForge_RL, which may not fully capture all real-world network complexities; integration with existing SOC infrastructure could face scalability and latency challenges.",
+      "• Novelty: Significant novelty in bridging Sim2Real gap via dual-mode engine and applying Neural ODEs to asynchronous MARL for cyber defense, offering a fresh approach to continuous-time decision-making in noisy, partially observable environments."
+    ],
+    "verdict_cn": [
+      "• 创新点: 通过双模式引擎弥合Sim2Real差距，并将神经常微分方程应用于异步多智能体强化学习进行网络防御，为噪声、部分可观测环境中的连续时间决策提供了新方法。",
+      "• 实盘坑: 依赖高保真模拟器NetForge_RL，可能无法完全捕捉真实网络复杂性；与现有安全运营中心基础设施集成可能面临可扩展性和延迟挑战。",
+      "• 复现难度: 高难度，需要构建NetForge_RL模拟器环境、实现连续时间图多智能体强化学习算法，并处理NLP编码的SIEM数据，对计算资源和专业知识要求较高。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2604.09519v1",
+    "title": "Toward World Models for Epidemiology",
+    "pdf_url": "https://arxiv.org/pdf/2604.09519v1",
+    "published": "2026-04-10",
+    "crawled_at": "2026-04-13 20:41:44",
+    "ai_score": 7.5,
+    "translated_title": "迈向流行病学的世界模型",
+    "summary_en": [
+      "• Model Architecture: Conceptual framework for epidemiological world models, treating epidemics as controlled, partially observed dynamical systems with latent true states, noisy endogenous observations, and sequential interventions with behavioral feedback.",
+      "• Data used: No specific datasets mentioned; relies on theoretical case studies involving behavioral surveillance misreporting, time-lagged signals like hospitalizations/deaths, and counterfactual intervention analysis.",
+      "• Performance metrics: No quantitative metrics provided; evaluation based on illustrative case studies demonstrating necessity for policy-relevant reasoning in strategic misreporting, systematic delays, and counterfactual scenarios."
+    ],
+    "summary_cn": [
+      "• 核心模型: 流行病学世界模型的概念框架，将流行病视为受控、部分可观测的动态系统，包含潜在真实状态、噪声内生观测以及具有行为反馈的序列干预。",
+      "• 数据来源: 未提及具体数据集；基于理论案例研究，涉及行为监测误报、医院/死亡等时滞信号以及反事实干预分析。",
+      "• 主要结论: 世界模型对政策相关推理至关重要，通过案例说明其在处理战略误报、系统延迟和反事实干预分析中的必要性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; framework could enhance epidemic forecasting and intervention planning, but lacks empirical validation or financial market direct application.",
+      "• Implementation Risk: High; requires integration of complex behavioral dynamics and policy-dependent signals, with no clear implementation roadmap or data pipelines.",
+      "• Novelty: High; novel application of world models to epidemiology with focus on latent states and adaptive behavior, though conceptual without algorithmic details."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；将世界模型创新应用于流行病学，强调潜在状态和自适应行为，但缺乏算法细节。",
+      "• 实盘坑: 高；需整合复杂行为动态和政策依赖信号，无明确实施路线或数据管道，实证验证缺失。",
+      "• 复现难度: 中高；概念框架清晰，但无代码或具体模型，依赖领域专业知识进行实现。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.09512v1",
+    "title": "Integrated electro-optic attention nonlinearities for transformers",
+    "pdf_url": "https://arxiv.org/pdf/2604.09512v1",
+    "published": "2026-04-10",
+    "crawled_at": "2026-04-13 20:41:59",
+    "ai_score": 8.2,
+    "translated_title": "用于Transformer的集成电光注意力非线性",
+    "summary_en": [
+      "• Model Architecture: Proposes electro-optic alternatives to digital Softmax and Sigmoid using thin-film lithium niobate (TFLN) Mach-Zehnder modulators (MZMs) as analog nonlinear computational elements.",
+      "• Data used: Evaluated performance in Vision Transformers and Large Language Models, with testing under aggressive 4-bit input-output quantization and system noise characterization up to 10 GBaud encoding speeds.",
+      "• Performance metrics: Maintains highly competitive accuracy despite quantization, reduces latency of nonlinear computations, and enables high-speed, energy-efficient nonlinear computation in hybrid co-packaged hardware."
+    ],
+    "summary_cn": [
+      "• 核心模型: 使用薄膜铌酸锂马赫-曾德尔调制器作为模拟非线性计算单元，提出电光替代数字Softmax和Sigmoid的方案。",
+      "• 数据来源: 在Vision Transformers和大型语言模型中进行评估，测试包括4位输入输出量化和高达10 GBaud编码速度的系统噪声分析。",
+      "• 主要结论: 在量化条件下保持高竞争力精度，显著降低非线性计算延迟，支持混合封装硬件中的高速、高效能非线性计算。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for reducing inference latency in transformer-based models, which could enhance high-frequency trading strategies relying on real-time NLP/LLM processing.",
+      "• Implementation Risk: Moderate to high risk due to reliance on specialized photonic hardware (TFLN modulators), potential integration challenges with existing digital systems, and noise sensitivity in analog components.",
+      "• Novelty: High novelty in applying electro-optic analog computing to transformer nonlinearities, addressing a specific bottleneck (Softmax operations) with a hybrid hardware approach."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将电光模拟计算应用于Transformer非线性层，针对Softmax瓶颈提出硬件解决方案，结合光子技术提升计算效率。",
+      "• 实盘坑: 依赖专用光子硬件，集成到现有数字系统可能复杂，模拟组件对噪声敏感，量产和成本控制存在挑战。",
+      "• 复现难度: 高难度，需要薄膜铌酸锂调制器等专业设备，实验设置复杂，噪声测试和量化优化要求高精度控制。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.09494v1",
+    "title": "RecaLLM: Addressing the Lost-in-Thought Phenomenon with Explicit In-Context Retrieval",
+    "pdf_url": "https://arxiv.org/pdf/2604.09494v1",
+    "published": "2026-04-10",
+    "crawled_at": "2026-04-13 20:42:15",
+    "ai_score": 8.2,
+    "translated_title": "RecaLLM：通过显式上下文检索解决思维迷失现象",
+    "summary_en": [
+      "• Model Architecture: RecaLLM is a reasoning language model that interleaves reasoning with explicit in-context retrieval, using a constrained decoding mechanism for verbatim copying of evidence spans to improve grounding.",
+      "• Data used: Trained on diverse lexical and semantic retrieval tasks with training samples of at most 10K tokens, far shorter than existing long-context approaches, and evaluated on long-context benchmarks RULER and HELMET.",
+      "• Performance metrics: Achieves strong performance on RULER and HELMET benchmarks, significantly outperforming baselines, with consistent gains at context windows up to 128K tokens using minimal training data."
+    ],
+    "summary_cn": [
+      "• 核心模型: RecaLLM是一种推理语言模型，通过交替进行推理和显式上下文检索，结合约束解码机制实现证据段的逐字复制，以增强后续生成的准确性。",
+      "• 数据来源: 使用多样化的词汇和语义检索任务进行训练，训练样本最多10K tokens，远少于现有长上下文方法，并在RULER和HELMET长上下文基准上进行评估。",
+      "• 主要结论: 在RULER和HELMET基准上表现优异，显著超越基线模型，在高达128K tokens的上下文窗口中保持稳定增益，且无需昂贵的长上下文训练数据。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for improving long-context reasoning in financial NLP tasks, such as document analysis and multi-step decision-making, by addressing the lost-in-thought bottleneck with efficient retrieval.",
+      "• Implementation Risk: Moderate risk due to reliance on constrained decoding and retrieval mechanisms, which may introduce latency or complexity in real-time trading environments, though overhead is claimed negligible.",
+      "• Novelty: Novel approach to intertwining retrieval and reasoning, offering a cost-effective path to long-context performance without expensive training data, differentiating from traditional scaling methods."
+    ],
+    "verdict_cn": [
+      "• 创新点: 创新性地将检索与推理深度结合，通过显式检索解决思维迷失问题，提供了一种无需昂贵长上下文训练数据的高效长上下文性能提升路径。",
+      "• 实盘坑: 依赖约束解码和检索机制，可能在实时交易环境中引入延迟或复杂性，尽管声称开销可忽略，但需验证实际部署中的稳定性。",
+      "• 复现难度: 中等难度，需要实现交替推理检索架构和约束解码，但训练数据要求较低（最多10K tokens），降低了数据获取和计算成本。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2604.09489v1",
+    "title": "XFED: Non-Collusive Model Poisoning Attack Against Byzantine-Robust Federated Classifiers",
+    "pdf_url": "https://arxiv.org/pdf/2604.09489v1",
+    "published": "2026-04-10",
+    "crawled_at": "2026-04-13 20:42:30",
+    "ai_score": 8.5,
+    "translated_title": "XFED：针对拜占庭鲁棒联邦分类器的非共谋模型投毒攻击",
+    "summary_en": [
+      "• Model Architecture: XFED is an aggregation-agnostic, non-collusive model poisoning attack that operates without communication between attackers, requiring each compromised client to generate malicious updates independently based on a shared adversarial objective.",
+      "• Data used: The empirical evaluation is conducted across six benchmark datasets, though specific dataset names are not provided in the abstract, indicating standard machine learning benchmarks for classification tasks.",
+      "• Performance metrics: XFED bypasses eight state-of-the-art defenses and outperforms six existing model poisoning attacks, demonstrating high effectiveness in degrading federated learning systems without collusion."
+    ],
+    "summary_cn": [
+      "• 核心模型: XFED是一种聚合无关的非共谋模型投毒攻击，攻击者无需通信，各自独立生成恶意更新，基于共享对抗目标破坏联邦学习系统。",
+      "• 数据来源: 在六个基准数据集上进行实证评估，未具体说明数据集名称，推测为标准机器学习分类基准。",
+      "• 主要结论: XFED成功绕过八种先进防御机制，优于六种现有攻击，表明联邦学习系统安全性低于预期，需更鲁棒防御。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for cybersecurity-focused quant funds; exposes critical vulnerabilities in federated learning systems used in financial data aggregation, potentially enabling exploitation or defensive strategy development.",
+      "• Implementation Risk: Moderate; while non-collusive design reduces coordination costs, real-world deployment requires compromising multiple clients, which may be challenging in regulated financial environments.",
+      "• Novelty: Significant; introduces the first formalized non-collusive attack model, challenging assumptions in federated learning security and highlighting aggregation-agnostic threats."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次形式化非共谋攻击模型，突破传统共谋依赖，聚合无关设计增强攻击普适性，对联邦学习安全理论构成挑战。",
+      "• 实盘坑: 攻击需控制多个客户端，在金融合规环境下实施困难；防御机制滞后，可能引发监管风险。",
+      "• 复现难度: 中等；算法描述抽象，依赖基准数据集，但非共谋设计简化协调，代码开源可降低复现门槛。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2604.09487v1",
+    "title": "Sim-to-Real Transfer for Muscle-Actuated Robots via Generalized Actuator Networks",
+    "pdf_url": "https://arxiv.org/pdf/2604.09487v1",
+    "published": "2026-04-10",
+    "crawled_at": "2026-04-13 20:42:44",
+    "ai_score": 7.8,
+    "translated_title": "通过广义执行器网络实现肌肉驱动机器人的仿真到现实迁移",
+    "summary_en": [
+      "• Model Architecture: Generalized Actuator Network (GeAN) combines neural network modeling of complex muscle-tendon actuation with established rigid body simulation for arm dynamics and environmental interactions.",
+      "• Data used: Trained directly from joint position trajectories without requiring torque sensors, enabling actuation model identification across diverse robot platforms.",
+      "• Performance metrics: Successfully deployed precise goal-reaching and dynamic ball-in-a-cup policies on PAMY2, a four-degrees-of-freedom muscle-actuated robot arm, achieving first successful sim-to-real transfer for this class of robots."
+    ],
+    "summary_cn": [
+      "• 核心模型: 广义执行器网络(GeAN)结合了复杂肌肉肌腱驱动的神经网络建模与成熟的刚体动力学仿真。",
+      "• 数据来源: 直接从关节位置轨迹学习，无需扭矩传感器，支持跨机器人平台的执行器模型识别。",
+      "• 主要结论: 在四自由度肌肉驱动机器人臂PAMY2上成功部署了精确目标到达和动态球入杯策略，实现了该类机器人首次成功的仿真到现实迁移。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - addresses critical sim-to-real gap for complex actuation systems but limited to specific robot types; potential for adaptive control in dynamic environments.",
+      "• Implementation Risk: High - muscle-tendon systems have inherent nonlinearities, friction, and hysteresis; real-world deployment requires extensive calibration and may face scalability issues.",
+      "• Novelty: Significant - first successful sim-to-real transfer for four-DOF muscle-actuated robots; novel approach of learning actuation models from position data rather than torque sensors."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次实现四自由度肌肉驱动机器人的仿真到现实迁移，采用从位置数据而非扭矩传感器学习执行器模型的新方法。",
+      "• 实盘坑: 肌肉肌腱系统固有的非线性、摩擦和迟滞特性导致高实现风险，需要大量校准且可扩展性可能受限。",
+      "• 复现难度: 中等偏高 - 需要特定机器人硬件(PAMY2)和复杂的气动人工肌肉设置，但开源代码可能降低技术门槛。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ICML",
+      "status": "Accepted"
+    }
+  },
+  {
     "id": "2604.08537v1",
     "title": "Meta-learning In-Context Enables Training-Free Cross Subject Brain Decoding",
     "pdf_url": "https://arxiv.org/pdf/2604.08537v1",
