@@ -1,5 +1,361 @@
 [
   {
+    "id": "2604.11807v1",
+    "title": "Physics-Informed State Space Models for Reliable Solar Irradiance Forecasting in Off-Grid Systems",
+    "pdf_url": "https://arxiv.org/pdf/2604.11807v1",
+    "published": "2026-04-13",
+    "crawled_at": "2026-04-14 20:39:17",
+    "ai_score": 8.5,
+    "translated_title": "基于物理信息状态空间模型的离网系统可靠太阳辐照度预测",
+    "summary_en": [
+      "• Model Architecture: Introduces the Thermodynamic Liquid Manifold Network, which projects 15 meteorological and geometric variables into a Koopman-linearized Riemannian manifold, integrating a Spectral Calibration unit and a multiplicative Thermodynamic Alpha-Gate to enforce celestial geometry compliance.",
+      "• Data used: Validated against a five-year dataset in a severe semi-arid climate, utilizing meteorological and geometric variables for solar irradiance forecasting.",
+      "• Performance metrics: Achieves an RMSE of 18.31 Wh/m2, Pearson correlation of 0.988, zero-magnitude nocturnal error across 1826 testing days, and sub-30-minute phase response during high-frequency transients with 63,458 trainable parameters."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出热力学液体流形网络，通过Koopman线性化黎曼流形映射15个气象和几何变量，结合光谱校准单元和热力学Alpha门，强制符合天体几何约束。",
+      "• 数据来源: 基于五年期半干旱气候数据集，使用气象和几何变量进行太阳辐照度预测验证。",
+      "• 主要结论: 模型在测试中实现RMSE 18.31 Wh/m2、皮尔逊相关系数0.988，夜间误差为零，高频瞬态响应低于30分钟，参数仅63,458个，适用于边缘部署。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for renewable energy trading and microgrid optimization due to zero-lag synchronization and strict physical consistency, potentially reducing forecasting errors in volatile conditions.",
+      "• Implementation Risk: Moderate; requires specialized meteorological data and edge-computing integration, with risk in scaling to diverse climates or real-time deployment in resource-constrained systems.",
+      "• Novelty: Significant; combines Koopman operator theory with thermodynamic constraints in a lightweight architecture, addressing phase lag and nocturnal anomalies not fully solved in prior deep learning models."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将Koopman算子理论与热力学约束结合于轻量级架构，有效解决相位滞后和夜间异常，在物理一致性建模方面有突破。",
+      "• 实盘坑: 需依赖特定气象数据，边缘部署可能受计算资源限制，且在不同气候条件下的泛化性未充分验证。",
+      "• 复现难度: 中等偏高；涉及复杂流形映射和热力学门控机制，需要专业领域知识和精确数据校准。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2604.11805v1",
+    "title": "Solving Physics Olympiad via Reinforcement Learning on Physics Simulators",
+    "pdf_url": "https://arxiv.org/pdf/2604.11805v1",
+    "published": "2026-04-13",
+    "crawled_at": "2026-04-14 20:39:32",
+    "ai_score": 7.5,
+    "translated_title": "通过物理模拟器上的强化学习解决物理奥林匹克竞赛问题",
+    "summary_en": [
+      "• Model Architecture: Uses LLMs (likely DeepSeek-R1 variants) trained with reinforcement learning on synthetic physics data generated from simulators.",
+      "• Data used: Synthetic question-answer pairs created from random scenes in physics engines (e.g., PyBullet, MuJoCo), with no reliance on internet-scale QA datasets.",
+      "• Performance metrics: Achieves 5-10 percentage point improvement on International Physics Olympiad (IPhO) problems in zero-shot sim-to-real transfer, demonstrating scalable data generation."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于LLM（如DeepSeek-R1变体），采用强化学习在合成物理数据上进行训练。",
+      "• 数据来源: 通过物理引擎（如PyBullet、MuJoCo）生成随机场景，创建合成问答对，不依赖互联网规模QA数据。",
+      "• 主要结论: 在零样本模拟到真实迁移中，国际物理奥林匹克（IPhO）问题性能提升5-10个百分点，证明物理模拟器可作为可扩展数据生成器。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; simulators enable scalable training for physical reasoning, potentially applicable to financial modeling with physics-inspired simulations (e.g., market dynamics).",
+      "• Implementation Risk: High; sim-to-real transfer may fail in complex real-world scenarios, and synthetic data quality depends heavily on simulator fidelity.",
+      "• Novelty: High; innovative use of physics simulators as data generators for LLM training, addressing data scarcity in specialized domains like physics."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；首次将物理模拟器用作LLM训练的数据生成器，解决物理等领域数据稀缺问题，方法新颖。",
+      "• 实盘坑: 高；模拟到真实迁移在复杂场景中可能失效，合成数据质量严重依赖模拟器保真度，实盘应用风险大。",
+      "• 复现难度: 中等；需物理模拟器和强化学习框架，但代码已开源，复现可行但计算资源要求较高。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2604.11791v1",
+    "title": "A Mechanistic Analysis of Looped Reasoning Language Models",
+    "pdf_url": "https://arxiv.org/pdf/2604.11791v1",
+    "published": "2026-04-13",
+    "crawled_at": "2026-04-14 20:39:51",
+    "ai_score": 7.5,
+    "translated_title": "循环推理语言模型的机制分析",
+    "summary_en": [
+      "• Model Architecture: Analyzes looped reasoning language models where LLM layers are cyclically connected in latent dimension, studying cyclic recurrence and fixed-point convergence",
+      "• Data used: No specific datasets mentioned; focuses on internal dynamics and mechanistic analysis of model behavior across different architectural configurations",
+      "• Performance metrics: Investigates stability of attention-head behavior, emergence of cyclic fixed points, and comparison of inference stages between looped and feedforward models",
+      "• Key findings: Recurrent blocks learn inference stages mirroring feedforward models, repeating them with each iteration; fixed-point convergence leads to consistent cyclic trajectories"
+    ],
+    "summary_cn": [
+      "• 核心模型: 分析循环推理语言模型，将LLM层在潜在维度上循环连接，研究循环递归和定点收敛机制",
+      "• 数据来源: 未提及具体数据集；专注于不同架构配置下模型内部动态和机制分析",
+      "• 主要结论: 循环块学习与前馈模型相似的推理阶段，每次迭代重复这些阶段；定点收敛导致潜在空间中的一致循环轨迹",
+      "• 机制发现: 注意力头行为在达到定点时稳定化，循环块大小、输入注入和归一化影响循环定点的出现和稳定性"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - provides mechanistic insights that could inform more efficient reasoning architectures, potentially reducing computational costs while maintaining performance",
+      "• Implementation Risk: High - cyclic architectures introduce stability challenges; fixed-point convergence requirements may limit practical deployment without careful tuning",
+      "• Novelty: Significant - offers first systematic analysis of internal dynamics in looped reasoning models, bridging mechanistic interpretability with architectural design",
+      "• Practical limitations: Findings are primarily analytical; lacks empirical validation on large-scale reasoning benchmarks or comparison to state-of-the-art methods"
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次系统分析循环推理模型的内部动态，将机制可解释性与架构设计联系起来，揭示循环递归的定点收敛特性",
+      "• 实盘坑: 循环架构引入稳定性风险，定点收敛要求可能限制实际部署；缺乏大规模推理基准的实证验证",
+      "• 复现难度: 中等偏高 - 需要实现复杂的循环连接和潜在维度操作，定点收敛机制对超参数敏感，调试成本较高",
+      "• 应用局限: 发现主要为分析性，未与最先进方法进行性能比较，实际推理效率提升未量化验证"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2604.11784v1",
+    "title": "ClawGUI: A Unified Framework for Training, Evaluating, and Deploying GUI Agents",
+    "pdf_url": "https://arxiv.org/pdf/2604.11784v1",
+    "published": "2026-04-13",
+    "crawled_at": "2026-04-14 20:40:13",
+    "ai_score": 8.2,
+    "translated_title": "ClawGUI：一个用于训练、评估和部署GUI代理的统一框架",
+    "summary_en": [
+      "• Model Architecture: ClawGUI integrates three components: ClawGUI-RL for reinforcement learning with GiGPO and Process Reward Model, ClawGUI-Eval for standardized evaluation across benchmarks, and ClawGUI-Agent for deployment on mobile platforms with hybrid CLI-GUI control and persistent memory.",
+      "• Data used: The framework leverages 6 benchmarks and over 11 models for evaluation, with training data derived from GUI interactions (taps, swipes, keystrokes) on virtual environments and real physical devices, though specific datasets are not detailed.",
+      "• Performance metrics: ClawGUI-2B achieves a 17.1% Success Rate on MobileWorld GUI-Only, outperforming the MAI-UI-2B baseline by 6.0%, with ClawGUI-Eval achieving 95.8% reproduction against official baselines."
+    ],
+    "summary_cn": [
+      "• 核心模型: ClawGUI整合了三个模块：ClawGUI-RL（基于GiGPO和过程奖励模型的强化学习）、ClawGUI-Eval（标准化评估管道）和ClawGUI-Agent（支持混合CLI-GUI控制和持久记忆的移动端部署）。",
+      "• 数据来源: 使用6个基准测试和超过11个模型进行评估，训练数据来自虚拟环境和真实物理设备上的GUI交互（如点击、滑动、按键），但未具体说明数据集细节。",
+      "• 主要结论: ClawGUI-2B在MobileWorld GUI-Only上达到17.1%的成功率，比同规模MAI-UI-2B基线高6.0%，且评估管道复现率达到95.8%。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the framework addresses infrastructure gaps in GUI agents, potentially enabling scalable automation for niche applications, but direct financial alpha is limited without specific trading or market applications.",
+      "• Implementation Risk: High; deploying agents on real devices (Android, HarmonyOS, iOS) introduces stability and compatibility issues, and the reliance on RL training may suffer from environment instability in production settings.",
+      "• Novelty: High; ClawGUI is the first open-source framework to unify training, evaluation, and deployment for GUI agents, with innovations like GiGPO integration and standardized benchmarks, though it builds on existing RL and GUI automation concepts."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；首次提出开源统一框架，整合训练、评估和部署，引入GiGPO和标准化评估管道，但基于现有RL和GUI自动化技术。",
+      "• 实盘坑: 高；在真实设备部署可能面临稳定性和兼容性问题，RL训练的环境不稳定性风险大，且缺乏金融应用直接验证。",
+      "• 复现难度: 中等；开源框架和95.8%复现率降低难度，但需要虚拟环境和真实设备设置，可能增加技术门槛。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.11773v1",
+    "title": "Autonomous Diffractometry Enabled by Visual Reinforcement Learning",
+    "pdf_url": "https://arxiv.org/pdf/2604.11773v1",
+    "published": "2026-04-13",
+    "crawled_at": "2026-04-14 20:40:28",
+    "ai_score": 7.5,
+    "translated_title": "基于视觉强化学习的自主衍射测量技术",
+    "summary_en": [
+      "• Model Architecture: Model-free reinforcement learning framework where an agent learns to interpret Laue diffraction patterns without prior crystallography knowledge",
+      "• Data used: Laue diffraction patterns from single crystals across different symmetry classes, with no human-labeled training data required",
+      "• Performance metrics: Achieves time-efficient crystal alignment comparable to human strategies, demonstrating generalization across multiple crystal symmetry classes",
+      "• Key innovation: Autonomous system that bypasses traditional diffraction theory to directly navigate towards high-symmetry orientations"
+    ],
+    "summary_cn": [
+      "• 核心模型: 无模型强化学习框架，智能体直接从劳厄衍射图案中学习，无需晶体学先验知识",
+      "• 数据来源: 多种对称性类别单晶的劳厄衍射图案，无需人工标注训练数据",
+      "• 主要结论: 实现与人类策略相当的时间高效晶体对准，在多种晶体对称性类别中展现泛化能力",
+      "• 技术突破: 绕过传统衍射理论，直接导航至高对称性取向的自主系统"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - Could enable automated materials discovery workflows but limited direct financial applications",
+      "• Implementation Risk: High - Experimental hardware integration challenges and real-world diffraction pattern variability not addressed",
+      "• Novelty: High - First demonstration of reinforcement learning for direct diffraction pattern interpretation without theoretical models",
+      "• Scalability Concerns: Unclear how system handles noisy experimental data or rare crystal structures"
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次实现无需理论模型的强化学习直接解读衍射图案，在材料科学自动化领域具有突破性",
+      "• 实盘坑: 实验硬件集成复杂，真实衍射图案的噪声和变异性未充分验证，实际部署风险高",
+      "• 复现难度: 中等偏高，需要专业衍射设备和晶体样本，但算法框架相对透明",
+      "• 应用局限: 目前主要面向材料科学实验自动化，金融领域直接应用场景有限"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "Nature Communications",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2604.11762v1",
+    "title": "MosaicMRI: A Diverse Dataset and Benchmark for Raw Musculoskeletal MRI",
+    "pdf_url": "https://arxiv.org/pdf/2604.11762v1",
+    "published": "2026-04-13",
+    "crawled_at": "2026-04-14 20:40:45",
+    "ai_score": 7.8,
+    "translated_title": "MosaicMRI：用于原始肌肉骨骼MRI的多样化数据集与基准",
+    "summary_en": [
+      "• Model Architecture: Uses VarNet as baseline for accelerated MRI reconstruction tasks, with experiments on scaling behavior regarding model capacity and dataset size.",
+      "• Data used: MosaicMRI dataset comprising 2,671 volumes and 80,156 slices of fully sampled raw musculoskeletal MRI measurements, with diversity in orientation, imaging contrasts, anatomies, and acquisition coils.",
+      "• Performance metrics: Models trained on combined anatomies outperform anatomy-specific models in low-sample regimes, and cross-anatomy generalization is evaluated with performance under domain shifts depending on training set size, anatomy, and protocol factors."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用VarNet作为加速MRI重建任务的基线，研究模型容量和数据集大小的扩展行为。",
+      "• 数据来源: MosaicMRI数据集包含2,671个体积和80,156个切片的原始肌肉骨骼MRI测量，在方向、成像对比度、解剖结构和采集线圈方面具有多样性。",
+      "• 主要结论: 在低样本情况下，基于组合解剖结构训练的模型优于特定解剖结构模型，且跨解剖结构泛化性能受训练集大小、解剖结构和协议因素影响。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the dataset enables better generalization in MRI reconstruction, potentially improving medical imaging efficiency, but direct financial alpha is indirect.",
+      "• Implementation Risk: High; domain shifts and protocol-specific factors pose challenges for real-world deployment, requiring careful calibration across diverse anatomies.",
+      "• Novelty: High; introduces the largest open-source raw MSK MRI dataset, with insights into cross-anatomical correlations and scaling behavior, advancing beyond brain/knee-focused studies."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；推出最大开源原始肌肉骨骼MRI数据集，揭示跨解剖结构相关性和扩展行为，超越脑/膝成像研究。",
+      "• 实盘坑: 高；领域偏移和协议特定因素带来部署挑战，需在不同解剖结构间精细校准，风险较大。",
+      "• 复现难度: 中等；数据集公开可用，但需要专业MRI设备和计算资源，实验设置复杂，可能耗时。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2604.11748v1",
+    "title": "LangFlow: Continuous Diffusion Rivals Discrete in Language Modeling",
+    "pdf_url": "https://arxiv.org/pdf/2604.11748v1",
+    "published": "2026-04-13",
+    "crawled_at": "2026-04-14 20:41:12",
+    "ai_score": 8.2,
+    "translated_title": "LangFlow：连续扩散模型在语言建模中媲美离散模型",
+    "summary_en": [
+      "• Model Architecture: LangFlow is a continuous diffusion language model (DLM) that bridges embedding-space DLMs with Flow Matching using Bregman divergence, featuring three key innovations: an ODE-based NLL bound for evaluation, an information-uniform noise scheduler based on a learnable Gumbel distribution, and a training protocol with self-conditioning.",
+      "• Data used: The model was evaluated on standard language modeling benchmarks, including LM1B and OpenWebText, which are widely used datasets for assessing perplexity and zero-shot transfer performance in NLP tasks.",
+      "• Performance metrics: LangFlow achieves a perplexity (PPL) of 30.0 on LM1B and 24.6 on OpenWebText, matching top discrete DLMs at comparable scale and surpassing autoregressive baselines in zero-shot transfer across multiple benchmarks.",
+      "• Key conclusion: The paper demonstrates that continuous diffusion models can rival discrete counterparts in language modeling, closing a performance gap and establishing continuous diffusion as a competitive paradigm for future research and applications."
+    ],
+    "summary_cn": [
+      "• 核心模型: LangFlow是一种连续扩散语言模型，通过Bregman散度将嵌入空间DLM与流匹配连接，包含三个创新：基于ODE的NLL边界评估、基于可学习Gumbel分布的信息均匀噪声调度器，以及带自条件化的训练协议。",
+      "• 数据来源: 使用标准语言建模基准数据集进行评估，包括LM1B和OpenWebText，这些数据集广泛用于NLP任务中的困惑度和零样本迁移性能测试。",
+      "• 主要结论: LangFlow在LM1B上达到30.0的困惑度，在OpenWebText上达到24.6，在可比规模下匹配顶级离散DLM，并在多个基准测试中超越自回归基线，证明连续扩散模型在语言建模中具有竞争力。",
+      "• 技术亮点: 引入信息均匀原则优化噪声调度，通过自条件化提升似然和样本质量，为连续扩散语言模型提供了新的评估和训练框架。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for generating novel text generation strategies in quantitative finance, such as synthetic data creation for backtesting or sentiment analysis, due to its competitive performance and zero-shot transfer capabilities, which could enhance NLP-driven trading models.",
+      "• Implementation Risk: Moderate risk due to reliance on complex diffusion and flow matching techniques, which may require significant computational resources and expertise to deploy in production environments, potentially limiting scalability and real-time application in high-frequency contexts.",
+      "• Novelty: High novelty as it is the first continuous DLM to rival discrete diffusion in language modeling, introducing innovative methods like the ODE-based NLL bound and learnable Gumbel scheduler, pushing the boundaries of diffusion-based NLP research.",
+      "• Practical Limitations: The model's performance, while strong, is benchmarked against specific datasets; generalization to noisy financial text data (e.g., earnings reports or social media) may require additional fine-tuning and validation, posing integration challenges."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次实现连续扩散语言模型媲美离散模型，引入基于ODE的NLL边界和可学习Gumbel调度器等创新方法，在扩散模型NLP研究中具有突破性意义。",
+      "• 实盘坑: 依赖复杂的扩散和流匹配技术，计算资源需求高，部署到生产环境可能面临可扩展性和实时性挑战，特别是在高频交易场景中。",
+      "• 复现难度: 中等偏高，需要深入理解Bregman散度和Flow Matching理论，代码开源但可能涉及大量超参数调优，对团队技术能力要求较高。",
+      "• 应用风险: 模型在标准数据集上表现优异，但泛化到金融文本数据（如财报或社交媒体）可能需要额外微调，存在数据适配和验证的不确定性。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2604.11744v1",
+    "title": "KL Divergence Between Gaussians: A Step-by-Step Derivation for the Variational Autoencoder Objective",
+    "pdf_url": "https://arxiv.org/pdf/2604.11744v1",
+    "published": "2026-04-13",
+    "crawled_at": "2026-04-14 20:41:29",
+    "ai_score": 7.5,
+    "translated_title": "高斯分布间KL散度：变分自编码器目标函数的逐步推导",
+    "summary_en": [
+      "• Model Architecture: The paper focuses on the mathematical derivation of the KL divergence between Gaussian distributions, specifically within the context of Variational Autoencoders (VAEs), which use an encoder-decoder framework with a latent space regularized by this divergence.",
+      "• Data used: No specific datasets are mentioned; the work is theoretical, deriving closed-form expressions applicable to any data modeled with Gaussian distributions in VAEs.",
+      "• Performance metrics: The paper does not present empirical results; instead, it discusses the impact of the derived KL divergence terms on training dynamics, such as regularization and latent space structure."
+    ],
+    "summary_cn": [
+      "• 核心模型: 本文专注于高斯分布间Kullback-Leibler（KL）散度的数学推导，特别应用于变分自编码器（VAE），该模型采用编码器-解码器架构，通过此散度对潜在空间进行正则化。",
+      "• 数据来源: 未提及具体数据集；这是一项理论工作，推导出的闭式表达式适用于任何使用高斯分布建模的VAE数据。",
+      "• 主要结论: 推导了单变量和多变量（对角协方差）高斯分布间KL散度的闭式表达式，并讨论了各项对模型训练动态的影响，如正则化和潜在空间结构。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low; the paper is a derivation of a well-known result in machine learning, offering no new predictive models or strategies for generating alpha in financial markets.",
+      "• Implementation Risk: Low; the derived formulas are standard and widely used in VAE implementations, with minimal risk if applied correctly in practice.",
+      "• Novelty: Low; the work presents a step-by-step derivation of an existing result, lacking original contributions or novel insights beyond educational value."
+    ],
+    "verdict_cn": [
+      "• 创新点: 低；本文推导了机器学习中已知的结果，未提出新的预测模型或金融市场alpha生成策略，创新性有限。",
+      "• 实盘坑: 低；推导的公式是VAE实现中的标准内容，正确应用时实操风险较小，但需注意高斯假设在实际数据中的适用性。",
+      "• 复现难度: 低；作为理论推导，复现难度低，适合教育目的，但无复杂实验或代码需求。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.11730v1",
+    "title": "Ambivalence/Hesitancy Recognition in Videos for Personalized Digital Health Interventions",
+    "pdf_url": "https://arxiv.org/pdf/2604.11730v1",
+    "published": "2026-04-13",
+    "crawled_at": "2026-04-14 20:41:44",
+    "ai_score": 5.8,
+    "translated_title": "视频中的矛盾/犹豫识别用于个性化数字健康干预",
+    "summary_en": [
+      "• Model Architecture: Explores deep learning models for ambivalence/hesitancy recognition in videos, covering supervised learning, unsupervised domain adaptation, and zero-shot inference via LLMs.",
+      "• Data used: Experiments conducted on the BAH video dataset specifically designed for A/H recognition.",
+      "• Performance metrics: Results show limited performance, indicating current models are insufficient for accurate A/H recognition.",
+      "• Key finding: Identifies need for better spatio-temporal and multimodal fusion methods to leverage conflicts within/across modalities."
+    ],
+    "summary_cn": [
+      "• 核心模型: 探索深度学习模型用于视频中的矛盾/犹豫识别，涵盖监督学习、无监督域适应和通过大语言模型的零样本推理。",
+      "• 数据来源: 使用专门为A/H识别设计的BAH视频数据集进行实验。",
+      "• 主要结论: 结果显示性能有限，表明当前模型不足以准确识别矛盾/犹豫。",
+      "• 关键发现: 需要更好的时空和多模态融合方法来利用模态内/跨模态的冲突。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low - Limited performance suggests models are not yet ready for real-world deployment; more research needed for practical applications.",
+      "• Implementation Risk: High - Subtle emotion recognition in videos is challenging; current methods struggle with accuracy and generalization.",
+      "• Novelty: Moderate - Application of multimodal deep learning to A/H recognition is novel, but technical approach is standard.",
+      "• Scalability: Questionable - Personalization via domain adaptation adds complexity; may not scale effectively in production."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等 - 将多模态深度学习应用于矛盾/犹豫识别是新颖的，但技术方法较为标准。",
+      "• 实盘坑: 高 - 视频中的细微情绪识别极具挑战性；当前方法在准确性和泛化性方面存在困难。",
+      "• 复现难度: 中等 - 需要BAH数据集和深度学习框架，但方法描述清晰，复现可行。",
+      "• 应用前景: 有限 - 性能不足表明模型尚未准备好实际部署；需要更多研究才能实现实用化。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.11729v1",
+    "title": "Universality of first-order methods on random and deterministic matrices",
+    "pdf_url": "https://arxiv.org/pdf/2604.11729v1",
+    "published": "2026-04-13",
+    "crawled_at": "2026-04-14 20:41:59",
+    "ai_score": 8.2,
+    "translated_title": "一阶方法在随机和确定性矩阵上的普适性",
+    "summary_en": [
+      "• Model Architecture: Analyzes general first-order methods (GFOM) using diagrammatic expansions and traffic distributions to characterize iterative algorithms with matrix-vector multiplications and nonlinearities.",
+      "• Data used: Focuses on theoretical analysis of input matrices including random matrices, deterministic matrices (e.g., Walsh-Hadamard, discrete sine/cosine transforms), and their traffic distributions without empirical datasets.",
+      "• Performance metrics: Resolves conjectures on GFOM dynamics for deterministic matrices, designs a new AMP iteration with Gaussian conditional dynamics, and provides combinatorial interpretation of Onsager correction for broader input classes."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于图展开和交通分布分析一般一阶方法（GFOM），涵盖矩阵-向量乘法和非线性迭代算法。",
+      "• 数据来源: 理论分析输入矩阵，包括随机矩阵、确定性矩阵（如沃尔什-哈达玛、离散正弦/余弦变换矩阵）及其交通分布，无实证数据。",
+      "• 主要结论: 解决了确定性矩阵上GFOM动力学的长期猜想，设计了新的AMP迭代算法，统一了先前变体，并扩展了高斯条件动力学到更广泛的输入类型。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; theoretical insights into algorithm universality could inform robust optimization strategies in high-dimensional finance, but direct alpha generation requires empirical validation.",
+      "• Implementation Risk: High; relies on abstract mathematical constructs (traffic distributions) that may be difficult to translate to practical trading systems without significant domain expertise.",
+      "• Novelty: High; introduces traffic distribution framework to unify analysis of random and deterministic matrices, addressing open problems in AMP literature and offering new algorithmic designs."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；提出交通分布框架，统一分析随机和确定性矩阵，解决了AMP领域长期开放问题，并设计了新算法变体。",
+      "• 实盘坑: 高；依赖抽象数学概念，实际交易系统转化需深厚数学功底，且缺乏实证验证，风险较大。",
+      "• 复现难度: 中高；理论推导复杂，涉及组合解释和条件高斯动力学，但算法设计相对清晰，适合学术复现而非直接应用。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
     "id": "2604.09544v1",
     "title": "Large Language Models Generate Harmful Content Using a Distinct, Unified Mechanism",
     "pdf_url": "https://arxiv.org/pdf/2604.09544v1",
