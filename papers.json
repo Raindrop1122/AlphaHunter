@@ -1,5 +1,351 @@
 [
   {
+    "id": "2604.14142v1",
+    "title": "From $P(y|x)$ to $P(y)$: Investigating Reinforcement Learning in Pre-train Space",
+    "pdf_url": "https://arxiv.org/pdf/2604.14142v1",
+    "published": "2026-04-15",
+    "crawled_at": "2026-04-16 20:35:40",
+    "ai_score": 8.2,
+    "translated_title": "从P(y|x)到P(y)：探索预训练空间中的强化学习",
+    "summary_en": [
+      "• Model Architecture: Introduces PreRL (Pre-train Space RL) that optimizes the marginal distribution P(y) directly, with a key mechanism called Negative Sample Reinforcement (NSR) that prunes incorrect reasoning spaces and stimulates reflective behaviors. The paper also proposes Dual Space RL (DSRL), a Policy Reincarnation strategy that initializes models with NSR-PreRL before transitioning to standard RL for fine-grained optimization.",
+      "• Data used: The paper leverages reward-driven online updates applied directly to P(y), moving beyond static corpora used in conventional pre-training. This addresses distribution shift issues by enabling active learning in the pre-train space.",
+      "• Performance metrics: NSR-PreRL increases transition and reflection thoughts by 14.89x and 6.54x, respectively. Extensive experiments show that DSRL consistently outperforms strong baselines, demonstrating effective steering of policies toward refined correct reasoning subspaces."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出PreRL（预训练空间强化学习），直接优化边际分布P(y)，并引入负样本强化（NSR）机制，有效剪枝错误推理空间并激发内生反思行为。进一步提出双空间强化学习（DSRL），采用策略重生策略，先用NSR-PreRL初始化模型扩展推理视野，再转向标准RL进行细粒度优化。",
+      "• 数据来源: 采用奖励驱动的在线更新直接应用于P(y)，超越传统预训练依赖的静态语料库。通过预训练空间中的主动学习解决分布偏移问题，提升推理能力。",
+      "• 主要结论: NSR-PreRL将转换思维和反思思维分别提升14.89倍和6.54倍。大量实验证明DSRL持续优于强基线，表明预训练空间剪枝能有效引导策略进入精炼的正确推理子空间。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for enhancing reasoning in LLMs by optimizing P(y) directly, which addresses bottlenecks in standard RLVR. The NSR mechanism and DSRL strategy could lead to more efficient and robust AI systems in financial NLP applications, such as sentiment analysis or automated report generation.",
+      "• Implementation Risk: Moderate risk due to the complexity of implementing online updates in pre-train space and the need for careful tuning of the transition from NSR-PreRL to standard RL. Potential issues include computational overhead and stability during the policy reincarnation phase.",
+      "• Novelty: High novelty in proposing PreRL as a surrogate for standard RL by theoretically and empirically validating gradient alignment between log P(y) and log P(y|x). The introduction of NSR and DSRL offers innovative approaches to reasoning enhancement in pre-trained models."
+    ],
+    "verdict_cn": [
+      "• 创新点: 通过理论和实证验证log P(y)与log P(y|x)的梯度对齐，提出PreRL作为标准RL的可行替代方案。引入NSR机制和DSRL策略，在预训练空间中实现主动学习和策略优化，显著提升模型推理能力。",
+      "• 实盘坑: 实施风险中等，需在预训练空间实现在线更新，且从NSR-PreRL过渡到标准RL需精细调参。可能面临计算开销大、策略重生阶段稳定性问题，以及奖励函数设计的挑战。",
+      "• 复现难度: 较高难度，需要深入理解预训练空间优化和强化学习理论，具备大规模计算资源进行实验。论文未提供完整代码或数据集细节，可能增加复现障碍。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2604.14140v1",
+    "title": "LongCoT: Benchmarking Long-Horizon Chain-of-Thought Reasoning",
+    "pdf_url": "https://arxiv.org/pdf/2604.14140v1",
+    "published": "2026-04-15",
+    "crawled_at": "2026-04-16 20:36:03",
+    "ai_score": 8.2,
+    "translated_title": "LongCoT：长视野思维链推理基准测试",
+    "summary_en": [
+      "• Model Architecture: The paper introduces LongCoT, a benchmark designed to evaluate long-horizon chain-of-thought reasoning in frontier language models, focusing on their ability to manage complex, interdependent reasoning steps over extended token sequences.",
+      "• Data used: The benchmark comprises 2,500 expert-designed problems across domains including chemistry, mathematics, computer science, chess, and logic, each requiring navigation of reasoning graphs with tens to hundreds of thousands of tokens.",
+      "• Performance metrics: At release, top models like GPT and Gemini achieved low accuracy (GPT 5.2: 9.8%; Gemini 3 Pro: 6.1%), highlighting significant limitations in long-horizon reasoning capabilities.",
+      "• Key insight: The benchmark isolates long-horizon reasoning by ensuring each local step is tractable for models, making failures indicative of broader planning and management deficiencies."
+    ],
+    "summary_cn": [
+      "• 核心模型: 该论文提出LongCoT基准，用于评估前沿语言模型在长视野思维链推理方面的能力，重点关注模型在管理复杂、相互依赖的推理步骤方面的表现。",
+      "• 数据来源: 基准包含2,500个专家设计的问题，涵盖化学、数学、计算机科学、国际象棋和逻辑等领域，每个问题需要处理数万到数十万令牌的推理图。",
+      "• 主要结论: 发布时，顶级模型如GPT和Gemini的准确率较低（GPT 5.2: 9.8%；Gemini 3 Pro: 6.1%），揭示了当前模型在长视野推理能力上的显著不足。",
+      "• 方法特点: 通过确保每个局部步骤对模型可解，基准隔离了长视野推理问题，使失败反映了更广泛的规划和管理缺陷。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for identifying and improving long-horizon reasoning in AI models, which could enhance autonomous decision-making in complex financial scenarios like multi-step trading strategies or risk assessment chains.",
+      "• Implementation Risk: Moderate risk due to the benchmark's focus on academic problems; translating insights to real-world financial applications may require domain-specific adaptation and validation.",
+      "• Novelty: High novelty in providing a scalable, rigorous benchmark for long-horizon reasoning, addressing a critical gap in current AI evaluation and offering a clear metric for tracking model progress.",
+      "• Practical limitation: The benchmark's reliance on expert-designed problems may not fully capture the stochastic and dynamic nature of financial markets, potentially limiting direct applicability."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高创新性，提供了可扩展的、严谨的长视野推理基准，填补了当前AI评估的关键空白，并为跟踪模型进展提供了明确指标。",
+      "• 实盘坑: 中等风险，基准侧重于学术问题，将洞察应用于实际金融场景可能需要领域特定的调整和验证，且可能无法完全捕捉金融市场的随机性和动态性。",
+      "• 复现难度: 中等难度，基准数据公开且问题设计清晰，但实现和评估需要前沿模型资源和专业知识，可能增加复现成本和时间。",
+      "• 应用挑战: 在金融领域直接应用时，需考虑市场噪音和实时性要求，可能削弱基准的预测能力。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.14137v1",
+    "title": "From Feelings to Metrics: Understanding and Formalizing How Users Vibe-Test LLMs",
+    "pdf_url": "https://arxiv.org/pdf/2604.14137v1",
+    "published": "2026-04-15",
+    "crawled_at": "2026-04-16 20:36:21",
+    "ai_score": 7.2,
+    "translated_title": "从感受到指标：理解并形式化用户如何对LLM进行氛围测试",
+    "summary_en": [
+      "• Model Architecture: The paper does not propose a new model architecture but introduces a formalized evaluation pipeline that personalizes prompts and uses user-aware subjective criteria for comparing LLM outputs.",
+      "• Data used: The study analyzes two empirical resources: a survey of user evaluation practices and a collection of model comparison reports from blogs and social media, with experiments conducted on coding benchmarks.",
+      "• Performance metrics: The research finds that combining personalized prompts and user-aware evaluation can alter model preferences, indicating that formalized vibe-testing bridges benchmark scores and real-world experience."
+    ],
+    "summary_cn": [
+      "• 核心模型: 本文未提出新模型架构，而是引入一个形式化的评估流程，通过个性化提示和用户感知的主观标准来比较LLM输出。",
+      "• 数据来源: 研究分析了两类实证资源：用户评估实践的调查，以及来自博客和社交媒体的模型比较报告，并在编码基准上进行了实验。",
+      "• 主要结论: 研究发现，结合个性化提示和用户感知评估可以改变模型偏好，表明形式化的氛围测试能弥合基准分数与现实世界经验之间的差距。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; formalizing informal evaluation methods like vibe-testing could enhance model selection for specific use cases, potentially improving real-world performance in niche applications.",
+      "• Implementation Risk: High; subjective criteria and personalized prompts introduce variability and reproducibility challenges, making it difficult to scale or standardize across different users or contexts.",
+      "• Novelty: Moderate; the concept of vibe-testing is not new, but the formalization and systematic analysis of user practices offer a structured approach to incorporating subjective feedback into LLM evaluation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；氛围测试的概念并非全新，但对用户实践的形式化和系统分析提供了将主观反馈纳入LLM评估的结构化方法。",
+      "• 实盘坑: 高；主观标准和个性化提示引入变异性，导致可复现性挑战，难以在不同用户或场景中规模化或标准化。",
+      "• 复现难度: 中等；实验基于公开的编码基准和用户报告，但个性化流程依赖特定用户数据，可能增加复现复杂性。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.14128v1",
+    "title": "Rhetorical Questions in LLM Representations: A Linear Probing Study",
+    "pdf_url": "https://arxiv.org/pdf/2604.14128v1",
+    "published": "2026-04-15",
+    "crawled_at": "2026-04-16 20:36:41",
+    "ai_score": 7.2,
+    "translated_title": "LLM表征中的修辞问句：线性探测研究",
+    "summary_en": [
+      "• Model Architecture: Linear probing applied to large language model representations to analyze rhetorical questions, focusing on last-token representations as most stable for capturing rhetorical signals.",
+      "• Data used: Two social-media datasets with different discourse contexts, enabling cross-dataset transfer analysis and comparison of rhetorical phenomena across varied linguistic environments.",
+      "• Performance metrics: AUROC around 0.7-0.8 for detecting rhetorical questions, with linear separability from information-seeking questions within datasets, but limited overlap (below 0.2) in top-ranked instances across different probes.",
+      "• Key finding: Rhetorical questions are encoded by multiple linear directions emphasizing different cues (discourse-level stance vs. syntax-driven acts) rather than a single shared representation, challenging assumptions about transferability."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用线性探测方法分析大语言模型表征中的修辞问句，重点关注末词表征作为捕捉修辞信号最稳定的方式。",
+      "• 数据来源: 两个不同话语背景的社交媒体数据集，支持跨数据集迁移分析，比较不同语言环境下的修辞现象。",
+      "• 主要结论: 修辞问句在LLM表征中由多个线性方向编码，强调不同线索（如话语层面立场与句法驱动行为），而非单一共享方向，迁移性不意味着共享表征。",
+      "• 性能指标: 检测修辞问句的AUROC约0.7-0.8，数据集内与信息寻求问句线性可分，但不同探针间top实例重叠度常低于0.2。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate—insights into LLM interpretability could inform sentiment or stance detection in financial text, but direct trading alpha is limited without market linkage.",
+      "• Implementation Risk: High—findings are dataset-specific and probe-dependent; real-world financial data may exhibit different rhetorical patterns, risking model degradation.",
+      "• Novelty: High—challenges common assumptions about transferability in NLP, showing rhetorical questions are multi-directional, with implications for model robustness and fine-tuning strategies."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高—突破NLP中迁移性的常见假设，揭示修辞问句的多方向编码特性，对模型可解释性和鲁棒性研究有贡献。",
+      "• 实盘坑: 高—结果高度依赖数据集和探针选择，金融文本的修辞模式可能不同，直接应用易导致性能下降或过拟合。",
+      "• 复现难度: 中等—方法基于标准线性探测，但需复现社交媒体数据集和跨数据集分析，可能受数据可用性和预处理影响。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.14118v1",
+    "title": "Complex Interpolation of Matrices with an application to Multi-Manifold Learning",
+    "pdf_url": "https://arxiv.org/pdf/2604.14118v1",
+    "published": "2026-04-15",
+    "crawled_at": "2026-04-16 20:36:59",
+    "ai_score": 7.5,
+    "translated_title": "矩阵的复插值及其在多流形学习中的应用",
+    "summary_en": [
+      "• Model Architecture: The paper introduces a mathematical framework based on the interpolation of symmetric positive-definite matrices A and B using the operator A^(1-x)B^x for x in [0,1], focusing on spectral properties and eigenvector alignment.",
+      "• Data used: The theoretical analysis is applied to multiview data, where A and B represent covariance or similarity matrices from different views, aiming to identify common latent structures.",
+      "• Performance metrics: The key theoretical results include conditions for exact log-linearity of the operator norm, stability bounds for approximate log-linearity, and implications for aligning principal singular vectors with leading eigenvectors of both matrices."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于对称正定矩阵A和B的插值算子A^(1-x)B^x，研究其谱性质，用于分析多视图数据中的共同结构。",
+      "• 数据来源: 应用于多视图数据，A和B代表不同视图的协方差或相似性矩阵，旨在识别潜在的共同和差异结构。",
+      "• 主要结论: 精确对数线性等价于存在共享特征向量；近似对数线性强制主奇异向量与两矩阵的主特征向量对齐，为多流形学习提供理论依据。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the framework could enhance factor models by identifying common structures in financial time series or cross-asset correlations, but direct alpha generation is limited without empirical validation.",
+      "• Implementation Risk: High; the theoretical nature requires careful adaptation to noisy financial data, and computational complexity of matrix exponentials may pose scalability issues in high-dimensional settings.",
+      "• Novelty: High; the interpolation perspective for analyzing eigenvector alignment is innovative, offering a fresh approach to multi-manifold learning with potential cross-disciplinary applications."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；利用矩阵插值分析特征向量对齐，为多流形学习提供新视角，理论推导严谨，具有跨领域应用潜力。",
+      "• 实盘坑: 高；理论框架需适应金融数据的噪声和动态性，矩阵指数计算复杂，在高维场景下可能影响实时性能。",
+      "• 复现难度: 中等；核心数学推导清晰，但实现需处理数值稳定性和数据预处理，对量化团队的理论功底要求较高。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2604.14114v1",
+    "title": "ID and Graph View Contrastive Learning with Multi-View Attention Fusion for Sequential Recommendation",
+    "pdf_url": "https://arxiv.org/pdf/2604.14114v1",
+    "published": "2026-04-15",
+    "crawled_at": "2026-04-16 20:37:16",
+    "ai_score": 8.2,
+    "translated_title": "基于多视图注意力融合的ID与图视图对比学习用于序列推荐",
+    "summary_en": [
+      "• Model Architecture: MVCrec integrates sequential (ID-based) and graph-based views with three contrastive objectives (within sequential view, within graph view, across views) and a multi-view attention fusion module combining global and local attention mechanisms.",
+      "• Data used: Five real-world benchmark datasets (specific names not provided in abstract) with only interaction data available, no auxiliary information.",
+      "• Performance metrics: Outperforms 11 state-of-the-art baselines with improvements up to 14.44% in NDCG@10 and 9.22% in HitRatio@10."
+    ],
+    "summary_cn": [
+      "• 核心模型: MVCrec框架融合序列（ID）视图和图视图，包含三个对比学习目标（序列内、图内、跨视图）及结合全局与局部注意力的多视图注意力融合模块。",
+      "• 数据来源: 五个真实世界基准数据集，仅使用交互数据，无辅助信息。",
+      "• 主要结论: 在NDCG@10和HitRatio@10指标上优于11个先进基线，最高提升分别达14.44%和9.22%。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for improving recommendation accuracy in e-commerce and content platforms by leveraging complementary signals from different data views, though direct financial alpha generation requires integration with trading signals.",
+      "• Implementation Risk: Moderate risk due to reliance on interaction data only; performance may degrade in sparse data environments or when user behavior patterns shift rapidly.",
+      "• Novelty: Novel approach combining multi-view contrastive learning with attention fusion for sequential recommendation, addressing a gap in existing literature where ID and graph views are rarely jointly optimized."
+    ],
+    "verdict_cn": [
+      "• 创新点: 创新性地将多视图对比学习与注意力融合结合，针对序列推荐中ID与图视图的联合优化问题提出解决方案，填补了现有研究空白。",
+      "• 实盘坑: 仅依赖交互数据，在数据稀疏或用户行为快速变化时性能可能下降；需额外处理冷启动和动态环境适应问题。",
+      "• 复现难度: 中等难度，代码已开源，但需处理图构建和对比学习调参，对计算资源要求较高。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.14108v1",
+    "title": "Momentum Further Constrains Sharpness at the Edge of Stochastic Stability",
+    "pdf_url": "https://arxiv.org/pdf/2604.14108v1",
+    "published": "2026-04-15",
+    "crawled_at": "2026-04-16 20:37:32",
+    "ai_score": 7.5,
+    "translated_title": "动量进一步约束随机稳定性边缘的锐度",
+    "summary_en": [
+      "• Model Architecture: Analyzes Stochastic Gradient Descent (SGD) with momentum and mini-batch gradients, focusing on Edge of Stochastic Stability (EoSS) regimes and batch-size-dependent behavior.",
+      "• Data used: Theoretical analysis without specific dataset; relies on mathematical modeling of optimization dynamics in deep learning.",
+      "• Performance metrics: Introduces Batch Sharpness as a metric, showing convergence to two plateaus: lower plateau 2(1-β)/η at small batch sizes and higher plateau 2(1+β)/η at large batch sizes, with implications for stability thresholds."
+    ],
+    "summary_cn": [
+      "• 核心模型: 分析带动量和小批量梯度的随机梯度下降（SGD），聚焦于随机稳定性边缘（EoSS）机制和批次大小依赖行为。",
+      "• 数据来源: 理论分析，无具体数据集；基于深度学习优化动态的数学建模。",
+      "• 主要结论: 动量在小批次时放大随机波动，偏好平坦区域；在大批次时恢复稳定效应，偏好锐利区域，与全批次动态一致。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; provides insights into hyperparameter tuning for optimization algorithms, potentially improving model convergence in deep learning strategies, but direct financial alpha is limited.",
+      "• Implementation Risk: High; theoretical findings require empirical validation in real-world trading systems, and batch-size effects may be sensitive to market conditions.",
+      "• Novelty: High; introduces batch-size-dependent stability regimes for momentum in SGD, challenging single-threshold explanations and offering new perspectives on optimization dynamics."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；提出动量SGD的批次大小依赖稳定性机制，突破单一阈值解释，为优化动态提供新视角。",
+      "• 实盘坑: 高；理论结果需在真实交易系统中实证验证，批次大小效应可能对市场条件敏感，增加部署风险。",
+      "• 复现难度: 中等；基于数学推导，可复现性较好，但需深入理解优化理论和实验设置。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2604.14084v1",
+    "title": "TIP: Token Importance in On-Policy Distillation",
+    "pdf_url": "https://arxiv.org/pdf/2604.14084v1",
+    "published": "2026-04-15",
+    "crawled_at": "2026-04-16 20:37:51",
+    "ai_score": 8.2,
+    "translated_title": "TIP：在线策略蒸馏中的令牌重要性",
+    "summary_en": [
+      "• Model Architecture: Introduces TIP (Token Importance in on-Policy distillation), a two-axis taxonomy based on student entropy and teacher-student divergence for token selection in on-policy knowledge distillation (OPD).",
+      "• Data used: Evaluated on MATH-500 and AIME 2024/2025 datasets for mathematical reasoning, and DeepPlanning benchmark for long-horizon agentic planning, using teacher-student pairs from Qwen3, Llama, and Qwen2.5 models.",
+      "• Performance metrics: Achieved memory reduction up to 47% with entropy-based sampling (50% tokens), and near-baseline performance with <10% tokens for low-entropy, high-divergence cases; Q3-only training on <20% tokens surpassed full-token OPD in planning tasks."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出TIP（在线策略蒸馏中的令牌重要性）框架，基于学生模型熵和师生模型差异的双轴分类法，用于在线知识蒸馏中的令牌选择。",
+      "• 数据来源: 使用MATH-500和AIME 2024/2025数据集进行数学推理评估，DeepPlanning基准进行长程智能体规划测试，师生模型对包括Qwen3、Llama和Qwen2.5。",
+      "• 主要结论: 基于熵的采样（50%令牌）可减少高达47%的内存占用；低熵高差异令牌（<10%）训练接近全令牌基线；规划任务中Q3仅训练（<20%令牌）超越全令牌在线蒸馏。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High - Token-level efficiency gains (47% memory reduction) enable scaling of larger models under constrained GPU budgets, directly applicable to real-time inference and training optimization in financial NLP pipelines.",
+      "• Implementation Risk: Moderate - Dependency on teacher-student divergence requires stable teacher models; performance sensitive to hyperparameter tuning for entropy/divergence thresholds in dynamic market data environments.",
+      "• Novelty: Significant - Identifies overconfident tokens (low entropy, high divergence) as dense corrective signals, a nuanced insight beyond conventional uncertainty-based methods, with theoretical grounding for structural completeness."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著 - 发现过度自信令牌（低熵高差异）作为密集纠正信号，超越传统不确定性方法，提供理论解释结构完整性，为高效蒸馏开辟新路径。",
+      "• 实盘坑: 中等 - 依赖师生模型差异需稳定教师模型；熵/差异阈值超参调优对动态市场数据敏感；实际部署需处理实时推理延迟与模型同步问题。",
+      "• 复现难度: 低 - 基于开源OPD代码库（GitHub/HJSang/OPSD_OnPolicyDistillation）实现，实验设计清晰，使用标准数据集和模型，易于验证和扩展。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2604.14075v1",
+    "title": "Multistage Conditional Compositional Optimization",
+    "pdf_url": "https://arxiv.org/pdf/2604.14075v1",
+    "published": "2026-04-15",
+    "crawled_at": "2026-04-16 20:38:07",
+    "ai_score": 8.2,
+    "translated_title": "多阶段条件组合优化",
+    "summary_en": [
+      "• Model Architecture: Introduces Multistage Conditional Compositional Optimization (MCCO) as a new paradigm combining multistage stochastic programming and conditional stochastic optimization, focusing on minimizing nested conditional expectations and nonlinear cost functions.",
+      "• Data used: Theoretical framework with no specific empirical dataset mentioned; relies on Monte Carlo sampling techniques for scenario generation and computational efficiency.",
+      "• Performance metrics: Proposes multilevel Monte Carlo techniques that reduce scenario complexity from exponential to polynomial growth with desired accuracy, addressing the curse of dimensionality in nested sampling approaches."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出多阶段条件组合优化（MCCO）作为新范式，结合多阶段随机规划和条件随机优化，专注于最小化嵌套条件期望和非线性成本函数。",
+      "• 数据来源: 理论框架，未提及具体实证数据集；依赖蒙特卡洛采样技术进行场景生成和计算效率优化。",
+      "• 主要结论: 开发多级蒙特卡洛技术，将场景复杂度从指数级降低到多项式级增长，解决嵌套采样中的维度诅咒问题。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for applications in optimal stopping, linear-quadratic regulator problems, and distributionally robust contextual bandits, offering improved decision-making under uncertainty in financial contexts.",
+      "• Implementation Risk: Moderate risk due to theoretical complexity and reliance on advanced Monte Carlo techniques; practical implementation may require significant computational resources and expertise.",
+      "• Novelty: High novelty in combining multistage stochastic programming with conditional optimization, introducing a new paradigm that addresses exponential complexity growth with polynomial solutions."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将多阶段随机规划与条件优化结合，提出新范式，通过多项式复杂度解决方案处理指数级增长问题，具有理论突破性。",
+      "• 实盘坑: 理论复杂，依赖高级蒙特卡洛技术，实盘应用可能需要大量计算资源和专业知识，存在实施门槛。",
+      "• 复现难度: 中等偏高，需深入理解随机优化和蒙特卡洛方法，代码实现和参数调优可能具有挑战性。"
+    ],
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2604.14073v1",
+    "title": "Neural architectures for resolving references in program code",
+    "pdf_url": "https://arxiv.org/pdf/2604.14073v1",
+    "published": "2026-04-15",
+    "crawled_at": "2026-04-16 20:38:21",
+    "ai_score": 7.5,
+    "translated_title": "程序代码中引用解析的神经架构",
+    "summary_en": [
+      "• Model Architecture: Introduces novel sequence-to-sequence architectures for direct and indirect indexing by permutation, specifically designed to handle reference rewriting tasks in programming languages.",
+      "• Data used: Created synthetic benchmarks for indexing tasks, with models tested on examples up to ten times longer than baseline capabilities, and validated on real-world decompilation of switch statements.",
+      "• Performance metrics: Achieves 42% error rate reduction in decompilation tasks, demonstrates superior robustness and scalability compared to baseline models, and shows all architectural components are essential through ablation studies."
+    ],
+    "summary_cn": [
+      "• 核心模型: 针对程序语言中的引用重写问题，提出了新的序列到序列架构，专门处理直接和间接索引排列任务。",
+      "• 数据来源: 创建了索引任务的合成基准测试集，并在真实世界的switch语句反编译任务中进行了验证。",
+      "• 主要结论: 新架构在鲁棒性和可扩展性上显著优于基线模型，能将处理示例长度提升十倍，并在实际应用中降低42%的错误率。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - specialized architecture improvements could enhance automated code analysis tools, potentially applicable to algorithmic trading system maintenance or decompilation of financial software.",
+      "• Implementation Risk: High - real-world programming tasks are complex and noisy; synthetic benchmarks may not fully capture production environment challenges.",
+      "• Novelty: Limited - builds upon established sequence-to-sequence paradigms with task-specific modifications rather than fundamental architectural breakthroughs."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等 - 针对特定编程任务优化了现有序列模型架构，但未突破深度学习基础范式。",
+      "• 实盘坑: 较高 - 合成数据与实际编程环境存在差距，模型在复杂真实代码中的泛化能力待验证。",
+      "• 复现难度: 中等 - 架构描述清晰，但需要专业编程语言处理知识，基准测试复现可能耗时。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2604.13024v1",
     "title": "CLAD: Efficient Log Anomaly Detection Directly on Compressed Representations",
     "pdf_url": "https://arxiv.org/pdf/2604.13024v1",
