@@ -1,5 +1,350 @@
 [
   {
+    "id": "2604.15306v1",
+    "title": "Generalization in LLM Problem Solving: The Case of the Shortest Path",
+    "pdf_url": "https://arxiv.org/pdf/2604.15306v1",
+    "published": "2026-04-16",
+    "crawled_at": "2026-04-17 20:32:00",
+    "ai_score": 7.5,
+    "translated_title": "LLM问题解决中的泛化能力：以最短路径为例",
+    "summary_en": [
+      "• Model Architecture: The study uses standard language models (likely transformer-based) in a controlled synthetic environment for shortest-path planning, focusing on systematic generalization rather than specific architectural innovations.",
+      "• Data used: Synthetic data generated from shortest-path problems on graphs, enabling clean separation of factors like spatial transfer (unseen maps) and length scaling (longer-horizon problems).",
+      "• Performance metrics: Evaluates generalization along two axes: spatial transfer (models show strong performance) and length scaling (models consistently fail due to recursive instability).",
+      "• Key findings: Data coverage sets capability limits; reinforcement learning improves training stability but does not expand limits; inference-time scaling enhances performance but cannot rescue length-scaling failures."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用标准语言模型（可能基于Transformer）在受控合成环境中进行最短路径规划研究，重点考察系统性泛化而非特定架构创新。",
+      "• 数据来源: 基于图的最短路径问题生成的合成数据，能够清晰分离空间迁移（未见地图）和长度缩放（长时程问题）等因素。",
+      "• 主要结论: 模型在空间迁移上表现强劲，但在长度缩放上因递归不稳定性而持续失败；数据覆盖决定能力上限，强化学习提升训练稳定性但不突破上限，推理时缩放改善性能但无法挽救长度缩放失败。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; provides insights into LLM generalization limits for sequential optimization problems, potentially informing algorithmic trading strategies that require systematic reasoning, but direct alpha generation is limited due to synthetic focus.",
+      "• Implementation Risk: High; findings are based on controlled synthetic tasks, and real-world financial applications (e.g., portfolio optimization) involve noisy, high-dimensional data, making transfer risky without extensive validation.",
+      "• Novelty: Moderate; introduces a clean experimental setup for disentangling generalization factors in LLMs, but the core issue of recursive instability in scaling is known in related ML literature, reducing breakthrough impact."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；为LLM泛化能力研究提供了干净的实验框架，能分离空间迁移和长度缩放因素，但递归不稳定性问题在相关机器学习文献中已有涉及，突破性有限。",
+      "• 实盘坑: 高；基于合成数据的结论难以直接迁移到嘈杂、高维的金融市场（如投资组合优化），需大量验证，否则风险显著。",
+      "• 复现难度: 低；使用标准模型和合成数据，实验设置清晰，易于复现和扩展，适合快速验证。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2604.15302v1",
+    "title": "Diagnosing LLM Judge Reliability: Conformal Prediction Sets and Transitivity Violations",
+    "pdf_url": "https://arxiv.org/pdf/2604.15302v1",
+    "published": "2026-04-16",
+    "crawled_at": "2026-04-17 20:32:22",
+    "ai_score": 8.2,
+    "translated_title": "诊断LLM评判器可靠性：保形预测集与传递性违规分析",
+    "summary_en": [
+      "• Model Architecture: The study employs a two-pronged diagnostic toolkit for LLM-as-judge frameworks, focusing on transitivity analysis and split conformal prediction sets to assess per-instance reliability without proposing a new model architecture.",
+      "• Data used: The analysis is applied to the SummEval dataset, which includes 1,918 documents evaluated across four criteria (relevance, coherence, fluency, consistency) using four different LLM judges.",
+      "• Performance metrics: Key metrics include transitivity violation rates (0.8%-4.1% aggregate, with 33%-67% of documents showing at least one directed 3-cycle) and conformal prediction set widths (average sizes: ~3.0 for relevance, ~3.9 for coherence, ~4.9 for fluency/consistency), with set width correlating with reliability (r_s = +0.576, p < 10^{-100})."
+    ],
+    "summary_cn": [
+      "• 核心模型: 研究采用双管齐下的诊断工具包，包括传递性分析和分割保形预测集，用于评估LLM作为评判器的实例级可靠性，而非提出新模型架构。",
+      "• 数据来源: 基于SummEval数据集，包含1,918份文档，通过四个LLM评判器在四个标准（相关性、连贯性、流畅性、一致性）上进行评估。",
+      "• 主要结论: 诊断显示，标准比评判器更重要，相关性评估最可靠（平均预测集大小约3.0），连贯性中等（约3.9），而流畅性和一致性不可靠（约4.9）；预测集宽度能有效指示可靠性，并具有跨评判器一致性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the toolkit provides a rigorous method to quantify LLM judge uncertainty, which could enhance automated evaluation in trading signal validation or sentiment analysis by flagging unreliable predictions, potentially reducing false positives in alpha generation.",
+      "• Implementation Risk: High; the approach relies on conformal prediction, which requires calibration data and may not scale efficiently to real-time financial applications; transitivity violations indicate inherent instability in LLM judgments that could lead to inconsistent trading decisions.",
+      "• Novelty: High; combining transitivity analysis with conformal prediction sets for LLM reliability diagnostics is innovative, offering both theoretical guarantees (e.g., coverage) and practical insights (e.g., document-level difficulty), though it builds on existing statistical methods."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；将传递性分析与保形预测集结合用于LLM可靠性诊断，提供理论保证（如覆盖率）和实际洞察（如文档级难度），在自动评估领域具有新颖性。",
+      "• 实盘坑: 高；保形预测需要校准数据，可能难以扩展到实时金融应用；传递性违规表明LLM判断存在内在不稳定性，可能导致交易决策不一致，增加实盘风险。",
+      "• 复现难度: 中等；研究发布了代码、提示和缓存结果，但复现需访问SummEval数据集和LLM API，且涉及统计方法实现，可能有一定技术门槛。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.15297v1",
+    "title": "Benchmarking Optimizers for MLPs in Tabular Deep Learning",
+    "pdf_url": "https://arxiv.org/pdf/2604.15297v1",
+    "published": "2026-04-16",
+    "crawled_at": "2026-04-17 20:32:41",
+    "ai_score": 7.2,
+    "translated_title": "用于表格深度学习中多层感知机优化器的基准测试",
+    "summary_en": [
+      "• Model Architecture: The study focuses on MLP-based models for supervised learning on tabular data, using vanilla MLPs and their variants as the backbone architecture.",
+      "• Data used: The benchmark is conducted on multiple tabular datasets (exact number unspecified in abstract) under a shared experiment protocol to ensure consistency across evaluations.",
+      "• Performance metrics: The primary metric is optimizer performance, with Muon optimizer consistently outperforming AdamW, and exponential moving average of model weights identified as an effective technique for improving AdamW on vanilla MLPs."
+    ],
+    "summary_cn": [
+      "• 核心模型: 研究以多层感知机为基础模型，针对表格数据进行监督学习，包括标准MLP及其变体架构。",
+      "• 数据来源: 使用多个表格数据集（摘要中未指定具体数量），在统一的实验协议下进行基准测试以确保结果可比性。",
+      "• 主要结论: Muon优化器在性能上持续优于AdamW，建议在训练效率开销可接受的情况下作为实践选择；同时发现模型权重的指数移动平均能有效提升AdamW在标准MLP上的表现，但效果在不同模型变体间一致性较低。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - The identification of Muon as a superior optimizer for tabular DL could lead to improved model performance in quantitative strategies relying on MLPs, potentially enhancing predictive accuracy and stability.",
+      "• Implementation Risk: High - The abstract mentions 'training efficiency overhead' for Muon, which could increase computational costs and latency in production environments, posing risks for real-time applications.",
+      "• Novelty: Low to Moderate - While benchmarking optimizers for tabular DL is underexplored, the use of established optimizers like Muon (known from other domains) limits groundbreaking innovation; the finding on exponential moving average adds some incremental value."
+    ],
+    "verdict_cn": [
+      "• 创新点: 较低至中等 - 将Muon优化器引入表格深度学习领域有一定新意，但优化器本身并非全新发明；指数移动平均技术的应用提供了一些增量改进。",
+      "• 实盘坑: 高 - Muon优化器可能带来显著的训练效率开销，增加计算成本和延迟，对高频或实时策略构成风险；不同模型变体间效果不一致也可能导致泛化问题。",
+      "• 复现难度: 中等 - 基于共享实验协议和多个数据集，复现性较好，但需注意训练效率开销的具体量化和模型变体的选择可能影响结果一致性。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.15285v1",
+    "title": "Structural interpretability in SVMs with truncated orthogonal polynomial kernels",
+    "pdf_url": "https://arxiv.org/pdf/2604.15285v1",
+    "published": "2026-04-16",
+    "crawled_at": "2026-04-17 20:32:55",
+    "ai_score": 7.5,
+    "translated_title": "截断正交多项式核SVM的结构可解释性研究",
+    "summary_en": [
+      "• Model Architecture: Proposes ORCA framework for SVMs with truncated orthogonal polynomial kernels, enabling exact expansion of decision functions in finite-dimensional RKHS coordinates",
+      "• Data used: Synthetic double-spiral dataset for validation and real five-dimensional echocardiogram dataset for application",
+      "• Performance metrics: Diagnostic indices (OKC) quantify distribution of classifier norm across interaction orders, polynomial degrees, and marginal effects, revealing structural complexity beyond predictive accuracy"
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于截断正交多项式核的SVM，提出正交表示贡献分析（ORCA）框架，利用有限维RKHS坐标精确展开决策函数",
+      "• 数据来源: 合成双螺旋数据集用于验证，真实五维超声心动图数据集用于实际应用",
+      "• 主要结论: 正交核贡献指数揭示模型结构复杂性，包括交互阶数、多项式总次数和边际效应分布，补充了单纯预测准确性的不足"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - interpretability framework could enhance model diagnostics for complex financial patterns, but direct alpha generation limited",
+      "• Implementation Risk: Low - fully post-training method requires no retraining or surrogate models, reducing deployment complexity",
+      "• Novelty: High - novel application of orthogonal polynomial kernels to SVM interpretability with explicit tensor-product basis representation"
+    ],
+    "verdict_cn": [
+      "• 创新点: 将截断正交多项式核与SVM结合，利用有限维RKHS的显式张量积正交基实现决策函数精确展开，结构可解释性方法新颖",
+      "• 实盘坑: 方法主要针对模型诊断而非预测优化，在金融高频场景中可能缺乏直接交易信号生成能力",
+      "• 复现难度: 中等 - 需要实现正交多项式核和RKHS坐标计算，但无需重新训练模型，技术门槛可控"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2604.15273v1",
+    "title": "How Embeddings Shape Graph Neural Networks: Classical vs Quantum-Oriented Node Representations",
+    "pdf_url": "https://arxiv.org/pdf/2604.15273v1",
+    "published": "2026-04-16",
+    "crawled_at": "2026-04-17 20:33:13",
+    "ai_score": 7.2,
+    "translated_title": "嵌入如何塑造图神经网络：经典与量子导向节点表示的比较",
+    "summary_en": [
+      "• Model Architecture: Compares classical node embeddings (e.g., graph operator-based) with quantum-oriented alternatives, including a circuit-defined variational embedding and quantum-inspired embeddings derived from graph operators and linear-algebraic constructions, all evaluated under a unified pipeline with consistent backbones, splits, optimization, and early stopping.",
+      "• Data used: Experiments conducted on five TU datasets and QM9 converted to classification via target binning, covering diverse graph types such as social graphs and structure-driven benchmarks.",
+      "• Performance metrics: Results show clear dataset dependence; quantum-oriented embeddings yield consistent gains on structure-driven benchmarks, while classical baselines perform well on social graphs with limited node attributes, highlighting trade-offs in inductive bias, trainability, and stability under fixed training budgets."
+    ],
+    "summary_cn": [
+      "• 核心模型: 比较经典节点嵌入（如图算子基础）与量子导向嵌入，包括电路定义的变分嵌入和基于图算子及线性代数构造的量子启发嵌入，所有变体在统一流程下评估，确保骨干网络、数据分割、优化和早停一致。",
+      "• 数据来源: 使用五个TU数据集和通过目标分箱转换为分类任务的QM9数据集，涵盖社交图和结构驱动基准等多种图类型。",
+      "• 主要结论: 结果显示出明显的数据集依赖性；量子导向嵌入在结构驱动基准上表现更优，而经典嵌入在节点属性有限的社交图上效果良好，突显了在固定训练预算下归纳偏置、可训练性和稳定性之间的权衡。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; quantum-oriented embeddings show promise for structure-driven graph tasks, potentially offering novel feature representations that could enhance predictive models in domains like molecular property prediction or network analysis, but gains are dataset-specific and may not generalize broadly.",
+      "• Implementation Risk: High; quantum-inspired methods involve complex linear-algebraic constructions and circuit-defined embeddings, which may be computationally intensive and require specialized expertise, increasing integration challenges in production environments.",
+      "• Novelty: Moderate; the paper provides a controlled benchmark comparing classical and quantum-oriented embeddings, offering a reproducible reference point, but the core ideas build on existing graph learning and quantum-inspired techniques without groundbreaking theoretical advances."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；论文通过统一流程对比经典与量子导向嵌入，为图学习中的嵌入选择提供了可复现的基准点，但核心思想基于现有图学习和量子启发技术，缺乏突破性理论创新。",
+      "• 实盘坑: 高；量子启发方法涉及复杂的线性代数构造和电路定义嵌入，计算成本高且需要专业知识，增加了在生产环境中集成的难度和风险。",
+      "• 复现难度: 中等；论文强调可复现性，提供了详细流程，但量子导向嵌入的实现可能依赖特定库或硬件，对复现环境有一定要求。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2604.15272v1",
+    "title": "Prism: Symbolic Superoptimization of Tensor Programs",
+    "pdf_url": "https://arxiv.org/pdf/2604.15272v1",
+    "published": "2026-04-16",
+    "crawled_at": "2026-04-17 20:33:30",
+    "ai_score": 8.2,
+    "translated_title": "Prism：张量程序的符号超级优化",
+    "summary_en": [
+      "• Model Architecture: Prism introduces sGraph, a symbolic hierarchical representation that compactly encodes large classes of tensor programs by symbolically representing execution parameters, enabling a two-level search approach with structured pruning of suboptimal regions.",
+      "• Data used: The evaluation is conducted on five commonly used LLM workloads, though specific datasets or benchmarks are not detailed in the abstract, focusing on performance metrics rather than training data.",
+      "• Performance metrics: Prism achieves up to 2.2× speedup over best superoptimizers and 4.9× over best compiler-based approaches, while reducing end-to-end optimization time by up to 3.4×, demonstrating significant efficiency gains."
+    ],
+    "summary_cn": [
+      "• 核心模型: Prism采用sGraph作为符号化层次表示，通过符号化执行参数紧凑编码张量程序类，实现两级搜索架构，结合符号推理进行结构化剪枝。",
+      "• 数据来源: 基于五个常用LLM工作负载进行评估，但未明确指定具体数据集或基准测试，侧重于性能指标而非训练数据。",
+      "• 主要结论: Prism在优化性能上实现最高2.2倍加速（相比最佳超级优化器）和4.9倍加速（相比最佳编译器方法），同时端到端优化时间减少最高3.4倍。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for alpha generation in quant strategies reliant on fast tensor computations, such as high-frequency trading or complex ML models, due to significant speedups and efficiency improvements in optimization.",
+      "• Implementation Risk: Moderate to high risk due to complexity of symbolic reasoning and auto-tuning integration; real-world deployment may face challenges with diverse hardware constraints and scalability beyond evaluated workloads.",
+      "• Novelty: High novelty as the first symbolic superoptimizer for tensor programs, introducing sGraph and a two-level search framework that bridges exhaustive search rigor with scalability, though building on existing e-graph and auto-tuning techniques."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次提出张量程序的符号超级优化器，sGraph表示和两级搜索架构具有原创性，结合符号推理与硬件约束实现高效优化。",
+      "• 实盘坑: 符号推理和自动调参集成复杂度高，实际部署可能受硬件多样性限制，且评估仅基于五个LLM工作负载，泛化性存疑。",
+      "• 复现难度: 中等偏高，需实现sGraph生成、等价验证和参数实例化等技术，依赖专业符号计算和硬件优化知识，开源代码或详细文档是关键。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2604.15271v1",
+    "title": "SegWithU: Uncertainty as Perturbation Energy for Single-Forward-Pass Risk-Aware Medical Image Segmentation",
+    "pdf_url": "https://arxiv.org/pdf/2604.15271v1",
+    "published": "2026-04-16",
+    "crawled_at": "2026-04-17 20:33:51",
+    "ai_score": 8.2,
+    "translated_title": "SegWithU：将不确定性作为扰动能量的单前向传播风险感知医学图像分割",
+    "summary_en": [
+      "• Model Architecture: SegWithU is a post-hoc framework that adds a lightweight uncertainty head to a frozen pretrained segmentation backbone, using intermediate features and rank-1 posterior probes to model uncertainty as perturbation energy in a compact probe space.",
+      "• Data used: The method was evaluated on three medical image segmentation datasets: ACDC (cardiac MRI), BraTS2024 (brain tumor MRI), and LiTS (liver CT).",
+      "• Performance metrics: Achieved strong AUROC/AURC scores: 0.9838/2.4885 on ACDC, 0.9946/0.2660 on BraTS2024, and 0.9925/0.8193 on LiTS, demonstrating top performance among single-forward-pass methods while maintaining segmentation quality.",
+      "• Key innovation: Produces two voxel-wise uncertainty maps—one for calibration (probability tempering) and one for ranking (error detection and selective prediction)—enhancing reliability in clinical applications."
+    ],
+    "summary_cn": [
+      "• 核心模型: SegWithU是一个后处理框架，在冻结的预训练分割骨干网络上添加轻量级不确定性头，利用中间特征和秩-1后验探针，将不确定性建模为紧凑探针空间中的扰动能量。",
+      "• 数据来源: 在三个医学图像分割数据集上评估：ACDC（心脏MRI）、BraTS2024（脑肿瘤MRI）和LiTS（肝脏CT）。",
+      "• 主要结论: 在单前向传播方法中表现最强且最一致，AUROC/AURC分数分别为ACDC 0.9838/2.4885、BraTS2024 0.9946/0.2660、LiTS 0.9925/0.8193，同时保持分割质量。",
+      "• 应用价值: 生成两种体素级不确定性图——校准导向图用于概率调整，排序导向图用于错误检测和选择性预测，提升医学分割的可靠性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for medical imaging and risk-sensitive applications; uncertainty estimation can improve model reliability in clinical decision support, potentially reducing errors in automated quantification.",
+      "• Implementation Risk: Moderate; relies on pretrained backbones and specific datasets, may require adaptation for non-medical domains or real-time deployment due to computational overhead from uncertainty head.",
+      "• Novelty: Strong; introduces perturbation energy as a novel uncertainty metric in a single-forward-pass framework, outperforming existing efficient alternatives and offering practical post-hoc enhancement without retraining.",
+      "• Limitations: Limited to segmentation tasks; generalization to other vision tasks (e.g., classification) untested, and performance may degrade with low-quality or out-of-distribution data."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将不确定性建模为扰动能量，在单前向传播框架中实现高效风险感知，通过后处理增强预训练模型，无需重复推理，在医学分割中表现领先。",
+      "• 实盘坑: 依赖特定医学数据集和预训练骨干，泛化到其他领域（如金融图像）可能需调整；不确定性头可能增加计算成本，影响实时应用。",
+      "• 复现难度: 中等；开源代码可用，但需医学图像数据和预训练模型，实验设置复杂，可能涉及调参和硬件要求。",
+      "• 市场应用: 适用于医疗AI和风险敏感场景，但商业落地需考虑临床验证、数据隐私和监管合规性。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2604.15269v1",
+    "title": "Cloning is as Hard as Learning for Stabilizer States",
+    "pdf_url": "https://arxiv.org/pdf/2604.15269v1",
+    "published": "2026-04-16",
+    "crawled_at": "2026-04-17 20:34:07",
+    "ai_score": 8.5,
+    "translated_title": "稳定子态的克隆与学习难度相当",
+    "summary_en": [
+      "• Model Architecture: The paper uses representation-theoretic tools within the Abelian State Hidden Subgroup framework and introduces a structured version of the random purification channel to analyze cloning complexity for stabilizer states.",
+      "• Data used: The study focuses on n-qubit stabilizer states as the structured class, leveraging their linear algebraic properties and connections to probability distributions with underlying linear structure.",
+      "• Performance metrics: The main result shows that the optimal sample complexity for cloning stabilizer states is Θ(n), matching the learning complexity, with proofs based on sample amplification lower bounds for distributions."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用阿贝尔态隐藏子群框架中的表示论工具，并引入随机纯化通道的结构化版本，分析稳定子态的克隆复杂度。",
+      "• 数据来源: 研究以n量子比特稳定子态为结构化类别，利用其线性代数特性，并与具有底层线性结构的概率分布建立联系。",
+      "• 主要结论: 克隆稳定子态的最优样本复杂度为Θ(n)，与学习复杂度相同，通过证明分布的样本放大下界来支持这一结论。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for quantum cryptography and quantum learning theory applications, as it provides a fine-grained perspective on No-Cloning theorems that could inform secure quantum protocols and efficient state estimation strategies.",
+      "• Implementation Risk: Moderate to high due to the theoretical nature and reliance on advanced mathematical tools like representation theory; practical quantum hardware limitations may hinder immediate real-world deployment.",
+      "• Novelty: Significant, as it bridges foundations of quantum theory with modern learning theory, introducing new connections between cloning and sample amplification problems, and offering insights for structured state classes beyond arbitrary states."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将量子理论基础与现代学习理论结合，为结构化态类别提供克隆与学习复杂度的精细分析，引入样本放大问题的新联系。",
+      "• 实盘坑: 理论性强，依赖表示论等高级数学工具，实际量子硬件限制可能阻碍即时应用，需进一步实验验证。",
+      "• 复现难度: 较高，需要深厚的量子信息和数学背景，证明涉及复杂框架和通道设计，可能难以在标准环境中直接复现。"
+    ],
+    "ai_strategy": "Crypto",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.15259v1",
+    "title": "Stability and Generalization in Looped Transformers",
+    "pdf_url": "https://arxiv.org/pdf/2604.15259v1",
+    "published": "2026-04-16",
+    "crawled_at": "2026-04-17 20:34:23",
+    "ai_score": 7.8,
+    "translated_title": "循环Transformer的稳定性与泛化性研究",
+    "summary_en": [
+      "• Model Architecture: Introduces a fixed-point framework to analyze looped transformers along three stability axes (reachability, input-dependence, geometry), comparing architectures with/without recall and outer normalization.",
+      "• Data used: Trains single-layer looped transformers on chess, sudoku, and prefix-sums tasks to evaluate downstream performance across different architectural configurations.",
+      "• Performance metrics: Shows that recall combined with outer normalization reliably produces stable fixed points that are reachable, locally smooth in input, and support stable backpropagation, with internal recall variant outperforming standard recall on sudoku."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出基于不动点的分析框架，从可达性、输入依赖性和几何结构三个维度评估循环Transformer架构，对比有无记忆机制及外部归一化的设计。",
+      "• 数据来源: 使用国际象棋、数独和前缀和三类任务训练单层循环Transformer，验证不同架构配置在下游任务的表现。",
+      "• 主要结论: 记忆机制结合外部归一化能稳定产生可达、输入局部平滑且支持稳定反向传播的不动点；内部记忆变体在数独任务上显著优于标准记忆设计。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - Framework provides theoretical grounding for test-time compute scaling in looped architectures, but empirical validation limited to synthetic tasks (chess/sudoku) rather than financial time-series.",
+      "• Implementation Risk: High - Requires careful tuning of recall mechanisms and normalization; unstable fixed points in looped networks without recall could lead to unpredictable inference behavior in production.",
+      "• Novelty: Significant - Introduces internal recall variant and fixed-point stability analysis specifically for looped transformers, offering new architectural insights for iterative refinement models."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出针对循环Transformer的不动点稳定性分析框架及内部记忆变体，为迭代计算架构提供新的理论工具和设计思路。",
+      "• 实盘坑: 高风险 - 记忆机制和归一化需要精细调参；无记忆循环网络的不稳定不动点可能导致推理行为不可预测，不适合直接部署。",
+      "• 复现难度: 中等 - 框架理论清晰，但需要实现循环Transformer训练管道及不动点收敛分析，对计算资源有一定要求。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2604.15242v1",
+    "title": "Optimal last-iterate convergence in matrix games with bandit feedback using the log-barrier",
+    "pdf_url": "https://arxiv.org/pdf/2604.15242v1",
+    "published": "2026-04-16",
+    "crawled_at": "2026-04-17 20:34:38",
+    "ai_score": 8.2,
+    "translated_title": "基于对数障碍的零和矩阵博弈中带反馈的最优末次迭代收敛",
+    "summary_en": [
+      "• Model Architecture: The paper proposes an online mirror descent algorithm with log-barrier regularization and a dual-focused analysis for learning minimax policies in zero-sum matrix games.",
+      "• Data used: The study is theoretical and does not use empirical data; it focuses on mathematical analysis of convergence rates in game theory settings.",
+      "• Performance metrics: Achieves O-tilde(t^{-1/4}) last-iterate convergence with high probability, matching the lower bound of Omega(t^{-1/4}) for uncoupled players, and extends results to extensive-form games."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用对数障碍正则化的在线镜像下降算法，结合对偶分析，用于零和矩阵博弈中的极小极大策略学习。",
+      "• 数据来源: 纯理论研究，未使用实际数据，基于博弈论中的数学收敛分析。",
+      "• 主要结论: 实现了O-tilde(t^{-1/4})的末次迭代收敛率，与Fiegel等人提出的下界Omega(t^{-1/4})匹配，并扩展至扩展形式博弈。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the theoretical convergence rate could inform algorithmic improvements in multi-agent systems or adversarial training, but direct financial alpha is limited without empirical validation in market contexts.",
+      "• Implementation Risk: High; the log-barrier method may face numerical instability in high-dimensional settings, and uncoupled player assumptions might not hold in real-world trading scenarios.",
+      "• Novelty: Significant; it addresses a known gap by achieving the optimal rate with a novel regularization approach, extending to extensive-form games adds breadth."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著，通过引入对数障碍正则化和对偶分析，首次在理论上达到末次迭代收敛的最优速率，填补了文献空白。",
+      "• 实盘坑: 高，对数障碍方法在高维环境中可能数值不稳定，且非耦合玩家假设在真实交易中难以满足，限制了直接应用。",
+      "• 复现难度: 中等，算法基于标准在线镜像下降框架，但需要精确调整正则化参数，理论证明复杂，可能增加实现挑战。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
     "id": "2604.14142v1",
     "title": "From $P(y|x)$ to $P(y)$: Investigating Reinforcement Learning in Pre-train Space",
     "pdf_url": "https://arxiv.org/pdf/2604.14142v1",
