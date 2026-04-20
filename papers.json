@@ -1,5 +1,363 @@
 [
   {
+    "id": "2604.16282v1",
+    "title": "Geometric regularization of autoencoders via observed stochastic dynamics",
+    "pdf_url": "https://arxiv.org/pdf/2604.16282v1",
+    "published": "2026-04-17",
+    "crawled_at": "2026-04-20 20:32:48",
+    "ai_score": 8.2,
+    "translated_title": "通过观测随机动力学对自编码器进行几何正则化",
+    "summary_en": [
+      "• Model Architecture: A three-stage pipeline consisting of chart learning, latent drift estimation, and latent diffusion modeling, incorporating a tangent-bundle penalty and an inverse-consistency penalty to constrain geometry and improve stability.",
+      "• Data used: Synthetic datasets involving four surfaces embedded in up to 201 ambient dimensions, tested under rotation dynamics and metastable Müller–Brown Langevin dynamics to simulate slow or metastable behavior.",
+      "• Performance metrics: Achieved 50–70% reduction in radial mean first-passage time (MFPT) error under rotation dynamics, lowest inter-well MFPT error on most surface–transition pairs, and up to an order of magnitude reduction in end-to-end ambient coefficient errors compared to unregularized autoencoders.",
+      "• Theoretical contributions: Introduced the ρ-metric, a function-space metric weaker than the Sobolev H¹ norm but achieving similar generalization rates, and derived an encoder-pullback target via Itô's formula to address systematic errors in drift estimation."
+    ],
+    "summary_cn": [
+      "• 核心模型: 三阶段流程（图表学习、潜在漂移、潜在扩散），结合切丛惩罚和逆一致性惩罚，通过几何正则化约束自编码器的切丛结构，提升动力学模拟的准确性。",
+      "• 数据来源: 合成数据集，包含嵌入高达201维环境空间的四个曲面，在旋转动力学和Müller–Brown Langevin亚稳态动力学下测试，模拟慢变或亚稳态行为。",
+      "• 主要结论: 在旋转动力学下径向平均首次通过时间误差降低50–70%，在多数曲面-跃迁对上实现最低的阱间MFPT误差，相比未正则化自编码器，端到端环境系数误差降低高达一个数量级。",
+      "• 理论创新: 提出ρ-度量（弱于Sobolev H¹范数但达到相近泛化率），基于Itô公式推导编码器回拉目标，减少漂移估计的系统误差，并在图表收敛假设下证明误差可控传播。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for applications in quantitative finance, particularly in modeling metastable market regimes or slow-moving factors in high-dimensional asset spaces, where reduced-order simulators can capture long-term dynamics more efficiently than traditional methods.",
+      "• Implementation Risk: Moderate to high risk due to reliance on synthetic data and assumptions like W²,∞ chart convergence; real-world financial data may exhibit more complex noise and non-stationarity, challenging the model's robustness and generalization.",
+      "• Novelty: Significant novelty in integrating geometric regularization with autoencoders for stochastic dynamical systems, introducing the ρ-metric and encoder-pullback targets to address tangent-bundle constraints and drift errors, advancing beyond local-chart methods and standard autoencoder approaches.",
+      "• Practical limitations: The method requires careful tuning of penalties and may be computationally intensive for very high-dimensional datasets; scalability to real-time trading environments is uncertain without further optimization."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将几何正则化引入自编码器，通过切丛惩罚和逆一致性惩罚解决切丛结构约束问题，提出ρ-度量和编码器回拉目标，显著提升亚稳态动力学模拟的精度和泛化能力。",
+      "• 实盘坑: 依赖合成数据假设（如W²,∞图表收敛），实盘金融数据噪声更复杂、非平稳性强，可能导致模型失效；惩罚项调参敏感，计算开销大，在高频交易中应用受限。",
+      "• 复现难度: 中等偏高，需实现三阶段流程和复杂惩罚项，理论推导（如Itô公式应用）要求较强数学背景；代码和超参数优化可能耗时，但论文提供了实验细节，有助于复现。",
+      "• 市场适用性: 适用于多因子模型或市场状态切换预测，能捕捉高维资产空间的慢变动态，但对数据质量和预处理要求高，实盘前需大量验证和调整。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2604.16279v1",
+    "title": "Evaluating the Progression of Large Language Model Capabilities for Small-Molecule Drug Design",
+    "pdf_url": "https://arxiv.org/pdf/2604.16279v1",
+    "published": "2026-04-17",
+    "crawled_at": "2026-04-20 20:33:13",
+    "ai_score": 7.8,
+    "translated_title": "评估大语言模型在小分子药物设计中的能力进展",
+    "summary_en": [
+      "• Model Architecture: The study evaluates three frontier LLM families across chemically-grounded tasks, with a focus on reinforcement learning (RL) environments for unified evaluation and post-training. A smaller model is post-trained using RL to enhance performance.",
+      "• Data used: The paper introduces a suite of chemically-grounded tasks spanning molecular property prediction, molecular representation transformations, and molecular design, formulated as RL environments. It emphasizes experimental settings with low data to reflect real-world scenarios.",
+      "• Performance metrics: Frontier models show increasing proficiency in chemical tasks but with significant room for improvement, especially in low-data settings. RL-based post-training substantially improves performance, making a smaller post-trained model competitive with state-of-the-art frontier models despite a weaker base."
+    ],
+    "summary_cn": [
+      "• 核心模型: 研究评估了三个前沿大语言模型家族在化学任务上的表现，采用强化学习环境进行统一评估和后训练，重点关注小模型通过后训练提升性能。",
+      "• 数据来源: 引入一套基于化学的任务，涵盖分子性质预测、分子表示转换和分子设计，并构建为强化学习环境，强调低数据实验设置以模拟真实场景。",
+      "• 主要结论: 前沿模型在化学任务上能力增强，但在低数据环境下仍有较大改进空间；强化学习后训练显著提升性能，使较弱的小模型能与顶尖模型竞争。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate to high; the paper demonstrates that targeted post-training can close capability gaps, suggesting a practical route for LLMs in drug discovery, potentially leading to faster and more efficient small-molecule design processes.",
+      "• Implementation Risk: High; the reliance on RL environments and low-data settings introduces complexity, and real-world deployment may face challenges in scalability, data quality, and integration with existing drug discovery pipelines.",
+      "• Novelty: High; the work introduces a novel suite of chemically-grounded tasks as RL environments for unified evaluation, and shows that RL-based post-training can make smaller models competitive, offering a fresh approach to benchmarking and improving LLMs in this domain."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；论文创新性地将化学任务构建为强化学习环境进行统一评估，并展示后训练能使小模型与前沿模型竞争，为药物发现中的大语言模型应用提供新路径。",
+      "• 实盘坑: 高；依赖强化学习环境和低数据设置增加复杂性，实际部署可能面临可扩展性、数据质量和与现有药物发现流程整合的挑战。",
+      "• 复现难度: 中等；需要构建化学任务环境和实施强化学习后训练，但方法描述较清晰，复现可能需专业化学和机器学习知识。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2604.16278v1",
+    "title": "Learning to Reason with Insight for Informal Theorem Proving",
+    "pdf_url": "https://arxiv.org/pdf/2604.16278v1",
+    "published": "2026-04-17",
+    "crawled_at": "2026-04-20 20:33:31",
+    "ai_score": 7.5,
+    "translated_title": "学习通过洞察力进行非正式定理证明的推理",
+    "summary_en": [
+      "• Model Architecture: Progressive Multi-Stage Supervised Fine-Tuning (SFT) strategy that mimics human learning process, guiding models from basic proof writing to insightful thinking",
+      "• Data used: DeepInsightTheorem hierarchical dataset that structures informal proofs by explicitly extracting core techniques and proof sketches alongside final proofs",
+      "• Performance metrics: Significant outperformance over baselines on challenging mathematical benchmarks, demonstrating improved mathematical reasoning through insight-aware generation"
+    ],
+    "summary_cn": [
+      "• 核心模型: 渐进式多阶段监督微调策略，模拟人类学习过程，引导模型从基础证明写作到洞察性思考",
+      "• 数据来源: DeepInsightTheorem分层数据集，通过显式提取核心技术和证明草图来结构化非正式证明",
+      "• 主要结论: 在具有挑战性的数学基准测试中显著优于基线，通过洞察感知生成策略显著提升数学推理能力"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - Insight-driven reasoning could enhance quantitative models' ability to identify hidden patterns in financial data, but direct application to trading requires substantial adaptation",
+      "• Implementation Risk: High - Informal theorem proving differs significantly from financial prediction tasks; bridging this gap requires extensive domain-specific fine-tuning and validation",
+      "• Novelty: High - Hierarchical proof structuring and progressive learning approach represent innovative methods for enhancing LLM reasoning capabilities beyond standard fine-tuning"
+    ],
+    "verdict_cn": [
+      "• 创新点: 分层证明结构和渐进学习策略代表了增强LLM推理能力的新方法，超越了标准微调",
+      "• 实盘坑: 非正式定理证明与金融预测任务差异巨大，需要大量领域特定调整和验证，直接应用风险高",
+      "• 复现难度: 中等 - 需要构建类似DeepInsightTheorem的金融领域分层数据集，但核心训练策略相对清晰"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2604.16265v1",
+    "title": "FL-MHSM: Spatially-adaptive Fusion and Ensemble Learning for Flood-Landslide Multi-Hazard Susceptibility Mapping at Regional Scale",
+    "pdf_url": "https://arxiv.org/pdf/2604.16265v1",
+    "published": "2026-04-17",
+    "crawled_at": "2026-04-20 20:34:04",
+    "ai_score": 7.8,
+    "translated_title": "FL-MHSM：区域尺度洪水-滑坡多灾害易发性制图的空间自适应融合与集成学习",
+    "summary_en": [
+      "• Model Architecture: Proposes a deep learning workflow combining two-level spatial partitioning, probabilistic Early Fusion (EF), tree-based Late Fusion (LF), and a soft-gating Mixture of Experts (MoE) as final predictive model for joint flood-landslide susceptibility mapping.",
+      "• Data used: Applied to regional-scale datasets from Kerala (India) and Nepal, incorporating topographic, land-cover, drainage-related, and glacier-related factors analyzed through GeoDetector.",
+      "• Performance metrics: In Kerala, MoE achieved AUC-ROC of 0.905, recall of 0.930, and F1-score of 0.722 for floods; EF improved flood recall from 0.816 to 0.840 and reduced Brier score from 0.092 to 0.086. In Nepal, MoE achieved AUC-ROC of 0.914, recall of 0.901, and F1-score of 0.559 for landslides; EF improved flood recall from 0.820 to 0.858 and reduced Brier score from 0.057 to 0.049.",
+      "• Key findings: EF and LF show complementary predictive behavior; MoE integration yields robust performance and interpretable characterization of multi-hazard susceptibility in spatially heterogeneous landscapes."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出深度学习工作流，结合两级空间分区、概率早期融合（EF）、基于树的晚期融合（LF）和软门控专家混合（MoE）作为最终预测模型，用于洪水-滑坡联合易发性制图。",
+      "• 数据来源: 应用于印度喀拉拉邦和尼泊尔的区域尺度数据集，包含地形、土地覆盖、排水相关和冰川相关因素，通过GeoDetector进行分析。",
+      "• 主要结论: 在喀拉拉邦，MoE对洪水的AUC-ROC达0.905，召回率0.930，F1分数0.722；EF将洪水召回率从0.816提升至0.840，Brier分数从0.092降至0.086。在尼泊尔，MoE对滑坡的AUC-ROC达0.914，召回率0.901，F1分数0.559；EF将洪水召回率从0.820提升至0.858，Brier分数从0.057降至0.049。",
+      "• 空间分析: GeoDetector显示，喀拉拉邦的主导因素跨区域变化更大，受地形、土地覆盖和排水控制组合影响；尼泊尔则显示地形和冰川因素跨区域更一致。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the spatially adaptive fusion approach could be adapted for financial risk modeling in heterogeneous markets (e.g., regional economic shocks or sector-specific volatility), but direct alpha generation is limited as it focuses on geophysical hazards.",
+      "• Implementation Risk: High; requires extensive geospatial data and domain expertise for financial translation, with potential overfitting in complex MoE models and scalability issues in real-time trading environments.",
+      "• Novelty: Moderate; integrates EF, LF, and MoE with spatial partitioning for multi-hazard mapping, offering interpretability through GeoDetector, but builds on existing ensemble and fusion techniques rather than groundbreaking innovations."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；将EF、LF和MoE与空间分区结合用于多灾害制图，通过GeoDetector提供可解释性，但基于现有集成和融合技术，非突破性创新。",
+      "• 实盘坑: 高；需要大量地理空间数据和领域专业知识进行金融转化，MoE模型可能过拟合，实时交易环境中可扩展性存疑。",
+      "• 复现难度: 中等；模型架构清晰，但依赖特定区域数据集和GeoDetector分析，在金融场景中调整参数和验证可能复杂。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.16264v1",
+    "title": "Information Router for Mitigating Modality Dominance in Vision-Language Models",
+    "pdf_url": "https://arxiv.org/pdf/2604.16264v1",
+    "published": "2026-04-17",
+    "crawled_at": "2026-04-20 20:34:30",
+    "ai_score": 8.2,
+    "translated_title": "缓解视觉语言模型中模态主导性的信息路由器",
+    "summary_en": [
+      "• Model Architecture: Proposes MoIR (Multi-modal Information Router), an information-level fusion method that identifies less informative tokens and routes complementary information from stronger modalities to construct information-dense token representations before processing by a large language model.",
+      "• Data used: Evaluated on three widely used multi-modal benchmarks across multiple model backbones, though specific datasets are not named in the abstract.",
+      "• Performance metrics: Shows consistent improvement in balanced modality contribution, robustness, and downstream performance, particularly under modality degradation scenarios.",
+      "• Key innovation: Explicitly reduces information disparity prior to fusion rather than just adjusting attention allocation, addressing fundamental information gaps in degraded modalities."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出MoIR（多模态信息路由器），一种信息级融合方法，在大型语言模型处理前识别信息不足的标记并从强模态路由补充信息，构建信息密集的标记表示。",
+      "• 数据来源: 在多个模型骨干上评估了三个广泛使用的多模态基准测试，但摘要中未具体命名数据集。",
+      "• 主要结论: 实验结果表明MoIR能更平衡模态贡献，提高鲁棒性和下游性能，尤其在模态退化情况下表现突出。",
+      "• 技术突破: 通过显式修改跨模态信息可用性来解决模态主导问题，而非仅调整注意力分配，有效应对信息缺失场景。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High - addresses a fundamental limitation in current VLMs (modality dominance) that could improve performance in real-world noisy data environments where modalities are often imbalanced.",
+      "• Implementation Risk: Moderate - requires integration with existing VLM architectures and careful tuning of information routing mechanisms, but the concept is modular and potentially transferable.",
+      "• Novelty: Significant - shifts focus from attention-based methods to information-level manipulation, offering a complementary strategy that could be combined with existing approaches for enhanced robustness.",
+      "• Practical limitations: Abstract lacks details on computational overhead and specific implementation challenges, which could affect real-world deployment efficiency."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著 - 从注意力调整转向信息级操作，提出通过显式修改跨模态信息可用性来解决模态主导问题，为多模态融合提供了新思路。",
+      "• 实盘坑: 中等 - 需要与现有VLM架构集成，信息路由机制需精细调参，且摘要未提及计算开销和具体实现挑战，可能影响部署效率。",
+      "• 复现难度: 中等偏高 - 涉及多模态信息识别和路由机制，需要较强的工程实现能力，但方法模块化设计可能降低部分难度。",
+      "• 市场应用: 潜力大 - 针对现实世界中模态信息密度不均的问题，可提升模型在噪声环境下的鲁棒性，适用于金融多模态数据分析等场景。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2604.16259v1",
+    "title": "Beyond Distribution Sharpening: The Importance of Task Rewards",
+    "pdf_url": "https://arxiv.org/pdf/2604.16259v1",
+    "published": "2026-04-17",
+    "crawled_at": "2026-04-20 20:34:54",
+    "ai_score": 7.5,
+    "translated_title": "超越分布锐化：任务奖励的重要性",
+    "summary_en": [
+      "• Model Architecture: Utilizes Llama-3.2-3B-Instruct, Qwen2.5-3B-Instruct, and Qwen3-4B-Instruct-2507 models with RL integration for task-reward-based learning and distribution sharpening comparisons.",
+      "• Data used: Math datasets (specific datasets not named in abstract) to evaluate performance improvements from RL training paradigms.",
+      "• Performance metrics: Demonstrates limited gains from distribution sharpening versus robust performance improvements and stable learning from task-based reward signals.",
+      "• Core methodology: Compares distribution sharpening and task-reward-based RL from first principles, highlighting instability and unfavorable optima in sharpening approaches."
+    ],
+    "summary_cn": [
+      "• 核心模型: 使用Llama-3.2-3B-Instruct、Qwen2.5-3B-Instruct和Qwen3-4B-Instruct-2507模型，集成强化学习进行任务奖励与分布锐化对比。",
+      "• 数据来源: 数学数据集（摘要中未具体命名）用于评估不同训练范式的性能提升。",
+      "• 主要结论: 分布锐化仅带来有限增益，而基于任务奖励的信号能显著提升性能并确保学习稳定性。",
+      "• 理论分析: 从第一性原理揭示分布锐化的内在局限性，包括优化不稳定和不利最优解问题。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; provides theoretical insights into RL training efficiency but lacks direct financial application or backtesting results.",
+      "• Implementation Risk: High; RL integration in production systems requires significant computational resources and careful hyperparameter tuning, with potential instability from distribution sharpening methods.",
+      "• Novelty: Moderate; addresses an ongoing debate in RL literature but builds on existing models without introducing groundbreaking architectures or algorithms.",
+      "• Scalability: Limited; experiments focus on small to medium-sized models (3B-4B parameters), raising questions about generalization to larger frontier models."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；针对强化学习中分布锐化与任务奖励的争议提供理论对比，但未提出全新架构或算法。",
+      "• 实盘坑: 高；RL集成需大量计算资源，分布锐化方法存在不稳定风险，且缺乏金融场景的直接验证。",
+      "• 复现难度: 中等；依赖公开模型和数学数据集，但RL训练过程复杂，需精细调参以确保结果一致性。",
+      "• 应用局限: 实验集中于中小规模模型，可能难以推广到前沿大模型，影响实际部署价值。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.16247v1",
+    "title": "Joint-Centric Dual Contrastive Alignment with Structure-Preserving and Information-Balanced Regularization",
+    "pdf_url": "https://arxiv.org/pdf/2604.16247v1",
+    "published": "2026-04-17",
+    "crawled_at": "2026-04-20 20:35:15",
+    "ai_score": 7.8,
+    "translated_title": "基于结构保持与信息平衡正则化的联合中心双对比对齐方法",
+    "summary_en": [
+      "• Model Architecture: HILBERT framework uses frozen pre-trained speech/language encoders with cross-modal attention, self-attentive pooling, and a Mixture-of-Experts classifier for downstream tasks.",
+      "• Data used: Low-resource audio-text datasets with long, segmented sequences; specific datasets not named but evaluated across multiple backbone combinations.",
+      "• Performance metrics: Superior performance in highly imbalanced multi-class settings; learns semantically meaningful long-sequence representations; extensive evaluation demonstrates effectiveness."
+    ],
+    "summary_cn": [
+      "• 核心模型: HILBERT框架采用冻结预训练语音/语言编码器，通过跨模态注意力和自注意力池化聚合特征，并使用混合专家分类器进行下游预测。",
+      "• 数据来源: 低资源音频-文本数据集，包含长分割序列；未指定具体数据集，但在多种骨干组合上进行了评估。",
+      "• 主要结论: 在高度不平衡的多类设置中表现优异；学习到语义丰富的长序列表示；通过广泛评估验证了框架的有效性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; useful for multimodal audio-text tasks in finance (e.g., earnings call analysis), but direct trading alpha unproven; could enhance sentiment or event detection models.",
+      "• Implementation Risk: High; complex architecture with multiple components (contrastive objectives, regularizers, MoE) increases deployment complexity and computational cost.",
+      "• Novelty: High; introduces reciprocal dual contrastive alignment and information-balancing regularization to address modality imbalance, advancing multimodal fusion techniques."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；提出互惠双对比对齐和信息平衡正则化，解决模态不平衡问题，推动多模态融合技术发展。",
+      "• 实盘坑: 高；架构复杂，包含多个组件（对比目标、正则化器、MoE），增加部署难度和计算成本，可能影响实时应用。",
+      "• 复现难度: 中高；依赖预训练编码器和低资源数据，需要调优超参数和正则化项，但方法描述较详细，可复现性中等。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2604.16242v1",
+    "title": "Detecting and Suppressing Reward Hacking with Gradient Fingerprints",
+    "pdf_url": "https://arxiv.org/pdf/2604.16242v1",
+    "published": "2026-04-17",
+    "crawled_at": "2026-04-20 20:35:38",
+    "ai_score": 8.2,
+    "translated_title": "基于梯度指纹的奖励黑客行为检测与抑制",
+    "summary_en": [
+      "• Model Architecture: GRIFT (Gradient Fingerprint) method computes gradients of chain-of-thought (CoT) reasoning conditioned on prompts, compresses them into compact representations to detect reward hacking behaviors in reinforcement learning with verifiable rewards (RLVR) systems.",
+      "• Data used: Evaluated across verifiable reasoning benchmarks spanning mathematics, code generation, and logical reasoning tasks, with comparisons against baseline methods including CoT Monitor and TRACE.",
+      "• Performance metrics: Achieved over 25% relative improvement in detecting reward hacking behavior compared to strong baselines, and integration into rejection fine-tuning pipelines reduced reward hacking while improving true task objective performance."
+    ],
+    "summary_cn": [
+      "• 核心模型: GRIFT（梯度指纹）方法通过计算提示条件下的思维链（CoT）梯度，将其压缩为紧凑表示，用于检测可验证奖励强化学习（RLVR）系统中的奖励黑客行为。",
+      "• 数据来源: 在数学、代码生成和逻辑推理等可验证推理基准上进行评估，并与CoT Monitor和TRACE等基线方法进行比较。",
+      "• 主要结论: 相比强基线方法，在检测奖励黑客行为方面实现了超过25%的相对改进，集成到拒绝微调流程中减少了奖励黑客行为并提升了真实任务目标性能。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for improving robustness of automated trading systems by detecting subtle manipulation patterns in reward-driven AI models, particularly relevant for algorithmic trading where reward functions might be gamed.",
+      "• Implementation Risk: Moderate risk due to computational overhead of gradient computation and compression, and potential false positives in detecting legitimate but unconventional reasoning patterns.",
+      "• Novelty: Significant novelty in leveraging gradient-level representations rather than surface text analysis for detecting implicit reward hacking, representing an advancement in interpretable AI for financial applications."
+    ],
+    "verdict_cn": [
+      "• 创新点: 利用梯度级表示而非表面文本分析来检测隐式奖励黑客行为，在金融应用的可解释AI领域具有显著创新性。",
+      "• 实盘坑: 梯度计算和压缩带来计算开销，可能产生误报（将合法但非常规的推理模式误判为黑客行为），在实时交易系统中需谨慎部署。",
+      "• 复现难度: 中等难度，需要访问模型内部梯度信息，但代码已开源且方法描述清晰，具备复现可行性。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2604.16239v1",
+    "title": "Adaptive multi-fidelity optimization with fast learning rates",
+    "pdf_url": "https://arxiv.org/pdf/2604.16239v1",
+    "published": "2026-04-17",
+    "crawled_at": "2026-04-20 20:36:00",
+    "ai_score": 8.2,
+    "translated_title": "具有快速学习率的自适应多保真度优化",
+    "summary_en": [
+      "• Model Architecture: The paper introduces the Kometo algorithm, an adaptive multi-fidelity optimization method that balances cost and bias of function approximations without prior knowledge of smoothness or fidelity assumptions.",
+      "• Data used: The study utilizes synthetic or simulated data for theoretical analysis and empirical validation, focusing on locally smooth functions with varying fidelity approximations of different costs.",
+      "• Performance metrics: The algorithm achieves near-optimal simple regret rates with logarithmic factors, outperforming previous multi-fidelity methods in terms of convergence speed and parameter-agnostic performance."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出Kometo算法，一种自适应多保真度优化方法，无需先验平滑度或保真度假设，自动权衡近似函数的成本与偏差。",
+      "• 数据来源: 基于理论分析和实证验证，使用合成或模拟数据，针对具有不同成本的多保真度近似的局部平滑函数。",
+      "• 主要结论: 算法在简单遗憾上达到接近最优的速率（含对数因子），在收敛速度和参数无关性能上优于现有方法。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for optimizing expensive-to-evaluate functions in quantitative finance, such as option pricing or portfolio optimization, by reducing computational costs while maintaining accuracy.",
+      "• Implementation Risk: Moderate risk due to reliance on theoretical assumptions about local smoothness and fidelity approximations; real-world financial data may exhibit non-stationarity or noise not fully captured.",
+      "• Novelty: Significant novelty in achieving parameter-agnostic performance with fast learning rates, improving upon prior multi-fidelity methods without requiring problem-dependent parameters."
+    ],
+    "verdict_cn": [
+      "• 创新点: 在无需问题依赖参数的情况下实现快速学习率，显著提升多保真度优化的自适应性和效率，理论贡献突出。",
+      "• 实盘坑: 依赖局部平滑性和保真度假设，金融数据中的非平稳性或噪声可能导致性能下降，需谨慎验证。",
+      "• 复现难度: 中等难度，算法设计清晰，但需要精确实现成本-偏差权衡和自适应机制，对计算资源有一定要求。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2604.16238v1",
+    "title": "Enhancing AI and Dynamical Subseasonal Forecasts with Probabilistic Bias Correction",
+    "pdf_url": "https://arxiv.org/pdf/2604.16238v1",
+    "published": "2026-04-17",
+    "crawled_at": "2026-04-20 20:36:27",
+    "ai_score": 8.5,
+    "translated_title": "通过概率偏差校正增强人工智能和动力学期次预报",
+    "summary_en": [
+      "• Model Architecture: Probabilistic bias correction (PBC) framework that learns to correct historical probabilistic forecasts using machine learning techniques",
+      "• Data used: Historical probabilistic forecasts from ECMWF's leading dynamical and AI models, operational forecasting data from six centers, and multi-model ensemble data",
+      "• Performance metrics: Doubled subseasonal skill for AI Forecasting System, improved skill for 91% of pressure, 92% of temperature, and 98% of precipitation targets in operationally-debiased dynamical model",
+      "• Operational validation: Placed first in ECMWF's 2025 real-time forecasting competition for all weather variables and lead times, outperforming 34 international teams"
+    ],
+    "summary_cn": [
+      "• 核心模型: 概率偏差校正(PBC)机器学习框架，通过学习校正历史概率预报来减少系统误差",
+      "• 数据来源: 欧洲中期天气预报中心(ECMWF)领先的动力模型和AI模型的历史概率预报数据，六个业务预报中心数据，国际多模式集合数据",
+      "• 主要结论: PBC使AI预报系统的次季节预报技能翻倍，改进91%气压、92%温度和98%降水目标的业务去偏动力模型技能",
+      "• 业务验证: 在ECMWF 2025实时预报竞赛中所有天气变量和预报时效均排名第一，超越34个国际团队"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High - demonstrated superior performance in operational forecasting competition with potential applications in weather-sensitive markets (agriculture, energy, insurance)",
+      "• Implementation Risk: Moderate - requires access to high-quality historical forecast data and operational forecasting infrastructure, but framework is designed for deployment",
+      "• Novelty: Significant - introduces probabilistic bias correction specifically for subseasonal forecasting gap, validated against multiple operational systems",
+      "• Scalability: High - framework can be adapted to various forecasting models and potentially extended to other time-series prediction domains"
+    ],
+    "verdict_cn": [
+      "• 创新点: 针对次季节预报盲区提出概率偏差校正框架，在业务预报竞赛中全面超越现有系统，具有显著技术突破",
+      "• 实盘坑: 需要高质量历史预报数据和业务预报系统接入，校正模型可能对极端天气事件响应不足，存在过拟合历史模式风险",
+      "• 复现难度: 中等偏高 - 需要ECMWF级别预报数据和计算资源，但方法论描述清晰，核心算法应可复现",
+      "• 市场应用: 在农业期货、能源交易、天气衍生品等天气敏感市场具有直接应用价值，但需考虑地域适应性"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "Nature Communications",
+      "status": "Accepted"
+    }
+  },
+  {
     "id": "2604.15306v1",
     "title": "Generalization in LLM Problem Solving: The Case of the Shortest Path",
     "pdf_url": "https://arxiv.org/pdf/2604.15306v1",
