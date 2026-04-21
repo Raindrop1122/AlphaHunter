@@ -1,5 +1,353 @@
 [
   {
+    "id": "2604.18584v1",
+    "title": "MathNet: a Global Multimodal Benchmark for Mathematical Reasoning and Retrieval",
+    "pdf_url": "https://arxiv.org/pdf/2604.18584v1",
+    "published": "2026-04-20",
+    "crawled_at": "2026-04-21 20:37:36",
+    "ai_score": 8.7,
+    "translated_title": "MathNet：一个用于数学推理与检索的全球多模态基准",
+    "summary_en": [
+      "• Model Architecture: The paper introduces MathNet, a benchmark dataset designed for evaluating mathematical reasoning in generative models (like Gemini-3.1-Pro and GPT-5) and mathematical retrieval in embedding-based systems, with tasks including Problem Solving, Math-Aware Retrieval, and Retrieval-Augmented Problem Solving.",
+      "• Data used: The dataset comprises 30,676 expert-authored Olympiad-level math problems from 47 countries, 17 languages, and two decades of competitions, including mathematically equivalent and structurally similar problem pairs curated by human experts for retrieval evaluation.",
+      "• Performance metrics: State-of-the-art reasoning models achieve 78.4% for Gemini-3.1-Pro and 69.3% for GPT-5, while embedding models struggle with retrieval; retrieval-augmented generation shows gains up to 12% (e.g., DeepSeek-V3.2-Speciale), highlighting sensitivity to retrieval quality."
+    ],
+    "summary_cn": [
+      "• 核心模型: 论文提出MathNet基准，用于评估生成模型（如Gemini-3.1-Pro和GPT-5）的数学推理能力和基于嵌入系统的数学检索性能，支持问题解决、数学感知检索和检索增强问题解决三大任务。",
+      "• 数据来源: 数据集包含30,676个专家编写的奥林匹克级数学问题，覆盖47个国家、17种语言和20年竞赛历史，并包含人工专家策划的数学等价和结构相似问题对用于检索评估。",
+      "• 主要结论: 最先进的推理模型在基准上表现有限（Gemini-3.1-Pro为78.4%，GPT-5为69.3%），嵌入模型在检索等效问题上困难；检索增强生成性能对检索质量高度敏感，DeepSeek-V3.2-Speciale最高提升12%。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for developing quantitative trading strategies by enhancing mathematical reasoning in AI models, particularly for complex financial modeling, risk assessment, and algorithmic optimization where precise problem-solving is critical.",
+      "• Implementation Risk: Moderate risk due to reliance on high-quality retrieval systems; poor retrieval could degrade performance in real-world applications, and dataset scale may require significant computational resources for training and evaluation.",
+      "• Novelty: High novelty as MathNet is the largest high-quality Olympiad dataset and first benchmark for mathematical problem retrieval, addressing gaps in size, language coverage, and task diversity compared to existing benchmarks."
+    ],
+    "verdict_cn": [
+      "• 创新点: 创新性高，MathNet是最大规模的奥林匹克级高质量数据集，并首次提供数学问题检索基准，弥补了现有基准在规模、语言覆盖和任务多样性上的不足。",
+      "• 实盘坑: 中等风险，依赖高质量检索系统，检索不佳可能导致性能下降；数据集规模大，训练和评估需大量计算资源，可能增加实施成本。",
+      "• 复现难度: 中等难度，数据集和基准已公开（https://mathnet.mit.edu），但需要专业数学知识和多语言处理能力来复现实验，且检索任务的专家策划问题对可能难以完全复制。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2604.18580v1",
+    "title": "Sessa: Selective State Space Attention",
+    "pdf_url": "https://arxiv.org/pdf/2604.18580v1",
+    "published": "2026-04-20",
+    "crawled_at": "2026-04-21 20:37:58",
+    "ai_score": 8.2,
+    "translated_title": "Sessa：选择性状态空间注意力",
+    "summary_en": [
+      "• Model Architecture: Sessa is a decoder that integrates attention within a feedback path, enabling recurrent many-path aggregation within a single layer, combining elements of Transformers and structured state-space models like Mamba.",
+      "• Data used: The paper mentions long-context benchmarks and short-context language modeling tasks, but does not specify exact datasets; it likely uses standard NLP datasets for evaluation under matched architectures and training budgets.",
+      "• Performance metrics: Sessa achieves the strongest performance on long-context benchmarks while remaining competitive with Transformer and Mamba baselines on short-context language modeling, with theoretical regimes showing power-law memory tails of order O(ℓ⁻ᵝ) for 0<β<1."
+    ],
+    "summary_cn": [
+      "• 核心模型: Sessa是一种解码器，将注意力机制嵌入反馈路径中，实现层内循环多路径聚合，融合了Transformer和结构化状态空间模型（如Mamba）的特点。",
+      "• 数据来源: 论文提及长上下文基准测试和短上下文语言建模任务，但未明确具体数据集；可能使用标准NLP数据集在匹配架构和训练预算下进行评估。",
+      "• 主要结论: Sessa在长上下文基准测试中表现最佳，同时在短上下文语言建模上与Transformer和Mamba基线竞争，理论分析显示其具有幂律记忆尾特性，阶数为O(ℓ⁻ᵝ)，其中0<β<1。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for alpha in long-context NLP applications, such as document summarization or financial report analysis, due to improved memory retention and selective retrieval capabilities, but requires validation on real-world data.",
+      "• Implementation Risk: Moderate risk due to complexity of integrating attention with feedback paths; potential issues include training instability, high computational costs, and challenges in scaling to very large models or datasets.",
+      "• Novelty: Novel architecture that addresses limitations of existing models by enabling recurrent many-path aggregation, offering a unique approach to long-range dependencies with theoretical guarantees on power-law memory decay."
+    ],
+    "verdict_cn": [
+      "• 创新点: 创新性地将注意力机制置于反馈路径中，实现循环多路径聚合，解决了现有模型在长程依赖中的稀释或指数衰减问题，提供理论上的幂律记忆尾保证。",
+      "• 实盘坑: 实现风险中等，因架构复杂可能导致训练不稳定、计算成本高，且在大规模模型或数据集上扩展困难；需警惕过拟合和泛化能力不足。",
+      "• 复现难度: 复现难度较高，需要深入理解状态空间模型和注意力机制，代码实现和超参数调优可能具挑战性，依赖特定硬件和优化技巧。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.18578v1",
+    "title": "Bounded Ratio Reinforcement Learning",
+    "pdf_url": "https://arxiv.org/pdf/2604.18578v1",
+    "published": "2026-04-20",
+    "crawled_at": "2026-04-21 20:38:23",
+    "ai_score": 8.2,
+    "translated_title": "有界比率强化学习",
+    "summary_en": [
+      "• Model Architecture: Introduces Bounded Ratio Reinforcement Learning (BRRL) framework with a novel regularized and constrained policy optimization problem, deriving an analytical optimal solution that ensures monotonic performance improvement. Develops Bounded Policy Optimization (BPO) algorithm that minimizes advantage-weighted divergence between policy and analytic solution, and extends to Group-relative BPO (GBPO) for LLM fine-tuning.",
+      "• Data used: Evaluated on MuJoCo environments (e.g., Humanoid locomotion), Atari games, and complex IsaacLab environments for BPO; LLM fine-tuning tasks for GBPO.",
+      "• Performance metrics: BPO and GBPO generally match or outperform PPO and GRPO in stability and final performance across tested domains, with theoretical guarantees including monotonic improvement and lower bound on expected performance."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出有界比率强化学习（BRRL）框架，构建正则化约束策略优化问题，推导出确保单调性能改进的解析最优解。开发有界策略优化（BPO）算法，最小化策略与解析解间的优势加权散度，并扩展为用于LLM微调的组相对BPO（GBPO）。",
+      "• 数据来源: BPO在MuJoCo环境（如人形机器人运动）、Atari游戏和复杂IsaacLab环境中评估；GBPO在LLM微调任务中测试。",
+      "• 主要结论: BPO和GBPO在稳定性和最终性能上普遍匹配或超越PPO和GRPO，理论保证包括单调改进和期望性能下界，为PPO损失提供新理论解释，连接信任区域策略优化与交叉熵方法。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for improving RL algorithm stability and performance in complex environments like robotics and gaming, with theoretical foundations bridging trust region methods and practical heuristics; GBPO extension shows promise for LLM fine-tuning applications.",
+      "• Implementation Risk: Moderate risk due to reliance on analytical solutions that may not scale perfectly to high-dimensional parameter spaces; empirical validation across diverse environments reduces but doesn't eliminate deployment uncertainties.",
+      "• Novelty: Significant novelty in formalizing BRRL framework with provable guarantees, offering fresh theoretical insight into PPO's success and connecting disparate RL methods; practical algorithm BPO demonstrates competitive empirical results."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著创新在于形式化BRRL框架并提供可证明保证，为PPO成功提供新理论视角，连接信任区域策略优化与交叉熵方法；BPO算法在复杂环境中展示竞争力。",
+      "• 实盘坑: 中等风险，解析解可能在高维参数空间扩展不佳；尽管多环境验证，部署仍存不确定性，如计算开销和超参数敏感性。",
+      "• 复现难度: 中等偏高，需实现BRRL理论框架和BPO算法，涉及优势加权散度优化和LLM微调扩展；理论推导复杂，但代码和实验细节若公开可降低难度。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2604.18574v1",
+    "title": "When Can LLMs Learn to Reason with Weak Supervision?",
+    "pdf_url": "https://arxiv.org/pdf/2604.18574v1",
+    "published": "2026-04-20",
+    "crawled_at": "2026-04-21 20:38:50",
+    "ai_score": 7.8,
+    "translated_title": "大语言模型何时能在弱监督下学会推理？",
+    "summary_en": [
+      "• Model Architecture: The study systematically evaluates diverse model families (including Llama3.2-3B-Base) under weak supervision settings, focusing on reinforcement learning with verifiable rewards (RLVR) frameworks.",
+      "• Data used: Experiments span multiple reasoning domains under three weak supervision conditions: scarce data, noisy rewards, and self-supervised proxy rewards, with explicit reasoning traces used for supervised fine-tuning.",
+      "• Performance metrics: Generalization is measured through training reward saturation dynamics, downstream performance correlation, and reasoning faithfulness as a predictive pre-RL property, with output diversity analyzed but found uninformative.",
+      "• Key findings: Models that generalize exhibit prolonged pre-saturation phases where training reward and performance climb together, while rapid saturation leads to memorization; SFT on reasoning traces is necessary for generalization under weak supervision, amplified by continual pre-training on domain data."
+    ],
+    "summary_cn": [
+      "• 核心模型: 研究系统评估了多种模型家族（包括Llama3.2-3B-Base）在弱监督设置下的表现，重点关注基于可验证奖励的强化学习（RLVR）框架。",
+      "• 数据来源: 实验在三种弱监督条件下（稀缺数据、噪声奖励、自监督代理奖励）跨多个推理领域进行，使用显式推理轨迹进行监督微调。",
+      "• 主要结论: 泛化能力由训练奖励饱和动态决定：泛化模型表现出延长的预饱和阶段，训练奖励与下游性能同步提升；快速饱和的模型则倾向于记忆而非学习；推理忠实性是预测模型泛化能力的关键预RL属性。",
+      "• 干预效果: 在Llama3.2-3B-Base上，结合推理轨迹的SFT和领域数据的持续预训练，使模型在所有三种弱监督设置下实现泛化，而基础模型此前均失败。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate—identifies reasoning faithfulness as a predictive metric for RLVR generalization under weak supervision, offering a diagnostic framework for model selection and training optimization in reasoning tasks.",
+      "• Implementation Risk: High—weak supervision settings (scarce/noisy data, proxy rewards) are inherently unstable; success depends heavily on model-specific saturation dynamics and the quality of reasoning traces for SFT.",
+      "• Novelty: Significant—systematically disentangles the roles of continual pre-training vs. SFT under weak supervision, challenging the assumption that output diversity alone drives generalization in reasoning tasks.",
+      "• Practical limitations: Findings are model- and domain-dependent; scaling to larger models or more complex reasoning domains may require substantial adaptation, and the 'reasoning faithfulness' metric itself may be difficult to quantify consistently."
+    ],
+    "verdict_cn": [
+      "• 创新点: 显著—系统解耦了弱监督下持续预训练与监督微调的作用，挑战了仅输出多样性驱动推理泛化的假设，并提出推理忠实性作为关键预测指标。",
+      "• 实盘坑: 高—弱监督设置（稀缺/噪声数据、代理奖励）本质不稳定；成功高度依赖模型特定的饱和动态和SFT所用推理轨迹的质量，实操中易出现泛化失败。",
+      "• 复现难度: 中等—实验设计清晰，但需要跨模型家族和推理领域的系统评估，且推理忠实性的量化可能因任务而异，增加复现复杂性。",
+      "• 策略价值: 为基于LLM的推理系统提供模型选择和训练优化的诊断框架，但在高频或风险敏感场景中需谨慎验证其稳定性。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2604.18572v1",
+    "title": "Back into Plato's Cave: Examining Cross-modal Representational Convergence at Scale",
+    "pdf_url": "https://arxiv.org/pdf/2604.18572v1",
+    "published": "2026-04-20",
+    "crawled_at": "2026-04-21 20:39:11",
+    "ai_score": 7.5,
+    "translated_title": "重返柏拉图洞穴：大规模跨模态表征收敛性研究",
+    "summary_en": [
+      "• Model Architecture: The study critiques the Platonic Representation Hypothesis by analyzing cross-modal alignment between neural networks trained on text and images, focusing on evaluation methods rather than proposing new architectures.",
+      "• Data used: Experiments involve small datasets (≈1K samples) and scaled datasets (millions of samples), with evaluations in one-to-one image-caption settings and realistic many-to-many settings.",
+      "• Performance metrics: Alignment is measured using mutual nearest neighbors, showing degradation at scale and reflecting coarse semantic overlap rather than fine-grained structure; newer models do not show the reported trend of stronger language models aligning with vision."
+    ],
+    "summary_cn": [
+      "• 核心模型: 研究批判柏拉图表征假说，分析文本和图像训练的神经网络之间的跨模态对齐，侧重于评估方法而非新架构。",
+      "• 数据来源: 实验使用小数据集（约1K样本）和扩展数据集（数百万样本），在一对一图像-标题设置和现实多对多设置中进行评估。",
+      "• 主要结论: 跨模态表征收敛的证据较弱，对齐在扩展时显著下降，反映粗粒度语义重叠而非细粒度结构；新模型未显示语言模型与视觉对齐增强的趋势。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; challenges existing assumptions about cross-modal convergence, potentially informing strategies for multi-modal data integration in financial models, but direct alpha generation is limited.",
+      "• Implementation Risk: High; findings suggest fragility in cross-modal alignment, increasing risk in applications relying on consistent representations across modalities, such as sentiment analysis from text and images.",
+      "• Novelty: Moderate; provides critical re-evaluation of prior work (Huh et al.), highlighting methodological flaws, but does not introduce groundbreaking new techniques or theories."
+    ],
+    "verdict_cn": [
+      "• 创新点: 中等；对先前研究进行批判性重评估，揭示方法缺陷，但未引入突破性新技术或理论。",
+      "• 实盘坑: 高；跨模态对齐脆弱，增加依赖一致表征的应用风险，如从文本和图像进行情感分析。",
+      "• 复现难度: 中等；基于公开数据集和标准评估方法，但需处理大规模数据和复杂跨模态设置。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2604.18570v1",
+    "title": "A multimodal and temporal foundation model for virtual patient representations at healthcare system scale",
+    "pdf_url": "https://arxiv.org/pdf/2604.18570v1",
+    "published": "2026-04-20",
+    "crawled_at": "2026-04-21 20:39:34",
+    "ai_score": 8.5,
+    "translated_title": "面向医疗系统规模虚拟患者表征的多模态时序基础模型",
+    "summary_en": [
+      "• Model Architecture: Apollo is a multimodal temporal foundation model that integrates structured and unstructured medical events, images, and clinical text into a unified representation space, compressing patient care journeys into virtual patient embeddings.",
+      "• Data used: Trained on over three decades of longitudinal hospital records from a major US hospital system, comprising 25 billion records from 7.2 million patients, covering 28 medical modalities and 12 specialties.",
+      "• Performance metrics: Evaluated on 322 prognosis and retrieval tasks from a held-out test set of 1.4 million patients, demonstrating predictive capabilities for disease onset (95 tasks), progression (78 tasks), treatment response (59 tasks), adverse events (17 tasks), and hospital operations (12 tasks), with feature attribution aligning with clinical biomarkers."
+    ],
+    "summary_cn": [
+      "• 核心模型: Apollo是一个多模态时序基础模型，整合结构化与非结构化医疗事件、图像和临床文本，形成统一表征空间，将患者诊疗历程压缩为虚拟患者嵌入。",
+      "• 数据来源: 基于美国主要医院系统超过30年的纵向病历数据，包含25亿条记录、720万患者，覆盖28种医疗模态和12个专科领域。",
+      "• 主要结论: 在140万患者的测试集上完成322项预后和检索任务验证，模型在疾病预测（95项）、进展评估（78项）、治疗反应（59项）等方面表现优异，特征归因与临床生物标志物一致。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for generating predictive healthcare factors that could inform investment decisions in biotech, pharmaceuticals, and healthcare services, especially for long-term disease risk modeling and treatment outcome forecasting.",
+      "• Implementation Risk: Significant risks include data privacy concerns, regulatory hurdles in healthcare applications, and the challenge of generalizing across diverse healthcare systems with varying data quality and formats.",
+      "• Novelty: Novel in integrating multimodal and temporal data at an unprecedented scale, creating a unified 'atlas of medical concepts' that enables whole-patient representation and computational reasoning across decades of clinical history."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次在多模态和时序维度上实现大规模医疗数据整合，构建'医学概念图谱'，支持全患者表征和跨数十年临床历史的计算推理，突破传统医疗AI的局限。",
+      "• 实盘坑: 数据隐私和合规风险极高，医疗系统异构性导致模型泛化困难，实际部署需克服临床工作流集成和实时预测延迟等挑战。",
+      "• 复现难度: 极高，需获取数十年级医院系统数据（25亿记录），处理28种模态的复杂对齐，且计算资源需求巨大，非顶级机构难以复现。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "Nature Medicine",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2604.18569v1",
+    "title": "Revisiting Active Sequential Prediction-Powered Mean Estimation",
+    "pdf_url": "https://arxiv.org/pdf/2604.18569v1",
+    "published": "2026-04-20",
+    "crawled_at": "2026-04-21 20:39:50",
+    "ai_score": 7.2,
+    "translated_title": "重新审视主动序列预测驱动的均值估计",
+    "summary_en": [
+      "• Model Architecture: Active sequential framework combining uncertainty-based query suggestions with constant probability constraints for label acquisition decisions",
+      "• Data used: Simulated datasets with covariates and ground-truth labels, leveraging machine learning model predictions when labels are not queried",
+      "• Performance metrics: Confidence interval width as primary metric, with analysis of query probability convergence behavior under no-regret learning approaches"
+    ],
+    "summary_cn": [
+      "• 核心模型: 主动序列框架，结合基于不确定性的查询建议与恒定概率约束，用于标签获取决策",
+      "• 数据来源: 模拟数据集，包含协变量和真实标签，在未查询标签时使用机器学习模型预测",
+      "• 主要结论: 当恒定概率权重接近1时，置信区间宽度最小；查询概率在无悔学习下收敛于最大查询概率约束"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate - theoretical insights into query optimization could inform active learning strategies in data-scarce financial contexts",
+      "• Implementation Risk: High - requires accurate uncertainty quantification and real-time decision-making, challenging in noisy market environments",
+      "• Novelty: Limited - revisits existing framework with refined analysis rather than introducing fundamentally new methodology"
+    ],
+    "verdict_cn": [
+      "• 创新点: 有限 - 对现有框架进行非渐近分析和数据依赖边界推导，而非提出全新方法",
+      "• 实盘坑: 高 - 需要精确的不确定性量化和实时决策，在嘈杂市场环境中实现困难",
+      "• 复现难度: 中等 - 理论分析清晰，但模拟实验细节可能不足，需要自定义实现"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "ICML",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2604.18567v1",
+    "title": "Latent Phase-Shift Rollback: Inference-Time Error Correction via Residual Stream Monitoring and KV-Cache Steering",
+    "pdf_url": "https://arxiv.org/pdf/2604.18567v1",
+    "published": "2026-04-20",
+    "crawled_at": "2026-04-21 20:40:21",
+    "ai_score": 8.5,
+    "translated_title": "潜在相移回滚：通过残差流监控和KV缓存引导实现推理时错误纠正",
+    "summary_en": [
+      "• Model Architecture: Latent Phase-Shift Rollback (LPSR) monitors residual stream at a critical layer (lcrit) to detect abrupt directional reversals (phase shifts) using a cosine-similarity + entropy dual gate, then rolls back KV-cache and injects a pre-computed steering vector without fine-tuning or additional forward passes.",
+      "• Data used: Evaluated on MATH-500 benchmark, a dataset of 500 mathematical reasoning problems, with an 8B parameter model compared against standard autoregressive (AR) generation, prompted self-correction, Best-of-16 sampling, and a 70B model baseline.",
+      "• Performance metrics: LPSR achieves 44.0% accuracy on MATH-500 vs. 28.8% for standard AR (+15.2 percentage points), outperforming prompted self-correction (19.8%) by +24.2 pp and Best-of-16 by +7.8 pp at 5.4× lower token cost, and surpasses a 70B model (35.2%) with 8.75× fewer parameters at ~3× token budget.",
+      "• Key finding: A 32-layer sweep reveals a detection-correction dissociation where error-detection AUC peaks at layer 14 (0.718) but task accuracy peaks at layer 16 (44.0% vs. 29.2%), indicating optimal monitoring depth differs for detection and correction."
+    ],
+    "summary_cn": [
+      "• 核心模型: 潜在相移回滚（LPSR）在关键层（lcrit）监控残差流，通过余弦相似度+熵双重门检测方向突变（相移），然后回滚KV缓存并注入预计算的引导向量，无需微调或额外前向传播。",
+      "• 数据来源: 使用MATH-500基准测试（500个数学推理问题）进行评估，以8B参数模型对比标准自回归生成、提示自纠正、Best-of-16采样和70B模型基线。",
+      "• 主要结论: LPSR在MATH-500上达到44.0%准确率，比标准AR（28.8%）高15.2个百分点，优于提示自纠正（19.8%）24.2个百分点，并以5.4倍更低token成本超越Best-of-16 7.8个百分点，同时以8.75倍更少参数和约3倍token预算超越70B模型（35.2%）。",
+      "• 关键发现: 32层扫描揭示检测-纠正分离现象：错误检测AUC在14层达到峰值（0.718），但任务准确率在16层达到峰值（44.0% vs. 29.2%），表明最优监控深度因检测和纠正而异。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for improving reasoning accuracy in LLMs without costly fine-tuning or scaling, with demonstrated gains on mathematical tasks that could translate to financial modeling, risk assessment, or quantitative analysis where error propagation is critical.",
+      "• Implementation Risk: Moderate risk due to reliance on layer-specific monitoring and steering vectors that may not generalize across tasks or models; detection-correction dissociation adds complexity, and real-time KV-cache manipulation could introduce latency or instability in production systems.",
+      "• Novelty: Novel approach combining residual stream monitoring with KV-cache steering for inference-time error correction, introducing the concept of phase-shift detection and a dual-gate mechanism, with empirical evidence of a detection-correction dissociation that challenges conventional layer-depth assumptions."
+    ],
+    "verdict_cn": [
+      "• 创新点: 创新性地结合残差流监控和KV缓存引导进行推理时错误纠正，引入相移检测概念和双重门机制，并通过检测-纠正分离现象实证挑战传统层深度假设。",
+      "• 实盘坑: 中等风险，依赖特定层监控和引导向量可能无法跨任务或模型泛化；检测-纠正分离增加复杂性，实时KV缓存操作可能在生产系统中引入延迟或不稳定性。",
+      "• 复现难度: 中等难度，需要访问模型内部残差流和KV缓存，实现相移检测和回滚机制，但无需微调或梯度计算，主要挑战在于精确调整监控层和引导向量以优化性能。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2604.18566v1",
+    "title": "Benchmarking System Dynamics AI Assistants: Cloud Versus Local LLMs on CLD Extraction and Discussion",
+    "pdf_url": "https://arxiv.org/pdf/2604.18566v1",
+    "published": "2026-04-20",
+    "crawled_at": "2026-04-21 20:40:48",
+    "ai_score": 7.5,
+    "translated_title": "系统动力学AI助手基准测试：云端与本地大语言模型在因果循环图提取与讨论中的表现",
+    "summary_en": [
+      "• Model Architecture: Evaluates proprietary cloud APIs (e.g., GPT-4, Claude) and open-source local models (e.g., Kimi K2.5) using reasoning vs. instruction-tuned architectures, with backends like GGUF (llama.cpp) and MLX (mlx_lm) and quantization levels (Q3 to MLX-6bit).",
+      "• Data used: Two purpose-built benchmarks: CLD Leaderboard (53 tests for structured causal loop diagram extraction) and Discussion Leaderboard (interactive model discussion, feedback explanation, and model building coaching).",
+      "• Performance metrics: Cloud models achieve 77–89% pass rates on CLD extraction; best local model matches mid-tier cloud at 77%. On Discussion, local models score 50–100% on model building, 47–75% on feedback explanation, but only 0–50% on error fixing due to memory limits.",
+      "• Key findings: Backend choice (e.g., mlx_lm vs. llama.cpp) has larger impact than quantization, with issues like JSON schema handling and indefinite generation in long-context prompts."
+    ],
+    "summary_cn": [
+      "• 核心模型: 评估了云端专有API（如GPT-4、Claude）和开源本地模型（如Kimi K2.5），涵盖推理与指令调优架构，使用GGUF（llama.cpp）和MLX（mlx_lm）后端及量化级别（Q3至MLX-6bit）。",
+      "• 数据来源: 两个定制基准：CLD排行榜（53个测试用于结构化因果循环图提取）和讨论排行榜（交互式模型讨论、反馈解释和模型构建指导）。",
+      "• 主要结论: 云端模型在CLD提取上达到77–89%通过率；最佳本地模型匹配中端云端性能（77%）。在讨论任务中，本地模型在模型构建上得分50–100%，反馈解释47–75%，但错误修复仅0–50%，暴露内存限制问题。",
+      "• 技术洞察: 后端选择（如mlx_lm与llama.cpp）比量化级别影响更大，涉及JSON模式处理和长上下文提示中的无限生成问题。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; provides actionable insights for optimizing local LLM deployments in system dynamics tasks, but limited direct financial alpha due to niche application focus.",
+      "• Implementation Risk: High; local models show significant performance gaps in error fixing (0–50%) and memory limitations, requiring careful tuning of parameters and backends, increasing operational complexity.",
+      "• Novelty: High; introduces systematic benchmarks for system dynamics AI, with detailed analysis of model types, backends, and quantization, offering a practitioner guide for large models on Apple Silicon."
+    ],
+    "verdict_cn": [
+      "• 创新点: 高；首次为系统动力学AI建立系统化基准测试，深入分析模型类型、后端和量化影响，并提供Apple Silicon上运行大模型的实践指南。",
+      "• 实盘坑: 高；本地模型在错误修复上表现差（0–50%），内存限制明显，需精细调参和后端选择，增加实施风险。",
+      "• 复现难度: 中等；论文提供完整参数扫描和清理数据，但依赖特定硬件（Apple Silicon）和复杂模型部署，可能限制广泛复现。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.18559v1",
+    "title": "ConforNets: Latents-Based Conformational Control in OpenFold3",
+    "pdf_url": "https://arxiv.org/pdf/2604.18559v1",
+    "published": "2026-04-20",
+    "crawled_at": "2026-04-21 20:41:06",
+    "ai_score": 8.5,
+    "translated_title": "ConforNets：基于OpenFold3中潜变量的构象控制",
+    "summary_en": [
+      "• Model Architecture: ConforNets introduce channel-wise affine transformations applied to the pre-Pairformer pair latents in the AlphaFold3 (AF3) architecture, enabling global modulation of representations for conformational control.",
+      "• Data used: The method is evaluated on existing multi-state benchmarks for unsupervised generation of alternate protein conformations and a novel supervised task of conformational transfer across protein families.",
+      "• Performance metrics: ConforNets achieve state-of-the-art success rates on all existing multi-state benchmarks and demonstrate the ability to induce conserved conformational changes across protein families when trained on a source protein."
+    ],
+    "summary_cn": [
+      "• 核心模型: ConforNets 在 AlphaFold3 (AF3) 架构中，通过对 pre-Pairformer 配对潜变量应用通道仿射变换，实现全局表示调制以控制构象。",
+      "• 数据来源: 使用现有的多状态基准测试进行无监督交替构象生成评估，并引入跨蛋白质家族的构象转移监督任务进行验证。",
+      "• 主要结论: ConforNets 在所有现有多状态基准测试中达到最先进的成功率，并能通过源蛋白训练在蛋白质家族中诱导保守的构象变化。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for generating novel protein conformations that could inform drug discovery and structural biology, offering a systematic approach beyond ad hoc perturbations.",
+      "• Implementation Risk: Moderate risk due to reliance on the AF3 architecture and latent space manipulations, which may require careful tuning and validation for specific applications.",
+      "• Novelty: Significant novelty in introducing reusable, globally modulable latent transformations for conformational control, advancing beyond inefficient inference-time perturbations."
+    ],
+    "verdict_cn": [
+      "• 创新点: 引入可重用、全局可调的潜变量变换机制，系统化控制构象，超越低效的推理时扰动方法。",
+      "• 实盘坑: 依赖 AF3 架构和潜空间操作，需针对具体应用精细调参和验证，可能存在泛化风险。",
+      "• 复现难度: 中等难度，需要 AF3 模型基础和潜变量处理能力，但方法描述清晰，可基于开源代码实现。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
     "id": "2604.16282v1",
     "title": "Geometric regularization of autoencoders via observed stochastic dynamics",
     "pdf_url": "https://arxiv.org/pdf/2604.16282v1",
