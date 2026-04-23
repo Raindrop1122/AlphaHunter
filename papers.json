@@ -1,5 +1,225 @@
 [
   {
+    "id": "2604.20825v1",
+    "title": "FedSIR: Spectral Client Identification and Relabeling for Federated Learning with Noisy Labels",
+    "pdf_url": "https://arxiv.org/pdf/2604.20825v1",
+    "published": "2026-04-22",
+    "crawled_at": "2026-04-23 20:40:38",
+    "ai_score": 7.5,
+    "translated_title": "FedSIR：面向含噪声标签联邦学习的谱客户端识别与重标记",
+    "summary_en": "• Model Architecture: FedSIR is a multi-stage framework with three components: spectral consistency analysis for client identification, spectral reference-based relabeling for noisy clients, and noise-aware training (logit-adjusted loss, knowledge distillation, distance-aware aggregation).\n• Data used: Standard FL benchmarks with synthetic label noise; no specific dataset named but typical image classification datasets (e.g., CIFAR-10, CIFAR-100) are implied.\n• Performance metrics: Test accuracy compared against state-of-the-art FL methods under various noise levels and client heterogeneity.",
+    "summary_cn": "• 核心模型: FedSIR多阶段框架，包括谱一致性分析识别客户端、基于谱参考的重标记、以及噪声感知训练（对数调整损失、知识蒸馏、距离感知聚合）。\n• 数据来源: 标准联邦学习基准数据集（如CIFAR-10/100），人工添加标签噪声。\n• 主要结论: 在多种噪声水平和客户端异构性下，FedSIR一致优于现有最先进方法。",
+    "verdict_en": "• Alpha Potential: Moderate; spectral methods are novel for FL noise handling but may not directly translate to financial alpha.\n• Implementation Risk: High; requires careful tuning of spectral thresholds and multi-stage training, plus communication overhead.\n• Novelty: High; first to use spectral consistency for client identification and relabeling in FL.",
+    "verdict_cn": "• 创新点: 首次将谱一致性用于联邦学习中的客户端识别与重标记，思路新颖。\n• 实盘坑: 谱分析计算开销大，多阶段训练复杂，实际部署需大量调参。\n• 复现难度: 中等；代码已开源，但需理解谱分解细节。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.20824v1",
+    "title": "Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples",
+    "pdf_url": "https://arxiv.org/pdf/2604.20824v1",
+    "published": "2026-04-22",
+    "crawled_at": "2026-04-23 20:40:46",
+    "ai_score": 8.5,
+    "translated_title": "通过上下文控制样本弥合生物医学成像中的领域差距",
+    "summary_en": "• Model Architecture: Proposes CS-ARM-BN, a meta-learning adaptation method using batch normalization and negative control samples for domain adaptation.\n• Data used: Validated on the large-scale JUMP-CP dataset for Mechanism-of-Action (MoA) classification in drug discovery.\n• Performance metrics: Standard ResNet accuracy drops from 0.939 to 0.862 on new batches; CS-ARM-BN achieves 0.935 ± 0.018, closing the domain gap.\n• Key finding: Meta-learning with control samples effectively neutralizes batch effects, outperforming foundation models and typical normalization methods.",
+    "summary_cn": "• 核心模型: 提出CS-ARM-BN，一种基于元学习的自适应方法，利用批归一化和阴性对照样本进行领域自适应。\n• 数据来源: 在大型JUMP-CP数据集上验证，用于药物发现中的作用机制（MoA）分类。\n• 主要结论: 标准ResNet在新批次上准确率从0.939降至0.862；CS-ARM-BN达到0.935±0.018，弥合了领域差距。\n• 关键发现: 结合对照样本的元学习有效中和批次效应，优于基础模型和典型归一化方法。",
+    "verdict_en": "• Alpha Potential: High for biomedical imaging applications, but limited direct applicability to financial markets.\n• Implementation Risk: Moderate; requires access to control samples and careful tuning of meta-learning parameters.\n• Novelty: High; first to show meta-learning closes domain gap in bioimaging with control samples.\n• Practicality: Strong for drug discovery, but may not generalize to other domains without control samples.",
+    "verdict_cn": "• 创新点: 首次证明元学习结合对照样本可有效消除生物成像中的批次效应，方法新颖。\n• 实盘坑: 金融领域缺乏类似对照样本，直接应用受限；元学习调参复杂，计算成本高。\n• 复现难度: 中等；需要JUMP-CP数据集和对照样本设计，代码未开源。\n• 应用前景: 对药物发现等生物医学领域价值高，但跨领域迁移需谨慎。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.20822v1",
+    "title": "Global Offshore Wind Infrastructure: Deployment and Operational Dynamics from Dense Sentinel-1 Time Series",
+    "pdf_url": "https://arxiv.org/pdf/2604.20822v1",
+    "published": "2026-04-22",
+    "crawled_at": "2026-04-23 20:40:55",
+    "ai_score": 5.5,
+    "translated_title": "全球海上风电基础设施：基于密集Sentinel-1时间序列的部署与运行动态",
+    "summary_en": "• Model Architecture: Updated object detection workflow for Sentinel-1 SAR data, generating 1D backscatter profiles per location and acquisition.\n• Data used: 15,606 time series from 2016Q1 to 2025Q1, with 14,840,637 events; includes rule-based labels and expert-annotated benchmark of 553 time series.\n• Performance metrics: Rule-based classifier achieves macro F1 score of 0.84 and AUC of 0.785 for temporal coherence.\n• Key findings: Corpus supports global-scale analysis of deployment dynamics, regional patterns, vessel interactions, and operational events.",
+    "summary_cn": "• 核心模型: 基于Sentinel-1 SAR数据的更新目标检测流程，生成每个位置和采集的1D后向散射剖面。\n• 数据来源: 2016Q1至2025Q1的15,606条时间序列，共14,840,637个事件；包含基于规则的标签和专家标注的553条时间序列基准数据集。\n• 主要结论: 规则分类器宏F1得分为0.84，时间一致性AUC为0.785；语料库支持全球部署动态、区域模式、船舶交互和运行事件分析。",
+    "verdict_en": "• Alpha Potential: Low; focuses on infrastructure monitoring, not directly applicable to financial trading.\n• Implementation Risk: High; requires SAR data processing expertise and integration with financial models.\n• Novelty: Moderate; introduces dense temporal resolution and semantic labels for offshore wind, but lacks financial application.\n• Relevance: Limited for hedge fund unless combined with energy market data for predictive signals.",
+    "verdict_cn": "• 创新点: 提供高时间分辨率的海上风电基础设施监测数据，但金融应用价值有限。\n• 实盘坑: 数据与金融市场关联弱，难以直接转化为交易信号。\n• 复现难度: 高；需要SAR数据处理和遥感专业知识。\n• 适用性: 仅适用于能源市场相关策略，非通用量化因子。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.20819v1",
+    "title": "Stream-CQSA: Avoiding Out-of-Memory in Attention Computation via Flexible Workload Scheduling",
+    "pdf_url": "https://arxiv.org/pdf/2604.20819v1",
+    "published": "2026-04-22",
+    "crawled_at": "2026-04-23 20:41:04",
+    "ai_score": 7.5,
+    "translated_title": "Stream-CQSA：通过灵活的工作负载调度避免注意力计算中的内存溢出",
+    "summary_en": "• Model Architecture: Introduces CQS Divide, a decomposition of attention into independent subsequence computations based on cyclic quorum sets theory, enabling exact recomposition without approximation.\n• Data used: The method is validated on long-context sequences up to billion-token scale, but specific datasets are not mentioned; likely synthetic or benchmark data.\n• Performance metrics: Demonstrates predictable memory scaling, avoids out-of-memory errors, and achieves exact attention on a single GPU for billion-token sequences without inter-device communication.",
+    "summary_cn": "• 核心模型: 基于循环拟阵集理论提出CQS Divide操作，将注意力分解为独立子序列计算，重组后与全序列注意力结果完全一致。\n• 数据来源: 未明确指定数据集，但验证了十亿token序列的注意力计算，可能使用合成数据或基准数据。\n• 主要结论: 实现可预测的内存缩放，在单GPU上无需跨设备通信即可精确计算十亿token序列的注意力，且无近似误差。",
+    "verdict_en": "• Alpha Potential: Low direct alpha; focuses on infrastructure for long-context LLMs, which could enable better NLP models for alpha generation.\n• Implementation Risk: High; requires custom kernel implementation and integration with existing LLM frameworks; CQS theory may be unfamiliar to practitioners.\n• Novelty: High; first work to remove the assumption that full QKV tensors fit in memory, enabling exact attention at unprecedented scale.",
+    "verdict_cn": "• 创新点: 首次突破全QKV张量必须驻留内存的假设，实现十亿token级精确注意力计算，理论贡献显著。\n• 实盘坑: 需要定制CUDA内核和框架集成，CQS理论理解门槛高，实际部署成本大；对量化策略无直接收益。\n• 复现难度: 高；依赖CQS数学理论，代码实现复杂，且未提供开源代码。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.20817v1",
+    "title": "Convergent Evolution: How Different Language Models Learn Similar Number Representations",
+    "pdf_url": "https://arxiv.org/pdf/2604.20817v1",
+    "published": "2026-04-22",
+    "crawled_at": "2026-04-23 20:41:11",
+    "ai_score": 7.5,
+    "translated_title": "趋同进化：不同语言模型如何学习相似的数值表示",
+    "summary_en": "• Model Architecture: Transformers, Linear RNNs, LSTMs, and classical word embeddings are compared. • Data used: General language data and multi-token addition problems. • Performance metrics: Fourier domain sparsity and geometric separability for mod-T classification. • Key finding: Fourier sparsity is necessary but not sufficient for geometric separability; data, architecture, optimizer, and tokenizer influence feature learning.",
+    "summary_cn": "• 核心模型: 比较了Transformer、线性RNN、LSTM和经典词嵌入。 • 数据来源: 通用语言数据和多token加法问题。 • 主要结论: 傅里叶域稀疏性是几何可分离性的必要条件而非充分条件；数据、架构、优化器和分词器影响特征学习。",
+    "verdict_en": "• Alpha Potential: Low; focuses on interpretability rather than trading signals. • Implementation Risk: Medium; requires careful tuning of tokenizer and optimizer. • Novelty: High; identifies convergent evolution in number representations across diverse models.",
+    "verdict_cn": "• 创新点: 发现不同模型在数值表示上的趋同进化现象，理论证明傅里叶稀疏性与几何可分离性的关系。 • 实盘坑: 直接交易信号弱，需结合其他因子；模型依赖分词器，复现需谨慎。 • 复现难度: 中等；需复现多种架构和训练设置，计算资源要求较高。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.20816v1",
+    "title": "ParetoSlider: Diffusion Models Post-Training for Continuous Reward Control",
+    "pdf_url": "https://arxiv.org/pdf/2604.20816v1",
+    "published": "2026-04-22",
+    "crawled_at": "2026-04-23 20:41:18",
+    "ai_score": 7.5,
+    "translated_title": "ParetoSlider：扩散模型后训练实现连续奖励控制",
+    "summary_en": "• Model Architecture: Uses a single diffusion model conditioned on continuous preference weights to approximate the entire Pareto front, enabling inference-time trade-off navigation without retraining.\n• Data: Evaluated on image editing tasks; specific datasets not detailed but likely standard benchmarks for prompt adherence and source fidelity.\n• Performance Metrics: Matches or exceeds baselines trained separately for fixed reward trade-offs, providing fine-grained control over competing generative goals.",
+    "summary_cn": "• 核心模型: 基于扩散模型，通过连续偏好权重条件训练单个模型逼近整个帕累托前沿，实现推理时无需重训练的权衡控制。\n• 数据来源: 在图像编辑任务上评估，未明确具体数据集，可能使用提示遵循和源保真度的标准基准。\n• 主要结论: 单模型匹配或超越单独训练的基线，提供对竞争目标的精细控制。",
+    "verdict_en": "• Alpha Potential: Moderate; applicable to multi-objective RL in generative models, but direct trading alpha unclear.\n• Implementation Risk: Low to moderate; requires careful reward design and training stability, but single model reduces deployment complexity.\n• Novelty: High; introduces continuous preference conditioning for Pareto front approximation in diffusion models, a novel MORL approach.",
+    "verdict_cn": "• 创新点: 首次在扩散模型中引入连续偏好条件实现帕累托前沿近似，多目标强化学习新范式。\n• 实盘坑: 奖励函数设计依赖领域知识，图像编辑场景与金融交易差异大，直接迁移需大量适配。\n• 复现难度: 中等；需扩散模型和RL经验，但代码可能开源。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.20800v1",
+    "title": "LEXIS: LatEnt ProXimal Interaction Signatures for 3D HOI from an Image",
+    "pdf_url": "https://arxiv.org/pdf/2604.20800v1",
+    "published": "2026-04-22",
+    "crawled_at": "2026-04-23 20:41:29",
+    "ai_score": 7.5,
+    "translated_title": "LEXIS：基于图像的3D人-物交互潜在近端交互签名",
+    "summary_en": [
+      "• Model Architecture: LEXIS-Flow uses a VQ-VAE to learn a discrete manifold of interaction signatures (LEXIS), then a diffusion model to estimate human/object meshes and InterFields (dense proximity fields). A guided refinement step ensures physical plausibility without post-hoc optimization.",
+      "• Data used: Evaluated on Open3DHOI and BEHAVE datasets, which contain 3D human-object interaction data from RGB images.",
+      "• Performance metrics: Significantly outperforms SotA baselines in reconstruction, contact, and proximity quality; improves generalization and realism.",
+      "• Key innovation: InterFields representation encodes continuous proximity across body and object surfaces, replacing sparse binary contact cues."
+    ],
+    "summary_cn": [
+      "• 核心模型: LEXIS-Flow采用VQ-VAE学习交互签名的离散流形，再通过扩散模型估计人体/物体网格和InterFields（密集近端场），最后用引导细化确保物理合理性。",
+      "• 数据来源: 在Open3DHOI和BEHAVE数据集上评估，包含RGB图像对应的3D人-物交互数据。",
+      "• 主要结论: 在重建、接触和近端质量上显著超越现有最优方法，泛化性和真实感更强。",
+      "• 创新点: InterFields表示编码了身体与物体表面的连续近端关系，替代了稀疏的二值接触线索。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low for financial markets; paper focuses on 3D vision, not directly applicable to trading. However, the representation learning and diffusion model techniques could inspire novel feature extraction for alternative data (e.g., video analysis).",
+      "• Implementation Risk: High for trading; requires significant adaptation to financial domain. The model is computationally heavy (VQ-VAE + diffusion) and not designed for time-series or tabular data.",
+      "• Novelty: High in computer vision; InterFields and discrete manifold learning are novel contributions to 3D HOI. But for quant finance, novelty is limited unless applied to non-traditional data.",
+      "• Verdict: Not directly usable for alpha generation; consider as inspiration for deep learning architectures in alternative data processing."
+    ],
+    "verdict_cn": [
+      "• 创新点: InterFields连续近端表示和VQ-VAE离散流形学习在3D视觉领域新颖，但对量化金融无直接创新。",
+      "• 实盘坑: 模型计算量大，且针对图像数据设计，难以直接用于金融时间序列或因子挖掘。",
+      "• 复现难度: 高，需要大量3D数据和GPU资源，且代码尚未公开。",
+      "• 结论: 不适合直接用于交易策略，但其中的扩散模型或表示学习方法可启发另类数据（如视频）的特征提取。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.20797v1",
+    "title": "Gauge-Equivariant Graph Neural Networks for Lattice Gauge Theories",
+    "pdf_url": "https://arxiv.org/pdf/2604.20797v1",
+    "published": "2026-04-22",
+    "crawled_at": "2026-04-23 20:41:39",
+    "ai_score": 7.5,
+    "translated_title": "规范等变图神经网络用于格点规范理论",
+    "summary_en": [
+      "• Model Architecture: Introduces a gauge-equivariant graph neural network that embeds non-Abelian symmetry into message passing via matrix-valued, gauge-covariant features and symmetry-compatible updates.",
+      "• Data used: Validated on pure gauge, gauge-matter, and dynamical regimes, likely using lattice configurations from lattice gauge theory simulations.",
+      "• Performance metrics: Demonstrates ability to capture nonlocal correlations and loop-like structures from local operations, though specific quantitative metrics (e.g., accuracy, loss) are not detailed in the abstract.",
+      "• Key contribution: Extends equivariant learning from global to fully local symmetries, enabling learning under site-dependent symmetries."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出规范等变图神经网络，通过矩阵值规范协变特征和对称性兼容更新，将非阿贝尔对称性嵌入消息传递。",
+      "• 数据来源: 在纯规范、规范-物质和动力学体系上验证，可能使用格点规范理论模拟的格点构型。",
+      "• 主要结论: 从局部操作中自然涌现非局域关联和环状结构，但摘要未给出具体量化指标。",
+      "• 创新点: 将等变学习从全局对称性扩展到完全局部对称性，适用于位点依赖对称性的学习。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low for typical financial markets; the paper targets lattice gauge theory, not finance. Direct application to quantitative finance is unlikely.",
+      "• Implementation Risk: High; requires deep understanding of gauge theory and graph neural networks. Reproducing results may be challenging without domain expertise.",
+      "• Novelty: High in physics domain; introduces a principled framework for local symmetries, but novelty for finance is limited.",
+      "• Practical Use: Could inspire new architectures for problems with local symmetries (e.g., portfolio optimization with constraints), but not directly applicable."
+    ],
+    "verdict_cn": [
+      "• 创新点: 在物理领域创新性高，首次将等变学习推广到局部对称性，但金融领域应用前景有限。",
+      "• 实盘坑: 直接用于量化交易几乎不可能，需要大量改造和领域适配，且缺乏金融数据验证。",
+      "• 复现难度: 极高，需要格点规范理论和图神经网络双重背景，代码未开源。",
+      "• 跨界潜力: 可能启发处理局部对称性约束的金融模型（如投资组合优化），但短期无实用价值。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.20789v1",
+    "title": "Working Memory Constraints Scaffold Learning in Transformers under Data Scarcity",
+    "pdf_url": "https://arxiv.org/pdf/2604.20789v1",
+    "published": "2026-04-22",
+    "crawled_at": "2026-04-23 20:41:47",
+    "ai_score": 7.5,
+    "translated_title": "工作记忆约束在数据稀缺条件下促进Transformer的学习",
+    "summary_en": "• Model Architecture: Modified GPT-2 with cognitively inspired attention variants, including fixed-width window and temporal decay mechanisms.\n• Data used: Developmentally plausible datasets of 10M and 100M words, trained from scratch.\n• Performance metrics: Evaluated on grammatical judgment tasks (BLiMP) and alignment with human reading time data.\n• Key findings: Fixed-width attention significantly improves grammatical accuracy under data scarcity, and constrained models show stronger alignment with human processing metrics.",
+    "summary_cn": "• 核心模型: 基于GPT-2的改进，引入固定宽度窗口和时间衰减等认知启发注意力变体。\n• 数据来源: 使用10M和100M词的发展合理数据集，从头训练。\n• 主要结论: 固定宽度注意力在数据稀缺时显著提升语法准确性，且约束模型更符合人类处理指标。",
+    "verdict_en": "• Alpha Potential: Moderate; inductive biases from cognitive constraints could improve NLP models for financial text analysis, especially with limited data.\n• Implementation Risk: Low to moderate; modifying attention mechanisms is feasible, but performance gains may not translate to financial tasks.\n• Novelty: High; integrating working memory constraints into Transformers is novel and well-motivated.",
+    "verdict_cn": "• 创新点: 将工作记忆约束引入Transformer，新颖且动机明确。\n• 实盘坑: 金融文本任务中效果未知，可能不直接提升交易策略。\n• 复现难度: 中等；需修改GPT-2注意力层，但代码可基于开源实现。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.20783v1",
+    "title": "Physics-Conditioned Synthesis of Internal Ice-Layer Thickness for Incomplete Layer Traces",
+    "pdf_url": "https://arxiv.org/pdf/2604.20783v1",
+    "published": "2026-04-22",
+    "crawled_at": "2026-04-23 20:41:55",
+    "ai_score": 7.2,
+    "translated_title": "基于物理条件的内部冰层厚度合成用于不完整层迹线",
+    "summary_en": "• Model Architecture: Combines geometric learning (GNN) for within-layer spatial context with a transformer-based temporal module to propagate information across layers, ensuring coherent stratigraphy and consistent thickness evolution.\n• Data: Uses colocated physical features from climate models as conditioning, and incomplete radar-derived layer traces as supervision.\n• Performance: Mask-aware robust regression loss enables training under varying sparsity; model recovers fragmented segments and fully absent layers; synthesized stacks improve downstream predictor accuracy over training from scratch.",
+    "summary_cn": "• 核心模型: 结合图神经网络（GNN）提取层内空间上下文，以及基于Transformer的时间模块跨层传播信息，确保层理连贯性和厚度演化一致性。\n• 数据来源: 使用来自气候模型的共位物理特征作为条件，以及不完整的雷达层迹线作为监督。\n• 主要结论: 掩码感知的鲁棒回归损失允许在稀疏性变化下训练；模型能恢复断裂片段和完全缺失的层；合成堆叠可提升下游预测器精度，优于从头训练。",
+    "verdict_en": "• Alpha Potential: Low for direct trading; application is geoscience, not finance. However, the methodology (graph+transformer for missing data imputation) could inspire factor construction or risk models in finance.\n• Implementation Risk: High; requires domain-specific data (radar, climate models) and careful tuning of mask-aware loss.\n• Novelty: Moderate; combines existing techniques (GNN, transformer, robust regression) in a novel way for a specific domain problem.",
+    "verdict_cn": "• 创新点: 将图神经网络与Transformer结合用于缺失数据补全，并引入物理条件约束，方法有一定新颖性。\n• 实盘坑: 直接金融应用价值低，需大量领域数据，且模型复杂度高，实盘部署困难。\n• 复现难度: 高；依赖特定领域数据（雷达、气候模型），且超参数调优复杂。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2604.19740v1",
     "title": "Generalization at the Edge of Stability",
     "pdf_url": "https://arxiv.org/pdf/2604.19740v1",
