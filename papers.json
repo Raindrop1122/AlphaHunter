@@ -1,5 +1,260 @@
 [
   {
+    "id": "2604.21930v1",
+    "title": "Temporal Taskification in Streaming Continual Learning: A Source of Evaluation Instability",
+    "pdf_url": "https://arxiv.org/pdf/2604.21930v1",
+    "published": "2026-04-23",
+    "crawled_at": "2026-04-24 20:32:16",
+    "ai_score": 7.2,
+    "translated_title": "流式持续学习中的时间任务化：评估不稳定性的一种来源",
+    "summary_en": [
+      "• Model Architecture: Evaluates continual finetuning, Experience Replay, Elastic Weight Consolidation, and Learning without Forgetting on streaming CL.",
+      "• Data used: Network traffic forecasting with CESNET-Timeseries24 dataset.",
+      "• Performance metrics: Forecasting error, forgetting, backward transfer, and Boundary-Profile Sensitivity (BPS).",
+      "• Key finding: Different temporal taskifications of the same stream induce different CL regimes and benchmark conclusions.",
+      "• Framework: Introduces plasticity-stability profiles, profile distance, and BPS to diagnose taskification sensitivity."
+    ],
+    "summary_cn": [
+      "• 核心模型: 评估了持续微调、经验回放、弹性权重巩固和无遗忘学习等流式CL方法。",
+      "• 数据来源: 使用CESNET-Timeseries24网络流量预测数据集。",
+      "• 主要结论: 同一数据流的不同时间任务化会导致不同的CL机制和基准结论，任务化本身可显著影响评估结果。",
+      "• 创新框架: 提出可塑性-稳定性剖面、剖面距离和边界剖面敏感性（BPS）来诊断任务化敏感性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low to moderate; focuses on evaluation instability rather than trading signal generation.",
+      "• Implementation Risk: High; requires careful taskification design to avoid misleading benchmarks.",
+      "• Novelty: High; identifies temporal taskification as a first-class evaluation variable in streaming CL.",
+      "• Practical relevance: Important for robust model evaluation but not directly actionable for alpha generation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次将时间任务化作为流式CL评估的关键变量，揭示其对基准结论的影响。",
+      "• 实盘坑: 直接交易信号弱，需谨慎设计任务划分以避免评估偏差。",
+      "• 复现难度: 中等；依赖特定数据集和任务划分，但框架可推广。",
+      "• 交易价值: 低；主要贡献在方法论评估，非直接盈利策略。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.21927v1",
+    "title": "Fine-Tuning Regimes Define Distinct Continual Learning Problems",
+    "pdf_url": "https://arxiv.org/pdf/2604.21927v1",
+    "published": "2026-04-23",
+    "crawled_at": "2026-04-24 20:32:27",
+    "ai_score": 7.5,
+    "translated_title": "微调机制定义不同的持续学习问题",
+    "summary_en": "• Model Architecture: The paper studies continual learning (CL) with a focus on the fine-tuning regime, defined by the trainable parameter subspace (e.g., trainable depth). Methods evaluated include online EWC, LwF, SI, and GEM.\n• Data: Experiments are conducted on five benchmark datasets: MNIST, Fashion MNIST, KMNIST, QMNIST, and CIFAR-100, with 11 task orders per dataset.\n• Performance Metrics: The study measures method ranking consistency across regimes, update magnitudes, forgetting, and the relationship between update magnitude and forgetting.\n• Key Findings: Relative ranking of CL methods is not preserved across fine-tuning regimes; deeper regimes lead to larger update magnitudes, higher forgetting, and stronger correlation between the two.\n• Contribution: The paper motivates regime-aware evaluation protocols, treating trainable depth as an explicit experimental factor.",
+    "summary_cn": "• 核心模型: 研究持续学习中的微调机制，即可训练参数子空间（如可训练深度），评估方法包括在线EWC、LwF、SI和GEM。\n• 数据来源: 使用五个基准数据集：MNIST、Fashion MNIST、KMNIST、QMNIST和CIFAR-100，每个数据集有11种任务顺序。\n• 主要结论: 方法排名在不同微调机制下不一致；更深层的机制导致更大的更新幅度、更高的遗忘率以及两者更强的相关性。\n• 贡献: 提出机制感知评估协议，将可训练深度作为显式实验因素。",
+    "verdict_en": "• Alpha Potential: Low direct alpha potential for trading; the paper is more about methodology in continual learning, not finance.\n• Implementation Risk: High; translating CL findings to financial models requires domain adaptation and may not generalize.\n• Novelty: Moderate; the idea that fine-tuning regime affects CL performance is intuitive but systematically demonstrated.\n• Relevance: Limited for quantitative finance unless applied to online learning of trading strategies.\n• Critique: The paper lacks financial context and does not address real-world constraints like transaction costs or market impact.",
+    "verdict_cn": "• 创新点: 系统展示了微调机制对持续学习方法排名的影响，但直觉上并不意外。\n• 实盘坑: 金融领域应用需大量调整，且结论可能不适用于非独立同分布的市场数据。\n• 复现难度: 中等；实验设置清晰，但需要大量计算资源。\n• 相关性: 对量化金融直接帮助有限，除非用于交易策略的在线学习。\n• 犀利点评: 论文偏学术，缺乏金融场景验证，Alpha潜力低。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.21923v1",
+    "title": "The Sample Complexity of Multicalibration",
+    "pdf_url": "https://arxiv.org/pdf/2604.21923v1",
+    "published": "2026-04-23",
+    "crawled_at": "2026-04-24 20:32:37",
+    "ai_score": 7.5,
+    "translated_title": "多校准的样本复杂度",
+    "summary_en": [
+      "• Model Architecture: The paper studies the minimax sample complexity of multicalibration in the batch setting, focusing on the Expected Calibration Error (ECE) metric. It proposes both lower bounds and upper bounds via an online-to-batch reduction, using randomized predictors.",
+      "• Data used: The analysis is theoretical, assuming n i.i.d. samples from an unknown distribution, with a given family of groups G. No specific dataset is used.",
+      "• Performance metrics: The key metric is population multicalibration error measured by ECE. The paper establishes sample complexity bounds for weighted L_p multicalibration metrics for 1 ≤ p ≤ 2, with optimal exponent 3/p."
+    ],
+    "summary_cn": [
+      "• 核心模型: 研究了批量设置下多校准的极小化极大样本复杂度，使用期望校准误差（ECE）作为度量，通过在线到批量的归约方法构建随机预测器。",
+      "• 数据来源: 理论分析基于未知分布上的n个独立同分布样本，以及给定的分组族G，未使用具体数据集。",
+      "• 主要结论: 对于|G| ≤ ε^{-κ}（κ>0），证明了样本复杂度为Θ̃(ε^{-3})，与边际校准的Θ̃(ε^{-2})不同，并展示了阈值现象。对于加权L_p多校准度量，最优指数为3/p。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low. The paper is purely theoretical, with no direct trading application. The results on sample complexity may inform calibration in risk models but are not directly actionable for alpha generation.",
+      "• Implementation Risk: High. The theoretical bounds are asymptotic and rely on assumptions (e.g., i.i.d. samples, known group family). Practical implementation would require significant adaptation.",
+      "• Novelty: High. The paper provides tight sample complexity bounds for multicalibration, separating it from marginal calibration, and extends to L_p metrics and elicitable properties. This is a significant theoretical contribution."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次严格区分了多校准与边际校准的样本复杂度，并给出了紧界，扩展至L_p度量和可诱导性质，理论贡献显著。",
+      "• 实盘坑: 纯理论结果，无实际数据验证。假设条件（如独立同分布、已知分组族）在实盘中难以满足，直接应用风险高。",
+      "• 复现难度: 高。需要深入理解在线学习、校准理论等，且算法实现需针对具体问题调整，复现成本大。"
+    ],
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.21911v1",
+    "title": "When Prompts Override Vision: Prompt-Induced Hallucinations in LVLMs",
+    "pdf_url": "https://arxiv.org/pdf/2604.21911v1",
+    "published": "2026-04-23",
+    "crawled_at": "2026-04-24 20:32:46",
+    "ai_score": 7.5,
+    "translated_title": "当提示覆盖视觉：大型视觉语言模型中提示引发的幻觉",
+    "summary_en": [
+      "• Model Architecture: The paper introduces HalluScope, a benchmark to analyze hallucinations in LVLMs, and HalluVL-DPO, a fine-tuning framework using preference optimization to mitigate prompt-induced hallucinations.",
+      "• Data used: A curated preference training dataset is constructed for HalluVL-DPO, and the benchmark includes diverse visual inputs and textual instructions to induce hallucinations.",
+      "• Performance metrics: HalluVL-DPO reduces hallucinations while preserving or improving performance on other hallucination benchmarks and visual capability evaluations.",
+      "• Key finding: Hallucinations largely stem from excessive reliance on textual priors and background knowledge, especially from textual instructions."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出HalluScope基准分析幻觉成因，以及HalluVL-DPO框架通过偏好优化减轻提示引发的幻觉。",
+      "• 数据来源: 构建了偏好训练数据集，基准测试包含多种视觉输入和文本指令以诱发幻觉。",
+      "• 主要结论: 幻觉主要源于对文本先验和背景知识的过度依赖，尤其是文本指令。",
+      "• 性能指标: HalluVL-DPO在减少幻觉的同时，保持或提升了其他幻觉基准和视觉能力评估的性能。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; addresses a critical failure mode in LVLMs, but direct trading alpha is limited unless applied to multimodal data analysis.",
+      "• Implementation Risk: Low; the method is straightforward (DPO fine-tuning) and reproducible with released code and data.",
+      "• Novelty: High; provides a clear attribution of hallucinations to textual priors and offers a targeted solution."
+    ],
+    "verdict_cn": [
+      "• 创新点: 明确将幻觉归因于文本先验，并提出针对性解决方案，思路清晰。",
+      "• 实盘坑: 直接交易应用有限，除非用于多模态数据分析，否则alpha潜力一般。",
+      "• 复现难度: 低，代码和数据将公开，方法简单（DPO微调）。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.21905v1",
+    "title": "Low-Rank Adaptation Redux for Large Models",
+    "pdf_url": "https://arxiv.org/pdf/2604.21905v1",
+    "published": "2026-04-23",
+    "crawled_at": "2026-04-24 20:32:54",
+    "ai_score": 7.5,
+    "translated_title": "大型模型的低秩自适应再探",
+    "summary_en": "• This paper revisits Low-Rank Adaptation (LoRA) through the lens of signal processing (SP), bridging modern adapter designs with classical low-rank modeling tools.\n• It categorizes advances into three axes: architectural design (SVD-based factorization, rank augmentation, cross-layer tensorization), efficient optimization (initialization, alternating solvers, gauge-invariant optimization), and applications (pre/post-training, serving/deployment).\n• The paper does not present new empirical results but provides a conceptual framework and highlights open research directions at the intersection of SP and deep learning.\n• No specific datasets or performance metrics are reported; the focus is on theoretical and methodological insights.",
+    "summary_cn": "• 核心模型: 从信号处理视角重新审视低秩自适应（LoRA），连接现代适配器设计与经典低秩建模工具。\n• 数据来源: 未使用特定数据集，属于理论综述性论文。\n• 主要结论: 将LoRA进展分为三个轴：架构设计（基于SVD的分解、秩增强、跨层张量化）、高效优化（初始化、交替求解器、规范不变优化）及应用（预训练/后训练、服务/部署）。",
+    "verdict_en": "• Alpha Potential: Low; the paper is a conceptual overview with no new empirical results or tradable signals.\n• Implementation Risk: High; lacks concrete algorithms or code, making direct application difficult.\n• Novelty: Moderate; provides a fresh SP perspective but does not introduce novel methods.\n• Relevance: Limited for quantitative finance; more suited for NLP/LLM fine-tuning contexts.",
+    "verdict_cn": "• 创新点: 从信号处理角度重新组织LoRA文献，提供统一视角，但无实质新方法。\n• 实盘坑: 纯理论综述，无实证结果，难以直接用于量化策略。\n• 复现难度: 高，缺乏具体算法和代码实现。\n• 适用性: 更适合NLP/LLM微调，对量化金融直接贡献有限。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.21903v1",
+    "title": "A Scale-Adaptive Framework for Joint Spatiotemporal Super-Resolution with Diffusion Models",
+    "pdf_url": "https://arxiv.org/pdf/2604.21903v1",
+    "published": "2026-04-23",
+    "crawled_at": "2026-04-24 20:33:02",
+    "ai_score": 7.5,
+    "translated_title": "一种用于联合时空超分辨率的尺度自适应扩散模型框架",
+    "summary_en": "• Model Architecture: Decomposes spatiotemporal super-resolution into a deterministic conditional mean prediction (with attention) and a residual conditional diffusion model, with optional mass-conservation transform.\n• Data used: Reanalysis precipitation data over France (Comephore dataset).\n• Performance metrics: Demonstrates scalability across spatial factors 1-25 and temporal factors 1-6, with tuning of noise schedule, context length, and mass-conservation function.",
+    "summary_cn": "• 核心模型: 将时空超分辨率分解为确定性条件均值预测（含注意力机制）和残差条件扩散模型，可选质量守恒变换。\n• 数据来源: 法国区域再分析降水数据（Comephore数据集）。\n• 主要结论: 同一架构可覆盖空间因子1-25和时间因子1-6，通过调整噪声调度、上下文长度和质量守恒函数实现尺度自适应。",
+    "verdict_en": "• Alpha Potential: Low direct alpha for finance; climate applications may have indirect value for weather derivatives or commodity trading.\n• Implementation Risk: High; requires significant domain adaptation to financial data, and diffusion models are computationally intensive.\n• Novelty: Moderate; scale-adaptive framework for spatiotemporal SR is novel, but the core diffusion model is not new.",
+    "verdict_cn": "• 创新点: 尺度自适应框架在时空超分辨率中具有新颖性，但扩散模型本身非原创。\n• 实盘坑: 金融领域直接应用价值低，需大量领域适配；计算成本高，实时性差。\n• 复现难度: 高；依赖特定气候数据集和超参数调优，泛化到金融数据不确定。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.21893v1",
+    "title": "Revealing Geography-Driven Signals in Zone-Level Claim Frequency Models: An Empirical Study using Environmental and Visual Predictors",
+    "pdf_url": "https://arxiv.org/pdf/2604.21893v1",
+    "published": "2026-04-23",
+    "crawled_at": "2026-04-24 20:33:10",
+    "ai_score": 7.2,
+    "translated_title": "揭示区域级别索赔频率模型中的地理驱动信号：基于环境和视觉预测因子的实证研究",
+    "summary_en": "• Model Architecture: Uses zone-level modeling with GLMs, regularized GLMs, gradient-boosted trees, and CNNs for raw imagery.\n• Data used: BeMTPL97 dataset, environmental features from OpenStreetMap and CORINE Land Cover, orthoimagery from Belgian National Geographic Institute.\n• Performance metrics: Predictive accuracy on unseen postcodes; improvements from combining coordinates with environmental features at 5 km scale.",
+    "summary_cn": "• 核心模型: 采用区域级建模，包括GLM、正则化GLM、梯度提升树以及用于原始图像的CNN。\n• 数据来源: BeMTPL97数据集，来自OpenStreetMap和CORINE Land Cover的环境特征，以及比利时国家地理研究所的正射影像。\n• 主要结论: 结合坐标和5公里尺度的环境特征显著提升预测精度；图像嵌入在环境特征存在时无额外增益。",
+    "verdict_en": "• Alpha Potential: Moderate; geographic features improve claim frequency prediction, but impact on trading alpha is indirect.\n• Implementation Risk: Low for insurers; high for quants due to need for geographic data integration.\n• Novelty: Moderate; combines multiple geographic data sources in insurance modeling, but methods are standard.",
+    "verdict_cn": "• 创新点: 将多源地理数据（环境、图像）引入保险索赔模型，但方法本身不新颖。\n• 实盘坑: 对量化交易直接alpha贡献有限，需结合其他信号；地理数据获取和清洗成本高。\n• 复现难度: 中等；需要特定地理数据（比利时），但模型结构简单。",
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.21889v1",
+    "title": "TingIS: Real-time Risk Event Discovery from Noisy Customer Incidents at Enterprise Scale",
+    "pdf_url": "https://arxiv.org/pdf/2604.21889v1",
+    "published": "2026-04-23",
+    "crawled_at": "2026-04-24 20:33:19",
+    "ai_score": 5.5,
+    "translated_title": "TingIS：企业级规模下从嘈杂客户事件中实时发现风险事件",
+    "summary_en": "• Model Architecture: Multi-stage event linking engine combining efficient indexing with LLMs for event merging, cascaded routing for business attribution, and multi-dimensional noise reduction pipeline.\n• Data used: Customer incident messages from production environment handling 2,000+ messages per minute and 300,000 messages per day.\n• Performance metrics: P90 alert latency of 3.5 minutes, 95% discovery rate for high-priority incidents, outperforms baselines in routing accuracy, clustering quality, and Signal-to-Noise Ratio.",
+    "summary_cn": "• 核心模型: 多阶段事件链接引擎，结合高效索引与LLM进行事件合并，级联路由进行业务归属，多维降噪管道。\n• 数据来源: 生产环境中的客户事件消息，峰值吞吐量每分钟2000+条，每天30万条。\n• 主要结论: P90告警延迟3.5分钟，高优先级事件发现率95%，在路由准确率、聚类质量和信噪比上显著优于基线方法。",
+    "verdict_en": "• Alpha Potential: Low; system focuses on operational risk detection, not directly on trading signals.\n• Implementation Risk: High; requires large-scale LLM deployment and integration with existing monitoring infrastructure.\n• Novelty: Moderate; combines known techniques (LLM, indexing, noise reduction) in a novel pipeline for incident discovery.",
+    "verdict_cn": "• 创新点: 将LLM与传统索引结合用于事件合并，级联路由和降噪管道设计有工程价值。\n• 实盘坑: 依赖LLM推理延迟和成本，高吞吐下实时性可能受限；金融场景适用性有限。\n• 复现难度: 高；需要大规模生产环境数据和LLM部署经验。",
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.21870v1",
+    "title": "Locating acts of mechanistic reasoning in student team conversations with mechanistic machine learning",
+    "pdf_url": "https://arxiv.org/pdf/2604.21870v1",
+    "published": "2026-04-23",
+    "crawled_at": "2026-04-24 20:33:29",
+    "ai_score": 3.5,
+    "translated_title": "在学生团队对话中定位机械推理行为：基于机械可解释机器学习的方法",
+    "summary_en": [
+      "• Model Architecture: Uses an interpretable probabilistic model with inductive bias to output time-varying probabilities of mechanistic reasoning from student utterances and group context.",
+      "• Data used: Transcripts of student team conversations in STEM education settings, with never-before-seen students and novel discussion contexts for testing.",
+      "• Performance metrics: Comparison of models with and without inductive bias; results show improved generalization (better alignment with domain expectations) when bias is included.",
+      "• Key finding: Inductive bias enhances interpretability and generalization, supporting the claim that interpretability is built into the model rather than imposed post hoc."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用带归纳偏置的可解释概率模型，根据学生话语和小组上下文输出机械推理概率的时间序列。",
+      "• 数据来源: STEM教育场景下的学生团队对话转录文本，测试集包含未见过的学生和新讨论主题。",
+      "• 主要结论: 引入归纳偏置的模型在泛化能力上优于无偏置模型，表明可解释性是内建于模型而非事后强加。",
+      "• 应用建议: 为STEM教育研究者提供实用建议，并鼓励开发可理解和可控的机械可解释模型。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low for quantitative finance; the model is domain-specific to education and not directly applicable to financial markets.",
+      "• Implementation Risk: High; requires significant adaptation to financial data and tasks, and the probabilistic model may not scale to high-frequency trading.",
+      "• Novelty: Moderate within education research; the inductive bias approach is interesting but not novel in ML, and the application is narrow.",
+      "• Relevance: Minimal; the paper focuses on STEM education, not finance, so it is unlikely to generate alpha."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将归纳偏置引入可解释模型，提升泛化能力，但方法在ML领域并不新颖。",
+      "• 实盘坑: 模型针对教育对话设计，与金融市场无关，直接应用风险极高。",
+      "• 复现难度: 中等，但需要教育领域数据，金融场景下无实用价值。",
+      "• 量化潜力: 极低，不建议作为量化策略参考。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.21863v1",
+    "title": "Replay-buffer engineering for noise-robust quantum circuit optimization",
+    "pdf_url": "https://arxiv.org/pdf/2604.21863v1",
+    "published": "2026-04-23",
+    "crawled_at": "2026-04-24 20:33:38",
+    "ai_score": 7.5,
+    "translated_title": "用于噪声鲁棒量子电路优化的重放缓冲区工程",
+    "summary_en": "• Model Architecture: Introduces ReaPER+, an annealed replay rule that transitions from TD error-driven prioritization to reliability-aware sampling; OptCRLQAS amortizes quantum-classical evaluations over multiple architectural edits; a lightweight replay-buffer transfer scheme reuses noiseless trajectories for noisy settings. • Data used: Benchmarks on quantum compilation and QAS tasks, LunarLander-v3, and 6-, 8-, 12-qubit molecular tasks. • Performance metrics: Achieves 4-32x gains in sample efficiency over baselines; cuts wall-clock time per episode by up to 67.5% on 12-qubit optimization; reduces steps to chemical accuracy by 85-90% and final energy error by up to 90%.",
+    "summary_cn": "• 核心模型: 提出ReaPER+，一种从TD误差驱动优先级过渡到可靠性感知采样的退火重放规则；OptCRLQAS通过多次架构编辑摊销量子-经典评估；轻量级重放缓冲区传输方案在噪声设置中重用无噪声轨迹。 • 数据来源: 在量子编译和QAS基准、LunarLander-v3以及6、8、12量子比特分子任务上验证。 • 主要结论: 样本效率提升4-32倍；12量子比特优化中每回合墙钟时间减少高达67.5%；化学精度所需步数减少85-90%，最终能量误差减少高达90%。",
+    "verdict_en": "• Alpha Potential: Low for traditional finance; high for quantum computing optimization, but niche. • Implementation Risk: High due to quantum hardware dependencies and domain-specific tuning. • Novelty: Strong; treats replay buffer as primary lever, with annealed prioritization and transfer scheme being innovative.",
+    "verdict_cn": "• 创新点: 将重放缓冲区作为主要杠杆，退火优先级和传输方案具有创新性。 • 实盘坑: 依赖量子硬件，领域特定，传统金融应用有限。 • 复现难度: 高，需要量子计算环境和精细调参。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2604.20825v1",
     "title": "FedSIR: Spectral Client Identification and Relabeling for Federated Learning with Noisy Labels",
     "pdf_url": "https://arxiv.org/pdf/2604.20825v1",
