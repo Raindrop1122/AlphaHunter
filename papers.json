@@ -1,5 +1,262 @@
 [
   {
+    "id": "2604.22753v1",
+    "title": "Spend Less, Fit Better: Budget-Efficient Scaling Law Fitting via Active Experiment Selection",
+    "pdf_url": "https://arxiv.org/pdf/2604.22753v1",
+    "published": "2026-04-24",
+    "crawled_at": "2026-04-27 20:45:43",
+    "ai_score": 8.5,
+    "translated_title": "少花钱，更合身：通过主动实验选择实现预算高效的规模定律拟合",
+    "summary_en": "• Model Architecture: The paper proposes an uncertainty-aware sequential experimental design method for budget-efficient scaling law fitting, not a traditional neural network architecture.\n• Data used: The method is evaluated on a diverse benchmark of scaling-law tasks, including synthetic and real-world datasets from prior scaling law studies.\n• Performance metrics: Extrapolation accuracy in a high-cost target region, measured by mean squared error or similar metrics; the method achieves performance close to full dataset fitting using only about 10% of the total training budget.\n• Key contribution: Formulates scaling-law fitting as budget-aware sequential experimental design, selecting experiments with heterogeneous costs to maximize extrapolation accuracy.\n• Baselines: Outperforms classical design-based baselines (e.g., random selection, uniform design) consistently across tasks.",
+    "summary_cn": "• 核心模型: 提出一种不确定性感知的序贯实验设计方法，用于预算高效的规模定律拟合，而非传统神经网络架构。\n• 数据来源: 在多种规模定律任务基准上评估，包括来自先前规模定律研究的合成和真实数据集。\n• 主要结论: 仅使用约10%的总训练预算即可达到接近全数据集拟合的外推精度，显著优于经典设计基线。\n• 方法特点: 将规模定律拟合建模为预算感知的序贯实验设计，选择具有异质成本的实验以最大化目标区域外推精度。\n• 性能指标: 以高成本目标区域的外推精度（如均方误差）为指标，方法在多个任务上一致优于基线。",
+    "verdict_en": "• Alpha Potential: High for AI/ML hedge funds investing in large model training; directly reduces cost of scaling law estimation, enabling more efficient resource allocation.\n• Implementation Risk: Medium; requires integration with existing training pipelines and careful tuning of uncertainty estimation, but code is provided.\n• Novelty: High; first to treat scaling law fitting as budget-aware sequential experimental design, with strong empirical results.\n• Practicality: The method is immediately applicable to any organization running large-scale training experiments, offering significant cost savings.\n• Limitations: Assumes a fixed pool of experiments with known costs; may not generalize to dynamic or unknown cost structures.",
+    "verdict_cn": "• 创新点: 首次将规模定律拟合视为预算感知的序贯实验设计问题，方法新颖且实证效果强。\n• 实盘坑: 需要与现有训练流程集成，不确定性估计的调参可能复杂；假设实验成本已知且固定，实际中成本可能动态变化。\n• 复现难度: 中等，代码已开源，但需要一定的实验设计背景。\n• 应用价值: 对大规模模型训练机构极具价值，可大幅降低规模定律估计成本。\n• 局限性: 未考虑实验成本不确定或动态变化的情况，可能限制在更复杂场景下的适用性。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ICML",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2604.22746v1",
+    "title": "Relaxation-Informed Training of Neural Network Surrogate Models",
+    "pdf_url": "https://arxiv.org/pdf/2604.22746v1",
+    "published": "2026-04-24",
+    "crawled_at": "2026-04-27 20:45:53",
+    "ai_score": 7.5,
+    "translated_title": "松弛感知的神经网络代理模型训练",
+    "summary_en": [
+      "• Model Architecture: ReLU neural networks trained as surrogate models, embedded in mixed-integer linear programs (MILPs) for global optimization.",
+      "• Data used: Non-convex benchmark functions and a two-stage stochastic programming problem with quantile neural network surrogates.",
+      "• Performance metrics: MILP solve times reduced by up to four orders of magnitude compared to unregularized baseline, while maintaining competitive surrogate model accuracy.",
+      "• Regularizers proposed: Bound-based regularizers penalizing big-M constants and number of unstable neurons, plus an LP relaxation gap regularizer.",
+      "• Gradient derivation: LP relaxation gap regularizer gradient derived from LP dual variables without custom automatic differentiation."
+    ],
+    "summary_cn": [
+      "• 核心模型: 使用ReLU神经网络作为代理模型，嵌入混合整数线性规划（MILP）进行全局优化。",
+      "• 数据来源: 非凸基准函数和带有分位数神经网络代理的两阶段随机规划问题。",
+      "• 主要结论: 相比未正则化的基线，MILP求解时间最多降低四个数量级，同时保持代理模型精度。",
+      "• 正则化方法: 提出基于边界的正则化项惩罚大M常数和不稳定神经元数量，以及LP松弛间隙正则化项。",
+      "• 梯度计算: LP松弛间隙正则化项的梯度通过LP对偶变量推导，无需自定义自动微分工具。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; improves optimization tractability for surrogate models, but direct trading alpha is unclear.",
+      "• Implementation Risk: Low; regularizers are simple to add to training, but require LP solver for gradient computation.",
+      "• Novelty: High; first work to directly target MILP tractability via training regularizers, with theoretical gradient derivation.",
+      "• Practicality: Useful for problems where surrogate models are embedded in optimization, e.g., portfolio optimization with neural network constraints."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次通过训练正则化直接提升MILP可解性，理论推导了LP间隙梯度。",
+      "• 实盘坑: 对交易策略的alpha提升不直接，需结合具体优化问题；LP求解可能成为新瓶颈。",
+      "• 复现难度: 中等；需要LP求解器（如Gurobi）和神经网络框架，但正则化项实现简单。",
+      "• 适用场景: 适用于代理模型嵌入优化的问题，如带神经网络约束的投资组合优化。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.22730v1",
+    "title": "Neural Recovery of Historical Lexical Structure in Bantu Languages from Modern Data",
+    "pdf_url": "https://arxiv.org/pdf/2604.22730v1",
+    "published": "2026-04-24",
+    "crawled_at": "2026-04-27 20:46:02",
+    "ai_score": 6.5,
+    "translated_title": "从现代数据神经恢复班图语历史词汇结构",
+    "summary_en": "• Model Architecture: Transformer-based model (BantuMorph v7) trained on morphological paradigms.\n• Data used: BantuMorph v7 dataset covering 14 Eastern and Southern Bantu languages, with 728 noun and 1,525 verb cognate candidates.\n• Performance metrics: 90.9% of top 11 noun candidates align with Proto-Bantu reconstructions; cross-model validation with NLLB-600M confirms phylogenetic groupings (p<0.01); noun class cosine similarity >0.83 within classes.\n• Key finding: Neural models recover shared lexical structure consistent with Proto-Bantu, but limited to Eastern and Southern Bantu languages.",
+    "summary_cn": "• 核心模型: 基于Transformer的BantuMorph v7模型，训练于形态学范式。\n• 数据来源: BantuMorph v7数据集，涵盖14种东非和南非班图语，识别728个名词和1525个动词同源候选。\n• 主要结论: 前11个名词候选中有90.9%与原始班图语重建一致；跨模型验证确认系统发育分组（p<0.01）；名词类内余弦相似度>0.83。\n• 局限性: 仅覆盖东非和南非班图语，无法区分原始班图语保留与后期区域创新。",
+    "verdict_en": "• Alpha Potential: Low; historical linguistics research, not directly applicable to financial markets.\n• Implementation Risk: High; requires domain expertise in linguistics and specific language datasets.\n• Novelty: Moderate; applies neural models to historical reconstruction, but limited scope and no direct trading signal.\n• Practicality: Unlikely to generate alpha; may be useful for NLP/LLM strategies if extended to other domains.",
+    "verdict_cn": "• 创新点: 将神经网络应用于历史语言重建，方法新颖但领域局限。\n• 实盘坑: 无直接交易信号，难以转化为量化策略；数据依赖性强，复现成本高。\n• 复现难度: 高；需要语言学专业知识和特定数据集，模型训练复杂。\n• 策略价值: 低；适合学术研究，不适合实盘交易。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.22723v1",
+    "title": "Zero-Shot Morphological Discovery in Low-Resource Bantu Languages via Cross-Lingual Transfer and Unsupervised Clustering",
+    "pdf_url": "https://arxiv.org/pdf/2604.22723v1",
+    "published": "2026-04-24",
+    "crawled_at": "2026-04-27 20:46:14",
+    "ai_score": 6.5,
+    "translated_title": "低资源班图语言的零样本形态发现：基于跨语言迁移和无监督聚类",
+    "summary_en": "• Model Architecture: Combines cross-lingual transfer learning from Swahili with unsupervised clustering via weighted voting ensemble.\n• Data used: 91 labeled paradigms for Giriama, 2,455 words for noun class discovery, 444 known verb paradigms for validation, and a v3 corpus of 19,624 words.\n• Performance metrics: 78.2% lemmatization accuracy on verb paradigms, 97.3% segmentation and 86.7% lemmatization rates on v3 corpus, 95.1% consistency for a- prefix variant, 98.5% for k'- prefix.\n• Key findings: Discovered two undocumented morphological patterns (a- prefix variant for Class 2 and contracted k'- prefix).\n• Transfer learning leverages ~60% vocabulary overlap with Swahili for cognate detection.",
+    "summary_cn": "• 核心模型: 结合斯瓦希里语的跨语言迁移学习和无监督聚类，通过加权投票集成。\n• 数据来源: 91个标注的Giriama词形变化范例，2,455个名词类别发现词汇，444个已知动词词形验证，以及19,624词的v3语料库。\n• 主要结论: 动词词形还原准确率78.2%，v3语料库分词率97.3%、词形还原率86.7%，发现两个未记录的形态模式（a-前缀变体一致性95.1%，k'-前缀98.5%）。\n• 迁移学习利用与斯瓦希里语约60%的词汇重叠进行同源词检测。\n• 无监督聚类发现了语言特有的创新，迁移学习无法捕捉。",
+    "verdict_en": "• Alpha Potential: Low for financial markets; paper focuses on NLP for low-resource languages, not trading.\n• Implementation Risk: High; requires domain-specific linguistic knowledge and low-resource language data, not directly applicable to finance.\n• Novelty: Moderate; combines existing techniques (transfer learning, clustering) in a novel ensemble for morphological discovery.\n• Relevance: Minimal for quantitative finance; could inspire cross-lingual NLP strategies but not directly actionable.\n• Scalability: Limited to languages with related high-resource languages; not generalizable to finance.",
+    "verdict_cn": "• 创新点: 将迁移学习与聚类集成用于低资源语言形态发现，方法新颖但非金融领域。\n• 实盘坑: 与量化金融无关，无法直接用于交易策略，需大量语言学专业知识。\n• 复现难度: 中等，依赖特定语言数据（斯瓦希里语和Giriama），通用性差。\n• 金融应用: 几乎为零，除非用于处理非英语金融文本，但效果未知。\n• 潜在启发: 跨语言迁移技术可能用于多语言情感分析或新闻分类，但需大幅调整。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.22722v1",
+    "title": "Aligning Dense Retrievers with LLM Utility via DistillationAligning Dense Retrievers with LLM Utility via Distillation",
+    "pdf_url": "https://arxiv.org/pdf/2604.22722v1",
+    "published": "2026-04-24",
+    "crawled_at": "2026-04-27 20:46:23",
+    "ai_score": 7.5,
+    "translated_title": "通过蒸馏使密集检索器与LLM效用对齐",
+    "summary_en": "• Model Architecture: Uses a bi-encoder trained with Utility-Modulated InfoNCE loss to align embeddings with LLM utility distribution.\n• Data: Evaluated on QASPER benchmark; training likely uses LLM-generated utility signals from perplexity reduction.\n• Performance: Improves Recall@1 by 30.59%, MAP by 30.16%, Token F1 by 17.3% over BGE-Base; 180x faster than LLM re-ranking.",
+    "summary_cn": "• 核心模型: 采用双编码器架构，通过效用调制InfoNCE损失训练，使嵌入空间对齐LLM效用分布。\n• 数据来源: 在QASPER基准上评估，训练使用基于困惑度降低的LLM效用信号。\n• 主要结论: 相比BGE-Base，Recall@1提升30.59%，MAP提升30.16%，Token F1提升17.3%；速度比LLM重排快180倍。",
+    "verdict_en": "• Alpha Potential: High for RAG systems needing fast, accurate retrieval; direct utility alignment improves downstream generation.\n• Implementation Risk: Low; bi-encoder is efficient, no test-time LLM needed; but utility signal quality depends on LLM used for distillation.\n• Novelty: Moderate; combines InfoNCE with utility weighting, but similar ideas exist in distillation literature.",
+    "verdict_cn": "• 创新点: 将效用调制InfoNCE引入检索训练，实现无推理时LLM的高效对齐。\n• 实盘坑: 蒸馏依赖LLM质量，若LLM有偏则效用信号可能误导；基准测试仅限QASPER，泛化性待验证。\n• 复现难度: 中等；需要生成效用分布，但模型结构简单。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.22695v1",
+    "title": "Time-Localized Parametric Decomposition of Respiratory Airflow for Sub-Breath Analysis",
+    "pdf_url": "https://arxiv.org/pdf/2604.22695v1",
+    "published": "2026-04-24",
+    "crawled_at": "2026-04-27 20:46:31",
+    "ai_score": 6.5,
+    "translated_title": "呼吸气流的时间局部参数化分解用于亚呼吸分析",
+    "summary_en": "• Model: Decomposes inspiratory airflow into time-localized components using Half-Sine, Gaussian, and Beta basis functions via constrained nonlinear optimization.\n• Data: 8,276 breaths from human subjects under cognitive-respiratory dual-task conditions.\n• Performance: High reconstruction accuracy (MSE < 0.001 for 4-component models); robust parameter precision under moderate noise; improved classification of cognitive fatigue by up to 30.7% in MCC vs. classical metrics.",
+    "summary_cn": "• 核心模型: 使用半正弦、高斯和Beta基函数通过约束非线性优化将吸气气流分解为时间局部化分量。\n• 数据来源: 来自认知-呼吸双任务条件下人类受试者的8,276次呼吸。\n• 主要结论: 四分量模型重建精度高（MSE<0.001）；中等噪声下参数精度稳健；与经典指标相比，认知疲劳分类的MCC提升高达30.7%。",
+    "verdict_en": "• Alpha Potential: Low for direct trading; may inform health-related risk factors or alternative data signals.\n• Implementation Risk: High; requires specialized physiological data and optimization, not typical financial data.\n• Novelty: Moderate; novel application of parametric decomposition to respiratory signals, but methods are standard.",
+    "verdict_cn": "• 创新点: 将参数化分解应用于呼吸信号，提供亚呼吸层面的可解释特征。\n• 实盘坑: 需要生理数据，非传统金融数据，难以直接用于量化交易。\n• 复现难度: 高；需要专业生理数据采集和优化算法。",
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.22676v1",
+    "title": "Operational Feature Fingerprints of Graph Datasets via a White-Box Signal-Subspace Probe",
+    "pdf_url": "https://arxiv.org/pdf/2604.22676v1",
+    "published": "2026-04-24",
+    "crawled_at": "2026-04-27 20:46:41",
+    "ai_score": 7.5,
+    "translated_title": "图数据集的操作特征指纹：基于白盒信号子空间探针的方法",
+    "summary_en": [
+      "• Model Architecture: Proposes WG-SRC, a white-box signal-subspace probe replacing learned message passing with a fixed graph-signal dictionary including raw features, low-pass and high-pass propagation, combined with Fisher coordinate selection, class-wise PCA, and closed-form multi-alpha ridge classification.",
+      "• Data used: Evaluated on six node-classification datasets including Amazon, Chameleon, and WebKB graphs.",
+      "• Performance metrics: Achieves competitive performance with reproduced graph baselines and positive average gain under aligned splits; produces operational feature fingerprints for dataset diagnosis.",
+      "• Key findings: Distinguishes low-pass-dominated, mixed high-pass, and raw- or boundary-sensitive datasets, providing post-evaluation guidance for model modification."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出WG-SRC白盒信号子空间探针，用固定图信号字典（原始特征、低通/高通传播）替代学习型消息传递，结合Fisher坐标选择、类别PCA和闭式多alpha岭分类。",
+      "• 数据来源: 在六个节点分类数据集上评估，包括Amazon、Chameleon和WebKB图。",
+      "• 主要结论: 与复现的图基线性能相当，在统一划分下获得正平均增益；生成操作特征指纹用于数据集诊断。",
+      "• 关键发现: 区分低通主导、混合高通和原始/边界敏感数据集，为后续模型修改提供指导。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; provides interpretable diagnostics that could inform feature engineering for graph-based alpha signals, but direct trading application is limited.",
+      "• Implementation Risk: Low to moderate; white-box nature reduces black-box risk, but requires careful dataset-specific calibration and may not generalize across market regimes.",
+      "• Novelty: High; introduces a novel white-box approach to graph dataset diagnosis with explicit signal decomposition, offering a new tool for understanding graph learning mechanisms."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出白盒图数据集诊断方法，通过显式信号分解揭示学习机制，具有较高新颖性。",
+      "• 实盘坑: 直接交易应用有限，需针对特定数据集校准，市场环境变化可能导致失效。",
+      "• 复现难度: 中等；模型结构清晰，但需要处理图数据和调参，复现成本可控。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.22672v1",
+    "title": "Iterative Model-Learning Scheme via Gaussian Processes for Nonlinear Model Predictive Control of (Semi-)Batch Processes",
+    "pdf_url": "https://arxiv.org/pdf/2604.22672v1",
+    "published": "2026-04-24",
+    "crawled_at": "2026-04-27 20:46:50",
+    "ai_score": 7.2,
+    "translated_title": "基于高斯过程的迭代模型学习方案用于非线性模型预测控制（半）批处理过程",
+    "summary_en": [
+      "• Model Architecture: Gaussian Processes (GP) embedded in a nonlinear model predictive control (NMPC) scheme, iteratively updated with batch data.",
+      "• Data used: Single initial trajectory from a PI controller; subsequent observations from each batch iteration.",
+      "• Performance metrics: 83% reduction in tracking error after 4 iterations; 17-fold increase in product mass under economic objective by iteration 8.",
+      "• The GP-MLMPC achieves performance comparable to full-model NMPC, demonstrating sample efficiency and quick convergence."
+    ],
+    "summary_cn": [
+      "• 核心模型: 将高斯过程嵌入非线性模型预测控制框架，通过批次数据迭代更新模型。",
+      "• 数据来源: 初始单条轨迹（来自PI控制器），后续每批次新观测数据。",
+      "• 主要结论: 跟踪误差在4次迭代后降低83%；经济目标下产品产量在8次迭代后提升17倍。",
+      "• 性能与全模型NMPC相当，样本效率高，收敛快。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; applicable to batch process optimization in chemical/pharma industries, but not directly to financial markets.",
+      "• Implementation Risk: Low for process control; high for financial trading due to different dynamics and constraints.",
+      "• Novelty: Combines GP uncertainty quantification with chance constraints for safe learning, but similar ideas exist in reinforcement learning.",
+      "• The paper is well-executed but domain-specific; unlikely to generate alpha in finance without significant adaptation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 利用GP不确定性量化实现安全约束，迭代学习控制策略，但类似思想在强化学习中已有。",
+      "• 实盘坑: 金融市场价格动态与批次过程差异巨大，直接应用风险高。",
+      "• 复现难度: 中等，GP和NMPC工具成熟，但需领域知识调整。",
+      "• 金融应用潜力有限，更适合化工过程控制。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.22662v1",
+    "title": "Rethinking XAI Evaluation: A Human-Centered Audit of Shapley Benchmarks in High-Stakes Settings",
+    "pdf_url": "https://arxiv.org/pdf/2604.22662v1",
+    "published": "2026-04-24",
+    "crawled_at": "2026-04-27 20:46:58",
+    "ai_score": 7.5,
+    "translated_title": "重新思考XAI评估：高风险场景下Shapley基准的人本审计",
+    "summary_en": "• Model Architecture: Unified amortized framework to isolate semantic differences between eight Shapley variants under low-latency constraints.\n• Data used: Four risk datasets and a realistic fraud-detection environment with 3,735 case reviews by professional analysts.\n• Performance metrics: Standard metrics (sparsity, faithfulness) vs. human-perceived clarity and decision utility; objective analyst performance and decision confidence.",
+    "summary_cn": "• 核心模型: 统一摊销框架，在低延迟约束下隔离八种Shapley变体的语义差异。\n• 数据来源: 四个风险数据集及真实欺诈检测环境，包含专业分析师对3,735个案例的评审。\n• 主要结论: 标准量化指标（稀疏性、忠实度）与人类感知清晰度和决策效用脱节；解释未提升分析师客观表现，但增加了决策信心，存在自动化偏差风险。",
+    "verdict_en": "• Alpha Potential: Low direct alpha; insights on explanation bias can inform risk management and model governance.\n• Implementation Risk: High; requires careful selection of Shapley variant and metric alignment with human utility.\n• Novelty: High; first large-scale human audit of Shapley variants in high-stakes settings, revealing critical misalignment.",
+    "verdict_cn": "• 创新点: 首次在高风险场景下对Shapley变体进行大规模人本审计，揭示量化指标与人类效用的脱节。\n• 实盘坑: 解释增加决策信心但未提升客观表现，可能导致自动化偏差，需谨慎部署。\n• 复现难度: 中等；需要专业分析师参与和特定风险数据集，但框架可迁移。",
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.22655v1",
+    "title": "Associativity-Peakiness Metric for Contingency Tables",
+    "pdf_url": "https://arxiv.org/pdf/2604.22655v1",
+    "published": "2026-04-24",
+    "crawled_at": "2026-04-27 20:47:06",
+    "ai_score": 4.5,
+    "translated_title": "列联表的关联性-峰值度量",
+    "summary_en": [
+      "• Proposes a new metric, Associativity Peakiness (AP), for evaluating clustering algorithm performance via contingency tables.",
+      "• No specific dataset mentioned; uses 500 simulated contingency tables across multiple test scenarios.",
+      "• Claims AP has higher dynamic range and computational efficiency compared to existing metrics.",
+      "• Focuses on characterizing clustering algorithm performance features not captured by vector-pair metrics."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出关联性峰值(AP)度量，用于评估聚类算法输出的列联表。",
+      "• 数据来源: 未使用真实数据，而是生成500个模拟列联表进行测试。",
+      "• 主要结论: AP度量在动态范围和计算效率上优于现有公开度量。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low; metric is for clustering evaluation, not directly applicable to trading alpha generation.",
+      "• Implementation Risk: High; requires adaptation to financial clustering tasks and validation on real data.",
+      "• Novelty: Moderate; combines associativity and peakiness but lacks theoretical grounding for financial applications."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将关联性和峰值结合，但缺乏金融场景的理论支撑。",
+      "• 实盘坑: 仅模拟数据验证，未在真实金融数据上测试，实用性存疑。",
+      "• 复现难度: 低，但需自行适配金融聚类任务。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2604.21930v1",
     "title": "Temporal Taskification in Streaming Continual Learning: A Source of Evaluation Instability",
     "pdf_url": "https://arxiv.org/pdf/2604.21930v1",
