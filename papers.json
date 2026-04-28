@@ -1,5 +1,223 @@
 [
   {
+    "id": "2604.24758v1",
+    "title": "Personalized Worked Example Generation from Student Code Submissions using Pattern-based Knowledge Components",
+    "pdf_url": "https://arxiv.org/pdf/2604.24758v1",
+    "published": "2026-04-27",
+    "crawled_at": "2026-04-28 20:54:49",
+    "ai_score": 5.5,
+    "translated_title": "基于模式的知识组件从学生代码提交中生成个性化示例",
+    "summary_en": "• Model Architecture: Uses AST-based analysis to extract pattern-based Knowledge Components (KCs) from student code, then conditions a generative model (likely LLM) for worked example generation.\n• Data used: Student code submissions for programming problems; no specific dataset size mentioned.\n• Performance metrics: Expert evaluation comparing baseline vs KC-conditioned outputs; no quantitative metrics like accuracy or F1 provided.\n• Key finding: KC-conditioned generation improves topical focus and relevance to logical errors.\n• Limitation: Small-scale expert evaluation, lack of automated metrics or student learning outcome data.",
+    "summary_cn": "• 核心模型: 基于抽象语法树分析提取学生代码中的模式化知识组件，并用于条件化生成模型（如大语言模型）生成示例。\n• 数据来源: 学生编程作业提交代码，未提及具体数据集规模。\n• 主要结论: 知识组件条件化生成能提升示例的主题聚焦度和对逻辑错误的相关性。\n• 局限性: 仅依赖专家评估，缺乏自动化指标或学生学习效果验证。",
+    "verdict_en": "• Alpha Potential: Low. The paper focuses on educational content generation, not financial alpha. No trading or market application.\n• Implementation Risk: High. Requires access to student code and AST analysis pipeline; generative model fine-tuning may be costly.\n• Novelty: Moderate. Combines pattern-based KCs with generative models, but similar ideas exist in educational NLP.\n• Relevance: Not applicable to quantitative finance or trading strategies.\n• Verdict: Not suitable for hedge fund research; score reflects lack of financial applicability.",
+    "verdict_cn": "• 创新点: 将模式化知识组件与生成模型结合用于编程教育，有一定新颖性。\n• 实盘坑: 与金融量化交易完全无关，无法直接用于策略开发。\n• 复现难度: 需要学生代码数据和AST分析工具，生成模型调优复杂。\n• 评分理由: 非金融领域论文，alpha潜力为零。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.24749v1",
+    "title": "The Optimal Sample Complexity of Multiclass and List Learning",
+    "pdf_url": "https://arxiv.org/pdf/2604.24749v1",
+    "published": "2026-04-27",
+    "crawled_at": "2026-04-28 20:54:58",
+    "ai_score": 7.5,
+    "translated_title": "多类与列表学习的最优样本复杂度",
+    "summary_en": "• The paper resolves the optimal sample complexity of multiclass classification by proving that the maximum hypergraph density of any multiclass hypothesis class is upper-bounded by its DS dimension.\n• This result confirms a longstanding conjecture by Daniely and Shalev-Shwartz (2014), closing the gap between upper and lower bounds on sample complexity.\n• The analysis builds on a novel algebraic characterization of multiclass hypothesis classes in terms of their DS dimension from Hanneke et al. (2026).\n• The findings extend to list learning, determining its optimal sample complexity as well.\n• No specific datasets or performance metrics are used; the contribution is purely theoretical.",
+    "summary_cn": "• 核心模型: 多类分类与列表学习假设类的样本复杂度分析，基于DS维数。\n• 数据来源: 无实证数据，纯理论推导。\n• 主要结论: 证明了多类假设类的最大超图密度受DS维数上界约束，从而确定了最优样本复杂度。\n• 理论贡献: 解决了Daniely和Shalev-Shwartz（2014）的长期猜想，并推广至列表学习。",
+    "verdict_en": "• Alpha Potential: Low; the paper is purely theoretical with no direct trading implications.\n• Implementation Risk: Minimal; no algorithm or code provided, only theoretical bounds.\n• Novelty: High; resolves an open problem in learning theory, but relevance to quantitative finance is indirect.\n• Practicality: Limited; may inform future algorithmic design but not immediately actionable.",
+    "verdict_cn": "• 创新点: 解决了多类学习样本复杂度的开放问题，理论贡献显著。\n• 实盘坑: 无直接交易策略，纯理论结果难以直接应用于量化投资。\n• 复现难度: 中等，需要深厚的机器学习理论背景，但无实证代码。\n• 实用性: 低，对因子挖掘或策略开发无直接帮助。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.24745v1",
+    "title": "Conflict-Aware Harmonized Rotational Gradient for Multiscale Kinetic Regimes",
+    "pdf_url": "https://arxiv.org/pdf/2604.24745v1",
+    "published": "2026-04-27",
+    "crawled_at": "2026-04-28 20:55:06",
+    "ai_score": 7.5,
+    "translated_title": "多尺度动力学区域中冲突感知的协调旋转梯度方法",
+    "summary_en": "• Model Architecture: Proposes HRGrad, a harmonized rotational gradient method that encodes hidden representation of small parameters to serialize tasks and uses a gradient alignment metric to ensure positive dot product between final update and each loss-specific gradient.\n• Data used: Evaluated on Bhatnagar-Gross-Krook (BGK) equation and linear transport equation across all ranges of Knudsen number.\n• Performance metrics: Overcomes 'failure modes' of asymptotic-preserving neural networks (APNNs) in multiscale kinetic problems, with convergence proof provided.",
+    "summary_cn": "• 核心模型: 提出HRGrad方法，通过编码小参数的隐藏表示实现任务序列化，并引入梯度对齐度量确保最终更新与各损失梯度点积为正。\n• 数据来源: 在Bhatnagar-Gross-Krook (BGK)方程和线性输运方程的全范围Knudsen数上评估。\n• 主要结论: 有效克服了渐近保持神经网络(APNNs)在多尺度动力学问题中的“失败模式”，并提供了收敛性证明。",
+    "verdict_en": "• Alpha Potential: Low; paper focuses on solving PDEs, not directly applicable to financial alpha generation.\n• Implementation Risk: High; requires domain-specific knowledge of kinetic equations and neural network training with gradient conflict resolution.\n• Novelty: Moderate; introduces a novel gradient alignment metric for multi-task learning, but application is niche.",
+    "verdict_cn": "• 创新点: 提出梯度对齐度量解决多任务学习中的梯度冲突，但应用场景局限于动力学方程。\n• 实盘坑: 与金融量化无关，无法直接用于策略开发，需大量领域适配。\n• 复现难度: 高，涉及复杂物理方程和神经网络训练技巧。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.24737v1",
+    "title": "Learning to Think from Multiple Thinkers",
+    "pdf_url": "https://arxiv.org/pdf/2604.24737v1",
+    "published": "2026-04-27",
+    "crawled_at": "2026-04-28 20:55:17",
+    "ai_score": 7.5,
+    "translated_title": "从多个思考者学习思考",
+    "summary_en": "• Model Architecture: The paper studies learning with Chain-of-Thought (CoT) supervision from multiple thinkers, where each thinker provides correct but potentially different step-by-step solutions. It considers classes that are easy to learn with CoT from a single thinker but hard without CoT.\n• Data used: CoT data from multiple thinkers (e.g., math solutions, program traces) and passive end-result data. The active learning algorithm uses a small amount of CoT data per thinker and sufficient passive end-result data.\n• Performance metrics: The active learning algorithm achieves target accuracy ε with CoT data per thinker independent of ε, number of thinkers scaling as log(1/ε) log log(1/ε), and passive data scaling as (1/ε) poly log(1/ε).",
+    "summary_cn": "• 核心模型: 研究从多个思考者提供的链式思维（CoT）监督中学习，每个思考者提供正确但可能不同的逐步解决方案。考虑使用单一思考者的CoT容易学习但无CoT难以学习的类别。\n• 数据来源: 来自多个思考者的CoT数据（如数学解题步骤、程序执行轨迹）和被动端结果数据。主动学习算法使用每个思考者少量CoT数据和足够被动端结果数据。\n• 主要结论: 在密码学假设下，被动数据收集场景中从两个或少数思考者的CoT监督学习可能是困难的；但主动学习算法能以与目标精度ε无关的CoT数据量、log(1/ε) log log(1/ε)规模的思考者数量以及(1/ε) poly log(1/ε)规模的被动数据实现目标精度。",
+    "verdict_en": "• Alpha Potential: Low to moderate. The theoretical framework may inspire novel active learning strategies for LLM fine-tuning, but direct trading alpha is unclear.\n• Implementation Risk: High. The cryptographic assumptions and theoretical nature make practical implementation challenging. Requires careful data collection and active query design.\n• Novelty: High. Introduces a new perspective on learning from multiple CoT sources, with both hardness results and efficient algorithms.",
+    "verdict_cn": "• 创新点: 首次从理论角度研究多个思考者的CoT监督学习，揭示了被动场景下的困难性和主动学习的可行性。\n• 实盘坑: 理论结果基于密码学假设，实际应用需大量工程适配；主动学习算法在量化场景中可能难以直接部署。\n• 复现难度: 高。需要实现主动学习框架并处理多个思考者的CoT数据，计算开销大。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.24729v1",
+    "title": "SpecRLBench: A Benchmark for Generalization in Specification-Guided Reinforcement Learning",
+    "pdf_url": "https://arxiv.org/pdf/2604.24729v1",
+    "published": "2026-04-27",
+    "crawled_at": "2026-04-28 20:55:26",
+    "ai_score": 6.5,
+    "translated_title": "SpecRLBench：面向规约引导强化学习泛化能力的基准测试",
+    "summary_en": [
+      "• Model Architecture: The benchmark evaluates LTL-based specification-guided RL methods, including various model architectures such as neural networks for policy learning.",
+      "• Data used: The benchmark uses simulated environments in navigation and manipulation domains, with static and dynamic settings, diverse robot dynamics, and varied observation modalities.",
+      "• Performance metrics: Metrics include success rate, generalization to unseen specifications, and robustness across environment complexities.",
+      "• The benchmark provides a structured platform for systematic comparison of existing methods."
+    ],
+    "summary_cn": [
+      "• 核心模型: 评估基于线性时序逻辑（LTL）的规约引导强化学习方法，涵盖多种神经网络策略架构。",
+      "• 数据来源: 使用导航和操作领域的模拟环境，包括静态和动态场景、多种机器人动力学及观测模态。",
+      "• 主要结论: 现有方法在规约和环境复杂度增加时泛化能力不足，基准测试揭示了关键挑战。",
+      "• 基准提供系统比较平台，促进更泛化的规约引导RL方法开发。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low direct alpha; benchmark is more for RL research than trading strategies.",
+      "• Implementation Risk: Low risk for RL practitioners; but for quant finance, relevance is limited.",
+      "• Novelty: Moderate novelty in benchmarking generalization of specification-guided RL, but not groundbreaking.",
+      "• The paper is more academic than practical for hedge fund applications."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次系统评估规约引导RL的泛化能力，但方法本身非全新。",
+      "• 实盘坑: 与量化交易直接关联弱，难以直接用于策略开发。",
+      "• 复现难度: 中等，代码开源，但环境模拟与真实市场差异大。",
+      "• 建议关注其泛化评估思路，但非直接交易信号。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.24715v1",
+    "title": "Long-Context Aware Upcycling: A New Frontier for Hybrid LLM Scaling",
+    "pdf_url": "https://arxiv.org/pdf/2604.24715v1",
+    "published": "2026-04-27",
+    "crawled_at": "2026-04-28 20:55:36",
+    "ai_score": 8.5,
+    "translated_title": "长上下文感知升级：混合大语言模型扩展的新前沿",
+    "summary_en": "• Model Architecture: Proposes HyLo, a hybrid architecture combining efficient Transformer blocks (Multi-Head Latent Attention) with linear sequence modeling blocks (Mamba2 or Gated DeltaNet) for long-context upcycling of pretrained LLMs.\n• Data: Uses staged long-context training with teacher-guided distillation; specific datasets not detailed but training up to 10B tokens for 1.7B model.\n• Performance: Extends context length by 32x (up to 2M tokens), reduces KV-cache memory by >90%, outperforms baselines on RULER, GSM8K, and common sense reasoning; HyLo-Qwen-1.7B (10B tokens) beats JetNemotron (400B tokens).",
+    "summary_cn": "• 核心模型: 提出HyLo混合架构，结合高效Transformer块（多头潜在注意力）与线性序列建模块（Mamba2或门控DeltaNet），用于预训练LLM的长上下文升级。\n• 数据来源: 采用分阶段长上下文训练和教师引导蒸馏；具体数据集未详述，但1.7B模型训练了10B tokens。\n• 主要结论: 上下文长度扩展32倍（达2M tokens），KV缓存内存减少>90%，在RULER、GSM8K和常识推理上超越基线；HyLo-Qwen-1.7B（10B tokens）优于JetNemotron（400B tokens）。",
+    "verdict_en": "• Alpha Potential: High - significant memory and context length improvements enable new long-context applications; strong performance on reasoning benchmarks suggests alpha in NLP/LLM strategies.\n• Implementation Risk: Medium - requires careful architectural adaptation and staged training; inference stack modifications needed for 2M context.\n• Novelty: High - first systematic study of long-context upcycling for hybrid LLMs; combines multiple techniques (MLA, linear blocks, distillation) effectively.",
+    "verdict_cn": "• 创新点: 首次系统研究混合LLM的长上下文升级，有效结合MLA、线性模块和蒸馏技术。\n• 实盘坑: 训练流程复杂，分阶段训练和蒸馏可能增加复现难度；2M上下文推理需定制化vLLM栈。\n• 复现难度: 中等偏高，依赖特定架构（Mamba2/DeltaNet）和大量计算资源。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.24708v1",
+    "title": "Scalable Hyperparameter-Divergent Ensemble Training with Automatic Learning Rate Exploration for Large Models",
+    "pdf_url": "https://arxiv.org/pdf/2604.24708v1",
+    "published": "2026-04-27",
+    "crawled_at": "2026-04-28 20:55:45",
+    "ai_score": 7.5,
+    "translated_title": "可扩展的超参数发散集成训练与大型模型的自动学习率探索",
+    "summary_en": "• Model Architecture: HDET uses a fan-out/converge protocol where N replicas train with diverse learning rates, then average parameters via AllReduce every T steps. The auto-LR controller uses momentum-based gradient-free meta-updates guided by inter-replica loss differences.\n• Data used: Standard benchmarks for large model training (e.g., ImageNet, language modeling datasets) are implied but not explicitly specified.\n• Performance metrics: Improved optimization quality and generalization without extra hyperparameter sweeps or training budget; communication overhead is negligible.",
+    "summary_cn": "• 核心模型: HDET采用扇出/收敛协议，N个副本以不同学习率训练，每T步通过AllReduce平均参数；自动学习率控制器利用副本间损失差异进行动量式无梯度元更新。\n• 数据来源: 未明确指定，但暗示使用大型模型训练的标准基准（如ImageNet、语言建模数据集）。\n• 主要结论: 在不增加超参数搜索或训练预算的情况下，提高了优化质量和泛化能力；通信开销可忽略。",
+    "verdict_en": "• Alpha Potential: Moderate; auto-LR adaptation could improve model performance, but alpha in financial contexts may be limited unless applied to time-series or NLP models.\n• Implementation Risk: Low; drop-in replacement for PyTorch's OneCycleLR, no architecture changes needed. However, convergence behavior with financial data is untested.\n• Novelty: High; repurposing data-parallel replicas for hyperparameter exploration is novel, and the auto-LR controller is a practical contribution.",
+    "verdict_cn": "• 创新点: 创新性高；将数据并行副本用于超参数探索是新颖的，自动学习率控制器具有实用价值。\n• 实盘坑: 金融数据上收敛行为未验证；副本间损失差异作为信号可能受噪声影响。\n• 复现难度: 中等；需要多GPU环境，但代码改动小，可基于PyTorch快速实现。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.24706v1",
+    "title": "Exploiting Differential Flatness for Efficient Learning-based Model Predictive Control of Constrained Multi-Input Control Affine Systems",
+    "pdf_url": "https://arxiv.org/pdf/2604.24706v1",
+    "published": "2026-04-27",
+    "crawled_at": "2026-04-28 20:55:54",
+    "ai_score": 7.5,
+    "translated_title": "利用微分平坦性实现高效学习的约束多输入控制仿射系统的模型预测控制",
+    "summary_en": [
+      "• Model Architecture: Combines differential flatness with learning-based model predictive control (MPC) for constrained multi-input control affine systems, using system extension and block-diagonal cost formulation.",
+      "• Data used: Relies on past trajectory data to learn uncertain dynamics, with Gaussian process (GP) used for uncertainty modeling in comparisons.",
+      "• Performance metrics: Achieves similar tracking performance to GP-MPC but with multiple times higher computational efficiency; validated in simulation and real hardware experiments.",
+      "• Key contribution: Satisfies input and half-space flat state constraints with probabilistic Lyapunov decrease guarantee using only two sequential convex optimizations."
+    ],
+    "summary_cn": [
+      "• 核心模型: 结合微分平坦性与学习型模型预测控制，通过系统扩展和块对角代价函数处理多输入控制仿射系统。",
+      "• 数据来源: 利用历史轨迹数据学习不确定动力学，对比中使用高斯过程建模不确定性。",
+      "• 主要结论: 在仿真和实际硬件实验中，跟踪性能与GP-MPC相当，但计算效率提升数倍。",
+      "• 关键贡献: 仅通过两次顺序凸优化满足输入和半空间平坦状态约束，并保证概率Lyapunov下降。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low direct alpha; more relevant for robotics control than financial trading, though efficiency gains could inspire low-latency strategies.",
+      "• Implementation Risk: High; requires differential flatness property, which is rare in financial systems, and convex optimization may not scale to high-dimensional financial data.",
+      "• Novelty: Moderate; extends prior flatness-based methods to multi-input constrained systems with efficiency improvements, but not groundbreaking for finance."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将微分平坦性推广到多输入约束系统，提升计算效率，但方法依赖系统特性，普适性有限。",
+      "• 实盘坑: 金融系统通常不具备微分平坦性，直接应用困难；凸优化在金融高频场景中可能延迟过高。",
+      "• 复现难度: 高；需要系统动力学模型和微分平坦性验证，对金融领域不友好。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.24705v1",
+    "title": "Energy-Arena: A Dynamic Benchmark for Operational Energy Forecasting",
+    "pdf_url": "https://arxiv.org/pdf/2604.24705v1",
+    "published": "2026-04-27",
+    "crawled_at": "2026-04-28 20:56:02",
+    "ai_score": 6.5,
+    "translated_title": "能源竞技场：面向运营能源预测的动态基准",
+    "summary_en": "• The paper introduces Energy-Arena, a dynamic benchmarking platform for operational energy time series forecasting.\n• It uses an open, API-based submission system with standardized challenge definitions and submission deadlines.\n• Performance is reported on rolling evaluation windows via persistent leaderboards, moving from retrospective backtesting to forward-looking benchmarking.\n• The platform enforces ex-ante submission and ex-post evaluation to prevent information leakage and retroactive tuning.\n• No specific model architecture, dataset, or performance metrics are detailed; the focus is on the platform design.",
+    "summary_cn": "• 核心模型: 未提出具体模型，而是构建了一个动态基准测试平台 Energy-Arena。\n• 数据来源: 未指定具体数据集，平台支持持续更新的能源时间序列数据。\n• 主要结论: 通过前向基准测试和标准化评估，提高了能源预测研究的可比性和透明度。",
+    "verdict_en": "• Alpha Potential: Low; the paper focuses on benchmarking infrastructure rather than novel predictive models or strategies.\n• Implementation Risk: Medium; setting up a dynamic benchmark requires significant infrastructure and community adoption.\n• Novelty: Moderate; dynamic benchmarks exist in other fields (e.g., ML), but application to energy forecasting is novel.",
+    "verdict_cn": "• 创新点: 将动态基准测试引入能源预测领域，解决可比性问题，但技术本身并非全新。\n• 实盘坑: 平台依赖社区参与和数据更新，初期可能缺乏足够的数据和用户，导致基准失效。\n• 复现难度: 低；平台开源，但需自行部署和维护API服务。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.24692v1",
+    "title": "Diffusion-Guided Feature Selection via Nishimori Temperature: Noise-Based Spectral Embedding",
+    "pdf_url": "https://arxiv.org/pdf/2604.24692v1",
+    "published": "2026-04-27",
+    "crawled_at": "2026-04-28 20:56:10",
+    "ai_score": 7.5,
+    "translated_title": "基于西森温度的扩散引导特征选择：噪声谱嵌入",
+    "summary_en": "• Model Architecture: Proposes Noise-Based Spectral Embedding (NBSE), a physics-informed framework that constructs a sparse similarity graph and uses the Nishimori temperature to identify informative features via spectral embedding. • Data used: Experiments on ImageNet embeddings from MobileNetV2 and EfficientNet-B4. • Performance metrics: Achieves less than 1% accuracy drop on EfficientNet-B4 when retaining only 30% of features, outperforming ANOVA F-test and random selection by up to 6.8%.",
+    "summary_cn": "• 核心模型: 提出基于噪声的谱嵌入（NBSE），利用西森温度进行特征选择，无需贪婪搜索。 • 数据来源: 使用MobileNetV2和EfficientNet-B4在ImageNet上的嵌入向量。 • 主要结论: 在EfficientNet-B4上仅保留30%特征时，准确率下降不到1%，优于ANOVA F检验和随机选择，最高提升6.8%。",
+    "verdict_en": "• Alpha Potential: Moderate; feature selection can improve model efficiency but direct trading alpha is unclear. • Implementation Risk: Low to medium; relies on spectral methods which are computationally stable but require careful tuning of temperature parameter. • Novelty: High; introduces Nishimori temperature from physics to feature selection, providing theoretical robustness guarantees.",
+    "verdict_cn": "• 创新点: 将物理学中的西森温度引入特征选择，提供理论鲁棒性保证。 • 实盘坑: 特征选择对交易策略的alpha贡献间接，需结合具体模型验证。 • 复现难度: 中等；需理解谱方法和温度参数调节，但代码实现相对直接。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2604.22753v1",
     "title": "Spend Less, Fit Better: Budget-Efficient Scaling Law Fitting via Active Experiment Selection",
     "pdf_url": "https://arxiv.org/pdf/2604.22753v1",
