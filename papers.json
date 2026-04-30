@@ -1,5 +1,293 @@
 [
   {
+    "id": "2604.26951v1",
+    "title": "Turning the TIDE: Cross-Architecture Distillation for Diffusion Large Language Models",
+    "pdf_url": "https://arxiv.org/pdf/2604.26951v1",
+    "published": "2026-04-29",
+    "crawled_at": "2026-04-30 20:45:34",
+    "ai_score": 7.5,
+    "translated_title": "扭转潮流：扩散大语言模型的跨架构蒸馏",
+    "summary_en": "• Model Architecture: Proposes TIDE framework for cross-architecture distillation of diffusion LLMs, with teacher (8B dense/16B MoE) and student (0.6B) differing in architecture, attention, and tokenizer. Components include TIDAL (adaptive distillation strength), CompDemo (complementary mask splitting), and Reverse CALM (cross-tokenizer objective).\n• Data used: Not explicitly specified; likely standard benchmarks (e.g., HumanEval, eight benchmarks).\n• Performance metrics: Outperforms baseline by 1.53 points average across eight benchmarks; HumanEval code generation score 48.78 vs 32.3 for AR baseline.",
+    "summary_cn": "• 核心模型: 提出TIDE框架，实现扩散大语言模型的跨架构蒸馏，教师模型（8B密集/16B MoE）与学生模型（0.6B）在架构、注意力和分词器上不同。组件包括TIDAL（自适应蒸馏强度）、CompDemo（互补掩码分割）和Reverse CALM（跨分词器目标）。\n• 数据来源: 未明确说明，可能使用标准基准（如HumanEval等八个基准）。\n• 主要结论: 在八个基准上平均超越基线1.53分；HumanEval代码生成得分48.78，对比AR基线的32.3。",
+    "verdict_en": "• Alpha Potential: Moderate. Distillation enables smaller models with competitive performance, potentially reducing inference costs for LLM-based trading signals. Code generation improvement may aid automated strategy development.\n• Implementation Risk: High. Cross-architecture distillation is complex; requires careful tuning of three components. Tokenizer mismatch and architecture differences add integration challenges.\n• Novelty: High. First framework for cross-architecture distillation in diffusion LLMs; modular design is innovative.",
+    "verdict_cn": "• 创新点: 首个跨架构扩散LLM蒸馏框架，模块化设计新颖，解决分词器不匹配等实际问题。\n• 实盘坑: 蒸馏过程复杂，三个组件需精细调参；跨架构集成风险高，可能引入不稳定因素。\n• 复现难度: 高，需要大量计算资源和领域知识，代码未开源。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.26942v1",
+    "title": "Hyper Input Convex Neural Networks for Shape Constrained Learning and Optimal Transport",
+    "pdf_url": "https://arxiv.org/pdf/2604.26942v1",
+    "published": "2026-04-29",
+    "crawled_at": "2026-04-30 20:45:44",
+    "ai_score": 7.5,
+    "translated_title": "超输入凸神经网络用于形状约束学习与最优传输",
+    "summary_en": [
+      "• Model Architecture: HyCNNs combine Maxout networks with Input Convex Neural Networks (ICNNs) to guarantee convexity in inputs while leveraging depth efficiently.",
+      "• Data used: Synthetic datasets for convex regression and interpolation, plus single-cell RNA sequencing data for optimal transport tasks.",
+      "• Performance metrics: HyCNNs require exponentially fewer parameters than ICNNs to approximate quadratic functions; outperform ICNNs and MLPs in predictive performance on convex regression and interpolation; achieve superior results in high-dimensional optimal transport.",
+      "• Theoretical contribution: Proof that HyCNNs need exponentially fewer parameters than ICNNs for quadratic approximation.",
+      "• Application: Demonstrated on synthetic optimal transport and real single-cell RNA sequencing data, outperforming ICNN-based methods."
+    ],
+    "summary_cn": [
+      "• 核心模型: HyCNN结合Maxout网络与输入凸神经网络(ICNN)，保证输入凸性并高效利用深度。",
+      "• 数据来源: 合成数据（凸回归与插值）及单细胞RNA测序数据（最优传输）。",
+      "• 主要结论: HyCNN在逼近二次函数时参数需求指数级少于ICNN；在凸回归和插值任务中预测性能优于ICNN和MLP；在高维最优传输中表现更优。",
+      "• 理论贡献: 证明HyCNN在二次逼近中参数效率指数级优于ICNN。",
+      "• 应用: 在合成最优传输和单细胞RNA测序数据上超越ICNN基线。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; convex shape constraints are niche but useful for specific financial models (e.g., option pricing, risk management).",
+      "• Implementation Risk: Low to moderate; architecture is straightforward but requires careful tuning for financial data.",
+      "• Novelty: High; combining Maxout with ICNN for exponential parameter efficiency is a solid theoretical contribution.",
+      "• Practical Relevance: Limited to convex function learning; not directly applicable to typical alpha factors.",
+      "• Scalability: Demonstrated on high-dimensional data, suggesting potential for large-scale financial applications."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将Maxout与ICNN结合，实现参数效率指数级提升，理论扎实。",
+      "• 实盘坑: 凸性约束在金融中应用场景有限（如期权定价），难以直接用于因子挖掘。",
+      "• 复现难度: 中等，架构清晰但需调参，且金融数据可能不满足凸性假设。",
+      "• 实用性: 偏学术，对高频或套利策略直接贡献不大。",
+      "• 潜力: 在风险管理或衍生品定价中可能有应用，但需进一步验证。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2604.26932v1",
+    "title": "Learning Over-Relaxation Policies for ADMM with Convergence Guarantees",
+    "pdf_url": "https://arxiv.org/pdf/2604.26932v1",
+    "published": "2026-04-29",
+    "crawled_at": "2026-04-30 20:45:52",
+    "ai_score": 7.5,
+    "translated_title": "学习具有收敛保证的ADMM过松弛策略",
+    "summary_en": "• Model Architecture: Proposes learning time-varying relaxation parameters for ADMM, building on OSQP-like architectures where relaxation updates avoid costly matrix refactorizations.\n• Data used: Evaluated on benchmark quadratic programs (QPs) from standard optimization libraries; no specific financial data.\n• Performance metrics: Reports improvements in iteration count and wall-clock time over baseline OSQP, with convergence guarantees under mild assumptions.",
+    "summary_cn": "• 核心模型: 在ADMM框架中学习时变松弛参数，利用OSQP类架构避免矩阵重分解。\n• 数据来源: 使用标准优化库中的二次规划基准测试，无金融数据。\n• 主要结论: 相比基线OSQP，迭代次数和运行时间均有改进，且提供收敛保证。",
+    "verdict_en": "• Alpha Potential: Low for direct trading; relevant for optimization in MPC or portfolio construction, but not a standalone alpha strategy.\n• Implementation Risk: Medium; requires integration with ADMM solvers and careful tuning of learning policy; convergence guarantees reduce risk.\n• Novelty: Moderate; combines learning with ADMM relaxation, but similar ideas exist in meta-learning for optimization.",
+    "verdict_cn": "• 创新点: 将学习机制引入ADMM松弛参数选择，在保持收敛性的同时提升效率。\n• 实盘坑: 直接交易信号弱，需嵌入优化流程；学习策略可能过拟合特定问题类。\n• 复现难度: 中等，需ADMM求解器基础，但算法细节公开。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.26926v1",
+    "title": "A Note on How to Remove the $\\ln\\ln T$ Term from the Squint Bound",
+    "pdf_url": "https://arxiv.org/pdf/2604.26926v1",
+    "published": "2026-04-29",
+    "crawled_at": "2026-04-30 20:46:02",
+    "ai_score": 5.5,
+    "translated_title": "关于如何从Squint界中移除ln ln T项的注记",
+    "summary_en": [
+      "• The paper builds on shifted KT potentials introduced in Orabona and Pál [2016] to remove the ln ln T factor from parameter-free learning bounds.",
+      "• It shows equivalence between shifted KT potentials and changing the prior in the Krichevsky–Trofimov algorithm.",
+      "• The main result applies the same idea to remove the ln ln T factor from the data-independent bound for the Squint algorithm.",
+      "• No new empirical data or experiments are presented; the contribution is purely theoretical.",
+      "• The paper is a short technical note, focusing on theoretical refinements rather than practical applications."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于Orabona和Pál [2016]的移位KT势，将其与Krichevsky–Trofimov算法中的先验改变等价。",
+      "• 数据来源: 无实证数据，纯理论推导。",
+      "• 主要结论: 成功移除Squint算法数据无关界中的ln ln T项。",
+      "• 方法创新: 通过调整先验分布实现理论界的改进。",
+      "• 局限性: 仅涉及理论优化，未提供实际算法或实验验证。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low. The result is a theoretical improvement in regret bounds, but unlikely to directly translate to trading alpha.",
+      "• Implementation Risk: Low. The paper provides no code or empirical validation; implementation would require significant adaptation.",
+      "• Novelty: Moderate. The equivalence with prior change is insightful, but the core idea is incremental over prior work.",
+      "• Relevance: Limited for quantitative finance; the Squint algorithm is for online learning with expert advice, not directly applicable to market strategies.",
+      "• Practical Impact: Minimal. Removing a log log factor is a minor theoretical improvement with negligible effect in practice."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将移位KT势与先验改变等价，理论上有一定洞察，但增量有限。",
+      "• 实盘坑: 纯理论结果，无实际算法或数据验证，直接应用于量化交易几乎不可能。",
+      "• 复现难度: 低，但需要深入理解在线学习和信息论背景。",
+      "• 交易价值: 极低，移除对数因子对实际策略性能影响微乎其微。",
+      "• 建议: 适合学术研究，不适合作为交易策略开发的基础。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.26922v1",
+    "title": "On the Learning Curves of Revenue Maximization",
+    "pdf_url": "https://arxiv.org/pdf/2604.26922v1",
+    "published": "2026-04-29",
+    "crawled_at": "2026-04-30 20:46:10",
+    "ai_score": 7.5,
+    "translated_title": "收益最大化的学习曲线研究",
+    "summary_en": "• Model Architecture: The paper studies learning curves for revenue maximization in a single-item, single-buyer setting, analyzing Bayes-consistent algorithms without distributional assumptions.\n• Data used: Theoretical analysis; no empirical data used.\n• Performance metrics: Convergence rate of revenue loss (difference between optimal and learned revenue) as a function of sample size n.\n• Key findings: Without restrictions, convergence can be arbitrarily slow; if optimal revenue is achieved by a finite price, rate is roughly 1/√n; for discrete distributions, rate is almost exponential.",
+    "summary_cn": "• 核心模型: 单物品单买家场景下，研究收益最大化的学习曲线，分析无分布假设的贝叶斯一致算法。\n• 数据来源: 纯理论分析，未使用实证数据。\n• 主要结论: 无限制时收敛可任意慢；若最优收益由有限价格实现，收敛速率约为1/√n；离散分布下接近指数级收敛。",
+    "verdict_en": "• Alpha Potential: Low; theoretical insights may guide algorithm design but direct trading application is limited.\n• Implementation Risk: High; results are asymptotic and distribution-dependent, requiring careful calibration.\n• Novelty: High; first characterization of learning curves for revenue maximization, bridging learning theory and mechanism design.",
+    "verdict_cn": "• 创新点: 首次刻画收益最大化的学习曲线，连接学习理论与机制设计。\n• 实盘坑: 理论结果渐近且依赖分布，实际交易中难以直接应用。\n• 复现难度: 中等；理论推导复杂，但无实证数据需求。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.26919v1",
+    "title": "Causal Learning with Neural Assemblies",
+    "pdf_url": "https://arxiv.org/pdf/2604.26919v1",
+    "published": "2026-04-29",
+    "crawled_at": "2026-04-30 20:46:19",
+    "ai_score": 7.5,
+    "translated_title": "神经集群的因果学习",
+    "summary_en": "• Model Architecture: Introduces DIRECT (DIRectional Edge Coupling/Training), a mechanism using neural assemblies with projection, local plasticity control, and sparse winner selection to learn causal directionality without backpropagation.\n• Data used: Synthetic data across multiple domains for structural recovery tasks; no real-world financial or high-dimensional datasets mentioned.\n• Performance metrics: Achieves perfect structural recovery under supervised, known-structure setting; validated via synaptic-strength asymmetry and functional propagation overlap.\n• Key finding: Neural assemblies can internalize causal directionality through local plasticity, offering an auditable framework for causal claims.\n• Limitation: Only tested on small-scale synthetic structures; scalability to complex real-world systems unclear.",
+    "summary_cn": "• 核心模型: 提出DIRECT机制，利用神经集群的投影、局部可塑性控制和稀疏胜者选择来学习因果方向，无需反向传播。\n• 数据来源: 使用多个领域的合成数据，进行结构恢复任务，未涉及真实金融或高维数据集。\n• 主要结论: 神经集群通过局部可塑性即可内化因果方向，在监督已知结构下实现完美恢复，并通过突触不对称性和功能传播重叠验证。\n• 局限性: 仅在小规模合成结构上测试，扩展到复杂真实系统的可扩展性不明。",
+    "verdict_en": "• Alpha Potential: Low for direct trading; causal structure learning may aid factor discovery but not directly marketable.\n• Implementation Risk: High; requires specialized neural assembly hardware or simulation, far from standard ML pipelines.\n• Novelty: Moderate; combines neural assemblies with causal learning, but limited to small synthetic tasks.\n• Practicality: Low for hedge fund use; no financial data tested, and local plasticity may not scale to high-dimensional financial time series.",
+    "verdict_cn": "• 创新点: 将神经集群与因果学习结合，提出可审计的因果方向学习机制，但仅限小规模合成数据。\n• 实盘坑: 无金融数据验证，可扩展性存疑；局部可塑性在金融高维时序中可能失效。\n• 复现难度: 高；需神经集群模拟或专用硬件，非标准深度学习框架。\n• 实用性: 低；当前阶段不适合量化策略，仅作为学术探索。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.26904v1",
+    "title": "ClawGym: A Scalable Framework for Building Effective Claw Agents",
+    "pdf_url": "https://arxiv.org/pdf/2604.26904v1",
+    "published": "2026-04-29",
+    "crawled_at": "2026-04-30 20:46:30",
+    "ai_score": 6.5,
+    "translated_title": "ClawGym：构建高效Claw智能体的可扩展框架",
+    "summary_en": [
+      "• Model Architecture: Proposes ClawGym framework for Claw-style agents, including data synthesis (ClawGym-SynData), agent training via SFT and RL, and evaluation benchmark (ClawGym-Bench).",
+      "• Data used: Synthesized 13.5K filtered tasks from persona-driven intents and skill-grounded operations, with mock workspaces and hybrid verification.",
+      "• Performance metrics: Trained agents via SFT on black-box rollouts and RL with parallelized sandboxes; benchmark of 200 instances with automated and human-LLM review.",
+      "• Key findings: Framework enables scalable development of Claw agents, but no specific performance numbers or comparisons to baselines are provided.",
+      "• Limitations: Lacks quantitative results, making assessment of practical effectiveness difficult."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出ClawGym框架，涵盖数据合成（ClawGym-SynData）、智能体训练（SFT+RL）和评估基准（ClawGym-Bench）。",
+      "• 数据来源: 基于人物驱动意图和技能导向操作合成13.5K个过滤任务，配合模拟工作空间和混合验证机制。",
+      "• 主要结论: 框架支持Claw智能体的可扩展开发，但未提供具体性能数值或与基线的对比。",
+      "• 局限性: 缺乏定量结果，难以评估实际有效性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low; framework is general-purpose for personal agents, not directly applicable to financial alpha generation.",
+      "• Implementation Risk: High; requires significant infrastructure for sandboxed rollouts and data synthesis, with unclear scalability to real-world tasks.",
+      "• Novelty: Moderate; combines existing ideas (persona-driven synthesis, SFT+RL) but lacks empirical validation.",
+      "• Relevance to quant: Minimal; focuses on personal assistant agents, not financial modeling or trading.",
+      "• Verdict: Not suitable for hedge fund application; more relevant to AI agent research."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将人物驱动数据合成与强化学习结合用于Claw智能体，但技术路线较为常规。",
+      "• 实盘坑: 缺乏量化指标，框架复杂度高，实际部署成本大，且与金融场景脱节。",
+      "• 复现难度: 高，需要大量工程实现和定制化环境，且未开源数据或模型。",
+      "• 金融适用性: 低，主要面向个人助手，无法直接用于量化策略。",
+      "• 总体评价: 学术价值有限，不适合对冲基金应用。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.26898v1",
+    "title": "Stochastic Scaling Limits and Synchronization by Noise in Deep Transformer Models",
+    "pdf_url": "https://arxiv.org/pdf/2604.26898v1",
+    "published": "2026-04-29",
+    "crawled_at": "2026-04-30 20:46:37",
+    "ai_score": 7.5,
+    "translated_title": "深度Transformer模型中的随机缩放极限与噪声同步",
+    "summary_en": [
+      "• Model Architecture: Analyzes deep transformer models with MLP blocks, deriving continuous-time stochastic interacting particle system limits.",
+      "• Data used: Theoretical analysis; no empirical data used.",
+      "• Performance metrics: Proves pathwise convergence, propagation of chaos, and exponential dissipation of interaction energy under noise.",
+      "• Key result: Identifies synchronization by noise and conditions on activation functions for coercivity."
+    ],
+    "summary_cn": [
+      "• 核心模型: 研究带MLP块的深度Transformer模型，推导其层间演化到连续时间随机交互粒子系统的极限。",
+      "• 数据来源: 纯理论分析，未使用实证数据。",
+      "• 主要结论: 证明路径收敛、混沌传播及噪声下交互能量指数耗散，并刻画满足条件的激活函数。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low direct alpha; theoretical insights may inform robust model design for noisy environments.",
+      "• Implementation Risk: High; requires deep understanding of stochastic analysis and PDEs.",
+      "• Novelty: High; first to prove synchronization by noise in transformer limits with quantitative bounds."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次在Transformer极限中证明噪声同步，并给出定量界。",
+      "• 实盘坑: 纯理论，无直接交易信号，需转化为实际算法。",
+      "• 复现难度: 极高，需随机分析和PDE背景。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.26888v1",
+    "title": "Multiple Additive Neural Networks for Structured and Unstructured Data",
+    "pdf_url": "https://arxiv.org/pdf/2604.26888v1",
+    "published": "2026-04-29",
+    "crawled_at": "2026-04-30 20:46:47",
+    "ai_score": 7.5,
+    "translated_title": "用于结构化与非结构化数据的多重加性神经网络",
+    "summary_en": [
+      "• Model Architecture: Extends Gradient Boosting by using nearly shallow neural networks (e.g., CNNs, Capsule Networks) as base learners instead of decision trees.",
+      "• Data used: Evaluated on both structured datasets (e.g., tabular data) and unstructured data (images, audio).",
+      "• Performance metrics: Reports accuracy improvements over XGBoost on well-known datasets, with emphasis on robustness and reduced overfitting.",
+      "• Key features: Continuous learning capability and advanced heuristics for hyperparameter insensitivity."
+    ],
+    "summary_cn": [
+      "• 核心模型: 用浅层神经网络（如CNN、胶囊网络）替代决策树作为基学习器，扩展梯度提升框架。",
+      "• 数据来源: 在结构化数据（表格数据）和非结构化数据（图像、音频）上测试。",
+      "• 主要结论: 在多个公开数据集上准确率优于XGBoost，且对超参数不敏感、抗过拟合。",
+      "• 额外亮点: 支持持续学习，集成先进启发式方法。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; accuracy gains over XGBoost may translate to better factor predictions, but unclear for financial time series.",
+      "• Implementation Risk: High; requires careful tuning of neural network architectures and computational resources.",
+      "• Novelty: Moderate; combining neural nets with boosting is not new, but capsule networks as feature extractors add some novelty.",
+      "• Practicality: Low for high-frequency trading due to computational overhead; better suited for mid-frequency or alternative data."
+    ],
+    "verdict_cn": [
+      "• 创新点: 用胶囊网络提取特征并集成到梯度提升中，有一定新意。",
+      "• 实盘坑: 神经网络训练成本高，金融时序数据上未必优于传统树模型。",
+      "• 复现难度: 中等；需要实现胶囊网络和MANN框架，超参数调优复杂。",
+      "• 适用性: 更适合低频或另类数据策略，高频交易不推荐。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2604.26881v1",
+    "title": "FaaSMoE: A Serverless Framework for Multi-Tenant Mixture-of-Experts Serving",
+    "pdf_url": "https://arxiv.org/pdf/2604.26881v1",
+    "published": "2026-04-29",
+    "crawled_at": "2026-04-30 20:46:55",
+    "ai_score": 6.5,
+    "translated_title": "FaaSMoE：面向多租户混合专家模型服务的无服务器框架",
+    "summary_en": "• Model Architecture: FaaSMoE decouples control and execution planes of MoE by deploying experts as stateless FaaS functions, enabling on-demand and scale-to-zero expert invocation across tenants.\n• Data used: The prototype is evaluated using Qwen1.5-moe-2.7B model under multi-tenant workloads.\n• Performance metrics: Compared to a full-model baseline, FaaSMoE uses less than one third of the resources, demonstrating resource-efficient MoE serving.",
+    "summary_cn": "• 核心模型: FaaSMoE将MoE的控制平面和执行平面解耦，将专家部署为无状态FaaS函数，实现跨租户的按需和零缩放专家调用。\n• 数据来源: 使用Qwen1.5-moe-2.7B模型在多租户工作负载下评估原型。\n• 主要结论: 与全模型基线相比，FaaSMoE使用不到三分之一的资源，展示了资源高效的MoE服务。",
+    "verdict_en": "• Alpha Potential: Low; focuses on infrastructure efficiency, not trading alpha.\n• Implementation Risk: High; requires FaaS platform integration and may introduce latency overhead.\n• Novelty: Moderate; applies serverless paradigm to MoE serving, but similar ideas exist in cloud computing.",
+    "verdict_cn": "• 创新点: 将无服务器计算应用于MoE服务，实现资源弹性，但概念并非全新。\n• 实盘坑: 函数调用延迟可能影响实时推理，多租户隔离需额外保障。\n• 复现难度: 中等；依赖特定FaaS平台，但开源原型可参考。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2604.25917v1",
     "title": "Recursive Multi-Agent Systems",
     "pdf_url": "https://arxiv.org/pdf/2604.25917v1",
