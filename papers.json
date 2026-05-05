@@ -1,5 +1,290 @@
 [
   {
+    "id": "2605.02888v1",
+    "title": "SpecKV: Adaptive Speculative Decoding with Compression-Aware Gamma Selection",
+    "pdf_url": "https://arxiv.org/pdf/2605.02888v1",
+    "published": "2026-05-04",
+    "crawled_at": "2026-05-05 20:49:20",
+    "ai_score": 8.5,
+    "translated_title": "SpecKV：自适应推测解码与压缩感知伽马选择",
+    "summary_en": [
+      "• Model Architecture: SpecKV uses a lightweight MLP trained on draft model signals (confidence, entropy) to adaptively select speculation length γ per step.",
+      "• Data used: 5,112 step-level records from profiling across 4 task categories, 4 speculation lengths, and 3 compression levels (FP16, INT8, NF4).",
+      "• Performance metrics: Achieves 56.0% improvement over fixed γ=4 baseline with only 0.34ms overhead (<0.5% of step time), statistically significant (p<0.001)."
+    ],
+    "summary_cn": [
+      "• 核心模型: 使用轻量级MLP，基于草稿模型信号（置信度、熵）自适应选择每步推测长度γ。",
+      "• 数据来源: 在4种任务类别、4种推测长度和3种压缩级别（FP16, INT8, NF4）下收集的5,112条步级记录。",
+      "• 主要结论: 相比固定γ=4基线提升56.0%，每步开销仅0.34ms（<0.5%步时间），统计显著（p<0.001）。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for LLM inference optimization, directly reduces latency and cost, applicable to production systems.",
+      "• Implementation Risk: Low; uses simple MLP and signals from draft model, easy to integrate into existing speculative decoding pipelines.",
+      "• Novelty: Moderate; adaptive γ selection is novel, but relies on known signals (confidence/entropy) and standard MLP."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次提出压缩感知的推测长度自适应选择，利用草稿模型内部信号，思路简洁有效。",
+      "• 实盘坑: 依赖草稿模型质量，若草稿模型与目标模型差异大，信号预测可能失效；MLP需针对不同模型重新训练。",
+      "• 复现难度: 低；开源了数据和模型，代码实现简单，易于复现和部署。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.02884v1",
+    "title": "Unsupervised Machine Learning for Detecting Structural Anomalies in European Regional Statistics",
+    "pdf_url": "https://arxiv.org/pdf/2605.02884v1",
+    "published": "2026-05-04",
+    "crawled_at": "2026-05-05 20:49:31",
+    "ai_score": 5.5,
+    "translated_title": "无监督机器学习检测欧洲区域统计中的结构异常",
+    "summary_en": "• Model Architecture: Compares five unsupervised anomaly detection methods (z-scores, Mahalanobis distance, Isolation Forest, Local Outlier Factor, One-Class SVM) and uses a majority vote (≥3 methods) to flag structural anomalies.\n• Data: Cross-sectional dataset of NUTS2 regions (2022) from Eurostat, with four indicators: GDP per capita, unemployment rate, tertiary education attainment, and population density.\n• Performance Metrics: No quantitative performance metrics (e.g., precision, recall) are reported; evaluation is qualitative based on known regional characteristics.\n• Key Findings: Identifies both highly developed metropolitan regions and disadvantaged regions as structural anomalies, emphasizing that anomalies reflect structural divergence rather than data errors.\n• Reproducibility: Framework is fully reproducible and scalable, compatible with existing validation workflows.",
+    "summary_cn": "• 核心模型: 比较五种无监督异常检测方法（z分数、马氏距离、孤立森林、局部异常因子、一类SVM），采用多数投票（≥3种方法）标记结构异常。\n• 数据来源: 使用Eurostat 2022年NUTS2区域横截面数据，包含四个指标：人均GDP、失业率、高等教育程度和人口密度。\n• 主要结论: 识别出高度发达的大都市区域和弱势区域均为结构异常，强调异常反映结构性差异而非数据错误。\n• 性能评估: 未报告定量性能指标，仅基于已知区域特征进行定性评估。\n• 复现性: 框架完全可复现、可扩展，兼容现有验证流程。",
+    "verdict_en": "• Alpha Potential: Low. The paper focuses on detecting structural anomalies in regional statistics, not on financial markets. No direct trading signal or alpha generation is proposed.\n• Implementation Risk: Low for statistical agencies, but for hedge funds, the framework is not directly applicable to financial data without significant adaptation.\n• Novelty: Moderate. Combines standard anomaly detection methods in a novel ensemble approach for regional statistics, but methods are well-known.\n• Practical Use: Could be adapted for detecting unusual economic regimes or cross-asset anomalies, but requires substantial customization.\n• Data Relevance: Eurostat data is low-frequency (annual), limiting use for high-frequency trading or short-term strategies.",
+    "verdict_cn": "• 创新点: 将多种无监督异常检测方法集成应用于区域统计，但方法本身并非新颖。\n• 实盘坑: 与金融市场无关，无法直接用于交易；数据频率低（年度），不适合高频或短期策略。\n• 复现难度: 低，使用公开Eurostat数据和标准Python库，代码可复现。\n• 实用性: 对统计机构有价值，但对对冲基金而言，需大幅改造才能用于金融异常检测。\n• 评分: 技术简单，缺乏金融相关性，alpha潜力几乎为零。",
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.02871v1",
+    "title": "Multi-fidelity surrogates for mechanics of composites: from co-kriging to multi-fidelity neural networks",
+    "pdf_url": "https://arxiv.org/pdf/2605.02871v1",
+    "published": "2026-05-04",
+    "crawled_at": "2026-05-05 20:49:41",
+    "ai_score": 6.5,
+    "translated_title": "复合材料力学多保真代理模型：从协同克里金到多保真神经网络",
+    "summary_en": [
+      "• Model Architecture: Reviews Gaussian-process/Kriging-based methods (co-Kriging, coregionalization, autoregressive GP, nonlinear autoregressive GP, multi-fidelity deep GP) and multi-fidelity neural networks.",
+      "• Data used: Combines abundant low-fidelity data (e.g., cheaper simulations) with limited high-fidelity data (e.g., experiments or expensive simulations).",
+      "• Performance metrics: Focuses on cross-fidelity correlation, discrepancy representation, uncertainty quantification, and scalability; no specific numerical metrics reported.",
+      "• Applications: Forward prediction for material design space exploration, inverse optimization for parameter identification, and workflow integration with heterogeneous data sources."
+    ],
+    "summary_cn": [
+      "• 核心模型: 综述了基于高斯过程/克里金的方法（协同克里金、协同区域化、自回归GP、非线性自回归GP、多保真深度GP）以及多保真神经网络。",
+      "• 数据来源: 结合大量低保真数据（如廉价仿真）与有限高保真数据（如实验或昂贵仿真）。",
+      "• 主要结论: 比较了不同方法在跨保真度相关性、差异表示、不确定性量化和可扩展性上的区别，并讨论了复合材料特有的挑战（如非线性损伤、制造历史导致的保真度差距）。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low; this is a review paper with no novel trading strategy; applications are in composite mechanics, not finance.",
+      "• Implementation Risk: High; multi-fidelity methods require domain-specific knowledge and careful calibration; not directly applicable to quantitative finance.",
+      "• Novelty: Moderate; provides a structured overview but lacks new methodological contributions; useful for researchers in material science."
+    ],
+    "verdict_cn": [
+      "• 创新点: 作为综述，系统梳理了多保真代理模型在复合材料力学中的应用，但无新方法贡献。",
+      "• 实盘坑: 与量化金融无关，无法直接用于交易策略；多保真方法在金融领域应用需大量适配。",
+      "• 复现难度: 中等；方法描述清晰，但需要复合材料领域专业知识，金融背景研究者复现意义不大。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.02867v1",
+    "title": "Enhancing RL Generalizability in Robotics through SHAP Analysis of Algorithms and Hyperparameters",
+    "pdf_url": "https://arxiv.org/pdf/2605.02867v1",
+    "published": "2026-05-04",
+    "crawled_at": "2026-05-05 20:49:49",
+    "ai_score": 7.2,
+    "translated_title": "通过SHAP分析算法和超参数增强机器人强化学习的泛化能力",
+    "summary_en": [
+      "• Model Architecture: Uses SHAP (SHapley Additive exPlanations) to decompose the impact of RL algorithms and hyperparameters on generalization performance.",
+      "• Data used: Evaluates across multiple robotic environments (e.g., simulated tasks) with diverse configurations.",
+      "• Performance metrics: Generalization gap reduction, configuration impact patterns, and SHAP-guided selection effectiveness.",
+      "• Key finding: Consistent configuration impacts across tasks, enabling improved generalization via SHAP-based selection."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于SHAP值分解RL算法和超参数对泛化性能的贡献。",
+      "• 数据来源: 多种机器人仿真环境，涵盖不同任务和配置。",
+      "• 主要结论: 配置影响在不同任务中一致，SHAP引导的选择可提升泛化能力。",
+      "• 性能指标: 泛化差距缩小、配置影响模式分析。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; SHAP-guided selection could improve model robustness, but direct trading alpha is unclear.",
+      "• Implementation Risk: High; requires RL expertise and computational cost for SHAP calculations.",
+      "• Novelty: Moderate; applies SHAP to RL generalization, but similar explainability approaches exist.",
+      "• Practicality: Limited to robotics; adaptation to finance would need significant rework."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将SHAP应用于RL泛化分析，量化配置影响。",
+      "• 实盘坑: 金融场景适配困难，计算成本高，直接交易信号弱。",
+      "• 复现难度: 中等，需RL环境和SHAP库支持。",
+      "• 实用性: 偏学术，短期难以直接用于量化策略。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.02860v1",
+    "title": "Standing on the Shoulders of Giants: Stabilized Knowledge Distillation for Cross--Language Code Clone Detection",
+    "pdf_url": "https://arxiv.org/pdf/2605.02860v1",
+    "published": "2026-05-04",
+    "crawled_at": "2026-05-05 20:49:59",
+    "ai_score": 7.2,
+    "translated_title": "站在巨人的肩膀上：面向跨语言代码克隆检测的稳定知识蒸馏",
+    "summary_en": [
+      "• Model Architecture: Uses DeepSeek-R1 as teacher to distill reasoning into compact student models (Phi3, Qwen-Coder) via LoRA fine-tuning, with three response stabilization methods: forced conclusion prompting, binary classification head, and contrastive classification head.",
+      "• Data used: Cross-language code pairs derived from Project CodeNet, covering Python-Java, Rust-Java, Rust-Python, and Rust-Ruby.",
+      "• Performance metrics: Evaluated on predictive metrics (e.g., F1, accuracy) and response rate; classification-head variants reduce inference time significantly compared to generation-based inference.",
+      "• Key results: Knowledge distillation consistently improves reliability and often predictive performance, especially under distribution shift."
+    ],
+    "summary_cn": [
+      "• 核心模型: 以DeepSeek-R1为教师模型，通过LoRA微调将推理能力蒸馏至紧凑学生模型（Phi3、Qwen-Coder），并引入三种响应稳定方法：强制结论提示、二分类头、对比分类头。",
+      "• 数据来源: 使用Project CodeNet中的跨语言代码对，涵盖Python-Java、Rust-Java、Rust-Python、Rust-Ruby。",
+      "• 主要结论: 知识蒸馏持续提升紧凑模型的可靠性，并在分布偏移下提升预测性能；分类头变体显著降低推理时间。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate. While not directly financial, the technique of stabilizing LLM outputs for cross-language code clone detection could be adapted for NLP-based trading signals or code analysis in quant systems.",
+      "• Implementation Risk: Low to moderate. Uses open-source models and standard distillation; response stabilization methods are simple to implement. However, domain adaptation to finance may require additional effort.",
+      "• Novelty: Moderate. Knowledge distillation for code clone detection is not new, but the focus on response stabilization and cross-language setting adds value."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将知识蒸馏与响应稳定方法结合，解决紧凑模型在跨语言代码克隆检测中的输出不可靠问题，分类头设计有实用价值。",
+      "• 实盘坑: 金融领域应用需额外适配，代码克隆检测本身与量化交易关联度低，需转化思路。",
+      "• 复现难度: 中等。使用开源模型和标准蒸馏流程，但需Project CodeNet数据集和DeepSeek-R1访问权限。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.02853v1",
+    "title": "Trust, but Verify: Peeling Low-Bit Transformer Networks for Training Monitoring",
+    "pdf_url": "https://arxiv.org/pdf/2605.02853v1",
+    "published": "2026-05-04",
+    "crawled_at": "2026-05-05 20:50:08",
+    "ai_score": 7.5,
+    "translated_title": "信任但验证：剥离低比特Transformer网络用于训练监控",
+    "summary_en": "• Model Architecture: Decoder-only transformer models, with analysis applied to each layer via a peeling framework that constructs lightweight reference solutions.\n• Data: The paper does not specify a particular dataset; experiments are likely conducted on standard language modeling benchmarks (e.g., WikiText, C4) but not explicitly stated.\n• Performance Metrics: Layer-wise reference bounds compared to trained model outputs; training loss curves; effectiveness under binarization and quantization settings.",
+    "summary_cn": "• 核心模型: 解码器-only Transformer模型，通过剥离框架逐层构建轻量级参考解进行分析。\n• 数据来源: 未明确指定数据集，可能使用标准语言建模基准（如WikiText、C4）。\n• 主要结论: 层间参考界可匹配甚至超越训练模型，暴露聚合损失曲线中隐藏的低效问题；在二值化和量化设置下仍有效。",
+    "verdict_en": "• Alpha Potential: Low direct alpha; more of a diagnostic tool for model training, indirectly useful for improving model quality in quant NLP/LLM strategies.\n• Implementation Risk: Moderate; requires access to intermediate representations and training infrastructure, but lightweight reference solutions are feasible.\n• Novelty: High; introduces a novel layer-wise monitoring framework that reveals under-optimized layers invisible in standard loss curves.",
+    "verdict_cn": "• 创新点: 提出逐层剥离监控框架，揭示标准损失曲线无法发现的训练低效问题，新颖性高。\n• 实盘坑: 直接交易信号弱，主要用于模型训练优化，对量化策略的alpha贡献间接。\n• 复现难度: 中等；需要访问中间表示和训练基础设施，但参考解轻量级，可复现。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2605.02838v1",
+    "title": "A second-order method on the Stiefel manifold via Newton$\\unicode{x2013}$Schulz",
+    "pdf_url": "https://arxiv.org/pdf/2605.02838v1",
+    "published": "2026-05-04",
+    "crawled_at": "2026-05-05 20:50:17",
+    "ai_score": 7.5,
+    "translated_title": "基于牛顿-舒尔茨迭代的Stiefel流形二阶优化方法",
+    "summary_en": [
+      "• Model Architecture: Proposes a second-order optimization method on the Stiefel manifold without retractions, combining a tangent component for objective reduction and a normal component for infeasibility reduction via Newton–Schulz iteration.",
+      "• Data used: Numerical experiments on orthogonal Procrustes problem, principal component analysis (PCA), and real-data independent component analysis (ICA).",
+      "• Performance metrics: Achieves local quadratic convergence (superlinear for inexact variant) and outperforms existing methods in terms of efficiency and accuracy.",
+      "• Key innovation: Establishes geometric connection between Newton–Schulz iteration and Stiefel manifolds, showing it moves along the normal space."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出一种无需回缩的Stiefel流形二阶优化方法，通过牛顿-舒尔茨迭代构造法向分量减少不可行性，切向分量降低目标函数。",
+      "• 数据来源: 在正交Procrustes问题、主成分分析(PCA)和真实数据独立成分分析(ICA)上进行数值实验。",
+      "• 主要结论: 方法具有局部二次收敛性（非精确变体超线性收敛），在效率和精度上优于现有方法。",
+      "• 创新点: 揭示了牛顿-舒尔茨迭代与Stiefel流形之间的几何联系，证明其沿法空间移动。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; second-order methods can improve convergence in optimization-heavy strategies like portfolio optimization or factor extraction.",
+      "• Implementation Risk: High; requires careful tuning of Newton–Schulz iterations and handling of tangent-normal decomposition.",
+      "• Novelty: High; first retraction-free second-order method on Stiefel manifold with theoretical guarantees."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首个无需回缩的Stiefel流形二阶方法，理论保证强。",
+      "• 实盘坑: 牛顿-舒尔茨迭代可能增加计算开销，且对初始点敏感，实盘需谨慎调参。",
+      "• 复现难度: 中等偏高；需实现流形上的切法向分解及牛顿方程修正。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.02836v1",
+    "title": "A Closed-Form Persistence-Landmark Pipeline for Certified Point-Cloud and Graph Classification",
+    "pdf_url": "https://arxiv.org/pdf/2605.02836v1",
+    "published": "2026-05-04",
+    "crawled_at": "2026-05-05 20:50:31",
+    "ai_score": 7.2,
+    "translated_title": "一种用于认证点云和图分类的闭式持久性-地标管道",
+    "summary_en": "• Model Architecture: PLACE uses a closed-form pipeline combining Mitra-Virk single-point coordinate functions over a sparse landmark grid, with closed-form weights maximizing a structural distortion constant.\n• Data used: Point clouds and graphs, tested on Orbit5k, MUTAG, COX2, NCI1/NCI109, and a heterogeneous 64-descriptor chemical-graph pool.\n• Performance metrics: Margin bound O(kR/(Δ√m_min)), Mahalanobis margin under Ledoit-Wolf-shrunk covariance as best descriptor selector (mean Spearman ρ≈+0.54), matches strongest topology-based baseline on MUTAG/COX2, strongest diagram-based method on Orbit5k.\n• Key guarantees: Three quantitative guarantees derived from training labels alone: margin-based excess-risk rate, closed-form descriptor-selection rule, per-prediction certificate.\n• Limitations: Descriptor blindness on NCI1/NCI109, pool-coverage limits elsewhere; per-prediction certificate not yet operational at training-set sizes.",
+    "summary_cn": "• 核心模型: PLACE采用闭式管道，结合稀疏地标网格上的Mitra-Virk单点坐标函数，闭式权重最大化结构失真常数。\n• 数据来源: 点云和图数据，测试于Orbit5k、MUTAG、COX2、NCI1/NCI109以及含64个描述符的异质化学图池。\n• 主要结论: 边际界O(kR/(Δ√m_min))；Ledoit-Wolf收缩协方差下的马氏距离是最佳描述符选择器（平均Spearman ρ≈+0.54）；在MUTAG/COX2上匹配最强拓扑基线，在Orbit5k上是最强图方法。\n• 关键保证: 仅从训练标签导出三个定量保证：基于边际的过剩风险率、闭式描述符选择规则、每个预测的证书。\n• 局限性: 在NCI1/NCI109上存在描述符盲区，其他数据集存在池覆盖限制；每个预测证书在训练集规模下尚不可操作。",
+    "verdict_en": "• Alpha Potential: Low to moderate; method is theoretical and not directly applicable to financial time series; topological signatures may capture market structure but require adaptation.\n• Implementation Risk: High; requires computing persistent homology on point clouds/graphs, which is computationally expensive and not standard in finance; closed-form nature reduces some risk but still complex.\n• Novelty: High; introduces closed-form guarantees for topological data analysis, which is rare; the descriptor selection rule and certificates are novel.\n• Practicality: Limited for hedge fund use; more suited for graph/point-cloud classification in scientific domains; financial data would need significant preprocessing.\n• Scalability: Sparse landmark grid helps, but persistent homology scales poorly with data size; not suitable for high-frequency or large-scale datasets.",
+    "verdict_cn": "• 创新点: 在拓扑数据分析中引入闭式保证，描述符选择规则和预测证书具有新颖性。\n• 实盘坑: 计算持久同调成本高，金融数据需大量预处理，直接应用困难；边际界和证书在金融场景中可能不实用。\n• 复现难度: 高；需要拓扑学背景和特定库（如GUDHI），闭式权重计算虽无学习参数但数学推导复杂。\n• 适用性: 更适合科学领域图分类，对冲基金应用潜力低，除非能转化为市场微观结构特征。\n• 可扩展性: 稀疏地标网格缓解部分问题，但持久同调仍难以扩展至大规模金融数据。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.02834v1",
+    "title": "VideoNet: A Large-Scale Dataset for Domain-Specific Action Recognition",
+    "pdf_url": "https://arxiv.org/pdf/2605.02834v1",
+    "published": "2026-05-04",
+    "crawled_at": "2026-05-05 20:50:40",
+    "ai_score": 6.5,
+    "translated_title": "VideoNet：面向领域特定动作识别的大规模数据集",
+    "summary_en": [
+      "• Introduces VideoNet, a domain-specific action recognition benchmark covering 1,000 actions across 37 domains.",
+      "• Evaluates VLMs (e.g., Gemini 3.1 Pro, Qwen3-VL-8B) in multiple-choice, binary, and few-shot settings.",
+      "• Collects a training dataset of nearly 500k video question-answer pairs for domain-specific actions.",
+      "• Fine-tunes Molmo2-4B on this data, surpassing all open-weight 8B models on the benchmark."
+    ],
+    "summary_cn": [
+      "• 核心模型: 评估了Gemini 3.1 Pro、Qwen3-VL-8B等视觉语言模型，并微调Molmo2-4B。",
+      "• 数据来源: 构建了包含1000个动作、37个领域的VideoNet基准，以及近50万视频问答对的训练集。",
+      "• 主要结论: 闭源模型显著优于开源模型；少样本学习提升有限；微调后的小模型可超越更大开源模型。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low for financial markets; domain-specific action recognition is not directly applicable to trading.",
+      "• Implementation Risk: High; requires video data and specialized VLM infrastructure, not typical for quant funds.",
+      "• Novelty: Moderate; introduces a new benchmark and dataset, but methodology is standard fine-tuning."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出领域特定动作识别基准和数据集，但方法上无突破。",
+      "• 实盘坑: 与金融交易无关，无法直接产生alpha。",
+      "• 复现难度: 中等；需大量视频数据和计算资源，非量化常规赛道。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.02780v1",
+    "title": "Fine-Grained Graph Generation through Latent Mixture Scheduling",
+    "pdf_url": "https://arxiv.org/pdf/2605.02780v1",
+    "published": "2026-05-04",
+    "crawled_at": "2026-05-05 20:50:48",
+    "ai_score": 6.5,
+    "translated_title": "通过潜在混合调度实现细粒度图生成",
+    "summary_en": "• Model Architecture: Proposes a conditional variational autoencoder with a mixture scheduler that dynamically aligns graph- and property-driven representations for fine-grained control. • Data used: Evaluated on five real-world datasets (e.g., drug discovery, social networks, knowledge graphs). • Performance metrics: Achieves high generation quality and controllability, outperforming recent baselines. • Key innovation: Latent mixture scheduling progressively integrates graph and control priors. • Limitations: No explicit mention of scalability or computational cost.",
+    "summary_cn": "• 核心模型: 提出条件变分自编码器，通过混合调度器动态对齐图与属性驱动表示，实现细粒度控制。 • 数据来源: 在五个真实世界数据集上评估（如药物发现、社交网络、知识图谱）。 • 主要结论: 生成质量和可控性高，优于近期基线方法。 • 创新点: 潜在混合调度逐步整合图先验和控制先验。 • 局限性: 未明确提及可扩展性或计算成本。",
+    "verdict_en": "• Alpha Potential: Low for quantitative finance; graph generation is niche, not directly applicable to trading signals. • Implementation Risk: High; requires domain-specific adaptation and computational resources. • Novelty: Moderate; combines existing VAE and scheduling ideas but with limited financial relevance. • Practicality: Unlikely to generate alpha in typical hedge fund strategies.",
+    "verdict_cn": "• 创新点: 混合调度机制有一定新意，但图生成在量化金融中应用有限。 • 实盘坑: 难以直接用于交易信号生成，需大量定制化改造。 • 复现难度: 中等，但缺乏金融场景验证。 • 推荐度: 不推荐用于策略开发。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2604.28186v1",
     "title": "Computing Equilibrium beyond Unilateral Deviation",
     "pdf_url": "https://arxiv.org/pdf/2604.28186v1",
