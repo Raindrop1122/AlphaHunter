@@ -1,5 +1,268 @@
 [
   {
+    "id": "2605.04046v1",
+    "title": "A Closed-Form Adaptive-Landmark Kernel for Certified Point-Cloud and Graph Classification",
+    "pdf_url": "https://arxiv.org/pdf/2605.04046v1",
+    "published": "2026-05-05",
+    "crawled_at": "2026-05-06 20:58:57",
+    "ai_score": 7.5,
+    "translated_title": "一种用于认证点云和图分类的闭式自适应地标核",
+    "summary_en": "• Model Architecture: Introduces PALACE, a data-adaptive kernel method with closed-form guarantees, using a cover-theoretic core and Lebesgue-number criterion. It employs farthest-point sampling and equal weights derived from training labels without gradient training.\n• Data used: Evaluated on point-cloud and graph classification benchmarks including Orbit5k, COX2, MUTAG, DHFR, and a chemical-graph pool.\n• Performance metrics: Achieves 91.3±1.0% on Orbit5k (matching Persformer), leads on COX2 and MUTAG, competitive on DHFR (within 1 pp of ECP). Maintains 94% accuracy under 8× domain inflation vs. uniform grid collapse to 25%.",
+    "summary_cn": "• 核心模型: 提出PALACE，一种数据自适应核方法，基于覆盖论核心和Lebesgue数准则，提供闭式保证。使用最远点采样和从训练标签导出的等权重，无需梯度训练。\n• 数据来源: 在点云和图分类基准上评估，包括Orbit5k、COX2、MUTAG、DHFR以及化学图池。\n• 主要结论: 在Orbit5k上达到91.3±1.0%（与Persformer持平），在COX2和MUTAG上领先，在DHFR上具有竞争力（与ECP相差1个百分点以内）。在8倍域膨胀下保持94%准确率，而均匀网格崩溃至25%。",
+    "verdict_en": "• Alpha Potential: Moderate. The closed-form kernel provides interpretable features and strong performance on chemical graphs, but the domain (point-cloud/graph classification) is niche for quantitative finance.\n• Implementation Risk: Low to moderate. The method is closed-form with no gradient training, reducing computational risk, but requires tuning three hyperparameters (budget, radii, bandwidth) via cross-validation.\n• Novelty: High. Introduces a novel adaptive-landmark kernel with theoretical guarantees, including distortion bounds and classification rates, which is rare in kernel methods.",
+    "verdict_cn": "• 创新点: 高。提出了一种具有理论保证的自适应地标核，包括失真界和分类率，这在核方法中罕见。\n• 实盘坑: 中等。虽然闭式方法降低了计算风险，但需要交叉验证调整三个超参数，且应用领域（点云/图分类）与量化金融关联度低。\n• 复现难度: 低至中等。方法无需梯度训练，但需实现覆盖论核心和自适应采样，可能涉及几何数据处理。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.04039v1",
+    "title": "Safety and accuracy follow different scaling laws in clinical large language models",
+    "pdf_url": "https://arxiv.org/pdf/2605.04039v1",
+    "published": "2026-05-05",
+    "crawled_at": "2026-05-06 20:59:09",
+    "ai_score": 7.5,
+    "translated_title": "临床大语言模型的安全性与准确性遵循不同的缩放定律",
+    "summary_en": "• Model Architecture: Evaluated 34 locally deployed LLMs across six deployment conditions including closed-book, clean evidence, conflict evidence, standard RAG, agentic RAG, and max-context prompting.\n• Data used: Introduced RadSaFE-200 benchmark with 200 multiple-choice radiology questions, featuring clinician-defined clean evidence, conflict evidence, and option-level labels for high-risk error, unsafe answer, and evidence contradiction.\n• Performance metrics: Clean evidence improved mean accuracy from 73.5% to 94.1%, reduced high-risk error from 12.0% to 2.6%, contradiction from 12.7% to 2.3%, and dangerous overconfidence from 8.0% to 1.6%. Standard RAG and agentic RAG did not match this safety profile.",
+    "summary_cn": "• 核心模型: 评估了34个本地部署的LLM，涵盖6种部署条件：闭卷、干净证据、冲突证据、标准RAG、智能体RAG和最大上下文提示。\n• 数据来源: 引入RadSaFE-200基准，包含200道放射学多选题，带有临床医生定义的干净证据、冲突证据以及高风险错误、不安全答案和证据矛盾的选项级标签。\n• 主要结论: 干净证据将平均准确率从73.5%提升至94.1%，高风险错误从12.0%降至2.6%，矛盾从12.7%降至2.3%，危险过度自信从8.0%降至1.6%。标准RAG和智能体RAG未能复制这一安全表现。",
+    "verdict_en": "• Alpha Potential: Low direct alpha; focuses on safety evaluation rather than trading signals. However, insights on evidence quality and retrieval design could inform risk management in medical AI applications.\n• Implementation Risk: High; requires careful curation of evidence and deployment conditions. RAG methods showed safety gaps, indicating potential failure modes in production.\n• Novelty: Introduces SaFE-Scale framework and RadSaFE-200 benchmark, highlighting that safety does not scale with accuracy. Valuable for clinical LLM deployment but not directly applicable to quantitative finance.",
+    "verdict_cn": "• 创新点: 提出SaFE-Scale框架和RadSaFE-200基准，揭示安全性并不随准确率缩放，对临床LLM部署有重要启示。\n• 实盘坑: 直接交易信号弱；RAG方法存在安全漏洞，生产环境中可能失败。证据质量和检索设计是关键，但难以量化。\n• 复现难度: 高；需要临床专家标注和多种部署条件测试，计算资源需求大。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.04035v1",
+    "title": "Large-Scale High-Quality 3D Gaussian Head Reconstruction from Multi-View Captures",
+    "pdf_url": "https://arxiv.org/pdf/2605.04035v1",
+    "published": "2026-05-05",
+    "crawled_at": "2026-05-06 20:59:19",
+    "ai_score": 7.5,
+    "translated_title": "基于多视角捕捉的大规模高质量3D高斯头部重建",
+    "summary_en": "• Model Architecture: Employs an encoder-decoder with UV-parameterized 3D Gaussians anchored to a neutral head template, decoupling Gaussian count from input resolution.\n• Data used: Trained on an internal dataset of over 10,000 subjects, an order of magnitude larger than existing multi-view head datasets.\n• Performance metrics: Achieves state-of-the-art reconstruction quality and generalizes to novel identities without test-time optimization.\n• Scaling analysis: Extensively analyzes scaling behavior across identities, views, and model capacity, providing practical quality-compute trade-offs.\n• Downstream applications: Demonstrates novel 3D identity generation and expression-driven animation.",
+    "summary_cn": "• 核心模型: 采用编码器-解码器架构，将输入视图压缩为潜在表示，再解码为UV参数化的3D高斯，锚定在标准头部模板上，解耦高斯数量与输入分辨率。\n• 数据来源: 使用内部数据集，包含超过10,000个主体，比现有多视角头部数据集大一个数量级。\n• 主要结论: 达到最先进的重建质量，无需测试时优化即可泛化到新身份；系统分析了跨身份、视角和模型容量的缩放行为。\n• 下游应用: 展示了新颖的3D身份生成和表情驱动的动画能力。",
+    "verdict_en": "• Alpha Potential: Moderate; relevant for 3D avatar generation in gaming/film, but limited direct financial application.\n• Implementation Risk: High; requires large multi-camera setup and extensive training data, not easily replicable.\n• Novelty: High; UV-parameterized Gaussian representation and scaling analysis are novel contributions.\n• Practicality: Low for hedge fund; more suited for computer vision research than trading strategies.",
+    "verdict_cn": "• 创新点: UV参数化高斯表示和缩放行为分析具有较高创新性，但属于计算机视觉领域。\n• 实盘坑: 对量化交易无直接应用价值，需大量多视角数据和计算资源，复现成本极高。\n• 复现难度: 极高；依赖内部大规模数据集和专用硬件，无法直接用于金融场景。\n• 投资价值: 低；属于前沿视觉研究，缺乏金融因子或交易信号。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.04013v1",
+    "title": "Conditional Diffusion Sampling",
+    "pdf_url": "https://arxiv.org/pdf/2605.04013v1",
+    "published": "2026-05-05",
+    "crawled_at": "2026-05-06 20:59:28",
+    "ai_score": 7.5,
+    "translated_title": "条件扩散采样",
+    "summary_en": [
+      "• Model Architecture: Combines Parallel Tempering (PT) with a novel Conditional Interpolant SDE for efficient sampling from multimodal distributions.",
+      "• Data used: Evaluated on synthetic multimodal distributions; no real-world dataset specified.",
+      "• Performance metrics: Achieves superior trade-off between sample quality and number of density evaluations compared to PT and diffusion-based baselines.",
+      "• Key innovation: The transport SDE is exact and closed-form, requiring no neural network training, reducing computational overhead."
+    ],
+    "summary_cn": [
+      "• 核心模型: 结合并行退火（PT）和条件插值随机微分方程（SDE），实现多模态分布的高效采样。",
+      "• 数据来源: 使用合成多模态分布进行验证，未涉及真实数据集。",
+      "• 主要结论: 在样本质量和密度评估次数之间取得优于PT和扩散基线的权衡。",
+      "• 创新点: 传输SDE为精确闭式解，无需神经网络训练，降低计算成本。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low direct alpha; primarily a sampling method for Bayesian inference or generative modeling, not a trading strategy.",
+      "• Implementation Risk: Moderate; requires careful tuning of PT parameters and diffusion time, but avoids neural network training.",
+      "• Novelty: High; introduces a hybrid framework that combines strengths of PT and diffusion without neural approximation.",
+      "• Practicality: May benefit risk management or portfolio optimization if sampling from complex posteriors is needed."
+    ],
+    "verdict_cn": [
+      "• 创新点: 混合并行退火与扩散过程，无需神经网络，理论优雅。",
+      "• 实盘坑: 直接交易应用有限，需结合贝叶斯推断或优化场景。",
+      "• 复现难度: 中等，需实现PT和SDE求解器，但无神经网络训练负担。",
+      "• 潜在用途: 可用于风险模型中的后验采样或期权定价中的路径模拟。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.04008v1",
+    "title": "Enhanced 3D Brain Tumor Segmentation Using Assorted Precision Training",
+    "pdf_url": "https://arxiv.org/pdf/2605.04008v1",
+    "published": "2026-05-05",
+    "crawled_at": "2026-05-06 20:59:36",
+    "ai_score": 5.5,
+    "translated_title": "使用混合精度训练增强的3D脑肿瘤分割",
+    "summary_en": [
+      "• Model Architecture: SegResNet, a 3D segmentation network, trained with automatic mixed precision.",
+      "• Data used: Not explicitly specified, but typical brain tumor segmentation datasets (e.g., BraTS) are implied.",
+      "• Performance metrics: Dice scores of 0.84 (tumor core), 0.90 (whole tumor), 0.79 (enhanced tumor).",
+      "• Loss function: Dice loss used for training."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用SegResNet架构进行3D分割，并使用自动混合精度训练。",
+      "• 数据来源: 未明确说明，但推测使用常见脑肿瘤分割数据集（如BraTS）。",
+      "• 主要结论: Dice得分分别为肿瘤核心0.84、全肿瘤0.90、增强肿瘤0.79。",
+      "• 损失函数: 使用Dice损失函数进行训练。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low; medical imaging paper with no direct financial application.",
+      "• Implementation Risk: High; requires specialized medical data and domain expertise.",
+      "• Novelty: Limited; SegResNet and mixed precision are standard techniques.",
+      "• Relevance: Not suitable for quantitative finance strategies."
+    ],
+    "verdict_cn": [
+      "• 创新点: 缺乏创新，SegResNet和混合精度训练均为成熟技术。",
+      "• 实盘坑: 与金融量化无关，无法直接应用于交易策略。",
+      "• 复现难度: 需要医学影像数据和专业知识，复现成本高。",
+      "• 评分: 技术含量低，不适合金融领域。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.04004v1",
+    "title": "Structural Limits of OHLCV-Based Intraday Signals in MNQ Futures: A Systematic Falsification Study",
+    "pdf_url": "https://arxiv.org/pdf/2605.04004v1",
+    "published": "2026-05-05",
+    "crawled_at": "2026-05-06 20:59:49",
+    "ai_score": 5.5,
+    "translated_title": "基于OHLCV的微型纳斯达克100期货日内信号的结构性限制：系统性证伪研究",
+    "summary_en": [
+      "• Model Architecture: Evaluates 14 signal families including opening range breakouts, gap strategies, volume signals, cross-session momentum, liquidity grabs, volatility-conditioned classifiers, and news-driven strategies.",
+      "• Data used: 947 trading days of five-minute OHLCV data for MNQ futures from 2021-2025.",
+      "• Performance metrics: Uses strict institutional criteria: out-of-sample walk-forward validation, minimum T-statistic of 2.0, at least 30 trades, positive net return after two-point round-trip cost, and multi-year stability.",
+      "• Key finding: No signal satisfies all criteria; gross edge per trade (0.07-1.50 points) insufficient to overcome transaction costs.",
+      "• Positive controls: Two validated signals from separate research confirm methodology detects genuine edge when present."
+    ],
+    "summary_cn": [
+      "• 核心模型: 测试了14类信号家族，包括开盘区间突破、缺口策略、成交量信号、跨会话动量、流动性抓取、波动率条件分类器和新闻驱动策略。",
+      "• 数据来源: 2021-2025年微型纳斯达克100期货（MNQ）的947个交易日五分钟OHLCV数据。",
+      "• 主要结论: 所有信号均未通过严格机构标准（样本外滚动验证、T统计量≥2.0、至少30笔交易、扣除两点往返成本后正收益、多年稳定性）。",
+      "• 交易成本: 每笔交易毛收益仅0.07-1.50点，不足以覆盖交易成本。",
+      "• 方法验证: 通过两个已知有效信号作为阳性对照，确认方法论能检测真实alpha。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low; the paper systematically falsifies common OHLCV-based intraday signals, showing no exploitable edge after costs.",
+      "• Implementation Risk: High; even if a signal appears marginally profitable, transaction costs and execution slippage eliminate any edge.",
+      "• Novelty: Moderate; the falsification framework and rigorous criteria are valuable, but the null result is not surprising given known market efficiency.",
+      "• Practical Use: Useful as a benchmark for signal testing methodology, but not directly tradeable.",
+      "• Data Limitation: Only five-minute data; higher frequency or alternative data might yield different results."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提供了严格的信号证伪框架，对OHLCV日内信号进行了系统性检验，方法论值得借鉴。",
+      "• 实盘坑: 交易成本是致命伤，即使有微弱统计显著性，扣除成本后毫无利润，实盘必亏。",
+      "• 复现难度: 中等；数据公开（MNQ），但需要处理大量信号和回测细节。",
+      "• 局限性: 仅使用五分钟数据，更高频数据或另类数据可能不同，但结论对散户有警示意义。",
+      "• 价值: 提醒量化研究者不要迷信简单OHLCV信号，需考虑成本与稳健性。"
+    ],
+    "ai_strategy": "High-Freq",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.03984v1",
+    "title": "Flow Sampling: Learning to Sample from Unnormalized Densities via Denoising Conditional Processes",
+    "pdf_url": "https://arxiv.org/pdf/2605.03984v1",
+    "published": "2026-05-05",
+    "crawled_at": "2026-05-06 21:00:00",
+    "ai_score": 8.5,
+    "translated_title": "流采样：通过去噪条件过程从未归一化密度中学习采样",
+    "summary_en": [
+      "• Model Architecture: Flow Sampling uses diffusion models and flow matching in a data-free setting, with a training objective conditioned on noise samples and regressing onto a denoising diffusion drift derived from the energy function.",
+      "• Data used: No data samples are used; the target distribution is defined by a known energy function. Evaluations are performed on synthetic energy benchmarks, small peptides, molecular conformer generation, and spherical distributions.",
+      "• Performance metrics: The method demonstrates strong empirical performance in sampling efficiency and scalability, with closed-form conditional drift on constant curvature manifolds.",
+      "• Key innovation: The interpolant process minimizes energy function evaluations during training, enabling efficient sampling in Euclidean and Riemannian geometries."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于扩散模型和流匹配，在无数据设置下，通过噪声样本条件回归到能量函数构造的去噪扩散漂移。",
+      "• 数据来源: 无数据样本，目标分布由已知能量函数定义；测试于合成能量基准、小肽、分子构象生成和球面分布。",
+      "• 主要结论: 在采样效率和可扩展性上表现优异，支持欧几里得和黎曼流形上的采样，并在常曲率流形上推导出闭式条件漂移。",
+      "• 创新点: 插值过程减少训练中能量函数评估次数，提高效率。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for molecular generation and physics simulations where energy functions are known; potential in derivative pricing with known payoff functions.",
+      "• Implementation Risk: Moderate; requires careful tuning of diffusion process and energy function evaluations, but closed-form drifts reduce complexity.",
+      "• Novelty: High; combines diffusion models with flow matching for data-free sampling, extending to Riemannian manifolds with closed-form solutions."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将扩散模型与流匹配结合用于无数据采样，并推广到黎曼流形，理论贡献扎实。",
+      "• 实盘坑: 能量函数需已知且可微，实际金融应用中能量函数可能不明确或计算昂贵。",
+      "• 复现难度: 中等；闭式漂移简化了实现，但扩散过程调参仍需经验。",
+      "• 应用前景: 在分子生成和物理模拟中潜力大，金融领域可能用于期权定价或风险模型。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2605.03968v1",
+    "title": "Label-Efficient School Detection from Aerial Imagery via Weakly Supervised Pretraining and Fine-Tuning",
+    "pdf_url": "https://arxiv.org/pdf/2605.03968v1",
+    "published": "2026-05-05",
+    "crawled_at": "2026-05-06 21:00:09",
+    "ai_score": 7.2,
+    "translated_title": "通过弱监督预训练和微调从航空图像中高效检测学校",
+    "summary_en": "• Model Architecture: Two-stage weakly supervised framework: first stage uses auto-labeled data from sparse location points and semantic segmentation to pretrain a detector; second stage fine-tunes on a small set of manually labeled images.\n• Data used: Aerial imagery; auto-labeled masks generated from sparse location points; 50 manually labeled images for fine-tuning.\n• Performance metrics: Strong object detection performance in low-data regime; achieves promising results with only 50 manual labels.",
+    "summary_cn": "• 核心模型: 两阶段弱监督框架，第一阶段利用稀疏定位点和语义分割自动生成标签预训练检测器，第二阶段用少量人工标注数据微调。\n• 数据来源: 航空图像；从稀疏定位点自动生成的掩码；仅50张人工标注图像用于微调。\n• 主要结论: 在低数据场景下实现强目标检测性能，显著减少人工标注需求。",
+    "verdict_en": "• Alpha Potential: Low for financial trading; application is geospatial mapping, not market prediction.\n• Implementation Risk: High dependency on aerial imagery and location data; not directly applicable to financial markets.\n• Novelty: Moderate; weakly supervised learning for school detection is novel in remote sensing but not groundbreaking for quant finance.",
+    "verdict_cn": "• 创新点: 弱监督学习用于学校检测，在遥感领域有创新，但对量化金融无直接价值。\n• 实盘坑: 无法直接用于金融市场，缺乏交易信号。\n• 复现难度: 中等，需航空图像和定位数据，但代码将开源。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.03964v1",
+    "title": "Pretrained Model Representations as Acquisition Signals for Active Learning of MLIPs",
+    "pdf_url": "https://arxiv.org/pdf/2605.03964v1",
+    "published": "2026-05-05",
+    "crawled_at": "2026-05-06 21:00:17",
+    "ai_score": 7.5,
+    "translated_title": "预训练模型表示作为主动学习机器学习原子间势的采集信号",
+    "summary_en": "• Model Architecture: Uses a pretrained MACE potential, deriving acquisition signals from a finite-width neural tangent kernel (NTK) and an activation kernel from hidden latent space features.\n• Data: Reactive chemistry benchmarks, including transition state configurations.\n• Performance: Reduces data needed to reach performance targets by 38% for energy error and 28% for force error, outperforming fixed-descriptor baselines, committee disagreement, and random acquisition.",
+    "summary_cn": "• 核心模型: 基于预训练MACE势，从有限宽神经切线核（NTK）和隐藏空间激活核中提取采集信号。\n• 数据来源: 反应化学基准数据集，包含过渡态构型。\n• 主要结论: 相比固定描述符基线、委员会分歧和随机采集，所需数据量减少38%（能量误差）和28%（力误差）。",
+    "verdict_en": "• Alpha Potential: Moderate; the method reduces labeling costs, which could translate to faster model iteration in materials science, but direct financial alpha is limited.\n• Implementation Risk: Low; uses a single pretrained model without auxiliary heads or ensembles, simplifying deployment.\n• Novelty: High; demonstrates that pretrained latent space geometry aligns with model error, providing a practical acquisition signal.",
+    "verdict_cn": "• 创新点: 无需辅助不确定性头或集成，直接从预训练模型提取采集信号，简化主动学习流程。\n• 实盘坑: 对金融量化交易无直接应用，但可启发其他领域主动学习策略。\n• 复现难度: 中等；依赖特定预训练模型（MACE），但代码可能开源。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.03953v1",
+    "title": "Transformers with Selective Access to Early Representations",
+    "pdf_url": "https://arxiv.org/pdf/2605.03953v1",
+    "published": "2026-05-05",
+    "crawled_at": "2026-05-06 21:00:27",
+    "ai_score": 7.5,
+    "translated_title": "选择性访问早期表示的Transformer",
+    "summary_en": "• Model Architecture: SATFormer introduces a context-dependent gate that controls access to the first-layer value pathway, treating early-representation reuse as a retrieval problem rather than a connectivity problem.\n• Data used: The paper does not specify a particular dataset; experiments are conducted on language modeling tasks with models from 130M to 1.3B parameters, likely using standard benchmarks like WikiText-103 or C4.\n• Performance metrics: SATFormer consistently improves validation loss and zero-shot accuracy over static value-residual and Transformer baselines, with strongest gains on retrieval-intensive benchmarks (approximately 1.5 average points improvement).",
+    "summary_cn": "• 核心模型: SATFormer通过上下文相关的门控机制控制对第一层价值路径的访问，将早期表示重用视为检索问题而非连接问题。\n• 数据来源: 论文未指定特定数据集；实验在130M至1.3B参数的语言建模任务上进行，可能使用WikiText-103或C4等标准基准。\n• 主要结论: SATFormer在验证损失和零样本准确率上持续优于静态值残差和Transformer基线，在检索密集型基准上提升最大（约1.5个平均点）。",
+    "verdict_en": "• Alpha Potential: Moderate; improvements are consistent but modest, and the method is architecture-specific, limiting broad applicability.\n• Implementation Risk: Low; the method is simple to implement (adds a gate to existing Transformer) and maintains throughput and memory close to baseline.\n• Novelty: High; the retrieval-based perspective on early representation reuse is novel, and the context-dependent gate is a clever alternative to static or dense methods.",
+    "verdict_cn": "• 创新点: 将早期表示重用视为检索问题，引入上下文相关门控，相比静态或密集方法更灵活。\n• 实盘坑: 收益幅度有限（约1.5点），且仅在检索密集型任务上显著，通用性存疑。\n• 复现难度: 低；代码已开源，实现简单，计算开销小。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
     "id": "2605.02888v1",
     "title": "SpecKV: Adaptive Speculative Decoding with Compression-Aware Gamma Selection",
     "pdf_url": "https://arxiv.org/pdf/2605.02888v1",
