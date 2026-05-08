@@ -1,5 +1,275 @@
 [
   {
+    "id": "2605.06667v1",
+    "title": "ActCam: Zero-Shot Joint Camera and 3D Motion Control for Video Generation",
+    "pdf_url": "https://arxiv.org/pdf/2605.06667v1",
+    "published": "2026-05-07",
+    "crawled_at": "2026-05-08 20:43:19",
+    "ai_score": 7.5,
+    "translated_title": "ActCam：面向视频生成的零样本联合相机与3D运动控制",
+    "summary_en": [
+      "• Model Architecture: ActCam extends pretrained image-to-video diffusion models with a two-phase conditioning schedule—early steps use both pose and sparse depth for structure, later steps drop depth for pose-only refinement.",
+      "• Data used: The method is zero-shot, requiring no training data; it uses driving videos for character motion and user-specified camera parameters for control.",
+      "• Performance metrics: Evaluated on multiple benchmarks, ActCam improves camera adherence and motion fidelity over pose-only and other joint methods, with human preference under large viewpoint changes.",
+      "• Key innovation: Jointly transfers character motion and camera trajectory without additional training, using geometrically consistent pose and depth conditions."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于预训练图像到视频扩散模型，采用两阶段条件调度——早期同时使用姿态和稀疏深度约束结构，后期仅用姿态细化高频细节。",
+      "• 数据来源: 零样本方法，无需训练数据；使用驱动视频提供角色运动，用户指定相机参数。",
+      "• 主要结论: 在多个基准上，相比仅姿态控制和其他联合方法，ActCam在相机跟随和运动保真度上更优，大视角变化下人类偏好更高。",
+      "• 创新点: 无需训练即可联合控制角色运动和相机轨迹，通过几何一致的姿态和深度条件实现。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low for quantitative finance; the paper focuses on video generation, not financial modeling.",
+      "• Implementation Risk: High if misapplied; requires domain shift to finance, which is not straightforward.",
+      "• Novelty: Moderate in computer vision; zero-shot joint control is novel but irrelevant to trading.",
+      "• Practical Use: None for hedge fund strategies; may inspire generative models for synthetic data in backtesting."
+    ],
+    "verdict_cn": [
+      "• 创新点: 零样本联合控制角色运动和相机轨迹，在视频生成领域有创意，但与量化金融无关。",
+      "• 实盘坑: 直接应用于金融场景风险高，需大量领域转换，不切实际。",
+      "• 复现难度: 中等，依赖预训练扩散模型，但金融领域无直接用途。",
+      "• 策略价值: 无，除非用于生成合成市场数据，但效果存疑。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.06665v1",
+    "title": "UniPool: A Globally Shared Expert Pool for Mixture-of-Experts",
+    "pdf_url": "https://arxiv.org/pdf/2605.06665v1",
+    "published": "2026-05-07",
+    "crawled_at": "2026-05-08 20:43:28",
+    "ai_score": 7.5,
+    "translated_title": "UniPool: 混合专家模型的全局共享专家池",
+    "summary_en": "• Model Architecture: Proposes UniPool, a Mixture-of-Experts (MoE) architecture that replaces per-layer expert ownership with a single shared expert pool accessed by per-layer routers, using NormRouter for sparse and scale-stable routing and a pool-level auxiliary loss for balanced training.\n• Data: Trained on 30B tokens from the Pile dataset across five LLaMA-architecture model scales (182M to 978M parameters).\n• Performance: UniPool consistently improves validation loss and perplexity over vanilla MoE, reducing validation loss by up to 0.0386. Reduced-pool variants using 41.6%-66.7% of expert parameters match or outperform vanilla MoE.",
+    "summary_cn": "• 核心模型: 提出UniPool架构，将每层独立的专家池替换为全局共享专家池，各层路由器独立访问，采用NormRouter实现稀疏稳定路由，并引入池级辅助损失实现平衡训练。\n• 数据来源: 在Pile数据集上训练30B tokens，涵盖五种LLaMA架构模型规模（182M至978M参数）。\n• 主要结论: UniPool在验证损失和困惑度上持续优于传统MoE，验证损失最多降低0.0386；使用41.6%-66.7%专家参数的缩减池变体即可匹配或超越传统MoE。",
+    "verdict_en": "• Alpha Potential: Moderate. The architecture reduces parameter count without performance loss, which could lower computational costs for large-scale models, but direct trading alpha is unclear.\n• Implementation Risk: Low to moderate. The design is straightforward and builds on existing MoE frameworks, but requires careful tuning of pool-level auxiliary loss and router normalization.\n• Novelty: High. Challenges the conventional per-layer expert allocation in MoE, demonstrating that expert capacity can be shared globally with sublinear growth relative to depth.",
+    "verdict_cn": "• 创新点: 颠覆了传统MoE每层独立专家池的设计，证明专家容量可全局共享且随深度亚线性增长，思路新颖。\n• 实盘坑: 直接交易信号弱，需结合下游任务；池级辅助损失和路由器的调参可能影响稳定性。\n• 复现难度: 中等。基于开源LLaMA和MoE框架，但需大量计算资源（30B tokens训练）。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.06660v1",
+    "title": "Verifier-Backed Hard Problem Generation for Mathematical Reasoning",
+    "pdf_url": "https://arxiv.org/pdf/2605.06660v1",
+    "published": "2026-05-07",
+    "crawled_at": "2026-05-08 20:43:36",
+    "ai_score": 7.5,
+    "translated_title": "基于验证器的数学推理难题生成框架",
+    "summary_en": "• Model Architecture: VHG uses a three-party self-play framework with a setter, solver, and verifier. Two verifier variants are proposed: a Hard symbolic verifier and a Soft LLM-based verifier. • Data used: Evaluations are conducted on indefinite integral tasks and general mathematical reasoning tasks, but specific datasets are not detailed. • Performance metrics: VHG substantially outperforms all baseline methods by a clear margin in generating valid, challenging, and novel problems.",
+    "summary_cn": "• 核心模型: VHG采用三方自博弈框架，包含出题者、解题者和验证者，提出硬符号验证器和软LLM验证器两种变体。 • 数据来源: 在不定积分任务和通用数学推理任务上评估，但未明确具体数据集。 • 主要结论: VHG在生成有效、有挑战性和新颖的问题上显著优于所有基线方法。",
+    "verdict_en": "• Alpha Potential: Moderate; the framework could be adapted for generating synthetic training data for quantitative models, but direct trading alpha is unclear. • Implementation Risk: High; requires careful integration of verifier and self-play, with potential instability in training. • Novelty: High; introduces a verifier to prevent reward hacking in problem generation, a novel approach in LLM training.",
+    "verdict_cn": "• 创新点: 引入独立验证器防止奖励黑客，三方自博弈框架新颖。 • 实盘坑: 直接应用于量化交易困难，生成的问题可能不直接转化为交易信号。 • 复现难度: 高，需要大量计算资源和精细调参，LLM验证器可能不稳定。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.06656v1",
+    "title": "Why Global LLM Leaderboards Are Misleading: Small Portfolios for Heterogeneous Supervised ML",
+    "pdf_url": "https://arxiv.org/pdf/2605.06656v1",
+    "published": "2026-05-07",
+    "crawled_at": "2026-05-08 20:43:47",
+    "ai_score": 7.5,
+    "translated_title": "为什么全球LLM排行榜具有误导性：异质监督机器学习的小型投资组合",
+    "summary_en": "• Model Architecture: Uses Bradley-Terry (BT) ranking and introduces (λ, ν)-portfolios as a set cover problem variant with VC dimension guarantees.\n• Data used: ~89K pairwise comparisons from 116 languages, 52 LLMs from Chatbot Arena.\n• Performance metrics: Global BT ranking has low discriminative power (top 50 models indistinguishable with win probability ≤0.53); language-based grouping increases ELO spread by two orders of magnitude; portfolio of 5 rankings covers 96% of votes vs 21% for global ranking; portfolio of 6 LLMs covers twice as many votes as top-6 global.\n• Key finding: Heterogeneity across language, task, and time causes global rankings to be misleading; language is a key factor.\n• Additional experiment: COMPAS dataset with fairness-regularized models shows portfolios detect blind spots.",
+    "summary_cn": "• 核心模型: 使用Bradley-Terry (BT)排名，并引入(λ, ν)-投资组合框架，将其转化为集合覆盖问题的变体，利用VC维提供保证。\n• 数据来源: 来自Chatbot Arena的约8.9万对比较，涵盖116种语言和52个LLM。\n• 主要结论: 全球BT排名中前50个模型统计上不可区分（胜率≤0.53），而按语言分组后ELO分数差异提升两个数量级；5个排名组成的投资组合覆盖96%的投票，而全球排名仅覆盖21%；6个LLM的投资组合覆盖的投票数是全球前6名的两倍。\n• 关键发现: 语言、任务和时间的异质性导致全球排名具有误导性，语言是关键因素。\n• 额外实验: 在COMPAS数据集上使用公平性正则化模型，投资组合能检测数据盲点。",
+    "verdict_en": "• Alpha Potential: High for LLM evaluation and selection; portfolio approach can identify niche models that outperform global rankings, useful for building specialized LLM portfolios.\n• Implementation Risk: Medium; requires access to pairwise comparison data and careful tuning of λ and ν parameters; set cover problem may be computationally intensive for large-scale.\n• Novelty: High; introduces portfolio theory to LLM evaluation, addressing heterogeneity in a principled way with theoretical guarantees.\n• Practical relevance: Directly applicable to model selection in multilingual or multi-task settings; could be extended to other domains with heterogeneous preferences.\n• Limitation: Relies on existing comparison data; may not generalize to new models without retraining.",
+    "verdict_cn": "• 创新点: 将投资组合理论引入LLM评估，通过集合覆盖方法处理异质性，具有理论保证，思路新颖。\n• 实盘坑: 需要大量成对比较数据，且参数λ和ν的调优可能敏感；集合覆盖问题在大规模下计算成本高。\n• 复现难度: 中等；算法框架清晰，但需要复现Arena数据或类似数据集，且VC维计算可能复杂。\n• 应用价值: 对多语言或多任务场景下的模型选择有直接帮助，可扩展至其他异质性偏好领域。\n• 局限性: 依赖现有比较数据，对新模型需重新收集数据，可能无法直接泛化。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.06654v1",
+    "title": "Optimizer-Model Consistency: Full Finetuning with the Same Optimizer as Pretraining Forgets Less",
+    "pdf_url": "https://arxiv.org/pdf/2605.06654v1",
+    "published": "2026-05-07",
+    "crawled_at": "2026-05-08 20:43:55",
+    "ai_score": 7.5,
+    "translated_title": "优化器-模型一致性：使用与预训练相同的优化器进行全微调遗忘更少",
+    "summary_en": [
+      "• Model Architecture: Full finetuning of large language models (LLMs) with the same optimizer as pretraining.",
+      "• Data used: Not specified; likely standard SFT datasets for reasoning tasks.",
+      "• Performance metrics: Learning-forgetting tradeoff measured by task performance and forgetting of pretrained knowledge.",
+      "• Key finding: Optimizer-model consistency reduces forgetting while maintaining or improving SFT performance, outperforming LoRA and other optimizers.",
+      "• Additional finding: Muon optimizer leads to more rote memorization and worse reasoning task performance compared to AdamW."
+    ],
+    "summary_cn": [
+      "• 核心模型: 大型语言模型（LLM）的全微调，使用与预训练相同的优化器。",
+      "• 数据来源: 未明确指定，可能使用标准SFT数据集进行推理任务。",
+      "• 主要结论: 优化器-模型一致性在保持或提升SFT性能的同时减少遗忘，优于LoRA和其他优化器。",
+      "• 额外发现: Muon优化器相比AdamW导致更多死记硬背，推理任务表现更差。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; insight on optimizer choice can improve finetuning efficiency for LLM-based strategies.",
+      "• Implementation Risk: Low; easy to adopt by using same optimizer as pretraining, but requires knowledge of pretraining setup.",
+      "• Novelty: High; first systematic study of optimizer consistency between pretraining and finetuning."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次系统研究预训练与微调之间的优化器一致性，提出新概念。",
+      "• 实盘坑: 需要知道预训练使用的优化器，可能受限于公开模型信息不全。",
+      "• 复现难度: 中等；实验设计清晰，但需大量计算资源复现预训练和微调。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.06652v1",
+    "title": "When No Benchmark Exists: Validating Comparative LLM Safety Scoring Without Ground-Truth Labels",
+    "pdf_url": "https://arxiv.org/pdf/2605.06652v1",
+    "published": "2026-05-07",
+    "crawled_at": "2026-05-08 20:44:05",
+    "ai_score": 6.5,
+    "translated_title": "当无基准存在时：在没有真实标签的情况下验证比较性LLM安全评分",
+    "summary_en": [
+      "• Formalizes benchmarkless comparative safety scoring for LLMs, using scenario-based audits as evidence.",
+      "• Introduces an instrumental-validity chain replacing ground-truth agreement with responsiveness to safe vs. abliterated contrast, variance decomposition, and stability across reruns.",
+      "• Instantiates the chain in SimpleAudit, a local-first scoring tool, validated on a Norwegian safety pack with AUROC 0.89-1.00 and target variance η²≈0.52.",
+      "• Demonstrates application to Norwegian public procurement comparing Borealis and Gemma 3, showing model safety depends on scenario category and risk measure."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出无基准比较性安全评分框架，基于场景审计作为部署证据。",
+      "• 数据来源: 使用挪威安全包（Norwegian safety pack）进行验证，包含安全与消融模型对比。",
+      "• 主要结论: 工具链（SimpleAudit）在AUROC 0.89-1.00下有效分离安全与消融模型，目标方差主导（η²≈0.52），10次运行后稳定。",
+      "• 实际应用: 挪威公共采购案例显示，模型安全性取决于场景类别和风险度量，需报告完整信息而非单一排名。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low for direct trading; addresses LLM safety validation, not financial alpha generation.",
+      "• Implementation Risk: Moderate; requires domain expertise in LLM safety and scenario design, but tool is local-first and reproducible.",
+      "• Novelty: High; formalizes a previously unaddressed problem (benchmarkless comparative safety scoring) with a rigorous validation chain."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次形式化无基准比较性安全评分问题，提出工具链替代真实标签。",
+      "• 实盘坑: 与金融交易无关，安全评分方法难以直接转化为量化策略。",
+      "• 复现难度: 中等；工具开源，但需特定场景包和审计配置，通用性有限。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.06647v1",
+    "title": "Superintelligent Retrieval Agent: The Next Frontier of Information Retrieval",
+    "pdf_url": "https://arxiv.org/pdf/2605.06647v1",
+    "published": "2026-05-07",
+    "crawled_at": "2026-05-08 20:44:13",
+    "ai_score": 7.5,
+    "translated_title": "超级智能检索代理：信息检索的下一个前沿",
+    "summary_en": "• Model Architecture: SIRA uses an LLM to enrich documents offline with missing search vocabulary and predict evidence vocabulary omitted by the query, then applies document-frequency statistics as a tool call to filter terms, finally performing a single weighted BM25 call combining original query with validated expansion.\n• Data used: Evaluated on ten BEIR benchmarks and downstream question-answering tasks.\n• Performance metrics: Achieves significantly superior performance outperforming dense retrievers and state-of-the-art multi-round agentic baselines, with improved recall and latency.",
+    "summary_cn": "• 核心模型: SIRA利用LLM离线丰富文档缺失的搜索词汇，并预测查询遗漏的证据词汇，通过文档频率统计过滤术语，最终执行一次加权BM25检索。\n• 数据来源: 在十个BEIR基准测试和下游问答任务上评估。\n• 主要结论: 性能显著优于密集检索器和最先进的多轮代理基线，提高了召回率和延迟。",
+    "verdict_en": "• Alpha Potential: Moderate; improves retrieval efficiency and recall, which can enhance downstream tasks like QA, but direct trading alpha is limited.\n• Implementation Risk: Low; training-free and interpretable, easy to integrate into existing systems.\n• Novelty: High; introduces the concept of superintelligence in retrieval as single-shot discriminative search, combining LLM reasoning with corpus statistics.",
+    "verdict_cn": "• 创新点: 提出检索中的超级智能概念，将多轮探索压缩为单次判别性检索，结合LLM推理和语料统计。\n• 实盘坑: 直接交易信号弱，需结合下游任务；对语料库质量敏感。\n• 复现难度: 中等；依赖LLM和BM25，但无训练需求，代码可复现。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.06646v1",
+    "title": "Inductive Venn-Abers and related regressors",
+    "pdf_url": "https://arxiv.org/pdf/2605.06646v1",
+    "published": "2026-05-07",
+    "crawled_at": "2026-05-08 20:44:21",
+    "ai_score": 5.5,
+    "translated_title": "归纳式Venn-Abers及相关回归器",
+    "summary_en": "• Model Architecture: Extends Venn-Abers predictors from binary classification to unbounded regression using conformal prediction elements.\n• Data used: Simulation studies and empirical datasets (not specified in detail).\n• Performance metrics: Predictive efficiency of point regressors derived from Venn-Abers regressors compared to standard regressors.\n• Key finding: Venn-Abers regressors somewhat improve predictive efficiency for larger training sets.\n• Limitation: The improvement is marginal and not rigorously quantified.",
+    "summary_cn": "• 核心模型: 将Venn-Abers预测器从二元分类扩展到无界回归，引入共形预测元素。\n• 数据来源: 模拟研究和经验数据集（未详细说明）。\n• 主要结论: Venn-Abers回归器在较大训练集上略微提升预测效率。\n• 局限性: 改进幅度有限，且未严格量化。",
+    "verdict_en": "• Alpha Potential: Low; the method offers marginal improvement in predictive efficiency, unlikely to generate significant alpha.\n• Implementation Risk: Moderate; requires careful calibration of conformal prediction components and may be computationally intensive.\n• Novelty: Incremental; extends existing Venn-Abers framework to unbounded regression, but the improvement is modest.\n• Practicality: Limited; the benefit is only seen with larger training sets, which may not be feasible in many trading contexts.",
+    "verdict_cn": "• 创新点: 将Venn-Abers方法扩展到无界回归，但改进有限。\n• 实盘坑: 计算成本高，且仅在训练集较大时有效，实盘收益存疑。\n• 复现难度: 中等，需仔细实现共形预测部分。\n• 交易价值: 低，边际改进难以转化为稳定alpha。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.06644v1",
+    "title": "Edge-specific signal propagation on mature chromophore-region 3D mechanism graphs for fluorescent protein quantum-yield prediction",
+    "pdf_url": "https://arxiv.org/pdf/2605.06644v1",
+    "published": "2026-05-07",
+    "crawled_at": "2026-05-08 20:44:32",
+    "ai_score": 7.2,
+    "translated_title": "成熟发色团区域三维机制图上的边缘特异性信号传播用于荧光蛋白量子产率预测",
+    "summary_en": [
+      "• Model Architecture: Converts PDB structures into typed 3D residue graphs centered on the mature chromophore, partitioned into phenolate, bridge, and imidazolinone regions. Uses channel-signal-region propagation to generate 121 enrichment features, reduced to 52 non-identity features for band-specific ExtraTrees regression.",
+      "• Data used: 531-protein benchmark dataset with PDB structures and quantum yield measurements. Features encode contact channels, seed signals, and target CRO regions.",
+      "• Performance metrics: Achieves best random-CV performance (R=0.772±0.008, MAE=0.131±0.002), exceeding Band mean (R=0.632), ESM-C (R=0.734), and SaProt (R=0.731). Top in bright screening (Bright P@5=0.704). Under homology control, strongest in remote bucket (<50% similarity, R=0.697)."
+    ],
+    "summary_cn": [
+      "• 核心模型: 将PDB结构转换为以成熟发色团为中心的3D残基图，分为酚盐、桥和咪唑啉酮区域，通过通道-信号-区域传播生成121个富集特征，最终用52个非身份特征进行波段特异性ExtraTrees回归。",
+      "• 数据来源: 使用531个蛋白质的基准数据集，包含PDB结构和量子产率测量值。特征编码接触通道、种子信号和目标CRO区域。",
+      "• 主要结论: 随机交叉验证性能最优（R=0.772±0.008, MAE=0.131±0.002），超过Band均值（0.632）、ESM-C（0.734）和SaProt（0.731）。亮色筛选排名第一（Bright P@5=0.704）。同源性控制下，在远源组（相似度<50%）优势最明显（R=0.697）。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low for finance; paper is about protein engineering, not financial markets. No direct trading signal.",
+      "• Implementation Risk: High; requires specialized structural biology knowledge and PDB data processing. Not applicable to quantitative finance.",
+      "• Novelty: High in computational biology; introduces interpretable graph-based features for quantum yield prediction, but irrelevant to hedge fund strategies."
+    ],
+    "verdict_cn": [
+      "• 创新点: 在计算生物学领域有创新，通过可解释的图特征预测荧光蛋白量子产率，但金融领域无直接应用。",
+      "• 实盘坑: 完全不适合量化交易，需要结构生物学专业知识，无法直接转化为交易信号。",
+      "• 复现难度: 高，依赖PDB数据和特定图构建流程，且代码需联系作者获取。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.06643v1",
+    "title": "Are We Making Progress in Multimodal Domain Generalization? A Comprehensive Benchmark Study",
+    "pdf_url": "https://arxiv.org/pdf/2605.06643v1",
+    "published": "2026-05-07",
+    "crawled_at": "2026-05-08 20:44:41",
+    "ai_score": 7.5,
+    "translated_title": "多模态领域泛化是否取得进展？一项全面的基准研究",
+    "summary_en": [
+      "• Model Architecture: Evaluates 9 representative MMDG methods including ERM, specialized domain generalization algorithms, and multimodal fusion techniques.",
+      "• Data used: Six datasets across three tasks: action recognition (e.g., EPIC-Kitchens), mechanical fault diagnosis, and sentiment analysis (e.g., CMU-MOSI).",
+      "• Performance metrics: Standard accuracy, corruption robustness, missing-modality generalization, misclassification detection, and out-of-distribution detection.",
+      "• Key findings: MMDG methods offer marginal gains over ERM; no single method dominates; trimodal fusion not always better than bimodal; all methods degrade under corruption."
+    ],
+    "summary_cn": [
+      "• 核心模型: 评估了9种代表性多模态领域泛化方法，包括ERM基线、专用领域泛化算法及多模态融合技术。",
+      "• 数据来源: 六个数据集，涵盖动作识别（如EPIC-Kitchens）、机械故障诊断和情感分析（如CMU-MOSI）三类任务。",
+      "• 主要结论: 公平比较下，MMDG方法仅比ERM有边际提升；无单一方法在所有场景中占优；三模态融合未必优于最强双模态；所有方法在损坏和缺失模态下性能显著下降。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low. The paper shows MMDG methods offer marginal improvements, suggesting limited edge for trading strategies relying on multimodal robustness.",
+      "• Implementation Risk: High. Reproducing results requires training 7,402 networks across 95 tasks, which is computationally expensive and may not transfer to financial data.",
+      "• Novelty: Moderate. The benchmark is comprehensive but the findings are largely negative, confirming known limitations rather than introducing new breakthroughs."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首个统一的多模态领域泛化基准，系统评估了多种设置，但结论多为负面，创新性有限。",
+      "• 实盘坑: 方法在标准测试中提升微小，在损坏和缺失模态下性能大幅下降，实盘中鲁棒性不足。",
+      "• 复现难度: 极高，需训练7402个网络，计算资源需求大，且金融数据适用性存疑。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
     "id": "2605.05206v1",
     "title": "Taming Outlier Tokens in Diffusion Transformers",
     "pdf_url": "https://arxiv.org/pdf/2605.05206v1",
