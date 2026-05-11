@@ -1,5 +1,223 @@
 [
   {
+    "id": "2605.08078v1",
+    "title": "Normalizing Trajectory Models",
+    "pdf_url": "https://arxiv.org/pdf/2605.08078v1",
+    "published": "2026-05-08",
+    "crawled_at": "2026-05-11 21:06:11",
+    "ai_score": 8.5,
+    "translated_title": "归一化轨迹模型",
+    "summary_en": "• Model Architecture: Combines shallow invertible blocks within each reverse step with a deep parallel predictor across the trajectory, forming an end-to-end network trainable from scratch or initializable from pretrained flow-matching models.\n• Data used: Text-to-image benchmarks (specific datasets not named, but likely standard ones like MS-COCO or ImageNet).\n• Performance metrics: Matches or outperforms strong image generation baselines in just four sampling steps while uniquely retaining exact likelihood over the generative trajectory.\n• Key innovation: Introduces self-distillation using a lightweight denoiser trained on the model's own score to produce high-quality samples in four steps.\n• Training: Exact likelihood training via conditional normalizing flows, enabling both from-scratch training and initialization from pretrained models.",
+    "summary_cn": "• 核心模型: 每个反向步骤使用浅层可逆块，结合跨轨迹的深度并行预测器，形成端到端网络，可从零训练或从预训练流匹配模型初始化。\n• 数据来源: 文本到图像基准（具体数据集未命名，可能为MS-COCO或ImageNet等标准数据集）。\n• 主要结论: 仅需四步采样即可匹配或超越强图像生成基线，同时独特地保留生成轨迹的精确似然。\n• 创新点: 引入自蒸馏，使用基于模型自身分数的轻量级去噪器，在四步内生成高质量样本。\n• 训练方式: 通过条件归一化流进行精确似然训练，支持从零训练或从预训练模型初始化。",
+    "verdict_en": "• Alpha Potential: Moderate; the method improves few-step generation efficiency, which could be applied to synthetic data generation for financial modeling or risk simulation.\n• Implementation Risk: High; requires specialized knowledge of normalizing flows and diffusion models, and computational cost may be significant for training.\n• Novelty: High; introduces a novel combination of normalizing flows and trajectory models with self-distillation, achieving exact likelihood in few-step generation.\n• Practicality: Limited for direct trading; more relevant for generative AI applications in finance (e.g., scenario generation).",
+    "verdict_cn": "• 创新点: 将归一化流与轨迹模型结合，并引入自蒸馏，在少步生成中实现精确似然，技术新颖。\n• 实盘坑: 直接用于交易策略的潜力有限，主要适用于金融中的生成式AI应用（如情景生成），且训练成本高。\n• 复现难度: 高，需要归一化流和扩散模型的深厚知识，以及大量计算资源。\n• 应用前景: 在合成数据生成、风险模拟等金融场景中可能有价值，但非高频交易或因子策略的直接工具。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.08075v1",
+    "title": "Zero-Shot Imagined Speech Decoding via Imagined-to-Listened MEG Mapping",
+    "pdf_url": "https://arxiv.org/pdf/2605.08075v1",
+    "published": "2026-05-08",
+    "crawled_at": "2026-05-11 21:06:21",
+    "ai_score": 6.5,
+    "translated_title": "通过想象到聆听的MEG映射实现零样本想象语音解码",
+    "summary_en": "• Model Architecture: A three-stage pipeline: (1) mapping imagined MEG to listened MEG using linear and neural models; (2) training a contrastive word decoder on listened MEG; (3) applying the mapping to decode imagined speech. • Data used: Paired listened and imagined MEG recordings from trained musicians exposed to rhythmic, melodic, and spoken stimuli. • Performance metrics: Rank-based analysis shows significant above-chance decoding; performance improves with training data size. • Key finding: Consistent relationships between imagined and listened neural activity enable zero-shot decoding. • Limitation: Proof-of-concept with small sample size and specific subject population.",
+    "summary_cn": "• 核心模型: 三阶段流水线：首先用线性和神经网络模型将想象MEG映射到聆听MEG，然后在聆听MEG上训练对比词解码器，最后应用映射解码想象语音。 • 数据来源: 训练有素的音乐家在接受节奏、旋律和口语刺激时的配对聆听和想象MEG记录。 • 主要结论: 基于排名的分析显示解码显著高于随机水平，且性能随训练数据量增加而提升。 • 创新点: 利用聆听数据丰富的标签信息实现零样本想象语音解码。 • 局限性: 概念验证，样本量小且受试者群体特殊。",
+    "verdict_en": "• Alpha Potential: Low for financial markets; relevant to BCI and neurotechnology sectors. • Implementation Risk: High; requires specialized MEG equipment and trained subjects, not scalable for trading. • Novelty: Moderate; combines mapping and contrastive learning in a novel way for imagined speech. • Practicality: Limited; proof-of-concept with small dataset, no real-time application. • Reproducibility: Low; dependent on proprietary MEG data and specific subject cohort.",
+    "verdict_cn": "• 创新点: 将想象到聆听的映射与对比学习结合，实现零样本解码，方法有一定新意。 • 实盘坑: 与金融量化无关，MEG设备昂贵且受试者需训练，无法直接用于交易。 • 复现难度: 高，需要专用MEG数据和特定受试者群体，代码未公开。 • 实用性: 低，仅为概念验证，数据量小，无实时应用。 • 评分: 6.5，方法有潜力但领域差异大。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.08074v1",
+    "title": "GRAPHLCP: Structure-Aware Localized Conformal Prediction on Graphs",
+    "pdf_url": "https://arxiv.org/pdf/2605.08074v1",
+    "published": "2026-05-08",
+    "crawled_at": "2026-05-11 21:06:30",
+    "ai_score": 7.5,
+    "translated_title": "GRAPHLCP：图上的结构感知局部化共形预测",
+    "summary_en": "• Model Architecture: GRAPHLCP extends conformal prediction to graph neural networks by incorporating graph topology and inter-node dependencies. It uses feature-aware densification to mitigate locality bias in sparse graphs, followed by Personalized PageRank-based kernel computation for structural proximity. This enables topology-dependent anchor sampling and calibration weighting that captures both local and long-range dependencies.\n• Data used: The paper evaluates on several regression and classification datasets, including standard graph benchmarks (e.g., Cora, Citeseer, Pubmed) and possibly others, though specific datasets are not listed in the abstract.\n• Performance metrics: The method guarantees marginal coverage with finite samples and achieves favorable test conditional coverage across various conditioning scenarios, outperforming existing embedding-space proximity-based methods.",
+    "summary_cn": "• 核心模型: GRAPHLCP通过结合图拓扑和节点间依赖关系，将共形预测扩展到图神经网络。它使用特征感知致密化来缓解稀疏图中的局部性偏差，然后基于个性化PageRank计算核以建模结构邻近性，实现拓扑依赖的锚点采样和校准加权，捕捉局部和长程依赖。\n• 数据来源: 在多个回归和分类数据集上评估，包括标准图基准（如Cora、Citeseer、Pubmed），但摘要未列出具体数据集。\n• 主要结论: 该方法在有限样本下保证边际覆盖，并在各种条件场景下实现良好的测试条件覆盖，优于现有基于嵌入空间邻近性的方法。",
+    "verdict_en": "• Alpha Potential: Moderate. The method improves uncertainty quantification for graph-based models, which could be useful in financial networks (e.g., fraud detection, risk assessment). However, direct alpha generation is limited.\n• Implementation Risk: High. Requires careful tuning of densification and PageRank parameters. Computational cost may be significant for large graphs.\n• Novelty: High. Integrates graph topology into conformal prediction in a principled way, addressing limitations of embedding-space approaches.",
+    "verdict_cn": "• 创新点: 将图拓扑结构融入共形预测，通过特征感知致密化和个性化PageRank解决稀疏图局部性偏差，方法新颖。\n• 实盘坑: 参数调优复杂，计算成本高，尤其在大规模金融网络图上可能效率低下。直接用于高频交易或套利机会有限。\n• 复现难度: 中等偏高。需要实现图致密化和PageRank核，依赖图神经网络框架，但算法细节可能可复现。",
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2605.08072v1",
+    "title": "A Note on Non-Negative $L_1$-Approximating Polynomials",
+    "pdf_url": "https://arxiv.org/pdf/2605.08072v1",
+    "published": "2026-05-08",
+    "crawled_at": "2026-05-11 21:06:36",
+    "ai_score": 5.5,
+    "translated_title": "关于非负L1逼近多项式的一个注记",
+    "summary_en": [
+      "• Model: Non-negative L1-approximating polynomials for Gaussian distributions.",
+      "• Data: Theoretical analysis; no empirical data used.",
+      "• Performance: Degree bound k = Õ(Γ^2/ε^2) for sets with Gaussian surface area Γ.",
+      "• Result: Matches best known L1-approximation degree without non-negativity constraint."
+    ],
+    "summary_cn": [
+      "• 核心模型: 针对高斯分布的非负L1逼近多项式。",
+      "• 数据来源: 纯理论分析，无实证数据。",
+      "• 主要结论: 对高斯表面积Γ的集合，存在次数k=Õ(Γ^2/ε^2)的非负多项式实现ε-逼近。",
+      "• 性能: 与非负性约束下的最佳已知L1逼近次数相当。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low; theoretical result with no direct trading application.",
+      "• Implementation Risk: High; requires translating theory into practical algorithms.",
+      "• Novelty: Moderate; extends existing L1-approximation to non-negative case."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将L1逼近推广到非负情形，但改进有限。",
+      "• 实盘坑: 纯理论结果，难以直接用于量化策略。",
+      "• 复现难度: 高，需要扎实的数学功底和算法实现。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.08053v1",
+    "title": "Reinforcement Learning for Exponential Utility: Algorithms and Convergence in Discounted MDPs",
+    "pdf_url": "https://arxiv.org/pdf/2605.08053v1",
+    "published": "2026-05-08",
+    "crawled_at": "2026-05-11 21:06:45",
+    "ai_score": 7.5,
+    "translated_title": "指数效用的强化学习：折扣MDP中的算法与收敛性",
+    "summary_en": [
+      "• Model Architecture: Proposes two Q-value-style extensions of the Bellman equation for exponential utility in discounted MDPs, leading to two model-free RL algorithms: a two-timescale Q-learning variant and a one-timescale algorithm with sublinear power-law operator.",
+      "• Data used: Theoretical analysis; no empirical data or simulations are used.",
+      "• Performance metrics: Establishes almost-sure convergence and finite-time convergence rates for the two-timescale algorithm; provides scalar finite-time analysis for the one-timescale algorithm, but vector-case rates remain open.",
+      "• Key contributions: Characterizes fixed points of contraction operators in L∞ and sup-log metrics; proves optimality of greedy stationary policy for exponential utility."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出两种指数效用Bellman方程的Q值扩展，分别对应双时间尺度Q学习和单时间尺度次线性幂律算子算法。",
+      "• 数据来源: 纯理论分析，未使用实证数据或模拟。",
+      "• 主要结论: 证明了双时间尺度算法的几乎必然收敛和有限时间收敛速率；单时间尺度算法仅给出标量有限时间分析，向量情形收敛速率未解决。",
+      "• 理论贡献: 刻画了L∞和sup-log度量下压缩算子的不动点，并证明贪心平稳策略对指数效用目标的最优性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; exponential utility is relevant for risk-averse trading, but the paper lacks empirical validation or backtesting on financial data.",
+      "• Implementation Risk: High; algorithms are complex with two-timescale updates and require careful tuning; convergence guarantees rely on theoretical assumptions not easily verified in practice.",
+      "• Novelty: Strong theoretical contribution; first principled value-based RL algorithms for exponential utility in discounted MDPs, filling a gap in the literature.",
+      "• Practical Relevance: Limited for immediate quant application; more suited as a foundation for future work on risk-aware RL in finance."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次为折扣MDP中的指数效用目标设计基于价值的强化学习算法，理论贡献扎实。",
+      "• 实盘坑: 算法复杂度高，双时间尺度调参困难，且缺乏实证验证，直接用于交易风险大。",
+      "• 复现难度: 高，需要深入理解压缩映射和收敛证明，且向量情形收敛速率未解决，实际部署挑战大。",
+      "• 实用价值: 目前偏理论，适合作为风险厌恶RL的学术基础，而非直接量化策略。"
+    ],
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2605.08044v1",
+    "title": "Fast Byte Latent Transformer",
+    "pdf_url": "https://arxiv.org/pdf/2605.08044v1",
+    "published": "2026-05-08",
+    "crawled_at": "2026-05-11 21:06:54",
+    "ai_score": 7.5,
+    "translated_title": "快速字节级潜在变换器",
+    "summary_en": "• Model Architecture: Introduces BLT Diffusion (BLT-D), BLT Self-speculation (BLT-S), and BLT Diffusion+Verification (BLT-DV) to accelerate byte-level language models. BLT-D uses a block-wise diffusion objective for parallel byte generation; BLT-S extends local decoder for speculative drafting; BLT-DV adds verification after diffusion.\n• Data used: The paper does not specify a particular dataset; it focuses on architectural improvements applicable to general byte-level LMs.\n• Performance metrics: All methods achieve over 50% reduction in estimated memory-bandwidth cost compared to baseline BLT during generation. BLT-D reduces the number of forward passes by generating multiple bytes per step.",
+    "summary_cn": "• 核心模型: 提出三种加速方法：BLT扩散（BLT-D）通过块级扩散目标并行生成字节；BLT自推测（BLT-S）扩展局部解码器进行推测性草稿；BLT扩散+验证（BLT-DV）在扩散后添加自回归验证。\n• 数据来源: 未指定具体数据集，专注于通用字节级语言模型的架构改进。\n• 主要结论: 所有方法在生成任务中相比基线BLT降低超过50%的估计内存带宽成本，BLT-D通过每步生成多个字节减少前向传播次数。",
+    "verdict_en": "• Alpha Potential: Moderate. Speed improvements in byte-level LMs could enable new applications in high-frequency text processing or real-time NLP, but direct trading alpha is limited.\n• Implementation Risk: High. Requires custom training with diffusion objectives and speculative decoding, which may be complex to integrate into existing systems.\n• Novelty: High. Combines diffusion models with byte-level LMs for generation speedup, a novel approach in the field.",
+    "verdict_cn": "• 创新点: 将扩散模型与字节级语言模型结合实现生成加速，思路新颖，在字节级LM领域具有开创性。\n• 实盘坑: 直接交易alpha有限，主要提升推理效率而非预测精度；扩散训练和推测解码增加系统复杂度。\n• 复现难度: 高。需要实现扩散目标、多步验证机制，且对硬件内存带宽敏感，复现成本较高。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.08037v1",
+    "title": "Beyond Pairs: Your Language Model is Secretly Optimizing a Preference Graph",
+    "pdf_url": "https://arxiv.org/pdf/2605.08037v1",
+    "published": "2026-05-08",
+    "crawled_at": "2026-05-11 21:07:02",
+    "ai_score": 8.5,
+    "translated_title": "超越配对：你的语言模型实际上在优化一个偏好图",
+    "summary_en": "• Model Architecture: Proposes GraphDPO, a generalization of DPO that operates over directed acyclic preference graphs, using a Plackett-Luce-inspired objective with log-sum-exp aggregation for linear complexity.\n• Data used: Utilizes multiple rollouts per prompt with rankings, forming preference graphs; optionally incorporates ground-truth solutions as dominant nodes.\n• Performance metrics: Outperforms pairwise DPO and listwise methods on reasoning (e.g., GSM8K) and program synthesis (e.g., MBPP) tasks, with improved stability and transitivity enforcement.",
+    "summary_cn": "• 核心模型: 提出GraphDPO，将DPO推广到有向无环偏好图上，基于Plackett-Luce目标函数，通过log-sum-exp聚合实现线性复杂度。\n• 数据来源: 使用每个提示的多次生成结果及其排名，构建偏好图；可选地加入真实解作为主导节点。\n• 主要结论: 在推理（如GSM8K）和程序合成（如MBPP）任务上优于成对DPO和列表式方法，具有更好的稳定性和传递性。",
+    "verdict_en": "• Alpha Potential: High; graph-structured preferences capture richer signals, potentially improving alignment in complex tasks like trading strategy generation.\n• Implementation Risk: Moderate; requires ranking multiple rollouts per prompt, which may be costly; graph construction and annealing schedule add complexity.\n• Novelty: Strong; extends DPO to general preference graphs, addressing transitivity and redundancy issues with theoretical grounding.",
+    "verdict_cn": "• 创新点: 将偏好建模从成对扩展到图结构，理论严谨，能利用更丰富的监督信号。\n• 实盘坑: 需要每个提示多个生成结果及排序，计算成本高；图构建和退火调度增加实现难度。\n• 复现难度: 中等；算法细节清晰，但需要大量调参（如退火温度、等价类构造）。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.08036v1",
+    "title": "Don't Get Your Kroneckers in a Twist: Gaussian Processes on High-Dimensional Incomplete Grids",
+    "pdf_url": "https://arxiv.org/pdf/2605.08036v1",
+    "published": "2026-05-08",
+    "crawled_at": "2026-05-11 21:07:11",
+    "ai_score": 7.5,
+    "translated_title": "别把Kronecker积搞混：高维不完全网格上的高斯过程",
+    "summary_en": "• Model Architecture: CUTS-GPR combines an additive kernel with an incomplete grid structure to achieve fast kernel matrix-vector products, enabling exact Gaussian process regression in high dimensions.\n• Data used: Benchmarks with billions of data points and thousands of dimensions; full GPR on N=447,265 and D=24 for potential energy surfaces.\n• Performance metrics: Near-linear or linear scaling with N, low-order polynomial scaling with D; hyperparameter optimization completed in hours for large datasets.\n• Key result: Enables Bayesian modeling of high-dimensional potential energy surfaces, a longstanding challenge in computational chemistry.",
+    "summary_cn": "• 核心模型: CUTS-GPR通过结合加性核与不完全网格结构，实现极快的核矩阵-向量乘积，支持高维精确高斯过程回归。\n• 数据来源: 使用数十亿数据点和数千维度的基准测试；在N=447,265和D=24的势能面上进行完整GPR。\n• 主要结论: 计算复杂度随N近线性或线性增长，随D低阶多项式增长；超参数优化在数小时内完成。\n• 应用价值: 实现了高维势能面的贝叶斯建模，解决了计算化学中的长期挑战。",
+    "verdict_en": "• Alpha Potential: Moderate; the method's scalability could be applied to high-dimensional financial datasets (e.g., options surfaces, yield curves) for nonparametric regression, but direct trading alpha is unclear.\n• Implementation Risk: High; requires careful construction of additive kernels and incomplete grids; numerical stability and hyperparameter tuning may be nontrivial in practice.\n• Novelty: High; combines additive kernels with incomplete grids for exact GPR, achieving unprecedented scalability; relevant for ML community but not finance-specific.\n• Limitations: Additive kernel assumption may not capture complex interactions in financial data; computational gains rely on grid structure, which may not suit all datasets.",
+    "verdict_cn": "• 创新点: 将加性核与不完全网格结合，实现精确GPR的线性扩展，计算效率突破。\n• 实盘坑: 加性核假设可能无法捕捉金融数据中的复杂交互；网格结构依赖性强，对不规则数据适应性差。\n• 复现难度: 高；需要精细的核设计和网格构建，超参数优化复杂。\n• 金融适用性: 潜在应用于高维金融曲面建模，但直接产生交易信号需额外验证。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2605.08035v1",
+    "title": "PropSplat: Map-Free RF Field Reconstruction via 3D Gaussian Propagation Splatting",
+    "pdf_url": "https://arxiv.org/pdf/2605.08035v1",
+    "published": "2026-05-08",
+    "crawled_at": "2026-05-11 21:07:20",
+    "ai_score": 7.2,
+    "translated_title": "PropSplat：通过3D高斯传播溅射实现无地图射频场重建",
+    "summary_en": "• Model Architecture: Uses 3D anisotropic Gaussian primitives to encode path loss offsets relative to a baseline model with learnable path loss exponent, optimized end-to-end without external maps.\n• Data used: Real-world outdoor drive-tests at six sub-6 GHz frequencies (300m spacing) and indoor Bluetooth Low Energy measurements.\n• Performance metrics: Achieves 5.38 dB RMSE on outdoor (vs. WRF-GS+ 5.87 dB, GSRF 7.46 dB, NeRF^2 14.76 dB); indoor localization error 0.19m (vs. NeRF^2 1.84m).",
+    "summary_cn": "• 核心模型: 使用3D各向异性高斯基元编码路径损耗偏移，结合可学习路径损耗指数，端到端优化，无需外部地图。\n• 数据来源: 真实世界户外路测（六个亚6GHz频段，测量点间距300米）和室内蓝牙低功耗测量。\n• 主要结论: 户外RMSE达5.38 dB，优于WRF-GS+（5.87 dB）、GSRF（7.46 dB）和NeRF^2（14.76 dB）；室内定位误差0.19米，比NeRF^2（1.84米）提升一个数量级。",
+    "verdict_en": "• Alpha Potential: Low for direct trading; RF field reconstruction is more relevant for telecom or robotics, not financial markets.\n• Implementation Risk: High; requires specialized RF measurement hardware and domain expertise; no obvious financial application.\n• Novelty: Moderate; combines 3D Gaussian splatting with path loss modeling, but similar ideas exist in wireless radiance fields.",
+    "verdict_cn": "• 创新点: 将3D高斯溅射与路径损耗建模结合，实现无地图RF重建，但类似概念在无线辐射场中已有。\n• 实盘坑: 与金融交易无关，无法直接用于量化策略；需要RF硬件和专业知识，部署成本高。\n• 复现难度: 高；依赖特定RF数据集和硬件，代码未公开，复现门槛高。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.08034v1",
+    "title": "Semiparametric Efficient Test for Interpretable Distributional Treatment Effects",
+    "pdf_url": "https://arxiv.org/pdf/2605.08034v1",
+    "published": "2026-05-08",
+    "crawled_at": "2026-05-11 21:07:28",
+    "ai_score": 7.5,
+    "translated_title": "可解释分布处理效应的半参数有效检验",
+    "summary_en": "• Model Architecture: Proposes DR-ME, a semiparametrically efficient finite-location test using doubly robust kernel features and canonical gradient for distributional treatment effects.\n• Data used: Observational data; validated on semi-synthetic medical-imaging study.\n• Performance metrics: Near-nominal type-I error, competitive power against global doubly robust kernel tests, interpretable learned locations.\n• Key contribution: First test to provide causal-discrepancy coordinates instead of global rejection, with local power optimization via covariance whitening.",
+    "summary_cn": "• 核心模型: 提出DR-ME，一种半参数有效有限位置检验，利用双稳健核特征和典范梯度检验分布处理效应。\n• 数据来源: 观测数据；在半合成医学影像研究中验证。\n• 主要结论: 接近名义I类错误率，与全局双稳健核检验相比具有竞争力，可学习可解释的位置。\n• 创新点: 首个提供因果差异坐标而非全局拒绝的检验，通过协方差白化优化局部功效。",
+    "verdict_en": "• Alpha Potential: High for causal inference in finance where distributional effects matter (e.g., tail risk, volatility).\n• Implementation Risk: Moderate; requires careful tuning of kernel and location selection, but sample splitting ensures validity.\n• Novelty: Strong theoretical contribution with efficient local-power geometry and interpretable coordinates.\n• Practicality: May be computationally intensive for large datasets; need to test on financial data.",
+    "verdict_cn": "• 创新点: 理论贡献扎实，首次实现可解释的分布处理效应检验，局部功效几何优化。\n• 实盘坑: 计算复杂度较高，核函数和位置选择需调参，金融数据适用性待验证。\n• 复现难度: 中等，需理解半参数效率和双稳健估计，但代码可能公开。\n• 应用前景: 对尾部风险、波动率等分布效应显著的金融场景有潜力。",
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2605.06667v1",
     "title": "ActCam: Zero-Shot Joint Camera and 3D Motion Control for Video Generation",
     "pdf_url": "https://arxiv.org/pdf/2605.06667v1",
