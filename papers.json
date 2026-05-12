@@ -1,5 +1,246 @@
 [
   {
+    "id": "2605.10938v1",
+    "title": "ELF: Embedded Language Flows",
+    "pdf_url": "https://arxiv.org/pdf/2605.10938v1",
+    "published": "2026-05-11",
+    "crawled_at": "2026-05-12 21:07:33",
+    "ai_score": 7.5,
+    "translated_title": "ELF：嵌入式语言流",
+    "summary_en": [
+      "• Model Architecture: ELF is a continuous diffusion model based on Continuous-Time Flow Matching, operating in an embedding space and mapping to discrete tokens only at the final step via a shared-weight network.",
+      "• Data used: The paper likely uses standard language modeling datasets (e.g., text corpora) but does not specify exact datasets in the abstract.",
+      "• Performance metrics: ELF substantially outperforms leading discrete and continuous DLMs in generation quality with fewer sampling steps.",
+      "• Key technique: Adapts classifier-free guidance (CFG) from image-domain diffusion models to language modeling."
+    ],
+    "summary_cn": [
+      "• 核心模型: ELF是一种基于连续时间流匹配的连续扩散模型，在嵌入空间中操作，仅在最后一步通过共享权重网络映射到离散词元。",
+      "• 数据来源: 论文未明确指定数据集，但通常使用标准语言建模语料库。",
+      "• 主要结论: ELF在生成质量和采样步数上显著优于现有离散和连续扩散语言模型。",
+      "• 关键技术: 将图像领域的无分类器引导（CFG）成功应用于语言建模。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; improved language generation could enhance NLP-based trading signals, but direct alpha is limited.",
+      "• Implementation Risk: High; requires significant computational resources and careful tuning of continuous embeddings.",
+      "• Novelty: High; first effective continuous DLM with minimal discrete adaptation, bridging image and language diffusion.",
+      "• Practicality: Low for trading; more relevant for NLP tasks than quantitative finance."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次实现有效的连续扩散语言模型，巧妙借用图像领域技术，思路新颖。",
+      "• 实盘坑: 计算成本高，且语言生成质量提升对量化交易直接贡献有限，需结合具体NLP策略。",
+      "• 复现难度: 高，涉及连续时间流匹配和共享权重网络，对工程实现要求高。",
+      "• 适用性: 更适合NLP/LLM策略，而非高频或因子类策略。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.10934v1",
+    "title": "Variational Inference for Lévy Process-Driven SDEs via Neural Tilting",
+    "pdf_url": "https://arxiv.org/pdf/2605.10934v1",
+    "published": "2026-05-11",
+    "crawled_at": "2026-05-12 21:07:42",
+    "ai_score": 8.5,
+    "translated_title": "基于神经倾斜的Lévy过程驱动随机微分方程变分推断",
+    "summary_en": "• Model Architecture: Proposes a neural exponential tilting framework for variational inference in Lévy-driven SDEs, using neural networks to reweight the Lévy measure while preserving jump structure. Introduces quadratic neural parametrization for closed-form normalization and conditional Gaussian representation for stable processes.\n• Data: Evaluated on synthetic datasets with known jump dynamics and real-world datasets (e.g., financial time series with heavy tails).\n• Performance Metrics: Demonstrates accurate posterior inference of jump dynamics, outperforming Gaussian-based variational methods in regimes with heavy tails and discontinuities. Uses symmetry-aware Monte Carlo estimators for scalable optimization.",
+    "summary_cn": "• 核心模型: 提出神经指数倾斜框架，通过神经网络重新加权Lévy测度，保留跳跃结构，实现Lévy驱动SDE的变分推断。采用二次神经参数化实现闭式归一化，以及稳定过程的条件高斯表示。\n• 数据来源: 使用已知跳跃动力学的合成数据集和真实世界数据集（如具有厚尾特征的金融时间序列）。\n• 主要结论: 准确推断跳跃动力学，在厚尾和不连续场景下优于基于高斯假设的变分方法，并通过对称性感知蒙特卡洛估计器实现可扩展优化。",
+    "verdict_en": "• Alpha Potential: High for quantitative finance, especially in modeling asset returns with jumps and heavy tails, which are common in real markets. Could improve risk management and derivative pricing.\n• Implementation Risk: Moderate. Requires careful tuning of neural network architecture and optimization; computational cost may be high for high-frequency applications.\n• Novelty: High. Combines neural networks with Lévy processes for variational inference, addressing a key limitation of existing methods.",
+    "verdict_cn": "• 创新点: 将神经网络与Lévy过程结合，解决变分推断中高斯假设的局限，保留跳跃结构，理论贡献显著。\n• 实盘坑: 计算复杂度较高，可能不适合高频交易；神经网络训练不稳定，需大量调参。\n• 复现难度: 中等。需实现Lévy测度的倾斜和条件高斯采样，但论文提供了关键公式。",
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2605.10933v1",
+    "title": "DECO: Sparse Mixture-of-Experts with Dense-Comparable Performance on End-Side Devices",
+    "pdf_url": "https://arxiv.org/pdf/2605.10933v1",
+    "published": "2026-05-11",
+    "crawled_at": "2026-05-12 21:07:52",
+    "ai_score": 7.5,
+    "translated_title": "DECO：稀疏混合专家模型在终端设备上实现与密集模型相当的性能",
+    "summary_en": [
+      "• Model Architecture: DECO is a sparse Mixture-of-Experts (MoE) architecture using differentiable ReLU-based routing with learnable expert-wise scaling, and introduces NormSiLU activation for stable expert activation and higher sparsity.",
+      "• Data used: The paper does not specify a particular dataset; experiments are likely conducted on standard benchmarks (e.g., language modeling tasks) but details are omitted.",
+      "• Performance metrics: Activating only 20% of experts, DECO matches dense Transformer performance and outperforms established MoE baselines. A specialized kernel achieves 3.00x speedup over dense inference on real hardware.",
+      "• Key findings: Non-gated MLP experts with ReLU-based routing show empirical advantage, suggesting potential simplification of MoE architecture."
+    ],
+    "summary_cn": [
+      "• 核心模型: DECO是一种稀疏混合专家架构，采用可微的ReLU路由和可学习的专家缩放，并引入NormSiLU激活函数以稳定专家激活并提高稀疏度。",
+      "• 数据来源: 论文未明确指定数据集，实验可能基于标准基准（如语言建模任务），但细节缺失。",
+      "• 主要结论: 仅激活20%的专家，DECO即可匹配密集Transformer性能，并优于现有MoE基线。专用加速核在真实硬件上实现3.00倍加速。",
+      "• 额外发现: 非门控MLP专家结合ReLU路由具有经验优势，可能简化MoE架构。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low for quantitative finance; the paper focuses on efficient deployment for end-side devices, not financial prediction or trading.",
+      "• Implementation Risk: High; requires specialized hardware and kernel optimization, and the MoE architecture may not directly apply to financial time series.",
+      "• Novelty: Moderate; introduces NormSiLU and simplified routing, but builds on existing MoE and ReLU routing concepts.",
+      "• Relevance: Minimal for hedge fund; better suited for NLP/LLM deployment on edge devices."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出NormSiLU激活函数和简化路由，但整体创新有限，属于工程优化。",
+      "• 实盘坑: 对量化金融几乎无直接应用价值，MoE架构在金融时序上可能不稳定，且依赖专用硬件加速。",
+      "• 复现难度: 中等；需要MoE框架和自定义CUDA内核，但代码将开源。",
+      "• 适用性: 更适合边缘设备上的NLP/LLM部署，而非高频或因子策略。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.10931v1",
+    "title": "Quantifying Concentration Phenomena of Mean-Field Transformers in the Low-Temperature Regime",
+    "pdf_url": "https://arxiv.org/pdf/2605.10931v1",
+    "published": "2026-05-11",
+    "crawled_at": "2026-05-12 21:07:59",
+    "ai_score": 7.5,
+    "translated_title": "低温状态下平均场Transformer的集中现象量化研究",
+    "summary_en": "• Model Architecture: Mean-field transformer with self-attention, analyzed in the large-token limit via a continuity equation.\n• Data used: No empirical data; theoretical analysis with numerical experiments on synthetic token distributions.\n• Performance metrics: Wasserstein distance scaling as sqrt(log(β+1)/β)exp(Ct)+exp(-ct), concentration time scale O(log β).",
+    "summary_cn": "• 核心模型: 平均场Transformer，自注意力机制，在大token极限下用连续性方程描述演化。\n• 数据来源: 无实证数据，基于理论分析及合成token分布的数值实验。\n• 主要结论: Wasserstein距离随温度参数β和推理时间t的缩放关系，token分布在O(log β)时间尺度上集中。",
+    "verdict_en": "• Alpha Potential: Low; theoretical insights may inform transformer-based models but no direct trading signal.\n• Implementation Risk: High; requires understanding of mean-field limits and Lyapunov estimates, not directly applicable to trading.\n• Novelty: Moderate; applies interacting particle system theory to transformers, but practical relevance limited.",
+    "verdict_cn": "• 创新点: 将相互作用粒子系统理论应用于Transformer，推导低温极限下的集中现象。\n• 实盘坑: 纯理论分析，无实际数据或交易策略，难以直接用于量化投资。\n• 复现难度: 高，需要深厚的数学功底和数值模拟能力。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.10923v1",
+    "title": "Dynamic Skill Lifecycle Management for Agentic Reinforcement Learning",
+    "pdf_url": "https://arxiv.org/pdf/2605.10923v1",
+    "published": "2026-05-11",
+    "crawled_at": "2026-05-12 21:08:08",
+    "ai_score": 7.5,
+    "translated_title": "智能体强化学习中的动态技能生命周期管理",
+    "summary_en": "• Model Architecture: SLIM framework treats active external skill set as a dynamic optimization variable, using leave-one-skill-out validation to estimate marginal contribution and applying three lifecycle operations: retain, retire, expand.\n• Data used: Evaluated on ALFWorld and SearchQA benchmarks.\n• Performance metrics: Outperforms best baselines by average 7.1% points across both tasks.\n• Key finding: Policy learning and external skill retention are not mutually exclusive; some skills are absorbed, others remain external.\n• Contribution: Proposes a more general paradigm for skill-based agentic RL beyond persistent guidance or full internalization.",
+    "summary_cn": "• 核心模型: SLIM框架将外部技能集视为动态优化变量，通过留一技能验证估计边际贡献，并应用保留、淘汰、扩展三种生命周期操作。\n• 数据来源: 在ALFWorld和SearchQA基准上评估。\n• 主要结论: 在两个任务上平均超越最佳基线7.1个百分点。\n• 关键发现: 策略学习与外部技能保留并非互斥；部分技能被吸收，部分保持外部价值。\n• 贡献: 提出了超越持久指导或完全内化的更通用技能型智能体强化学习范式。",
+    "verdict_en": "• Alpha Potential: Moderate; dynamic skill management could improve RL agent adaptability in complex environments, but direct trading application is unclear.\n• Implementation Risk: High; requires careful validation and lifecycle operations, computational overhead from leave-one-out estimation.\n• Novelty: High; introduces dynamic skill lifecycle concept, contrasting with static skill accumulation or internalization.\n• Limitations: Only tested on two benchmarks; scalability to larger skill sets and real-world tasks uncertain.\n• Relevance: More relevant to AI research than quantitative finance; potential for portfolio optimization if skills map to trading strategies.",
+    "verdict_cn": "• 创新点: 提出动态技能生命周期概念，打破静态积累或内化假设，思路新颖。\n• 实盘坑: 直接应用于交易困难；留一验证计算开销大，技能定义和生命周期操作在金融场景中不直观。\n• 复现难度: 中等；需要强化学习框架和技能库管理，但算法细节清晰。\n• 局限性: 仅在两个基准测试，技能集规模小，泛化性存疑。\n• 金融相关性: 偏AI研究，若将技能映射为交易策略，可能用于动态策略组合优化。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.10917v1",
+    "title": "Optimal and Scalable MAPF via Multi-Marginal Optimal Transport and Schrödinger Bridges",
+    "pdf_url": "https://arxiv.org/pdf/2605.10917v1",
+    "published": "2026-05-11",
+    "crawled_at": "2026-05-12 21:08:17",
+    "ai_score": 7.5,
+    "translated_title": "通过多边缘最优传输和薛定谔桥实现最优且可扩展的多智能体路径规划",
+    "summary_en": "• Model Architecture: Casts anonymous multi-agent path finding (MAPF) as a multi-marginal optimal transport (MMOT) problem with Markovian structure, reducing it to a polynomial-size linear program (LP). Also proposes a Schrödinger bridge formulation for large-scale problems, leading to an entropic regularization solved via iterative Sinkhorn algorithm.\n• Data used: The approach is model-based and does not rely on external datasets; experiments are conducted on synthetic grid graphs and random environments.\n• Performance metrics: Evaluated on solution cost (total travel distance) and computational time; demonstrates near-optimal integral solutions with significant complexity reduction compared to standard LP.",
+    "summary_cn": "• 核心模型: 将匿名多智能体路径规划（MAPF）转化为具有马尔可夫结构的多边缘最优传输（MMOT）问题，简化为多项式规模的线性规划（LP）。针对大规模问题，提出薛定谔桥框架，通过熵正则化和迭代Sinkhorn算法求解。\n• 数据来源: 基于模型的方法，不依赖外部数据集；实验在合成网格图和随机环境中进行。\n• 主要结论: 在解成本（总移动距离）和计算时间上评估；相比标准LP，实现了近最优的整数解，并显著降低了复杂度。",
+    "verdict_en": "• Alpha Potential: Low for direct trading; the paper focuses on robotics path planning, not financial markets. However, the MMOT and Schrödinger bridge techniques could be adapted to portfolio optimization or order routing problems.\n• Implementation Risk: High for financial applications; requires significant adaptation to map financial problems to the MAPF framework. The LP and Sinkhorn algorithms are computationally efficient but may not handle stochastic market dynamics.\n• Novelty: High in the robotics domain; the connection between MAPF and MMOT is novel. For quantitative finance, the techniques are relatively new but not directly applicable.",
+    "verdict_cn": "• 创新点: 在机器人领域，将MAPF与MMOT联系起来具有新颖性；薛定谔桥框架提供了可扩展的近似解法。\n• 实盘坑: 直接应用于金融交易难度大，需要大量改造；市场动态与路径规划问题差异显著，模型假设可能不成立。\n• 复现难度: 中等；算法实现相对标准，但需要针对具体问题调整图结构和成本函数。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.10910v1",
+    "title": "Equivariant Reinforcement Learning for Clifford Quantum Circuit Synthesis",
+    "pdf_url": "https://arxiv.org/pdf/2605.10910v1",
+    "published": "2026-05-11",
+    "crawled_at": "2026-05-12 21:08:26",
+    "ai_score": 8.5,
+    "translated_title": "克利福德量子电路合成的等变强化学习",
+    "summary_en": "• Model Architecture: Introduces a novel neural network architecture equivariant to qubit relabelings of symplectic matrix representations, enabling size-agnostic learning across different qubit counts without circuit splicing or network reparameterization.\n• Data used: Synthetic data generated from random walks from identity, with Clifford circuits up to 30 qubits; training on 6-qubit and 10-qubit instances, testing on unseen targets up to 30 qubits.\n• Performance metrics: On 6-qubit circuits, finds circuits within one two-qubit gate of optimality in milliseconds, optimal in 99.2% of instances within seconds; scales to 30 qubits with lower average two-qubit gate counts than Qiskit's Aaronson-Gottesman and greedy synthesizers.",
+    "summary_cn": "• 核心模型: 提出一种对辛矩阵表示的量子比特重标号等变的新型神经网络架构，支持不同量子比特数量的无大小限制学习，无需电路拼接或网络重参数化。\n• 数据来源: 从单位矩阵随机游走生成合成数据，训练使用6量子比特和10量子比特实例，测试扩展到30量子比特的未见目标。\n• 主要结论: 在6量子比特电路上，毫秒级找到接近最优的电路（差距在一个双量子比特门内），99.2%实例在秒级找到最优解；扩展到30量子比特时，平均双量子比特门数低于Qiskit的Aaronson-Gottesman和贪心合成器。",
+    "verdict_en": "• Alpha Potential: High for quantum computing hardware optimization, but not directly applicable to financial markets; could inspire novel optimization algorithms for portfolio or risk management.\n• Implementation Risk: Low for quantum computing domain, but requires quantum computing expertise and hardware access; not a traditional quant strategy.\n• Novelty: High in combining equivariant neural networks with reinforcement learning for quantum circuit synthesis; size-agnostic property is innovative.",
+    "verdict_cn": "• 创新点: 将等变神经网络与强化学习结合用于量子电路合成，大小无关特性具有创新性。\n• 实盘坑: 不直接适用于金融市场，需转化为量子计算优化算法；依赖量子硬件，短期难以落地。\n• 复现难度: 中等，需要量子计算和强化学习背景，但代码可能开源。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2605.10909v1",
+    "title": "Revisiting Policy Gradients for Restricted Policy Classes: Escaping Myopic Local Optima with $k$-step Policy Gradients",
+    "pdf_url": "https://arxiv.org/pdf/2605.10909v1",
+    "published": "2026-05-11",
+    "crawled_at": "2026-05-12 21:08:34",
+    "ai_score": 8.5,
+    "translated_title": "重新审视受限策略类上的策略梯度：用k步策略梯度逃离近视局部最优",
+    "summary_en": "• Model Architecture: Proposes a generalized k-step policy gradient method that couples randomness within a k-step time window to escape myopic local optima in MDPs with restricted policy classes.\n• Data used: Theoretical analysis; no empirical data used.\n• Performance metrics: Proves convergence to a solution exponentially close in performance to the optimal deterministic policy with respect to k, with O(1/T) iteration complexity under smoothness and differentiability assumptions.",
+    "summary_cn": "• 核心模型: 提出广义k步策略梯度方法，通过耦合k步时间窗口内的随机性，逃离受限策略类MDP中的近视局部最优。\n• 数据来源: 纯理论分析，未使用实证数据。\n• 主要结论: 证明该方法收敛到与最优确定性策略性能指数接近的解（关于k），且在平滑可微假设下迭代复杂度为O(1/T)。",
+    "verdict_en": "• Alpha Potential: High theoretical potential for improving policy optimization in restricted classes, but practical alpha generation requires empirical validation.\n• Implementation Risk: Medium; requires careful tuning of k and smoothness assumptions; may not directly apply to complex real-world MDPs.\n• Novelty: High; identifies myopic nature of standard policy gradients and provides a theoretical fix with exponential guarantees.",
+    "verdict_cn": "• 创新点: 首次指出标准策略梯度的近视性，并提出k步耦合方法，理论上有指数级性能保证。\n• 实盘坑: 理论假设较强（平滑可微），实际MDP中可能不满足；k的选择对性能影响大，缺乏自适应机制。\n• 复现难度: 中等，需扎实的强化学习理论功底，但算法实现相对直接。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2605.10906v1",
+    "title": "DataMaster: Towards Autonomous Data Engineering for Machine Learning",
+    "pdf_url": "https://arxiv.org/pdf/2605.10906v1",
+    "published": "2026-05-11",
+    "crawled_at": "2026-05-12 21:08:43",
+    "ai_score": 6.5,
+    "translated_title": "DataMaster：迈向机器学习的自主数据工程",
+    "summary_en": [
+      "• Model Architecture: DataMaster uses a tree-structured search (DataTree), a shared Data Pool for external data sources, and Global Memory to track outcomes and artifacts.",
+      "• Data used: The framework discovers and integrates external datasets, performing selection, composition, cleaning, and transformation for downstream ML tasks.",
+      "• Performance metrics: On MLE-Bench Lite, improves medal rate by 32.27% over baseline; on PostTrainBench, achieves 31.02% on GPQA vs 30.35% for instruct model.",
+      "• Key innovation: Autonomous data engineering agent that optimizes data side without changing learning algorithm, enabling iterative improvement."
+    ],
+    "summary_cn": [
+      "• 核心模型: DataMaster包含DataTree（树状搜索）、共享Data Pool（外部数据源）和Global Memory（记录结果与工件）。",
+      "• 数据来源: 自动发现并整合外部数据集，进行选择、组合、清洗和变换。",
+      " ",
+      "• 主要结论: 在MLE-Bench Lite上奖牌率提升32.27%；在PostTrainBench上GPQA得分31.02% vs 基线30.35%。",
+      "• 创新点: 无需改变学习算法，仅优化数据侧，实现自主数据工程迭代。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; improving data quality can enhance model performance, but gains are incremental and task-dependent.",
+      "• Implementation Risk: High; requires robust infrastructure for data discovery, storage, and validation, plus integration with existing pipelines.",
+      "• Novelty: High; introduces a structured framework for autonomous data engineering, combining tree search, shared memory, and cumulative learning.",
+      "• Practicality: Limited to ML teams with heavy data engineering needs; may not suit high-frequency trading or low-latency environments."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次提出自主数据工程框架，结合树搜索与共享记忆，思路新颖。",
+      "• 实盘坑: 数据发现与验证成本高，延迟反馈可能拖慢迭代，不适合高频场景。",
+      "• 复现难度: 中等；依赖外部数据源和下游任务，需定制化适配。",
+      "• 收益有限: 性能提升幅度不大，且依赖具体任务，通用性存疑。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.10901v1",
+    "title": "Beyond Red-Teaming: Formal Guarantees of LLM Guardrail Classifiers",
+    "pdf_url": "https://arxiv.org/pdf/2605.10901v1",
+    "published": "2026-05-11",
+    "crawled_at": "2026-05-12 21:08:51",
+    "ai_score": 7.5,
+    "translated_title": "超越红队测试：大语言模型护栏分类器的形式化保证",
+    "summary_en": "• Model Architecture: The paper proposes a verification framework for guardrail classifiers by shifting from discrete input space to pre-activation space, defining harmful regions as convex shapes (SVD-aligned hyper-rectangles or Gaussian Mixture Models) and using monotonic sigmoid head for closed-form certification.\n• Data used: The framework is applied to three author-trained guardrail classifiers on toxicity domain, likely using standard toxicity datasets (e.g., Jigsaw, Toxic Comment) but not explicitly specified.\n• Performance metrics: Empirical metrics are high, but formal verification reveals safety holes: hyper-rectangle certificates return SAT for all configurations; GMM certificates show GPT-2 and Llama-3.1-8B maintain 90% and 80% coverage, while BERT drops to 55% at optimal threshold.",
+    "summary_cn": "• 核心模型: 提出将验证从离散输入空间转移到预激活空间，将有害区域定义为凸形状（SVD对齐超矩形或高斯混合模型），利用单调sigmoid头进行闭式认证。\n• 数据来源: 应用于三个作者训练的毒性领域护栏分类器，可能使用标准毒性数据集（如Jigsaw、Toxic Comment），但未明确说明。\n• 主要结论: 经验指标虽高，但形式验证暴露安全漏洞：超矩形证书全部返回SAT；GMM证书显示GPT-2和Llama-3.1-8B保持90%和80%覆盖率，而BERT在最优阈值下覆盖率降至55%。",
+    "verdict_en": "• Alpha Potential: Low direct alpha; this is a safety/verification paper, not a trading strategy. However, insights on model robustness could inform risk management for LLM-based trading systems.\n• Implementation Risk: High; requires access to model internals (pre-activation space) and training guardrail classifiers, which is non-trivial for proprietary models.\n• Novelty: High; introduces formal guarantees for guardrail classifiers, a novel approach beyond red-teaming, with practical implications for LLM safety.",
+    "verdict_cn": "• 创新点: 首次为护栏分类器提供形式化保证，超越传统红队测试，方法新颖且理论扎实。\n• 实盘坑: 直接交易价值低，但可用于评估LLM交易系统的安全风险；需模型内部访问权限，实施复杂。\n• 复现难度: 高；需要训练专用护栏分类器并访问预激活空间，对黑盒模型不适用。",
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2605.08078v1",
     "title": "Normalizing Trajectory Models",
     "pdf_url": "https://arxiv.org/pdf/2605.08078v1",
