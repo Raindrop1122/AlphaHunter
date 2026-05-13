@@ -1,5 +1,250 @@
 [
   {
+    "id": "2605.12495v1",
+    "title": "AlphaGRPO: Unlocking Self-Reflective Multimodal Generation in UMMs via Decompositional Verifiable Reward",
+    "pdf_url": "https://arxiv.org/pdf/2605.12495v1",
+    "published": "2026-05-12",
+    "crawled_at": "2026-05-13 21:12:42",
+    "ai_score": 7.5,
+    "translated_title": "AlphaGRPO：通过分解可验证奖励解锁统一多模态模型中的自反思多模态生成",
+    "summary_en": "• Model Architecture: Proposes AlphaGRPO, applying Group Relative Policy Optimization (GRPO) to AR-Diffusion Unified Multimodal Models (UMMs) without cold-start, enabling self-reflective reasoning and refinement.\n• Data used: Utilizes general multimodal datasets for training; specific data sources not detailed, but evaluation benchmarks include GenEval, TIIF-Bench, DPG-Bench, WISE, and GEdit.\n• Performance metrics: Demonstrates robust improvements across multiple benchmarks (GenEval, TIIF-Bench, DPG-Bench, WISE) and significant gains in editing tasks (GEdit) without training on editing tasks.\n• Key innovation: Introduces Decompositional Verifiable Reward (DVReward) using an LLM to decompose requests into atomic verifiable questions evaluated by a general MLLM, providing interpretable feedback.",
+    "summary_cn": "• 核心模型: 提出AlphaGRPO框架，将组相对策略优化（GRPO）应用于AR扩散统一多模态模型（UMMs），无需冷启动，实现自反思推理与精炼。\n• 数据来源: 使用通用多模态数据集训练，具体数据源未详述；评估基准包括GenEval、TIIF-Bench、DPG-Bench、WISE和GEdit。\n• 主要结论: 在多个基准上表现稳健提升，并在编辑任务（GEdit）上取得显著收益，无需编辑任务训练。\n• 创新点: 引入分解可验证奖励（DVReward），利用LLM将复杂请求分解为原子可验证问题，由通用MLLM评估，提供可解释反馈。",
+    "verdict_en": "• Alpha Potential: High potential for generating high-fidelity multimodal content with self-reflection, applicable to creative industries and automated content generation.\n• Implementation Risk: Requires careful tuning of GRPO and DVReward components; reliance on LLM and MLLM may introduce latency and cost; generalizability to diverse tasks needs validation.\n• Novelty: Novel combination of GRPO with UMMs and decompositional reward; self-reflective capability is a step towards more autonomous generation.\n• Limitations: No comparison with state-of-the-art RL-based methods; ablation studies on DVReward components are missing; scalability to larger models unclear.",
+    "verdict_cn": "• 创新点: 将GRPO与UMMs结合，引入分解可验证奖励，实现自反思生成，思路新颖。\n• 实盘坑: 依赖LLM和MLLM评估，可能带来高延迟和成本；奖励设计复杂，调参难度大；未与现有RL方法对比，实际收益存疑。\n• 复现难度: 高，需要复现UMMs、GRPO训练及DVReward模块，且依赖外部LLM/MLLM，代码未开源。\n• 局限性: 缺乏消融实验验证各组件贡献；基准测试未覆盖最新方法；可扩展性未讨论。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.12492v1",
+    "title": "Pion: A Spectrum-Preserving Optimizer via Orthogonal Equivalence Transformation",
+    "pdf_url": "https://arxiv.org/pdf/2605.12492v1",
+    "published": "2026-05-12",
+    "crawled_at": "2026-05-13 21:12:49",
+    "ai_score": 7.5,
+    "translated_title": "Pion：通过正交等价变换保持频谱的优化器",
+    "summary_en": [
+      "• Model Architecture: Pion updates weight matrices via left and right orthogonal transformations, preserving singular values throughout training.",
+      "• Data used: The paper likely uses standard LLM benchmarks for pretraining and finetuning, but specific datasets are not mentioned in the abstract.",
+      "• Performance metrics: Empirical results show stable and competitive performance compared to Adam and Muon for LLM pretraining and finetuning.",
+      "• Key properties: Convergence analysis and design choices are systematically examined."
+    ],
+    "summary_cn": [
+      "• 核心模型: Pion通过左右正交变换更新权重矩阵，在训练过程中保持奇异值不变。",
+      "• 数据来源: 论文可能使用标准LLM基准进行预训练和微调，但摘要未提及具体数据集。",
+      "• 主要结论: 与Adam和Muon相比，Pion在LLM预训练和微调中表现出稳定且具有竞争力的性能。",
+      "• 关键特性: 系统分析了收敛性和设计选择。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; spectral preservation may improve training stability for large models, but direct alpha generation is unclear.",
+      "• Implementation Risk: High; orthogonal transformations are computationally expensive and may require custom kernels for efficiency.",
+      "• Novelty: High; introduces a new class of optimizers based on orthogonal equivalence, distinct from additive methods like Adam.",
+      "• Practicality: Limited; benefits over Adam/Muon need extensive validation on diverse tasks and model sizes."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出基于正交等价变换的优化器，与Adam等加法优化器有本质区别。",
+      "• 实盘坑: 正交变换计算成本高，可能拖慢训练速度，且对硬件优化要求高。",
+      "• 复现难度: 高；需要实现自定义正交变换操作，且超参数调优可能复杂。",
+      "• 应用前景: 若稳定性优势显著，可能用于大模型训练，但需更多实证。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.12491v1",
+    "title": "Elastic Attention Cores for Scalable Vision Transformers",
+    "pdf_url": "https://arxiv.org/pdf/2605.12491v1",
+    "published": "2026-05-12",
+    "crawled_at": "2026-05-13 21:12:55",
+    "ai_score": 7.5,
+    "translated_title": "用于可扩展视觉Transformer的弹性注意力核心",
+    "summary_en": "• Model Architecture: Proposes VECA (Visual Elastic Core Attention), a ViT variant using core-periphery attention where patch tokens interact only through a small set of learned core tokens, achieving O(N) complexity.\n• Data used: Evaluated on ImageNet classification and dense prediction tasks (e.g., semantic segmentation, object detection).\n• Performance metrics: Competitive with state-of-the-art vision foundation models (e.g., DeiT, Swin) while reducing FLOPs; demonstrates elastic trade-off between compute and accuracy via nested training.",
+    "summary_cn": "• 核心模型: 提出VECA架构，采用核心-外围注意力机制，图像块仅通过少量学习到的核心令牌交互，实现线性复杂度O(N)。\n• 数据来源: 在ImageNet分类及密集预测任务（如语义分割、目标检测）上评估。\n• 主要结论: 性能与最新视觉基础模型（如DeiT、Swin）相当，但计算成本更低；通过嵌套训练实现计算与精度的弹性权衡。",
+    "verdict_en": "• Alpha Potential: Low for direct trading; more relevant for computer vision tasks in fintech (e.g., document analysis, chart recognition).\n• Implementation Risk: Moderate; requires custom CUDA kernels for efficient core attention, but linear complexity is attractive for high-resolution inputs.\n• Novelty: High; challenges the necessity of pairwise token interactions in ViTs, introducing a scalable attention mechanism.",
+    "verdict_cn": "• 创新点: 挑战ViT中成对令牌交互的必要性，提出核心-外围注意力，显著降低计算复杂度。\n• 实盘坑: 直接应用于量化交易场景有限；需定制CUDA优化，且核心数量C的选择影响性能。\n• 复现难度: 中等；架构清晰但训练技巧（如嵌套训练）需精细调参。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2605.12487v1",
+    "title": "Task-Adaptive Embedding Refinement via Test-time LLM Guidance",
+    "pdf_url": "https://arxiv.org/pdf/2605.12487v1",
+    "published": "2026-05-12",
+    "crawled_at": "2026-05-13 21:13:03",
+    "ai_score": 7.5,
+    "translated_title": "通过测试时LLM引导的任务自适应嵌入精炼",
+    "summary_en": "• Model Architecture: Proposes a test-time query refinement paradigm where a generative LLM provides feedback on a small set of documents to adapt the embedding representation of a user query.\n• Data used: Evaluated on diverse zero-shot search and classification benchmarks including literature search, intent detection, key-point matching, and nuanced query-instruction following.\n• Performance metrics: Achieves consistent gains across all models and datasets, with relative improvements up to +25% in ranking quality and binary separation.\n• Key finding: The refined embeddings better reflect task-specific constraints, enabling effective deployment of embedding models in settings where costly LLM pipelines are not viable at corpus scale.",
+    "summary_cn": "• 核心模型: 提出一种测试时查询精炼范式，利用生成式LLM对少量文档的反馈来调整用户查询的嵌入表示。\n• 数据来源: 在多种零样本搜索和分类基准上评估，包括文献搜索、意图检测、关键点匹配和细粒度指令遵循。\n• 主要结论: 在所有模型和数据集上取得一致提升，排名质量和二元分离度相对提升高达25%。\n• 关键发现: 精炼后的嵌入更好地反映任务特定约束，使得嵌入模型在无法大规模使用昂贵LLM管道的场景中也能有效部署。",
+    "verdict_en": "• Alpha Potential: Moderate; the method improves embedding adaptability for zero-shot tasks, which could enhance alpha signals in NLP-driven strategies.\n• Implementation Risk: Low to moderate; requires access to a generative LLM at test time for a small set of documents, but avoids full corpus processing.\n• Novelty: High; introduces a practical test-time refinement approach that bridges embedding models and LLMs without retraining.\n• Limitation: Dependence on LLM quality and the small document set selection; may not generalize to all task types.",
+    "verdict_cn": "• 创新点: 提出测试时精炼范式，无需重新训练即可结合嵌入模型和LLM，实用性强。\n• 实盘坑: 依赖LLM质量和少量文档的选择，若LLM反馈有偏或文档代表性不足，效果可能下降。\n• 复现难度: 中等；代码已开源，但需要部署LLM并调整超参数。\n• 局限性: 仅适用于零样本场景，且精炼过程增加延迟，不适合高频交易。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.12484v1",
+    "title": "Learning, Fast and Slow: Towards LLMs That Adapt Continually",
+    "pdf_url": "https://arxiv.org/pdf/2605.12484v1",
+    "published": "2026-05-12",
+    "crawled_at": "2026-05-13 21:13:09",
+    "ai_score": 7.5,
+    "translated_title": "学习，快与慢：迈向持续适应的LLM",
+    "summary_en": "• Model Architecture: Introduces a fast-slow learning framework for LLMs, where model parameters serve as 'slow' weights and optimized context as 'fast' weights, enabling adaptation via textual feedback without full parameter updates.\n• Data used: The paper does not specify a particular dataset; it evaluates on reasoning tasks (likely synthetic or benchmark tasks) and continual learning scenarios with changing task domains.\n• Performance metrics: Fast-Slow Training (FST) achieves up to 3x sample efficiency over RL, higher performance asymptote, up to 70% less KL divergence from base model, and better plasticity in continual learning.",
+    "summary_cn": "• 核心模型: 提出快慢学习框架，模型参数作为慢权重，优化上下文作为快权重，通过文本反馈适应任务，避免全参数更新。\n• 数据来源: 未明确指定数据集，在推理任务和持续学习场景（任务域动态变化）中评估。\n• 主要结论: FST相比RL样本效率提升3倍，性能渐近线更高，KL散度降低70%，持续学习中更好保持可塑性。",
+    "verdict_en": "• Alpha Potential: High for NLP/LLM strategies, as it reduces catastrophic forgetting and improves sample efficiency, potentially enabling more robust trading signals from LLMs.\n• Implementation Risk: Moderate; requires careful tuning of fast-slow weight balance and context optimization, but leverages existing LLM architectures.\n• Novelty: High; combines in-context and in-weight learning in a principled way, inspired by human learning systems.",
+    "verdict_cn": "• 创新点: 巧妙融合上下文学习和参数更新，灵感来自人类快慢系统，解决灾难性遗忘问题。\n• 实盘坑: 快权重优化可能增加计算开销，且对任务反馈质量敏感，需谨慎设计。\n• 复现难度: 中等，需实现双权重训练和上下文优化，但基于标准LLM框架。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.12483v1",
+    "title": "Beyond GRPO and On-Policy Distillation: An Empirical Sparse-to-Dense Reward Principle for Language-Model Post-Training",
+    "pdf_url": "https://arxiv.org/pdf/2605.12483v1",
+    "published": "2026-05-12",
+    "crawled_at": "2026-05-13 21:13:19",
+    "ai_score": 7.5,
+    "translated_title": "超越GRPO与在线策略蒸馏：语言模型后训练的实证稀疏到密集奖励原则",
+    "summary_en": [
+      "• Model Architecture: Uses a sparse-to-dense reward principle where a strong teacher model (e.g., 8B) is first trained with sparse RL (GRPO) on verifiable data, then its behavior is transferred to a smaller student (e.g., 1.7B) via dense token-level supervision (OPD).",
+      "• Data used: Verifiable math problems (e.g., MATH dataset) with labeled ground-truth answers; no additional unlabeled data required.",
+      "• Performance metrics: On Qwen3-1.7B student, the bridge (RL teacher + OPD) achieves 78.5% on MATH after student-side GRPO, outperforming direct GRPO on student (75.4%) and a replay control by 2.8 points.",
+      "• Key finding: Sparse reward should be used for teacher-side exploration; dense reward for student compression; student-side sparse RL only after the bridge.",
+      "• Ablation: Forward-KL warmup on teacher rollouts followed by OPD on student rollouts consistently gives best results."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用稀疏到密集奖励原则，先用稀疏RL（GRPO）训练强教师模型（如8B），再通过密集token级监督（OPD）将行为压缩到小模型（如1.7B）。",
+      "• 数据来源: 使用可验证数学问题（如MATH数据集），仅需标注答案，无需额外无标签数据。",
+      "• 主要结论: 在Qwen3-1.7B学生模型上，桥接方法（RL教师+OPD）后接学生侧GRPO达到78.5%准确率，优于直接学生GRPO（75.4%）和重放控制（+2.8点）。",
+      "• 关键发现: 稀疏奖励应用于教师探索，密集奖励用于学生压缩；学生侧稀疏RL仅在桥接后有效。",
+      "• 消融实验: 教师rollout上的前向KL预热后接学生rollout上的OPD效果最佳。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High. The principle of using scarce labeled data on stronger models first can improve downstream performance without extra data, a clear edge for LLM-based trading strategies.",
+      "• Implementation Risk: Medium. Requires careful tuning of RL and distillation hyperparameters; the bridge is sensitive to teacher quality and KL warmup.",
+      "• Novelty: Moderate. The idea of sparse-to-dense reward is not entirely new but the empirical demonstration on math tasks with clear allocation rule is valuable.",
+      "• Scalability: Good. The method works across different model sizes (1.7B, 8B, 14B) and can be applied to other verifiable domains.",
+      "• Reproducibility: High. Uses open-source models (Qwen3, Llama) and standard datasets (MATH); code likely available."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出稀疏到密集奖励分配原则，将GRPO和OPD统一为不同密度奖励，而非独立方法。",
+      "• 实盘坑: 桥接过程对教师模型质量敏感，若教师RL训练不足，桥接可能无效；学生侧RL需在桥接后，否则收益有限。",
+      "• 复现难度: 中等。需复现GRPO和OPD流程，且KL预热超参数需调优，但模型和数据均开源。",
+      "• 交易应用: 可用于LLM交易策略的模型压缩，用大模型探索策略，小模型执行，降低推理成本。",
+      "• 局限性: 仅验证数学任务，对非可验证任务（如文本生成）适用性未知。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.12477v1",
+    "title": "MEME: Multi-entity & Evolving Memory Evaluation",
+    "pdf_url": "https://arxiv.org/pdf/2605.12477v1",
+    "published": "2026-05-12",
+    "crawled_at": "2026-05-13 21:13:27",
+    "ai_score": 7.5,
+    "translated_title": "MEME：多实体与演化记忆评估",
+    "summary_en": "• Model Architecture: Evaluates six memory systems across three paradigms (e.g., file-based, vector DB, LLM-native) on multi-entity and evolving memory tasks.\n• Data used: 100 controlled episodes with synthetic narratives involving multiple entities, updates, deletions, and dependency reasoning.\n• Performance metrics: Accuracy on six tasks (e.g., Cascade 3%, Absence 1% for dependency reasoning under default config; static retrieval up to ~90%).\n• Key finding: All systems fail on dependency reasoning; only file-based agent with Claude Opus 4.7 partially closes gap at ~70x cost.\n• Code/data: Publicly available at https://seokwonjung-jay.github.io/meme-eval/.",
+    "summary_cn": "• 核心模型: 评估了三种记忆范式下的六种记忆系统（如基于文件、向量数据库、LLM原生），针对多实体和演化记忆任务。\n• 数据来源: 100个受控情节，包含多实体、更新、删除和依赖推理的合成叙事。\n• 主要结论: 所有系统在依赖推理任务上表现崩溃（Cascade 3%，Absence 1%），静态检索可达~90%；仅基于文件的代理配合Claude Opus 4.7部分弥补差距，但成本增加~70倍。\n• 代码/数据: 公开可用。",
+    "verdict_en": "• Alpha Potential: Low for direct trading; but insights on memory failures could inform agent-based strategies requiring long-term context.\n• Implementation Risk: High; dependency reasoning collapse suggests current LLM agents unreliable for complex multi-step tasks.\n• Novelty: High; first benchmark to jointly test multi-entity and evolving memory, revealing critical blind spots.\n• Practicality: Low; best solution is cost-prohibitive, limiting real-world deployment.",
+    "verdict_cn": "• 创新点: 首个联合测试多实体和演化记忆的基准，揭示了依赖推理的严重盲点。\n• 实盘坑: 所有系统在依赖推理上几乎失效，直接用于交易策略风险极高；成本高昂的方案不具可扩展性。\n• 复现难度: 中等；代码公开，但需要大量计算资源复现最优结果。\n• 建议: 关注其方法论，但当前结果不适合直接量化应用。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.12476v1",
+    "title": "Routers Learn the Geometry of Their Experts: Geometric Coupling in Sparse Mixture-of-Experts",
+    "pdf_url": "https://arxiv.org/pdf/2605.12476v1",
+    "published": "2026-05-12",
+    "crawled_at": "2026-05-13 21:13:35",
+    "ai_score": 7.5,
+    "translated_title": "路由器学习其专家的几何结构：稀疏混合专家中的几何耦合",
+    "summary_en": [
+      "• Model Architecture: Sparse Mixture-of-Experts (SMoE) with a router and multiple expert networks; the router selects top-k experts for each token.",
+      "• Data used: Trained on language modeling tasks; specific dataset not mentioned, but likely large-scale text corpora (e.g., C4, The Pile).",
+      "• Performance metrics: Load imbalance, perplexity, expert neuron activation correlation with router scores.",
+      "• Key finding: Router and expert weights share gradient directions, forming geometric coupling that aids specialization; auxiliary load-balancing losses disrupt this coupling.",
+      "• Proposed method: Online K-Means router (parameter-free) achieves low load imbalance with modest perplexity increase, demonstrating coupling's importance."
+    ],
+    "summary_cn": [
+      "• 核心模型: 稀疏混合专家（SMoE）模型，包含路由器和多个专家网络；路由器为每个token选择top-k专家。",
+      "• 数据来源: 语言建模任务，未明确指定数据集，但可能使用大规模文本语料（如C4、The Pile）。",
+      "• 主要结论: 路由器和专家权重共享梯度方向，形成几何耦合，促进专业化；辅助负载均衡损失会破坏这种耦合。",
+      "• 创新方法: 无参数在线K-Means路由器，仅基于余弦相似度分配token，实现低负载不均衡且困惑度仅小幅增加。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low direct alpha; focuses on model interpretability and training efficiency, not trading strategies.",
+      "• Implementation Risk: High; requires modifying SMoE training pipeline, which is complex and computationally expensive.",
+      "• Novelty: High; reveals geometric coupling mechanism in routers, offering insights for improving MoE training without auxiliary losses.",
+      "• Relevance: Indirect; could inspire more efficient LLM architectures for NLP tasks in quant workflows."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次揭示路由器与专家之间的几何耦合机制，为改进MoE训练提供新视角。",
+      "• 实盘坑: 直接交易价值低，需大量计算资源复现，且仅适用于MoE架构。",
+      "• 复现难度: 高，需深入理解SMoE训练细节，且无公开代码。",
+      "• 潜在应用: 可优化NLP模型训练效率，间接提升基于LLM的量化策略性能。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.12471v1",
+    "title": "KV-Fold: One-Step KV-Cache Recurrence for Long-Context Inference",
+    "pdf_url": "https://arxiv.org/pdf/2605.12471v1",
+    "published": "2026-05-12",
+    "crawled_at": "2026-05-13 21:13:42",
+    "ai_score": 7.5,
+    "translated_title": "KV-Fold：用于长上下文推理的单步KV缓存循环",
+    "summary_en": "• Model Architecture: KV-Fold treats the KV cache as an accumulator in a left fold over sequence chunks, applying a one-step recurrence without modifying the model.\n• Data used: The paper uses the needle-in-a-haystack benchmark with contexts from 16K to 128K tokens, and chain depths up to 511 on Llama-3.1-8B.\n• Performance metrics: Achieves 100% exact-match retrieval across 152 trials, remains within memory limits of a single 40GB GPU, and shows stable drift that saturates into a plateau insensitive to numerical precision.",
+    "summary_cn": "• 核心模型: KV-Fold将KV缓存视为序列块上左折叠的累加器，通过单步循环实现长上下文推理，无需修改模型或训练。\n• 数据来源: 在Llama-3.1-8B模型上使用针在干草堆基准测试，上下文长度16K至128K令牌，链深度达511。\n• 主要结论: 在152次试验中实现100%精确匹配检索，单块40GB GPU内存限制内运行，且漂移稳定并饱和为平台，对数值精度不敏感。",
+    "verdict_en": "• Alpha Potential: Low direct alpha, but enables long-context inference for LLM-based trading strategies, potentially improving reasoning over long financial documents.\n• Implementation Risk: Low, as it is training-free and requires only standard forward passes; however, integration with existing LLM pipelines may need careful handling.\n• Novelty: Moderate; repurposes existing KV cache concatenation for recurrence, but the stability analysis and empirical results are valuable.",
+    "verdict_cn": "• 创新点: 将函数式编程中的foldl概念引入KV缓存管理，实现无需训练的长上下文推理，思路新颖但技术细节简单。\n• 实盘坑: 对于金融时序数据，长上下文可能引入噪声，且实际部署中需考虑推理速度和缓存管理开销。\n• 复现难度: 低，只需标准Transformer推理，但需注意数值精度和缓存大小控制。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.12466v1",
+    "title": "Solve the Loop: Attractor Models for Language and Reasoning",
+    "pdf_url": "https://arxiv.org/pdf/2605.12466v1",
+    "published": "2026-05-12",
+    "crawled_at": "2026-05-13 21:13:50",
+    "ai_score": 8.5,
+    "translated_title": "解决循环：用于语言和推理的吸引子模型",
+    "summary_en": "• Model Architecture: Attractor Models consist of a backbone module that proposes output embeddings and an attractor module that refines them by solving for fixed points via implicit differentiation, enabling constant training memory and adaptive iteration depth.\n• Data used: For language modeling, standard pretraining datasets (e.g., C4, Wikipedia) are used; for reasoning, synthetic tasks like Sudoku-Extreme and Maze-Hard with approximately 1000 examples.\n• Performance metrics: In language modeling, perplexity improves up to 46.6% and downstream accuracy up to 19.7% over baselines; a 770M model outperforms a 1.3B Transformer. On reasoning, 27M model achieves 91.4% on Sudoku-Extreme and 93.1% on Maze-Hard, surpassing frontier models.\n• Key finding: Equilibrium internalization allows removing the solver at inference with minimal degradation.",
+    "summary_cn": "• 核心模型: 吸引子模型由主干模块和吸引子模块组成，通过隐式微分求解不动点，训练内存恒定且迭代深度自适应。\n• 数据来源: 语言建模使用标准预训练数据（如C4、Wikipedia）；推理任务使用合成数据（Sudoku-Extreme、Maze-Hard），约1000个样本。\n• 主要结论: 语言建模中困惑度降低高达46.6%，下游准确率提升19.7%；770M模型超越1.3B Transformer。推理任务中27M模型在Sudoku-Extreme上达91.4%，Maze-Hard上达93.1%，超越前沿模型。\n• 创新现象: 平衡内化使得推理时可移除求解器，性能几乎无损。",
+    "verdict_en": "• Alpha Potential: High for reasoning tasks where traditional models fail; language modeling gains are significant but may be incremental for large-scale systems.\n• Implementation Risk: Implicit differentiation and fixed-point solving require careful engineering; training stability and convergence may be tricky.\n• Novelty: High novelty in combining attractor dynamics with transformer architectures and demonstrating equilibrium internalization.\n• Scalability: Promising for scaling to larger models with reduced training cost, but inference efficiency needs verification.\n• Practicality: The adaptive depth and constant memory are attractive for deployment, but the attractor module adds complexity.",
+    "verdict_cn": "• 创新点: 将吸引子动力学与Transformer结合，通过隐式微分实现固定点求解，训练内存恒定，迭代深度自适应，并发现平衡内化现象。\n• 实盘坑: 隐式微分和不动点求解工程实现复杂，训练稳定性存疑；推理时移除求解器可能对某些任务不鲁棒。\n• 复现难度: 高，需要自定义反向传播和固定点求解器，对框架支持要求高。\n• 策略价值: 在推理任务上alpha潜力大，但语言建模改进可能被大模型缩放定律稀释。\n• 风险: 模型收敛性和超参数敏感度未知，需大量调参。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
     "id": "2605.10938v1",
     "title": "ELF: Embedded Language Flows",
     "pdf_url": "https://arxiv.org/pdf/2605.10938v1",
