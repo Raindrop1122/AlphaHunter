@@ -1,5 +1,281 @@
 [
   {
+    "id": "2605.13841v1",
+    "title": "EVA-Bench: A New End-to-end Framework for Evaluating Voice Agents",
+    "pdf_url": "https://arxiv.org/pdf/2605.13841v1",
+    "published": "2026-05-13",
+    "crawled_at": "2026-05-14 21:00:41",
+    "ai_score": 6.5,
+    "translated_title": "EVA-Bench：评估语音代理的新型端到端框架",
+    "summary_en": [
+      "• Model Architecture: EVA-Bench is an end-to-end evaluation framework for voice agents, orchestrating bot-to-bot audio conversations over dynamic multi-turn dialogues with automatic simulation validation.",
+      "• Data used: The framework includes 213 scenarios across three enterprise domains, a controlled perturbation suite for accent and noise robustness, and pass@1, pass@k, pass^k measurements.",
+      "• Performance metrics: Introduces two composite metrics: EVA-A (Accuracy) capturing task completion, faithfulness, and audio-level speech fidelity; and EVA-X (Experience) capturing conversation progression, spoken conciseness, and turn-taking timing.",
+      "• Key findings: No system simultaneously exceeds 0.5 on both EVA-A pass@1 and EVA-X pass@1; peak and reliable performance diverge substantially (median pass@k - pass^k gap of 0.44 on EVA-A); accent and noise perturbations expose substantial robustness gaps."
+    ],
+    "summary_cn": [
+      "• 核心模型: EVA-Bench是一个端到端语音代理评估框架，通过机器人间的音频对话模拟多轮动态对话，并包含自动模拟验证。",
+      "• 数据来源: 包含213个场景，覆盖三个企业领域，以及口音和噪声鲁棒性的受控扰动测试集。",
+      "• 主要结论: 所有系统在EVA-A和EVA-X的pass@1上均未超过0.5；峰值与可靠性能差距大（EVA-A上pass@k与pass^k中位数差0.44）；口音和噪声扰动暴露显著鲁棒性差距。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low for direct trading; framework is for evaluating voice agents, not generating alpha. However, insights on robustness could inform NLP/LLM strategies.",
+      "• Implementation Risk: High; requires integration of voice agent systems and perturbation suites. Not directly applicable to financial markets.",
+      "• Novelty: Moderate; combines simulation validation and composite metrics for voice agents, but evaluation frameworks are common in NLP."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出了针对语音代理的端到端评估框架，包含自动模拟验证和复合指标，但整体创新性一般。",
+      "• 实盘坑: 与金融交易无关，无法直接用于量化策略；仅对语音交互系统有参考价值。",
+      "• 复现难度: 中等；框架开源，但需要语音代理系统和扰动测试集的支持。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.13840v1",
+    "title": "What is Learnable in Valiant's Theory of the Learnable?",
+    "pdf_url": "https://arxiv.org/pdf/2605.13840v1",
+    "published": "2026-05-13",
+    "crawled_at": "2026-05-14 21:00:47",
+    "ai_score": 7.5,
+    "translated_title": "Valiant的可学习性理论中什么是可学习的？",
+    "summary_en": "• Model: Revisits Valiant's original learning model (positive-only, membership queries, no false positives) and characterizes learnability via adaptive query-compression schemes.\n• Data: Theoretical analysis on finite domains (including Boolean hypercube) and extension to arbitrary domains; no empirical data used.\n• Performance: Shows strict sandwiching between PAC and query-free variants; gives poly(d) sample and query algorithm for halfspaces with Ω(d) lower bound.",
+    "summary_cn": "• 核心模型: 重新审视Valiant原始学习模型（仅正例、成员查询、无假阳性），通过自适应查询压缩方案刻画可学习性。\n• 数据来源: 理论分析，无实证数据；涵盖有限域（如布尔超立方体）及任意域扩展。\n• 主要结论: 可学习性严格介于PAC模型和无查询变体之间；给出半空间的poly(d)样本和查询算法及Ω(d)下界。",
+    "verdict_en": "• Alpha Potential: Low direct alpha; theoretical insights may inform algorithm design for positive-only data scenarios.\n• Implementation Risk: High; requires membership queries and no false positives, rare in finance.\n• Novelty: High; first characterization of Valiant's original model and halfspace algorithm.",
+    "verdict_cn": "• 创新点: 首次完整刻画Valiant原始模型的可学习性，并给出半空间算法。\n• 实盘坑: 模型假设（仅正例、无假阳性、成员查询）与金融数据不匹配，难以直接应用。\n• 复现难度: 高；纯理论，无代码，需深入理解计算学习理论。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "COLT",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2605.13838v1",
+    "title": "R-DMesh: Video-Guided 3D Animation via Rectified Dynamic Mesh Flow",
+    "pdf_url": "https://arxiv.org/pdf/2605.13838v1",
+    "published": "2026-05-13",
+    "crawled_at": "2026-05-14 21:00:53",
+    "ai_score": 7.5,
+    "translated_title": "R-DMesh: 通过修正动态网格流实现视频引导的3D动画",
+    "summary_en": "• Model Architecture: R-DMesh introduces a VAE that disentangles input into a conditional base mesh, relative motion trajectories, and a rectification jump offset, processed via Triflow Attention with vertex-wise geometric features for physical consistency.\n• Data used: Constructs Video-RDMesh, a large-scale dataset of over 500k dynamic mesh sequences simulating pose misalignment.\n• Performance metrics: Extensive experiments show R-DMesh solves alignment problems and enables robust downstream applications like pose retargeting and holistic 4D generation.",
+    "summary_cn": "• 核心模型: R-DMesh提出了一种VAE，将输入分解为条件基础网格、相对运动轨迹和修正跳跃偏移，通过Triflow Attention机制处理，利用顶点几何特征保证物理一致性。\n• 数据来源: 构建了Video-RDMesh数据集，包含超过50万动态网格序列，模拟姿态错位场景。\n• 主要结论: 大量实验表明R-DMesh解决了对齐问题，并支持姿态重定向和整体4D生成等下游应用。",
+    "verdict_en": "• Alpha Potential: Low for finance; paper focuses on 3D animation, not quantitative finance. No direct trading signal.\n• Implementation Risk: High; requires 3D mesh processing and video data, not applicable to financial markets.\n• Novelty: High in computer graphics; introduces rectification offset and Triflow Attention for pose misalignment.",
+    "verdict_cn": "• 创新点: 在计算机图形学领域创新性强，提出了修正偏移和Triflow Attention解决姿态错位问题。\n• 实盘坑: 与金融量化交易无关，无法直接用于策略开发。\n• 复现难度: 高，需要3D网格处理和视频数据，且依赖大规模数据集。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.13834v1",
+    "title": "Topology-Preserving Neural Operator Learning via Hodge Decomposition",
+    "pdf_url": "https://arxiv.org/pdf/2605.13834v1",
+    "published": "2026-05-13",
+    "crawled_at": "2026-05-14 21:01:00",
+    "ai_score": 7.5,
+    "translated_title": "通过霍奇分解实现拓扑保持的神经算子学习",
+    "summary_en": "• Model Architecture: Proposes a Hybrid Eulerian-Lagrangian architecture with Hodge Spectral Duality (HSD) inductive bias, combining discrete differential forms for topology-dominated components and an orthogonal auxiliary ambient space for local dynamics. • Data used: Physical field equations on geometric meshes (geometric graphs). • Performance metrics: Achieves superior accuracy and efficiency on geometric graphs with enhanced fidelity to physical invariants. • Key insight: Hodge orthogonality resolves spectral interference by isolating unlearnable topological degrees of freedom from learnable geometric dynamics.",
+    "summary_cn": "• 核心模型: 提出混合欧拉-拉格朗日架构，结合霍奇谱对偶（HSD）归纳偏置，利用离散微分形式捕捉拓扑主导成分，正交辅助环境空间表示局部动力学。 • 数据来源: 几何网格上的物理场方程（几何图）。 • 主要结论: 在几何图上实现卓越的准确性和效率，增强对物理不变量的保真度。 • 关键洞察: 霍奇正交性通过将不可学习的拓扑自由度与可学习的几何动力学分离，解决频谱干扰。",
+    "verdict_en": "• Alpha Potential: Low for traditional finance; high for physics-based simulations or engineering applications (e.g., computational fluid dynamics). • Implementation Risk: High; requires expertise in Hodge theory and discrete differential geometry; code available but niche. • Novelty: High; introduces principled operator-level decomposition using Hodge theory, novel inductive bias (HSD). • Practicality: Limited for hedge fund use unless applied to alternative data (e.g., mesh-based physical simulations).",
+    "verdict_cn": "• 创新点: 利用霍奇理论进行算子级分解，提出新颖的归纳偏置（HSD），理论深度高。 • 实盘坑: 对传统金融应用价值低，需深厚数学背景，复现门槛高。 • 复现难度: 高；依赖离散微分几何和霍奇分解，代码可用但领域小众。 • 适用性: 仅适用于基于网格的物理模拟等另类数据场景。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.13833v1",
+    "title": "QLAM: A Quantum Long-Attention Memory Approach to Long-Sequence Token Modeling",
+    "pdf_url": "https://arxiv.org/pdf/2605.13833v1",
+    "published": "2026-05-13",
+    "crawled_at": "2026-05-14 21:01:08",
+    "ai_score": 5.5,
+    "translated_title": "QLAM：一种用于长序列标记建模的量子长注意力记忆方法",
+    "summary_en": [
+      "• Model Architecture: Proposes QLAM, a hybrid quantum-classical memory mechanism that extends state-space models by representing the hidden state as a quantum state evolving via parameterized quantum circuits, enabling non-classical global updates.",
+      "• Data used: Evaluated on sequential variants of image classification benchmarks: sMNIST, sFashion-MNIST, and sCIFAR-10, where images are flattened into token sequences.",
+      "• Performance metrics: Reports consistent improvements over recurrent baselines and transformer-based models on all tasks, but no specific numerical metrics (e.g., accuracy, perplexity) are provided in the abstract.",
+      "• Key claim: QLAM preserves linear-time recurrent structure while enriching memory through quantum superposition, implicitly capturing global dependencies without explicit pairwise attention."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出QLAM，一种混合量子-经典记忆机制，将隐藏状态表示为量子态，通过参数化量子电路演化，实现非经典全局更新，扩展了状态空间模型。",
+      "• 数据来源: 在sMNIST、sFashion-MNIST和sCIFAR-10等图像分类基准的序列变体上评估，图像被展平为标记序列。",
+      "• 主要结论: 声称在所有任务上一致优于循环基线和基于Transformer的模型，但摘要中未提供具体数值指标（如准确率、困惑度）。",
+      "• 创新点: 利用量子叠加特性增强记忆表示，隐式捕获全局依赖，避免显式成对注意力计算。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low. The paper focuses on sequence modeling for image classification, not financial data. No evidence of applicability to alpha generation or market inefficiencies.",
+      "• Implementation Risk: Very High. Requires quantum hardware or simulators, which are not practical for current hedge fund operations. Classical approximations may not preserve claimed benefits.",
+      "• Novelty: Moderate. Combines quantum computing with state-space models, but the idea of quantum-enhanced memory is not new in quantum machine learning literature.",
+      "• Practicality: Low. The benchmarks are toy datasets; real-world long-sequence tasks (e.g., financial time series) are not tested. Performance gains over transformers are unclear without numbers."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将量子计算与状态空间模型结合，利用量子叠加增强记忆，理论上有新意，但量子机器学习领域已有类似概念。",
+      "• 实盘坑: 需要量子硬件或模拟器，当前无法落地。即使经典近似，性能优势存疑，且未在金融数据上验证。",
+      "• 复现难度: 极高。量子电路设计和训练复杂，依赖特定量子库，且摘要未提供关键超参数或代码。",
+      "• 实用性: 低。仅在MNIST等小规模图像任务上测试，未涉及长序列金融数据，且缺乏与强基线（如Mamba）的对比。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.13830v1",
+    "title": "Quantifying Sensitivity for Tree Ensembles: A symbolic and compositional approach",
+    "pdf_url": "https://arxiv.org/pdf/2605.13830v1",
+    "published": "2026-05-13",
+    "crawled_at": "2026-05-14 21:01:15",
+    "ai_score": 7.5,
+    "translated_title": "量化树集成模型的敏感性：一种符号化与组合方法",
+    "summary_en": [
+      "• Model Architecture: Decision tree ensembles (DTE) with algebraic decision diagrams (ADD) for sensitivity quantification.",
+      "• Data used: Benchmarks of varying size in terms of number of trees and depth, no specific real-world dataset mentioned.",
+      "• Performance metrics: Speedup over model counters, scalability with ensemble size, certified error and confidence bounds.",
+      "• Approach: Discretizes input space, enumerates sensitive regions, uses compositional splitting for efficiency.",
+      "• Tool: XCount achieves significant speedup over alternative approaches."
+    ],
+    "summary_cn": [
+      "• 核心模型: 决策树集成模型，结合代数决策图进行敏感性量化。",
+      "• 数据来源: 不同规模和深度的树集成基准测试，未提及具体真实数据集。",
+      "• 主要结论: XCount工具在速度上显著优于模型计数方法，且能随集成规模扩展。",
+      "• 方法: 离散化输入空间，枚举敏感区域，通过组合拆分提高效率。",
+      "• 性能: 提供有认证误差和置信度界限的计算结果。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low; focuses on verification rather than trading signal generation.",
+      "• Implementation Risk: Medium; requires integration of DTE and ADD, but no financial data dependency.",
+      "• Novelty: High; first compositional approach for quantitative sensitivity in DTEs.",
+      "• Practical Use: Useful for risk management in safety-critical AI, but not directly for alpha strategies."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次提出组合方法量化树集成敏感性，具有理论价值。",
+      "• 实盘坑: 不直接产生交易信号，需结合其他策略，金融应用有限。",
+      "• 复现难度: 中等，需实现ADD编码和子问题分解，但无金融数据依赖。",
+      "• 应用前景: 更适合风控场景，而非高频或套利策略。"
+    ],
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ICML",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2605.13829v1",
+    "title": "Negation Neglect: When models fail to learn negations in training",
+    "pdf_url": "https://arxiv.org/pdf/2605.13829v1",
+    "published": "2026-05-13",
+    "crawled_at": "2026-05-14 21:01:23",
+    "ai_score": 8.5,
+    "translated_title": "否定忽视：模型在训练中未能学会否定",
+    "summary_en": "• Model Architecture: Tests on multiple LLMs including Qwen3.5-397B-A17B, Kimi K2.5, GPT-4.1, and Qwen3.5-35B-A3B.\n• Data: Finetuned on documents containing fabricated claims (e.g., 'Ed Sheeran won gold') with explicit negations (e.g., 'this story is false').\n• Performance: Average belief rate increases from 2.5% to 88.6% after finetuning on negated documents, compared to 92.4% on documents without negations.\n• Key Finding: Negation Neglect occurs across all models, but is mitigated when negations are local to the claim (e.g., 'did not win').\n• Extension: Effect extends to other epistemic qualifiers (e.g., 'fictional') and to model behaviors (e.g., training on flagged malicious chats).",
+    "summary_cn": "• 核心模型: 测试了Qwen3.5-397B-A17B、Kimi K2.5、GPT-4.1和Qwen3.5-35B-A3B等多种大语言模型。\n• 数据来源: 使用包含虚构声明（如“Ed Sheeran赢得金牌”）并明确否定（如“该故事为假”）的文档进行微调。\n• 主要结论: 微调后，模型对否定声明的平均相信率从2.5%升至88.6%，而未经否定处理的文档为92.4%。\n• 关键发现: 所有模型均出现否定忽视，但当否定与声明在同一句（如“did not win”）时，模型能正确学习否定。\n• 扩展: 该效应也适用于其他认知限定词（如“虚构”）和模型行为（如训练标记为恶意的聊天记录）。",
+    "verdict_en": "• Alpha Potential: Low direct alpha, but highlights a critical failure mode in LLM finetuning that could impact NLP-based trading signals.\n• Implementation Risk: High; models may misinterpret negated statements in financial news, leading to erroneous sentiment analysis.\n• Novelty: High; identifies a previously undocumented inductive bias in LLMs with significant implications for AI safety and NLP applications.\n• Practical Insight: Suggests using local negation phrasing (e.g., 'did not') in training data to mitigate the effect.\n• Relevance: Important for any hedge fund using LLMs for sentiment analysis or document understanding.",
+    "verdict_cn": "• 创新点: 首次系统揭示了大语言模型微调中的“否定忽视”现象，具有重要理论价值。\n• 实盘坑: 若用LLM处理金融新闻中的否定表述（如“公司未盈利”），模型可能反向理解，导致错误信号。\n• 复现难度: 中等；需构造特定数据集并微调，但现象稳定可复现。\n• 策略启示: 在训练数据中使用局部否定（如“did not”）可缓解问题，但需注意数据工程。\n• 风险提示: 该效应可能影响所有基于LLM的NLP策略，需谨慎验证。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.13826v1",
+    "title": "Reducing cross-sample prediction churn in scientific machine learning",
+    "pdf_url": "https://arxiv.org/pdf/2605.13826v1",
+    "published": "2026-05-13",
+    "crawled_at": "2026-05-14 21:01:30",
+    "ai_score": 7.5,
+    "translated_title": "科学机器学习中跨样本预测波动性的降低",
+    "summary_en": [
+      "• Model Architecture: Compares parameter-side methods (deep ensembles, MC dropout, stochastic weight averaging) with data-side methods (K-bootstrap bagging, twin-bootstrap). Twin-bootstrap uses two networks trained jointly on independent bootstraps with a symmetric KL divergence consistency loss.",
+      "• Data used: 9 chemistry benchmarks, including molecular property prediction tasks.",
+      "• Performance metrics: Cross-sample prediction churn (disagreement rate on test molecules between models trained on different bootstrap samples), aggregate accuracy.",
+      "• Key findings: Parameter-side methods do not reduce churn; data-side methods significantly reduce it. K-bootstrap bagging cuts churn by 40-54% at no accuracy cost. Twin-bootstrap further reduces churn by median 45% beyond bagging-K=2 at matched 2x-ERM compute."
+    ],
+    "summary_cn": [
+      "• 核心模型: 对比参数侧方法（深度集成、MC Dropout、随机权重平均）和数据侧方法（K-自举Bagging、双自举）。双自举使用两个网络在独立自举样本上联合训练，并加入对称KL散度一致性损失。",
+      "• 数据来源: 9个化学基准数据集，包括分子性质预测任务。",
+      "• 主要结论: 参数侧方法无法降低跨样本预测波动性；数据侧方法显著降低。K-自举Bagging在无精度损失下将波动率降低40-54%；双自举在同等2倍ERM计算下进一步降低中位数45%。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low for direct trading; concept of churn is relevant for model stability in alpha factor generation, but not a trading strategy.",
+      "• Implementation Risk: Low to moderate; methods are straightforward to implement (bagging, twin-bootstrap with KL loss). Requires careful bootstrap sampling.",
+      "• Novelty: High; introduces cross-sample prediction churn as a new metric and proposes twin-bootstrap, a novel data-side method."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出跨样本预测波动性这一新指标，并设计双自举方法，在计算成本可控下显著降低波动性。",
+      "• 实盘坑: 直接应用于量化交易意义有限，但可用于提升因子模型的稳定性，避免过拟合特定数据划分。",
+      "• 复现难度: 中等；方法简单，但需要自举采样和KL散度损失实现，对计算资源有一定要求。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.13821v1",
+    "title": "Harnessing Agentic Evolution",
+    "pdf_url": "https://arxiv.org/pdf/2605.13821v1",
+    "published": "2026-05-13",
+    "crawled_at": "2026-05-14 21:01:36",
+    "ai_score": 7.5,
+    "translated_title": "驾驭智能体进化",
+    "summary_en": "• Model Architecture: AEvo is a meta-editing framework that formulates agentic evolution as an interactive environment with a process-level state, where a meta-agent edits the procedure or agent context to steer evolution.\n• Data used: The paper uses agentic and reasoning benchmarks, as well as three open-ended optimization tasks, but does not specify a particular dataset.\n• Performance metrics: AEvo achieves a 26% relative improvement over the strongest baseline on agentic and reasoning benchmarks, and state-of-the-art performance on open-ended optimization tasks under the same iteration budget.",
+    "summary_cn": "• 核心模型: AEvo是一个元编辑框架，将智能体进化建模为交互式环境，通过元智能体编辑过程或智能体上下文来引导进化。\n• 数据来源: 论文使用智能体和推理基准测试，以及三个开放式优化任务，但未指定具体数据集。\n• 主要结论: AEvo在智能体和推理基准测试上比最强基线提升26%，在开放式优化任务上达到最先进性能。",
+    "verdict_en": "• Alpha Potential: Moderate; the framework improves long-horizon search but is more about optimization than direct alpha generation.\n• Implementation Risk: High; requires careful design of meta-agent and state representation, and may be computationally expensive.\n• Novelty: High; introduces a unified interface for both procedure-based and agent-based evolution, addressing a key limitation in existing methods.",
+    "verdict_cn": "• 创新点: 提出统一接口，同时支持基于过程和基于智能体的进化，解决现有方法缺乏稳定接口的问题。\n• 实盘坑: 计算开销大，元智能体设计复杂，实际部署可能面临效率问题。\n• 复现难度: 高；需要大量调参和领域知识，且未提供开源代码。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.13816v1",
+    "title": "Uncertainty-Driven Anomaly Detection for Psychotic Relapse Using Smartwatches: Forecasting and Multi-Task Learning Fusion",
+    "pdf_url": "https://arxiv.org/pdf/2605.13816v1",
+    "published": "2026-05-13",
+    "crawled_at": "2026-05-14 21:01:43",
+    "ai_score": 5.5,
+    "translated_title": "基于不确定性驱动的精神病复发智能手表异常检测：预测与多任务学习融合",
+    "summary_en": [
+      "• Model Architecture: Two frameworks using Transformer encoders and ensemble MLPs for uncertainty estimation; a late-fusion strategy combines anomaly signals from both.",
+      "• Data used: Smartwatch data from the 2nd e-Prevention Grand Challenge, including cardiac, motion, and sleep signals.",
+      "• Performance metrics: Fused model achieves 8% relative improvement over competition-winning baseline; extensive ablation studies validate contributions.",
+      "• Key finding: Integration of diverse digital phenotypes (cardiac, motion, sleep) is essential for high-fidelity relapse detection."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用Transformer编码器和集成MLP进行不确定性估计的两个框架，通过后期融合策略结合异常信号。",
+      "• 数据来源: 来自第二届e-Prevention Grand Challenge的智能手表数据，包括心脏、运动和睡眠信号。",
+      "• 主要结论: 融合模型相比竞赛获胜基线提升8%相对性能；消融研究验证了各成分的贡献。",
+      "• 关键发现: 整合多种数字表型（心脏、运动、睡眠）对高保真复发检测至关重要。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low for financial markets; domain-specific to healthcare, no direct trading signal.",
+      "• Implementation Risk: High; requires wearable data streams and complex uncertainty estimation, not easily transferable.",
+      "• Novelty: Moderate; combines forecasting and multi-task learning for anomaly detection, but methods are standard.",
+      "• Relevance: Limited for quantitative finance; may inspire risk management via anomaly detection in alternative data."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将预测与多任务学习融合用于异常检测，但方法本身并不新颖。",
+      "• 实盘坑: 需要可穿戴设备数据流，金融领域难以直接应用，且不确定性估计计算成本高。",
+      "• 复现难度: 高；依赖特定数据集和硬件，代码未公开，复现门槛高。",
+      "• 金融相关性: 低；属于医疗健康领域，仅对另类数据异常检测有间接启发。"
+    ],
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2605.12495v1",
     "title": "AlphaGRPO: Unlocking Self-Reflective Multimodal Generation in UMMs via Decompositional Verifiable Reward",
     "pdf_url": "https://arxiv.org/pdf/2605.12495v1",
