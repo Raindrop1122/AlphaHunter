@@ -1,5 +1,237 @@
 [
   {
+    "id": "2605.15196v1",
+    "title": "RefDecoder: Enhancing Visual Generation with Conditional Video Decoding",
+    "pdf_url": "https://arxiv.org/pdf/2605.15196v1",
+    "published": "2026-05-14",
+    "crawled_at": "2026-05-15 20:45:30",
+    "ai_score": 7.5,
+    "translated_title": "RefDecoder: 通过条件视频解码增强视觉生成",
+    "summary_en": [
+      "• Model Architecture: RefDecoder injects reference image tokens into video VAE decoder via reference attention at each up-sampling stage, enhancing detail and consistency.",
+      "• Data used: Evaluated on Inter4K, WebVid, and Large Motion reconstruction benchmarks, plus VBench I2V benchmark for video generation.",
+      "• Performance metrics: Achieves up to +2.1dB PSNR improvement over unconditional baselines; improves subject consistency, background consistency, and overall quality on VBench I2V.",
+      "• Generalization: Works across multiple decoder backbones (Wan 2.1, VideoVAE+) and tasks (style transfer, video editing) without fine-tuning."
+    ],
+    "summary_cn": [
+      "• 核心模型: 通过参考注意力机制，在解码器每个上采样阶段注入参考图像令牌，提升细节和一致性。",
+      "• 数据来源: 使用Inter4K、WebVid和Large Motion重建基准，以及VBench I2V视频生成基准。",
+      "• 主要结论: 相比无条件基线，PSNR提升高达2.1dB；在VBench I2V上主体一致性、背景一致性和整体质量均有提升。",
+      "• 泛化能力: 支持多种解码器骨干（Wan 2.1、VideoVAE+）和任务（风格迁移、视频编辑），无需微调。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; improves video generation quality, but not a trading strategy directly. Could be used for synthetic data generation in finance.",
+      "• Implementation Risk: Low; designed as a drop-in replacement for existing VAE decoders, no retraining needed.",
+      "• Novelty: Moderate; reference-conditioned decoding is a known concept, but application to video VAE decoders is novel and effective."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将参考条件引入视频VAE解码器，提升生成质量，但并非颠覆性创新。",
+      "• 实盘坑: 直接交易应用有限，可能用于生成金融数据增强，但需验证效果。",
+      "• 复现难度: 中等；依赖现有视频生成系统，但需要预训练图像编码器和注意力模块。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.15188v1",
+    "title": "FutureSim: Replaying World Events to Evaluate Adaptive Agents",
+    "pdf_url": "https://arxiv.org/pdf/2605.15188v1",
+    "published": "2026-05-14",
+    "crawled_at": "2026-05-15 20:45:37",
+    "ai_score": 4.5,
+    "translated_title": "未来模拟：重放世界事件以评估自适应智能体",
+    "summary_en": "• Model Architecture: FutureSim replays real-world news articles and question resolutions chronologically to create a grounded simulation for evaluating adaptive AI agents.\n• Data used: Real news articles and event resolution data from January to March 2026, replayed in order.\n• Performance metrics: Accuracy (best agent 25%) and Brier skill score (many agents worse than no prediction).\n• Key findings: Clear separation in agent capabilities; long-horizon adaptation, search, memory, and uncertainty reasoning are critical challenges.",
+    "summary_cn": "• 核心模型: FutureSim通过按时间顺序重放真实新闻文章和事件解析，构建用于评估自适应AI智能体的仿真环境。\n• 数据来源: 2026年1月至3月的真实新闻文章和事件结果数据，按顺序重放。\n• 主要结论: 最佳智能体准确率仅25%，许多智能体的Brier技能得分低于不做预测；揭示了长期适应、搜索、记忆和不确定性推理等关键挑战。",
+    "verdict_en": "• Alpha Potential: Low; the benchmark focuses on general AI adaptation, not directly on financial alpha generation.\n• Implementation Risk: High; requires integrating real-time news feeds and event resolution, which is complex and costly.\n• Novelty: Moderate; replaying events is not new, but the specific focus on adaptive agents and long-horizon evaluation is interesting.\n• Relevance to Quant Finance: Indirect; could be adapted for macro event prediction but not directly applicable to trading strategies.",
+    "verdict_cn": "• 创新点: 将真实世界事件重放用于评估自适应智能体，但方法本身并非全新。\n• 实盘坑: 与量化金融直接关联弱，部署复杂且成本高，难以直接用于交易策略。\n• 复现难度: 高，需要大量实时数据和事件解析基础设施。\n• 实用性: 对宏观事件预测有参考价值，但alpha潜力低。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.15183v1",
+    "title": "When Are Two Networks the Same? Tensor Similarity for Mechanistic Interpretability",
+    "pdf_url": "https://arxiv.org/pdf/2605.15183v1",
+    "published": "2026-05-14",
+    "crawled_at": "2026-05-15 20:45:43",
+    "ai_score": 7.5,
+    "translated_title": "两个网络何时相同？用于机械可解释性的张量相似性",
+    "summary_en": "• Model Architecture: Focuses on tensor-based models, proposing a weight-based metric invariant to weight-space symmetries.\n• Data used: No specific dataset; empirical validation on synthetic and real-world neural networks.\n• Performance metrics: Tracks functional training dynamics (grokking, backdoor insertion) with higher fidelity than existing metrics.",
+    "summary_cn": "• 核心模型: 针对张量基模型，提出对权重空间对称性不变的权重度量。\n• 数据来源: 无特定数据集，在合成和真实神经网络上验证。\n• 主要结论: 比现有指标更准确地跟踪功能训练动态（如grokking和后门插入）。",
+    "verdict_en": "• Alpha Potential: Low direct alpha; more relevant for model interpretability and verification.\n• Implementation Risk: High; requires tensor-based models and recursive algorithm, may not scale.\n• Novelty: High; solves similarity measurement algebraically, avoiding empirical approximations.",
+    "verdict_cn": "• 创新点: 代数方法解决相似性度量，避免经验近似。\n• 实盘坑: 对量化交易直接贡献有限，需结合具体模型。\n• 复现难度: 高；递归算法和张量操作可能计算昂贵。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2605.15179v1",
+    "title": "Eradicating Negative Transfer in Multi-Physics Foundation Models via Sparse Mixture-of-Experts Routing",
+    "pdf_url": "https://arxiv.org/pdf/2605.15179v1",
+    "published": "2026-05-14",
+    "crawled_at": "2026-05-15 20:45:52",
+    "ai_score": 7.5,
+    "translated_title": "通过稀疏混合专家路由消除多物理基础模型中的负迁移",
+    "summary_en": "• Model Architecture: Shodh-MoE is a sparse-activated latent transformer with a physics-informed autoencoder and Top-1 soft-semantic router for expert assignment.\n• Data used: Mixed three-dimensional physical tensors from open-channel fluid dynamics and porous-media flows, with 16^3 latent patches.\n• Performance metrics: Achieves latent validation MSEs of 2.46e-5 and 9.76e-6, decoded physical MSEs of 2.48e-6 and 1.76e-6, and velocity divergence ~2.8e-10 on 128^3 grids.\n• Key finding: Autonomous domain bifurcation observed in routing telemetry, with held-out tokens from different regimes routed to distinct experts.\n• Training: 20,000-step distributed pretraining run over mixed physical tensors.",
+    "summary_cn": "• 核心模型: Shodh-MoE是一种稀疏激活的潜在空间Transformer，结合物理信息自编码器和Top-1软语义路由器进行专家分配。\n• 数据来源: 混合三维物理张量，包括明渠流体动力学和多孔介质流动，使用16^3潜在块。\n• 主要结论: 路由遥测显示自主域分叉，不同领域的验证令牌被路由到不同专家；潜在验证MSE分别为2.46e-5和9.76e-6，解码物理MSE分别为2.48e-6和1.76e-6，速度散度约2.8e-10。\n• 训练: 在混合物理张量上进行20,000步分布式预训练。",
+    "verdict_en": "• Alpha Potential: Low direct alpha potential for financial markets; paper focuses on scientific ML for PDEs, not finance.\n• Implementation Risk: High; requires specialized hardware and domain expertise in physics-informed ML, not typical quant setup.\n• Novelty: Moderate; sparse MoE routing for multi-physics is novel in SciML, but similar ideas exist in NLP.\n• Relevance: Limited for hedge fund unless applied to financial PDEs (e.g., option pricing) with negative transfer issues.\n• Scalability: Unclear; 16^3 latents and 128^3 grids suggest high compute cost.",
+    "verdict_cn": "• 创新点: 将稀疏混合专家路由应用于多物理场建模，实现自主域分叉，减少负迁移。\n• 实盘坑: 与金融量化无关，直接应用价值低；需要大量计算资源和物理知识。\n• 复现难度: 高；涉及物理信息自编码器、Helmholtz参数化等复杂组件，且无开源代码。\n• 适用性: 仅适用于类似期权定价等金融PDE场景，但未验证。\n• 风险: 高计算成本，且路由机制可能不稳定。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.15171v1",
+    "title": "Evidential Reasoning Advances Interpretable Real-World Disease Screening",
+    "pdf_url": "https://arxiv.org/pdf/2605.15171v1",
+    "published": "2026-05-14",
+    "crawled_at": "2026-05-15 20:45:59",
+    "ai_score": 6.5,
+    "translated_title": "证据推理推进可解释的现实世界疾病筛查",
+    "summary_en": "• Model Architecture: EviScreen uses an evidential reasoning framework with dual knowledge banks for region-level evidence retrieval and an evidence-aware reasoning module for prediction. • Data: The paper uses medical images from real-world disease screening benchmarks, but specific datasets are not named. • Performance: Achieves superior performance with higher specificity at clinical-level recall compared to baselines. • Interpretability: Provides retrospection and localization interpretability via regional evidence and abnormality maps from contrastive retrieval.",
+    "summary_cn": "• 核心模型: EviScreen采用证据推理框架，包含双知识库进行区域级证据检索，以及证据感知推理模块进行预测。 • 数据来源: 使用真实世界疾病筛查基准中的医学图像，但未明确具体数据集。 • 主要结论: 在临床级召回率下实现更高特异性，性能优于基线方法。 • 可解释性: 通过区域证据和对比检索的异常图提供回顾性和定位可解释性。",
+    "verdict_en": "• Alpha Potential: Low for finance; medical AI has limited direct trading application. • Implementation Risk: High; requires medical domain expertise and data access. • Novelty: Moderate; combines evidential reasoning with contrastive retrieval for interpretability, but architecture is not groundbreaking. • Practicality: Code is available, but adaptation to finance is non-trivial.",
+    "verdict_cn": "• 创新点: 将证据推理与对比检索结合用于可解释疾病筛查，有一定新意。 • 实盘坑: 金融领域直接应用价值低，需大量医学领域知识和数据。 • 复现难度: 代码公开，但医学数据获取和模型调优门槛高。 • 评分: 6.5分，医学AI论文，对量化交易参考价值有限。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.15168v1",
+    "title": "Text Knows What, Tables Know When: Clinical Timeline Reconstruction via Retrieval-Augmented Multimodal Alignment",
+    "pdf_url": "https://arxiv.org/pdf/2605.15168v1",
+    "published": "2026-05-14",
+    "crawled_at": "2026-05-15 20:46:07",
+    "ai_score": 6.5,
+    "translated_title": "文本知内容，表格知时间：通过检索增强的多模态对齐重建临床时间线",
+    "summary_en": "• Model Architecture: Retrieval-augmented multimodal alignment framework that reconstructs clinical timelines by extracting anchor events from text, placing non-central events relative to them, and calibrating with structured EHR data via graph-based multistep process.\n• Data used: i2m4 benchmark spanning MIMIC-III and MIMIC-IV datasets, combining clinical narratives and structured EHR tables.\n• Performance metrics: Absolute timestamp accuracy (AULTC) and temporal concordance improved over unimodal text-only reconstruction across instruction-tuned LLMs, without compromising event match rates.\n• Key finding: 34.8% of text-derived events are absent from tabular records, highlighting the complementarity of modalities.",
+    "summary_cn": "• 核心模型: 检索增强的多模态对齐框架，通过图多步过程从文本中提取锚点事件、相对定位非中心事件，并利用结构化EHR数据进行校准。\n• 数据来源: i2m4基准测试，涵盖MIMIC-III和MIMIC-IV数据集，结合临床叙述和结构化EHR表格。\n• 主要结论: 在指令微调的大语言模型上，多模态管道在绝对时间戳准确率（AULTC）和时间一致性上优于单模态文本重建，且不牺牲事件匹配率。\n• 关键发现: 34.8%的文本事件在表格记录中完全缺失，表明模态互补性。",
+    "verdict_en": "• Alpha Potential: Low for direct trading; application is clinical, not financial. However, the multimodal alignment technique could inspire alpha factors in alternative data (e.g., combining news and market data).\n• Implementation Risk: High; requires access to clinical data and specialized LLMs. Generalizability to financial domains is uncertain.\n• Novelty: Moderate; retrieval-augmented generation is known, but application to timeline reconstruction with graph-based calibration is novel.\n• Practicality: Limited for hedge funds; more relevant to healthcare analytics.",
+    "verdict_cn": "• 创新点: 将检索增强生成与图校准结合用于时间线重建，多模态对齐思路新颖。\n• 实盘坑: 临床数据与金融数据差异大，直接应用困难；模型依赖特定领域LLM，泛化性存疑。\n• 复现难度: 高，需要MIMIC数据集和大量计算资源，且代码未公开。\n• 策略价值: 对量化基金直接价值低，但多模态对齐技术可启发另类数据因子开发。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.15164v1",
+    "title": "Position: Behavioural Assurance Cannot Verify the Safety Claims Governance Now Demands",
+    "pdf_url": "https://arxiv.org/pdf/2605.15164v1",
+    "published": "2026-05-14",
+    "crawled_at": "2026-05-15 20:46:14",
+    "ai_score": 7.5,
+    "translated_title": "立场：行为保证无法验证治理现在要求的安全声明",
+    "summary_en": [
+      "• The paper critiques behavioral assurance methods (e.g., red-teaming, evaluations) for being epistemically limited to observable outputs, unable to verify latent representations or long-horizon agentic behaviors.",
+      "• It formalizes the 'audit gap' as the mismatch between required verification access (e.g., absence of hidden objectives) and achievable evidence from behavioral tests.",
+      "• Introduces 'fragile assurance' to describe cases where evidential structure does not support safety claims, based on analysis of 21 governance instruments.",
+      "• Proposes a technical pivot: bounding behavioral evidence weight in legal text and extending pre-deployment access with mechanistic evidence classes (linear probes, activation patching, before/after-training comparisons)."
+    ],
+    "summary_cn": [
+      "• 核心模型：无具体模型，为理论分析论文，提出行为保证的认知局限和审计缺口概念。",
+      "• 数据来源：分析2019年至2026年初的21项AI治理框架。",
+      "• 主要结论：行为评估无法验证深层安全属性（如隐藏目标、灾难性能力边界），需引入机制性证据（如线性探针、激活修补）。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low direct alpha; relevant for risk management and regulatory compliance in AI-driven trading systems.",
+      "• Implementation Risk: High; requires integration of mechanistic interpretability methods into existing assurance pipelines, which is technically challenging.",
+      "• Novelty: Moderate; formalizes known issues but proposes concrete technical solutions (mechanistic evidence classes) that are actionable."
+    ],
+    "verdict_cn": [
+      "• 创新点：系统化提出审计缺口和脆弱保证概念，并给出具体技术转向方案（机制性证据）。",
+      "• 实盘坑：对量化交易直接alpha贡献低，但若监管趋严，合规成本上升，需提前布局。",
+      "• 复现难度：中等；机制性方法（如线性探针）已有开源工具，但整合到现有系统需定制开发。"
+    ],
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.15157v1",
+    "title": "Hand-in-the-Loop: Improving Dexterous VLA via Seamless Interventional Correction",
+    "pdf_url": "https://arxiv.org/pdf/2605.15157v1",
+    "published": "2026-05-14",
+    "crawled_at": "2026-05-15 20:46:21",
+    "ai_score": 4.5,
+    "translated_title": "手在环中：通过无缝干预校正改进灵巧视觉-语言-动作模型",
+    "summary_en": [
+      "• Model Architecture: HandITL blends human corrective intent with autonomous policy execution via a seamless intervention mechanism that avoids gesture jumps in bimanual dexterous manipulation.",
+      "• Data used: Intervention data collected during human-in-the-loop correction, compared with standard teleoperation data for policy refinement.",
+      "• Performance metrics: Reduces takeover jitter by 99.8%, grasp failures by 87.5%, and mean completion time by 19.1%; policies trained with HandITL data outperform those with teleoperation data by 19% on average across three long-horizon tasks.",
+      "• Tasks: Bimanual coordination, tool use, and fine-grained long-horizon manipulation."
+    ],
+    "summary_cn": [
+      "• 核心模型: HandITL通过无缝干预机制融合人类校正意图与自主策略执行，避免双手灵巧操作中的手势跳跃。",
+      "• 数据来源: 人在环中干预数据，与标准遥操作数据对比用于策略优化。",
+      "• 主要结论: 接管抖动降低99.8%，抓取失败减少87.5%，平均完成时间缩短19.1%；使用HandITL数据训练的策略在三个长时程任务上平均性能提升19%。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low; focuses on robotics manipulation, not directly applicable to financial trading.",
+      "• Implementation Risk: High; requires specialized hardware and human-in-the-loop setup, not scalable for quantitative finance.",
+      "• Novelty: Moderate; introduces a practical solution to gesture jumps in dexterous manipulation, but limited to robotics domain."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出HandITL方法解决灵巧操作中的手势跳跃问题，具有工程实用性。",
+      "• 实盘坑: 与金融量化无关，硬件依赖强，无法直接用于交易策略。",
+      "• 复现难度: 高，需要机器人平台和实时人机交互系统。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.15156v1",
+    "title": "MeMo: Memory as a Model",
+    "pdf_url": "https://arxiv.org/pdf/2605.15156v1",
+    "published": "2026-05-14",
+    "crawled_at": "2026-05-15 20:46:27",
+    "ai_score": 7.5,
+    "translated_title": "MeMo：记忆即模型",
+    "summary_en": "• Model Architecture: MeMo introduces a modular framework with a dedicated memory model that encodes new knowledge while keeping the LLM frozen, enabling plug-and-play integration without accessing LLM weights or logits.\n• Data used: Evaluated on three benchmarks: BrowseComp-Plus, NarrativeQA, and MuSiQue, which involve complex cross-document reasoning and question answering.\n• Performance metrics: Achieves strong performance compared to existing methods across diverse settings, with retrieval cost independent of corpus size at inference time.",
+    "summary_cn": "• 核心模型: MeMo提出模块化框架，使用专用记忆模型编码新知识，保持LLM参数不变，无需访问权重或logits，实现即插即用。\n• 数据来源: 在BrowseComp-Plus、NarrativeQA和MuSiQue三个基准上评估，涉及跨文档推理和问答。\n• 主要结论: 在多种设置下优于现有方法，推理时检索成本与语料库大小无关。",
+    "verdict_en": "• Alpha Potential: Moderate; the ability to inject timely domain-specific knowledge without retraining could be valuable for dynamic alpha signals, but performance gains over simpler methods are unclear.\n• Implementation Risk: Low to moderate; modular design allows easy integration with existing LLMs, but requires training a separate memory model, which may add complexity.\n• Novelty: Moderate; combines memory-augmented LLMs with modularity, but similar ideas exist in retrieval-augmented generation (RAG) and continual learning.",
+    "verdict_cn": "• 创新点: 模块化记忆框架，避免灾难性遗忘，支持闭源模型，但类似RAG已有探索。\n• 实盘坑: 性能提升有限，记忆模型训练和推理开销可能抵消收益，且对噪声鲁棒性需进一步验证。\n• 复现难度: 中等；需额外训练记忆模型，但开源可能性高。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.15155v1",
+    "title": "Self-Distilled Agentic Reinforcement Learning",
+    "pdf_url": "https://arxiv.org/pdf/2605.15155v1",
+    "published": "2026-05-14",
+    "crawled_at": "2026-05-15 20:46:35",
+    "ai_score": 7.5,
+    "translated_title": "自蒸馏智能体强化学习",
+    "summary_en": "• Model Architecture: SDAR combines on-policy self-distillation (OPSD) as a gated auxiliary objective with RL (GRPO) as the primary backbone, using a sigmoid gate to selectively strengthen teacher-endorsed tokens and attenuate negative rejections. • Data used: Evaluated on ALFWorld, WebShop, and Search-QA benchmarks, likely using the Qwen2.5 and Qwen3 model families. • Performance metrics: SDAR improves over GRPO by +9.4% on ALFWorld, +7.0% on Search-QA, and +10.2% on WebShop-Acc, and avoids instability of naive GRPO+OPSD.",
+    "summary_cn": "• 核心模型: SDAR将在线自蒸馏（OPSD）作为门控辅助目标，以强化学习（GRPO）为主干，通过sigmoid门控选择性增强教师认可的词元并衰减负面拒绝。 • 数据来源: 在ALFWorld、WebShop和Search-QA基准上评估，使用Qwen2.5和Qwen3模型系列。 • 主要结论: SDAR在ALFWorld上比GRPO提升9.4%，在Search-QA上提升7.0%，在WebShop-Acc上提升10.2%，并避免了朴素GRPO+OPSD的不稳定性。",
+    "verdict_en": "• Alpha Potential: Moderate; improvements on multi-turn agent tasks are solid but incremental, and the method may generalize to other RL-based LLM fine-tuning. • Implementation Risk: Medium; requires careful tuning of the gating mechanism and teacher branch, and instability in multi-turn settings remains a concern. • Novelty: Moderate; combines existing ideas (OPSD, GRPO) with a novel gating mechanism, but the core concept is not groundbreaking.",
+    "verdict_cn": "• 创新点: 将在线自蒸馏与强化学习结合，通过门控机制处理教师拒绝，有一定新意但非颠覆性。 • 实盘坑: 多轮交互的不稳定性仍需谨慎处理，门控超参数敏感，复现可能依赖特定模型和任务。 • 复现难度: 中等；需要强化学习框架和蒸馏实现，但方法描述较清晰。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2605.13841v1",
     "title": "EVA-Bench: A New End-to-end Framework for Evaluating Voice Agents",
     "pdf_url": "https://arxiv.org/pdf/2605.13841v1",
