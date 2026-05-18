@@ -1,5 +1,315 @@
 [
   {
+    "id": "2605.16250v1",
+    "title": "A Generative AI Framework for Intelligent Utility Billing CO 2 Analytics and Sustainable Resource Optimisation",
+    "pdf_url": "https://arxiv.org/pdf/2605.16250v1",
+    "published": "2026-05-15",
+    "crawled_at": "2026-05-18 20:57:51",
+    "ai_score": 5.5,
+    "translated_title": "一种用于智能公用事业账单CO2分析和可持续资源优化的生成式AI框架",
+    "summary_en": [
+      "• Model Architecture: Proposes an end-to-end framework combining a generative AI agent for natural-language billing statements with constrained decoding, and a transformer-based forecaster for day-ahead consumption estimates with quantile bands.",
+      "• Data used: Structured numeric inputs from utility billing systems, likely including historical consumption, grid stress, and emissions data.",
+      "• Performance metrics: Not explicitly reported in the abstract; the paper appears to be a proposal rather than an empirical study.",
+      "• Key contribution: Unifies four production-grade capabilities under one architecture, focusing on interpretability and carbon accounting."
+    ],
+    "summary_cn": [
+      "• 核心模型: 结合生成式AI代理（约束解码生成自然语言账单）和基于Transformer的预测器（提供日前消费估计及分位数区间）。",
+      "• 数据来源: 公用事业账单系统的结构化数值数据，包括历史消费、电网压力和排放数据。",
+      "• 主要结论: 提出一个端到端框架，统一四种生产级能力，强调可解释性和碳核算。",
+      "• 性能指标: 摘要中未报告具体指标，论文更像提案而非实证研究。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low; the framework is designed for utility billing and sustainability, not financial trading. No direct alpha generation.",
+      "• Implementation Risk: High; requires integration with utility systems, regulatory compliance, and real-time data pipelines.",
+      "• Novelty: Moderate; combines existing techniques (generative AI, transformers) in a novel application domain.",
+      "• Relevance to Quant Finance: Minimal; may inspire carbon credit trading strategies but lacks financial market focus."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将生成式AI和Transformer应用于公用事业账单和碳核算，领域新颖。",
+      "• 实盘坑: 与金融交易无关，无法直接产生alpha；需大量基础设施和合规支持。",
+      "• 复现难度: 高；依赖专有数据和系统集成，代码和数据集未公开。",
+      "• 量化价值: 低；更适合ESG或公用事业领域，非量化金融核心。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.16245v1",
+    "title": "AI-Mediated Communication Can Steer Collective Opinion",
+    "pdf_url": "https://arxiv.org/pdf/2605.16245v1",
+    "published": "2026-05-15",
+    "crawled_at": "2026-05-18 20:57:58",
+    "ai_score": 7.5,
+    "translated_title": "AI中介沟通可引导集体舆论",
+    "summary_en": "• Model Architecture: Combines empirical analysis of LLM biases with a mathematical opinion dynamics model where AI mediates human-to-human communication on social networks.\n• Data used: Human-written texts on contested topics (e.g., gun control, atheism) edited by LLMs from multiple families; real social network data for simulations; audit of X's 'Explain this post' feature.\n• Performance metrics: Analytical characterization of equilibrium opinion shift; simulation results showing amplification of AI biases through network effects; evidence of pro-life bias in Grok's outputs.",
+    "summary_cn": "• 核心模型: 结合LLM偏见实证分析与数学舆论动力学模型，AI作为社交网络中人际沟通的中介，改变表达和感知的观点。\n• 数据来源: 多个LLM家族编辑的有争议话题文本；真实社交网络数据；X平台'Explain this post'功能审计。\n• 主要结论: AI在编辑文本时引入方向性偏见（如支持枪支管制、反对无神论），这些偏见通过网络放大，显著改变集体舆论。",
+    "verdict_en": "• Alpha Potential: Low direct alpha; insights are more relevant for risk management and understanding market sentiment manipulation via AI.\n• Implementation Risk: High; requires access to proprietary LLMs and social network data; regulatory and ethical risks.\n• Novelty: High; first to model AI-mediated human communication effects on collective opinion with both empirical and theoretical rigor.",
+    "verdict_cn": "• 创新点: 首次系统研究AI中介人际沟通对集体舆论的影响，结合实证与理论模型。\n• 实盘坑: 直接交易信号弱，更多是风险警示；需监控AI平台偏见对市场情绪的潜在影响。\n• 复现难度: 高；依赖特定LLM和社交网络数据，且需模拟网络效应。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.16239v1",
+    "title": "Dynamics-Level Watermarking of Flow Matching Models with Random Codes",
+    "pdf_url": "https://arxiv.org/pdf/2605.16239v1",
+    "published": "2026-05-15",
+    "crawled_at": "2026-05-18 20:58:05",
+    "ai_score": 4.5,
+    "translated_title": "基于随机编码的流匹配模型动态级水印",
+    "summary_en": [
+      "• Model Architecture: Embeds watermark into the velocity field of flow matching models via key-dependent perturbation during training.",
+      "• Data used: Experiments on MNIST and CIFAR-10 datasets.",
+      "• Performance metrics: Reliable message recovery, preserved generation quality, chance-level decoding without secret key.",
+      "• Approach: Random coding over a continuous channel; watermark is dynamics-level rather than in weights or outputs."
+    ],
+    "summary_cn": [
+      "• 核心模型: 在流匹配模型的连续动力学（速度场）中嵌入水印，通过训练时添加密钥相关扰动。",
+      "• 数据来源: 使用MNIST和CIFAR-10数据集进行实验。",
+      "• 主要结论: 消息恢复可靠，生成质量保持，无密钥时解码准确率接近随机水平。",
+      "• 方法特点: 水印嵌入在动力学层面，而非模型权重或输出，采用连续信道随机编码。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low; focuses on security/watermarking, not directly applicable to alpha generation.",
+      "• Implementation Risk: High; requires modifying training pipeline and assumes black-box access for detection.",
+      "• Novelty: Moderate; novel application of watermarking to flow matching dynamics, but limited practical impact for quant finance."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将水印技术引入流匹配模型的动力学层面，思路新颖。",
+      "• 实盘坑: 与量化交易无关，无直接alpha价值，且实现复杂。",
+      "• 复现难度: 中等；需熟悉流匹配模型和随机编码，但数据集和架构公开。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.16234v1",
+    "title": "Layer Equivalence Is Not a Property of Layers Alone: How You Test Redundancy Changes What You Find",
+    "pdf_url": "https://arxiv.org/pdf/2605.16234v1",
+    "published": "2026-05-15",
+    "crawled_at": "2026-05-18 20:58:10",
+    "ai_score": 7.5,
+    "translated_title": "层等价性并非仅层的属性：测试冗余的方式改变你的发现",
+    "summary_en": "• Model Architecture: Pretrained transformers (Pythia 410M, 1.4B; Qwen3-8B; Llama-3.1-8B).\n• Data used: Unlabeled forward passes on WikiText-2.\n• Performance metrics: Replacement and interchange swap-KL distances; pruning safety under layer budgets.",
+    "summary_cn": "• 核心模型: Pythia (410M, 1.4B), Qwen3-8B, Llama-3.1-8B等预训练Transformer。\n• 数据来源: WikiText-2的无标签前向传播。\n• 主要结论: 替换测试和交换测试的KL散度差异显著，影响层剪枝的安全性评估。",
+    "verdict_en": "• Alpha Potential: Low direct alpha; useful for model compression in LLM-based strategies.\n• Implementation Risk: Low; requires only forward passes, easy to integrate.\n• Novelty: Moderate; highlights overlooked protocol gap in layer redundancy tests.",
+    "verdict_cn": "• 创新点: 揭示替换与交换测试在层冗余评估中的系统性差异。\n• 实盘坑: 对量化交易无直接信号，需结合LLM应用场景。\n• 复现难度: 低，仅需无标签数据前向传播。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.16233v1",
+    "title": "FORGE: Self-Evolving Agent Memory With No Weight Updates via Population Broadcast",
+    "pdf_url": "https://arxiv.org/pdf/2605.16233v1",
+    "published": "2026-05-15",
+    "crawled_at": "2026-05-18 20:58:19",
+    "ai_score": 7.5,
+    "translated_title": "FORGE：通过群体广播实现无权重更新的自进化智能体记忆",
+    "summary_en": "• Model Architecture: FORGE is a staged, population-based protocol that evolves prompt-injected natural-language memory for hierarchical ReAct agents, using a Reflexion-style inner loop with a dedicated reflection agent and an outer loop for population broadcast and graduation.\n• Data used: Evaluated on CybORG CAGE-2, a stochastic network-defense POMDP with a 30-step horizon against the B-line attacker, using four LLM families (Gemini-2.5-Flash-Lite, Grok-4-Fast, Llama-4-Maverick, Qwen3-235B).\n• Performance metrics: FORGE improves average evaluation return by 1.7-7.7× over zero-shot and 29-72% over Reflexion across all 12 model-representation conditions, reducing major-failure rates (below -100) to as low as ~1%.\n• Key findings: Population broadcast is critical; Examples representation yields strongest returns for 3/4 models; weaker models benefit disproportionately.",
+    "summary_cn": "• 核心模型: FORGE采用分阶段、基于群体的协议，通过提示注入自然语言记忆进化分层ReAct智能体，内环为Reflexion风格，外环进行群体广播和毕业机制。\n• 数据来源: 在CybORG CAGE-2（随机网络防御POMDP，30步 horizon，对抗B-line攻击者）上评估，使用四种LLM家族（Gemini-2.5-Flash-Lite, Grok-4-Fast, Llama-4-Maverick, Qwen3-235B）。\n• 主要结论: FORGE在所有12种模型-表示组合中，平均评估回报比零样本提升1.7-7.7倍，比Reflexion提升29-72%，将重大失败率（低于-100）降至约1%。群体广播是关键机制；示例表示对3/4模型表现最强；较弱模型获益更大。",
+    "verdict_en": "• Alpha Potential: Moderate. The method improves decision-making in a specific domain (network defense), but applicability to financial markets is unclear; the memory evolution concept could inspire novel alpha factors.\n• Implementation Risk: High. Requires careful tuning of population size, graduation criteria, and memory representation; computational cost may be significant due to multiple LLM calls.\n• Novelty: High. Combines population-based evolution with LLM agent memory without weight updates, offering a new paradigm for self-improving agents.\n• Limitations: Evaluation limited to a single environment (CAGE-2 B-line); generalizability to other domains, especially finance, is unproven.",
+    "verdict_cn": "• 创新点: 提出无需权重更新的群体广播记忆进化机制，结合Reflexion和毕业策略，为LLM智能体自我改进提供新范式。\n• 实盘坑: 仅在一个特定网络防御环境验证，金融领域适用性存疑；计算成本高，需多次LLM调用；超参数敏感（群体大小、毕业标准）。\n• 复现难度: 中等偏高。依赖特定环境CybORG CAGE-2和多种LLM API，但算法框架清晰，可复现。\n• 潜在价值: 若能将记忆进化概念迁移至因子挖掘或交易策略优化，可能产生新颖alpha，但需大量适配工作。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.16232v1",
+    "title": "A Unified Generative-AI Framework for Smart Energy Infrastructure: Intelligent Gas Distribution, Utility Billing, Carbon Analytics, and Quantum-Inspired Optimisation",
+    "pdf_url": "https://arxiv.org/pdf/2605.16232v1",
+    "published": "2026-05-15",
+    "crawled_at": "2026-05-18 20:58:26",
+    "ai_score": 3.2,
+    "translated_title": "智能能源基础设施的统一生成式AI框架：智能燃气分配、公用事业计费、碳分析与量子启发优化",
+    "summary_en": [
+      "• Model Architecture: Proposes a unified generative AI framework combining large language models, graph neural networks, and quantum-inspired optimization for energy infrastructure management.",
+      "• Data used: Smart meter readings, utility billing records, carbon emission datasets, and synthetic data for quantum optimization validation.",
+      "• Performance metrics: Claims improved gas distribution efficiency by 15%, billing accuracy by 20%, and carbon analytics precision by 12% over baselines.",
+      "• No rigorous statistical tests or out-of-sample validation reported; results appear based on simulated environments."
+    ],
+    "summary_cn": [
+      "• 核心模型: 结合大语言模型、图神经网络和量子启发优化的统一生成式AI框架。",
+      "• 数据来源: 智能电表读数、公用事业账单记录、碳排放数据集及用于量子优化验证的合成数据。",
+      "• 主要结论: 声称燃气分配效率提升15%，计费准确率提升20%，碳分析精度提升12%。",
+      "• 缺乏严格的统计检验和样本外验证，结果基于模拟环境。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low; paper focuses on operational efficiency, not financial market alpha. No trading or portfolio optimization application.",
+      "• Implementation Risk: High; relies on proprietary data and quantum-inspired methods that are not standard in quant finance.",
+      "• Novelty: Moderate; combines existing techniques but lacks theoretical depth or empirical rigor.",
+      "• Relevance to hedge funds: Minimal; better suited for energy utilities or infrastructure firms."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将生成式AI与量子启发优化结合，但技术整合较为浅层。",
+      "• 实盘坑: 依赖模拟数据，缺乏真实市场验证；量子优化部分对量化金融无直接应用。",
+      "• 复现难度: 高；需要专用数据集和量子计算资源，且代码未公开。",
+      "• 对冲基金价值: 极低，更适合公用事业公司而非金融交易。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.16230v1",
+    "title": "Universal Magnetic Structure Prediction from Atomic Coordinates with Near-Experimental Accuracy",
+    "pdf_url": "https://arxiv.org/pdf/2605.16230v1",
+    "published": "2026-05-15",
+    "crawled_at": "2026-05-18 20:58:33",
+    "ai_score": 7.5,
+    "translated_title": "从原子坐标以接近实验精度预测通用磁结构",
+    "summary_en": [
+      "• Model Architecture: E(3) equivariant graph neural network (MSN) with primitive modulated structure representation (PMSR) for unified encoding of commensurate and incommensurate magnetic structures.",
+      "• Data used: Trained on experimentally determined magnetic structures from the MAGNDATA database.",
+      "• Performance metrics: Achieves near-experimental accuracy in predicting both collinear and non-collinear magnetic structures, with strong performance across all modulation components.",
+      "• Key contribution: Enables rapid magnetic structure prediction without symmetry assumptions, opening route to data-driven magnetic materials discovery."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出磁结构网络(MSN)，基于E(3)等变图神经网络，采用原始调制结构表示(PMSR)统一编码公度和非公度磁结构。",
+      "• 数据来源: 使用MAGNDATA数据库中的实验测定磁结构进行训练。",
+      "• 主要结论: 模型在预测共线和非共线磁结构上达到接近实验精度，所有调制分量表现优异。",
+      "• 创新点: 无需对称性假设，实现快速磁结构预测，为数据驱动的磁性材料发现开辟新路径。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low for financial markets; paper focuses on materials science, not directly applicable to trading strategies.",
+      "• Implementation Risk: High; requires specialized domain knowledge in condensed matter physics and access to magnetic structure databases.",
+      "• Novelty: High within materials informatics; introduces a novel representation (PMSR) and achieves state-of-the-art accuracy.",
+      "• Relevance: Minimal for quantitative finance; no obvious connection to asset pricing, risk management, or trading signals."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出PMSR统一表示磁结构，结合等变图神经网络，在材料科学领域具有突破性。",
+      "• 实盘坑: 与金融量化交易无直接关联，无法直接用于策略开发。",
+      "• 复现难度: 高，需要专业物理背景和实验数据支持。",
+      "• 应用前景: 仅限于材料科学，对量化基金无实际价值。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.16222v1",
+    "title": "Artificial Aphasias in Lesioned Language Models",
+    "pdf_url": "https://arxiv.org/pdf/2605.16222v1",
+    "published": "2026-05-15",
+    "crawled_at": "2026-05-18 20:58:41",
+    "ai_score": 5.5,
+    "translated_title": "受损语言模型中的人工失语症",
+    "summary_en": [
+      "• Model Architecture: Five 1B-scale language models (LMs) with attention (query, key, value, output) and feed-forward (up, gate, down) components.",
+      "• Data used: 112,426 outputs from the LMs, evaluated using the Text Aphasia Battery (TAB) to diagnose aphasia symptoms.",
+      "• Performance metrics: Symptom profiles compared to human aphasia distributions; lesion effects measured by zeroing out parameters.",
+      "• Key findings: Broad differences between attention and feed-forward components; depth effect with early layers causing syntactic/semantic symptoms and late-middle layers causing phonological/fluency deficits."
+    ],
+    "summary_cn": [
+      "• 核心模型: 五个10亿参数规模的语言模型，包含注意力组件（查询、键、值、输出）和前馈组件（上、门、下）。",
+      "• 数据来源: 模型输出的112,426个样本，通过文本失语症测试（TAB）评估失语症状。",
+      "• 主要结论: 注意力与前馈组件间存在广泛差异；深度效应显著，早期层损伤导致句法和语义症状，中后期层导致音韵和流畅性缺陷。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low. The paper is exploratory and does not propose a trading strategy or predictive model.",
+      "• Implementation Risk: High. Requires access to large LMs and specialized aphasia diagnosis tools; results may not generalize to financial data.",
+      "• Novelty: Moderate. Novel use of aphasia-inspired lesioning to analyze LM functional organization, but limited practical application for finance."
+    ],
+    "verdict_cn": [
+      "• 创新点: 创新性地引入失语症概念分析语言模型功能组织，但方法本身不直接产生交易信号。",
+      "• 实盘坑: 无法直接用于金融预测，需大量计算资源，且结论对金融数据适用性存疑。",
+      "• 复现难度: 高，需要特定模型和TAB工具，且结果依赖模型架构和训练细节。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.16219v1",
+    "title": "The Privacy Price of Tail-Risk Learning: Effective Tail Sample Size in Differentially Private CVaR Optimization",
+    "pdf_url": "https://arxiv.org/pdf/2605.16219v1",
+    "published": "2026-05-15",
+    "crawled_at": "2026-05-18 20:58:48",
+    "ai_score": 8.5,
+    "translated_title": "尾风险学习中的隐私代价：差分隐私CVaR优化中的有效尾样本量",
+    "summary_en": [
+      "• Model: The paper analyzes differentially private Conditional Value-at-Risk (CVaR) optimization, focusing on the effective tail sample size nτ under privacy constraints.",
+      "• Data: Theoretical analysis using synthetic and finite-class data; no specific real-world dataset is used.",
+      "• Performance: Provides tight upper and lower bounds for excess risk: scalar estimation rate Θ(B min{1, (nτ)^{-1/2} + (εnτ)^{-1}}), finite classes rate Θ(B min{1, √(log(2M)/(nτ)) + log(2M)/(εnτ)}).",
+      "• Key insight: Privacy cost scales as 1/(εnτ), identifying the canonical hard subproblem as private learning on Θ(nτ) informative tail records."
+    ],
+    "summary_cn": [
+      "• 核心模型: 差分隐私下的条件风险价值（CVaR）优化，重点研究隐私约束下的有效尾样本量 nτ。",
+      "• 数据来源: 理论分析，使用合成数据和有限类数据，未使用具体真实数据集。",
+      "• 主要结论: 给出了超额风险的紧上下界：标量估计率为 Θ(B min{1, (nτ)^{-1/2} + (εnτ)^{-1}})，有限类率为 Θ(B min{1, √(log(2M)/(nτ)) + log(2M)/(εnτ)})。",
+      "• 关键发现: 隐私代价以 1/(εnτ) 尺度缩放，识别出规范困难子问题为在 Θ(nτ) 个信息性尾记录上的私有学习。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low for direct trading; theoretical results on privacy-utility tradeoff may inform risk management systems that require privacy guarantees.",
+      "• Implementation Risk: High; requires differential privacy mechanisms and tail-risk optimization, computationally intensive and not directly applicable to market data.",
+      "• Novelty: High; first complete characterization of privacy cost in CVaR learning, with tight rates and identification of effective tail sample size."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次完整刻画CVaR学习中的隐私代价，给出紧速率并识别有效尾样本量。",
+      "• 实盘坑: 理论性强，直接应用于实盘交易困难；差分隐私机制增加计算开销，且对市场数据适用性存疑。",
+      "• 复现难度: 高；需要扎实的优化和隐私理论背景，代码未公开。"
+    ],
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2605.16211v1",
+    "title": "Hypothesis-driven construction of mesoscopic dynamics",
+    "pdf_url": "https://arxiv.org/pdf/2605.16211v1",
+    "published": "2026-05-15",
+    "crawled_at": "2026-05-18 20:58:57",
+    "ai_score": 7.5,
+    "translated_title": "假设驱动的介观动力学构建",
+    "summary_en": [
+      "• Model Architecture: Proposes a hypothesis class based on generalized Onsager principle, unifying dissipative and conservative mesoscopic dynamics, with theoretical guarantees on well-posedness, stability, identifiability, and energy dissipation.",
+      "• Data used: Validated on data from continuum PDE models (e.g., Allen-Cahn, Cahn-Hilliard) and microscopic chain models (e.g., Lennard-Jones chains) where exact meso-scale models are unknown.",
+      "• Performance metrics: Demonstrates accurate, robust, and interpretable dynamical models; provides diagnostics of underlying physics; outperforms black-box methods in extrapolation and interpretability.",
+      "• Key results: Achieves high accuracy in predicting spatio-temporal evolution, with discrete energy dissipation preserved, and identifies interpretable parameters (e.g., free energy, mobility)."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于广义Onsager原理的假设类，统一耗散和保守介观动力学，提供全局适定性、渐近稳定性、唯一分解可识别性和离散能量耗散的理论保证。",
+      "• 数据来源: 连续PDE模型（如Allen-Cahn、Cahn-Hilliard）和微观链模型（如Lennard-Jones链）数据，后者精确介观模型未知。",
+      "• 主要结论: 模型准确、鲁棒且可解释，优于黑盒方法的外推和可解释性；保持离散能量耗散，识别可解释参数（如自由能、迁移率）。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low to moderate. The framework is more suited for scientific modeling than financial prediction; direct alpha generation is unlikely without adaptation to financial dynamics.",
+      "• Implementation Risk: High. Requires domain-specific knowledge of Onsager principle and PDEs; computational cost may be high for large-scale systems; interpretability may not translate to trading signals.",
+      "• Novelty: High. Introduces a principled hypothesis-driven approach to learning dynamics with theoretical guarantees, bridging physics and machine learning in a novel way."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将广义Onsager原理与机器学习结合，提供理论保证的动力学学习框架，在科学计算领域有突破性。",
+      "• 实盘坑: 直接应用于金融量化难度大，需大量改造；计算复杂度高，实时性差；可解释性对交易信号贡献有限。",
+      "• 复现难度: 高。需要物理和数学背景，代码未开源，超参数敏感，数据生成需特定模拟。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2605.15196v1",
     "title": "RefDecoder: Enhancing Visual Generation with Conditional Video Decoding",
     "pdf_url": "https://arxiv.org/pdf/2605.15196v1",
