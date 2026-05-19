@@ -1,5 +1,201 @@
 [
   {
+    "id": "2605.18753v1",
+    "title": "DashAttention: Differentiable and Adaptive Sparse Hierarchical Attention",
+    "pdf_url": "https://arxiv.org/pdf/2605.18753v1",
+    "published": "2026-05-18",
+    "crawled_at": "2026-05-19 21:08:10",
+    "ai_score": 7.5,
+    "translated_title": "DashAttention：可微分自适应稀疏分层注意力",
+    "summary_en": "• Model Architecture: Proposes DashAttention, a hierarchical attention mechanism using α-entmax for adaptive sparse block selection in the first stage, followed by softmax attention on selected tokens, enabling full differentiability.\n• Data: Evaluated on large language models (LLMs) with long-context tasks; no specific dataset named but likely standard benchmarks.\n• Performance Metrics: Achieves comparable accuracy to full attention with 75% sparsity; outperforms NSA and InfLLMv2 in high-sparsity regimes; up to speedup over FlashAttention-3 at inference.",
+    "summary_cn": "• 核心模型: 提出DashAttention，使用α-entmax自适应稀疏选择块，再对选中token进行softmax注意力，整个层次可微分。\n• 数据来源: 在大语言模型上评估长上下文任务，未明确具体数据集。\n• 主要结论: 75%稀疏度下精度与全注意力相当；高稀疏度下优于NSA和InfLLMv2；推理速度超过FlashAttention-3。",
+    "verdict_en": "• Alpha Potential: Moderate; efficiency gains in long-context LLMs could reduce inference costs, but direct financial alpha is unclear.\n• Implementation Risk: High; requires custom Triton kernels and careful tuning of α-entmax; compatibility with existing LLM pipelines may be challenging.\n• Novelty: High; introduces differentiable sparse attention with adaptive block selection, addressing gradient flow issues in prior hierarchical methods.",
+    "verdict_cn": "• 创新点: 可微分稀疏注意力，自适应块选择，解决梯度中断问题。\n• 实盘坑: 需要定制Triton内核，实现复杂；α-entmax调参敏感，可能不稳定。\n• 复现难度: 高；依赖GPU优化，代码未开源时复现困难。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.18750v1",
+    "title": "A Readiness-Driven Runtime for Pipeline-Parallel Training under Runtime Variability",
+    "pdf_url": "https://arxiv.org/pdf/2605.18750v1",
+    "published": "2026-05-18",
+    "crawled_at": "2026-05-19 21:08:17",
+    "ai_score": 7.5,
+    "translated_title": "一种应对运行时变动的流水线并行训练就绪驱动运行时",
+    "summary_en": "• Model Architecture: Proposes RRFP, a readiness-driven runtime that treats schedules as non-binding hints rather than fixed execution orders, enabling dynamic work dispatch based on actual task readiness.\n• Data used: Evaluated on language-only and multimodal workloads using up to 128 GPUs in a Megatron-based framework.\n• Performance metrics: Achieves up to 1.77× speedup on language-only and 2.77× on multimodal workloads; outperforms external systems by up to 1.84×.",
+    "summary_cn": "• 核心模型: 提出RRFP运行时，将调度视为非绑定提示而非固定执行顺序，基于任务实际就绪状态动态调度。\n• 数据来源: 在基于Megatron的框架中，使用最多128 GPU的语言和多模态工作负载进行评估。\n• 主要结论: 语言工作负载加速比达1.77倍，多模态达2.77倍；跨框架对比中优于外部系统1.84倍。",
+    "verdict_en": "• Alpha Potential: High for large-scale model training efficiency, directly reducing idle time and improving throughput.\n• Implementation Risk: Requires integration with existing pipeline-parallel frameworks; overhead of readiness arbitration may be non-trivial.\n• Novelty: Introduces a paradigm shift from static schedules to dynamic readiness-driven execution, addressing a key limitation in current systems.",
+    "verdict_cn": "• 创新点: 颠覆传统静态调度范式，提出就绪驱动动态执行，有效解决流水线气泡问题。\n• 实盘坑: 就绪仲裁和异步通信可能引入额外开销，需精细调优；与现有框架集成复杂度高。\n• 复现难度: 中等，需修改底层运行时，但核心思想清晰，可基于Megatron复现。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.18746v1",
+    "title": "ESI-Bench: Towards Embodied Spatial Intelligence that Closes the Perception-Action Loop",
+    "pdf_url": "https://arxiv.org/pdf/2605.18746v1",
+    "published": "2026-05-18",
+    "crawled_at": "2026-05-19 21:08:24",
+    "ai_score": 7.5,
+    "translated_title": "ESI-Bench：迈向闭环感知-行动的具身空间智能基准",
+    "summary_en": "• Model Architecture: Evaluates state-of-the-art Multimodal Large Language Models (MLLMs) on embodied spatial intelligence tasks, requiring agents to integrate perception, locomotion, and manipulation in a closed perception-action loop.\n• Data used: Built on OmniGibson simulator, grounded in Spelke's core knowledge systems, spanning 10 task categories and 29 subcategories covering occluded structure, dynamics, containment, and functionality.\n• Performance metrics: Active exploration substantially outperforms passive counterparts; random multi-view adds noise; failures stem from action blindness rather than weak perception; explicit 3D grounding helps depth tasks but imperfect 3D harms more than 2D.",
+    "summary_cn": "• 核心模型: 评估多模态大语言模型（MLLMs）在具身空间智能任务上的表现，要求智能体整合感知、移动和操作能力，形成闭环感知-行动循环。\n• 数据来源: 基于OmniGibson模拟器，以Spelke核心知识系统为理论基础，涵盖10个任务类别和29个子类别，涉及遮挡结构、动态、容器和功能。\n• 主要结论: 主动探索显著优于被动探索；随机多视角引入噪声而非信号；失败主因是行动盲视而非感知弱；显式3D定位有助于深度任务，但不完美的3D比2D基线更有害。",
+    "verdict_en": "• Alpha Potential: Low direct alpha for financial markets; insights on active exploration and action blindness may inspire trading strategies that emphasize adaptive information gathering.\n• Implementation Risk: High; requires embodied simulation (OmniGibson) and MLLMs, not directly applicable to financial data without significant adaptation.\n• Novelty: High; introduces perception-action loop for spatial intelligence, highlighting metacognitive gaps in models vs. humans.",
+    "verdict_cn": "• 创新点: 提出感知-行动循环的具身空间智能基准，揭示模型在主动探索和行动选择上的缺陷，与人类认知存在显著差距。\n• 实盘坑: 金融领域直接应用价值低；需大量模拟环境和多模态模型，计算成本高，且行动盲视问题在金融市场中可能表现为策略选择失误。\n• 复现难度: 高；依赖OmniGibson模拟器和特定MLLMs，复现需大量计算资源和工程实现。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.18745v1",
+    "title": "SURGE: Approximation-free Training Free Particle Filter for Diffusion Surrogate",
+    "pdf_url": "https://arxiv.org/pdf/2605.18745v1",
+    "published": "2026-05-18",
+    "crawled_at": "2026-05-19 21:08:30",
+    "ai_score": 7.5,
+    "translated_title": "SURGE：扩散替代模型的免近似无训练粒子滤波",
+    "summary_en": "• Model Architecture: Introduces URGE, a derivative-free inference-time scaling algorithm for diffusion models, using Girsanov change of measure for path-wise importance reweighting without score, Hessian, or PDE evaluations.\n• Data used: Evaluated on synthetic tests and standard diffusion-model benchmarks (e.g., image generation tasks).\n• Performance metrics: Outperforms existing inference-time guidance baselines in generation quality, while being simpler and fully gradient-free.",
+    "summary_cn": "• 核心模型: 提出URGE算法，利用Girsanov测度变换实现路径重要性重加权，无需梯度、Hessian或PDE计算，实现免导数推理时缩放。\n• 数据来源: 在合成测试和标准扩散模型基准（如图像生成任务）上评估。\n• 主要结论: 在生成质量上优于现有推理时引导基线，且实现更简单、完全无梯度。",
+    "verdict_en": "• Alpha Potential: Moderate; gradient-free inference-time guidance could reduce computational costs in generative modeling, but direct financial alpha is unclear.\n• Implementation Risk: Low to moderate; algorithm is simpler than gradient-based methods, but requires careful tuning of resampling and weight updates.\n• Novelty: High; establishes equivalence between path-wise and particle-wise SMC, offering a new perspective on diffusion model guidance.",
+    "verdict_cn": "• 创新点: 高；建立了路径与粒子SMC的等价性，为扩散模型引导提供新视角，且完全无梯度。\n• 实盘坑: 中等；虽然实现简单，但重采样和权重更新需精细调参，且金融领域直接应用价值待验证。\n• 复现难度: 低；算法清晰，无复杂梯度计算，易于复现。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.18740v1",
+    "title": "Vision-OPD: Learning to See Fine Details for Multimodal LLMs via On-Policy Self-Distillation",
+    "pdf_url": "https://arxiv.org/pdf/2605.18740v1",
+    "published": "2026-05-18",
+    "crawled_at": "2026-05-19 21:08:36",
+    "ai_score": 7.2,
+    "translated_title": "Vision-OPD：通过在线策略自蒸馏学习多模态大语言模型的精细细节",
+    "summary_en": "• Model Architecture: Proposes Vision-OPD, a regional-to-global self-distillation framework using a crop-conditioned teacher and full-image-conditioned student from the same MLLM, minimizing token-level divergence via on-policy rollouts.\n• Data used: Benchmarks for fine-grained visual understanding (e.g., V* Bench, MMVP, etc.), no external data or labels required.\n• Performance metrics: Achieves competitive or superior performance against larger open-source, closed-source, and agentic models on multiple fine-grained benchmarks.",
+    "summary_cn": "• 核心模型: 提出Vision-OPD，一种区域到全局的自蒸馏框架，利用同一MLLM的裁剪条件教师和全图条件学生，通过在线策略 rollout 最小化 token 级散度。\n• 数据来源: 使用多个细粒度视觉理解基准（如V* Bench、MMVP等），无需外部数据或标签。\n• 主要结论: 在多个细粒度基准上，性能达到或超越更大的开源、闭源及“思考+图像”智能体模型。",
+    "verdict_en": "• Alpha Potential: Moderate; improves fine-grained visual understanding, which could enhance multimodal trading signals (e.g., chart pattern recognition).\n• Implementation Risk: Low; self-distillation without external models or labels reduces deployment complexity.\n• Novelty: High; identifies regional-to-global perception gap and proposes on-policy self-distillation to bridge it.",
+    "verdict_cn": "• 创新点: 发现区域到全局感知差距，并提出在线策略自蒸馏方法，无需外部模型或标签。\n• 实盘坑: 细粒度视觉理解在金融图表分析中可能有用，但需验证对噪声数据的鲁棒性。\n• 复现难度: 中等；依赖MLLM架构，但自蒸馏框架相对简洁。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.18735v1",
+    "title": "PIXLRelight: Controllable Relighting via Intrinsic Conditioning",
+    "pdf_url": "https://arxiv.org/pdf/2605.18735v1",
+    "published": "2026-05-18",
+    "crawled_at": "2026-05-19 21:08:43",
+    "ai_score": 7.5,
+    "translated_title": "PIXLRelight：通过内在条件实现可控重照明",
+    "summary_en": "• Model Architecture: A transformer-based neural renderer with per-pixel affine modulation, conditioned on intrinsic components (albedo, diffuse shading, non-diffuse residuals) from either real photos or PBR renders. • Data used: Paired multi-illumination photographs decomposed into intrinsic components; coarse 3D reconstructions from input images for inference. • Performance metrics: State-of-the-art relighting quality, runs in under 0.1 second per image, enables arbitrary PBR-style lighting control. • Key innovation: Bridges physically based rendering and learned synthesis via shared intrinsic conditioning, avoiding error accumulation from chaining inverse and forward rendering.",
+    "summary_cn": "• 核心模型: 基于Transformer的神经渲染器，采用逐像素仿射调制，通过内在成分（反照率、漫反射阴影、非漫反射残差）进行条件控制。 • 数据来源: 多光照配对照片分解为内在成分；推理时使用输入图像的粗略3D重建。 • 主要结论: 达到最先进的重照明质量，每张图像处理时间低于0.1秒，支持任意PBR风格的光照控制。 • 创新点: 通过共享内在条件桥接物理渲染与学习合成，避免逆向和正向渲染链式误差累积。",
+    "verdict_en": "• Alpha Potential: Moderate; relighting can enhance data augmentation for computer vision tasks, but direct trading alpha is limited. • Implementation Risk: High; requires 3D reconstruction and PBR rendering pipeline, computationally intensive despite fast inference. • Novelty: High; introduces intrinsic conditioning as a bridge between PBR and neural rendering, enabling controllable relighting without per-image optimization. • Practicality: Low for finance; more relevant to graphics and vision applications.",
+    "verdict_cn": "• 创新点: 提出内在条件作为物理渲染与神经渲染的桥梁，实现可控重照明，无需逐图像优化。 • 实盘坑: 需要3D重建和PBR渲染管线，计算资源需求高，直接用于量化交易场景有限。 • 复现难度: 高；依赖多光照数据集和路径追踪渲染，代码已开源但环境搭建复杂。 • 金融适用性: 低；主要应用于图形学和视觉领域，对高频交易或因子挖掘帮助有限。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.18732v1",
+    "title": "Predictable Confabulations: Factual Recall by LLMs Scales with Model Size and Topic Frequency",
+    "pdf_url": "https://arxiv.org/pdf/2605.18732v1",
+    "published": "2026-05-18",
+    "crawled_at": "2026-05-19 21:08:51",
+    "ai_score": 7.5,
+    "translated_title": "可预测的虚构：大型语言模型的事实回忆随模型规模和主题频率扩展",
+    "summary_en": "• Model Architecture: Evaluated 38 dense models from four families (e.g., GPT, LLaMA) with parameter counts ranging from 125M to 175B.\n• Data used: Over 8,900 scholarly references from a diverse corpus; topic frequency measured by occurrence in training data.\n• Performance metrics: Recall quality follows a sigmoid function of log-linear combination of model size and topic frequency, explaining 60% variance across all models and 74-94% within families.\n• Key finding: A superposition-inspired model where recall is gated by signal-to-noise ratio (signal from topic frequency, noise from model capacity).",
+    "summary_cn": "• 核心模型: 评估了来自四个系列（如GPT、LLaMA）的38个密集模型，参数规模从1.25亿到1750亿。\n• 数据来源: 使用超过8900个学术参考文献，主题频率由训练数据中的出现次数衡量。\n• 主要结论: 回忆质量遵循模型规模与主题频率对数线性组合的S形函数，跨模型解释60%方差，族内解释74-94%。\n• 理论解释: 基于叠加假说，回忆由信噪比门控（信号来自主题频率，噪声来自模型容量）。",
+    "verdict_en": "• Alpha Potential: Moderate; insights into scaling laws for factual recall could inform factor selection in NLP-driven strategies.\n• Implementation Risk: High; requires access to training data composition and model internals, which are often proprietary.\n• Novelty: High; first to link factual recall scaling to both model size and topic frequency with a theoretical framework.\n• Practical use: May improve retrieval-augmented generation (RAG) systems but direct trading application is limited.",
+    "verdict_cn": "• 创新点: 首次将事实回忆的缩放规律与模型规模和主题频率结合，并提出叠加假说理论框架。\n• 实盘坑: 需要训练数据组成和模型内部信息，多数情况下不可得；直接交易应用有限。\n• 复现难度: 高；依赖大量模型和专有数据，计算资源要求大。\n• 策略价值: 对NLP/LLM策略中的因子选择有参考意义，但非直接交易信号。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.18721v1",
+    "title": "General Preference Reinforcement Learning",
+    "pdf_url": "https://arxiv.org/pdf/2605.18721v1",
+    "published": "2026-05-18",
+    "crawled_at": "2026-05-19 21:08:57",
+    "ai_score": 8.5,
+    "translated_title": "通用偏好强化学习",
+    "summary_en": "• Model Architecture: Proposes General Preference Reinforcement Learning (GPRL) using a General Preference Model (GPM) that embeds responses into k skew-symmetric subspaces for intransitivity-aware comparisons, with per-dimension group-relative advantages and context-dependent eigenvalue aggregation.\n• Data used: Trained on Llama-3-8B-Instruct; evaluation on AlpacaEval 2.0, Arena-Hard, MT-Bench, and WildBench.\n• Performance metrics: Achieves 56.51% length-controlled win rate on AlpacaEval 2.0, outperforms SimPO and SPPO on multiple benchmarks, and resists reward hacking over extended training.",
+    "summary_cn": "• 核心模型: 提出通用偏好强化学习（GPRL），基于通用偏好模型（GPM）将响应嵌入k个斜对称子空间，实现非传递性偏好比较，并采用每维度组相对优势与上下文相关特征值聚合。\n• 数据来源: 基于Llama-3-8B-Instruct训练，在AlpacaEval 2.0、Arena-Hard、MT-Bench和WildBench上评估。\n• 主要结论: 在AlpacaEval 2.0上达到56.51%的长度控制胜率，在多个基准上超越SimPO和SPPO，且能抵抗奖励黑客攻击。",
+    "verdict_en": "• Alpha Potential: High potential for improving LLM alignment in open-ended tasks, reducing reward hacking, and enabling continuous exploration without scalar rewards.\n• Implementation Risk: Moderate; requires careful tuning of k subspaces and drift monitor, and computational overhead from multi-dimensional advantage computation.\n• Novelty: High novelty in replacing scalar reward with structured preference representation and multi-dimensional advantage normalization.",
+    "verdict_cn": "• 创新点: 用结构化偏好表示替代标量奖励，引入多维优势归一化，创新性地解决奖励黑客问题。\n• 实盘坑: 多维子空间和漂移监控器的调参复杂，计算开销较大，需验证在更大模型上的稳定性。\n• 复现难度: 中等偏高，需要实现GPM和GPRL的完整训练流程，且对超参数敏感。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.18704v1",
+    "title": "Learned Memory Attenuation in Sage-Husa Kalman Filters for Robust UAV State Estimation",
+    "pdf_url": "https://arxiv.org/pdf/2605.18704v1",
+    "published": "2026-05-18",
+    "crawled_at": "2026-05-19 21:09:04",
+    "ai_score": 7.5,
+    "translated_title": "基于学习记忆衰减的Sage-Husa卡尔曼滤波器用于鲁棒无人机状态估计",
+    "summary_en": [
+      "• Model Architecture: Proposes N-Deep Recurrent Sage-Husa Filter (NDR-SHKF) replacing scalar forgetting factor with vector-valued memory attenuation policy learned by hierarchical recurrent network on whitened innovation sequences; bifurcated architecture with shallow recurrent states for instantaneous anomalies and deep states for sustained trends; auxiliary reconstruction objective prevents feature collapse.",
+      "• Data used: Evaluated on topologically distinct chaotic attractors for cross-domain generalization and recorded real-world UAV flight datasets for practical viability.",
+      "• Performance metrics: Outperforms purely data-driven baselines under out-of-distribution dynamics; bridges transitions into proprioceptive dead reckoning and outperforms classical adaptive estimators during sensor outages."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出N-Deep Recurrent Sage-Husa滤波器，用分层循环网络学习向量值记忆衰减策略替代标量遗忘因子；双分支架构分别处理瞬时异常和持续趋势。",
+      "• 数据来源: 使用拓扑不同的混沌吸引子进行跨域泛化评估，以及真实无人机飞行数据集验证实用性。",
+      "• 主要结论: 在分布外动态下优于纯数据驱动基线；在传感器中断期间能过渡到本体感受航位推算并优于经典自适应估计器。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; adaptive filtering for UAV state estimation has niche applications in high-frequency trading of drone-related assets or risk management for logistics, but direct financial alpha is limited.",
+      "• Implementation Risk: High; requires end-to-end training with backpropagation through time, complex hierarchical recurrent architecture, and careful tuning for real-time deployment.",
+      "• Novelty: High; replaces scalar forgetting factor with learned vector-valued policy, bifurcated recurrent architecture, and auxiliary reconstruction loss are novel contributions."
+    ],
+    "verdict_cn": [
+      "• 创新点: 用学习到的向量值策略替代标量遗忘因子，双分支循环架构和辅助重构损失具有新颖性。",
+      "• 实盘坑: 端到端训练复杂，实时部署需大量调参，且直接金融应用场景有限。",
+      "• 复现难度: 高；需实现分层循环网络和BPTT训练，对计算资源要求高。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.18703v1",
+    "title": "EnvFactory: Scaling Tool-Use Agents via Executable Environments Synthesis and Robust RL",
+    "pdf_url": "https://arxiv.org/pdf/2605.18703v1",
+    "published": "2026-05-18",
+    "crawled_at": "2026-05-19 21:09:11",
+    "ai_score": 7.5,
+    "translated_title": "EnvFactory：通过可执行环境合成和鲁棒强化学习扩展工具使用智能体",
+    "summary_en": "• Model Architecture: EnvFactory is a fully automated framework that autonomously explores and verifies stateful, executable tool environments from authentic resources, and synthesizes natural multi-turn trajectories via topology-aware sampling and calibrated refinement.\n• Data used: 85 verified environments across 7 domains, generating 2,575 SFT and RL trajectories. No real-world APIs or hallucination-prone simulators are required.\n• Performance metrics: Improves Qwen3-series models by up to +15% on BFCLv3, +8.6% on MCP-Atlas, and +6% on conversational benchmarks including τ²-Bench and VitaBench, using significantly fewer environments than prior work.",
+    "summary_cn": "• 核心模型: EnvFactory是一个全自动框架，自主探索和验证来自真实资源的可执行工具环境，并通过拓扑感知采样和校准优化合成自然的多轮轨迹。\n• 数据来源: 使用7个领域的85个验证环境，生成2,575条SFT和RL轨迹，无需真实API或易产生幻觉的模拟器。\n• 主要结论: 在BFCLv3上提升Qwen3系列模型高达+15%，MCP-Atlas上+8.6%，对话基准（τ²-Bench和VitaBench）上+6%，且使用的环境数量远少于先前工作。",
+    "verdict_en": "• Alpha Potential: High for automated tool-use agent training, reducing dependency on costly real-world APIs and manual data collection. The performance gains on multiple benchmarks suggest significant alpha in deploying such agents for financial tasks.\n• Implementation Risk: Medium. The framework requires careful environment verification and trajectory synthesis; scaling to more complex financial tools may introduce instability.\n• Novelty: High. Combines executable environment synthesis with robust RL for tool-use agents, addressing key scalability and data scarcity issues in Agentic RL.",
+    "verdict_cn": "• 创新点: 将可执行环境合成与鲁棒强化学习结合，解决了工具使用智能体训练中的可扩展性和数据稀缺问题，自动化程度高。\n• 实盘坑: 环境验证和轨迹合成可能引入偏差，金融工具复杂多变，需谨慎处理状态空间爆炸和奖励设计。\n• 复现难度: 中等。依赖特定领域资源，但框架开源后有望降低复现门槛。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2605.16250v1",
     "title": "A Generative AI Framework for Intelligent Utility Billing CO 2 Analytics and Sustainable Resource Optimisation",
     "pdf_url": "https://arxiv.org/pdf/2605.16250v1",
