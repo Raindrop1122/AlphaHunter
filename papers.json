@@ -1,5 +1,236 @@
 [
   {
+    "id": "2605.20182v1",
+    "title": "Atoms of Thought: Universal EEG Representation Learning with Microstates",
+    "pdf_url": "https://arxiv.org/pdf/2605.20182v1",
+    "published": "2026-05-19",
+    "crawled_at": "2026-05-20 21:26:36",
+    "ai_score": 7.5,
+    "translated_title": "思维原子：基于微状态的通用脑电图表示学习",
+    "summary_en": "• Model Architecture: Proposes a universal microstate tokenizer that clusters continuous EEG signals into discrete microstate sequences, used as input for downstream models.\n• Data used: Large medical EEG dataset for tokenizer training; evaluated on sleep staging, emotion recognition, and motor imagery tasks.\n• Performance metrics: Outperforms traditional time-domain and frequency-domain features across different models and tasks.\n• Key finding: Microstates offer greater interpretability and scalability for cognitive neuroscience and clinical research.",
+    "summary_cn": "• 核心模型: 提出通用微状态分词器，将连续EEG信号聚类为离散微状态序列，作为下游模型输入。\n• 数据来源: 大型医疗EEG数据集训练分词器；在睡眠分期、情绪识别和运动想象任务上评估。\n• 主要结论: 微状态表示在多个模型和任务上优于传统时域和频域特征。\n• 额外发现: 微状态具有更好的可解释性和可扩展性，适用于认知神经科学和临床研究。",
+    "verdict_en": "• Alpha Potential: Low for direct trading; EEG-based BCI has niche applications in high-frequency trading or risk management, but not mainstream.\n• Implementation Risk: High; requires specialized EEG hardware and signal processing; tokenizer training on large medical data may not generalize to noisy real-world settings.\n• Novelty: Moderate; microstates are known in neuroscience, but their use as universal tokenizer for representation learning is novel.\n• Practicality: Limited for hedge fund; more relevant for healthcare or neurotech startups.",
+    "verdict_cn": "• 创新点: 将神经科学中的微状态概念引入通用表示学习，方法简单有效。\n• 实盘坑: 依赖EEG硬件，数据采集成本高，且真实环境噪声大，泛化能力存疑。\n• 复现难度: 中等；需要大型医疗EEG数据集，但公开数据有限。\n• 交易价值: 低；非传统金融信号，仅适用于极少数量化场景（如情绪分析）。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.20174v1",
+    "title": "Multi-axis Analysis of Image Manipulation Localization",
+    "pdf_url": "https://arxiv.org/pdf/2605.20174v1",
+    "published": "2026-05-19",
+    "crawled_at": "2026-05-20 21:26:42",
+    "ai_score": 7.5,
+    "translated_title": "图像篡改定位的多轴分析",
+    "summary_en": "• Introduces AUDITS, a comprehensive benchmark with over 530K images from user and news sources for image manipulation detection.\n• Uses recent diffusion-based inpainting to generate diverse manipulation types and sizes across multiple axes (domain, quality, type, size).\n• Evaluates existing image manipulation detection methods under various domain shifts to test robustness.\n• Aims to drive research towards more reliable and generalizable detection methods.",
+    "summary_cn": "• 核心模型: 提出AUDITS基准，包含53万+图像，涵盖用户和新闻来源，用于图像篡改检测。\n• 数据来源: 使用基于扩散模型的修复技术生成多样化篡改类型和大小，支持多轴分析（域、质量、类型、大小）。\n• 主要结论: 现有方法在不同域迁移下表现不佳，需提升泛化能力。",
+    "verdict_en": "• Alpha Potential: Low for direct trading; more relevant for media forensics and cybersecurity.\n• Implementation Risk: High; requires large-scale dataset and domain adaptation techniques.\n• Novelty: Moderate; benchmark is comprehensive but detection methods are not novel.",
+    "verdict_cn": "• 创新点: 构建多轴基准，系统评估域迁移下的篡改检测，但方法本身无突破。\n• 实盘坑: 与量化交易无直接关联，难以转化为交易信号。\n• 复现难度: 高，需大量数据和计算资源。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.20167v1",
+    "title": "HaorFloodAlert: Deseasonalized ML Ensemble for 72-Hour Flood Prediction in Bangladesh Haor Wetlands",
+    "pdf_url": "https://arxiv.org/pdf/2605.20167v1",
+    "published": "2026-05-19",
+    "crawled_at": "2026-05-20 21:26:49",
+    "ai_score": 7.2,
+    "translated_title": "HaorFloodAlert：去季节化机器学习集成用于孟加拉国Haor湿地72小时洪水预测",
+    "summary_en": "• Model Architecture: Deseasonalized ML ensemble combining Random Forest (weight 0.5625) and XGBoost (weight 0.4375) for 72-hour flood probability forecasting.\n• Data used: 77 Sentinel-1 SAR events, upstream Barak River SAR proxy from Silchar (36h lead time), and temperature deseasonalization to remove seasonal bias.\n• Performance metrics: 89.6% LOOCV accuracy, 87.5% recall, 0.943 AUC-ROC, with Otsu-thresholded SAR change detection validation at 84-91% spatial match.\n• Additional components: Three-tier alert pipeline and BRRI-calibrated boro rice damage estimator.",
+    "summary_cn": "• 核心模型: 去季节化机器学习集成，结合随机森林（权重0.5625）和XGBoost（权重0.4375），预测72小时洪水概率。\n• 数据来源: 77个Sentinel-1 SAR事件、上游Silchar的Barak河SAR代理数据（提供36小时提前量），以及温度去季节化处理以消除季节性偏差。\n• 主要结论: LOOCV准确率89.6%，召回率87.5%，AUC-ROC 0.943；Otsu阈值SAR变化检测验证空间匹配度84-91%。\n• 附加功能: 三级预警管道和BRRI校准的boro水稻损失估算器。",
+    "verdict_en": "• Alpha Potential: Low for financial markets; paper focuses on flood prediction for agriculture, not trading signals.\n• Implementation Risk: High due to domain-specific data (SAR imagery, haor geography) and lack of financial market relevance.\n• Novelty: Moderate; deseasonalization and ensemble for flood prediction are novel in hydrology but not transferable to quant finance.\n• Practicality: Useful for disaster management but not for hedge fund strategies.",
+    "verdict_cn": "• 创新点: 去季节化处理和集成模型在洪水预测中有一定创新，但属于水文领域，与量化金融无关。\n• 实盘坑: 数据依赖特定地理区域（孟加拉国湿地）和遥感图像，无法直接用于金融市场。\n• 复现难度: 高，需要SAR图像处理和水文专业知识，且缺乏金融数据接口。\n• 策略价值: 对灾害管理有用，但对对冲基金无直接alpha价值。",
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.20159v1",
+    "title": "Interpretable Computer Vision for Defect Detection in X-ray Tomography of Aerospace SiC/SiC Composites",
+    "pdf_url": "https://arxiv.org/pdf/2605.20159v1",
+    "published": "2026-05-19",
+    "crawled_at": "2026-05-20 21:26:57",
+    "ai_score": 5.5,
+    "translated_title": "用于航空SiC/SiC复合材料X射线断层扫描缺陷检测的可解释计算机视觉",
+    "summary_en": "• Model Architecture: p-ResNet-50, a ResNet-50 extended with a prototype layer for case-based explanations, using two novel regularization terms (anchor-based and medoid-based) to prevent prototype collapse.\n• Data used: Approximately 12,000 XCT image patches from four defect-rich SiC/SiC composite specimens, with six expert-defined semantic categories.\n• Performance metrics: Accuracy 0.957 vs. baseline 0.959; ROC-AUC 0.994 vs. 0.993; trades slight sensitivity loss for higher precision and specificity.\n• Additional features: UMAP latent-space analysis identifies uncertainty zones; each decision backed by representative evidence patches.",
+    "summary_cn": "• 核心模型: p-ResNet-50，在ResNet-50基础上增加原型层，实现基于案例的解释，并引入锚点和中心点两种正则化项防止原型坍缩。\n• 数据来源: 约12,000个XCT图像块，来自四个富含缺陷的SiC/SiC复合材料试样，标注为六类专家定义语义类别。\n• 主要结论: 准确率0.957（基线0.959），ROC-AUC 0.994（基线0.993），以轻微灵敏度下降换取更高精确度和特异性。\n• 附加功能: UMAP潜在空间分析识别不确定性区域，每个决策附带代表性证据块。",
+    "verdict_en": "• Alpha Potential: Low. The paper focuses on industrial inspection, not financial markets. No direct trading signal or alpha generation.\n• Implementation Risk: High. Requires specialized XCT data and domain expertise; prototype networks are complex to train and tune.\n• Novelty: Moderate. Prototype-based interpretability is known; the regularization terms are incremental improvements.\n• Relevance: Minimal for quantitative finance; may inspire interpretability methods for alternative data (e.g., satellite imagery) but not directly applicable.",
+    "verdict_cn": "• 创新点: 原型网络结合两种新正则化项，提升可解释性，但整体创新有限。\n• 实盘坑: 与金融交易无关，无法直接产生alpha；依赖专业XCT数据，复现成本高。\n• 复现难度: 高，需要特定领域数据和深度学习调参经验。\n• 金融适用性: 极低，仅可能启发另类数据（如卫星图像）的可解释性方法。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.20157v1",
+    "title": "SAGE: Scalable Automatic Gating Ensemble for Confident Negative Harvesting in Fraud Detection",
+    "pdf_url": "https://arxiv.org/pdf/2605.20157v1",
+    "published": "2026-05-19",
+    "crawled_at": "2026-05-20 21:27:03",
+    "ai_score": 7.2,
+    "translated_title": "SAGE：面向欺诈检测的可扩展自动门控集成方法用于自信负样本挖掘",
+    "summary_en": [
+      "• Model Architecture: Combines SimHash-based stratified sampling with a modular gating ensemble (Mahalanobis distance and k-NN density gates) for confident negative identification.",
+      "• Data used: Unlabeled streaming data, focusing on customer-level and artist-level fraud detection.",
+      "• Performance metrics: Demonstrates strong precision and recall on held-out data, with configurable voting thresholds for precision-recall trade-offs.",
+      "• Generalization: Approach generalizes across fraud detection domains without core methodology modification."
+    ],
+    "summary_cn": [
+      "• 核心模型: 结合SimHash分层采样与模块化门控集成（马氏距离和k-NN密度门），实现自信负样本识别。",
+      "• 数据来源: 未标注的流媒体数据，涵盖客户级和艺术家级欺诈检测。",
+      "• 主要结论: 在留出数据上表现出强精确率和召回率，通过可配置投票阈值实现精确率-召回率权衡。",
+      "• 泛化能力: 方法无需修改核心即可泛化至不同欺诈检测领域。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; applicable to fraud detection in streaming, but alpha in finance may be limited unless adapted to market manipulation.",
+      "• Implementation Risk: Low to moderate; modular design allows easy integration, but SimHash and density estimation require tuning.",
+      "• Novelty: Moderate; combines existing techniques (SimHash, Mahalanobis, k-NN) in a novel ensemble for negative harvesting."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将SimHash与门控集成结合用于负样本挖掘，但各组件均为已知技术。",
+      "• 实盘坑: 流媒体欺诈与金融欺诈差异大，直接迁移至量化交易需谨慎调整。",
+      "• 复现难度: 中等；门控阈值和分层采样参数需细致调优。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.20151v1",
+    "title": "When Does Model Collapse Occur in Structured Interactive Learning?",
+    "pdf_url": "https://arxiv.org/pdf/2605.20151v1",
+    "published": "2026-05-19",
+    "crawled_at": "2026-05-20 21:27:09",
+    "ai_score": 7.5,
+    "translated_title": "结构化交互学习中的模型崩溃何时发生？",
+    "summary_en": [
+      "• Model Architecture: The paper studies generative models in an interactive learning environment with general interaction patterns, formalized using directed graphs.",
+      "• Data used: Training data includes both natural data and synthetic outputs from other models, leading to correlated training processes.",
+      "• Performance metrics: The key metric is model collapse, defined as progressive performance degradation when training on synthetic data from earlier generations.",
+      "• The paper derives necessary and sufficient conditions for model collapse based on interaction graph topology, with finite-sample results for linear regression and asymptotic guarantees for general M-estimators."
+    ],
+    "summary_cn": [
+      "• 核心模型: 研究生成模型在一般交互模式下的结构化交互学习环境，用有向图形式化模型交互。",
+      "• 数据来源: 训练数据包括自然数据和来自其他模型的合成输出，导致训练过程相关。",
+      "• 主要结论: 推导出模型崩溃发生的充要条件，取决于交互图拓扑；对线性回归给出有限样本结果，对一般M估计量给出渐近保证。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; provides theoretical understanding of model collapse in multi-model settings, which can inform robust model training strategies.",
+      "• Implementation Risk: High; requires modeling interaction graphs and ensuring conditions for avoiding collapse, which may be complex in practice.",
+      "• Novelty: High; extends prior work on single-model collapse to multi-model interactive settings with rigorous theoretical conditions."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次从图拓扑角度严格刻画多模型交互下的模型崩溃条件，理论贡献显著。",
+      "• 实盘坑: 实际中交互图难以精确建模，且条件可能过于严格，导致应用受限。",
+      "• 复现难度: 中等；理论推导清晰，但数值实验需模拟交互图，复现需一定编程能力。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.20145v1",
+    "title": "Goal-Oriented Lower-Tail Calibration of Gaussian Processes for Bayesian Optimization",
+    "pdf_url": "https://arxiv.org/pdf/2605.20145v1",
+    "published": "2026-05-19",
+    "crawled_at": "2026-05-20 21:27:16",
+    "ai_score": 7.5,
+    "translated_title": "面向目标的贝叶斯优化高斯过程下尾校准",
+    "summary_en": "• Model Architecture: Proposes tcGP, a post-hoc method that calibrates Gaussian process predictive distributions below a low threshold t, focusing on lower-tail calibration for Bayesian optimization.\n• Data used: Evaluated on standard benchmark functions for Bayesian optimization (e.g., synthetic functions like Branin, Hartmann).\n• Performance metrics: Lower-tail calibration error, Bayesian optimization convergence rate (regret), and comparison to standard GP and globally calibrated GP models.",
+    "summary_cn": "• 核心模型: 提出tcGP，一种事后校准方法，专门校准高斯过程在低阈值t以下的预测分布，用于贝叶斯优化中的下尾校准。\n• 数据来源: 使用标准贝叶斯优化基准函数（如Branin、Hartmann等合成函数）进行测试。\n• 主要结论: tcGP显著改善了下尾校准，并在贝叶斯优化性能上优于标准GP和全局校准GP模型。",
+    "verdict_en": "• Alpha Potential: Moderate; improved calibration can enhance BO efficiency, but direct trading alpha is limited as BO is an optimization tool, not a trading strategy.\n• Implementation Risk: Low; tcGP is a post-hoc method that can be easily integrated into existing GP-based BO pipelines.\n• Novelty: High; introduces a novel goal-oriented calibration framework specifically for lower-tail, which is underexplored in BO literature.",
+    "verdict_cn": "• 创新点: 首次提出面向目标的下尾校准框架，针对贝叶斯优化中关键的低阈值区域，理论贡献扎实。\n• 实盘坑: 贝叶斯优化本身不直接产生交易信号，需结合具体策略，校准改进对实盘收益贡献间接。\n• 复现难度: 中等；方法基于标准GP，但需要实现校准步骤，代码可能需从论文推导。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ICML",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2605.20142v1",
+    "title": "Mining Financial Data using Mixtures of Mirrored Weibull Distributions",
+    "pdf_url": "https://arxiv.org/pdf/2605.20142v1",
+    "published": "2026-05-19",
+    "crawled_at": "2026-05-20 21:27:21",
+    "ai_score": 6.5,
+    "translated_title": "使用混合镜像威布尔分布挖掘金融数据",
+    "summary_en": "• Model Architecture: Proposes a mixture of mirrored Weibull (MMW) distribution for modeling stock returns, offering flexibility for non-normal features and simple density expression. • Data used: Three S&P500 stocks for Value-at-Risk (VaR) estimation. • Performance metrics: MMW model compares favorably to Gaussian mixture model and t-mixture model, with significant improvements in VaR estimation and prediction.",
+    "summary_cn": "• 核心模型: 提出混合镜像威布尔分布（MMW）用于股票收益建模，灵活处理非正态特征，密度表达式简单。 • 数据来源: 三只标普500股票，用于风险价值（VaR）估计。 • 主要结论: MMW模型优于高斯混合模型和t混合模型，在VaR估计和预测上有显著改进。",
+    "verdict_en": "• Alpha Potential: Limited; VaR estimation is risk management, not direct alpha generation. • Implementation Risk: Low; model is simple and fast to estimate, but real-world VaR backtesting may reveal overfitting. • Novelty: Moderate; mirrored Weibull mixture is new in finance, but similar ideas exist in other fields.",
+    "verdict_cn": "• 创新点: 将镜像威布尔混合引入金融风险建模，但创新程度有限。 • 实盘坑: VaR模型在极端市场下可能失效，且仅用三只股票验证，泛化能力存疑。 • 复现难度: 低；模型简单，参数估计快，但需注意数值稳定性。",
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.20134v1",
+    "title": "TrajTok: Adaptive Spatial Tokenization for Trajectory Representation Learning",
+    "pdf_url": "https://arxiv.org/pdf/2605.20134v1",
+    "published": "2026-05-19",
+    "crawled_at": "2026-05-20 21:27:28",
+    "ai_score": 7.5,
+    "translated_title": "TrajTok：自适应空间标记化用于轨迹表示学习",
+    "summary_en": "• Model Architecture: TrajTok uses a multi-resolution hexagonal cell partition learned from GPS point distribution, converting noisy sequences into discrete tokens. It employs a factorized transformer with per-modality self-attention, cross-attention fusion, and ST-RoPE embeddings for spatiotemporal encoding.\n• Data used: The model is pretrained on the Porto GPS trajectory dataset and evaluated on tasks including trajectory similarity search, classification, ETA, and travel-time regression.\n• Performance metrics: Frozen TrajTok with lightweight adapters outperforms multiple task-specific methods on all four tasks, demonstrating transferable representations.",
+    "summary_cn": "• 核心模型: TrajTok采用从GPS点分布学习的多分辨率六边形网格划分，将噪声序列转化为离散标记，并使用分解式Transformer（含模态内自注意力、交叉注意力融合和ST-RoPE时空编码）。\n• 数据来源: 在Porto GPS轨迹数据集上预训练，并在轨迹相似性搜索、分类、ETA和旅行时间回归任务上评估。\n• 主要结论: 冻结的TrajTok编码器配合轻量适配器在四项任务上均优于多个专用方法，表明其学习到可迁移的轨迹结构。",
+    "verdict_en": "• Alpha Potential: Moderate. TrajTok's transferable representations could be useful for mobility-based alpha factors (e.g., traffic patterns, location intelligence), but direct financial applications are limited.\n• Implementation Risk: High. Requires GPS trajectory data, which is not standard in finance; preprocessing and tokenization are complex.\n• Novelty: High. Multi-resolution spatial tokenization and factorized transformer with ST-RoPE are novel contributions to trajectory representation learning.",
+    "verdict_cn": "• 创新点: 多分辨率空间标记化和分解式Transformer结合ST-RoPE时空编码，在轨迹表示学习领域具有新意。\n• 实盘坑: 金融领域缺乏GPS轨迹数据，直接应用场景有限；模型复杂度高，复现和调参难度大。\n• 复现难度: 中等偏高，依赖特定数据集和预训练流程，但开源可能性大。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.20132v1",
+    "title": "FiLark: a streaming-first software framework for end-to-end exploration, annotation, and algorithm integration in distributed acoustic sensing",
+    "pdf_url": "https://arxiv.org/pdf/2605.20132v1",
+    "published": "2026-05-19",
+    "crawled_at": "2026-05-20 21:27:34",
+    "ai_score": 2.0,
+    "translated_title": "FiLark：面向分布式声学传感的流优先端到端探索、标注与算法集成软件框架",
+    "summary_en": [
+      "• Model Architecture: FiLark is a Python framework built on a streaming-first principle, unifying data access, signal processing, visualization, and monitoring for DAS data. It uses an OpenGL-based ring-buffer renderer for constant-memory visualization and a standardized monitor interface for integrating detectors and ML models.",
+      "• Data used: The paper focuses on distributed acoustic sensing (DAS) data, which are continuous, ultra-high-channel-count data streams. No specific dataset is mentioned; the framework is designed for general DAS sources.",
+      "• Performance metrics: No quantitative performance metrics are provided. The paper emphasizes qualitative benefits such as constant memory usage for long recordings and seamless transition from interactive to production pipelines."
+    ],
+    "summary_cn": [
+      "• 核心模型: FiLark是一个基于流优先原则的Python框架，统一了DAS数据的数据访问、信号处理、可视化和监控。它使用基于OpenGL的环形缓冲区渲染器实现恒定内存可视化，并通过标准化监控接口集成检测器和机器学习模型。",
+      "• 数据来源: 论文聚焦于分布式声学传感（DAS）数据，这些数据是连续的超高通道数据流。未提及具体数据集，框架设计用于通用DAS源。",
+      "• 主要结论: 框架实现了交互式探索、可扩展事件标注和实时算法在环监控，但缺乏定量性能评估。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low. This is a software engineering paper with no financial application or trading strategy. It is irrelevant for quantitative finance.",
+      "• Implementation Risk: Not applicable. The framework is for DAS data processing, not for financial markets.",
+      "• Novelty: Moderate within the DAS domain, but the streaming-first approach is not novel in broader data processing contexts."
+    ],
+    "verdict_cn": [
+      "• 创新点: 在DAS领域提出了流优先框架，但整体方法在数据处理领域并不新颖。",
+      "• 实盘坑: 与量化金融完全无关，无法直接应用于交易策略。",
+      "• 复现难度: 中等，但需要DAS硬件和数据，对金融从业者无意义。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2605.18753v1",
     "title": "DashAttention: Differentiable and Adaptive Sparse Hierarchical Attention",
     "pdf_url": "https://arxiv.org/pdf/2605.18753v1",
