@@ -1,5 +1,225 @@
 [
   {
+    "id": "2605.21489v1",
+    "title": "Variance Reduction for Expectations with Diffusion Teachers",
+    "pdf_url": "https://arxiv.org/pdf/2605.21489v1",
+    "published": "2026-05-20",
+    "crawled_at": "2026-05-21 21:19:27",
+    "ai_score": 7.5,
+    "translated_title": "扩散教师模型期望方差缩减方法",
+    "summary_en": "• Model Architecture: Introduces CARV, a compute-aware variance-accounting framework with hierarchical Monte Carlo estimation, amortizing expensive upstream computation over cheap diffusion-noise resamples, combined with timestep importance sampling and stratified-inverse-CDF construction.\n• Data used: Experiments on text-to-3D distillation and attribution tasks, as well as single-step distillation; uses pretrained diffusion models as frozen teachers.\n• Performance metrics: Achieves 2-3x effective compute multipliers in text-to-3D tasks, with ~25% additional gain from importance sampling and stratification; in single-step distillation, reduces gradient variance by an order of magnitude but no improvement in FID.",
+    "summary_cn": "• 核心模型: 提出CARV框架，采用分层蒙特卡洛估计，通过廉价扩散噪声重采样分摊昂贵上游计算，结合时间步重要性采样和分层逆CDF构造。\n• 数据来源: 在文本到3D蒸馏和归因任务，以及单步蒸馏任务上进行实验，使用预训练扩散模型作为冻结教师。\n• 主要结论: 在文本到3D任务中实现2-3倍有效计算乘数，其中约25%来自重要性采样和分层；在单步蒸馏中梯度方差降低一个数量级，但FID无改善。",
+    "verdict_en": "• Alpha Potential: Moderate; variance reduction techniques can improve sample efficiency in generative model pipelines, but direct trading alpha is limited.\n• Implementation Risk: Low to moderate; method is well-defined and builds on existing diffusion models, but requires careful tuning of importance sampling and stratification.\n• Novelty: High; introduces compute-aware variance accounting and hierarchical MC estimation for diffusion teacher pipelines, with practical gains.",
+    "verdict_cn": "• 创新点: 提出计算感知方差核算框架，结合分层MC估计，在扩散教师模型中实现有效计算乘数，方法新颖。\n• 实盘坑: 直接交易alpha有限，更多是提升生成模型效率；重要性采样和分层参数需仔细调优，否则可能引入偏差。\n• 复现难度: 中等；依赖预训练扩散模型，但核心算法实现相对直接，需注意计算资源分配。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2605.21488v1",
+    "title": "Equilibrium Reasoners: Learning Attractors Enables Scalable Reasoning",
+    "pdf_url": "https://arxiv.org/pdf/2605.21488v1",
+    "published": "2026-05-20",
+    "crawled_at": "2026-05-21 21:19:34",
+    "ai_score": 8.5,
+    "translated_title": "均衡推理器：学习吸引子实现可扩展推理",
+    "summary_en": "• Model Architecture: Equilibrium Reasoners (EqR) learn task-conditioned attractors in latent dynamical systems, where stable fixed points correspond to valid solutions. The model iteratively updates a latent state, scaling test-time compute along depth (more iterations) and breadth (multiple stochastic trajectories).\n• Data used: The paper evaluates on Sudoku puzzles, specifically Sudoku-Extreme, a challenging variant. No external verifiers or task-specific priors are used.\n• Performance metrics: Accuracy improves from 2.6% (feedforward) to over 99% on Sudoku-Extreme by unrolling up to 40,000 layers. Gains are tightly coupled with convergence to solution-aligned attractors.",
+    "summary_cn": "• 核心模型: 均衡推理器（EqR）通过学习潜在动力系统中的任务条件吸引子，其稳定不动点对应有效解。模型通过深度（更多迭代）和广度（多个随机轨迹）扩展测试时计算。\n• 数据来源: 使用数独谜题，特别是Sudoku-Extreme（极端难度变体），无需外部验证器或任务特定先验。\n• 主要结论: 通过展开多达40,000层，准确率从前馈模型的2.6%提升至超过99%。性能提升与收敛到解对齐吸引子紧密相关。",
+    "verdict_en": "• Alpha Potential: High for structured reasoning tasks (e.g., combinatorial optimization, puzzle solving) but limited for typical financial alpha (e.g., price prediction). Could be adapted for portfolio optimization or risk management.\n• Implementation Risk: High computational cost (40k layers) and need for careful attractor design. Convergence guarantees are empirical; failure modes unclear.\n• Novelty: Strong theoretical contribution linking iterative reasoning to dynamical systems and attractors. Novel perspective on test-time scaling.",
+    "verdict_cn": "• 创新点: 将迭代推理与动力系统吸引子理论结合，为测试时扩展提供新视角。理论贡献突出。\n• 实盘坑: 计算成本极高（4万层），且吸引子设计需精细调参。对金融时序预测的直接适用性存疑。\n• 复现难度: 高。需要大量计算资源和超参数搜索，且Sudoku任务与金融场景差异大。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.21486v1",
+    "title": "Quantifying Hyperparameter Transfer and the Importance of Embedding Layer Learning Rate",
+    "pdf_url": "https://arxiv.org/pdf/2605.21486v1",
+    "published": "2026-05-20",
+    "crawled_at": "2026-05-21 21:19:40",
+    "ai_score": 7.5,
+    "translated_title": "量化超参数迁移与嵌入层学习率的重要性",
+    "summary_en": "• Model Architecture: Transformer-based LLMs with standard parameterization (SP) and Maximal Update Parameterization (μP).\n• Data used: Not specified; likely standard language modeling datasets (e.g., C4, WikiText).\n• Performance metrics: Scaling law fit quality, robustness to extrapolation errors, asymptotic loss penalty.",
+    "summary_cn": "• 核心模型: 基于Transformer的大语言模型，对比标准参数化(SP)与最大更新参数化(μP)。\n• 数据来源: 未明确说明，可能使用标准语言建模数据集（如C4、WikiText）。\n• 主要结论: μP的优势主要源于嵌入层学习率的提升；权重衰减改善缩放律拟合，但在固定token-per-parameter设置下损害外推鲁棒性。",
+    "verdict_en": "• Alpha Potential: Moderate; insights on embedding LR can improve training stability and hyperparameter transfer, but not directly a trading signal.\n• Implementation Risk: Low; findings are empirical and can be integrated into existing LLM training pipelines.\n• Novelty: High; identifies embedding LR as key factor in μP's success, challenging existing theory.",
+    "verdict_cn": "• 创新点: 揭示μP优势源于嵌入层学习率，而非理论声称的尺度不变性。\n• 实盘坑: 结论针对LLM训练，对量化交易策略无直接应用，需转化为NLP/LLM相关策略。\n• 复现难度: 中等；需大规模实验验证，但方法清晰。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.21485v1",
+    "title": "EvoStruct: Bridging Evolutionary and Structural Priors for Antibody CDR Design via Protein Language Model Adaptation",
+    "pdf_url": "https://arxiv.org/pdf/2605.21485v1",
+    "published": "2026-05-20",
+    "crawled_at": "2026-05-21 21:19:47",
+    "ai_score": 7.5,
+    "translated_title": "EvoStruct：通过蛋白质语言模型适应桥接进化与结构先验用于抗体CDR设计",
+    "summary_en": [
+      "• Model Architecture: EvoStruct combines a frozen protein language model (PLM) with an E(3)-equivariant GNN via a cross-attention adapter, using progressive PLM unfreezing and R-Drop regularization to address vocabulary collapse.",
+      "• Data used: The model is evaluated on the CHIMERA-Bench dataset, which includes antibody CDR structures and sequences.",
+      "• Performance metrics: Achieves 16% higher sequence recovery and 43% lower perplexity compared to best GNN baselines, with 2.3x greater amino acid diversity and highest binding-pair correlation.",
+      "• Key innovation: Bridges evolutionary priors from PLM with structural context from GNN to mitigate vocabulary collapse in CDR design."
+    ],
+    "summary_cn": [
+      "• 核心模型: EvoStruct通过交叉注意力适配器将冻结的蛋白质语言模型与E(3)-等变GNN结合，采用渐进式PLM解冻和R-Drop正则化解决词汇坍塌问题。",
+      "• 数据来源: 在CHIMERA-Bench数据集上评估，包含抗体CDR结构和序列。",
+      "• 主要结论: 相比最佳GNN基线，序列恢复率提高16%，困惑度降低43%，氨基酸多样性提升2.3倍，结合对相关性最高。",
+      "• 创新点: 将PLM的进化先验与GNN的结构上下文桥接，专门针对CDR设计的词汇坍塌问题。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; improved CDR design could enhance antibody drug discovery, but direct financial alpha is unclear.",
+      "• Implementation Risk: High; requires specialized knowledge in protein language models and equivariant GNNs, plus access to proprietary datasets.",
+      "• Novelty: High; novel combination of PLM and GNN with specific regularization to address vocabulary collapse, a known issue in CDR design.",
+      "• Practicality: Low for hedge fund; more relevant to biotech than quantitative finance, unless applied to protein-related investments."
+    ],
+    "verdict_cn": [
+      "• 创新点: 创新性地融合PLM进化先验与GNN结构信息，针对性解决CDR设计中的词汇坍塌问题。",
+      "• 实盘坑: 直接金融应用有限，需生物医药领域知识，数据获取困难，复现成本高。",
+      "• 复现难度: 高，依赖特定PLM和GNN架构，超参数调优复杂。",
+      "• 量化潜力: 低，更适合生物科技投资分析而非高频交易或因子挖掘。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2605.21483v1",
+    "title": "Velocityformer: Broken-Symmetry-Matched Equivariant Graph Transformers for Cosmological Velocity Reconstruction",
+    "pdf_url": "https://arxiv.org/pdf/2605.21483v1",
+    "published": "2026-05-20",
+    "crawled_at": "2026-05-21 21:19:53",
+    "ai_score": 7.5,
+    "translated_title": "Velocityformer：用于宇宙速度重建的破缺对称性匹配等变图变换器",
+    "summary_en": "• Model Architecture: Velocityformer is an equivariant graph transformer designed to match the broken symmetry of observational data (line-of-sight preference) while underlying physics is translation/rotation equivariant.\n• Data used: Low-fidelity simulations (as few as 4) and high-fidelity simulated galaxy catalogues; generalizes zero-shot across input geometry, cosmological parameters, and galaxy sample.\n• Performance metrics: Improves correlation coefficient r by 35% over linear theory baseline and 30% over physical baseline on high-fidelity data; data-efficient, training to high accuracy on minimal simulations.",
+    "summary_cn": "• 核心模型: Velocityformer是一种等变图变换器，匹配观测数据破缺对称性（视线方向偏好），底层物理具有平移/旋转等变性。\n• 数据来源: 低保真模拟（最少4个）和高保真模拟星系目录；零样本泛化至不同几何、宇宙学参数和星系样本。\n• 主要结论: 相关系数r比线性理论基线提升35%，比物理基线提升30%；数据高效，极少模拟即可高精度训练。",
+    "verdict_en": "• Alpha Potential: High for cosmology-based strategies (e.g., kSZ signal extraction), but direct financial alpha is indirect; may be useful for factor construction in quant macro.\n• Implementation Risk: Requires specialized astrophysics knowledge and simulation data; computational cost of graph transformers may be high for large-scale deployment.\n• Novelty: Novel symmetry-breaking inductive bias in graph transformers; strong empirical gains in data efficiency and generalization.",
+    "verdict_cn": "• 创新点: 在图中引入破缺对称性归纳偏置，显著提升数据效率和泛化能力。\n• 实盘坑: 直接金融应用有限，需转化为宏观因子；计算成本高，复现需天体物理背景。\n• 复现难度: 高，需模拟数据和领域知识，但开源可能性大。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.21481v1",
+    "title": "AiraXiv: An AI-Driven Open-Access Platform for Human and AI Scientists",
+    "pdf_url": "https://arxiv.org/pdf/2605.21481v1",
+    "published": "2026-05-20",
+    "crawled_at": "2026-05-21 21:20:00",
+    "ai_score": 5.0,
+    "translated_title": "AiraXiv：面向人类和AI科学家的AI驱动开放获取平台",
+    "summary_en": "• The paper proposes AiraXiv, an AI-driven open-access platform designed for both human and AI scientists to publish and review research. • It features AI-augmented analysis and review, continuous feedback-driven iteration, and supports AI scientists via Model Context Protocol (MCP). • The platform is validated through real-world deployments, including as the submission platform for ICAIS 2025. • No specific model architecture, data, or performance metrics are provided; the focus is on system design and deployment. • The platform is publicly available at https://airaxiv.com.",
+    "summary_cn": "• 核心模型: 无具体模型架构，提出AI增强分析和审稿系统。 • 数据来源: 未提及具体数据集，依赖开放预印本和用户反馈。 • 主要结论: AiraXiv作为AI时代出版平台，通过ICAIS 2025部署验证其快速、包容和可扩展性。",
+    "verdict_en": "• Alpha Potential: Low; this is a platform paper, not a trading strategy. • Implementation Risk: High; requires widespread adoption and integration with AI systems. • Novelty: Moderate; combines existing ideas (open access, AI review) but lacks technical depth. • Practical Use: Limited for quantitative finance; more relevant to academic publishing. • Scalability: Unclear; no performance benchmarks or stress tests provided.",
+    "verdict_cn": "• 创新点: 提出AI科学家参与出版的概念，但技术实现细节不足。 • 实盘坑: 与量化交易无关，无法直接用于策略开发。 • 复现难度: 平台已公开，但核心AI审稿能力未量化评估。 • 实用性: 低，主要面向学术社区，非金融应用。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.21475v1",
+    "title": "Is Fixing Schema Graphs Necessary? Full-Resolution Graph Structure Learning for Relational Deep Learning",
+    "pdf_url": "https://arxiv.org/pdf/2605.21475v1",
+    "published": "2026-05-20",
+    "crawled_at": "2026-05-21 21:20:07",
+    "ai_score": 7.5,
+    "translated_title": "固定模式图是否必要？关系深度学习的全分辨率图结构学习",
+    "summary_en": [
+      "• Model Architecture: Proposes FROG, a full-resolution graph structure learning framework for relational deep learning, which treats tables as learnable roles (nodes/edges) and introduces role-driven message passing.",
+      "• Data used: Relational databases (RDBs) with multiple tables; experiments on standard benchmarks like IMDB, StackExchange, and others.",
+      "• Performance metrics: Outperforms existing RDL methods on link prediction and node classification tasks, with ablation studies showing the impact of learnable table roles.",
+      "• Key innovation: Joint optimization of graph structure and GNN representations via functional dependency constraints for semantic consistency."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出FROG框架，将关系数据库中的表建模为可学习的角色（节点/边），并设计角色驱动消息传递机制。",
+      "• 数据来源: 使用IMDB、StackExchange等标准关系数据库基准数据集。",
+      "• 主要结论: 在链接预测和节点分类任务上超越现有方法，表明可学习表角色能提升下游任务性能。",
+      "• 创新点: 通过功能依赖约束联合优化图结构与GNN表示，保持语义一致性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; relational learning is niche but relevant for structured data in finance (e.g., fraud detection, portfolio optimization).",
+      "• Implementation Risk: High; requires custom graph construction and joint optimization, which may be computationally expensive.",
+      "• Novelty: High; first to challenge the fixed full-resolution assumption and propose learnable table roles in RDL.",
+      "• Practicality: Limited; real-world RDBs often have complex schemas, and the method's scalability to large tables is unclear."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次质疑固定全分辨率图结构，提出可学习表角色，思路新颖。",
+      "• 实盘坑: 计算成本高，对大规模关系数据库可能不实用；功能依赖约束需领域知识。",
+      "• 复现难度: 中高；需处理多表联合优化，代码未开源时复现困难。",
+      "• 应用前景: 适合结构化数据场景，如金融风控中的实体关系建模，但需验证收益。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2605.21470v1",
+    "title": "Agent JIT Compilation for Latency-Optimizing Web Agent Planning and Scheduling",
+    "pdf_url": "https://arxiv.org/pdf/2605.21470v1",
+    "published": "2026-05-20",
+    "crawled_at": "2026-05-21 21:20:15",
+    "ai_score": 7.5,
+    "translated_title": "面向延迟优化的网络智能体规划与调度的即时编译方法",
+    "summary_en": "• Model Architecture: Proposes Agent JIT Compilation with three components: JIT-Planner for generating and validating code plans, JIT-Scheduler for parallelization via Monte Carlo cost estimation, and an invariant-enforcing tool protocol. • Data used: Evaluated on 5 web applications (e.g., Taco Bell ordering), using browser tool calls (click, type, scroll) and LLM calls. • Performance metrics: JIT-Planner achieves 10.4x speedup and +28% accuracy over Browser-Use; JIT-Scheduler achieves 2.4x speedup and +9% accuracy over OpenAI CUA. • Key innovation: Compiles task descriptions into executable code with parallelization, reducing sequential LLM calls. • Limitations: Tested only on web tasks; generalizability to other domains unclear.",
+    "summary_cn": "• 核心模型: 提出智能体即时编译方法，包含JIT-Planner（生成并验证代码计划）、JIT-Scheduler（通过蒙特卡洛估计探索并行化）和不变量强制工具协议。 • 数据来源: 在5个网络应用（如Taco Bell点餐）上评估，使用浏览器工具调用和LLM调用。 • 主要结论: JIT-Planner相比Browser-Use实现10.4倍加速和+28%准确率提升；JIT-Scheduler相比OpenAI CUA实现2.4倍加速和+9%准确率提升。 • 创新点: 将任务描述直接编译为可执行代码，支持并行化，减少顺序LLM调用。 • 局限性: 仅测试网络任务，泛化性未知。",
+    "verdict_en": "• Alpha Potential: Low for direct trading; applicable to automating web-based data collection or trade execution workflows, reducing latency. • Implementation Risk: High dependency on LLM and tool specifications; Monte Carlo estimation may be computationally expensive. • Novelty: Moderate; combines JIT compilation concepts with agent planning, but similar ideas exist in program synthesis. • Practicality: Requires integration with browser automation; may not generalize to non-web tasks. • Scalability: Parallelization gains may diminish with complex dependencies.",
+    "verdict_cn": "• 创新点: 将即时编译思想引入智能体规划，减少顺序LLM调用，提升效率。 • 实盘坑: 依赖LLM和工具规范，蒙特卡洛估计计算开销大，且仅适用于浏览器自动化任务，交易场景有限。 • 复现难度: 中等，需实现代码生成、验证和调度模块，且需适配具体工具API。 • 实用性: 适合自动化数据采集或交易执行，但非核心策略。 • 风险: 准确率提升有限，并行化可能引入错误。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.21468v1",
+    "title": "You Only Need Minimal RLVR Training: Extrapolating LLMs via Rank-1 Trajectories",
+    "pdf_url": "https://arxiv.org/pdf/2605.21468v1",
+    "published": "2026-05-20",
+    "crawled_at": "2026-05-21 21:20:22",
+    "ai_score": 8.5,
+    "translated_title": "你只需要最少的RLVR训练：通过秩-1轨迹外推大语言模型",
+    "summary_en": "• Model Architecture: Proposes RELEX, a method that extrapolates RLVR training trajectories using rank-1 subspace approximation and linear regression, requiring no additional learned model.\n• Data used: Evaluated on Qwen2.5-Math-1.5B, Qwen3-4B-Base, and Qwen3-8B-Base models; benchmarks include in-domain and out-of-domain reasoning tasks.\n• Performance metrics: RELEX matches or exceeds full RLVR performance using only 15% of training steps; can extrapolate up to 10-20x beyond observed steps with continued improvement.",
+    "summary_cn": "• 核心模型: 提出RELEX方法，通过秩-1子空间近似和线性回归外推RLVR训练轨迹，无需额外学习模型。\n• 数据来源: 在Qwen2.5-Math-1.5B、Qwen3-4B-Base和Qwen3-8B-Base上评估，涵盖领域内和领域外推理任务。\n• 主要结论: 仅用15%的训练步数即可匹配或超越完整RLVR性能，可外推至观测步数的10-20倍且持续改进。",
+    "verdict_en": "• Alpha Potential: High for compute-constrained settings; extrapolation reduces training cost dramatically while maintaining performance.\n• Implementation Risk: Low; method is simple (linear regression on rank-1 subspace) and code is provided.\n• Novelty: Strong; first to identify low-rank structure in RLVR trajectories and exploit it for extrapolation.",
+    "verdict_cn": "• 创新点: 首次发现RLVR轨迹的低秩结构并用于外推，方法简洁高效。\n• 实盘坑: 依赖RLVR训练初始阶段，若初始阶段噪声大可能影响外推质量；需验证在更大模型和不同任务上的泛化性。\n• 复现难度: 低，代码已开源，方法仅需线性回归。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.21467v1",
+    "title": "DelTA: Discriminative Token Credit Assignment for Reinforcement Learning from Verifiable Rewards",
+    "pdf_url": "https://arxiv.org/pdf/2605.21467v1",
+    "published": "2026-05-20",
+    "crawled_at": "2026-05-21 21:20:28",
+    "ai_score": 7.5,
+    "translated_title": "DelTA：基于可验证奖励的强化学习中的判别性令牌信用分配",
+    "summary_en": "• Model Architecture: Proposes DelTA, a discriminative token credit assignment method that reweights token-gradient vectors to amplify discriminative directions and suppress shared patterns in RLVR updates.\n• Data: Uses mathematical reasoning benchmarks (7 datasets) and code generation tasks; base models are Qwen3-8B-Base and Qwen3-14B-Base.\n• Performance Metrics: Outperforms same-scale baselines by 3.26 and 2.62 average points on math benchmarks; shows generalization on code generation and out-of-domain tasks.",
+    "summary_cn": "• 核心模型: 提出DelTA方法，通过判别性令牌信用分配，放大令牌梯度向量中的判别方向，抑制共享模式，优化RLVR更新方向。\n• 数据来源: 使用7个数学推理基准和代码生成任务，基座模型为Qwen3-8B-Base和Qwen3-14B-Base。\n• 主要结论: 在数学基准上平均超越同规模基线3.26和2.62个百分点，并在代码生成和域外任务上展现泛化能力。",
+    "verdict_en": "• Alpha Potential: Moderate; improves reasoning tasks but limited to RLVR setting; may not directly translate to financial alpha.\n• Implementation Risk: High; requires careful tuning of token coefficients and access to RLVR pipeline; computational overhead.\n• Novelty: High; introduces discriminator view and token-level credit assignment, a fresh perspective on RLVR.",
+    "verdict_cn": "• 创新点: 提出判别器视角和令牌级信用分配，为RLVR提供新思路，理论贡献显著。\n• 实盘坑: 依赖RLVR框架，计算开销大，金融场景直接应用有限；超参数敏感。\n• 复现难度: 中等；需复现RLVR环境及令牌梯度计算，但算法细节清晰。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2605.20182v1",
     "title": "Atoms of Thought: Universal EEG Representation Learning with Microstates",
     "pdf_url": "https://arxiv.org/pdf/2605.20182v1",
