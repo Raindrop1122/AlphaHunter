@@ -1,5 +1,283 @@
 [
   {
+    "id": "2605.22821v1",
+    "title": "Tokenisation via Convex Relaxations",
+    "pdf_url": "https://arxiv.org/pdf/2605.22821v1",
+    "published": "2026-05-21",
+    "crawled_at": "2026-05-22 21:01:09",
+    "ai_score": 7.5,
+    "translated_title": "通过凸松弛进行分词",
+    "summary_en": [
+      "• Model Architecture: Proposes ConvexTok, a tokenizer construction method formulated as a linear program solved via convex optimization, replacing greedy algorithms like BPE and Unigram.",
+      "• Data used: Evaluated on standard NLP datasets for language modeling and downstream tasks; specific datasets not detailed in abstract.",
+      "• Performance metrics: Consistently improves intrinsic tokenization metrics and bits-per-byte (BpB) for language models; downstream task improvements less consistent.",
+      "• Key finding: Tokenizer is within 1% of optimal at common vocabulary sizes, with a certified lower bound."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出ConvexTok，将分词器构建建模为线性规划，通过凸优化求解，替代BPE和Unigram等贪心算法。",
+      "• 数据来源: 在标准NLP数据集上评估语言建模和下游任务，摘要未详述具体数据集。",
+      "• 主要结论: 持续改善内在分词指标和语言模型的bits-per-byte (BpB)；下游任务改进不够一致。",
+      "• 额外发现: 在常见词汇量下，分词器距离最优解在1%以内，且可认证下界。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; improved tokenization can enhance NLP models used in trading signals, but indirect impact on alpha.",
+      "• Implementation Risk: Low; convex optimization is well-understood, but integrating into existing pipelines may require effort.",
+      "• Novelty: High; first principled optimization approach to tokenization, moving beyond greedy heuristics."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次将分词问题形式化为凸优化，理论严谨，优于贪心算法。",
+      "• 实盘坑: 对下游任务提升不稳定，直接用于量化交易信号需谨慎验证。",
+      "• 复现难度: 中等；凸优化工具成熟，但需处理大规模词汇的优化效率。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.22820v1",
+    "title": "Integrable Elasticity via Neural Demand Potentials",
+    "pdf_url": "https://arxiv.org/pdf/2605.22820v1",
+    "published": "2026-05-21",
+    "crawled_at": "2026-05-22 21:01:16",
+    "ai_score": 7.5,
+    "translated_title": "通过神经需求势能实现可积弹性",
+    "summary_en": "• Model Architecture: Proposes Integrable Context-Dependent Demand Network (ICDN), a neural model that learns log-demand as a smooth function of log-prices conditioned on context, enabling exact elasticity derivation.\n• Data used: Evaluated on Dominick's beer dataset, a multiproduct retail dataset with price and demand observations.\n• Performance metrics: ICDN improves out-of-sample generalization over a directed log-log benchmark and yields more stable, economically plausible elasticity estimates, especially for weakly identified cross-price effects.",
+    "summary_cn": "• 核心模型: 提出可积上下文相关需求网络（ICDN），将对数需求建模为对数价格的平滑函数，并依赖上下文条件，从而精确推导弹性。\n• 数据来源: 使用Dominick's啤酒数据集，这是一个多产品零售数据集，包含价格和需求观测。\n• 主要结论: ICDN在样本外泛化上优于有向对数-对数基准，并产生更稳定、经济上合理的弹性估计，尤其是对于弱识别的交叉价格效应。",
+    "verdict_en": "• Alpha Potential: Moderate; stable elasticity estimates could improve demand forecasting and pricing strategies, but direct alpha generation is indirect.\n• Implementation Risk: High; requires careful tuning of neural network and context conditioning, and may not generalize to other product categories.\n• Novelty: Moderate; combines neural networks with economic demand theory, but similar approaches exist in demand modeling literature.",
+    "verdict_cn": "• 创新点: 将神经网络与需求弹性理论结合，实现可积弹性，有一定理论贡献。\n• 实盘坑: 模型复杂，调参困难，且仅验证于啤酒数据集，泛化性存疑；弹性估计虽稳定，但转化为交易信号需额外步骤。\n• 复现难度: 中等偏高；需要深度学习框架和特定数据处理，但论文未提供代码。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.22817v1",
+    "title": "Vector Policy Optimization: Training for Diversity Improves Test-Time Search",
+    "pdf_url": "https://arxiv.org/pdf/2605.22817v1",
+    "published": "2026-05-21",
+    "crawled_at": "2026-05-22 21:01:23",
+    "ai_score": 8.0,
+    "translated_title": "向量策略优化：训练多样性提升测试时搜索",
+    "summary_en": "• Model Architecture: VPO modifies the GRPO advantage estimator to train LLMs to produce diverse solution sets, each specializing in different trade-offs in a vector reward space.\n• Data used: The paper uses standard benchmarks for code generation (e.g., HumanEval) and other tasks with vector-valued rewards (e.g., per-test-case correctness).\n• Performance metrics: VPO matches or beats scalar RL baselines on pass@k and best@k, with larger gaps as search budget increases; for evolutionary search, VPO solves problems that GRPO cannot.",
+    "summary_cn": "• 核心模型: VPO通过修改GRPO的优势估计器，训练LLM输出多样化解集，每个解在向量奖励空间中专门处理不同的权衡。\n• 数据来源: 使用代码生成（如HumanEval）等具有向量奖励（如每个测试用例的正确性）的标准基准。\n• 主要结论: VPO在pass@k和best@k上匹配或超越标量RL基线，搜索预算越大差距越大；在进化搜索中，VPO解决了GRPO无法解决的问题。",
+    "verdict_en": "• Alpha Potential: High for tasks requiring test-time search (e.g., code generation, multi-objective optimization); diversity can unlock new solutions.\n• Implementation Risk: Moderate; requires vector-valued rewards and careful tuning of diversity objective; drop-in replacement for GRPO simplifies integration.\n• Novelty: Strong; explicitly addresses diversity for inference-time search, a gap in current post-training methods.",
+    "verdict_cn": "• 创新点: 首次将多样性作为训练目标以提升测试时搜索性能，针对向量奖励场景设计，填补了现有后训练方法的空白。\n• 实盘坑: 需要任务提供向量奖励（如多测试用例），否则不适用；多样性可能引入噪声，需平衡探索与利用。\n• 复现难度: 中等；基于GRPO修改，但需调整超参数和奖励结构；代码未开源可能增加难度。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.22814v1",
+    "title": "Remember to be Curious: Episodic Context and Persistent Worlds for 3D Exploration",
+    "pdf_url": "https://arxiv.org/pdf/2605.22814v1",
+    "published": "2026-05-21",
+    "crawled_at": "2026-05-22 21:01:31",
+    "ai_score": 7.5,
+    "translated_title": "保持好奇：用于3D探索的情境记忆与持久世界模型",
+    "summary_en": [
+      "• Model Architecture: Combines an online 3D reconstruction as a persistent world model with a sequence model policy (over RGB frames) for episodic context.",
+      "• Data used: Trained purely via curiosity-driven intrinsic rewards on HM3D dataset; zero-shot evaluated on Gibson and AI-generated worlds.",
+      "• Performance metrics: Outperforms RL-based active mapping baselines on HM3D; achieves efficient downstream task adaptation (apple picking, image-goal navigation) with fewer samples than from-scratch RL.",
+      "• Key result: Demonstrates that persistent spatial memory and episodic trajectory history are critical for effective curiosity-driven exploration in 3D environments."
+    ],
+    "summary_cn": [
+      "• 核心模型: 结合在线3D重建作为持久世界模型，以及基于RGB帧序列的策略网络来维持情境记忆。",
+      "• 数据来源: 在HM3D数据集上仅通过好奇心驱动的内在奖励训练，零样本泛化至Gibson和AI生成世界。",
+      "• 主要结论: 持久空间记忆和情境轨迹历史对于3D环境中有效的好奇心探索至关重要。",
+      "• 性能指标: 在HM3D上超越基于RL的主动映射基线；下游任务（摘苹果、图像目标导航）中比从头训练的RL更高效。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low for traditional finance; high for robotics/embodied AI strategies (e.g., automated warehouse navigation).",
+      "• Implementation Risk: High computational cost due to online 3D reconstruction; requires GPU-heavy infrastructure.",
+      "• Novelty: Strong contribution in combining persistent 3D maps with episodic memory for curiosity-driven RL; addresses a known failure mode in prior work.",
+      "• Practicality: Deployment requires only RGB input, but training demands significant compute and 3D data."
+    ],
+    "verdict_cn": [
+      "• 创新点: 巧妙结合持久3D地图与情境记忆，解决了好奇心RL在复杂3D环境中的循环陷阱问题。",
+      "• 实盘坑: 计算成本极高，在线3D重建对硬件要求苛刻，不适合低延迟交易场景。",
+      "• 复现难度: 中等偏高，需要3D数据集和GPU集群，但代码若开源可降低门槛。",
+      "• 应用前景: 在机器人导航、虚拟现实等领域有潜力，但金融量化直接应用有限。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2605.22800v1",
+    "title": "The Matching Principle: A Geometric Theory of Loss Functions for Nuisance-Robust Representation Learning",
+    "pdf_url": "https://arxiv.org/pdf/2605.22800v1",
+    "published": "2026-05-21",
+    "crawled_at": "2026-05-22 21:01:39",
+    "ai_score": 7.5,
+    "translated_title": "匹配原则：针对干扰鲁棒表示学习的损失函数几何理论",
+    "summary_en": "• Proposes a unified geometric theory (matching principle) for nuisance-robust representation learning, showing that many robustness methods (CORAL, adversarial training, IRM, augmentation, etc.) estimate the same object: label-preserving deployment nuisance covariance.\n• Derives closed-form optimality in linear-Gaussian models (Theorem A), including cube-root water-filling within the matched range, and provides seven conditional consistency lemmas for estimation.\n• Introduces Trajectory Deviation Index (TDI), a label-free probe for embedding sensitivity, tested on 13 pre-registered blocks from classical ML to Qwen2.5-7B.\n• Empirical results: 12/13 blocks pass predictions; at 7B scale, matched style-PMH improves selective honesty and preserves Style TDI, while standard DPO degrades it.",
+    "summary_cn": "• 核心模型: 提出匹配原则，将CORAL、对抗训练、IRM、数据增强等鲁棒方法统一为估计标签保持的部署干扰协方差，并在线性高斯模型中给出闭式最优解（定理A）。\n• 数据来源: 经典ML到Qwen2.5-7B的13个预注册实验块，涵盖图像、文本等模态。\n• 主要结论: 12/13个实验块通过预测；在7B规模下，匹配风格PMH提升选择性诚实度并保持风格TDI，而标准DPO使其退化。",
+    "verdict_en": "• Alpha Potential: Moderate; the theory provides a principled way to design robust representations, which could improve factor stability and reduce overfitting to noise, but direct trading signal is unclear.\n• Implementation Risk: High; requires estimating nuisance covariance and regularizing Jacobian, which is computationally intensive and may not scale to high-dimensional financial data.\n• Novelty: High; unifies disparate robustness methods under a single geometric framework with falsifiable predictions, a rare theoretical contribution.",
+    "verdict_cn": "• 创新点: 将多种鲁棒方法统一为匹配原则，提供可证伪的几何理论，理论深度高。\n• 实盘坑: 需要估计干扰协方差并正则化雅可比矩阵，计算成本高，且金融数据中干扰定义不明确，可能导致过拟合。\n• 复现难度: 高；线性高斯模型结论清晰，但扩展到深度网络和实际数据需要大量调参，且TDI指标在金融场景的有效性待验证。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.22795v1",
+    "title": "Finite-Particle Convergence Rates for Conservative and Non-Conservative Drifting Models",
+    "pdf_url": "https://arxiv.org/pdf/2605.22795v1",
+    "published": "2026-05-21",
+    "crawled_at": "2026-05-22 21:01:45",
+    "ai_score": 6.5,
+    "translated_title": "保守与非保守漂移模型的有限粒子收敛速率",
+    "summary_en": "• Model Architecture: Proposes a conservative drifting method for generative modeling, replacing displacement-based velocity with KDE-gradient velocity. Also analyzes non-conservative method with Laplace kernel.\n• Data used: Theoretical analysis on R^d; no empirical data used.\n• Performance metrics: Finite-particle convergence bounds, root residual-velocity rate N^{-1/(d+4)} under certain conditions, optimized rate N^{-(2-β)/(2(d+4-β))}.",
+    "summary_cn": "• 核心模型: 提出保守漂移方法，用KDE梯度速度替代位移速度；分析非保守方法（Laplace核）。\n• 数据来源: 纯理论分析，无实证数据。\n• 主要结论: 有限粒子收敛速率，最优速率N^{-(2-β)/(2(d+4-β))}。",
+    "verdict_en": "• Alpha Potential: Low; theoretical paper with no direct trading application.\n• Implementation Risk: High; requires KDE and bandwidth tuning, computationally intensive.\n• Novelty: Moderate; addresses conservatism issue in drifting models, but highly mathematical.",
+    "verdict_cn": "• 创新点: 解决漂移模型非保守问题，理论贡献扎实。\n• 实盘坑: 无实证，高维KDE计算复杂，带宽选择敏感。\n• 复现难度: 高，需要深入数学背景。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.22794v1",
+    "title": "MOSS: Self-Evolution through Source-Level Rewriting in Autonomous Agent Systems",
+    "pdf_url": "https://arxiv.org/pdf/2605.22794v1",
+    "published": "2026-05-21",
+    "crawled_at": "2026-05-22 21:01:53",
+    "ai_score": 7.5,
+    "translated_title": "MOSS：自主智能体系统中通过源代码级重写的自我进化",
+    "summary_en": "• Model Architecture: MOSS uses a deterministic multi-stage pipeline for source-level self-rewriting, with a pluggable external coding-agent CLI for code modification, while MOSS retains stage ordering and verdicts. Evolution is anchored to automatically curated batches of production-failure evidence.\n• Data used: The system relies on production-failure evidence batches, automatically curated from user interactions, to drive evolution. No specific dataset is mentioned; it uses real-world failure data.\n• Performance metrics: On the OpenClaw benchmark, MOSS improved a four-task mean grader score from 0.25 to 0.61 in a single cycle without human intervention, demonstrating significant performance gains.",
+    "summary_cn": "• 核心模型: MOSS采用确定性多阶段流水线进行源代码级自我重写，通过可插拔的外部编码代理CLI进行代码修改，而MOSS保留阶段排序和裁决。进化锚定在自动策划的生产故障证据批次上。\n• 数据来源: 系统依赖从用户交互中自动策划的生产故障证据批次来驱动进化。未提及特定数据集，使用真实世界的故障数据。\n• 主要结论: 在OpenClaw基准测试中，MOSS在单周期内将四项任务的平均评分从0.25提升至0.61，无需人工干预，展示了显著的性能提升。",
+    "verdict_en": "• Alpha Potential: Low direct alpha potential for quantitative finance, as the paper focuses on autonomous agent systems rather than financial markets. However, the concept of self-evolving code could be applied to trading system maintenance and failure recovery.\n• Implementation Risk: High implementation risk due to the complexity of source-level rewriting and the need for robust verification and rollback mechanisms. The system requires integration with production environments and careful consent gating.\n• Novelty: High novelty in the approach of source-level self-evolution, moving beyond text-mutable artifacts to modify agent harness code. This is a significant advancement in autonomous agent systems.",
+    "verdict_cn": "• 创新点: 源代码级自我进化的方法具有高度创新性，超越了文本可变工件，直接修改代理框架代码，是自主智能体系统的重大进步。\n• 实盘坑: 在量化金融中直接应用潜力低，但可借鉴于交易系统维护和故障恢复。实施风险高，需要复杂的验证和回滚机制。\n• 复现难度: 复现难度高，涉及生产环境集成、自动故障数据收集和确定性流水线，需要大量工程投入。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.22792v1",
+    "title": "From Arbitrage Removal to Density Extraction: A Model-Free Framework for Short-Dated Options",
+    "pdf_url": "https://arxiv.org/pdf/2605.22792v1",
+    "published": "2026-05-21",
+    "crawled_at": "2026-05-22 21:02:01",
+    "ai_score": 7.5,
+    "translated_title": "从套利消除到密度提取：短期期权的无模型框架",
+    "summary_en": [
+      "• Model Architecture: Two-step pipeline: ARIES removes static arbitrage under bid-ask constraints with market depth, then SEDEx extracts risk-neutral density via smoothness and entropy criteria.",
+      "• Data used: Synthetic Heston panels and short-dated SPX options (hours to one week before expiry), including periods around macroeconomic announcements.",
+      "• Performance metrics: Fast computation, robust densities across market conditions, used to construct implied-volatility smiles.",
+      "• Key finding: Handles stale/asynchronous quotes and wide bid-ask spreads, enabling stable density extraction where standard methods fail."
+    ],
+    "summary_cn": [
+      "• 核心模型: 两步流程：ARIES在买卖价差和市场深度约束下消除静态套利，SEDEx通过平滑性和熵准则提取风险中性密度。",
+      "• 数据来源: 合成Heston面板和短期SPX期权数据（到期前数小时至一周），包括宏观经济公告期间。",
+      "• 主要结论: 计算快速，在各种市场条件下返回稳健密度，并用于构建隐含波动率微笑。",
+      "• 关键发现: 处理过时/异步报价和宽买卖价差，在标准方法失效时实现稳定密度提取。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for short-dated options trading, especially around events; robust density extraction enables precise volatility arbitrage and tail risk hedging.",
+      "• Implementation Risk: Moderate; requires careful calibration of entropy regularization and market depth parameters; bid-ask data quality critical.",
+      "• Novelty: High; model-free, handles arbitrage removal and density extraction jointly under realistic market constraints, unlike prior work assuming mid prices.",
+      "• Practicality: Fast and scalable; suitable for real-time applications in high-frequency options market making or risk management."
+    ],
+    "verdict_cn": [
+      "• 创新点: 无模型框架，联合处理套利消除和密度提取，考虑买卖价差和市场深度，突破传统依赖中间价的局限。",
+      "• 实盘坑: 熵正则化和市场深度参数需精细调参；买卖价差数据质量敏感，低流动性合约可能不稳定。",
+      "• 复现难度: 中等；算法清晰但需处理期权数据清洗和优化求解，计算资源要求不高。",
+      "• 交易价值: 短期期权事件驱动策略的利器，可用于波动率套利和尾部风险对冲，实盘潜力大。"
+    ],
+    "ai_strategy": "Arbitrage",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.22786v1",
+    "title": "LCGuard: Latent Communication Guard for Safe KV Sharing in Multi-Agent Systems",
+    "pdf_url": "https://arxiv.org/pdf/2605.22786v1",
+    "published": "2026-05-21",
+    "crawled_at": "2026-05-22 21:02:10",
+    "ai_score": 6.5,
+    "translated_title": "LCGuard：多智能体系统中安全KV共享的潜在通信防护",
+    "summary_en": [
+      "• Model Architecture: LCGuard introduces representation-level transformations on shared KV caches to prevent sensitive information leakage, using an adversarial training framework where a decoder attempts to reconstruct sensitive inputs.",
+      "• Data used: Evaluated on multiple model families (e.g., LLaMA, GPT) and multi-agent benchmarks, though specific dataset details are not provided in the abstract.",
+      "• Performance metrics: Consistently reduces reconstruction-based leakage and attack success rates while maintaining competitive task performance compared to standard KV-sharing baselines.",
+      "• Key innovation: Treats KV caches as latent working memory and formalizes leakage via reconstruction, enabling a principled defense mechanism."
+    ],
+    "summary_cn": [
+      "• 核心模型: LCGuard通过在共享KV缓存上应用表示级变换，结合对抗训练（解码器尝试重建敏感输入）来防止信息泄露。",
+      "• 数据来源: 在多个模型家族（如LLaMA、GPT）和多智能体基准上评估，但摘要未提供具体数据集细节。",
+      "• 主要结论: 相比标准KV共享基线，LCGuard持续降低基于重建的泄露和攻击成功率，同时保持有竞争力的任务性能。",
+      "• 创新点: 将KV缓存视为潜在工作记忆，并通过重建形式化泄露，提供了一种原则性的防御机制。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low for direct trading; addresses security in multi-agent LLM systems, which is more relevant to AI safety than quantitative finance.",
+      "• Implementation Risk: High; requires adversarial training and integration with multi-agent frameworks, not straightforward for trading systems.",
+      "• Novelty: Moderate; applies adversarial training to KV cache sharing, but the concept of representation-level defense is not entirely new.",
+      "• Practicality: Limited for hedge funds unless multi-agent LLMs are used for trading decisions, which is rare."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将对抗训练应用于KV缓存共享，形式化潜在信息泄露，有一定学术价值。",
+      "• 实盘坑: 与量化交易直接关联低，多智能体系统在实盘中应用有限，且防御机制增加计算开销。",
+      "• 复现难度: 中等；需要多智能体框架和对抗训练，但论文未提供完整代码或数据细节。",
+      "• 评分理由: 安全方向，非量化核心，但技术可迁移性差，alpha潜力低。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.22779v1",
+    "title": "FAME: Failure-Aware Mixture-of-Experts for Message-Level Log Anomaly Detection",
+    "pdf_url": "https://arxiv.org/pdf/2605.22779v1",
+    "published": "2026-05-21",
+    "crawled_at": "2026-05-22 21:02:18",
+    "ai_score": 7.5,
+    "translated_title": "FAME：面向消息级日志异常检测的故障感知混合专家模型",
+    "summary_en": [
+      "• Model Architecture: FAME uses a mixture-of-experts framework with a lightweight router and domain experts, leveraging an LLM offline for label-efficient annotation and failure-domain partitioning.",
+      "• Data used: Evaluated on BGL and Thunderbird log datasets, with message-level labels derived from at most K=100 labeled lines per template.",
+      "• Performance metrics: On BGL, F1=98.16 at K=100 (76x annotation reduction); detects 86.3% of anomalies from unseen EventIDs. On Thunderbird, F1=99.95 with perfect recall.",
+      "• Key innovation: Offline LLM usage for template partitioning and certification, enabling on-premise lightweight inference."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用混合专家框架，包含轻量级路由器和领域专家，利用LLM离线进行标签高效标注和故障域划分。",
+      "• 数据来源: 在BGL和Thunderbird日志数据集上评估，每个模板最多标注K=100条消息级标签。",
+      "• 主要结论: BGL上F1=98.16（K=100），标注减少76倍；检测86.3%的未见EventID异常。Thunderbird上F1=99.95，召回率完美。",
+      "• 创新点: 离线使用LLM进行模板划分和验证，实现本地轻量推理。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low for financial trading; log anomaly detection is operational, not market-facing.",
+      "• Implementation Risk: Moderate; requires log data and domain-specific tuning, but architecture is straightforward.",
+      "• Novelty: High in log anomaly detection; mixture-of-experts with offline LLM guidance is novel for this domain.",
+      "• Practicality: Label-efficient and cost-effective for production systems, but not directly applicable to quantitative finance."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将混合专家模型与离线LLM结合用于日志异常检测，标签效率高。",
+      "• 实盘坑: 金融交易中无直接应用价值；日志异常检测对量化策略无alpha贡献。",
+      "• 复现难度: 中等，需日志数据和领域知识，但模型结构清晰。",
+      "• 适用性: 适合运维监控，不适合高频或因子交易。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2605.21489v1",
     "title": "Variance Reduction for Expectations with Diffusion Teachers",
     "pdf_url": "https://arxiv.org/pdf/2605.21489v1",
