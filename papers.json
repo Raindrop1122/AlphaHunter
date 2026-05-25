@@ -1,5 +1,219 @@
 [
   {
+    "id": "2605.23901v1",
+    "title": "LLMs as Noisy Channels: A Shannon Perspective on Model Capacity and Scaling Laws",
+    "pdf_url": "https://arxiv.org/pdf/2605.23901v1",
+    "published": "2026-05-22",
+    "crawled_at": "2026-05-25 20:55:21",
+    "ai_score": 8.5,
+    "translated_title": "大语言模型作为噪声信道：基于香农视角的模型容量与缩放定律",
+    "summary_en": "• Model Architecture: Proposes a theoretical framework treating LLM training as information transmission over a noisy channel, mapping model parameters to bandwidth and tokens to signal power.\n• Data used: Validated on Pythia and OLMo2 models under perturbations (Gaussian noise, quantization, SFT on math/QA/code).\n• Performance metrics: Outperforms classical scaling laws with R² scores; extrapolates to unseen 12B model with pooled R²=0.847.\n• Key finding: Reveals a Shannon capacity for LLMs, explaining non-monotonic phenomena like catastrophic overtraining.",
+    "summary_cn": "• 核心模型: 提出香农缩放定律，将LLM训练建模为噪声信道传输，参数映射为带宽，token映射为信号功率。\n• 数据来源: 在Pythia和OLMo2上验证，引入高斯噪声、量化及数学/问答/代码微调扰动。\n• 主要结论: 揭示LLM的香农容量，解释灾难性过训练等非单调现象，R²指标优于经典缩放定律。\n• 外推能力: 基于≤6.9B模型和≤180B token拟合，成功预测12B模型至307B token，R²=0.847。",
+    "verdict_en": "• Alpha Potential: High – provides a principled way to predict optimal model/data scaling, directly applicable to resource allocation and training efficiency.\n• Implementation Risk: Medium – requires accurate SNR estimation; perturbations may not fully capture real-world noise.\n• Novelty: Strong – bridges information theory and LLM scaling, offering a unified explanation for previously puzzling phenomena.\n• Limitations: Theoretical assumptions (e.g., Gaussian noise) may oversimplify; empirical validation limited to specific model families.",
+    "verdict_cn": "• 创新点: 将香农信息论引入LLM缩放定律，统一解释灾难性过训练等异常现象，理论深度高。\n• 实盘坑: SNR估计依赖扰动类型，实际训练噪声复杂，可能需调整；外推性需更多模型族验证。\n• 复现难度: 中等，需实现噪声信道模拟和SNR计算，但实验基于开源模型。\n• 策略价值: 直接指导算力分配，避免无效缩放，对量化交易中的模型优化有借鉴意义。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2605.23893v1",
+    "title": "Complete-muE: Optimal Hyperparameter Transfer and Scaling for MoE Models",
+    "pdf_url": "https://arxiv.org/pdf/2605.23893v1",
+    "published": "2026-05-22",
+    "crawled_at": "2026-05-25 20:55:28",
+    "ai_score": 8.5,
+    "translated_title": "Complete-muE: 混合专家模型的最优超参数迁移与缩放",
+    "summary_en": [
+      "• Model Architecture: Proposes Complete-muE framework for hyperparameter transfer between dense FFN and any Mixture-of-Experts (MoE) transformer blocks, using a two-bridge system (Bridge I: active-width μP with normalized router; Bridge II: activated-expert scaling with SDE correction).",
+      "• Data used: Pretraining experiments on language models and diffusion models, but specific datasets not detailed.",
+      "• Performance metrics: Demonstrates stable hyperparameter optima across architectures and parameter counts, with minimal drift; MoE models achieve accelerated convergence speedup over dense models without costly hyperparameter search.",
+      "• Key result: Hyperparameters tuned on a single dense reference transfer near-optimally to all MoE configurations (\"tune dense once, transfer to all\")."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出Complete-muE框架，通过双桥系统（桥I：基于活跃宽度的μP与归一化路由器；桥II：基于激活专家缩放与SDE修正）实现稠密FFN与任意MoE变换器块之间的超参数迁移。",
+      "• 数据来源: 在语言模型和扩散模型上进行预训练实验，但未明确具体数据集。",
+      "• 主要结论: 超参数在不同架构和参数量下保持稳定，仅微小漂移；MoE模型无需昂贵超参数搜索即可实现加速收敛。",
+      "• 实用配方: 在单个稠密参考模型上调优超参数后，可近乎最优地迁移至所有MoE配置（“一次调优，迁移所有”）。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High – Enables efficient scaling of MoE models without hyperparameter search, directly improving training speed and model capacity, which can translate to better trading signals.",
+      "• Implementation Risk: Medium – Requires careful implementation of the two-bridge system and SDE corrections; the drift in Bridge II may cause slight suboptimality in extreme scaling.",
+      "• Novelty: High – First framework to systematically address hyperparameter transfer across dense and MoE architectures, combining μP and SDE approaches."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次系统解决稠密与MoE架构间的超参数迁移问题，巧妙结合μP和SDE方法，提出双桥系统。",
+      "• 实盘坑: 桥II中的残差漂移在极端缩放下可能影响最优性，需验证实际交易场景中的稳定性。",
+      "• 复现难度: 中等，需要深入理解μP和SDE理论，且对MoE架构的工程实现要求较高。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.23892v1",
+    "title": "Good Token Hunting: A Hitchhiker's Guide to Token Selection for Visual Geometry Transformers",
+    "pdf_url": "https://arxiv.org/pdf/2605.23892v1",
+    "published": "2026-05-22",
+    "crawled_at": "2026-05-25 20:55:34",
+    "ai_score": 7.5,
+    "translated_title": "好代币狩猎：视觉几何变换器令牌选择的 hitchhiker 指南",
+    "summary_en": [
+      "• Model Architecture: Proposes a two-stage token selection framework for visual geometry transformers, with inter-frame selection using diversity-based strategy and intra-frame selection using layer-aware sparsification guided by entropy of global attention patterns.",
+      "• Data used: Multi-view 3D reconstruction datasets (e.g., scenes with up to 500 images), but specific dataset names not mentioned in abstract.",
+      "• Performance metrics: Achieves over 85% speedup for scenes with 500 images while maintaining or improving baseline performance, demonstrating superior speed-accuracy trade-off."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出两阶段令牌选择框架，帧间选择基于多样性策略，帧内选择基于全局注意力熵的层感知稀疏化。",
+      "• 数据来源: 多视图3D重建数据集（最多500张图像场景），但未提及具体数据集名称。",
+      "• 主要结论: 在500张图像场景下加速超过85%，同时保持或提升基线性能，实现更优的速度-精度权衡。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low for financial trading; paper focuses on computer vision efficiency, not market prediction.",
+      "• Implementation Risk: High; requires integration with visual geometry transformers, not directly applicable to finance.",
+      "• Novelty: Moderate; token selection for transformers is known, but two-stage diversity+entropy approach is novel for 3D reconstruction."
+    ],
+    "verdict_cn": [
+      "• 创新点: 两阶段令牌选择结合多样性和熵引导稀疏化，在3D重建中新颖。",
+      "• 实盘坑: 与金融交易无关，无法直接用于量化策略。",
+      "• 复现难度: 中等，需视觉几何变换器基础，但代码可能开源。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.23887v1",
+    "title": "CHRONOS: Temporally-Aware Multi-Agent Coordination for Evolving Data Marketplaces",
+    "pdf_url": "https://arxiv.org/pdf/2605.23887v1",
+    "published": "2026-05-22",
+    "crawled_at": "2026-05-25 20:55:40",
+    "ai_score": 7.2,
+    "translated_title": "CHRONOS：面向演化数据市场的时间感知多智能体协调",
+    "summary_en": "• Model Architecture: Three-layer architecture with neural-ODE temporal decay for index shortcuts, changepoint-conditioned Shapley valuation, and EXP3-IX bandit for DP budget allocation.\n• Data used: Temporal knowledge-graph data marketplaces with evolving edges; benchmarks likely synthetic or derived from real-world temporal graphs.\n• Performance metrics: 0.937 recall@10, 2.74 queries/sec, 161 ms latency, total epsilon 4.25 at delta=1e-6 under zCDP.",
+    "summary_cn": "• 核心模型: 三层架构，包括神经ODE时间衰减的索引捷径、基于变化点的Shapley估值、以及EXP3-IX多臂赌博机分配差分隐私预算。\n• 数据来源: 时间知识图谱数据市场，边随时间演化；基准测试可能基于合成数据或真实时间图。\n• 主要结论: 在zCDP组合下，召回率@10达0.937，查询速度2.74次/秒，延迟161毫秒，总epsilon为4.25（delta=1e-6）。",
+    "verdict_en": "• Alpha Potential: Low direct alpha; more relevant for data infrastructure and privacy-preserving marketplaces.\n• Implementation Risk: High complexity with neural-ODE, changepoint detection, and bandit algorithms; requires careful tuning.\n• Novelty: Strong theoretical contributions combining temporal decay, Shapley value, and DP in a unified framework.",
+    "verdict_cn": "• 创新点: 统一处理时间衰减、Shapley估值和差分隐私，理论贡献扎实。\n• 实盘坑: 直接交易信号弱，更多是数据基础设施；神经ODE和变化点检测实现复杂，调参困难。\n• 复现难度: 高，需要多领域知识（时间序列、博弈论、隐私计算），且依赖特定数据市场环境。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.23879v1",
+    "title": "On the Stability of Spherical Hellinger-Kantorovich Flows and Their Implications for Differential Privacy",
+    "pdf_url": "https://arxiv.org/pdf/2605.23879v1",
+    "published": "2026-05-22",
+    "crawled_at": "2026-05-25 20:55:46",
+    "ai_score": 7.5,
+    "translated_title": "球形Hellinger-Kantorovich流的稳定性及其对差分隐私的影响",
+    "summary_en": "• Model Architecture: The paper develops a perturbation theory for spherical Hellinger-Kantorovich (SHK) gradient flows, which couple transport and reaction and coincide with birth-death Langevin dynamics.\n• Data used: The analysis is theoretical and does not use empirical data; it focuses on comparing flows from two potentials V and V'.\n• Performance metrics: The paper provides dimension-free, pointwise control of log-likelihood ratio and Rényi divergence, and bounds for KL divergence under additional structure.",
+    "summary_cn": "• 核心模型: 论文发展了球形Hellinger-Kantorovich (SHK)梯度流的扰动理论，该流耦合了传输和反应，并与生灭Langevin动力学一致。\n• 数据来源: 分析是理论性的，未使用实证数据；重点是比较两个势V和V'的流。\n• 主要结论: 提供了对数似然比和Rényi散度的无维度逐点控制，以及在附加结构下KL散度的界限。",
+    "verdict_en": "• Alpha Potential: Low for direct trading; the paper is theoretical and focuses on differential privacy, not financial markets.\n• Implementation Risk: High; requires deep understanding of gradient flows and differential privacy, with no immediate practical application.\n• Novelty: Moderate; perturbation theory for SHK flows is novel, but the connection to differential privacy is incremental.",
+    "verdict_cn": "• 创新点: 对SHK流的扰动理论是新颖的，但差分隐私应用是增量式的。\n• 实盘坑: 理论性强，无直接交易策略，实施风险高。\n• 复现难度: 高，需要高级数学和隐私知识。",
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.23872v1",
+    "title": "Training-Free Looped Transformers",
+    "pdf_url": "https://arxiv.org/pdf/2605.23872v1",
+    "published": "2026-05-22",
+    "crawled_at": "2026-05-25 20:55:53",
+    "ai_score": 7.5,
+    "translated_title": "免训练循环变压器",
+    "summary_en": "• Model Architecture: Introduces training-free looped transformers that wrap a contiguous mid-stack block of layers from a frozen pretrained model, using damped sub-steps instead of naive block reapplication, inspired by ODE interpretation of pre-norm transformer blocks.\n• Data used: Evaluated on standard benchmarks including MMLU-Pro, CommonsenseQA, OpenBookQA, across seven model families (dense, sparse MoE, MLA+MoE).\n• Performance metrics: Improves Qwen3-4B-Instruct by +2.64 pp on MMLU-Pro, Qwen3-30B-A3B-Instruct by +1.14 pp on CommonsenseQA, Moonlight-16B-A3B-Instruct by +1.20 pp on OpenBookQA.",
+    "summary_cn": "• 核心模型: 提出免训练循环变压器，在推理时对冻结预训练模型的中间层块进行循环，采用阻尼子步替代简单块重复，灵感来自预归一化变压器块的ODE解释。\n• 数据来源: 在MMLU-Pro、CommonsenseQA、OpenBookQA等标准基准上评估，涵盖七个模型家族（密集、稀疏MoE、MLA+MoE）。\n• 主要结论: 在Qwen3-4B-Instruct上MMLU-Pro提升2.64个百分点，Qwen3-30B-A3B-Instruct上CommonsenseQA提升1.14个百分点，Moonlight-16B-A3B-Instruct上OpenBookQA提升1.20个百分点。",
+    "verdict_en": "• Alpha Potential: Moderate; performance gains are modest (1-3 pp) and limited to specific benchmarks, not broad improvements.\n• Implementation Risk: Low; no training required, only inference-time wrapper, easy to integrate into existing pipelines.\n• Novelty: Moderate; looped transformers exist, but training-free retrofit is new; ODE perspective provides theoretical grounding.",
+    "verdict_cn": "• 创新点: 免训练循环是新颖的，但增益有限；ODE视角提供理论解释，但实际提升不大。\n• 实盘坑: 性能提升不稳定，依赖模型和任务；可能增加推理延迟，需权衡成本。\n• 复现难度: 低；无需训练，只需修改推理代码，但需调参（阻尼系数等）。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.23871v1",
+    "title": "Move on Muon : A Hamiltonian probability gradient flow perspective of Muon optimizer",
+    "pdf_url": "https://arxiv.org/pdf/2605.23871v1",
+    "published": "2026-05-22",
+    "crawled_at": "2026-05-25 20:55:59",
+    "ai_score": 7.5,
+    "translated_title": "Muon上的移动：从哈密顿概率梯度流视角看Muon优化器",
+    "summary_en": "• Model Architecture: Develops a gradient flow on probability measures over matrix parameters, regularizing Muon optimizer via Fenchel-dual smoothing of nuclear norm.\n• Data used: Theoretical analysis; no empirical data or experiments.\n• Performance metrics: Proves monotonic Hamiltonian dissipation, exponential convergence under gradient-dominance and curvature assumptions, and propagation of chaos guarantees.",
+    "summary_cn": "• 核心模型: 在矩阵参数的概率测度空间上构建梯度流，通过核范数的Fenchel对偶平滑正则化Muon优化器。\n• 数据来源: 纯理论分析，无实证数据或实验。\n• 主要结论: 证明哈密顿量单调耗散，在梯度主导和曲率假设下指数收敛，以及混沌传播保证。",
+    "verdict_en": "• Alpha Potential: Low; theoretical paper with no direct trading signal or empirical validation.\n• Implementation Risk: High; requires mean-field particle systems and complex regularization, impractical for real-world trading.\n• Novelty: Moderate; provides new theoretical perspective on Muon optimizer but limited practical applicability.",
+    "verdict_cn": "• 创新点: 从概率梯度流角度重新解释Muon优化器，理论框架新颖。\n• 实盘坑: 纯理论推导，无实际数据验证，难以直接用于量化交易。\n• 复现难度: 极高；需要实现粒子系统和正则化映射，计算复杂。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.23861v1",
+    "title": "Leveraging Foundation Models for Causal Generative Modeling",
+    "pdf_url": "https://arxiv.org/pdf/2605.23861v1",
+    "published": "2026-05-22",
+    "crawled_at": "2026-05-25 20:56:06",
+    "ai_score": 7.5,
+    "translated_title": "利用基础模型进行因果生成建模",
+    "summary_en": "• Model Architecture: FM-CGM framework with concept extractor, concept manipulator, and counterfactual generator, using a large reasoning model for causal inference and a text-to-image diffusion model for generation.\n• Data used: Not explicitly specified; likely uses pretrained foundation models and standard image datasets for evaluation.\n• Performance metrics: Demonstrates plausible causal structures and faithful counterfactual image generation, but quantitative metrics are not detailed.\n• Key contribution: Causal Semantic Guidance (CSG) mechanism for semantic intervention propagation while preserving invariant regions.\n• Zero-shot capability: Enables causal discovery, intervention, and counterfactual generation without task-specific training.",
+    "summary_cn": "• 核心模型: FM-CGM框架，包含概念提取器、概念操作器和反事实生成器，利用大型推理模型进行因果推断，文本到图像扩散模型进行生成。\n• 数据来源: 未明确指定，可能使用预训练基础模型和标准图像数据集进行评估。\n• 主要结论: 能识别合理的因果结构并生成忠实反事实图像，但定量指标未详细给出。\n• 关键机制: 因果语义引导（CSG）通过交叉注意力传播语义干预，同时保持不变区域。\n• 零样本能力: 无需任务特定训练即可实现因果发现、干预和反事实生成。",
+    "verdict_en": "• Alpha Potential: Low for direct trading; may be useful for causal factor generation in alpha research.\n• Implementation Risk: High due to reliance on large pretrained models and diffusion processes; computational cost is significant.\n• Novelty: Moderate; combines existing causal reasoning and generative models in a modular framework, but CSG is a novel contribution.\n• Practicality: Limited for real-time trading; more suited for offline analysis and synthetic data generation.\n• Reproducibility: Challenging due to dependence on specific foundation models and lack of detailed training data.",
+    "verdict_cn": "• 创新点: 模块化框架结合因果推理与生成模型，CSG机制有新颖性。\n• 实盘坑: 计算成本高，依赖大型预训练模型，不适合高频交易；因果结构可能不稳定。\n• 复现难度: 高，需要特定基础模型和大量计算资源，数据细节不充分。\n• 应用前景: 更适合离线因果分析和合成数据生成，而非直接交易策略。\n• 风险提示: 因果发现的可信度需验证，反事实生成可能引入偏差。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.23857v1",
+    "title": "Strong Teacher Not Needed? On Distillation in LLM Pretraining",
+    "pdf_url": "https://arxiv.org/pdf/2605.23857v1",
+    "published": "2026-05-22",
+    "crawled_at": "2026-05-25 20:56:12",
+    "ai_score": 7.5,
+    "translated_title": "不需要强教师？大语言模型预训练中的蒸馏研究",
+    "summary_en": "• Model Architecture: Varies transformer sizes (e.g., small, medium, large) to create different teacher-student relationships (strong-to-weak, same-level, weak-to-strong).\n• Data used: Pretraining on standard language modeling datasets (e.g., C4, Wikipedia) with varying token budgets.\n• Performance metrics: Evaluates in-domain perplexity, out-of-distribution generalization, and downstream task accuracy.\n• Key findings: Weak teachers can improve larger students; stronger teachers may saturate or reverse gains; distillation improves generalization more than in-domain fit.",
+    "summary_cn": "• 核心模型: 使用不同规模的Transformer模型（小、中、大）构建强弱不同的师生关系。\n• 数据来源: 在标准语言建模数据集（如C4、Wikipedia）上预训练，并调整训练token预算。\n• 主要结论: 弱教师也能提升大模型；强教师可能带来收益饱和甚至反转；蒸馏对泛化能力的提升优于对领域内拟合的提升。",
+    "verdict_en": "• Alpha Potential: Moderate – challenges conventional wisdom, may lead to cost-efficient pretraining strategies.\n• Implementation Risk: Low to moderate – requires careful tuning of loss mixing ratio and teacher selection.\n• Novelty: High – overturns strong teacher assumption in LLM distillation, with practical implications.\n• Limitations: Experiments limited to specific architectures and scales; real-world impact needs validation.",
+    "verdict_cn": "• 创新点: 颠覆了LLM蒸馏中强教师必要的传统观点，提出弱教师同样有效。\n• 实盘坑: 损失函数混合比例和教师选择需要精细调参，否则可能无效。\n• 复现难度: 中等，需较大计算资源复现不同规模实验。\n• 潜在价值: 可降低预训练成本，但需在更大规模上验证。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.23854v1",
+    "title": "Entrywise Error Bounds for Spectral Ranking with Semi-Random Adversaries",
+    "pdf_url": "https://arxiv.org/pdf/2605.23854v1",
+    "published": "2026-05-22",
+    "crawled_at": "2026-05-25 20:56:19",
+    "ai_score": 7.5,
+    "translated_title": "半随机对抗下谱排序的逐元素误差界",
+    "summary_en": "• Model Architecture: Spectral ranking algorithms for Bradley-Terry-Luce (BTL) model estimation, focusing on unweighted and reweighted spectral methods.\n• Data used: Pairwise comparison data generated under a semi-random adversary model, where the adversary can arbitrarily boost sampling probabilities of certain edges.\n• Performance metrics: Entrywise error bounds, asymptotic performance compared to uniformly sampled graphs, and spectral gap restoration.\n• Key findings: Unweighted spectral method performance depends heavily on graph spectral properties; reweighting edges can counteract adversary and restore performance.\n• Numerical simulations support theoretical results.",
+    "summary_cn": "• 核心模型: 基于Bradley-Terry-Luce (BTL)模型的谱排序算法，包括未加权和加权谱方法。\n• 数据来源: 半随机对抗模型生成的成对比较数据，对抗者可任意提升某些边的采样概率。\n• 主要结论: 未加权谱方法性能严重依赖图谱性质；通过重新加权边可对抗对抗者并恢复渐近性能。\n• 数值模拟验证了理论发现。",
+    "verdict_en": "• Alpha Potential: Moderate; provides theoretical robustness for ranking in adversarial settings, useful for portfolio construction or tournament ranking.\n• Implementation Risk: High; requires careful reweighting scheme and spectral gap estimation, may be sensitive to parameter tuning.\n• Novelty: High; first entrywise error analysis for spectral ranking under semi-random adversaries, with practical reweighting solution.\n• Practical relevance: Limited to pairwise comparison data; not directly applicable to typical financial time series.\n• Computational cost: Low; spectral methods are efficient for moderate-sized datasets.",
+    "verdict_cn": "• 创新点: 首次在半随机对抗下给出谱排序的逐元素误差界，并提出重加权恢复性能的方法。\n• 实盘坑: 需要精确估计谱间隙和对抗强度，实际数据中对抗模式未知，参数调优困难。\n• 复现难度: 中等；算法简单，但理论证明复杂，数值模拟需谨慎设计对抗场景。\n• 应用局限: 仅适用于成对比较数据，与金融时间序列预测关联度低。\n• 计算成本: 低，谱方法高效。",
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2605.22821v1",
     "title": "Tokenisation via Convex Relaxations",
     "pdf_url": "https://arxiv.org/pdf/2605.22821v1",
