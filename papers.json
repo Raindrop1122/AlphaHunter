@@ -1,5 +1,256 @@
 [
   {
+    "id": "2605.26112v1",
+    "title": "From Model Scaling to System Scaling: Scaling the Harness in Agentic AI",
+    "pdf_url": "https://arxiv.org/pdf/2605.26112v1",
+    "published": "2026-05-25",
+    "crawled_at": "2026-05-26 21:26:00",
+    "ai_score": 7.5,
+    "translated_title": "从模型扩展到系统扩展：扩展智能体AI的“缰绳”",
+    "summary_en": [
+      "• Model Architecture: Proposes a 'harness' framework integrating foundation models with memory, context construction, skill routing, orchestration, and governance layers.",
+      "• Data used: No specific dataset; focuses on system design and evaluation benchmarks for agentic AI.",
+      "• Performance metrics: Introduces new metrics beyond task success: trajectory quality, memory hygiene, context efficiency, communication fidelity, verification cost, and safe evolution.",
+      "• Key contribution: Argues that scaling the harness (system design) is as critical as scaling foundation models for future agentic AI progress."
+    ],
+    "summary_cn": [
+      "• 核心模型：提出“缰绳”框架，将基础模型与记忆、上下文构建、技能路由、编排和治理层集成。",
+      "• 数据来源：无特定数据集，聚焦系统设计和评估基准。",
+      "• 主要结论：系统扩展（缰绳）与模型扩展同等重要，未来进展依赖系统设计。",
+      "• 评估指标：引入轨迹质量、记忆卫生、上下文效率、通信保真度、验证成本和安全演化等新指标。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low direct alpha; more relevant for infrastructure and system-level optimization in agentic AI.",
+      "• Implementation Risk: High; requires significant engineering to build and integrate the harness components.",
+      "• Novelty: Moderate; shifts focus from model-centric to system-centric, but many ideas (e.g., modularity, governance) are not entirely new.",
+      "• Practicality: The open-source CheetahClaws harness provides a concrete starting point for implementation."
+    ],
+    "verdict_cn": [
+      "• 创新点：从模型中心转向系统中心，强调缰绳扩展，但模块化、治理等概念并非全新。",
+      "• 实盘坑：工程实现复杂，需整合多个组件，实际部署风险高。",
+      "• 复现难度：中等，提供了开源参考实现CheetahClaws，但需大量定制。",
+      "• 量化价值：直接alpha潜力低，更适合作为基础设施研究。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.26111v1",
+    "title": "Squeezing Capacity from Multimodal Large Language Models for Subject-driven Generation",
+    "pdf_url": "https://arxiv.org/pdf/2605.26111v1",
+    "published": "2026-05-25",
+    "crawled_at": "2026-05-26 21:26:06",
+    "ai_score": 7.2,
+    "translated_title": "从多模态大语言模型中榨取能力用于主体驱动生成",
+    "summary_en": "• Model Architecture: Conditions diffusion models on Multimodal Large Language Models (MLLMs) that jointly encode text and reference images, augmented with VAE-based identity conditioning. Introduces a Dual Layer Aggregation (DLA) module to aggregate multi-level MLLM features, and a multi-stage denoising strategy to balance semantic and identity information.\n• Data used: Not explicitly specified; likely uses standard subject-driven generation datasets (e.g., DreamBooth dataset) and pretrained MLLMs.\n• Performance metrics: Outperforms baselines in human preference studies, mitigates copy-paste artifacts, and improves identity preservation and instruction following.",
+    "summary_cn": "• 核心模型: 将扩散模型条件化于多模态大语言模型（MLLM），联合编码文本和参考图像，并辅以VAE身份条件。设计双层级聚合（DLA）模块聚合多级MLLM特征，采用多阶段去噪策略平衡语义与身份信息。\n• 数据来源: 未明确指定，可能使用标准主体驱动生成数据集（如DreamBooth数据集）和预训练MLLM。\n• 主要结论: 在人类偏好研究中优于基线，减少复制粘贴伪影，提升身份保持和指令遵循能力。",
+    "verdict_en": "• Alpha Potential: Low for quantitative finance; paper focuses on image generation, not directly applicable to trading strategies.\n• Implementation Risk: High; requires large-scale MLLMs and diffusion models, computationally expensive and domain-specific.\n• Novelty: Moderate; combines MLLMs with diffusion for subject-driven generation, but similar ideas exist in multimodal generation literature.",
+    "verdict_cn": "• 创新点: 将MLLM与扩散模型结合用于主体驱动生成，DLA模块和多阶段去噪有一定新意。\n• 实盘坑: 与量化交易无关，计算成本高，难以直接用于金融策略。\n• 复现难度: 高，依赖大规模预训练模型和特定数据集，代码未开源。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.26110v1",
+    "title": "Prism: A Plug-in Reproducible Infrastructure for Scalable Multimodal Continual Instruction Tuning",
+    "pdf_url": "https://arxiv.org/pdf/2605.26110v1",
+    "published": "2026-05-25",
+    "crawled_at": "2026-05-26 21:26:12",
+    "ai_score": 7.5,
+    "translated_title": "Prism：面向可扩展多模态持续指令调优的即插即用可复现基础设施",
+    "summary_en": "• Model Architecture: Prism introduces a plugin registration mechanism that decouples algorithmic development from backbone MLLM codebase, allowing new strategies to be integrated as independent plugins without modifying the underlying model.\n• Data used: The paper does not specify a particular dataset but focuses on enabling scalable multimodal continual instruction tuning (MCIT) experiments.\n• Performance metrics: The paper emphasizes reproducibility and scalability, but does not report specific performance metrics; it provides a codebase for fair comparison and efficient experimentation.",
+    "summary_cn": "• 核心模型: Prism采用插件注册机制，将算法开发与基础MLLM代码库解耦，新策略可作为独立插件集成，无需修改底层模型。\n• 数据来源: 论文未指定特定数据集，专注于支持可扩展的多模态持续指令调优实验。\n• 主要结论: 通过轻量级插件机制，Prism消除了结构碎片化，加速了方法开发，并原生支持大规模训练流程，实现可复现和可扩展的MCIT实验。",
+    "verdict_en": "• Alpha Potential: Low; this is an infrastructure paper, not a trading strategy, so direct alpha generation is unlikely.\n• Implementation Risk: Low; the plugin-based design reduces integration complexity, but adoption depends on community uptake.\n• Novelty: Moderate; the plugin registration mechanism is a practical engineering solution, but conceptually similar to modular frameworks in other domains.",
+    "verdict_cn": "• 创新点: 插件注册机制在MLLM持续学习领域具有工程实用性，但概念上并非全新。\n• 实盘坑: 作为基础设施，无法直接用于交易策略，需结合具体算法才能产生价值。\n• 复现难度: 低；代码已开源，且设计强调可复现性，但需依赖特定MLLM框架。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.26106v1",
+    "title": "Looped Diffusion Language Models",
+    "pdf_url": "https://arxiv.org/pdf/2605.26106v1",
+    "published": "2026-05-25",
+    "crawled_at": "2026-05-26 21:26:20",
+    "ai_score": 7.5,
+    "translated_title": "循环扩散语言模型",
+    "summary_en": "• Model Architecture: Proposes LoopMDM, which selectively loops early-middle transformer layers in masked diffusion models, achieving depth-scaling without adding parameters.\n• Data used: Pre-trained on multiple corpora (exact datasets not specified, but likely standard language modeling benchmarks).\n• Performance metrics: Matches same-size MDMs with up to 3.3x fewer training FLOPs; outperforms on reasoning benchmarks (e.g., +8.5 points on GSM8K); surpasses deeper non-looped MDMs with comparable compute.\n• Inference scaling: Varying loops at inference enables flexible compute scaling; adaptive loop adjustment improves compute efficiency.\n• Analysis: Attention analysis shows looping promotes interactions among masked positions.",
+    "summary_cn": "• 核心模型: LoopMDM，通过选择性循环早期-中间Transformer层，在不增加参数的情况下实现深度扩展效果。\n• 数据来源: 多个预训练语料库（具体数据集未明确，但可能为标准语言建模基准）。\n• 主要结论: 训练FLOPs减少高达3.3倍，推理性能在GSM8K上提升8.5分，超越更深非循环MDM。\n• 推理扩展: 推理时可变循环次数实现计算灵活扩展，自适应循环调整进一步提升效率。\n• 机制分析: 注意力分析表明循环促进了掩码位置间的交互。",
+    "verdict_en": "• Alpha Potential: Moderate; the method improves training efficiency and reasoning performance, which could translate to better language models for NLP-driven trading signals.\n• Implementation Risk: Low; the approach is simple to implement (selective layer looping) and does not require new architectures.\n• Novelty: High; selective looping in diffusion models is novel and shows surprising effectiveness compared to naive depth scaling.\n• Limitations: Only tested on language modeling; applicability to other modalities or financial text is unclear.\n• Reproducibility: High; code and weights will be released.",
+    "verdict_cn": "• 创新点: 在扩散模型中引入选择性循环层，新颖且有效，比简单加深网络更优。\n• 实盘坑: 仅验证于语言建模，金融文本领域效果未知；推理时循环次数需调参。\n• 复现难度: 低，实现简单，且作者将开源代码和权重。\n• 潜在价值: 提升训练效率和推理性能，可应用于NLP驱动的交易信号生成。\n• 风险: 若金融文本分布差异大，可能需额外微调。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.26097v1",
+    "title": "Forgetting in Language Models: Capacity, Optimization, and Self-Generated Replay",
+    "pdf_url": "https://arxiv.org/pdf/2605.26097v1",
+    "published": "2026-05-25",
+    "crawled_at": "2026-05-26 21:26:27",
+    "ai_score": 7.5,
+    "translated_title": "语言模型中的遗忘：容量、优化与自生成重放",
+    "summary_en": "• Model Architecture: Transformer-based language models (e.g., GPT-2) are used to study forgetting in continual learning.\n• Data used: Pretrained models are fine-tuned on new tasks (e.g., text classification) with self-generated replay samples from the model's own training distribution.\n• Performance metrics: Forgetting is measured by accuracy drop on prior tasks; replay effectiveness is evaluated by comparing with no-replay baselines.\n• Key finding: Self-generated replay nearly eliminates forgetting unless the model is near capacity saturation.\n• Additional finding: Low learning rates reduce forgetting but require more steps; replay enables fast high-learning-rate fine-tuning without forgetting.",
+    "summary_cn": "• 核心模型: 基于Transformer的语言模型（如GPT-2），研究持续学习中的遗忘现象。\n• 数据来源: 预训练模型在新任务（如文本分类）上微调，使用模型自身训练分布的自生成样本作为重放数据。\n• 主要结论: 自生成重放几乎消除遗忘，除非模型接近容量饱和。\n• 额外发现: 低学习率可减少遗忘但需更多训练步数；重放打破了这一权衡，允许快速高学习率微调而不遗忘。",
+    "verdict_en": "• Alpha Potential: Moderate; self-generated replay could reduce retraining costs in dynamic NLP models, but direct trading alpha is limited.\n• Implementation Risk: Low; replay is straightforward to implement, but capacity saturation detection requires monitoring.\n• Novelty: High; applying self-generated replay to language models is novel and addresses practical forgetting issues.\n• Limitation: Only tested on small-scale models and tasks; scalability to large models and complex financial NLP tasks is unclear.\n• Relevance: Useful for hedge funds using LLMs for sentiment analysis or news processing where model updates are frequent.",
+    "verdict_cn": "• 创新点: 将自生成重放应用于语言模型，有效缓解遗忘，方法新颖。\n• 实盘坑: 容量饱和检测需额外监控；大规模模型和金融NLP任务的效果未验证。\n• 复现难度: 中等；需要预训练模型和自生成采样逻辑，但整体实现不复杂。\n• 策略价值: 对高频更新NLP模型的基金有参考价值，但直接交易信号弱。\n• 评分: 7.5/10，理论贡献大于实战应用。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.26093v1",
+    "title": "Goal-driven Bayesian Optimal Experimental Design for Robust Decision-Making Under Model Uncertainty",
+    "pdf_url": "https://arxiv.org/pdf/2605.26093v1",
+    "published": "2026-05-25",
+    "crawled_at": "2026-05-26 21:26:34",
+    "ai_score": 8.5,
+    "translated_title": "面向目标驱动的贝叶斯最优实验设计：模型不确定性下的稳健决策",
+    "summary_en": [
+      "• Model Architecture: Combines an amortized variational posterior surrogate with a differentiable convex decision layer for gradient-based design optimization.",
+      "• Data used: Synthetic data for source localization, epidemic management, and pharmacokinetic control tasks.",
+      "• Performance metrics: Decision quality (e.g., expected loss), design optimality width, and comparison to information-gain maximization baselines.",
+      "• Key result: Goal-driven designs achieve equivalent decision quality over a wider set of designs than information-gain maximization."
+    ],
+    "summary_cn": [
+      "• 核心模型: 结合摊销变分后验代理与可微凸决策层，实现基于梯度的设计优化。",
+      "• 数据来源: 源定位、流行病管理和药代动力学控制的合成数据。",
+      "• 主要结论: 目标驱动设计在更宽的设计范围内达到与信息增益最大化相当的决策质量。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for adaptive experimental design in quantitative finance, e.g., portfolio optimization under model uncertainty.",
+      "• Implementation Risk: Moderate; requires differentiable decision layers and variational inference, which may be non-trivial in complex models.",
+      "• Novelty: Strong theoretical justification for goal-driven design, bridging BOED and decision-focused learning."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次将决策目标直接融入贝叶斯最优实验设计，理论证明对无关参数方向不敏感。",
+      "• 实盘坑: 可微决策层在复杂金融模型中实现难度大，且合成数据验证可能低估真实噪声。",
+      "• 复现难度: 中等，需变分推断和凸优化基础，但代码未开源。"
+    ],
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2605.26092v1",
+    "title": "OrpQuant: Geometric Orthogonal Residual Projection for Multiplier-Free Power-of-Two Transformer Quantization",
+    "pdf_url": "https://arxiv.org/pdf/2605.26092v1",
+    "published": "2026-05-25",
+    "crawled_at": "2026-05-26 21:26:40",
+    "ai_score": 7.5,
+    "translated_title": "OrpQuant: 基于几何正交残差投影的无乘法器二次幂Transformer量化",
+    "summary_en": [
+      "• Model Architecture: Proposes Orthogonal Residual Projection (ORP) for PoT quantization, replacing MACs with bit-shifts and shift-add operations.",
+      "• Data used: Evaluated on LLaMA-2-7B and Vision Transformers; calibration time ~15 minutes for LLaMA-2-7B.",
+      "• Performance metrics: Achieves perplexity 6.10 on LLaMA-2-7B under W3/A16; competitive with AWQ in 4-bit; silicon synthesis at 28nm shows timing bottleneck mitigation."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出正交残差投影(ORP)用于PoT量化，用移位和移位加操作替代MAC运算。",
+      "• 数据来源: 在LLaMA-2-7B和Vision Transformers上评估；LLaMA-2-7B校准时间约15分钟。",
+      "• 主要结论: 在W3/A16下LLaMA-2-7B困惑度6.10；4-bit下与AWQ竞争；28nm RTL综合显示时序瓶颈缓解。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; hardware efficiency may enable faster inference on edge, but quantized LLMs are not directly alpha-generating.",
+      "• Implementation Risk: Low for hardware deployment; high for integrating into existing trading systems due to model modification.",
+      "• Novelty: High; introduces geometric perspective to quantization, analytical solver avoids costly gradient optimization."
+    ],
+    "verdict_cn": [
+      "• 创新点: 从几何角度解决PoT量化低角度分辨率问题，分析求解器避免梯度优化。",
+      "• 实盘坑: 量化模型在金融文本任务上可能精度损失，需验证对因子有效性的影响。",
+      "• 复现难度: 中等；需要硬件协同设计知识，但算法部分相对简洁。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.26087v1",
+    "title": "DiscoverPhysics: Benchmarking LLMs for Out-of-the-Box Scientific Thinking",
+    "pdf_url": "https://arxiv.org/pdf/2605.26087v1",
+    "published": "2026-05-25",
+    "crawled_at": "2026-05-26 21:26:47",
+    "ai_score": 7.5,
+    "translated_title": "DiscoverPhysics: 基准测试大语言模型的即兴科学思维能力",
+    "summary_en": "• Model Architecture: Uses an LLM agent interacting with an N-body simulator to propose experiments and infer physics laws.\n• Data used: 22 simulated worlds with deviant physics (e.g., screened gravity, dark-matter-like particles), generating raw trajectory data.\n• Performance metrics: Trajectory MSE on held-out particles and LLM-judged explanation score based on an expert-written rubric.\n• Key findings: Strongest agents pass only half of worlds; open-source models lag; good predictive accuracy does not guarantee high explanation quality.",
+    "summary_cn": "• 核心模型: 使用大语言模型代理与N体模拟器交互，自主设计实验并推断物理定律。\n• 数据来源: 22个物理规则偏离现实的模拟世界（如屏蔽引力、暗物质粒子），生成原始轨迹数据。\n• 主要结论: 最强模型仅通过一半世界；开源模型显著落后；高预测精度不保证高解释质量。",
+    "verdict_en": "• Alpha Potential: Low direct alpha; benchmark for evaluating reasoning, not trading. Could inspire LLM-based scientific discovery in finance.\n• Implementation Risk: High; requires custom simulator and LLM orchestration; explanation scoring is subjective.\n• Novelty: High; interactive benchmark for out-of-the-box scientific thinking, probing hypothesis refinement and experiment design.",
+    "verdict_cn": "• 创新点: 新颖的交互式基准测试，评估LLM在非标准物理世界中的科学推理和实验设计能力。\n• 实盘坑: 直接交易价值低；解释评分主观性强；模拟器与LLM集成复杂。\n• 复现难度: 高；需要构建定制模拟世界和LLM代理框架。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.26078v1",
+    "title": "Global Convergence of Wasserstein Policy Gradient for Entropy-Regularized Reinforcement Learning",
+    "pdf_url": "https://arxiv.org/pdf/2605.26078v1",
+    "published": "2026-05-25",
+    "crawled_at": "2026-05-26 21:26:52",
+    "ai_score": 7.5,
+    "translated_title": "熵正则化强化学习中Wasserstein策略梯度的全局收敛性",
+    "summary_en": "• Model Architecture: Wasserstein policy gradient (WPG) with Langevin-type diffusion for entropy-regularized RL.\n• Data used: Theoretical analysis, no empirical data.\n• Performance metrics: Global convergence rate (geometric contraction up to discretization bias).",
+    "summary_cn": "• 核心模型: 基于Wasserstein距离的策略梯度方法，结合Langevin扩散处理熵正则化RL。\n• 数据来源: 纯理论分析，无实证数据。\n• 主要结论: 证明了WPG在熵正则化RL中的全局收敛性，收敛速度为几何级数（存在离散化偏差）。",
+    "verdict_en": "• Alpha Potential: Low; theoretical paper with no direct trading application.\n• Implementation Risk: High; requires solving optimal transport and Langevin dynamics, computationally intensive.\n• Novelty: Moderate; extends convergence theory for WPG using Bellman structure and log-Sobolev inequality.",
+    "verdict_cn": "• 创新点: 利用Bellman结构和log-Sobolev不等式证明WPG全局收敛，理论贡献扎实。\n• 实盘坑: 无实证，计算成本高，难以直接用于量化交易。\n• 复现难度: 高，需要深入理解最优传输和随机微分方程。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ICML",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2605.26072v1",
+    "title": "Active Query Synthesis for Preference Learning",
+    "pdf_url": "https://arxiv.org/pdf/2605.26072v1",
+    "published": "2026-05-25",
+    "crawled_at": "2026-05-26 21:26:59",
+    "ai_score": 7.5,
+    "translated_title": "偏好学习的主动查询合成",
+    "summary_en": [
+      "• Model Architecture: Proposes Info-Synth, a framework that generates optimal queries by maximizing mutual information in continuous space, with two pool-based extensions (Pair M-dist and Pair Opt-dist).",
+      "• Data used: Synthetic preference learning, constrained text summary datasets, and subjective continuous-space controller gain tuning for a simulated mobile robot.",
+      "• Performance metrics: Evaluated on query efficiency and learning accuracy, outperforming baselines in synthetic and real-world tasks.",
+      "• Key innovation: Introduces a confidence-aware response model to handle ambiguous comparisons (e.g., nearly identical or dissimilar items)."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出Info-Synth框架，通过最大化连续空间中的互信息生成最优查询，并扩展两种池化策略（Pair M-dist和Pair Opt-dist）。",
+      "• 数据来源: 合成偏好学习、受限文本摘要数据集、模拟移动机器人控制器增益调优的主观连续空间数据。",
+      "• 主要结论: 在查询效率和准确率上优于基线方法，有效处理模糊比较（如相似或完全不同项）。",
+      "• 创新点: 引入置信度感知响应模型，解决传统方法忽略反馈可靠性的问题。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; preference learning has applications in personalized finance (e.g., robo-advisors), but direct trading alpha is limited.",
+      "• Implementation Risk: High; requires custom query synthesis and confidence modeling, computationally intensive for real-time systems.",
+      "• Novelty: High; combines active learning with confidence-aware responses and continuous query synthesis, addressing key limitations in pool-based methods."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将主动学习与置信度感知响应结合，突破传统池化方法的计算瓶颈，理论贡献扎实。",
+      "• 实盘坑: 偏好学习在量化交易中应用场景有限，且连续查询合成计算成本高，实时性差。",
+      "• 复现难度: 高；需要实现互信息优化和置信度模型，对数学和工程能力要求较高。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
     "id": "2605.23901v1",
     "title": "LLMs as Noisy Channels: A Shannon Perspective on Model Capacity and Scaling Laws",
     "pdf_url": "https://arxiv.org/pdf/2605.23901v1",
