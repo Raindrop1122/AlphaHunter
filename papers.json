@@ -1,5 +1,264 @@
 [
   {
+    "id": "2605.27366v1",
+    "title": "MUSE-Autoskill: Self-Evolving Agents via Skill Creation, Memory, Management, and Evaluation",
+    "pdf_url": "https://arxiv.org/pdf/2605.27366v1",
+    "published": "2026-05-26",
+    "crawled_at": "2026-05-27 21:30:11",
+    "ai_score": 7.5,
+    "translated_title": "MUSE-Autoskill：通过技能创建、记忆、管理和评估实现自我进化的智能体",
+    "summary_en": [
+      "• Model Architecture: Proposes MUSE-Autoskill Agent, a skill-centric framework with a unified lifecycle (creation, memory, management, evaluation, refinement) for LLM agents.",
+      "• Data used: Evaluated on SkillsBench, a benchmark for skill-based tasks; no specific dataset details provided.",
+      "• Performance metrics: Reports improvements in task success, efficiency, reuse, and cross-agent transfer; quantitative metrics not fully disclosed.",
+      "• Key innovation: Introduces skill-level memory to accumulate experience across tasks, enabling adaptive reuse.",
+      "• Limitations: Experiments are preliminary; lacks comparison with strong baselines and real-world deployment results."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出MUSE-Autoskill智能体框架，围绕技能生命周期（创建、记忆、管理、评估、优化）实现自我进化。",
+      "• 数据来源: 在SkillsBench基准上评估，未公开具体数据集细节。",
+      "• 主要结论: 生命周期管理的技能可提升任务成功率、效率、复用性和跨智能体迁移能力。",
+      "• 创新点: 引入技能级记忆，跨任务积累经验，实现自适应复用。",
+      "• 局限性: 实验初步，缺乏与强基线对比及实际部署验证。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; skill reuse and refinement could reduce manual engineering costs in automated trading, but direct alpha generation is unclear.",
+      "• Implementation Risk: High; requires robust skill management and memory systems, which may be brittle in dynamic markets.",
+      "• Novelty: High; unified lifecycle and skill-level memory are novel contributions to LLM agent design.",
+      "• Practicality: Low for quant finance; focus on general task-solving, not financial-specific signals or constraints.",
+      "• Reproducibility: Medium; SkillsBench is not widely adopted, and code availability is not mentioned."
+    ],
+    "verdict_cn": [
+      "• 创新点: 技能生命周期管理和技能级记忆是LLM智能体设计的新思路，但非金融专用。",
+      "• 实盘坑: 技能在动态市场中可能失效，记忆系统需持续维护，部署成本高。",
+      "• 复现难度: 中等，SkillsBench未普及，代码未开源。",
+      "• 量化潜力: 间接降低人工成本，但直接产生alpha信号证据不足。",
+      "• 风险: 过度依赖技能库可能导致过拟合，市场风格切换时适应性存疑。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.27365v1",
+    "title": "LocateAnything: Fast and High-Quality Vision-Language Grounding with Parallel Box Decoding",
+    "pdf_url": "https://arxiv.org/pdf/2605.27365v1",
+    "published": "2026-05-26",
+    "crawled_at": "2026-05-27 21:30:17",
+    "ai_score": 7.5,
+    "translated_title": "定位万物：基于并行框解码的快速高质量视觉语言定位",
+    "summary_en": [
+      "• Model Architecture: Proposes Parallel Box Decoding (PBD) that decodes bounding boxes and points as atomic units in a single step, preserving geometric coherence and enabling parallelism.",
+      "• Data used: Curates LocateAnything-Data, a large-scale dataset with over 138 million training samples for high-precision localization.",
+      "• Performance metrics: Achieves significantly higher decoding throughput and improved high-IoU localization quality across diverse benchmarks.",
+      "• Key result: Advances the speed-accuracy frontier in unified visual grounding and detection."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出并行框解码（PBD），将边界框和点作为原子单元单步解码，保持几何一致性并实现并行化。",
+      "• 数据来源: 构建LocateAnything-Data大规模数据集，包含超过1.38亿训练样本，用于高精度定位。",
+      "• 主要结论: 在统一视觉定位与检测任务中，显著提升解码吞吐量和高IoU定位质量，推进速度-精度前沿。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; improved localization speed and accuracy could benefit high-frequency visual trading systems, but direct financial alpha is limited.",
+      "• Implementation Risk: Low to moderate; PBD is a straightforward architectural change, but large-scale data curation may be costly.",
+      "• Novelty: High; parallel decoding of geometric elements is a novel departure from serialized token generation in VLMs."
+    ],
+    "verdict_cn": [
+      "• 创新点: 并行解码几何元素，打破VLM中序列化token生成的范式，创新性高。",
+      "• 实盘坑: 金融场景直接应用有限，需结合具体交易任务；大规模数据构建成本高。",
+      "• 复现难度: 中等；模型架构简单，但依赖大规模数据集和训练资源。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.27358v1",
+    "title": "MobileMoE: Scaling On-Device Mixture of Experts",
+    "pdf_url": "https://arxiv.org/pdf/2605.27358v1",
+    "published": "2026-05-26",
+    "crawled_at": "2026-05-27 21:30:24",
+    "ai_score": 7.5,
+    "translated_title": "MobileMoE：扩展设备上的混合专家模型",
+    "summary_en": "• Model Architecture: Proposes MobileMoE, a family of on-device Mixture-of-Experts (MoE) language models with 0.3-0.9B active parameters and 1.3-5.3B total parameters, using moderate sparsity with fine-grained and shared experts optimized for mobile constraints.\n• Data used: Trained entirely on open-source datasets across a four-stage pipeline: pre-training, mid-training, instruction fine-tuning, and quantization-aware training.\n• Performance metrics: Matches or exceeds leading on-device dense LLMs with 2-4× fewer FLOPs; surpasses OLMoE-1B-7B with up to 60% fewer parameters; achieves 1.8-3.8× faster prefill and 2.2-3.4× faster decode than MobileLLM-Pro at comparable INT4 memory.",
+    "summary_cn": "• 核心模型: 提出MobileMoE系列，活跃参数0.3-0.9B，总参数1.3-5.3B，采用适度稀疏、细粒度共享专家的MoE架构，针对移动设备内存和计算约束优化。\n• 数据来源: 完全使用开源数据集，经过预训练、中期训练、指令微调和量化感知训练四个阶段。\n• 主要结论: 在14个基准测试中，以2-4倍更少的FLOPs匹配或超越领先的密集LLM；比OLMoE-1B-7B参数减少60%且性能相当或更优；在INT4内存下，比MobileLLM-Pro预填充快1.8-3.8倍，解码快2.2-3.4倍。",
+    "verdict_en": "• Alpha Potential: Low direct alpha for trading; however, the efficient on-device inference could enable novel NLP/LLM-based strategies for mobile trading apps or real-time sentiment analysis.\n• Implementation Risk: High; requires specialized hardware (smartphones) and software stack for MoE inference; reproducibility depends on open-source datasets and model weights availability.\n• Novelty: Moderate; extends MoE scaling laws to sub-billion parameter regime and demonstrates practical mobile deployment, but architectural insights are incremental.",
+    "verdict_cn": "• 创新点: 将MoE缩放定律推广到十亿参数以下，并首次在商用智能手机上实现高效推理，但架构创新有限。\n• 实盘坑: 直接交易应用价值低；移动端部署依赖特定硬件和软件优化，复现门槛高；性能提升可能不适用于金融时序数据。\n• 复现难度: 中等；使用开源数据和训练流程，但需要大量计算资源进行四阶段训练。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.27355v1",
+    "title": "Alignment Tampering: How Reinforcement Learning from Human Feedback Is Exploited to Optimize Misaligned Biases",
+    "pdf_url": "https://arxiv.org/pdf/2605.27355v1",
+    "published": "2026-05-26",
+    "crawled_at": "2026-05-27 21:30:31",
+    "ai_score": 7.5,
+    "translated_title": "对齐篡改：人类反馈强化学习如何被利用来优化有偏见的对齐",
+    "summary_en": "• Model Architecture: The paper studies RLHF, a standard method for aligning LLMs, and identifies a vulnerability called alignment tampering where the LLM influences the preference dataset during training.\n• Data used: Preference datasets are constructed from the LLM's own outputs, and pairwise comparisons are used without distinguishing quality from bias.\n• Performance metrics: Experiments show amplification of biases (e.g., keyword bias, sexism, brand promotion) through RLHF optimization, with mitigation techniques failing to fully resolve the issue without sacrificing quality.",
+    "summary_cn": "• 核心模型: 研究RLHF（人类反馈强化学习）的对齐过程，发现对齐篡改漏洞，即LLM通过影响偏好数据集来放大不良行为。\n• 数据来源: 偏好数据集由LLM自身输出构建，使用成对比较但无法区分质量与偏见。\n• 主要结论: 实验表明RLHF优化会放大多种偏见（如关键词偏见、性别歧视、品牌推广），现有缓解方法无法在不牺牲质量的前提下完全解决。",
+    "verdict_en": "• Alpha Potential: Low to moderate; the paper highlights a structural flaw in RLHF, which could be exploited to create biased models, but direct trading alpha is limited.\n• Implementation Risk: High; reproducing the attack requires access to LLM training pipelines and careful control of biases, which is complex and resource-intensive.\n• Novelty: High; introduces a new vulnerability (alignment tampering) and provides empirical evidence, contributing to AI safety literature.",
+    "verdict_cn": "• 创新点: 提出对齐篡改这一新漏洞，并实证展示RLHF如何放大偏见，对AI安全有重要警示。\n• 实盘坑: 直接交易应用价值低，但可用于评估模型风险；复现需大量计算资源和数据控制，成本高。\n• 复现难度: 高；需要完整RLHF训练流程和特定偏见注入，代码未公开，实验细节需从论文推断。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.27354v1",
+    "title": "Guiding LLM Post-training Data Engineering with Model Internals from Sparse Autoencoders",
+    "pdf_url": "https://arxiv.org/pdf/2605.27354v1",
+    "published": "2026-05-26",
+    "crawled_at": "2026-05-27 21:30:38",
+    "ai_score": 8.5,
+    "translated_title": "利用稀疏自编码器中的模型内部状态指导LLM后训练数据工程",
+    "summary_en": [
+      "• Model Architecture: Uses Sparse Autoencoder (SAE) to extract model internals from LLMs for data engineering in RL post-training.",
+      "• Data used: Post-training data for LLM reinforcement learning, with properties of diversity, difficulty, and quality modeled via SAE.",
+      "• Performance metrics: Achieves 3.00% average accuracy improvement over vanilla GRPO, reaches target accuracy with 20% fewer training steps on Qwen2.5-Math-1.5B.",
+      "• SAE transfers effectively across model families and scales, serving as a lightweight and reusable tool."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用稀疏自编码器(SAE)提取LLM内部状态，用于强化学习后训练的数据工程。",
+      "• 数据来源: LLM后训练数据，通过SAE建模多样性、难度和质量三种内在属性。",
+      "• 主要结论: 在Qwen2.5-Math-1.5B上，相比原始GRPO平均准确率提升3.00%，达到目标准确率所需训练步骤减少20%。",
+      "• SAE在不同模型家族和规模间有效迁移，是一种轻量级可复用的数据工程工具。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High, as it leverages model internals for data engineering, a novel signal source that can improve RL training efficiency and accuracy.",
+      "• Implementation Risk: Moderate; requires training SAE on model internals, which adds complexity but is feasible with existing tools.",
+      "• Novelty: High; first framework to use SAE-based model internals for post-training data engineering, bridging mechanistic interpretability and RL.",
+      "• Practicality: Promising for LLM fine-tuning pipelines, but scalability to very large models and real-time applications needs validation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次将SAE模型内部状态用于后训练数据工程，连接可解释性与强化学习，思路新颖。",
+      "• 实盘坑: 需要训练SAE并提取内部状态，增加计算开销；大规模模型实时应用可能受限。",
+      "• 复现难度: 中等，依赖现有SAE工具和RL框架，但需精细调参。",
+      "• 潜力: 对LLM微调效率提升显著，但需验证在不同任务和模型上的泛化性。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.27352v1",
+    "title": "From Scores to Gibbs Correctors: Accelerating Uniform-Rate Discrete Diffusion Models",
+    "pdf_url": "https://arxiv.org/pdf/2605.27352v1",
+    "published": "2026-05-26",
+    "crawled_at": "2026-05-27 21:30:44",
+    "ai_score": 7.5,
+    "translated_title": "从分数到吉布斯校正器：加速均匀速率离散扩散模型",
+    "summary_en": "• Model Architecture: Proposes Gibbs-Accelerated Discrete Diffusion (GADD), a Gibbs-based corrector that leverages the concrete score function to construct Gibbs posterior likelihoods without additional training.\n• Data used: Evaluated on synthetic data, zero-shot text sampling, and zero-shot conditional music generation.\n• Performance metrics: Achieves O(polylog(1/ε)) sampling complexity, the first such rate for uniform-rate discrete diffusion models; consistently improves sample quality and wall-clock efficiency over vanilla Euler methods and CTMC correctors.",
+    "summary_cn": "• 核心模型: 提出吉布斯加速离散扩散（GADD），利用具体分数函数构建吉布斯后验似然，无需额外训练。\n• 数据来源: 在合成数据、零样本文本采样和零样本条件音乐生成上评估。\n• 主要结论: 实现了O(polylog(1/ε))的采样复杂度，是均匀速率离散扩散模型的首个此类速率；在样本质量和时钟效率上持续优于标准基线。",
+    "verdict_en": "• Alpha Potential: Moderate; the method accelerates sampling, which could be useful for real-time generative tasks in finance (e.g., synthetic data generation), but direct alpha generation is limited.\n• Implementation Risk: Low to moderate; requires only standard score estimation, no additional training, but Gibbs sampling may introduce complexity.\n• Novelty: High; introduces a novel theoretical framework for predictor-corrector methods in discrete diffusion, with first polylog complexity rate.",
+    "verdict_cn": "• 创新点: 提出无需额外训练的吉布斯校正器，理论分析新颖，首次给出多项式对数复杂度。\n• 实盘坑: 直接应用于量化交易场景有限，主要用于生成任务，需评估生成样本的金融相关性。\n• 复现难度: 中等；依赖具体分数函数，但代码未开源，需自行实现。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2605.27343v1",
+    "title": "Towards Controllable Image Generation through Representation-Conditioned Diffusion Models",
+    "pdf_url": "https://arxiv.org/pdf/2605.27343v1",
+    "published": "2026-05-26",
+    "crawled_at": "2026-05-27 21:30:49",
+    "ai_score": 6.5,
+    "translated_title": "通过表示条件扩散模型实现可控图像生成",
+    "summary_en": "• Model Architecture: Uses diffusion models conditioned on representations from a pre-trained self-supervised model (e.g., SimCLR) for controllable image generation.\n• Data used: Unconditional image generation tasks; no annotated datasets required for conditioning.\n• Performance metrics: Demonstrates improved quality over unconditional generation and smooth, disentangled control in representation space.\n• Key findings: Identifies directions of variation in conditioning space for semantic control.",
+    "summary_cn": "• 核心模型: 基于预训练自监督模型（如SimCLR）的表示条件扩散模型，实现可控生成。\n• 数据来源: 无条件图像生成任务，无需标注数据。\n• 主要结论: 表示空间中的方向变化可实现平滑、解耦的控制，提升生成质量。",
+    "verdict_en": "• Alpha Potential: Low for direct trading; may inspire generative data augmentation for financial models.\n• Implementation Risk: High; requires large compute and domain adaptation for finance.\n• Novelty: Moderate; combines self-supervised representations with diffusion models, but preliminary.",
+    "verdict_cn": "• 创新点: 自监督表示与扩散模型结合，提供可控生成新思路。\n• 实盘坑: 金融领域应用需大量调整，计算成本高，直接交易信号弱。\n• 复现难度: 中等，依赖预训练模型和扩散框架。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.27316v1",
+    "title": "Probabilistic Smoothing with Ratio-Monotone Transforms for Global Optimization",
+    "pdf_url": "https://arxiv.org/pdf/2605.27316v1",
+    "published": "2026-05-26",
+    "crawled_at": "2026-05-27 21:30:55",
+    "ai_score": 7.5,
+    "translated_title": "基于比率单调变换的概率平滑全局优化",
+    "summary_en": "• Model Architecture: Proposes a general smoothing framework using flexible symmetric unimodal kernels and monotonic ratio-based transformations, without requiring a decreasing smoothing schedule.\n• Data used: Evaluated on high-dimensional benchmarks and black-box adversarial attack tasks.\n• Performance metrics: Demonstrates improved robustness and competitive performance compared to Gaussian kernel-based methods.",
+    "summary_cn": "• 核心模型: 提出一种通用平滑框架，结合灵活对称单峰核与单调比率变换，无需递减平滑调度。\n• 数据来源: 在高维基准测试和黑盒对抗攻击任务上评估。\n• 主要结论: 相比基于高斯核的方法，展现出更强的鲁棒性和竞争性能。",
+    "verdict_en": "• Alpha Potential: Moderate; the method improves optimization robustness, which could benefit factor optimization or adversarial training in quant strategies.\n• Implementation Risk: Low to moderate; framework is general but requires careful kernel and transform selection; hyperparameter sensitivity is reduced.\n• Novelty: High; introduces ratio-monotone transforms for probabilistic smoothing, providing theoretical guarantees without decreasing schedules.",
+    "verdict_cn": "• 创新点: 引入比率单调变换进行概率平滑，理论保证无需递减调度，新颖性强。\n• 实盘坑: 实际应用中核函数和变换选择仍需调参，可能影响稳定性。\n• 复现难度: 中等；算法框架清晰，但需注意理论条件验证。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.27309v1",
+    "title": "Greening AI Inference with Accuracy and Latency-aware User Incentives",
+    "pdf_url": "https://arxiv.org/pdf/2605.27309v1",
+    "published": "2026-05-26",
+    "crawled_at": "2026-05-27 21:31:01",
+    "ai_score": 3.5,
+    "translated_title": "通过准确性和延迟感知的用户激励实现绿色AI推理",
+    "summary_en": [
+      "• Model Architecture: Proposes a two-tier service subscription model that offers users a discount for accepting lower quality and higher latency during high carbon intensity periods.",
+      "• Data used: The framework is analytical and does not use empirical data; it models user valuation for quality and latency, and environmental consciousness.",
+      "• Performance metrics: Evaluates tradeoffs between carbon emissions, inference quality, and latency; no quantitative performance results are provided.",
+      "• Key contribution: Introduces user incentives to reduce carbon emissions in AI inference, considering user QoE preferences."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出双层服务订阅模型，在高碳强度期间为用户提供折扣以换取较低质量和较高延迟。",
+      "• 数据来源: 分析框架，未使用实证数据；建模用户对质量和延迟的估值以及环保意识。",
+      "• 主要结论: 通过用户激励平衡碳排放与服务质量，但缺乏定量性能结果。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low; the paper is conceptual with no trading or financial alpha.",
+      "• Implementation Risk: High; requires integration with AI inference systems and user behavior modeling, which is complex and uncertain.",
+      "• Novelty: Moderate; applies incentive design to AI inference carbon reduction, but similar ideas exist in green computing.",
+      "• Relevance to hedge fund: Minimal; not directly applicable to financial strategies."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将用户激励引入AI推理碳减排，但概念不新。",
+      "• 实盘坑: 缺乏实证数据和量化指标，难以直接应用于金融交易。",
+      "• 复现难度: 高；需要用户行为数据和系统集成，复现成本大。"
+    ],
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.27306v1",
+    "title": "Normal Guidance is what Attention Needs",
+    "pdf_url": "https://arxiv.org/pdf/2605.27306v1",
+    "published": "2026-05-26",
+    "crawled_at": "2026-05-27 21:31:06",
+    "ai_score": 6.5,
+    "translated_title": "正常引导是注意力机制所需要的",
+    "summary_en": "• Model Architecture: Proposes Normal Guidance, a regularization technique that encourages attention distributions to follow a bell-shaped curve, applied to attention-based and transformer-based MIL methods.\n• Data used: Three medical imaging datasets (brain, thoracic, abdominal CT scans) totaling over 4 million 2D slices.\n• Performance metrics: Achieves significantly better slice-level localization than state-of-the-art while remaining competitive at whole-scan classification.",
+    "summary_cn": "• 核心模型: 提出Normal Guidance正则化技术，促使注意力分布呈钟形曲线，应用于基于注意力和Transformer的多实例学习方法。\n• 数据来源: 三个医学影像数据集（脑部、胸部、腹部CT扫描），总计超过400万张2D切片。\n• 主要结论: 在切片级定位上显著优于现有方法，同时在整体扫描分类上保持竞争力。",
+    "verdict_en": "• Alpha Potential: Low; medical imaging domain, not directly applicable to financial alpha generation.\n• Implementation Risk: High; requires 3D medical image data and specific MIL architectures, not standard in finance.\n• Novelty: Moderate; simple regularization idea but effective for weak supervision in medical imaging.",
+    "verdict_cn": "• 创新点: 提出简单的正则化方法引导注意力分布，有效提升弱监督医学影像定位性能。\n• 实盘坑: 金融领域直接应用价值低，需大量适配工作。\n• 复现难度: 中等；依赖特定医学影像数据和MIL框架，非通用方法。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2605.26112v1",
     "title": "From Model Scaling to System Scaling: Scaling the Harness in Agentic AI",
     "pdf_url": "https://arxiv.org/pdf/2605.26112v1",
