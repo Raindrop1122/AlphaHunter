@@ -1,5 +1,330 @@
 [
   {
+    "id": "2605.28819v1",
+    "title": "PEFT-Arena: Understanding Parameter-Efficient Finetuning from a Stability-Plasticity Perspective",
+    "pdf_url": "https://arxiv.org/pdf/2605.28819v1",
+    "published": "2026-05-27",
+    "crawled_at": "2026-05-28 21:46:52",
+    "ai_score": 7.5,
+    "translated_title": "PEFT-Arena：从稳定性-可塑性角度理解参数高效微调",
+    "summary_en": [
+      "• Model Architecture: Analyzes various PEFT methods (e.g., LoRA, orthogonal finetuning) from a stability-plasticity perspective, focusing on weight space and activation space geometry.",
+      "• Data used: Utilizes benchmark tasks for downstream performance and general capability retention, likely including standard NLP datasets (e.g., GLUE, SuperGLUE) and pretrained models (e.g., LLaMA).",
+      "• Performance metrics: Introduces PEFT-Arena benchmark measuring both downstream accuracy and retention of pretrained capabilities; uses Pareto frontier analysis to compare methods.",
+      "• Key findings: Orthogonal finetuning achieves best Pareto frontier under comparable parameter budgets; forgetting is linked to non-isometric representation distortion.",
+      "• Additional insights: Final SFT checkpoints often overshoot optimal target-retention point; post-hoc improvement via path-wise rewinding is proposed."
+    ],
+    "summary_cn": [
+      "• 核心模型：分析多种PEFT方法（如LoRA、正交微调），从稳定性-可塑性角度出发，关注权重空间和激活空间的几何特性。",
+      "• 数据来源：使用下游任务和通用能力保持的基准测试，可能包括GLUE、SuperGLUE等标准NLP数据集及LLaMA等预训练模型。",
+      "• 主要结论：正交微调在可比参数预算下实现最佳帕累托前沿；遗忘与非等距表示扭曲相关。",
+      "• 额外发现：最终SFT检查点常偏离最优目标-保持点；提出路径回退的后处理改进方法。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; provides a new evaluation framework (stability-plasticity) that could lead to better PEFT selection for trading models, but direct alpha generation is limited.",
+      "• Implementation Risk: Low to medium; PEFT methods are widely used, but the proposed rewinding technique may require careful tuning and additional computational cost.",
+      "• Novelty: High; introduces a novel perspective (stability-plasticity dilemma) and geometric analysis to PEFT evaluation, which is underexplored in current literature.",
+      "• Practicality: The benchmark and insights are useful for model selection in NLP/LLM applications, but not directly applicable to quantitative finance without adaptation."
+    ],
+    "verdict_cn": [
+      "• 创新点：首次从稳定性-可塑性困境评估PEFT，结合权重空间和激活空间几何分析，视角新颖。",
+      "• 实盘坑：直接应用于量化交易需谨慎，主要针对NLP模型，金融时序模型适用性待验证。",
+      "• 复现难度：中等，需要复现PEFT-Arena基准和路径回退算法，计算资源需求较高。",
+      "• 实用价值：对选择LLM微调策略有指导意义，但alpha信号需结合具体交易任务。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.28812v1",
+    "title": "Beyond Binary: Sim-to-Real Dexterous Manipulation with Physics-Grounded Contact Representation",
+    "pdf_url": "https://arxiv.org/pdf/2605.28812v1",
+    "published": "2026-05-27",
+    "crawled_at": "2026-05-28 21:47:00",
+    "ai_score": 7.5,
+    "translated_title": "超越二元：基于物理接地接触表示的仿真到现实灵巧操作",
+    "summary_en": [
+      "• Model Architecture: Uses Center-of-Pressure (CoP) as a tactile representation, grounded in physics, for sim-to-real transfer in dexterous manipulation.",
+      "• Data used: Simulated tactile data from multi-fingered hand, with a differentiable dynamics-based calibration scheme for taxel orientations without ground-truth forces.",
+      "• Performance metrics: Zero-shot sim-to-real transfer on peg-in-hole insertion and ball balancing tasks, outperforming binary-contact and raw-taxel baselines.",
+      "• Additional findings: Learned policies encode task-relevant physical properties like object mass as an emergent byproduct."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用基于物理原理的接触压力中心（CoP）作为触觉表示，实现仿真到现实的灵巧操作迁移。",
+      "• 数据来源: 使用多指手的仿真触觉数据，通过可微动力学校准方案估计触觉单元方向，无需真实力测量。",
+      "• 主要结论: 在插销入孔和球平衡任务中实现零样本仿真到现实迁移，优于二元接触和原始触觉基线。",
+      "• 额外发现: 学习到的策略能编码任务相关的物理属性（如物体质量），作为控制的附带产物。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low for direct trading; relevant for robotics-driven hedge funds using physical manipulation for data collection.",
+      "• Implementation Risk: High; requires custom hardware (multi-fingered hand) and calibration, not easily transferable to financial systems.",
+      "• Novelty: Moderate; CoP representation is novel for tactile sensing, but the sim-to-real framework is well-established."
+    ],
+    "verdict_cn": [
+      "• 创新点: CoP触觉表示在机器人操作中具有新意，但金融领域应用有限。",
+      "• 实盘坑: 硬件依赖性强，校准复杂，难以直接用于量化交易。",
+      "• 复现难度: 高，需要专用机器人平台和仿真环境，不适合纯金融团队。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.28810v1",
+    "title": "Affective Music Recommendation: A Rollout-Based World Model for Offline Preference Optimization",
+    "pdf_url": "https://arxiv.org/pdf/2605.28810v1",
+    "published": "2026-05-27",
+    "crawled_at": "2026-05-28 21:47:09",
+    "ai_score": 5.5,
+    "translated_title": "情感音乐推荐：基于展开世界模型的离线偏好优化",
+    "summary_en": [
+      "• Model Architecture: A rollout-based world model using a causal transformer trained on logged listening data to jointly predict engagement, binary rating, and self-reported valence and arousal.",
+      "• Data used: Logged listening data from LUCID's health-and-wellness platforms, including clinical users (older adults with neurocognitive conditions) and consumer-wellness users across energize, focus, calm, and sleep modes.",
+      "• Performance metrics: The world model predicts behavioral and affective signals with usable fidelity under a cold-start protocol; DPO improves predicted valence and arousal over behavior cloning baseline while maintaining diversity and avoiding distributional collapse.",
+      "• Training method: Policy initialized by behavior cloning, fine-tuned offline with Direct Preference Optimization (DPO) against a configurable multi-objective utility function."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于展开世界模型的因果Transformer，联合预测参与度、二元评分及自报告效价和唤醒度。",
+      "• 数据来源: LUCID健康平台日志数据，涵盖临床用户（老年神经认知障碍患者）和消费健康用户（能量、专注、平静、睡眠模式）。",
+      "• 主要结论: 世界模型在冷启动协议下以可用保真度预测行为和情感信号；DPO相比行为克隆基线提升了预测效价和唤醒度，同时保持多样性，避免贪婪优化导致的分布崩溃。",
+      "• 训练方法: 行为克隆初始化策略，通过直接偏好优化（DPO）针对可配置多目标效用函数进行离线微调。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low for financial markets; the methodology is tailored to affective recommendation with ethical constraints, not directly applicable to trading.",
+      "• Implementation Risk: High; requires domain-specific data (affective states, clinical logs) and custom world model training, which is not transferable to financial data.",
+      "• Novelty: Moderate; combines rollout-based world models with DPO for offline preference optimization, but similar techniques exist in RL and recommendation systems."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将展开世界模型与DPO结合用于离线情感推荐，但方法论在金融领域并不新颖。",
+      "• 实盘坑: 依赖情感标注和临床数据，金融领域难以获取类似标签；模型复杂度高，复现成本大。",
+      "• 复现难度: 高；需要特定平台日志和情感反馈，通用性差，不适合量化交易场景。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.28809v1",
+    "title": "AREA: Attribute Extraction and Aggregation for CLIP-Based Class-Incremental Learning",
+    "pdf_url": "https://arxiv.org/pdf/2605.28809v1",
+    "published": "2026-05-27",
+    "crawled_at": "2026-05-28 21:47:18",
+    "ai_score": 7.5,
+    "translated_title": "AREA：基于CLIP的类增量学习中的属性提取与聚合",
+    "summary_en": [
+      "• Model Architecture: AREA decomposes CLIP-based CIL into attribute extraction and aggregation stages, using principal geodesic analysis to anchor visual and textual attributes on a hypersphere, and lightweight task-specific experts with variational information bottleneck for aggregation.",
+      "• Data used: The paper uses standard CIL benchmarks (e.g., CIFAR-100, ImageNet subsets) but does not specify exact datasets in the abstract; likely common vision datasets.",
+      "• Performance metrics: AREA consistently outperforms state-of-the-art methods in class-incremental learning, with optimal transport routing for inference."
+    ],
+    "summary_cn": [
+      "• 核心模型: AREA将CLIP的类增量学习分解为属性提取和聚合，利用主测地线分析在超球面上锚定视觉和文本属性，并通过轻量级任务专家和变分信息瓶颈进行聚合。",
+      "• 数据来源: 使用标准CIL基准（如CIFAR-100、ImageNet子集），但摘要未明确数据集。",
+      "• 主要结论: 在类增量学习中持续优于现有方法，推理时通过最优传输路由实现更简洁的预测。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; CIL is niche for finance (e.g., regime detection), but CLIP-based methods may offer cross-modal alpha if applied to alternative data.",
+      "• Implementation Risk: High; requires CLIP model, principal geodesic analysis, and optimal transport, which are computationally heavy and complex to tune.",
+      "• Novelty: High; novel decomposition of CIL into attribute extraction/aggregation with geometric anchoring and information bottleneck regularization."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将CIL分解为属性提取与聚合，结合几何锚定和信息瓶颈，思路新颖。",
+      "• 实盘坑: 计算复杂度高，CLIP模型和最优传输在金融数据上可能过拟合或泛化差。",
+      "• 复现难度: 高；需要多组件协同调参，且依赖预训练CLIP，金融领域无直接应用。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ICML",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2605.28805v1",
+    "title": "OmniVerifier-M1: Multimodal Meta-Verifier with Explicit Structured Recalibration",
+    "pdf_url": "https://arxiv.org/pdf/2605.28805v1",
+    "published": "2026-05-27",
+    "crawled_at": "2026-05-28 21:47:26",
+    "ai_score": 7.5,
+    "translated_title": "OmniVerifier-M1：具有显式结构化重校准的多模态元验证器",
+    "summary_en": [
+      "• Model Architecture: OmniVerifier-M1 is a multimodal meta-verifier that uses symbolic outputs (e.g., bounding boxes) as rationales, combined with decoupled reinforcement learning for binary judgment and meta-verification.",
+      "• Data used: The paper does not specify exact datasets but implies training on multimodal data with visual outcomes, likely from common benchmarks or proprietary sources.",
+      "• Performance metrics: The model achieves robust verification and fine-grained error localization, enabling dynamic region-level self-correction in the M1-TTS agentic generation system."
+    ],
+    "summary_cn": [
+      "• 核心模型: OmniVerifier-M1采用符号输出（如边界框）作为元验证依据，并通过解耦强化学习分别优化二元判断和元验证。",
+      "• 数据来源: 未明确指定数据集，但暗示使用包含视觉结果的多模态数据，可能来自常见基准或专有来源。",
+      "• 主要结论: 符号输出优于文本解释作为元验证依据，解耦强化学习优于联合优化，模型实现稳健验证和细粒度错误定位。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the meta-verification approach could improve model reliability in automated trading systems using visual data, but direct financial alpha is unclear.",
+      "• Implementation Risk: High; requires multimodal infrastructure and reinforcement learning expertise, with potential overfitting to specific visual tasks.",
+      "• Novelty: High; introduces symbolic meta-verification and decoupled RL for multimodal verifiers, a novel combination in the field."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出符号元验证和解耦强化学习，在视觉验证领域具有较高创新性。",
+      "• 实盘坑: 直接应用于金融交易难度大，需大量视觉数据且缺乏金融场景验证，可能过拟合。",
+      "• 复现难度: 高；依赖多模态数据和强化学习框架，复现门槛较高。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.28803v1",
+    "title": "Ω-QVLA: Robust Quantization for Vision-Language-Action Models via Composite Rotation and Per-step Scaling",
+    "pdf_url": "https://arxiv.org/pdf/2605.28803v1",
+    "published": "2026-05-27",
+    "crawled_at": "2026-05-28 21:47:34",
+    "ai_score": 8.5,
+    "translated_title": "Ω-QVLA：通过复合旋转和逐步缩放实现视觉-语言-动作模型的鲁棒量化",
+    "summary_en": "• Model Architecture: Omega-QVLA is a training-free post-training quantization framework for Vision-Language-Action (VLA) models, compressing both the LLM backbone and the diffusion action head to uniform W4A4 precision using composite SVD-Hadamard rotation and per-step DiT activation scaling.\n• Data used: The framework is evaluated on the LIBERO benchmark and real-world manipulation experiments, using Pi 0.5 and GR00T N1.5 models.\n• Performance metrics: On LIBERO, Omega-QVLA achieves 98.0% and 87.8% task success rates for Pi 0.5 and GR00T N1.5, respectively, matching or exceeding FP16 references (97.1% and 87.0%), while reducing static memory footprint by 71.3%.",
+    "summary_cn": "• 核心模型: Omega-QVLA是一种无需训练的后训练量化框架，针对视觉-语言-动作模型，通过复合SVD-Hadamard旋转和逐步DiT激活缩放，将LLM骨干和扩散动作头统一压缩至W4A4精度。\n• 数据来源: 在LIBERO基准测试和真实世界操作实验中进行评估，使用Pi 0.5和GR00T N1.5模型。\n• 主要结论: 在LIBERO上，Pi 0.5和GR00T N1.5的任务成功率分别为98.0%和87.8%，匹配或超过FP16参考值（97.1%和87.0%），同时静态内存占用减少71.3%。",
+    "verdict_en": "• Alpha Potential: High. Enables efficient on-device deployment of VLA models, which could be leveraged for real-time robotic trading or automated systems.\n• Implementation Risk: Moderate. Requires careful tuning of rotation and scaling parameters; code is available but may need adaptation for specific hardware.\n• Novelty: High. First work to uniformly quantize both LLM and diffusion action head to W4A4 without mixed precision, challenging prior assumptions.",
+    "verdict_cn": "• 创新点: 首次实现VLA模型中LLM和扩散动作头的统一W4A4量化，无需混合精度，挑战了先前假设。\n• 实盘坑: 量化参数需针对具体硬件调优，实际部署中可能面临精度损失或性能波动。\n• 复现难度: 中等，代码已开源，但需熟悉SVD-Hadamard旋转和逐步缩放技术。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.28792v1",
+    "title": "CaMBRAIN: Real-time, Continuous EEG Inference with Causal State Space Models",
+    "pdf_url": "https://arxiv.org/pdf/2605.28792v1",
+    "published": "2026-05-27",
+    "crawled_at": "2026-05-28 21:47:42",
+    "ai_score": 7.5,
+    "translated_title": "CaMBRAIN：基于因果状态空间模型的实时连续脑电图推理",
+    "summary_en": "• Model Architecture: Proposes CaMBRAIN, the first causal Mamba-based state space model (SSM) for real-time EEG inference, avoiding quadratic scaling of attention by using linear-time SSMs.\n• Data: Evaluated on three different EEG datasets (not specified in abstract), demonstrating generalizability.\n• Performance: Achieves state-of-the-art results with >10x higher throughput than existing models, enabling long-range continuous inference of variable-length EEG signals.",
+    "summary_cn": "• 核心模型: 提出首个基于因果Mamba的状态空间模型CaMBRAIN，利用线性时间SSM避免注意力机制的二次缩放，实现实时EEG推理。\n• 数据来源: 在三个不同的EEG数据集上评估，展示泛化能力（具体数据集未在摘要中说明）。\n• 主要结论: 实现最先进结果，吞吐量比现有模型高10倍以上，首次实现变长EEG信号的长期连续推理。",
+    "verdict_en": "• Alpha Potential: Low for financial trading; EEG is not a typical financial data source, but could be used in niche applications like neuromarketing or trader fatigue monitoring.\n• Implementation Risk: High; requires specialized hardware (EEG caps) and domain expertise in neuroscience, making integration into trading systems impractical.\n• Novelty: High in the EEG domain; first causal SSM for streaming EEG, with a novel multi-stage self-supervised training pipeline for long-range memory.",
+    "verdict_cn": "• 创新点: 在EEG领域首次引入因果状态空间模型，并设计多阶段自监督训练提升长程记忆，技术新颖。\n• 实盘坑: 金融交易中应用价值极低；EEG信号非金融数据，需专用硬件和神经科学知识，整合成本高。\n• 复现难度: 中等；依赖Mamba架构和EEG数据，但代码可能开源，需专业领域知识。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.28780v1",
+    "title": "Bias Leaves a Gradient Trail: Label-Free Bias Identification via Gradient Probes on Concept Decompositions",
+    "pdf_url": "https://arxiv.org/pdf/2605.28780v1",
+    "published": "2026-05-27",
+    "crawled_at": "2026-05-28 21:47:52",
+    "ai_score": 7.5,
+    "translated_title": "偏差留下梯度痕迹：基于概念分解的梯度探针无标签偏差识别",
+    "summary_en": [
+      "• Model Architecture: Uses non-negative matrix factorization on intermediate activations of frozen vision models to extract interpretable concept vectors, then ranks them via a bias estimator based on gradient backpropagation on misclassified examples.",
+      "• Data used: Colored MNIST, Waterbirds, CelebA datasets; requires only class labels from a held-out audit dataset, no spurious attribute or group labels.",
+      "• Performance metrics: Improves worst-group accuracy by up to 17.9 pp on Waterbirds and 10.4 pp on CelebA without retraining; recovers known spurious cues on Colored MNIST and Waterbirds.",
+      "• Key finding: Identifies spurious concepts that may not coincide with annotated attributes, providing interpretable auditing and debiasing for frozen models."
+    ],
+    "summary_cn": [
+      "• 核心模型: 对冻结视觉模型的中间激活进行非负矩阵分解，提取可解释概念向量，并利用误分类样本的梯度反向传播构建偏差估计器进行排序。",
+      "• 数据来源: 使用Colored MNIST、Waterbirds、CelebA数据集，仅需保留审计数据集的类别标签，无需虚假属性或群体标签。",
+      "• 主要结论: 在Waterbirds上最差组准确率提升17.9个百分点，CelebA上提升10.4个百分点，无需重新训练；能恢复已知虚假线索。",
+      "• 创新点: 无需偏差标签即可识别与决策相关的虚假概念，且不一定与标注属性一致。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; method identifies spurious correlations that could be exploited for robust factor construction, but direct trading application is unclear.",
+      "• Implementation Risk: Low; post-hoc and label-free, but requires access to frozen model activations and a held-out audit set; computational cost of NMF and gradient probes is manageable.",
+      "• Novelty: High; combines concept decomposition with gradient-based bias estimation in a label-free setting, offering a new tool for model interpretability and debiasing."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次在无偏差标签条件下，结合概念分解与梯度探针识别虚假概念，方法新颖且实用。",
+      "• 实盘坑: 直接应用于量化交易需谨慎，虚假相关性识别虽有助于稳健因子，但金融数据中的概念分解可能不直观。",
+      "• 复现难度: 中等；代码已开源，但需适配具体模型和数据集，NMF和梯度计算对算力有一定要求。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2605.28775v1",
+    "title": "Learn from Weaknesses: Automated Domain Specialization for Small Computer-Use Agents",
+    "pdf_url": "https://arxiv.org/pdf/2605.28775v1",
+    "published": "2026-05-27",
+    "crawled_at": "2026-05-28 21:47:59",
+    "ai_score": 7.5,
+    "translated_title": "从弱点中学习：小型计算机使用代理的自动化领域专业化",
+    "summary_en": [
+      "• Model Architecture: Introduces LearnWeak, an annotation-free specialization framework for small computer-use agents, using a stronger reference agent to identify student weaknesses and synthesize targeted tasks.",
+      "• Data used: No external annotations; leverages a reference agent to generate targeted training data and supervision automatically.",
+      "• Performance metrics: Achieves average gains of 11.6 and 11.3 percentage points over EvoCUA-8B and OpenCUA-7B on OSWorld across eight domains.",
+      "• Key innovation: Error-aware specialization objective that disentangles planning and execution errors for more precise updates."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出LearnWeak框架，无需人工标注，利用强参考代理识别学生弱点并生成针对性任务。",
+      "• 数据来源: 无外部标注数据，通过参考代理自动合成训练数据和监督信号。",
+      "• 主要结论: 在OSWorld八个领域上，相比EvoCUA-8B和OpenCUA-7B平均提升11.6和11.3个百分点。",
+      "• 创新点: 误差感知专业化目标，分离规划与执行错误，实现更精准的更新。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; focuses on improving small agents for specific domains, which could reduce costs in automated trading systems.",
+      "• Implementation Risk: Low to medium; requires a stronger reference agent, but no manual annotation, making it feasible.",
+      "• Novelty: High; student-aware data synthesis and error-disentangled training are novel contributions."
+    ],
+    "verdict_cn": [
+      "• 创新点: 学生感知的数据合成和误差解耦训练方法具有较高创新性。",
+      "• 实盘坑: 依赖强参考代理，若参考代理性能不足则效果受限；领域迁移性待验证。",
+      "• 复现难度: 中等；需构建参考代理和训练流程，但无标注依赖。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.28773v1",
+    "title": "Rethinking Memory as Continuously Evolving Connectivity",
+    "pdf_url": "https://arxiv.org/pdf/2605.28773v1",
+    "published": "2026-05-27",
+    "crawled_at": "2026-05-28 21:48:08",
+    "ai_score": 8.5,
+    "translated_title": "重新思考记忆：作为持续演化的连接性",
+    "summary_en": [
+      "• Model Architecture: FluxMem models memory as a heterogeneous graph with three-stage evolution: initial connection formation, feedback-driven refinement, and long-term consolidation.",
+      "• Data used: Evaluated on three benchmarks: LoCoMo (long-term conversation), Mind2Web (web navigation), and GAIA (general AI assistant tasks).",
+      "• Performance metrics: Achieves state-of-the-art results across all benchmarks, with significant improvements in adaptation and generalization.",
+      "• Key mechanism: Uses a metric for memory generalizability and evolutionary maturity to guide link repair, pruning, abstraction alignment, and trajectory distillation."
+    ],
+    "summary_cn": [
+      "• 核心模型: FluxMem将记忆建模为异构图，通过三个阶段演化：初始连接形成、反馈驱动优化和长期巩固。",
+      "• 数据来源: 在LoCoMo（长对话）、Mind2Web（网页导航）和GAIA（通用AI助手）三个基准上评估。",
+      "• 主要结论: 在所有基准上达到最先进性能，显著提升适应性和泛化能力。",
+      "• 关键机制: 使用记忆泛化性和演化成熟度指标指导链接修复、剪枝、抽象对齐和轨迹蒸馏。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for NLP/LLM strategies requiring adaptive memory, e.g., trading chatbots or dynamic knowledge retrieval.",
+      "• Implementation Risk: Medium; graph-based memory may be computationally heavy for real-time trading, but distillation reduces overhead.",
+      "• Novelty: Strong; rethinks static memory as evolving connectivity, offering a new paradigm for agentic systems.",
+      "• Limitations: Benchmarks are task-oriented, not financial; direct alpha in quantitative finance is unclear without adaptation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将静态记忆重构为动态演化连接，为智能体系统提供新范式。",
+      "• 实盘坑: 图结构记忆计算开销大，实时交易中可能延迟高；蒸馏虽好但增加复杂度。",
+      "• 复现难度: 中等；开源代码将发布，但需适配金融数据。",
+      "• 金融适用性: 直接用于量化交易需改造，但可启发动态知识图谱策略。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2605.27366v1",
     "title": "MUSE-Autoskill: Self-Evolving Agents via Skill Creation, Memory, Management, and Evaluation",
     "pdf_url": "https://arxiv.org/pdf/2605.27366v1",
