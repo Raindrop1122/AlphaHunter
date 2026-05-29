@@ -1,5 +1,272 @@
 [
   {
+    "id": "2605.30350v1",
+    "title": "DynaFLIP: Rethinking Robotics Perception via Tri-Modal-Dynamics Guided Representation",
+    "pdf_url": "https://arxiv.org/pdf/2605.30350v1",
+    "published": "2026-05-28",
+    "crawled_at": "2026-05-29 21:29:02",
+    "ai_score": 7.5,
+    "translated_title": "DynaFLIP：通过三模态动力学引导表示重新思考机器人感知",
+    "summary_en": [
+      "• Model Architecture: DynaFLIP uses a tri-modal (image, language, 3D flow) alignment framework with simplex-volume minimization, cosine regularizer, and contrastive objective to train an image-only encoder.",
+      "• Data used: Constructs image-language-3D flow triplets from heterogeneous human and robot videos for training supervision.",
+      "• Performance metrics: Achieves up to +22.5% improvement in out-of-distribution scenarios across diverse simulation and real-world setups, consistently outperforming baselines including VLAs.",
+      "• Key insight: Encourages three modalities to span a small simplex volume in shared hyperspherical space, focusing on control-relevant regions."
+    ],
+    "summary_cn": [
+      "• 核心模型: DynaFLIP采用三模态（图像、语言、3D流）对齐框架，通过单纯形体积最小化、余弦正则化和对比目标训练图像编码器。",
+      "• 数据来源: 从异构人类和机器人视频中构建图像-语言-3D流三元组作为训练监督。",
+      "• 主要结论: 在分布外场景下性能提升高达22.5%，在多种仿真和真实场景中持续优于包括VLA在内的基线模型。",
+      "• 关键思想: 鼓励三种模态在共享超球面空间中跨越小的单纯形体积，聚焦于控制相关区域。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for robotics manipulation strategies, but limited direct applicability to financial markets; could inspire multimodal feature extraction for alternative data.",
+      "• Implementation Risk: Moderate; requires specialized robotics hardware and data collection pipelines not typical in finance.",
+      "• Novelty: Strong in robotics perception, combining simplex-volume minimization with contrastive learning for dynamics-aware representations."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将单纯形体积最小化与对比学习结合，实现动力学感知表示，在机器人领域新颖。",
+      "• 实盘坑: 对金融量化交易直接应用价值有限，需大量改造才能用于另类数据特征提取。",
+      "• 复现难度: 高，依赖异构视频数据和专用硬件，复现成本大。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.30348v1",
+    "title": "LLMSurgeon: Diagnosing Data Mixture of Large Language Models",
+    "pdf_url": "https://arxiv.org/pdf/2605.30348v1",
+    "published": "2026-05-28",
+    "crawled_at": "2026-05-29 21:29:10",
+    "ai_score": 7.5,
+    "translated_title": "LLMSurgeon：诊断大型语言模型的数据混合",
+    "summary_en": "• Model Architecture: LLMSurgeon casts Data Mixture Surgery (DMS) as an inverse problem under label-shift assumption, using a calibrated soft confusion matrix to correct systematic domain confusion.\n• Data used: The framework estimates domain-level distribution of pretraining corpus from generated text only, without access to actual training data. Evaluation uses LLMScan, a suite built from open-source LLMs with transparent mixtures.\n• Performance metrics: The method recovers domain mixtures with high fidelity under fixed protocols, demonstrating practical post-hoc auditing capability.",
+    "summary_cn": "• 核心模型: LLMSurgeon将数据混合手术（DMS）形式化为标签偏移假设下的逆问题，通过校准的软混淆矩阵纠正系统性的领域混淆。\n• 数据来源: 仅从目标LLM生成的文本中估计预训练语料的领域分布，无需访问实际训练数据。评估使用LLMScan，该套件基于具有透明混合的开源LLM构建。\n• 主要结论: 在固定协议下，该方法以高保真度恢复领域混合，展示了实用的事后审计能力。",
+    "verdict_en": "• Alpha Potential: Low direct alpha; useful for due diligence and understanding competitor models' data composition, which may inform data sourcing strategies.\n• Implementation Risk: Moderate; requires careful calibration of confusion matrix and solving constrained inverse problems, but no access to training data is needed.\n• Novelty: High; formalizes a new problem (DMS) and provides a practical solution, with potential applications in model auditing and transparency.",
+    "verdict_cn": "• 创新点: 首次形式化数据混合手术问题，提出无需训练数据的后验审计方法，具有较高学术价值。\n• 实盘坑: 直接交易信号弱，更多用于尽职调查和竞争对手分析；依赖预定义分类体系，可能不适用于所有领域。\n• 复现难度: 中等；需要实现混淆矩阵校准和逆问题求解，但开源评估套件LLMScan降低了门槛。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.30345v1",
+    "title": "SchGen: PCB Schematic Generation with Semantic-Grounded Code Representations",
+    "pdf_url": "https://arxiv.org/pdf/2605.30345v1",
+    "published": "2026-05-28",
+    "crawled_at": "2026-05-29 21:29:17",
+    "ai_score": 7.5,
+    "translated_title": "SchGen：基于语义接地代码表示的PCB原理图生成",
+    "summary_en": "• Model Architecture: SchGen uses a large language model (LLM) with a novel semantically grounded code representation that encodes schematic editing primitives (relative placement, pin-name-based wiring) to transform geometry-driven generation into a semantics-driven matching task.\n• Data used: A large-scale dataset of PCB schematics paired with user prompts was constructed via a human-agent collaborative pipeline converting open-source hardware designs into the proposed representation.\n• Performance metrics: SchGen significantly outperforms alternative representations and even larger general-purpose LLMs on wire connectivity accuracy and functional correctness.",
+    "summary_cn": "• 核心模型: 采用大语言模型，结合语义接地代码表示，将原理图编辑原语（相对放置、基于引脚名的布线）编码，将几何驱动生成转化为语义驱动匹配任务。\n• 数据来源: 通过人机协作流水线，将开源硬件设计转换为所提表示，构建了大规模PCB原理图与用户提示配对数据集。\n• 主要结论: 在线连接准确性和功能正确性上，SchGen显著优于替代表示甚至更大的通用大语言模型。",
+    "verdict_en": "• Alpha Potential: Low for direct trading; may enable automated hardware design for algorithmic trading systems, but indirect.\n• Implementation Risk: High; requires specialized hardware design knowledge and integration with PCB design tools.\n• Novelty: High; first LLM for PCB schematic generation from natural language, with a novel representation addressing key challenges.",
+    "verdict_cn": "• 创新点: 首次将大语言模型用于PCB原理图生成，提出语义接地代码表示，解决几何驱动生成难题。\n• 实盘坑: 对量化交易直接alpha低，需硬件设计知识，集成复杂，短期难落地。\n• 复现难度: 高；依赖大规模数据集和特定表示，开源可能性低。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.30337v1",
+    "title": "Efficient Test-Time Finetuning of LLMs via Convex Reconstruction and Gradient Caching",
+    "pdf_url": "https://arxiv.org/pdf/2605.30337v1",
+    "published": "2026-05-28",
+    "crawled_at": "2026-05-29 21:29:25",
+    "ai_score": 7.5,
+    "translated_title": "通过凸重构和梯度缓存实现LLM的高效测试时微调",
+    "summary_en": [
+      "• Model Architecture: HullFT uses a convex combination of training sequence embeddings via Frank-Wolfe optimization to select a diverse and relevant support set for test-time finetuning.",
+      "• Data used: The method is evaluated on language modeling tasks, likely using standard datasets like WikiText-103 or similar, though not explicitly stated.",
+      "• Performance metrics: HullFT achieves lower bits-per-byte (better perplexity) with substantially lower total runtime compared to state-of-the-art TTFT methods.",
+      "• Key innovation: Gradient Reuse amortizes forward-backward computation across repeated finetuning steps by exploiting repeated examples from integerization."
+    ],
+    "summary_cn": [
+      "• 核心模型: HullFT通过Frank-Wolfe优化将查询嵌入表示为训练序列的稀疏凸组合，从而选择多样且相关的支持集进行测试时微调。",
+      "• 数据来源: 在语言建模任务上评估，可能使用WikiText-103等标准数据集，但论文未明确说明。",
+      "• 主要结论: 相比现有最先进方法，HullFT在显著降低总运行时间的同时，实现了更低的bits-per-byte（更好的困惑度）。",
+      "• 关键创新: 梯度重用通过利用整数化产生的重复样本，在重复微调步骤中摊销前向-反向计算。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; improved efficiency in test-time finetuning could enable faster adaptation in dynamic markets, but direct trading application is unclear.",
+      "• Implementation Risk: High; requires careful tuning of Frank-Wolfe and integerization steps, and gradient caching adds complexity.",
+      "• Novelty: High; geometric approach to TTFT with convex reconstruction and gradient reuse is novel and well-motivated."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将凸重构和梯度缓存引入测试时微调，几何方法新颖且有效。",
+      "• 实盘坑: 实际交易中，TTFT的实时性要求极高，Frank-Wolfe优化和整数化可能成为瓶颈，且梯度缓存增加内存开销。",
+      "• 复现难度: 中等；算法细节清晰，但需要大量调参才能达到论文效果。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.30336v1",
+    "title": "Fairness-Aware Federated Learning with Trajectory Shapley Value",
+    "pdf_url": "https://arxiv.org/pdf/2605.30336v1",
+    "published": "2026-05-28",
+    "crawled_at": "2026-05-29 21:29:33",
+    "ai_score": 7.5,
+    "translated_title": "基于轨迹Shapley值的公平感知联邦学习",
+    "summary_en": [
+      "• Model Architecture: FedTSV uses a validation-based, temporally consistent utility to compute Trajectory Shapley Value (TSV) for each client, converting per-round evaluations into dynamic aggregation weights.",
+      "• Data used: Benchmark datasets (e.g., CIFAR-10, MNIST) with heterogeneous and adversarial participation scenarios.",
+      "• Performance metrics: Convergence speed, robustness to adversarial clients, and fairness of contribution assessment (e.g., correlation with data quality).",
+      "• Key findings: FedTSV accelerates convergence, improves robustness, and yields more equitable contribution assessments compared to fixed-weight aggregation."
+    ],
+    "summary_cn": [
+      "• 核心模型: FedTSV通过基于验证集的时序一致性效用计算轨迹Shapley值（TSV），将每轮评估转化为动态聚合权重。",
+      "• 数据来源: 使用基准数据集（如CIFAR-10、MNIST），模拟异构和对抗性参与场景。",
+      "• 主要结论: 相比固定权重聚合，FedTSV加速收敛、提升鲁棒性，并实现更公平的贡献评估。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; fairness-aware aggregation could improve model stability in collaborative settings, but direct trading alpha is limited.",
+      "• Implementation Risk: High; requires validation set and per-round Shapley computation, which is computationally expensive for large-scale systems.",
+      "• Novelty: High; introduces trajectory-based Shapley value for dynamic weighting, addressing time-varying contributions in federated learning."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出轨迹Shapley值，首次将时序一致性引入联邦学习贡献评估，动态权重设计有理论深度。",
+      "• 实盘坑: 计算开销大，每轮需验证集和Shapley值计算，不适合高频场景；对验证集质量敏感。",
+      "• 复现难度: 中等；需实现Shapley值近似算法，但论文提供了算法细节和实验代码可能性。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2605.30330v1",
+    "title": "When, why, and how do diffusion posterior samplers fail? A finite-sample lens",
+    "pdf_url": "https://arxiv.org/pdf/2605.30330v1",
+    "published": "2026-05-28",
+    "crawled_at": "2026-05-29 21:29:39",
+    "ai_score": 7.5,
+    "translated_title": "扩散后验采样器何时、为何以及如何失败？一个有限样本视角",
+    "summary_en": [
+      "• Model Architecture: The paper analyzes diffusion posterior samplers, focusing on likelihood approximations at intermediate timesteps.",
+      "• Data used: The study uses synthetic data and natural image datasets to demonstrate failure modes.",
+      "• Performance metrics: The paper evaluates posterior accuracy, mode weighting, and hallucination rates.",
+      "• Key findings: Likelihood approximations cause under- or over-estimation of posterior spread, leading to sensitivity to early stopping, inaccurate mode weighting, and hallucination."
+    ],
+    "summary_cn": [
+      "• 核心模型: 分析扩散后验采样器，重点关注中间时间步的似然近似。",
+      "• 数据来源: 使用合成数据和自然图像数据集展示失败模式。",
+      "• 主要结论: 似然近似导致后验分布扩散被低估或高估，引发对早期停止的敏感性、模式权重不准确和幻觉。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low; the paper is diagnostic, not directly tradeable.",
+      "• Implementation Risk: High; requires deep understanding of diffusion models and careful tuning.",
+      "• Novelty: Moderate; provides a finite-sample lens but builds on existing diffusion posterior sampling literature."
+    ],
+    "verdict_cn": [
+      "• 创新点: 从有限样本视角系统分析扩散后验采样器的失败原因。",
+      "• 实盘坑: 诊断方法复杂，难以直接应用于量化交易。",
+      "• 复现难度: 中等；需要扩散模型和贝叶斯推断基础。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2605.30329v1",
+    "title": "SoundnessBench: Can Your AI Scientist Really Tell Good Research Ideas from Bad Ones?",
+    "pdf_url": "https://arxiv.org/pdf/2605.30329v1",
+    "published": "2026-05-28",
+    "crawled_at": "2026-05-29 21:29:49",
+    "ai_score": 6.5,
+    "translated_title": "SoundnessBench：你的AI科学家真的能区分好研究想法和坏想法吗？",
+    "summary_en": "• Model Architecture: Evaluates 12 frontier LLMs (e.g., GPT-4, Claude) on judging research proposal soundness using standard and aggressive prompting.\n• Data used: 1,099 ML research proposals reconstructed from ICLR submissions, labeled with reviewer soundness sub-scores and audited against source papers.\n• Performance metrics: False positive/negative rates for soundness classification; pervasive optimism bias observed under standard prompting.\n• Key finding: LLMs are not reliable as standalone first-gate evaluators for scientific rigor; aggressive prompting shifts errors from false positives to false negatives.\n• Controls: Tests for public-corpus contamination, paper-identifying phrases, surface features, and human audit quality show behavior not explained by single confounder.",
+    "summary_cn": "• 核心模型：评估12个前沿LLM（如GPT-4、Claude）在标准与激进提示下判断研究提案合理性的能力。\n• 数据来源：从ICLR投稿中重建的1,099个机器学习研究提案，带有审稿人合理性子分数，并对照原始论文审核。\n• 主要结论：LLM在标准提示下普遍存在乐观偏差，常将低合理性提案评为合理；激进提示则将错误从假阳性转为假阴性。\n• 性能指标：合理性分类的假阳性/假阴性率。\n• 控制实验：公共语料污染、论文标识短语、表面特征和人工审核质量均不能单独解释该行为。",
+    "verdict_en": "• Alpha Potential: Low. The paper focuses on evaluating LLMs for scientific rigor, not on generating trading signals; direct alpha generation is unlikely.\n• Implementation Risk: Medium. The benchmark and findings are useful for assessing LLM reliability in research evaluation, but require careful prompt engineering and domain-specific tuning.\n• Novelty: High. Introduces a novel benchmark (SoundnessBench) for proposal-stage soundness, revealing systematic optimism bias in LLMs.\n• Practical Use: Could be adapted to filter research ideas in quant finance, but current LLM performance is insufficient for standalone use.\n• Limitations: Limited to ML research proposals; generalizability to other domains (e.g., finance) untested.",
+    "verdict_cn": "• 创新点：提出SoundnessBench基准，系统评估LLM判断研究提案合理性的能力，发现乐观偏差。\n• 实盘坑：LLM在标准提示下不可靠，直接用于筛选量化研究想法风险高；需结合人工审核。\n• 复现难度：中等；数据来自ICLR投稿，需获取审稿分数和原始论文，但基准可扩展。\n• 量化价值：低；非直接交易信号，但可用于评估研究质量，间接辅助因子开发。\n• 适用性：限于机器学习领域，金融领域适用性待验证。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.30327v1",
+    "title": "Reasoning with Sampling: Cutting at Decision Points",
+    "pdf_url": "https://arxiv.org/pdf/2605.30327v1",
+    "published": "2026-05-28",
+    "crawled_at": "2026-05-29 21:29:57",
+    "ai_score": 7.5,
+    "translated_title": "推理中的采样：在决策点进行截断",
+    "summary_en": "• Model Architecture: Proposes Entropy-Cut Metropolis-Hastings (ECMH), a sampling algorithm that uses next-token entropy as a proxy to identify key decision points in reasoning traces, then resamples from those positions. Built on top of a base language model without additional RL training.\n• Data Used: Evaluated on MATH500, HumanEval, GPQA Diamond, and AIME26 benchmarks, which cover math, coding, and science reasoning tasks.\n• Performance Metrics: Consistently improves over baselines (e.g., uniform cut sampling) and RL-trained models across all benchmarks, with significant gains on AIME26 (hard math). Mixing time scales with number of decisions rather than tokens.",
+    "summary_cn": "• 核心模型: 提出熵截断梅特罗波利斯-黑斯廷斯（ECMH）算法，利用下一个token的熵作为代理识别推理轨迹中的关键决策点，并从这些位置重新采样，无需额外强化学习训练。\n• 数据来源: 在MATH500、HumanEval、GPQA Diamond和AIME26基准上评估，涵盖数学、编程和科学推理任务。\n• 主要结论: 在所有基准上一致优于基线（如均匀截断采样）和强化学习训练模型，尤其在AIME26（高难度数学）上提升显著；混合时间与决策数量而非token数量成比例。",
+    "verdict_en": "• Alpha Potential: High for reasoning-heavy tasks (e.g., math, code generation) where sampling efficiency matters; could improve LLM-based trading signal generation.\n• Implementation Risk: Moderate; requires access to base model logits for entropy computation, and tuning of entropy threshold. May not generalize to non-reasoning domains.\n• Novelty: Strong; introduces entropy-guided cut selection for MCMC sampling, with theoretical mixing time guarantees. Practical improvement over prior uniform-cut methods.",
+    "verdict_cn": "• 创新点: 首次将熵作为决策点代理用于MCMC采样截断，提供理论混合时间保证，显著优于均匀截断。\n• 实盘坑: 需要模型logits计算熵，增加计算开销；熵阈值需调参，可能不适用于非推理任务（如情感分析）。\n• 复现难度: 中等；需基础模型和采样框架，但算法本身不复杂，主要挑战在熵阈值选择。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.30324v1",
+    "title": "On Language Generation in the Limit with Bounded Memory",
+    "pdf_url": "https://arxiv.org/pdf/2605.30324v1",
+    "published": "2026-05-28",
+    "crawled_at": "2026-05-29 21:30:04",
+    "ai_score": 6.5,
+    "translated_title": "有界记忆下的极限语言生成",
+    "summary_en": [
+      "• Model Architecture: Studies memoryless generators, sliding window of last W examples, and adaptive memory of b past examples for language generation.",
+      "• Data used: Theoretical analysis on countable collections of infinite languages and finite collections; no empirical data.",
+      "• Performance metrics: Achievable generation, minimax density (best guaranteed density), and identification convergence.",
+      "• Key findings: Memoryless generation possible for every countable collection under mild enumeration restriction; sliding window does not improve worst-case density, but adaptive memory does; approximate identification achievable for finite collections."
+    ],
+    "summary_cn": [
+      "• 核心模型: 研究无记忆生成器、滑动窗口（最近W个示例）和自适应记忆（b个过去示例）的语言生成模型。",
+      "• 数据来源: 理论分析，针对可数无限语言集合和有限集合，无实证数据。",
+      "• 主要结论: 在温和枚举限制下，无记忆生成可覆盖所有可数集合；滑动窗口不改善最差密度，但自适应记忆可改善；近似识别对有限集合可行。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low; purely theoretical, no direct trading application.",
+      "• Implementation Risk: High; results are asymptotic and combinatorial, difficult to translate into practical algorithms.",
+      "• Novelty: Moderate; extends classical learning theory to language generation with bounded memory, but incremental over prior work."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将经典学习理论扩展到有界记忆下的语言生成，理论推导严谨。",
+      "• 实盘坑: 纯理论，无实证，无法直接用于交易策略。",
+      "• 复现难度: 高，依赖组合数学（Sperner定理等），实现门槛高。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.30323v1",
+    "title": "In-Context Reward Adaptation for Robust Preference Modeling",
+    "pdf_url": "https://arxiv.org/pdf/2605.30323v1",
+    "published": "2026-05-28",
+    "crawled_at": "2026-05-29 21:30:12",
+    "ai_score": 7.5,
+    "translated_title": "上下文奖励自适应：面向鲁棒偏好建模",
+    "summary_en": "• Model Architecture: A transformer-based framework that adaptively infers reward structures from few preference demonstrations using in-context learning, augmented with human response time as auxiliary input.\n• Data used: Preference demonstrations (presumably from human feedback) and human response time signals; tested on unseen preference domains.\n• Performance metrics: Demonstrates successful adaptation to unseen domains, overcoming asymptotic bias of standard transformers; no explicit quantitative metrics (e.g., accuracy, reward prediction error) reported in abstract.",
+    "summary_cn": "• 核心模型: 基于Transformer的上下文奖励自适应框架，利用上下文学习从少量偏好演示中推断奖励结构，并引入人类响应时间作为辅助信号。\n• 数据来源: 人类偏好反馈数据及响应时间，在未见过的偏好领域上测试。\n• 主要结论: 标准Transformer存在渐近偏差，而加入响应时间后模型能成功适应未见领域，提升偏好建模的鲁棒性。",
+    "verdict_en": "• Alpha Potential: Moderate; addresses preference heterogeneity in RLHF, which could improve alignment in trading agents or recommendation systems, but direct financial alpha is unclear.\n• Implementation Risk: High; requires human response time data, which may be noisy or unavailable in practice; transformer training for reward adaptation is computationally intensive.\n• Novelty: High; introduces in-context learning for reward modeling with auxiliary time signal, a novel approach to handle distribution shift in preferences.",
+    "verdict_cn": "• 创新点: 将上下文学习引入奖励建模，并利用响应时间信号处理偏好分布偏移，思路新颖。\n• 实盘坑: 依赖人类响应时间数据，实际获取困难且噪声大；Transformer训练成本高，实时性差。\n• 复现难度: 高；需要大量人类偏好数据和响应时间记录，且模型细节未完全公开。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2605.28819v1",
     "title": "PEFT-Arena: Understanding Parameter-Efficient Finetuning from a Stability-Plasticity Perspective",
     "pdf_url": "https://arxiv.org/pdf/2605.28819v1",
