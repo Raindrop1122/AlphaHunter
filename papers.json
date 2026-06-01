@@ -1,5 +1,280 @@
 [
   {
+    "id": "2605.31596v1",
+    "title": "KLIP: localized distribution shift detection via KL-divergence with diffusion priors in Inverse Problems",
+    "pdf_url": "https://arxiv.org/pdf/2605.31596v1",
+    "published": "2026-05-29",
+    "crawled_at": "2026-06-01 22:26:23",
+    "ai_score": 7.5,
+    "translated_title": "KLIP：通过扩散先验的KL散度在逆问题中检测局部化分布偏移",
+    "summary_en": [
+      "• Model Architecture: Uses KL divergence between diffusion prior and posterior distribution as OOD detection metric, without requiring calibration data or knowledge of shifted distribution.",
+      "• Data used: Evaluated on CT scans (healthy vs. tumor liver), and other datasets; generalizes across different diffusion models and inverse problems.",
+      "• Performance metrics: Detects whole-image OOD and localizes OOD patches; shows sensitivity to subtle semantic shifts like tumor presence.",
+      "• Key result: Metric can detect localized distribution shifts in indirect measurement settings (inverse problems)."
+    ],
+    "summary_cn": [
+      "• 核心模型: 利用扩散先验与后验分布之间的KL散度作为OOD检测指标，无需校准数据或偏移分布知识。",
+      "• 数据来源: 在CT扫描（健康肝脏 vs. 肿瘤肝脏）及其他数据集上评估，适用于不同扩散模型和逆问题。",
+      "• 主要结论: 能检测整图OOD并定位OOD区域，对肿瘤等细微语义偏移敏感。",
+      "• 性能指标: 在间接测量（逆问题）场景下有效检测局部化分布偏移。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low for direct trading; OOD detection is more relevant for risk management or data quality control in quant models.",
+      "• Implementation Risk: Requires diffusion model inference, computationally expensive; may not scale to high-frequency data.",
+      "• Novelty: Novel application of KL divergence in diffusion models for localized OOD detection in inverse problems; limited direct financial application.",
+      "• Practical Use: Could be adapted for anomaly detection in alternative data (e.g., medical imaging for healthcare investments)."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将KL散度与扩散模型结合用于逆问题中的局部OOD检测，方法新颖。",
+      "• 实盘坑: 计算成本高，不适合高频交易；金融直接应用场景有限。",
+      "• 复现难度: 中等，依赖扩散模型实现，代码已开源。",
+      "• 应用潜力: 可用于另类数据异常检测（如医疗影像），辅助基本面投资。"
+    ],
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2605.31594v1",
+    "title": "A Tight Theory of Error Feedback Algorithms in Distributed Optimization",
+    "pdf_url": "https://arxiv.org/pdf/2605.31594v1",
+    "published": "2026-05-29",
+    "crawled_at": "2026-06-01 22:26:29",
+    "ai_score": 5.5,
+    "translated_title": "分布式优化中误差反馈算法的紧致理论",
+    "summary_en": "• The paper provides tight convergence analyses for two error-feedback algorithms: classic Error Feedback (EF) and EF21.\n• It identifies optimal step-size choices and constructs optimal Lyapunov functions tailored to each method.\n• The results hold independently of the number of agents and recover the best guarantees in the single-agent regime.\n• No empirical data or experiments are presented; the focus is purely theoretical.\n• Performance metrics are convergence rates, not financial or practical benchmarks.",
+    "summary_cn": "• 核心模型: 经典误差反馈(EF)和EF21两种算法，用于分布式优化中的梯度压缩补偿。\n• 数据来源: 无实际数据，纯理论分析。\n• 主要结论: 给出了最优步长选择和Lyapunov函数构造，收敛界与智能体数量无关，且恢复单智能体最优保证。",
+    "verdict_en": "• Alpha Potential: Low. The paper is theoretical and not directly applicable to financial alpha generation.\n• Implementation Risk: High. Requires integration into distributed learning systems; no practical guidance.\n• Novelty: Moderate. Provides tight bounds but builds on existing error-feedback literature.",
+    "verdict_cn": "• 创新点: 对EF和EF21给出了紧致收敛分析，理论贡献扎实。\n• 实盘坑: 纯理论，无实证，无法直接用于量化交易。\n• 复现难度: 中等，需数学功底，但无代码或数据。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2605.31584v1",
+    "title": "LongTraceRL: Learning Long-Context Reasoning from Search Agent Trajectories with Rubric Rewards",
+    "pdf_url": "https://arxiv.org/pdf/2605.31584v1",
+    "published": "2026-05-29",
+    "crawled_at": "2026-06-01 22:26:35",
+    "ai_score": 7.5,
+    "translated_title": "LongTraceRL：从搜索智能体轨迹中学习长上下文推理的评分奖励方法",
+    "summary_en": "• Model Architecture: Uses reinforcement learning with rubric rewards that provide entity-level process supervision for long-context reasoning. • Data used: Constructs training contexts via knowledge graph random walks and search agent trajectories to generate tiered distractors (high and low confusability). • Performance metrics: Evaluated on three reasoning LLMs (4B-30B) across five long-context benchmarks, consistently outperforming strong baselines. • Key finding: The positive-only rubric reward strategy improves reasoning quality among correct responses and prevents reward hacking.",
+    "summary_cn": "• 核心模型: 采用基于评分奖励的强化学习，提供实体级别的过程监督，用于长上下文推理。 • 数据来源: 通过知识图谱随机游走和搜索智能体轨迹构建训练上下文，生成分层干扰项（高混淆度和低混淆度）。 • 主要结论: 在三个推理LLM（4B-30B）和五个长上下文基准上，始终优于强基线，且正样本评分奖励策略提升了正确回答的推理质量。",
+    "verdict_en": "• Alpha Potential: High, as it addresses a critical limitation in long-context reasoning with practical data construction and reward design. • Implementation Risk: Moderate; requires access to search agent trajectories and knowledge graphs, which may be proprietary or costly. • Novelty: Strong; introduces tiered distractors and rubric rewards, offering a more challenging and fine-grained supervision signal than existing RLVR methods.",
+    "verdict_cn": "• 创新点: 提出分层干扰项和评分奖励，解决了现有方法中干扰项易区分和奖励稀疏的问题。 • 实盘坑: 依赖搜索智能体轨迹和知识图谱，数据获取成本高，且正样本奖励策略可能限制探索。 • 复现难度: 中等；代码和数据集已开源，但搜索智能体轨迹的生成需要额外工程。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.31580v1",
+    "title": "Giving Sensors a Voice: Multimodal JEPA for Semantic Time-Series Embeddings",
+    "pdf_url": "https://arxiv.org/pdf/2605.31580v1",
+    "published": "2026-05-29",
+    "crawled_at": "2026-06-01 22:26:41",
+    "ai_score": 6.5,
+    "translated_title": "赋予传感器声音：用于语义时间序列嵌入的多模态JEPA",
+    "summary_en": [
+      "• Model Architecture: CHARM uses a Transformer encoder with channel-level text descriptions and JEPA training for robust embeddings.",
+      "• Data used: Heterogeneous multivariate time series from anomaly detection, classification, and forecasting tasks.",
+      "• Performance metrics: Strong linear probe results across anomaly detection, classification, short- and long-term forecasting.",
+      "• Key finding: JEPA objective and conditioning architecture are main drivers, text descriptions aid cross-dataset generalization."
+    ],
+    "summary_cn": [
+      "• 核心模型: CHARM采用Transformer编码器，结合通道级文本描述和JEPA训练，生成鲁棒嵌入。",
+      "• 数据来源: 来自异常检测、分类和预测任务的异构多变量时间序列。",
+      "• 主要结论: JEPA目标和条件架构是性能主要驱动因素，文本描述有助于跨数据集泛化。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; embeddings could be used as features for factor models, but direct trading signal unclear.",
+      "• Implementation Risk: High; requires text descriptions for each channel, which may not be available in financial data.",
+      "• Novelty: Moderate; JEPA for time series is novel, but text integration is incremental."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将JEPA用于时间序列嵌入，结合文本描述提升泛化能力。",
+      "• 实盘坑: 金融数据缺乏通道文本描述，且线性探针性能在噪声环境下可能下降。",
+      "• 复现难度: 中等，需要多模态数据和特定训练技巧。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.31562v1",
+    "title": "Effective Biological Representation Learning by Masking Gene Expression",
+    "pdf_url": "https://arxiv.org/pdf/2605.31562v1",
+    "published": "2026-05-29",
+    "crawled_at": "2026-06-01 22:26:47",
+    "ai_score": 7.5,
+    "translated_title": "通过掩码基因表达实现有效的生物表示学习",
+    "summary_en": [
+      "• Model Architecture: TxFM uses a masked autoencoding approach tailored to RNA-seq count data, with careful ablation to identify crucial architecture configurations.",
+      "• Data used: Trained on DiverseRNA-1.4M, a curated public corpus; outperforms models trained on atlas-scale corpora over 100x larger.",
+      "• Performance metrics: Outperforms linear baselines and existing transcriptomic foundation models in inductive representation learning evaluations.",
+      "• Key finding: Inductive self-supervised learning is viable for transcriptomics with careful model and data curation."
+    ],
+    "summary_cn": [
+      "• 核心模型: TxFM采用针对RNA-seq计数数据定制的掩码自编码方法，并通过消融实验确定关键架构配置。",
+      "• 数据来源: 在精心策划的公共语料库DiverseRNA-1.4M上训练，性能优于在规模大100倍以上的图谱级语料库上训练的模型。",
+      "• 主要结论: 在归纳表示学习评估中，TxFM优于线性基线和现有转录组基础模型。",
+      "• 关键发现: 通过精心设计模型和数据策划，归纳自监督学习在转录组学中是可行的。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; gene representation learning could improve drug discovery models, but direct trading alpha is unclear.",
+      "• Implementation Risk: High; requires domain expertise in transcriptomics and large-scale data processing.",
+      "• Novelty: High; demonstrates that careful curation and architecture design can beat much larger models, challenging scaling assumptions."
+    ],
+    "verdict_cn": [
+      "• 创新点: 通过数据策划和架构设计，小模型击败大模型，挑战了规模假设。",
+      "• 实盘坑: 直接用于交易策略的alpha潜力有限，更多是生物信息学工具。",
+      "• 复现难度: 高；需要转录组学专业知识和大量计算资源。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.31559v1",
+    "title": "Functional Attention: From Pairwise Affinities to Functional Correspondences",
+    "pdf_url": "https://arxiv.org/pdf/2605.31559v1",
+    "published": "2026-05-29",
+    "crawled_at": "2026-06-01 22:26:52",
+    "ai_score": 7.5,
+    "translated_title": "功能注意力：从成对亲和性到功能对应",
+    "summary_en": [
+      "• Model Architecture: Introduces Functional Attention, which replaces softmax affinities with structured linear operators inspired by geometric functional maps, enabling resolution-invariant and compact representations.",
+      "• Data used: Evaluated on PDE solving, 3D segmentation, and regression tasks, with varying discretizations.",
+      "• Performance metrics: Matches state-of-the-art performance in operator learning tasks, robust to discretization changes."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出功能注意力机制，用结构化线性算子替代softmax亲和性，实现分辨率不变性和紧凑表示。",
+      "• 数据来源: 在PDE求解、3D分割和回归任务上评估，使用不同离散化数据。",
+      "• 主要结论: 在算子学习任务中达到最先进性能，对离散化变化具有鲁棒性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; operator learning is niche but could be applied to financial PDEs or time-series modeling.",
+      "• Implementation Risk: High; requires understanding of functional maps and operator theory, not straightforward to implement.",
+      "• Novelty: High; novel reinterpretation of attention as functional correspondence, bridging geometric and transformer methods."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将注意力重新解释为功能对应，融合几何与transformer方法，理论新颖。",
+      "• 实盘坑: 算子学习在金融领域应用有限，需大量适配工作，且计算复杂度可能较高。",
+      "• 复现难度: 高，涉及功能映射和算子理论，代码和实验细节需仔细研究。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2605.31558v1",
+    "title": "Positional versus Symbolic Attention Heads: Learning Dynamics, RoPE Geometry, and Length Generalization",
+    "pdf_url": "https://arxiv.org/pdf/2605.31558v1",
+    "published": "2026-05-29",
+    "crawled_at": "2026-06-01 22:26:58",
+    "ai_score": 7.5,
+    "translated_title": "位置注意力头与符号注意力头：学习动态、RoPE几何与长度泛化",
+    "summary_en": "• Model Architecture: Decoder-only Transformer (GPT-J) with RoPE positional encoding.\n• Data: Synthetic multi-hop reasoning tasks: number task (positional) and letter task (symbolic).\n• Performance Metrics: Classification of attention heads as positional or symbolic; robustness to longer sequences measured by discrepancy.\n• Key Findings: Successful learning yields pure heads (positional or symbolic); symbolic heads generalize better to longer sequences.",
+    "summary_cn": "• 核心模型: 使用RoPE位置编码的仅解码器Transformer（GPT-J）。\n• 数据来源: 合成多跳推理任务：数字任务（位置推理）和字母任务（符号推理）。\n• 主要结论: 成功学习产生纯注意力头（位置或符号）；符号头在长序列上泛化更可靠。",
+    "verdict_en": "• Alpha Potential: Moderate; insights on head specialization could inspire factor construction for sequence modeling.\n• Implementation Risk: High; synthetic tasks may not transfer to real financial data; requires careful tuning.\n• Novelty: High; introduces discrepancy metric and geometric interpretation of RoPE attention heads.",
+    "verdict_cn": "• 创新点: 提出区分位置/符号注意力头的度量，并理论分析RoPE几何。\n• 实盘坑: 合成任务与金融数据差异大，直接应用风险高。\n• 复现难度: 中等；需实现特定度量，但代码未公开。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.31547v1",
+    "title": "The Dynamic-Probabilistic Consistency Gap in Chaotic Surrogate Modeling",
+    "pdf_url": "https://arxiv.org/pdf/2605.31547v1",
+    "published": "2026-05-29",
+    "crawled_at": "2026-06-01 22:27:06",
+    "ai_score": 7.5,
+    "translated_title": "混沌代理建模中的动态概率一致性差距",
+    "summary_en": "• Model Architecture: KAFFEE uses a differentiable extended Kalman filter (EKF) to train surrogate models, evaluating likelihood on local predictive residuals (innovations) while propagating covariance through learned local Jacobians.\n• Data used: Stochastic hyperchaotic Lorenz-96 system and 13 additional chaotic systems for zero-shot adaptation.\n• Performance metrics: Reconstruction of dynamical invariants (e.g., Lyapunov exponents), predictive scores, and identification of failure modes (core collapse, noise masking, blind uncertainty).\n• Key finding: Open-loop Gaussian rollout objectives cause a dynamic-probabilistic consistency gap, degrading dynamics or decoupling uncertainty from local tangent dynamics.\n• Mitigation: KAFFEE reduces failure modes and improves invariant reconstruction while maintaining competitive predictive scores.",
+    "summary_cn": "• 核心模型: KAFFEE基于可微扩展卡尔曼滤波器，通过局部预测残差（创新）评估似然，并利用学习到的局部雅可比矩阵传播协方差。\n• 数据来源: 随机超混沌Lorenz-96系统及13个混沌系统用于零样本适应。\n• 主要结论: 开环高斯滚动目标导致动态概率一致性差距，削弱动力学或使不确定性脱离局部切向动力学；KAFFEE可缓解此问题。\n• 性能指标: 动力学不变量重建（如李雅普诺夫指数）、预测分数及失败模式识别。\n• 创新点: 首次系统揭示并量化了混沌代理建模中的动态概率一致性差距。",
+    "verdict_en": "• Alpha Potential: Moderate; the method improves uncertainty quantification in chaotic systems, which could be applied to financial time series modeling (e.g., volatility forecasting, regime detection).\n• Implementation Risk: High; requires differentiable EKF and Jacobian computation, which may be computationally intensive and sensitive to hyperparameters.\n• Novelty: High; identifies a previously unrecognized consistency gap and proposes a principled mitigation framework.\n• Practicality: Limited to chaotic dynamics; financial markets may not exhibit true chaos, reducing direct applicability.\n• Reproducibility: Moderate; code likely available but requires careful tuning for new systems.",
+    "verdict_cn": "• 创新点: 首次揭示混沌代理建模中的动态概率一致性差距，并提出KAFFEE框架，理论贡献扎实。\n• 实盘坑: 金融市场未必是混沌系统，直接应用效果存疑；可微EKF计算成本高，实盘部署需谨慎。\n• 复现难度: 较高，需精细调参，且对模型架构有特定要求。\n• 应用前景: 可用于波动率预测或状态估计，但需验证在金融数据上的有效性。\n• 风险提示: 过度依赖不确定性估计可能导致过拟合，需结合其他因子。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2605.31539v1",
+    "title": "Automated Prediction of Postoperative Pancreatic Fistula Using Preoperative Computed Tomography",
+    "pdf_url": "https://arxiv.org/pdf/2605.31539v1",
+    "published": "2026-05-29",
+    "crawled_at": "2026-06-01 22:27:13",
+    "ai_score": 5.5,
+    "translated_title": "利用术前CT自动预测术后胰瘘",
+    "summary_en": [
+      "• Model Architecture: Evaluated multiple 3D CNN architectures including a custom lightweight CNN3D, R(2+1)D ResNet-18, and ResNet-MC3-18 for end-to-end segmentation and classification.",
+      "• Data used: Preoperative CT scans with auto-segmented pancreas volumes and surgical outcomes data set.",
+      "• Performance metrics: Promising predictive performance reported across architectures, but specific metrics (AUC, accuracy) not detailed in abstract.",
+      "• Task: Binary classification of postoperative pancreatic fistula (POPF) risk from CT images.",
+      "• Pipeline: Automatic end-to-end pipeline from pancreatic segmentation to risk classification."
+    ],
+    "summary_cn": [
+      "• 核心模型: 评估了多种3D CNN架构，包括自定义轻量级CNN3D、R(2+1)D ResNet-18和ResNet-MC3-18，用于端到端分割和分类。",
+      "• 数据来源: 使用术前CT扫描，包含自动分割的胰腺体积和手术结果数据集。",
+      "• 主要结论: 各架构均显示出有前景的预测性能，但摘要未提供具体指标（如AUC、准确率）。",
+      "• 任务: 基于CT图像对术后胰瘘风险进行二分类。",
+      "• 流程: 从胰腺分割到风险分类的自动端到端流水线。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low for financial trading; medical imaging application with no direct market alpha.",
+      "• Implementation Risk: High due to domain-specific medical data and regulatory hurdles; not applicable to finance.",
+      "• Novelty: Moderate; combines segmentation and classification in a pipeline but uses standard architectures.",
+      "• Relevance: None to quantitative finance; paper is purely clinical.",
+      "• Data Requirements: Requires CT scans and surgical outcomes, not available in financial context."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将胰腺分割与风险分类结合为自动流水线，但模型架构较为常规。",
+      "• 实盘坑: 与金融量化完全无关，无法直接应用于交易或风险管理。",
+      "• 复现难度: 需要医学影像数据和专业标注，金融领域无法复现。",
+      "• 适用性: 仅适用于临床决策，无金融alpha潜力。",
+      "• 评分理由: 非金融领域，技术深度一般，评分低。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2605.31535v1",
+    "title": "RayDer: Scalable Self-Supervised Novel View Synthesis from Real-World Video",
+    "pdf_url": "https://arxiv.org/pdf/2605.31535v1",
+    "published": "2026-05-29",
+    "crawled_at": "2026-06-01 22:27:19",
+    "ai_score": 8.5,
+    "translated_title": "RayDer: 从真实世界视频中可扩展的自监督新视角合成",
+    "summary_en": "• Model Architecture: RayDer is a unified feed-forward transformer that integrates camera estimation, scene reconstruction, and rendering into a single backbone, treating dynamic content as a nuisance factor to stabilize training on real-world video.\n• Data used: The model is trained on large-scale unconstrained real-world video data, leveraging dynamic content as scalable supervision without requiring ground-truth camera poses or static scenes.\n• Performance metrics: RayDer exhibits clean power-law scaling with data and compute, and achieves strong zero-shot open-set performance competitive with state-of-the-art supervised approaches on multiple benchmarks.",
+    "summary_cn": "• 核心模型: RayDer 是一个统一的单向变压器，将相机估计、场景重建和渲染整合到一个主干网络中，将动态内容视为干扰因素以稳定训练。\n• 数据来源: 使用大规模无约束的真实世界视频数据，利用动态内容作为可扩展的监督信号，无需真实相机位姿或静态场景。\n• 主要结论: 模型在数据和计算量上呈现清晰的幂律缩放，并在多个基准测试中实现与监督方法竞争的零样本开放集性能。",
+    "verdict_en": "• Alpha Potential: High, as self-supervised NVS from video can enable novel view synthesis for financial data visualization or surveillance, but direct trading alpha is limited.\n• Implementation Risk: Medium, due to the complexity of training on real-world video and the need for large-scale compute resources.\n• Novelty: High, unifying multiple tasks into a single transformer and demonstrating scaling laws for self-supervised NVS is a significant contribution.",
+    "verdict_cn": "• 创新点: 将相机估计、场景重建和渲染统一到一个变压器中，并展示自监督NVS的缩放规律，具有较高创新性。\n• 实盘坑: 直接应用于金融交易场景有限，更多适用于视觉数据增强或监控，且训练成本高。\n• 复现难度: 中等，需要大规模视频数据和计算资源，但模型架构相对清晰。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2605.30350v1",
     "title": "DynaFLIP: Rethinking Robotics Perception via Tri-Modal-Dynamics Guided Representation",
     "pdf_url": "https://arxiv.org/pdf/2605.30350v1",
