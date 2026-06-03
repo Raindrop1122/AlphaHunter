@@ -1,5 +1,256 @@
 [
   {
+    "id": "2606.03990v1",
+    "title": "Neuron Populations Exhibit Divergent Selectivity with Scale",
+    "pdf_url": "https://arxiv.org/pdf/2606.03990v1",
+    "published": "2026-06-02",
+    "crawled_at": "2026-06-03 22:18:39",
+    "ai_score": 7.5,
+    "translated_title": "神经元群体随规模表现出不同的选择性",
+    "summary_en": "• Model Architecture: Analyzes neuron populations in language models up to 30B parameters and vision models up to 5B parameters, focusing on Rosetta Neurons.\n• Data used: Pretrained models from diverse sources; no specific dataset mentioned for training, but uses activation patterns across independently trained models.\n• Performance metrics: Measures Rosetta Neuron count, fraction of total neurons, selectivity (monosemanticity), and domain specialization as functions of model scale.",
+    "summary_cn": "• 核心模型: 分析高达30B参数的语言模型和5B参数的视觉模型中的Rosetta神经元群体。\n• 数据来源: 使用多个独立训练的预训练模型，未指定具体训练数据集。\n• 主要结论: Rosetta神经元数量随模型规模呈亚线性幂律增长，但占比下降；出现神经元极化效应，Rosetta神经元选择性增强，非Rosetta神经元保持低选择性。",
+    "verdict_en": "• Alpha Potential: Low direct alpha; insights into neuron scaling may inform model interpretability and feature engineering for NLP/LLM strategies.\n• Implementation Risk: High; requires access to large-scale models and activation data; results are observational, not causal.\n• Novelty: Moderate; extends scaling laws to neuron-level interpretability, but builds on existing Rosetta Neuron concept.",
+    "verdict_cn": "• 创新点: 将缩放定律从宏观损失扩展到神经元层面的可解释性，提出神经元极化效应。\n• 实盘坑: 直接交易信号弱，需大量计算资源复现，且结论基于观测而非因果。\n• 复现难度: 高，需要训练或获取多个大规模模型并分析激活模式。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.03980v1",
+    "title": "Skill-RM: Unifying Heterogeneous Evaluation Criteria via Agent Skill",
+    "pdf_url": "https://arxiv.org/pdf/2606.03980v1",
+    "published": "2026-06-02",
+    "crawled_at": "2026-06-03 22:18:45",
+    "ai_score": 7.5,
+    "translated_title": "技能奖励模型：通过智能体技能统一异构评估标准",
+    "summary_en": [
+      "• Model Architecture: Proposes Skill-RM, a unified framework that reformulates reward modeling as execution of a reusable Reward-Evaluation Skill, using a structured agentic task to orchestrate heterogeneous resources.",
+      "• Data used: Utilizes diverse evaluation criteria including rule-based verifiers, ground-truth references, procedural checklists, and complex rubrics; experiments conducted on reward benchmarks and downstream tasks.",
+      "• Performance metrics: Consistently outperforms traditional judge baselines in best-of-N selection and reinforcement learning tasks, demonstrating superior performance through dynamic evidence orchestration."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出Skill-RM，将奖励建模重构为可复用的奖励评估技能执行，通过结构化智能体任务编排异构资源。",
+      "• 数据来源: 使用基于规则的验证器、真实参考、程序化检查表和复杂评分标准等多种评估标准，在奖励基准和下游任务上实验。",
+      "• 主要结论: 在最佳N选和强化学习中持续优于传统评判基线，通过动态证据编排实现更优性能。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; improves reward modeling for LLM alignment, which is crucial for downstream trading strategies using LLMs, but indirect for alpha generation.",
+      "• Implementation Risk: Low to moderate; code is open-source, but integration into existing RL pipelines requires engineering effort.",
+      "• Novelty: High; unifies heterogeneous evaluation criteria under a single agentic framework, addressing a key gap in reward modeling."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将异构评估标准统一为智能体技能框架，填补了奖励建模中的空白。",
+      "• 实盘坑: 对LLM对齐有提升，但直接用于量化交易需额外适配，且动态编排可能增加推理延迟。",
+      "• 复现难度: 中等；代码开源，但需理解其智能体架构并调整至特定任务。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.03979v1",
+    "title": "Language Models Need Sleep: Learning to Self-Modify and Consolidate Memories",
+    "pdf_url": "https://arxiv.org/pdf/2606.03979v1",
+    "published": "2026-06-02",
+    "crawled_at": "2026-06-03 22:18:52",
+    "ai_score": 6.5,
+    "translated_title": "语言模型需要睡眠：学习自我修改和巩固记忆",
+    "summary_en": "• Model Architecture: Proposes a 'Sleep' paradigm with two stages: Memory Consolidation (Knowledge Seeding via on-policy distillation and RL-based imitation learning) and Dreaming (self-improvement using RL-generated synthetic data).\n• Data used: Experiments on long-horizon, continual learning, knowledge incorporation, and few-shot generalization tasks; no specific dataset named.\n• Performance metrics: Demonstrates improved performance in continual learning and knowledge retention compared to baselines, but lacks quantitative metrics like accuracy or F1.\n• Key finding: Sleep stage enables models to distill short-term memories into long-term parameters and self-improve without human supervision.",
+    "summary_cn": "• 核心模型: 提出“睡眠”范式，包括记忆巩固（通过在线蒸馏和基于强化学习的模仿学习进行知识播种）和梦境（使用强化学习生成的合成数据进行自我改进）。\n• 数据来源: 在长期任务、持续学习、知识整合和少样本泛化任务上进行实验，未指定具体数据集。\n• 主要结论: 睡眠阶段使模型能够将短期记忆蒸馏为长期参数，并在无人类监督下自我改进。\n• 性能指标: 相比基线在持续学习和知识保留上有所提升，但缺乏定量指标如准确率或F1分数。",
+    "verdict_en": "• Alpha Potential: Low; the paper focuses on LLM training methodology, not financial prediction or trading.\n• Implementation Risk: High; requires complex multi-stage training with RL and distillation, computationally expensive.\n• Novelty: Moderate; draws inspiration from human sleep but similar ideas exist in continual learning literature.\n• Practicality: Unclear for finance; may improve model adaptation but no direct trading application.",
+    "verdict_cn": "• 创新点: 受人类睡眠启发，但持续学习领域已有类似概念，创新性中等。\n• 实盘坑: 训练流程复杂，涉及强化学习和蒸馏，计算成本高，且未验证金融场景有效性。\n• 复现难度: 高；需要精细调参和多阶段训练，代码未开源。\n• 金融价值: 低；主要针对LLM训练，无直接量化交易应用。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.03976v1",
+    "title": "Formalizing the Binding Problem",
+    "pdf_url": "https://arxiv.org/pdf/2606.03976v1",
+    "published": "2026-06-02",
+    "crawled_at": "2026-06-03 22:18:58",
+    "ai_score": 7.5,
+    "translated_title": "形式化绑定问题",
+    "summary_en": "• Model Architecture: Vision Transformers (ViTs) are the primary models analyzed, with probing applied to components like [CLS] token and spatial tokens.\n• Data used: Datasets designed to test binding challenges, including feature sharing, occlusion, and natural features.\n• Performance metrics: Binding information is measured via an information-theoretic probing method, comparing different pre-trained ViTs.\n• Key finding: Binding information is crucial for strong visual recognition and reasoning, but current ViTs often fail in complex scenes.",
+    "summary_cn": "• 核心模型: 主要分析Vision Transformers (ViTs)，对[CLS]标记和空间标记等组件进行探测。\n• 数据来源: 使用专门设计的数据集，包含特征共享、遮挡和自然特征等绑定挑战。\n• 主要结论: 绑定信息对强视觉识别和推理至关重要，但当前ViT在复杂场景中常失败。\n• 方法创新: 提出信息论探测方法量化绑定信息。",
+    "verdict_en": "• Alpha Potential: Low direct alpha; more relevant for improving model architectures that could indirectly benefit quantitative analysis.\n• Implementation Risk: High; requires deep understanding of ViT internals and custom probing methods.\n• Novelty: Moderate; formalizes binding problem but builds on existing work on ViT feature binding.",
+    "verdict_cn": "• 创新点: 形式化绑定问题并提出信息论探测方法，但基于现有ViT研究。\n• 实盘坑: 直接交易信号弱，需转化为模型改进才可能产生alpha。\n• 复现难度: 高，需深入ViT内部机制和定制探测代码。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.03962v1",
+    "title": "Using Reward Uncertainty to Induce Diverse Behaviour in Reinforcement Learning",
+    "pdf_url": "https://arxiv.org/pdf/2606.03962v1",
+    "published": "2026-06-02",
+    "crawled_at": "2026-06-03 22:19:04",
+    "ai_score": 7.5,
+    "translated_title": "利用奖励不确定性诱导强化学习中的多样化行为",
+    "summary_en": "• Model Architecture: Proposes a reformulation of RL objective by replacing scalar reward with a distribution over reward functions, using a non-linear objective over sets of actions. Derives a principled gradient estimator for contextual bandit setting.\n• Data used: Not specified; likely standard RL benchmarks or synthetic environments.\n• Performance metrics: Empirical results show robust diversity without sacrificing expected reward, compared to entropy regularization and diversity bonuses.",
+    "summary_cn": "• 核心模型: 将标量奖励替换为奖励函数分布，对动作集应用非线性目标，重新定义RL目标函数。在上下文赌博机设置中推导出梯度估计器。\n• 数据来源: 未明确说明，可能使用标准RL基准或合成环境。\n• 主要结论: 该方法在不牺牲期望奖励的前提下自然产生校准的行为多样性，优于熵正则化和多样性奖励方法。",
+    "verdict_en": "• Alpha Potential: Moderate; diversity in RL can improve exploration and robustness, but direct trading alpha is unclear.\n• Implementation Risk: High; requires modeling reward distribution and non-linear objectives, computationally intensive.\n• Novelty: High; reformulates RL objective from a reward uncertainty perspective, theoretically grounded.",
+    "verdict_cn": "• 创新点: 从奖励不确定性角度重新定义RL目标，理论新颖，避免了传统多样性方法的权衡。\n• 实盘坑: 计算复杂度高，奖励分布建模困难，在金融场景中应用需谨慎。\n• 复现难度: 高；需要深度RL背景，且缺乏标准实现细节。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.03954v1",
+    "title": "VLESA: Vision-Language Embodied Safety Agent for Human Activity Monitoring",
+    "pdf_url": "https://arxiv.org/pdf/2606.03954v1",
+    "published": "2026-06-02",
+    "crawled_at": "2026-06-03 22:19:10",
+    "ai_score": 7.5,
+    "translated_title": "VLESA：用于人类活动监测的视觉语言具身安全智能体",
+    "summary_en": [
+      "• Model Architecture: VLESA combines a vision-language model with a goal-conditioned safety Q-filter trained via GRPO, and an intent-action prediction agent for joint inference of goals and future actions.",
+      "• Data used: A dataset pairing egocentric video frames with goal-conditioned safety annotations is introduced; evaluation is performed on the ASIMOV-2.0 benchmark.",
+      "• Performance metrics: Achieves higher intervention accuracy at the exact ground-truth frame; GRPO-trained Q-filter improves action safety by over 41 percentage points through goal-conditioned constrained decoding."
+    ],
+    "summary_cn": [
+      "• 核心模型：VLESA结合视觉语言模型与基于GRPO训练的目标条件安全Q滤波器，以及意图-动作预测智能体，联合推断目标与未来动作。",
+      "• 数据来源：引入配对第一人称视频帧与目标条件安全标注的数据集；在ASIMOV-2.0基准上评估。",
+      "• 主要结论：在精确真实帧上实现更高干预准确率；GRPO训练的Q滤波器通过目标条件约束解码将动作安全性提升超过41个百分点。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low for direct financial trading; more relevant to robotics safety and human activity monitoring in industrial settings.",
+      "• Implementation Risk: High due to reliance on egocentric video and real-time intervention; domain-specific data requirements limit broad applicability.",
+      "• Novelty: Moderate; combines existing techniques (GRPO, VLM) in a novel safety framework, but not groundbreaking for quantitative finance."
+    ],
+    "verdict_cn": [
+      "• 创新点：将GRPO与视觉语言模型结合用于安全监测，但金融领域应用有限。",
+      "• 实盘坑：依赖第一人称视频和实时干预，数据获取成本高，难以直接用于交易策略。",
+      "• 复现难度：中等，需要特定数据集和硬件支持，但代码已开源。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.03946v1",
+    "title": "MLSkip: Data Skipping for ML Filters via Lightweight Metadata",
+    "pdf_url": "https://arxiv.org/pdf/2606.03946v1",
+    "published": "2026-06-02",
+    "crawled_at": "2026-06-03 22:19:17",
+    "ai_score": 6.5,
+    "translated_title": "MLSkip：通过轻量级元数据实现机器学习过滤器的数据跳过",
+    "summary_en": [
+      "• Proposes a data skipping technique for ML filter predicates using Parquet's min-max metadata.",
+      "• Connects to neural network verification and query languages for ML models to enable pruning.",
+      "• Evaluated on TPC-H and TPC-DS tables with ReLU architectures, achieving 27.4% pruning effectiveness for filters with selectivity below 0.1%.",
+      "• Introduces a size-bounded 2D convex hull metadata structure, improving pruning effectiveness to 38.31% with only 45 bytes overhead per row group and column pair.",
+      "• Reports an end-to-end speedup of 1.07x over PyTorch in DuckDB."
+    ],
+    "summary_cn": [
+      "• 核心模型: 利用Parquet默认的min-max元数据，结合神经网络验证技术，实现ML过滤器的数据跳过。",
+      "• 数据来源: TPC-H和TPC-DS基准测试表，使用ReLU架构的ML模型。",
+      "• 主要结论: 对于选择性低于0.1%的过滤器，平均剪枝有效率达27.4%；引入2D凸包元数据后提升至38.31%，额外开销仅45字节。",
+      "• 性能提升: 在DuckDB中相比PyTorch实现1.07倍端到端加速。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low; focuses on database optimization rather than trading signals.",
+      "• Implementation Risk: Moderate; requires integration with ML model verification and Parquet metadata.",
+      "• Novelty: Moderate; combines existing ideas (min-max, convex hull) with ML verification in a novel application.",
+      "• Practicality: Limited to databases with ML filter predicates; not directly applicable to quantitative finance."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将数据跳过技术扩展到ML过滤器，利用神经网络验证实现剪枝，思路新颖。",
+      "• 实盘坑: 主要针对数据库查询优化，与量化交易策略无直接关联，alpha潜力低。",
+      "• 复现难度: 中等，需集成ML模型验证工具和Parquet元数据修改，但代码可能开源。",
+      "• 适用性: 仅适用于支持ML过滤器的数据库场景，非通用量化技术。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.03940v1",
+    "title": "SEAOTTER: Sensor Embedded Autoencoding with One-Time Transcode for Efficient Reconstruction",
+    "pdf_url": "https://arxiv.org/pdf/2606.03940v1",
+    "published": "2026-06-02",
+    "crawled_at": "2026-06-03 22:19:23",
+    "ai_score": 7.5,
+    "translated_title": "SEAOTTER：传感器嵌入式自编码器与一次性转码实现高效重建",
+    "summary_en": "• Model Architecture: SEAOTTER combines a sensor-embedded autoencoder with a learnable JPEG color and quantization transform for one-time transcoding, enabling efficient compression while maintaining JPEG compatibility.\n• Data used: The framework is trained on ImageNet for general-purpose perception tasks and evaluated on global, dense, and vision-language-based perception benchmarks.\n• Performance metrics: At 200:1 compression ratio, SEAOTTER achieves 7x faster encoding, 3.5x faster decoding, and +8% ImageNet top-1 accuracy compared to AVIF.",
+    "summary_cn": "• 核心模型: SEAOTTER采用传感器嵌入式自编码器与可学习的JPEG颜色和量化变换，实现一次性转码，在保持JPEG兼容性的同时高效压缩。\n• 数据来源: 在ImageNet上训练通用感知任务，并在全局、密集和视觉语言感知基准上评估。\n• 主要结论: 在200:1压缩比下，相比AVIF，编码速度提升7倍，解码速度提升3.5倍，ImageNet top-1准确率提升8%。",
+    "verdict_en": "• Alpha Potential: Low direct alpha; the framework improves cloud robotics efficiency but not directly applicable to financial trading.\n• Implementation Risk: High; requires custom hardware integration and retraining for specific tasks, limiting immediate deployment.\n• Novelty: Moderate; combines learned autoencoders with standard JPEG codec, offering practical benefits for bandwidth-constrained systems.",
+    "verdict_cn": "• 创新点: 将学习型自编码器与标准JPEG编解码器结合，在保持兼容性的同时提升压缩效率，实用性强。\n• 实盘坑: 直接金融应用价值低，主要面向机器人云系统，硬件集成和任务重训练成本高。\n• 复现难度: 中等；代码已开源，但需要特定硬件和数据集支持。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.03939v1",
+    "title": "FlashbackCL: Mitigating Temporal Forgetting in Federated Learning",
+    "pdf_url": "https://arxiv.org/pdf/2606.03939v1",
+    "published": "2026-06-02",
+    "crawled_at": "2026-06-03 22:19:30",
+    "ai_score": 7.5,
+    "translated_title": "FlashbackCL：缓解联邦学习中的时间遗忘",
+    "summary_en": [
+      "• Model Architecture: FlashbackCL extends Flashback with temporally-decayed label counts, a device-aware replay buffer using Class-Balanced Reservoir Sampling (CBRS), and server-side active coreset curation on a public distillation set.",
+      "• Data used: Evaluated on CIFAR-10 with 50 clients under three controlled temporal shift modes, and on stationary CIFAR-100.",
+      "• Performance metrics: Achieves 6.9% to 10.0% relative improvement over Flashback on CIFAR-10, reduces temporal forgetting by up to 68%, and improves Flashback by 3.5 points on stationary CIFAR-100.",
+      "• Ablation study: CBRS replay is identified as the critical component for mitigating temporal forgetting."
+    ],
+    "summary_cn": [
+      "• 核心模型: FlashbackCL在Flashback基础上引入时间衰减标签计数、设备感知重放缓冲区（CBRS）和服务器端主动核心集筛选。",
+      "• 数据来源: 使用CIFAR-10（50个客户端，三种时间偏移模式）和静态CIFAR-100进行评测。",
+      "• 主要结论: 相比Flashback，在CIFAR-10上相对提升6.9%-10.0%，时间遗忘减少68%，在静态CIFAR-100上提升3.5个点。",
+      "• 消融实验: CBRS重放是缓解时间遗忘的关键组件。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; addresses temporal forgetting in federated learning, which is relevant for real-world deployment but not directly a trading alpha.",
+      "• Implementation Risk: Low to moderate; FlashbackCL is a drop-in extension of Flashback, but requires careful tuning of decay rates and replay buffer size.",
+      "• Novelty: High; formalizes temporal forgetting in FL and proposes a practical solution with strong empirical results."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次形式化联邦学习中的时间遗忘问题，并提出实用解决方案，实验效果显著。",
+      "• 实盘坑: 时间衰减参数和重放缓冲区大小需精细调参，且依赖公开蒸馏集，实际部署可能受限。",
+      "• 复现难度: 中等；基于Flashback扩展，代码可能开源，但需要处理客户端数据偏移的模拟。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.03938v1",
+    "title": "q0: Primitives for Hyper-Epoch Pretraining",
+    "pdf_url": "https://arxiv.org/pdf/2606.03938v1",
+    "published": "2026-06-02",
+    "crawled_at": "2026-06-03 22:19:37",
+    "ai_score": 8.5,
+    "translated_title": "q0：超周期预训练的原语",
+    "summary_en": "• Model Architecture: Introduces hyper-epoch pretraining (q0) with three primitives: a cyclic schedule with anti-correlated learning rate and weight decay, chain distillation, and a learned prior for model selection and weighting.\n• Data used: Trained on 100M tokens from FineWeb dataset with a 1.8B-parameter model.\n• Performance metrics: Matches a 256-epoch ensemble baseline using ~56 epochs (4.6× fewer), or ~67 epochs (3.8× fewer) when matched to ensemble size; achieves ~12.9× data efficiency under Slowrun setting; transfers to downstream benchmarks.",
+    "summary_cn": "• 核心模型: 提出超周期预训练（q0），包含三个原语：反相关学习率和权重衰减的循环调度、链式蒸馏、以及用于模型选择和加权的学习先验。\n• 数据来源: 使用FineWeb数据集的1亿个token训练1.8B参数模型。\n• 主要结论: 以约56个epoch（减少4.6倍）匹配256个epoch的集成基线，或约67个epoch（减少3.8倍）匹配集成规模；在Slowrun设置下实现约12.9倍数据效率；可迁移至下游基准。",
+    "verdict_en": "• Alpha Potential: High; offers significant data efficiency gains, which is crucial for compute-limited scenarios; ensemble-like performance with fewer epochs can improve model generalization.\n• Implementation Risk: Moderate; requires careful tuning of cyclic schedule and distillation; learned prior adds complexity; may not scale linearly with model size.\n• Novelty: High; introduces a new paradigm of hyper-epoch pretraining with practical primitives; shifts focus from single model to population of models.",
+    "verdict_cn": "• 创新点: 提出超周期预训练新范式，通过循环调度和链式蒸馏实现高效集成，数据效率提升显著。\n• 实盘坑: 循环调度和蒸馏的超参数敏感，学习先验需要额外验证集；大规模模型上的效果待验证。\n• 复现难度: 中等；需要实现三个原语并协调训练流程，但论文提供了详细描述。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2605.31596v1",
     "title": "KLIP: localized distribution shift detection via KL-divergence with diffusion priors in Inverse Problems",
     "pdf_url": "https://arxiv.org/pdf/2605.31596v1",
