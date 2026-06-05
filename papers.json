@@ -1,5 +1,256 @@
 [
   {
+    "id": "2606.06494v1",
+    "title": "TailLoR: Protecting Principal Components in Parameter-Efficient Continual Learning",
+    "pdf_url": "https://arxiv.org/pdf/2606.06494v1",
+    "published": "2026-06-04",
+    "crawled_at": "2026-06-05 21:12:53",
+    "ai_score": 7.5,
+    "translated_title": "TailLoR：在参数高效持续学习中保护主成分",
+    "summary_en": "• Model Architecture: TailLoR uses singular bases U and V of pre-trained weights as a fixed reference frame, learning low-rank updates on the singular value matrix with a soft spectral penalty to discourage alignment with dominant singular directions.\n• Data used: The method is evaluated on standard continual learning benchmarks (e.g., Split CIFAR-100, Split ImageNet) using pre-trained vision transformers.\n• Performance metrics: Metrics include average accuracy, forgetting, and forward/backward transfer, showing improved performance over baselines like LoRA and EWC.",
+    "summary_cn": "• 核心模型: TailLoR利用预训练权重的奇异基U和V作为固定参考系，在奇异值矩阵上学习低秩更新，并通过软谱惩罚抑制与主导奇异方向的对齐。\n• 数据来源: 在标准持续学习基准（如Split CIFAR-100、Split ImageNet）上评估，使用预训练视觉Transformer。\n• 主要结论: 在平均准确率、遗忘率和前向/后向迁移等指标上优于LoRA和EWC等基线方法。",
+    "verdict_en": "• Alpha Potential: Moderate; continual learning is niche but relevant for adaptive trading models; spectral protection may reduce catastrophic forgetting in sequential tasks.\n• Implementation Risk: High; requires careful tuning of spectral penalty and low-rank updates; computational overhead from SVD decomposition.\n• Novelty: High; introduces a novel spectral regularization approach for parameter-efficient continual learning, distinct from prior methods.",
+    "verdict_cn": "• 创新点: 提出谱正则化方法保护主成分，在参数高效持续学习中具有新颖性。\n• 实盘坑: 谱惩罚超参数敏感，SVD分解计算开销大，可能不适合高频交易场景。\n• 复现难度: 中等；需要预训练模型和奇异值分解实现，但算法逻辑清晰。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.06493v1",
+    "title": "HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers",
+    "pdf_url": "https://arxiv.org/pdf/2606.06493v1",
+    "published": "2026-06-04",
+    "crawled_at": "2026-06-05 21:13:01",
+    "ai_score": 6.5,
+    "translated_title": "HANDOFF: 通过蒸馏互补教师实现的人形机器人自主任务空间全身控制",
+    "summary_en": "• Model Architecture: A single whole-body controller for humanoid robots using a compact, explicit task-space interface, distilled via multi-teacher KL divergence into a mixture-of-experts student from three complementary specialists: whole-body motion tracking with safety-filtered data, locomotion, and fall-recovery.\n• Data used: Safety-filtered data for whole-body motion tracking, locomotion data, and fall-recovery data; no task-specific data required for downstream tasks.\n• Performance metrics: Matches state-of-the-art velocity tracking on Unitree G1; offers one of the largest robust manipulation workspaces; demonstrated hardware feasibility through multiple natural-language-driven task roll-outs powered by a VLM-driven agentic planner.",
+    "summary_cn": "• 核心模型: 采用紧凑显式任务空间接口的单一全身控制器，通过多教师KL散度蒸馏为混合专家学生模型，整合三个互补专家：安全过滤数据下的全身运动跟踪、行走和跌倒恢复。\n• 数据来源: 使用安全过滤的全身运动数据、行走数据和跌倒恢复数据；下游任务无需特定任务数据。\n• 主要结论: 在Unitree G1上匹配最先进的速率跟踪；提供最大的鲁棒操作工作空间之一；通过VLM驱动的自主规划器实现多个自然语言驱动任务，验证了硬件可行性。",
+    "verdict_en": "• Alpha Potential: Low for financial trading; paper focuses on robotics control, not quantitative finance.\n• Implementation Risk: High; requires specialized hardware (humanoid robot) and robotics expertise, not applicable to financial systems.\n• Novelty: Moderate; introduces a novel distillation method for whole-body control but lacks financial relevance.",
+    "verdict_cn": "• 创新点: 提出了一种新颖的蒸馏方法用于全身控制，但金融领域无直接应用。\n• 实盘坑: 需要人形机器人硬件和机器人学专业知识，无法直接用于金融交易系统。\n• 复现难度: 高；依赖特定机器人平台和大量工程实现。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.06486v1",
+    "title": "Regret Minimization with Adaptive Opponents in Repeated Games",
+    "pdf_url": "https://arxiv.org/pdf/2606.06486v1",
+    "published": "2026-06-04",
+    "crawled_at": "2026-06-05 21:13:09",
+    "ai_score": 7.5,
+    "translated_title": "自适应对手重复博弈中的遗憾最小化",
+    "summary_en": "• Introduces Repeated Policy Regret (RP-Regret), a new metric for repeated games with adaptive opponents, measuring the difference between realized and best-in-hindsight utility when all players can respond to history.\n• Identifies necessary conditions for sublinear RP-Regret, including variation of comparator strategies and memory constraints of both comparator and opponents.\n• Proposes three algorithms: optimization oracle-based, convex linearized surrogate minimization, and direct minimization under slow opponent changes.\n• Shows that when all players minimize RP-Regret (or its linearized variant), certain subgame perfect equilibria can be learned.\n• Experiments on Stag-Hunt game demonstrate that minimizing RP-Regret leads to more cooperative solutions with higher utility.",
+    "summary_cn": "• 核心模型: 提出重复策略遗憾（RP-Regret），一种针对自适应对手重复博弈的新指标，衡量所有玩家能响应历史时实际效用与事后最优效用之差。\n• 数据来源: 理论分析，无特定数据集；实验使用Stag-Hunt博弈。\n• 主要结论: 识别了实现次线性RP-Regret的必要条件，包括比较器策略变化和记忆约束；提出三种算法；所有玩家最小化RP-Regret可学习子博弈完美均衡；实验显示可促进合作。",
+    "verdict_en": "• Alpha Potential: Moderate; the framework could lead to more cooperative strategies in repeated games, potentially applicable to algorithmic trading or market making where adaptive opponents exist.\n• Implementation Risk: High; algorithms rely on optimization oracles or convex surrogates, and non-convex nature makes practical deployment challenging.\n• Novelty: High; introduces a new regret metric native to repeated games with adaptive opponents, addressing limitations of external regret.",
+    "verdict_cn": "• 创新点: 提出RP-Regret指标，弥补了外部遗憾在自适应对手场景下的不足，理论分析扎实。\n• 实盘坑: 算法复杂度高，非凸优化问题难以直接应用；需要对手策略缓慢变化等假设，实际市场可能不满足。\n• 复现难度: 高；依赖优化或acles或线性化代理，实验仅限简单博弈，复现需大量调参。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2606.06481v1",
+    "title": "Operation-Guided Progressive Human-to-AI Text Transformation Benchmark for Multi-Granularity AI-Text Detection",
+    "pdf_url": "https://arxiv.org/pdf/2606.06481v1",
+    "published": "2026-06-04",
+    "crawled_at": "2026-06-05 21:13:18",
+    "ai_score": 8.5,
+    "translated_title": "操作引导的渐进式人机文本转换基准：面向多粒度AI文本检测",
+    "summary_en": [
+      "• Model Architecture: Proposes OpAI-Bench, a benchmark with nine sequentially revised versions per human-written document under predefined AI coverage levels and five AI edit operations (e.g., insertion, rewriting).",
+      "• Data used: Covers four domains (e.g., news, essays) with complete authorship provenance at document, sentence, token, and span granularities.",
+      "• Performance metrics: Evaluates 8 document-level, 7 sentence-level, and 2 token/span-level detectors; reveals non-monotonic detection patterns where mixed-authorship intermediate versions are harder to detect than endpoints.",
+      "• Key finding: AI-text detectability depends on edit operation, domain, and cumulative revision history, not just AI proportion."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出OpAI-Bench基准，对每篇人类撰写文档构建9个渐进修订版本，覆盖5种AI编辑操作（如插入、重写）和不同AI覆盖率。",
+      "• 数据来源: 涵盖新闻、论文等4个领域，在文档、句子、词元、跨度粒度保留完整作者归属。",
+      "• 主要结论: AI文本可检测性不仅取决于AI编辑比例，还受编辑操作、领域和累积修订历史影响；混合作者中间版本比纯人类或高度AI编辑版本更难检测。",
+      "• 性能指标: 评估8个文档级、7个句子级和2个细粒度检测器，揭示非单调检测模式。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for NLP/LLM strategies requiring robust AI-text detection in evolving co-editing scenarios; provides granular labels for training adaptive detectors.",
+      "• Implementation Risk: Medium; benchmark is controlled and may not fully capture real-world editing diversity; detectors may overfit to specific operations.",
+      "• Novelty: High; first benchmark to model progressive human-AI co-editing with multi-granularity provenance, exposing non-monotonic detection patterns."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次构建渐进式人机协同编辑基准，多粒度标注揭示非单调检测模式，对AI文本检测研究有重要推动。",
+      "• 实盘坑: 基准编辑操作有限（5种），真实场景编辑更复杂；检测器可能过拟合特定操作，泛化性存疑。",
+      "• 复现难度: 中等；代码和数据公开，但构建9个版本需大量人工标注，复现成本较高。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.06480v1",
+    "title": "DNQ: Deep Nash Q-Network for Partially Observable n-Player Games",
+    "pdf_url": "https://arxiv.org/pdf/2606.06480v1",
+    "published": "2026-06-04",
+    "crawled_at": "2026-06-05 21:13:26",
+    "ai_score": 7.5,
+    "translated_title": "深度纳什Q网络：用于部分可观测n人博弈的深度强化学习框架",
+    "summary_en": [
+      "• Model Architecture: DNQ alternates between trajectory collection, critic-based payoff estimation, equilibrium computation, and policy imitation, using a shared critic to predict payoff matrices/tensors and an external solver for equilibrium strategies.",
+      "• Data used: Synthetic data from multi-turn simultaneous bidding environments with varying numbers of agents and resource constraints.",
+      "• Performance metrics: Critic loss, policy entropy, bidding resource usage, and training cost are compared between pairwise and exact formulations.",
+      "• Key result: Pairwise formulation scales to larger numbers of agents, while exact method becomes computationally impractical as joint game grows."
+    ],
+    "summary_cn": [
+      "• 核心模型: DNQ框架交替进行轨迹收集、基于评论家的收益估计、均衡计算和策略模仿，使用共享评论家预测收益矩阵/张量，外部求解器计算均衡策略。",
+      "• 数据来源: 合成数据，来自多轮同时竞标环境，代理数量可变，资源约束不同。",
+      "• 主要结论: 成对公式可扩展到更多代理，而精确公式在联合博弈增大时计算上不可行。",
+      "• 性能指标: 评论家损失、策略熵、竞标资源使用和训练成本在成对和精确公式间比较。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; applicable to competitive bidding and resource allocation, but synthetic environment limits direct trading alpha.",
+      "• Implementation Risk: High; requires custom equilibrium solver and careful tuning of critic network; pairwise approximation may miss strategic nuances.",
+      "• Novelty: Moderate; combines deep Q-learning with equilibrium computation, but similar ideas exist in multi-agent RL literature."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将深度Q学习与均衡计算结合，提出成对近似以提升可扩展性。",
+      "• 实盘坑: 合成环境与真实市场差异大，均衡求解器可能不稳定，成对近似可能遗漏关键策略。",
+      "• 复现难度: 高，需要实现多智能体模拟、评论家网络和外部求解器，调参复杂。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.06479v1",
+    "title": "Pretraining Recurrent Networks without Recurrence",
+    "pdf_url": "https://arxiv.org/pdf/2606.06479v1",
+    "published": "2026-06-04",
+    "crawled_at": "2026-06-05 21:13:32",
+    "ai_score": 7.5,
+    "translated_title": "无循环预训练循环网络",
+    "summary_en": "• Model Architecture: Proposes Supervised Memory Training (SMT) that trains nonlinear RNNs by reducing to supervised learning on one-step memory transition labels, using a Transformer-based encoder to generate labels.\n• Data used: Evaluated on language modeling and pixel sequence modeling tasks.\n• Performance metrics: Outperforms BPTT in capturing long-range dependencies and enables time-parallel training with stable O(1) gradient path length.",
+    "summary_cn": "• 核心模型: 提出监督记忆训练（SMT），通过将RNN训练简化为一步记忆转换标签的监督学习，并使用基于Transformer的编码器生成标签。\n• 数据来源: 在语言建模和像素序列建模任务上评估。\n• 主要结论: 在捕捉长程依赖方面优于BPTT，并实现时间并行训练，梯度路径长度稳定为O(1)。",
+    "verdict_en": "• Alpha Potential: Moderate; improved long-range dependency capture could benefit time-series forecasting in finance, but direct applicability to alpha generation is unclear.\n• Implementation Risk: High; requires training a Transformer encoder to generate memory labels, adding complexity and computational overhead.\n• Novelty: High; decouples what to remember from how to update memory, offering a new paradigm for RNN training.",
+    "verdict_cn": "• 创新点: 将记忆内容与更新方式解耦，为RNN训练提供新范式。\n• 实盘坑: 需要额外训练Transformer编码器，增加复杂度和计算成本，金融时序数据中长程依赖的实际收益可能有限。\n• 复现难度: 中等偏高；需精细调参，且对数据规模有一定要求。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.06475v1",
+    "title": "RREDCoT: Segment-Level Reward Redistribution for Reasoning Models",
+    "pdf_url": "https://arxiv.org/pdf/2606.06475v1",
+    "published": "2026-06-04",
+    "crawled_at": "2026-06-05 21:13:40",
+    "ai_score": 6.5,
+    "translated_title": "RREDCoT：基于段级奖励再分配的推理模型",
+    "summary_en": [
+      "• Model Architecture: RREDCoT uses the model itself to approximate optimal reward redistribution for Chain-of-Thought traces, avoiding additional generation overhead.",
+      "• Data used: The method is evaluated on reasoning tasks, likely using datasets like GSM8K or MATH, though not explicitly specified.",
+      "• Performance metrics: The paper compares RREDCoT against Monte Carlo sampling and attribution methods, showing reduced variance and improved training efficiency.",
+      "• Key finding: Segment-level credit assignment via self-attribution can mitigate delayed reward issues in GRPO-based RL fine-tuning."
+    ],
+    "summary_cn": [
+      "• 核心模型: RREDCoT利用模型自身近似最优奖励再分配，无需额外生成，降低计算开销。",
+      "• 数据来源: 在推理任务（如数学问题）上评估，具体数据集未明确。",
+      "• 主要结论: 通过段级信用分配，有效降低GRPO算法中延迟奖励问题带来的方差，提升训练效率。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; improved RL fine-tuning for reasoning models could enhance LLM-based trading agents, but direct alpha is limited.",
+      "• Implementation Risk: High; requires careful segmentation of CoT traces and stable self-attribution, which may be brittle in practice.",
+      "• Novelty: Moderate; combines existing ideas of reward redistribution with self-attribution, but the specific application to CoT is new."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将奖励再分配与自注意力结合，针对CoT延迟奖励问题提出新思路。",
+      "• 实盘坑: 段级分割和自归因的稳定性存疑，实际部署可能引入额外噪声。",
+      "• 复现难度: 中等；依赖GRPO框架，需精细调参，但核心方法相对直接。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.06474v1",
+    "title": "Self-Augmenting Retrieval for Diffusion Language Models",
+    "pdf_url": "https://arxiv.org/pdf/2606.06474v1",
+    "published": "2026-06-04",
+    "crawled_at": "2026-06-05 21:13:47",
+    "ai_score": 7.5,
+    "translated_title": "扩散语言模型的自增强检索",
+    "summary_en": "• Model Architecture: SARDI is a training-free, retriever-agnostic dynamic RAG framework for discrete diffusion language models. It leverages low-confidence tokens from the denoising process as lookahead signals to guide retrieval.\n• Data used: Evaluated on five multi-hop QA benchmarks (e.g., HotpotQA, 2WikiMultihopQA). No specific training data mentioned; the method is applied to pre-trained diffusion models.\n• Performance metrics: Outperforms training-free diffusion and autoregressive retrieval baselines across all benchmarks, with up to 8x higher throughput.",
+    "summary_cn": "• 核心模型: SARDI是一个无需训练、检索器无关的动态RAG框架，利用扩散模型去噪过程中的低置信度token作为前瞻信号指导检索。\n• 数据来源: 在五个多跳问答基准（如HotpotQA、2WikiMultihopQA）上评估。\n• 主要结论: 在所有基准上优于现有的无训练扩散和自回归检索基线，吞吐量提升高达8倍。",
+    "verdict_en": "• Alpha Potential: Moderate. The idea of using discarded tokens for retrieval is novel and could improve RAG efficiency, but the alpha is limited to NLP tasks, not directly financial.\n• Implementation Risk: Low to medium. Training-free and retriever-agnostic reduces complexity, but requires a diffusion language model, which is less common than autoregressive models.\n• Novelty: High. The concept of self-augmenting retrieval via lookahead tokens is original and could inspire similar approaches in other domains.",
+    "verdict_cn": "• 创新点: 利用去噪过程中的低置信度token进行检索，思路新颖，无需额外训练。\n• 实盘坑: 依赖扩散语言模型，目前该类模型不如自回归模型普及，且多跳QA场景与金融应用有距离。\n• 复现难度: 中等。需要扩散模型和检索器，但框架本身简单，易于复现。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.06470v1",
+    "title": "PC Layer: Polynomial Weight Preconditioning for Improving LLM Pre-Training",
+    "pdf_url": "https://arxiv.org/pdf/2606.06470v1",
+    "published": "2026-06-04",
+    "crawled_at": "2026-06-05 21:13:55",
+    "ai_score": 7.5,
+    "translated_title": "PC层：多项式权重预处理以改进LLM预训练",
+    "summary_en": "• Model Architecture: Proposes a PC layer that applies low-degree polynomial preconditioning to reshape the singular-value spectrum of weight matrices, which can be merged back after training with no inference overhead.\n• Data used: Not explicitly specified; likely standard LLM pre-training datasets (e.g., CommonCrawl, Wikipedia, etc.) for Llama-1B experiments.\n• Performance metrics: Demonstrates improved training efficiency and stability over standard transformers in Llama-1B pre-training with AdamW and Muon optimizers; theoretical convergence guarantee for deep linear networks.",
+    "summary_cn": "• 核心模型: 提出PC层，通过低阶多项式预处理重塑权重矩阵的奇异值谱，训练后可合并回原架构，无推理开销。\n• 数据来源: 未明确说明，推测使用标准LLM预训练数据（如CommonCrawl、Wikipedia等）进行Llama-1B实验。\n• 主要结论: 在Llama-1B预训练中，使用AdamW和Muon优化器时，相比标准Transformer提升了训练效率和稳定性；理论上对深度线性网络给出了全局收敛保证。",
+    "verdict_en": "• Alpha Potential: Moderate; improves training efficiency but not a direct alpha signal; may reduce time-to-market for LLM-based strategies.\n• Implementation Risk: Low; PC layer is simple to implement and adds no inference cost, but requires careful tuning of polynomial degree.\n• Novelty: High; polynomial preconditioning for weight matrices is a novel approach to stabilize LLM training, with theoretical backing.",
+    "verdict_cn": "• 创新点: 新颖，将多项式预处理用于权重矩阵以稳定LLM训练，并有理论支撑。\n• 实盘坑: 对多项式阶数敏感，需调参；仅提升训练效率，不直接产生交易信号。\n• 复现难度: 低，代码已开源，实现简单，无推理开销。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.06469v1",
+    "title": "How abundant are good interpolators?",
+    "pdf_url": "https://arxiv.org/pdf/2606.06469v1",
+    "published": "2026-06-04",
+    "crawled_at": "2026-06-05 21:14:02",
+    "ai_score": 7.5,
+    "translated_title": "好的插值器有多丰富？",
+    "summary_en": [
+      "• Model: Unit norm linear classifiers with possibly negative margin κ, studied in overparametrized regime n/d → α small.",
+      "• Data: Gaussian mixture model and logistic model with Gaussian features; synthetic data with labels y_i ∈ {-1,+1}.",
+      "• Performance: Large deviation principle for generalization error of random interpolator; rate function maximizer gives typical performance.",
+      "• Comparison: Gradient descent and linear programming outperform vast majority of interpolators, indicating benign overfitting."
+    ],
+    "summary_cn": [
+      "• 核心模型: 单位范数线性分类器，允许负间隔κ，在过参数化（n/d → α小）下分析。",
+      "• 数据来源: 高斯混合模型和带高斯特征的对数几率模型；合成数据。",
+      "• 主要结论: 随机插值器的泛化误差满足大偏差原理；典型性能由率函数最大值给出。",
+      "• 对比结果: 梯度下降和线性规划优于绝大多数插值器，表明良性过拟合。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; theoretical insights into benign overfitting may guide factor design in high-dimensional settings.",
+      "• Implementation Risk: High; results rely on asymptotic regimes and synthetic data; real-world applicability unclear.",
+      "• Novelty: High; first large deviation analysis of interpolator abundance and typical generalization performance."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次对插值器丰富性及典型泛化性能进行大偏差分析，理论贡献显著。",
+      "• 实盘坑: 理论基于渐近假设和合成数据，实际金融数据噪声大、非高斯，直接应用风险高。",
+      "• 复现难度: 高；需要深入理解大偏差理论，数值实验需精细调参。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2606.03990v1",
     "title": "Neuron Populations Exhibit Divergent Selectivity with Scale",
     "pdf_url": "https://arxiv.org/pdf/2606.03990v1",
