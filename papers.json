@@ -1,5 +1,257 @@
 [
   {
+    "id": "2606.07500v1",
+    "title": "Sparse Subspace-to-Expert Sharing for Task-Agnostic Continual Learning",
+    "pdf_url": "https://arxiv.org/pdf/2606.07500v1",
+    "published": "2026-06-05",
+    "crawled_at": "2026-06-08 21:29:45",
+    "ai_score": 7.5,
+    "translated_title": "稀疏子空间到专家共享的任务无关持续学习",
+    "summary_en": [
+      "• Model Architecture: Introduces Mixture of Sparse Experts (SETA) with task-specific and shared expert modules, using adaptive elastic anchoring and routing-aware regularization.",
+      "• Data used: Evaluated on diverse domain-specific benchmarks for continual learning, likely including NLP tasks (e.g., text classification, question answering).",
+      "• Performance metrics: Achieves competitive or superior overall performance compared to state-of-the-art baselines, with strong retention of early-task knowledge and improved backward transfer on LLaMA-2 7B and Qwen3-4B."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出稀疏专家混合（SETA），包含任务特定专家和共享专家，采用自适应弹性锚定和路由感知正则化。",
+      "• 数据来源: 在多种领域特定基准上评估持续学习，可能包括NLP任务（如文本分类、问答）。",
+      "• 主要结论: 在LLaMA-2 7B和Qwen3-4B上，整体性能达到或超越现有方法，早期任务知识保留强，后向迁移改善。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; improves continual learning in LLMs, which is crucial for adaptive trading models that need to retain knowledge across regimes.",
+      "• Implementation Risk: High; requires careful tuning of sparse expert allocation and regularization, and may be computationally expensive for real-time inference.",
+      "• Novelty: High; introduces a novel sparse subspace decomposition approach to separate task-specific and shared knowledge, addressing plasticity-stability dilemma."
+    ],
+    "verdict_cn": [
+      "• 创新点: 通过稀疏子空间分解分离任务特定和共享知识，创新性地解决持续学习中的可塑性-稳定性困境。",
+      "• 实盘坑: 计算开销大，实时推理可能受限；专家分配和正则化超参数敏感，调参困难。",
+      "• 复现难度: 高，需要大规模LLM和持续学习基准，代码未开源时复现成本高。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.07496v1",
+    "title": "Accelerated Decentralized Stochastic Gradient Descent for Strongly Convex Optimization",
+    "pdf_url": "https://arxiv.org/pdf/2606.07496v1",
+    "published": "2026-06-05",
+    "crawled_at": "2026-06-08 21:29:54",
+    "ai_score": 8.5,
+    "translated_title": "加速去中心化随机梯度下降用于强凸优化",
+    "summary_en": [
+      "• Model Architecture: MG-ADSGD combines Nesterov-type primal-dual extrapolation with multi-round fast gossip averaging in a decentralized framework.",
+      "• Data used: The algorithm is designed for stochastic optimization over networks; no specific dataset is mentioned, but it assumes gradient variance σ² and condition number κ.",
+      "• Performance metrics: Communication complexity is derived as Õ(σ²/(μnε) log(1/ε) + √(κ/(1-β)) log(1/ε)), achieving state-of-the-art bounds.",
+      "• Key idea: Coupling gossip depth with mini-batch size to simultaneously improve consensus and reduce variance."
+    ],
+    "summary_cn": [
+      "• 核心模型: MG-ADSGD结合了Nesterov型原始-对偶外推与多轮快速八卦平均，实现去中心化优化。",
+      "• 数据来源: 算法适用于网络上的随机优化，未指定具体数据集，但假设梯度方差σ²和条件数κ。",
+      "• 主要结论: 通信复杂度达到Õ(σ²/(μnε) log(1/ε) + √(κ/(1-β)) log(1/ε))，为当前最优。",
+      "• 关键创新: 将八卦深度与小批量大小耦合，同时改善共识和降低方差。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low for direct trading; theoretical contribution to decentralized optimization may enable faster distributed training for ML models used in finance.",
+      "• Implementation Risk: High; requires careful tuning of gossip rounds and mini-batch sizes, and assumes strong convexity which is rare in financial models.",
+      "• Novelty: High; first decentralized stochastic method to achieve both accelerated κ and 1/√(1-β) dependences simultaneously."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次在去中心化随机优化中同时实现加速κ和1/√(1-β)依赖，理论贡献显著。",
+      "• 实盘坑: 强凸假设在金融模型中不常见，实际应用需近似；八卦轮次和批量大小调参复杂。",
+      "• 复现难度: 高；需要分布式系统实现，且对数因子未明确，实际性能可能不如理论。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2606.07495v1",
+    "title": "Second-Order Path Kernel Interpolation Formulas in Machine Learning",
+    "pdf_url": "https://arxiv.org/pdf/2606.07495v1",
+    "published": "2026-06-05",
+    "crawled_at": "2026-06-08 21:30:02",
+    "ai_score": 6.5,
+    "translated_title": "机器学习中的二阶路径核插值公式",
+    "summary_en": "• Model Architecture: Extends first-order path kernel interpolation to second-order, incorporating curvature-weighted terms for deterministic gradient descent and stochastic gradient descent with momentum.\n• Data used: Theoretical analysis; no empirical datasets or experiments.\n• Performance metrics: No quantitative metrics; provides concentration estimates for prediction fluctuations around expected second-order representation.",
+    "summary_cn": "• 核心模型: 将一阶路径核插值扩展到二阶，引入曲率加权项，适用于确定性梯度下降和带动量的随机梯度下降。\n• 数据来源: 纯理论分析，无实证数据集或实验。\n• 主要结论: 建立了预测的集中估计，量化了围绕期望二阶表示的波动尺度。",
+    "verdict_en": "• Alpha Potential: Low; purely theoretical contribution with no direct trading signal or empirical validation.\n• Implementation Risk: High; requires computing second-order derivatives and path integrals, computationally expensive and impractical for real-time trading.\n• Novelty: Moderate; extends existing path kernel framework but lacks empirical demonstration of practical utility.",
+    "verdict_cn": "• 创新点: 理论上有新意，将路径核插值推广到二阶，但缺乏实证支持。\n• 实盘坑: 计算二阶导数和路径积分成本极高，难以用于高频或实时交易。\n• 复现难度: 高，需要深厚的数学功底和大量计算资源。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.07492v1",
+    "title": "Bradley-Terry Rankings for Recommender Systems Across Dataset Taxonomies",
+    "pdf_url": "https://arxiv.org/pdf/2606.07492v1",
+    "published": "2026-06-05",
+    "crawled_at": "2026-06-08 21:30:11",
+    "ai_score": 6.5,
+    "translated_title": "基于Bradley-Terry模型的推荐系统算法排名：跨数据集分类",
+    "summary_en": [
+      "• Model Architecture: Uses Bradley-Terry (BT) model for pairwise comparisons of recommendation algorithms, extended with BT trees and BT models with covariates for dataset-specific predictions.",
+      "• Data used: Multiple benchmark datasets with varying characteristics (sparsity, sequential structure, scale); no specific datasets named.",
+      "• Performance metrics: Introduces a novel ranking consistency metric; evaluates robustness to incomplete data; uses NDCG as base metric for comparisons.",
+      "• Key findings: Algorithm rankings depend on dataset statistics; proposed method yields more reliable rankings than naive averaging.",
+      "• Contribution: Provides a methodology to rank algorithms on unseen datasets without running models."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用Bradley-Terry模型进行算法两两比较，并扩展为BT树和带协变量的BT模型，用于预测未见数据集上的排名。",
+      "• 数据来源: 使用多个具有不同特征（稀疏性、序列结构、规模）的基准数据集，未明确命名具体数据集。",
+      "• 主要结论: 算法排名依赖于数据集统计特征；所提方法比简单平均更可靠；对不完整数据具有鲁棒性。",
+      "• 创新点: 提出无需运行模型即可预测新数据集上算法排名的方法。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low to moderate; focuses on algorithm selection rather than direct trading signals, but could improve recommender system performance indirectly.",
+      "• Implementation Risk: Medium; requires careful estimation of dataset covariates and BT model parameters; robustness to incomplete data is a plus.",
+      "• Novelty: Moderate; applies existing BT model to recommender system ranking with extensions; ranking consistency metric is new.",
+      "• Practical Use: Useful for practitioners to choose algorithms for new datasets without exhaustive benchmarking."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将Bradley-Terry模型引入推荐系统排名，并扩展至未见数据集预测，有一定新意。",
+      "• 实盘坑: 依赖数据集统计特征的选择和估计，若特征选取不当可能导致排名偏差；模型复杂度较高。",
+      "• 复现难度: 中等；需要实现BT模型及其扩展，并处理多个基准数据集。",
+      "• 量化价值: 对算法选择有指导意义，但直接产生Alpha信号的能力有限。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.07491v1",
+    "title": "Twelve quick tips for designing AI-driven HPC workflows",
+    "pdf_url": "https://arxiv.org/pdf/2606.07491v1",
+    "published": "2026-06-05",
+    "crawled_at": "2026-06-08 21:30:18",
+    "ai_score": 5.5,
+    "translated_title": "设计AI驱动的高性能计算工作流的十二条快速技巧",
+    "summary_en": "• The paper presents twelve practical tips for designing AI-driven HPC workflows, focusing on system-level bottlenecks. • It addresses challenges such as data gravity, heterogeneous resource management, and workflow orchestration. • Key tips include containerization for portability, job arrays, feedback loops, and I/O optimization for small files. • The framework is tailored to resource-intensive computational biology but broadly applicable. • No specific model architecture, data, or performance metrics are provided.",
+    "summary_cn": "• 核心模型: 无特定模型，提供通用设计原则。 • 数据来源: 未提及具体数据，聚焦系统架构。 • 主要结论: 十二个技巧旨在提升AI-HPC工作流的效率、可扩展性和可重复性。",
+    "verdict_en": "• Alpha Potential: Low; the paper offers no novel trading or investment insights. • Implementation Risk: High; tips are high-level and require significant customization. • Novelty: Moderate; combines known HPC best practices with AI workflow challenges.",
+    "verdict_cn": "• 创新点: 将HPC最佳实践与AI工作流结合，但缺乏量化细节。 • 实盘坑: 无直接交易应用，需大量转化工作。 • 复现难度: 中等；技巧通用但需具体环境适配。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.07488v1",
+    "title": "CoMetaPNS: Continually Meta-learning Personalized Neural Surrogates for Cardiac Electrophysiology Simulations",
+    "pdf_url": "https://arxiv.org/pdf/2606.07488v1",
+    "published": "2026-06-05",
+    "crawled_at": "2026-06-08 21:30:27",
+    "ai_score": 6.5,
+    "translated_title": "连续元学习个性化神经代理用于心脏电生理模拟",
+    "summary_en": "• Model Architecture: The framework combines a neural surrogate with a continual Bayesian Gaussian Mixture Model (BGMM) over a memory buffer to infer task identifiers and relationships over time, enabling continual meta-learning without catastrophic forgetting.\n• Data used: Synthetic cardiac electrophysiology simulation data, with sequential arrival of unlabeled data from known or unknown dynamics sources.\n• Performance metrics: Superior simulation forecasting accuracy, computational scalability, and resilience to catastrophic forgetting compared to baselines (e.g., standard meta-learning, fine-tuning).\n• Key contribution: Novel continual meta-learning approach that handles unknown task identities and sequential data, addressing a major limitation in clinical settings.",
+    "summary_cn": "• 核心模型: 结合神经代理与连续贝叶斯高斯混合模型（BGMM）的内存缓冲区，动态推断任务标识和关系，实现无灾难性遗忘的连续元学习。\n• 数据来源: 合成心脏电生理模拟数据，数据按顺序到达，可能来自已知或未知动力学源。\n• 主要结论: 在模拟预测准确性、计算可扩展性和抗灾难性遗忘方面优于基线方法（如标准元学习、微调）。\n• 创新点: 首次在心脏模拟中解决未知任务标识和顺序数据问题，适用于临床场景。",
+    "verdict_en": "• Alpha Potential: Low for financial markets; the paper focuses on cardiac simulations, not trading. No direct alpha signal.\n• Implementation Risk: High; requires domain-specific knowledge and synthetic data, not transferable to finance without significant adaptation.\n• Novelty: Moderate in ML (continual meta-learning for unknown tasks), but irrelevant to quantitative finance.\n• Practicality: Limited; the method is tailored to cardiac electrophysiology and lacks financial data validation.",
+    "verdict_cn": "• 创新点: 在连续元学习中处理未知任务标识，对ML社区有贡献，但与量化金融无关。\n• 实盘坑: 无法直接用于金融数据，需要大量改造；心脏模拟与市场动态差异巨大。\n• 复现难度: 高；依赖特定领域模拟数据和复杂贝叶斯模型，金融从业者难以复现。\n• 应用前景: 低；除非将框架抽象为通用连续学习工具，否则无金融价值。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.07483v1",
+    "title": "Network Recovery from Cascade Data: A Debiased Jacobian-Based Machine Learning Approach",
+    "pdf_url": "https://arxiv.org/pdf/2606.07483v1",
+    "published": "2026-06-05",
+    "crawled_at": "2026-06-08 21:30:37",
+    "ai_score": 7.5,
+    "translated_title": "从级联数据中恢复网络：一种基于去偏雅可比矩阵的机器学习方法",
+    "summary_en": "• Model Architecture: CascadeNet uses a flexible estimator for the one-step transition function and applies Neyman-orthogonal debiasing via the Riesz representer to obtain a debiased Jacobian, enabling inference on network structure without specifying a diffusion model.\n• Data Used: Simulation data from nine common data-generating processes (e.g., product adoption, disease spread) and real-world COVID-19 transmission data across Spain's 52 provinces.\n• Performance Metrics: Achieves highest network recovery accuracy in simulations across all nine processes; in the COVID-19 application, recovered networks show significant correlation with true inter-province mobility, while baseline methods do not.",
+    "summary_cn": "• 核心模型: CascadeNet通过灵活估计一步转移函数，并利用Riesz表示器进行Neyman正交去偏，得到去偏雅可比矩阵，无需指定扩散模型即可推断网络结构。\n• 数据来源: 九种常见数据生成过程（如产品采用、疾病传播）的模拟数据，以及西班牙52个省份的COVID-19传播真实数据。\n• 主要结论: 在模拟中，CascadeNet在所有九种过程中恢复准确率最高；在COVID-19应用中，恢复的网络与真实省际流动网络显著相关，而基线方法则无显著对齐。",
+    "verdict_en": "• Alpha Potential: High for applications like financial contagion or supply chain risk, where network recovery from cascade data is crucial; debiased Jacobian enables statistical inference, adding value for risk management.\n• Implementation Risk: Moderate; requires careful tuning of the transition function estimator and Riesz representer; computational cost may be high for large networks.\n• Novelty: Strong; introduces a model-agnostic approach with theoretical guarantees (√n-consistency, asymptotic normality), addressing a key limitation of existing methods.",
+    "verdict_cn": "• 创新点: 提出模型无关的网络恢复方法，具有√n一致性和渐近正态性的理论保证，解决了现有方法依赖特定扩散模型的缺陷。\n• 实盘坑: 转移函数估计器和Riesz表示器的调参可能复杂；对于大规模网络，计算成本较高；实际金融数据中级联过程可能更复杂。\n• 复现难度: 中等；方法有理论支撑，但实现细节需谨慎，模拟和实证代码可能需作者提供。",
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.07481v1",
+    "title": "Drifting Models for Surrogate Flow Modeling",
+    "pdf_url": "https://arxiv.org/pdf/2606.07481v1",
+    "published": "2026-06-05",
+    "crawled_at": "2026-06-08 21:30:45",
+    "ai_score": 7.5,
+    "translated_title": "用于替代流建模的漂移模型",
+    "summary_en": "• Model Architecture: Uses a generative drifting framework with conditional VAE latent space and label-aware masking for single-pass generation.\n• Data used: Simulated flow fields from CFD, conditioned on boundary conditions and spatial geometries.\n• Performance metrics: Matches iterative diffusion in accuracy and flow consistency, runs two orders of magnitude faster.\n• Additional variant: Spatial-conditioning variant shows promise for generalization to unseen geometries.\n• Key advantage: Enables real-time CFD surrogates for rapid exploration.",
+    "summary_cn": "• 核心模型: 采用生成式漂移框架，结合条件VAE潜在空间和标签感知掩码，实现单次生成。\n• 数据来源: 基于CFD模拟的流场数据，以边界条件和空间几何为条件。\n• 主要结论: 在精度和流一致性上匹配迭代扩散，速度提升两个数量级。\n• 扩展变体: 空间条件变体有望泛化到未见几何形状。\n• 关键优势: 实现实时CFD替代模型，支持快速探索。",
+    "verdict_en": "• Alpha Potential: Low for direct trading; high for industrial optimization (e.g., building HVAC, aerodynamics).\n• Implementation Risk: Requires CFD expertise and domain-specific data; not plug-and-play.\n• Novelty: Moderate; drifting framework is adapted from other domains, but label-aware masking is new.\n• Scalability: Spatial-conditioning variant may enable generalization, but limited to similar geometries.\n• Practicality: Real-time inference is a clear advantage over diffusion models.",
+    "verdict_cn": "• 创新点: 将漂移框架引入流体力学，标签感知掩码提升条件生成质量。\n• 实盘坑: 直接金融交易应用低，需工业领域数据与专家知识。\n• 复现难度: 中等，需CFD仿真数据和深度学习经验。\n• 局限性: 泛化能力有限，空间条件变体仍需验证。\n• 潜在价值: 在需要快速仿真的工业场景中有实用价值。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.07474v1",
+    "title": "Unsupervised Continual Clustering via Forward-Backward Knowledge Distillation",
+    "pdf_url": "https://arxiv.org/pdf/2606.07474v1",
+    "published": "2026-06-05",
+    "crawled_at": "2026-06-08 21:30:53",
+    "ai_score": 6.5,
+    "translated_title": "无监督连续聚类：通过前向-后向知识蒸馏",
+    "summary_en": "• Model Architecture: FBCC uses a continual teacher network with a clustering projector and lightweight task-specific students, employing dual-phase forward-backward distillation.\n• Data used: Evaluated on four benchmark datasets (e.g., CIFAR-100, Tiny-ImageNet) for unsupervised continual clustering tasks.\n• Performance metrics: Outperforms existing continual learning baselines in clustering accuracy and significantly reduces catastrophic forgetting.",
+    "summary_cn": "• 核心模型: FBCC采用持续教师网络与聚类投影器及轻量级任务特定学生，通过双阶段前向-后向蒸馏实现无数据存储的聚类学习。\n• 数据来源: 在四个基准数据集（如CIFAR-100、Tiny-ImageNet）上评估无监督连续聚类任务。\n• 主要结论: 在聚类准确率上优于现有持续学习基线，并显著减少灾难性遗忘。",
+    "verdict_en": "• Alpha Potential: Low; clustering tasks are not directly applicable to financial alpha generation.\n• Implementation Risk: Moderate; requires careful tuning of distillation hyperparameters and task boundaries.\n• Novelty: High; first to address unsupervised continual clustering with forward-backward distillation.",
+    "verdict_cn": "• 创新点: 首次将前向-后向蒸馏用于无监督连续聚类，无需存储历史数据。\n• 实盘坑: 聚类任务与量化交易关联度低，直接应用难以产生alpha。\n• 复现难度: 中等；蒸馏超参数和任务边界需精细调整。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.07475v1",
+    "title": "Graph Neural Network leveraging Higher-order Class Label Connectivity for Heterophilous Graphs",
+    "pdf_url": "https://arxiv.org/pdf/2606.07475v1",
+    "published": "2026-06-05",
+    "crawled_at": "2026-06-08 21:31:01",
+    "ai_score": 7.5,
+    "translated_title": "利用高阶类标签连通性的图神经网络用于异配图",
+    "summary_en": [
+      "• Model Architecture: Proposes Label Context Classifier (LCC) that captures higher-order class label connectivity via four types of walks on directed graphs, and integrates with any GNN via adaptive importance learning.",
+      "• Data used: Evaluated on heterophilous directed graph datasets (e.g., WebKB, Wikipedia, etc.) commonly used in node classification benchmarks.",
+      "• Performance metrics: Node classification accuracy; LCC-integrated GNNs outperform state-of-the-art methods on heterophilous graphs.",
+      "• Key finding: Label context embeddings significantly improve performance in heterophilous settings where standard GNNs fail."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出标签上下文分类器(LCC)，通过四种游走方式捕获有向图中的高阶类标签连通性，并可自适应地与任意GNN集成。",
+      "• 数据来源: 使用异配有向图数据集（如WebKB、Wikipedia等）进行节点分类评估。",
+      "• 主要结论: 集成LCC的GNN在异配图上显著优于现有方法，标签上下文嵌入有效提升分类性能。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; improves node classification in heterophilous graphs, which are common in financial networks (e.g., fraud detection), but direct trading signal is unclear.",
+      "• Implementation Risk: Low to medium; LCC is modular and can be combined with existing GNNs, but requires directed graph structure and may increase computational cost.",
+      "• Novelty: High; addresses a known limitation of GNNs (heterophily) with a principled higher-order connectivity approach."
+    ],
+    "verdict_cn": [
+      "• 创新点: 针对异配图的高阶标签连通性提出新方法，弥补了传统GNN的短板。",
+      "• 实盘坑: 金融图数据常为异配（如欺诈网络），但需有向图且计算开销增加，直接生成交易信号困难。",
+      "• 复现难度: 中等；模型模块化，但四种游走路径的实现和超参数调优需谨慎。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2606.06494v1",
     "title": "TailLoR: Protecting Principal Components in Parameter-Efficient Continual Learning",
     "pdf_url": "https://arxiv.org/pdf/2606.06494v1",
