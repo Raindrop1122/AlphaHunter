@@ -1,5 +1,263 @@
 [
   {
+    "id": "2606.09825v1",
+    "title": "An Agency-Transferring Model-Free Policy Enhancement Technique",
+    "pdf_url": "https://arxiv.org/pdf/2606.09825v1",
+    "published": "2026-06-08",
+    "crawled_at": "2026-06-09 21:25:37",
+    "ai_score": 7.5,
+    "translated_title": "一种基于代理转移的无模型策略增强技术",
+    "summary_en": "• Model Architecture: The method uses an arbitration mechanism that combines a baseline policy and a trainable learning policy, progressively transferring agency from baseline to learner.\n• Data used: Continuous-control benchmarks (e.g., MuJoCo tasks) are used for empirical evaluation; no specific dataset is mentioned.\n• Performance metrics: The method achieves returns matching or exceeding competitive approaches, with the highest goal-reaching rates throughout training, including the final baseline-free stage.",
+    "summary_cn": "• 核心模型: 提出一种仲裁机制，结合基线策略和可训练学习策略，逐步将控制权从基线转移到学习者。\n• 数据来源: 使用连续控制基准（如MuJoCo任务）进行实证评估，未提及具体数据集。\n• 主要结论: 该方法在回报上匹配或超越竞争方法，并在整个训练过程中（包括最终无基线阶段）保持最高的目标达成率。",
+    "verdict_en": "• Alpha Potential: Moderate; the method improves training efficiency and final performance, but the improvement may not be large enough for significant alpha in financial trading.\n• Implementation Risk: Low to moderate; the arbitration mechanism is straightforward to implement, but requires a functional baseline policy, which may not always be available.\n• Novelty: Moderate; the idea of transferring agency from baseline to learner is not entirely new, but the formalization and theoretical analysis add value.",
+    "verdict_cn": "• 创新点: 将基线策略与学习策略的仲裁机制形式化，并给出理论保证，但整体思路并非全新。\n• 实盘坑: 需要已有可用的基线策略，且金融环境中基线策略可能不满足“高概率到达目标集”的假设。\n• 复现难度: 中等；算法细节清晰，但需要调参和合适的基线策略。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.09821v1",
+    "title": "Rethinking the Divergence Regularization in LLM RL",
+    "pdf_url": "https://arxiv.org/pdf/2606.09821v1",
+    "published": "2026-06-08",
+    "crawled_at": "2026-06-09 21:25:46",
+    "ai_score": 7.5,
+    "translated_title": "重新思考大语言模型强化学习中的散度正则化",
+    "summary_en": [
+      "• Model Architecture: DRPO replaces the hard mask in DPPO with a smooth advantage-weighted quadratic regularizer on policy shift, maintaining trust-region geometry while providing continuous gradient weights.",
+      "• Data used: The paper does not specify a particular dataset; experiments are conducted across model scales, architectures, and precision settings, likely using standard LLM benchmarks.",
+      "• Performance metrics: DRPO improves stability and efficiency of LLM RL training compared to PPO, GRPO, and DPPO, as shown in experiments across various settings.",
+      "• Key contribution: The smooth regularizer attenuates diverging updates and provides corrective signals beyond the trust-region boundary, addressing the limitation of hard masking in DPPO."
+    ],
+    "summary_cn": [
+      "• 核心模型: DRPO提出用平滑的优势加权二次正则化器替代DPPO中的硬掩码，保持信任区域几何结构，同时提供连续的梯度权重。",
+      "• 数据来源: 论文未指定特定数据集，实验跨模型规模、架构和精度设置进行，可能使用标准LLM基准。",
+      "• 主要结论: 与PPO、GRPO和DPPO相比，DRPO在多种设置下提升了LLM RL训练的稳定性和效率。",
+      "• 关键创新: 平滑正则化器在信任区域边界外仍提供纠正信号，解决了DPPO硬掩码丢弃梯度的问题。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; improves training stability, which could lead to better model performance in downstream tasks, but direct trading alpha is unclear.",
+      "• Implementation Risk: Low to moderate; the modification is straightforward (replacing hard mask with quadratic regularizer), but requires careful tuning of regularization strength.",
+      "• Novelty: Incremental; builds on DPPO by smoothing the divergence constraint, but the idea of using quadratic penalties is well-known in optimization.",
+      "• Practical Impact: Likely beneficial for LLM-based trading agents or NLP strategies where stable RL training is critical."
+    ],
+    "verdict_cn": [
+      "• 创新点: 用平滑正则化替代硬掩码，虽非颠覆性，但解决了DPPO梯度丢弃问题，工程上实用。",
+      "• 实盘坑: 正则化系数需精细调参，否则可能过度约束或无效；实验未展示真实交易场景效果。",
+      "• 复现难度: 低，基于标准PPO框架，修改简单，但需注意与不同LLM架构的兼容性。",
+      "• 适用性: 适合需要稳定RL训练的NLP/LLM策略，如文本生成或对话系统，直接用于量化交易需额外适配。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.09820v1",
+    "title": "Weighted universal approximation of differentiable maps on infinite-dimensional manifolds",
+    "pdf_url": "https://arxiv.org/pdf/2606.09820v1",
+    "published": "2026-06-08",
+    "crawled_at": "2026-06-09 21:25:54",
+    "ai_score": 6.5,
+    "translated_title": "无限维流形上可微映射的加权通用逼近",
+    "summary_en": "• Model Architecture: Functional input neural networks (FNN) mapping from weighted infinite-dimensional manifolds to Banach spaces via linear readouts and nonlinear activation.\n• Data used: Theoretical analysis; no empirical data.\n• Performance metrics: Universal approximation of differentiable maps including derivatives; no quantitative performance metrics.\n• Key contribution: Proves a weighted Nachbin theorem and extends UAT to derivatives, with applications to non-anticipative functionals and signature methods.",
+    "summary_cn": "• 核心模型: 功能输入神经网络（FNN），从加权无限维流形映射到巴拿赫空间，使用线性读出和非线性激活。\n• 数据来源: 纯理论分析，无实证数据。\n• 主要结论: 证明了加权Nachbin定理，将通用逼近定理扩展到可微映射及其导数，应用于非预期泛函和签名方法。",
+    "verdict_en": "• Alpha Potential: Low; purely theoretical, no direct trading application.\n• Implementation Risk: High; requires advanced functional analysis and infinite-dimensional manifolds, impractical for quant finance.\n• Novelty: Moderate; extends known UAT results but with limited practical impact.\n• Relevance: Minimal for hedge fund; more suited for mathematical finance theory.",
+    "verdict_cn": "• 创新点: 理论上将通用逼近扩展到导数，但缺乏实际验证。\n• 实盘坑: 无限维流形和加权空间在量化交易中几乎无法实现。\n• 复现难度: 极高，需要深厚的泛函分析和微分几何背景。\n• 实用性: 对量化基金几乎无直接应用价值。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.09806v1",
+    "title": "Topological Neural Operators",
+    "pdf_url": "https://arxiv.org/pdf/2606.09806v1",
+    "published": "2026-06-08",
+    "crawled_at": "2026-06-09 21:26:02",
+    "ai_score": 7.5,
+    "translated_title": "拓扑神经算子",
+    "summary_en": [
+      "• Model Architecture: Introduces Topological Neural Operators (TNOs) that extend neural operators to cell complexes using Discrete Exterior Calculus, enabling cross-dimensional coupling via gradient, curl, and divergence operators.",
+      "• Data used: Evaluated on PDE benchmarks including irregular-geometry flow problems; data likely from numerical simulations of partial differential equations.",
+      "• Performance metrics: TNOs and Hierarchical TNOs (HTNOs) improve accuracy over existing neural operators on PDE benchmarks, with controlled studies isolating benefits of higher-rank and topological structure.",
+      "• Key innovation: Decouples information flow (fixed topological operators) from learned transformations, respecting geometric support and conservation laws."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出拓扑神经算子(TNOs)，利用离散外微积分将神经算子扩展到胞腔复形，通过梯度、旋度和散度算子实现跨维度耦合。",
+      "• 数据来源: 在偏微分方程基准测试上评估，包括不规则几何流动问题；数据来自PDE数值模拟。",
+      "• 主要结论: TNOs和分层TNOs(HTNOs)在PDE基准上比现有神经算子精度更高，控制实验表明高阶和拓扑结构带来收益。",
+      "• 关键创新: 解耦信息流（固定拓扑算子）与变换（学习），尊重几何支撑和守恒律。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; applicable to PDE-based financial models (e.g., option pricing, risk simulation) but not directly to market alpha.",
+      "• Implementation Risk: High; requires understanding of topological data structures and Discrete Exterior Calculus, not standard in quant finance.",
+      "• Novelty: High; introduces a principled framework unifying operator learning on topological domains, subsuming existing neural operators.",
+      "• Practicality: Low for typical hedge fund use; more suited for academic or specialized computational finance teams."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将拓扑学与神经算子结合，理论框架统一，创新性高。",
+      "• 实盘坑: 直接应用于量化交易难度大，需大量定制化开发，且对金融数据有效性存疑。",
+      "• 复现难度: 高，需要拓扑数据结构和离散外微积分知识，代码和数据集可能不公开。",
+      "• 适用性: 更适合学术研究或特定计算金融场景，非主流量化策略。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.09803v1",
+    "title": "Echo-Memory: A Controlled Study of Memory in Action World Models",
+    "pdf_url": "https://arxiv.org/pdf/2606.09803v1",
+    "published": "2026-06-08",
+    "crawled_at": "2026-06-09 21:26:11",
+    "ai_score": 7.5,
+    "translated_title": "回声记忆：动作世界模型中记忆的受控研究",
+    "summary_en": "• Model Architecture: Uses a video diffusion backbone with interchangeable memory modules (raw context, compression-based, spatial summaries, state-space recurrence) while fixing all other components.\n• Data: Evaluated on multi-segment video generation tasks with camera-action sequences; no specific dataset named, likely synthetic or standard video benchmarks.\n• Performance Metrics: Three-branch protocol: replay quality, in-domain loop revisit, open-domain return probes; finds replay fidelity insufficient for world memory.\n• Key Findings: Raw context strong for open-domain return; compactness not substitute for capacity; state-space recurrence best for open-domain return.\n• Controlled Study: Isolates four axes: capacity, compression, read-out, recurrence.",
+    "summary_cn": "• 核心模型: 基于视频扩散骨干网络，可替换记忆模块（原始上下文、压缩记忆、空间摘要、状态空间递归），其他组件固定。\n• 数据来源: 多段视频生成任务，使用相机动作序列；未明确数据集，可能为合成或标准视频基准。\n• 主要结论: 回放保真度不足以衡量世界记忆；原始上下文在开放域返回中表现强；紧凑性不能替代容量；状态空间递归最佳。\n• 评估协议: 三分支协议（回放质量、域内循环重访、开放域返回探测），分支结果常不一致。\n• 控制变量: 隔离容量、压缩、读出、递归四个维度。",
+    "verdict_en": "• Alpha Potential: Low to moderate; focuses on memory in world models, not directly on financial alpha; could inspire memory-augmented models for time-series or agent-based trading.\n• Implementation Risk: High; requires video diffusion backbone and careful memory module integration; computational cost likely prohibitive for real-time trading.\n• Novelty: High; provides controlled comparison of memory mechanisms in action-conditioned world models, with a novel three-branch evaluation protocol.\n• Relevance: Limited to AI research; indirect application to finance via improved world models for simulation or reinforcement learning.\n• Verdict: Interesting academic contribution but not directly actionable for hedge fund strategies.",
+    "verdict_cn": "• 创新点: 首次在动作世界模型中对记忆机制进行受控比较，提出三分支评估协议，分离了容量、压缩、读出和递归四个维度。\n• 实盘坑: 计算成本极高，视频扩散骨干网络难以实时运行；金融领域直接应用有限，需大幅调整。\n• 复现难度: 高；需要大量计算资源和视频生成基础设施，代码未公开。\n• 相关性: 对金融时序预测或强化学习中的记忆增强有间接启发，但非直接策略。\n• 总体评价: 学术价值高，但实盘应用前景不明朗。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.09802v1",
+    "title": "Bandits for Efficient Experimentation: Adapting to Control Group, Preferences, and Context Drifts",
+    "pdf_url": "https://arxiv.org/pdf/2606.09802v1",
+    "published": "2026-06-08",
+    "crawled_at": "2026-06-09 21:26:19",
+    "ai_score": 7.5,
+    "translated_title": "高效实验的强盗算法：适应对照组、偏好和上下文漂移",
+    "summary_en": [
+      "• Model Architecture: Proposes Dri-MED, a linear contextual bandit algorithm that handles non-stationary heteroskedastic noise via heteroskedastic regression, adapting to drifting context distributions and user preferences.",
+      "• Data used: Synthetic data for numerical experiments; no real-world dataset is employed.",
+      "• Performance metrics: Regret bound of Õ(κ d^2 log(T)/Δ̃) and expected constraint violations of Õ(d), with numerical results showing outperformance over conservative baselines.",
+      "• Key assumption: Reduces the setting to linear bandits with stationary mean but non-stationary noise, under practitioner-friendly assumptions."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出Dri-MED算法，基于线性MED策略，通过异方差回归处理非平稳异方差噪声，适应漂移的上下文分布和用户偏好。",
+      "• 数据来源: 仅使用合成数据进行数值实验，未采用真实数据集。",
+      "• 主要结论: 实例依赖遗憾界为Õ(κ d^2 log(T)/Δ̃)，期望约束违反为Õ(d)，数值结果优于忽略漂移和偏好结构的保守基线。",
+      "• 关键假设: 在实践友好假设下，将问题简化为均值平稳但噪声非平稳的线性老虎机。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the algorithm's ability to adapt to drifts and constraints could be valuable for dynamic portfolio optimization or A/B testing in finance.",
+      "• Implementation Risk: High; requires careful tuning of heteroskedastic regression and constraint parameters, and synthetic-only validation raises concerns about real-world robustness.",
+      "• Novelty: Good; combines MED with heteroskedastic noise handling and constraint satisfaction, but builds on existing linear bandit literature."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将MED策略扩展到非平稳异方差噪声场景，并引入约束满足机制，理论分析扎实。",
+      "• 实盘坑: 仅合成数据验证，未在真实金融数据上测试；异方差回归计算成本高，参数调优复杂。",
+      "• 复现难度: 中等；算法细节清晰，但需自行实现异方差回归模块，且超参数选择缺乏指导。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.09787v1",
+    "title": "Zero Touch Predictive Orchestration: Automating Time-Series Models for the Cloud-Edge Continuum",
+    "pdf_url": "https://arxiv.org/pdf/2606.09787v1",
+    "published": "2026-06-08",
+    "crawled_at": "2026-06-09 21:26:26",
+    "ai_score": 7.2,
+    "translated_title": "零接触预测编排：为云边连续体自动化时间序列模型",
+    "summary_en": [
+      "• Model Architecture: Proposes a fully automated time-series prediction architecture with a lightweight Resource Exposer (RE) for dynamic node discovery and telemetry collection, and a Neural Architecture Search (NAS) engine for automatic model generation.",
+      "• Data used: Combines sparse local node data with TimeTrack, a high-resolution public dataset (45-second intervals), to mitigate cold start problems.",
+      "• Performance metrics: Evaluated using MSE, MAE, and MAPE; shows improved forecasting accuracy and faster convergence compared to baselines.",
+      "• Key contribution: Novel data-mixing methodology that synergizes generic temporal patterns with local calibration."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出全自动时间序列预测架构，包含轻量级资源暴露器（RE）和神经架构搜索（NAS）引擎。",
+      "• 数据来源: 结合稀疏本地节点数据与高分辨率公开数据集TimeTrack（45秒间隔）。",
+      "• 主要结论: 数据混合方法有效缓解冷启动问题，在MSE、MAE、MAPE指标上优于基线。",
+      "• 创新点: 通过混合通用时间模式与本地校准，提升预测准确性并加速收敛。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low for direct trading; more relevant for infrastructure optimization in cloud-edge systems.",
+      "• Implementation Risk: High dependency on TimeTrack dataset quality and NAS computational cost; cold start mitigation may not generalize to all edge environments.",
+      "• Novelty: Moderate; data mixing for cold start is known, but application to cloud-edge orchestration with NAS is novel.",
+      "• Practical Use: Useful for MLOps and resource management, but not directly applicable to financial alpha generation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将数据混合与NAS结合用于云边冷启动问题，有一定新意。",
+      "• 实盘坑: 依赖特定数据集TimeTrack，泛化性存疑；NAS计算开销大，实时性差。",
+      "• 复现难度: 中等，需获取TimeTrack数据集并复现NAS流程。",
+      "• 金融应用: 与量化交易无直接关联，更适合基础设施运维。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.09770v1",
+    "title": "Discovering Functionally Selective Brain Regions with a Deep Topographic Multimodal Model",
+    "pdf_url": "https://arxiv.org/pdf/2606.09770v1",
+    "published": "2026-06-08",
+    "crawled_at": "2026-06-09 21:26:33",
+    "ai_score": 7.2,
+    "translated_title": "利用深度拓扑多模态模型发现功能选择性脑区",
+    "summary_en": "• Model Architecture: Introduces Topo-Omni, a topographic multimodal model with a single contiguous in-silico sheet for visual, auditory, and language/cognitive processing, built by fine-tuning a pretrained foundation model with a spatial smoothness objective.\n• Data used: The model is trained on multimodal data (visual, auditory, language) and validated against human neuroimaging data, including natural landscape and animal networks.\n• Performance metrics: The model develops clusters consistent with human neuroimaging, and driving/suppressing clusters biases perception, paralleling human intervention studies. It discovers novel clusters validated in human data.",
+    "summary_cn": "• 核心模型: 提出Topo-Omni，一种拓扑多模态模型，通过空间平滑目标微调预训练基础模型，在单一连续模拟皮层上整合视觉、听觉和语言/认知处理。\n• 数据来源: 使用多模态数据（视觉、听觉、语言）训练，并通过人类神经影像数据验证，包括自然景观和动物网络。\n• 主要结论: 模型发展出与人类神经影像一致的聚类，驱动或抑制聚类会选择性影响感知，与人类干预研究平行，并发现经人类数据验证的新聚类。",
+    "verdict_en": "• Alpha Potential: Low direct alpha potential for financial markets; the paper focuses on neuroscience and AI, not trading strategies or market anomalies.\n• Implementation Risk: High implementation risk for quant finance; requires domain expertise in neuroscience and multimodal AI, with no clear path to trading signals.\n• Novelty: High novelty in neuroscience and AI, introducing a unified topographic model across modalities, but limited applicability to quantitative finance.",
+    "verdict_cn": "• 创新点: 在神经科学和AI领域创新性高，首次提出跨模态的统一拓扑模型，但金融应用价值有限。\n• 实盘坑: 直接用于量化交易风险极高，缺乏与市场数据或交易策略的关联，复现成本高且无明确信号。\n• 复现难度: 复现难度大，需要多模态数据、预训练模型和神经影像验证，不适合量化金融团队。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2606.09767v1",
+    "title": "Data Synthesis and Parameter-Efficient Fine-Tuning for Low-Resource NMT: A Case Study on Q'eqchi' Mayan",
+    "pdf_url": "https://arxiv.org/pdf/2606.09767v1",
+    "published": "2026-06-08",
+    "crawled_at": "2026-06-09 21:26:41",
+    "ai_score": 7.5,
+    "translated_title": "低资源神经机器翻译的数据合成与参数高效微调：以Q'eqchi'玛雅语为例",
+    "summary_en": "• Model Architecture: Uses mT5-base with LoRA adapters for Parameter-Efficient Fine-Tuning (PEFT).\n• Data used: Community-sourced dictionaries transformed into synthetic corpus; no target-language parallel text scraped.\n• Performance metrics: In-domain BLEU 42.02 (high structural acquisition), but organic glossary BLEU 0.59 (structural-semantic gap).\n• Key findings: Synthetic bootstrapping effective for morphology and word order, but lacks lexical grounding; multi-task learning caused negative transfer.",
+    "summary_cn": "• 核心模型: 基于mT5-base模型，采用LoRA适配器进行参数高效微调。\n• 数据来源: 社区词典转化为合成语料，避免抓取目标语言平行文本。\n• 主要结论: 合成数据能有效学习复杂形态和语序（域内BLEU 42.02），但缺乏自然语言的词汇基础（有机词汇BLEU 0.59）；多任务学习导致负迁移。",
+    "verdict_en": "• Alpha Potential: Low for financial NLP; high for low-resource language translation, but niche.\n• Implementation Risk: High risk of overfitting to synthetic patterns; requires authentic data for refinement.\n• Novelty: Novel combination of data synthesis and PEFT for Indigenous languages; ablation study on multi-task learning is insightful.\n• Practicality: Not directly applicable to quantitative finance; may inspire synthetic data generation for rare financial events.",
+    "verdict_cn": "• 创新点: 结合数据合成与参数高效微调，解决低资源语言翻译，多任务学习消融实验有深度。\n• 实盘坑: 合成数据过拟合严重，有机数据BLEU极低，直接用于金融NLP风险高。\n• 复现难度: 中等，依赖社区词典和mT5，但金融领域缺乏类似资源。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.09764v1",
+    "title": "iOSWorld: A Benchmark for Personally Intelligent Phone Agents",
+    "pdf_url": "https://arxiv.org/pdf/2606.09764v1",
+    "published": "2026-06-08",
+    "crawled_at": "2026-06-09 21:26:47",
+    "ai_score": 6.5,
+    "translated_title": "iOSWorld：个人智能电话代理的基准测试",
+    "summary_en": "• Introduces iOSWorld, the first interactive native iOS simulator benchmark with persistent user identity across 26 newly built apps. • Includes 133 tasks: single-app (27), multi-app (60), and memory/personalization (46) tasks. • Evaluates frontier and open-source computer-use models in vision-only and privileged vision+XML settings. • Best configuration achieves 52% overall, 37% on multi-app tasks; privileged access improves frontier models by up to 26 percentage points. • Open-source release includes all apps, seeded data, tasks, rubrics, and evaluation code.",
+    "summary_cn": "• 核心模型: 评估前沿和开源计算机使用模型，包括纯视觉和特权视觉+XML设置。 • 数据来源: 基于26个新构建的iOS应用，包含交易、消息、旅行记录、社交关系和金融活动等连接数据。 • 主要结论: 最佳配置整体准确率52%，多应用任务仅37%；特权访问使前沿模型提升高达26个百分点，但小型模型未受益。",
+    "verdict_en": "• Alpha Potential: Low for direct trading; benchmark focuses on personal assistant tasks, not financial alpha. • Implementation Risk: High; requires building a full iOS simulator and personalized data pipeline. • Novelty: High; first personalized mobile agent benchmark with persistent identity and cross-app tasks.",
+    "verdict_cn": "• 创新点: 首个具有持久用户身份和跨应用任务的个性化移动代理基准。 • 实盘坑: 与金融交易无关，无法直接产生alpha；模拟器环境与真实设备差异可能带来风险。 • 复现难度: 高；需要构建26个应用和模拟器，数据种子和任务设计复杂。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2606.07500v1",
     "title": "Sparse Subspace-to-Expert Sharing for Task-Agnostic Continual Learning",
     "pdf_url": "https://arxiv.org/pdf/2606.07500v1",
