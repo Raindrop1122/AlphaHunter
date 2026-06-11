@@ -1,5 +1,224 @@
 [
   {
+    "id": "2606.12411v1",
+    "title": "Context-Driven Incremental Compression for Multi-Turn Dialogue Generation",
+    "pdf_url": "https://arxiv.org/pdf/2606.12411v1",
+    "published": "2026-06-10",
+    "crawled_at": "2026-06-11 21:52:04",
+    "ai_score": 7.5,
+    "translated_title": "上下文驱动的增量压缩用于多轮对话生成",
+    "summary_en": "• Model Architecture: Proposes Context-Driven Incremental Compression (C-DIC), which treats conversation as interleaved contextual threads with revisable per-thread compression states stored in a compact dialogue memory. A retrieve, revise, and write-back loop shares information across turns and updates stale memories.\n• Data used: Long-form dialogue benchmarks (not specified in abstract, but likely including datasets like MultiWOZ, Persona-Chat, or similar).\n• Performance metrics: Demonstrates stable inference latency and perplexity over hundreds of dialogue turns, with superior performance and efficiency compared to baselines.",
+    "summary_cn": "• 核心模型: 提出上下文驱动的增量压缩（C-DIC），将对话视为交织的上下文线程，每个线程的可修正压缩状态存储在紧凑的对话记忆中，通过检索、修正和写回循环实现跨轮信息共享和记忆更新。\n• 数据来源: 长对话基准数据集（具体未在摘要中说明，可能包括MultiWOZ、Persona-Chat等）。\n• 主要结论: 在数百轮对话中保持稳定的推理延迟和困惑度，性能与效率均优于基线方法。",
+    "verdict_en": "• Alpha Potential: Low for direct trading; may be useful for NLP/LLM-based strategies requiring long-context understanding, such as sentiment analysis or event extraction from long conversations.\n• Implementation Risk: Moderate; requires careful tuning of compression and retrieval mechanisms, and integration with existing LLM pipelines.\n• Novelty: High; introduces incremental compression with cross-turn memory revision, addressing a key limitation in long-dialogue modeling.",
+    "verdict_cn": "• 创新点: 增量压缩与跨轮记忆修正机制，解决了长对话建模中的信息丢失和误差累积问题。\n• 实盘坑: 直接交易应用价值低，需结合NLP策略；压缩和检索机制调参复杂，可能引入延迟。\n• 复现难度: 中等；需要对话数据集和LLM基础设施，但核心算法可复现。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.12406v1",
+    "title": "FACTR 2: Learning External Force Sensing for Commodity Robot Arms Improves Policy Learning",
+    "pdf_url": "https://arxiv.org/pdf/2606.12406v1",
+    "published": "2026-06-10",
+    "crawled_at": "2026-06-11 21:52:13",
+    "ai_score": 7.5,
+    "translated_title": "FACTR 2：为商用机器人手臂学习外力感知以改进策略学习",
+    "summary_en": "• Model Architecture: Neural External Torque Estimation (NEXT) is a data-driven method that estimates external joint torques without dedicated force sensors, using only free-motion data.\n• Data used: Trained on 10 minutes of free-motion data, with training time of 1 minute.\n• Performance metrics: Achieves estimates comparable to dedicated joint-torque sensors; Force-Informed Re-Sampling Training (FIRST) improves policy learning by over 17% in task progress across five long-horizon tasks.\n• Additional: Enables force-feedback teleoperation on low-cost arms and improves behavior cloning via up-sampling pre-contact and contact segments.",
+    "summary_cn": "• 核心模型: Neural External Torque Estimation (NEXT) 是一种数据驱动方法，无需专用力传感器即可估计外部关节扭矩，仅使用自由运动数据。\n• 数据来源: 使用10分钟的自由运动数据训练，训练时间仅1分钟。\n• 主要结论: 估计精度可与专用关节扭矩传感器媲美；Force-Informed Re-Sampling Training (FIRST) 在五个长时任务中使策略学习任务进度提升超过17%。\n• 额外亮点: 实现低成本机械臂的力反馈遥操作，并通过上采样预接触和接触段改进行为克隆。",
+    "verdict_en": "• Alpha Potential: Moderate; the method improves policy learning for robotic manipulation, which could be applied to automated trading of physical assets or high-frequency robotics, but direct financial alpha is limited.\n• Implementation Risk: Low to moderate; requires only 10 minutes of free-motion data and 1 minute training, but integration with existing robot arms may need calibration.\n• Novelty: High; combines data-driven torque estimation with resampling for policy learning, offering a practical solution for force-aware robotics without extra sensors.",
+    "verdict_cn": "• 创新点: 将数据驱动扭矩估计与重采样策略学习结合，为无额外传感器的力感知机器人提供实用方案。\n• 实盘坑: 直接金融应用有限，需结合机器人交易场景；估计精度可能受机械臂型号和负载影响。\n• 复现难度: 低；代码开源，数据需求小，但需机器人硬件支持。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.12397v1",
+    "title": "Redesign Mixture-of-Experts Routers with Manifold Power Iteration",
+    "pdf_url": "https://arxiv.org/pdf/2606.12397v1",
+    "published": "2026-06-10",
+    "crawled_at": "2026-06-11 21:52:20",
+    "ai_score": 7.5,
+    "translated_title": "重新设计混合专家模型路由器的流形幂迭代方法",
+    "summary_en": "• Model Architecture: Proposes Manifold Power Iteration (MPI) to align router rows with principal singular directions of expert matrices, replacing standard dot-product similarity.\n• Data used: Pretrained MoE models from 1B to 11B parameters, likely on standard language modeling datasets (e.g., Pile, C4).\n• Performance metrics: Improved perplexity and downstream task performance compared to baseline MoE routers.",
+    "summary_cn": "• 核心模型: 提出流形幂迭代（MPI）方法，将路由器行与专家矩阵的主奇异方向对齐，替代标准点积相似度。\n• 数据来源: 在1B到11B参数的MoE模型上进行预训练，可能使用标准语言建模数据集（如Pile、C4）。\n• 主要结论: 相比基线MoE路由器，MPI在困惑度和下游任务性能上均有提升。",
+    "verdict_en": "• Alpha Potential: Moderate; improved routing could lead to better model efficiency and performance, but direct trading alpha is unclear.\n• Implementation Risk: High; requires modifying MoE architecture and pretraining, not easily applied to existing models.\n• Novelty: High; introduces a principled geometric approach to router design, moving beyond heuristic methods.",
+    "verdict_cn": "• 创新点: 从几何角度重新设计路由器，理论严谨，首次将主奇异方向对齐引入MoE。\n• 实盘坑: 需要重新预训练模型，计算成本高，且对交易策略的直接贡献有限。\n• 复现难度: 高；需要大规模计算资源和MoE框架支持。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.12386v1",
+    "title": "ATLAS: Active Theory Learning for Automated Science",
+    "pdf_url": "https://arxiv.org/pdf/2606.12386v1",
+    "published": "2026-06-10",
+    "crawled_at": "2026-06-11 21:52:30",
+    "ai_score": 7.5,
+    "translated_title": "ATLAS：面向自动化科学的主动理论学习",
+    "summary_en": "• Model Architecture: ATLAS uses a diverse ensemble of sparse neural networks (Disentangled RNNs) as mechanistic hypotheses, iteratively designing experiments to distinguish between them.\n• Data used: Synthetic data from reinforcement learning agents (bandit tasks) with known ground truth; no real-world experimental data.\n• Performance metrics: Evaluated on behavioral, structural, and computational similarity metrics; achieves 5-10x sample efficiency over random experimentation and matches expert-designed experiments.\n• Key finding: Active learning framework significantly reduces the number of experiments needed to recover interpretable models.",
+    "summary_cn": "• 核心模型: 使用稀疏神经网络（解耦RNN）集成作为机制假设，通过主动学习迭代设计实验以区分不同假设。\n• 数据来源: 基于强化学习智能体（赌博机任务）的合成数据，无真实实验数据。\n• 主要结论: 在行为、结构和计算相似性指标上，ATLAS相比随机实验实现5-10倍样本效率提升，且与专家设计实验性能相当。\n• 创新点: 将主动学习与可解释模型发现结合，自动化科学实验设计。",
+    "verdict_en": "• Alpha Potential: Low direct alpha; framework is for scientific discovery, not trading. However, the active learning approach could be adapted for factor discovery or experimental design in quantitative research.\n• Implementation Risk: High; requires domain-specific mechanistic models and synthetic data generation. Real-world application to finance would need significant adaptation.\n• Novelty: High novelty in combining active learning with interpretable neural networks for hypothesis generation; but limited to cognitive science domain.\n• Practicality: Not directly applicable to trading; may inspire methods for efficient backtesting or strategy search.",
+    "verdict_cn": "• 创新点: 将主动学习与可解释神经网络结合用于假设生成，方法新颖，但局限于认知科学。\n• 实盘坑: 直接用于交易几乎不可能；需大量领域适配，且依赖合成数据，真实市场环境复杂。\n• 复现难度: 高；需要构建特定领域的机制模型和实验设计，代码未开源。\n• 交易价值: 低；但主动学习思想可借鉴于因子挖掘或策略搜索中的实验设计。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.12384v1",
+    "title": "APPO: Agentic Procedural Policy Optimization",
+    "pdf_url": "https://arxiv.org/pdf/2606.12384v1",
+    "published": "2026-06-10",
+    "crawled_at": "2026-06-11 21:52:37",
+    "ai_score": 7.5,
+    "translated_title": "APPO：智能体程序化策略优化",
+    "summary_en": "• Model Architecture: APPO shifts branching and credit assignment from coarse interaction units (e.g., tool calls) to fine-grained decision points in the sequence, using a Branching Score that combines token uncertainty with policy-induced likelihood gains.\n• Data: The method is evaluated on 13 benchmarks, likely involving multi-turn tool-use tasks for LLM agents.\n• Performance Metrics: APPO consistently improves strong agentic RL baselines by nearly 4 points, while maintaining efficient tool-calls and interpretability.",
+    "summary_cn": "• 核心模型: APPO将分支和信用分配从粗粒度的交互单元（如工具调用）转移到序列中的细粒度决策点，使用结合令牌不确定性和策略诱导似然增益的分支分数。\n• 数据来源: 在13个基准测试上评估，涉及LLM智能体的多轮工具使用任务。\n• 主要结论: APPO在强智能体RL基线上持续提升近4个百分点，同时保持高效的工具调用和可解释性。",
+    "verdict_en": "• Alpha Potential: Moderate; improvements are consistent but incremental (4 points) on benchmarks; may not translate to significant trading alpha.\n• Implementation Risk: High; requires careful tuning of branching score and advantage scaling, and integration with agentic RL pipelines.\n• Novelty: Moderate; combines existing ideas (uncertainty-based branching, credit assignment) in a novel way for agentic RL.",
+    "verdict_cn": "• 创新点: 将分支和信用分配细化到序列级别，结合不确定性策略似然增益，有一定新意。\n• 实盘坑: 改进幅度有限（4点），且依赖复杂超参数，实盘部署风险高。\n• 复现难度: 中等；需要大量计算资源和精细调参，但算法描述较清晰。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.12372v1",
+    "title": "UniIntervene: Agentic Intervention for Efficient Real-World Reinforcement Learning",
+    "pdf_url": "https://arxiv.org/pdf/2606.12372v1",
+    "published": "2026-06-10",
+    "crawled_at": "2026-06-11 21:52:45",
+    "ai_score": 7.5,
+    "translated_title": "UniIntervene：用于高效现实世界强化学习的代理干预",
+    "summary_en": "• Model Architecture: UniIntervene consists of a future-conditioned action-value estimator, a temporal value-risk critic, and a goal-conditioned recovery policy. It detects unproductive exploration and autonomously recovers the policy toward high-value states.\n• Data used: The model uses a memory of past intervention episodes to retrieve high-value recovery targets. Experiments are conducted on diverse real-world manipulation tasks.\n• Performance metrics: UniIntervene improves average success rate by 8.6% and reduces human interventions by 57% compared to state-of-the-art HiL-RL baselines.",
+    "summary_cn": "• 核心模型: UniIntervene包含未来条件动作价值估计器、时间价值风险批评器和目标条件恢复策略，自动检测低效探索并恢复至高效状态。\n• 数据来源: 使用过去干预情节的记忆库检索高价值恢复目标，在多种真实世界操作任务上实验。\n• 主要结论: 相比最先进的HiL-RL基线，UniIntervene将平均成功率提高8.6%，同时减少57%的人工干预。",
+    "verdict_en": "• Alpha Potential: Moderate. The reduction in human intervention is significant for real-world RL scalability, but direct trading alpha is limited as it targets robotic manipulation.\n• Implementation Risk: High. Requires integration with physical robotic systems and real-time intervention, which is complex and costly.\n• Novelty: High. The agentic intervention framework with value-risk critic and recovery policy is novel for HiL-RL.",
+    "verdict_cn": "• 创新点: 提出代理干预框架，结合价值风险批评器和恢复策略，在HiL-RL中具有新颖性。\n• 实盘坑: 直接应用于量化交易困难，需物理机器人系统集成，成本高且复杂。\n• 复现难度: 高，依赖真实世界机器人实验和大量干预数据，复现门槛高。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.12370v1",
+    "title": "Breaking Entropy Bounds: Accelerating RL Training via MTP with Rejection Sampling",
+    "pdf_url": "https://arxiv.org/pdf/2606.12370v1",
+    "published": "2026-06-10",
+    "crawled_at": "2026-06-11 21:52:55",
+    "ai_score": 8.5,
+    "translated_title": "打破熵界：通过MTP与拒绝采样加速强化学习训练",
+    "summary_en": [
+      "• Model Architecture: Bebop integrates Multi-Token Prediction (MTP) with rejection sampling to accelerate RL rollout, using a novel end-to-end total variation (TV) loss to optimize acceptance rates.",
+      "• Data used: The paper uses mathematical reasoning, code generation, and agentic tasks for evaluation, with models Qwen3.5, Qwen3.6, and Qwen3.7.",
+      "• Performance metrics: Achieves up to 95% acceptance rate, 25% extra inference throughput, and 1.8x end-to-end acceleration in async RL training.",
+      "• Key finding: MTP acceptance rate is bounded by model entropy fluctuation, and rejection sampling mitigates entropy disturbance better than greedy sampling.",
+      "• Training strategy: Pre-RL MTP training with TV loss and rejection sampling maintains consistent speedup without costly online updates."
+    ],
+    "summary_cn": [
+      "• 核心模型: Bebop结合多令牌预测（MTP）与拒绝采样，提出端到端总变差（TV）损失函数，直接优化拒绝采样接受率。",
+      "• 数据来源: 在数学推理、代码生成和智能体任务上评估，使用Qwen3.5、Qwen3.6和Qwen3.7模型。",
+      "• 主要结论: MTP接受率受模型熵波动限制，拒绝采样优于贪婪采样；TV损失带来约10%接受率提升，实现95%接受率和1.8倍端到端加速。",
+      "• 创新点: 揭示熵与接受率的负线性关系，并提出预RL训练策略避免在线更新。",
+      "• 性能指标: 推理吞吐量提升25%，异步RL训练加速1.8倍。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for LLM-based trading strategies requiring fast inference, but direct alpha in finance is indirect.",
+      "• Implementation Risk: Moderate; requires custom MTP heads and TV loss, but pre-training avoids online updates.",
+      "• Novelty: Strong; first systematic study of MTP in RL post-training, with novel TV loss and entropy analysis.",
+      "• Practicality: High for LLM deployment; rejection sampling is straightforward, but integration with existing RL pipelines may need engineering effort."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次系统研究MTP在RL后训练中的应用，提出TV损失函数和熵界理论，解决接受率退化问题。",
+      "• 实盘坑: 金融场景直接应用有限，需结合LLM交易模型；TV损失和MTP头增加模型复杂度。",
+      "• 复现难度: 中等；需要修改模型架构和训练流程，但预训练策略降低了在线更新成本。",
+      "• 潜力: 对高频LLM推理有加速价值，但量化交易中需验证实际收益。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.12364v1",
+    "title": "On Subquadratic Architectures: From Applications to Principles",
+    "pdf_url": "https://arxiv.org/pdf/2606.12364v1",
+    "published": "2026-06-10",
+    "crawled_at": "2026-06-11 21:53:03",
+    "ai_score": 7.5,
+    "translated_title": "从应用到原理：次二次架构研究",
+    "summary_en": [
+      "• Model Architecture: Compares xLSTM, Mamba-2, and Gated DeltaNet as subquadratic alternatives to Transformer.",
+      "• Data used: Code-model pre-training, distillation from LLMs, and time-series foundation model pre-training.",
+      "• Performance metrics: xLSTM achieves strongest overall performance across all tasks.",
+      "• Key analysis: Unified formulation reveals xLSTM's advantage in state tracking and memory dynamics via flexible gating."
+    ],
+    "summary_cn": [
+      "• 核心模型: 对比xLSTM、Mamba-2和Gated DeltaNet三种次二次架构。",
+      "• 数据来源: 代码模型预训练、大语言模型蒸馏、时间序列基础模型预训练。",
+      "• 主要结论: xLSTM在所有任务中表现最佳，归因于其灵活的门控机制实现稳健的状态跟踪与记忆修正。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; xLSTM's memory efficiency could benefit long-sequence financial modeling.",
+      "• Implementation Risk: Low; architectures are open-source but require careful hyperparameter tuning.",
+      "• Novelty: High; provides principled comparison and theoretical explanation for subquadratic designs."
+    ],
+    "verdict_cn": [
+      "• 创新点: 统一框架下揭示xLSTM门控机制对状态跟踪的改进，理论贡献扎实。",
+      "• 实盘坑: 金融时序任务中长序列记忆优势可能被噪声抵消，需验证泛化性。",
+      "• 复现难度: 中等；代码开源但需大量计算资源复现预训练实验。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.12362v1",
+    "title": "Latent World Recovery for Multimodal Learning with Missing Modalities",
+    "pdf_url": "https://arxiv.org/pdf/2606.12362v1",
+    "published": "2026-06-10",
+    "crawled_at": "2026-06-11 21:53:10",
+    "ai_score": 7.2,
+    "translated_title": "缺失模态下的多模态学习潜在世界恢复",
+    "summary_en": "• Model Architecture: LWR aligns modality-specific embeddings in a shared latent space via neighbor-based alignment and fuses only available modalities for prediction, avoiding explicit imputation.\n• Data used: Real-world incomplete multi-omics benchmarks, including cancer phenotype classification and survival prediction tasks.\n• Performance metrics: Demonstrates robust multimodal prediction under partial observation, outperforming baselines on downstream tasks.",
+    "summary_cn": "• 核心模型: LWR通过邻居对齐将各模态嵌入映射到共享潜在空间，并仅融合可用模态进行预测，避免显式插补。\n• 数据来源: 真实世界不完整多组学基准数据集，涵盖癌症表型分类和生存预测任务。\n• 主要结论: 在部分观测下实现鲁棒的多模态预测，在下游任务上优于基线方法。",
+    "verdict_en": "• Alpha Potential: Low for financial trading; method targets bioscience, not market data.\n• Implementation Risk: High due to domain-specific alignment and fusion; requires careful tuning.\n• Novelty: Moderate; combines latent alignment and availability-aware fusion, but similar ideas exist in multimodal learning.",
+    "verdict_cn": "• 创新点: 潜在对齐与可用性感知融合的组合有一定新意，但多模态缺失处理并非全新。\n• 实盘坑: 针对生物科学设计，直接迁移至金融数据可能效果不佳，且计算成本高。\n• 复现难度: 中等，依赖特定模态对齐和融合策略，需领域知识。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.12360v1",
+    "title": "Anatomy of Post-Training: Using Interpretability to Characterize Data and Shape the Learning Signal",
+    "pdf_url": "https://arxiv.org/pdf/2606.12360v1",
+    "published": "2026-06-10",
+    "crawled_at": "2026-06-11 21:53:20",
+    "ai_score": 7.5,
+    "translated_title": "后训练剖析：利用可解释性表征数据并塑造学习信号",
+    "summary_en": "• Model Architecture: The paper proposes a data-centric post-training pipeline that leverages interpretability protocols to analyze preference datasets, rather than introducing a new model architecture. It unifies existing interpretability-based training protocols as ways of shaping rewards via feature or data interventions.\n• Data used: The study focuses on preference datasets used in language-model post-training, specifically analyzing spurious correlations and undesirable signals such as over-stylization and sycophancy. Empirical experiments are conducted on existing preference data.\n• Performance metrics: The pipeline demonstrates diagnostic capabilities to identify off-target learning, mitigate undesirable behaviors, and amplify desired properties like safeguards and model personality. No quantitative performance metrics (e.g., accuracy, reward scores) are explicitly reported; the evaluation is qualitative.",
+    "summary_cn": "• 核心模型: 提出一种以数据为中心的后训练流程，利用可解释性协议分析偏好数据集，而非引入新模型架构。统一了现有基于可解释性的训练协议，通过特征或数据干预来塑造奖励信号。\n• 数据来源: 聚焦语言模型后训练中使用的偏好数据集，特别分析过度风格化和谄媚等虚假相关性及不良信号。实证实验基于现有偏好数据。\n• 主要结论: 该流程能够诊断现有偏好数据中的不良信号，减轻脱靶学习，并增强安全防护和模型个性等期望属性。但未报告定量性能指标，评估为定性。",
+    "verdict_en": "• Alpha Potential: Low to moderate. The paper focuses on improving model alignment and interpretability, which is more relevant for LLM safety and robustness than direct alpha generation. However, it could indirectly enhance NLP-based trading strategies by reducing spurious correlations.\n• Implementation Risk: High. The pipeline requires significant manual effort in interpretability analysis and statistical hypothesis testing, making it difficult to automate at scale. The qualitative nature of results also poses challenges for rigorous backtesting.\n• Novelty: Moderate. The idea of using interpretability to audit post-training data is not entirely new, but the unified framework and empirical demonstrations provide some novelty.",
+    "verdict_cn": "• 创新点: 将可解释性用于后训练数据审计，统一了多种基于可解释性的训练协议，有一定新意，但概念并非全新。\n• 实盘坑: 流程依赖大量人工可解释性分析和统计假设检验，难以规模化自动化；结果定性，缺乏量化指标，回测困难。\n• 复现难度: 高。需要领域专家进行概念标注和假设检验，且依赖具体模型和数据，复现门槛高。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2606.09825v1",
     "title": "An Agency-Transferring Model-Free Policy Enhancement Technique",
     "pdf_url": "https://arxiv.org/pdf/2606.09825v1",
