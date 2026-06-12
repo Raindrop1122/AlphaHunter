@@ -1,5 +1,237 @@
 [
   {
+    "id": "2606.13677v1",
+    "title": "Mana: Dexterous Manipulation of Articulated Tools",
+    "pdf_url": "https://arxiv.org/pdf/2606.13677v1",
+    "published": "2026-06-11",
+    "crawled_at": "2026-06-12 21:21:34",
+    "ai_score": 6.5,
+    "translated_title": "Mana: 灵巧操作铰接工具",
+    "summary_en": [
+      "• Model Architecture: Coarse-to-fine pipeline combining procedural grasp keyframe generation, motion planning, and reinforcement learning.",
+      "• Data used: Procedurally generated grasp keyframes with minimal human input (<1 minute per tool); sim-to-real transfer without real-world data.",
+      "• Performance metrics: Zero-shot sim-to-real transfer for grasping and in-hand manipulation across four articulated tools with different scales and joint types.",
+      "• Key result: Demonstrates scalable approach to dexterous articulated tool manipulation, outperforming prior methods in simulation and real-world experiments."
+    ],
+    "summary_cn": [
+      "• 核心模型: 粗到细的流水线，结合程序化生成的抓取关键帧、运动规划和强化学习。",
+      "• 数据来源: 程序化生成抓取关键帧，人工输入极少（每个工具<1分钟）；无需真实数据实现仿真到现实迁移。",
+      "• 主要结论: 在四种不同尺度和关节类型的铰接工具上实现零样本仿真到现实迁移，展示了可扩展的灵巧操作方案。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low for direct trading; applicable to robotics automation in logistics or manufacturing, but not financial markets.",
+      "• Implementation Risk: High due to reliance on simulation and reinforcement learning; real-world deployment requires robust sim-to-real alignment.",
+      "• Novelty: Moderate; reinterprets manipulation as animation problem, but similar coarse-to-fine approaches exist in robotics."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将灵巧操作重新定义为动画问题，粗到细流水线减少人工标注，但类似思路在机器人领域已有先例。",
+      "• 实盘坑: 金融应用价值低，主要面向机器人领域；仿真到现实迁移的稳定性是实际部署的瓶颈。",
+      "• 复现难度: 高，需要仿真环境、强化学习训练和机器人硬件，非金融领域可复现性差。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.13671v1",
+    "title": "Understanding Truncated Positional Encodings for Graph Neural Networks",
+    "pdf_url": "https://arxiv.org/pdf/2606.13671v1",
+    "published": "2026-06-11",
+    "crawled_at": "2026-06-12 21:21:44",
+    "ai_score": 7.5,
+    "translated_title": "理解图神经网络的截断位置编码",
+    "summary_en": "• Model Architecture: Analyzes truncated positional encodings (PEs) for GNNs, including spectral (e.g., Laplacian eigenvectors) and walk-based (e.g., powers of adjacency matrix) families.\n• Data used: Theoretical analysis with experimental validation on real-world graph datasets (e.g., molecular graphs, social networks).\n• Performance metrics: Expressivity measured by 1-WL and 3-WL tests; empirical performance on graph classification/regression tasks.\n• Key findings: Truncated PEs differ fundamentally in expressive power; truncated spectral PEs are no stronger than 1-WL; mixed PEs outperform single families.\n• Novelty: First theoretical study of truncated PEs, showing practical implications for GNN design.",
+    "summary_cn": "• 核心模型: 研究图神经网络中截断位置编码（PE），包括谱类（如拉普拉斯特征向量）和游走类（如邻接矩阵幂）。\n• 数据来源: 理论分析结合真实图数据集（如分子图、社交网络）的实验验证。\n• 主要结论: 截断PE在表达能力上存在根本差异；截断谱PE不再强于1-WL测试；混合PE优于单一家族。\n• 创新点: 首次对截断PE进行理论分析，揭示实际GNN设计中的关键差异。\n• 性能指标: 以1-WL和3-WL测试衡量表达能力，并在图分类/回归任务上验证。",
+    "verdict_en": "• Alpha Potential: Low direct alpha; insights on PE truncation may improve GNN-based factor models for graph-structured financial data (e.g., supply chains).\n• Implementation Risk: High; requires careful selection and combination of truncated PEs, with O(n^3) complexity for full versions avoided.\n• Novelty: High theoretical contribution; first to characterize truncated PE expressivity, bridging theory and practice.\n• Practicality: Experimental results suggest mixed PEs are better, but no clear recipe for optimal truncation.\n• Relevance: Useful for quant researchers using GNNs on relational data, but not directly applicable to standard time-series alpha.",
+    "verdict_cn": "• 创新点: 首次理论分析截断位置编码，揭示谱类与游走类在截断后的表达能力差异，填补理论空白。\n• 实盘坑: 截断方式选择无明确指导，需大量实验调优；复杂度虽降低，但混合PE可能增加实现难度。\n• 复现难度: 中等；理论部分需图论基础，实验部分可基于标准GNN框架复现。\n• 量化价值: 对图结构金融数据（如供应链网络）的因子模型有潜在改进，但直接用于高频或传统alpha策略价值有限。\n• 风险: 截断可能导致信息丢失，需谨慎验证对下游任务的影响。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2606.13657v1",
+    "title": "Dense Supervision, Sparse Updates: On the Sparsity and Geometry of On-Policy Distillation",
+    "pdf_url": "https://arxiv.org/pdf/2606.13657v1",
+    "published": "2026-06-11",
+    "crawled_at": "2026-06-12 21:21:51",
+    "ai_score": 7.5,
+    "translated_title": "密集监督，稀疏更新：论策略内蒸馏的稀疏性与几何结构",
+    "summary_en": "• Model Architecture: Analyzes on-policy distillation (OPD) across language and vision-language models, focusing on parameter update patterns.\n• Data used: Utilizes multiple model pairs and use cases, but specific datasets are not detailed; likely standard benchmarks.\n• Performance metrics: OPD updates are small, coordinate-sparse, and FFN-heavy; training only the discovered subnetwork recovers near-full OPD performance. AdamW outperforms sparsity-inducing SGD. Updates are full-rank but spectrally concentrated, lying away from principal singular subspaces of source weights.",
+    "summary_cn": "• 核心模型: 分析策略内蒸馏（OPD）在语言和视觉-语言模型对上的参数更新模式。\n• 数据来源: 使用多个模型对和用例，但未详述具体数据集，可能为标准基准。\n• 主要结论: OPD更新小且坐标稀疏，主要分布在FFN层；仅训练发现的子网络可恢复接近完整OPD的性能。AdamW优于稀疏诱导的SGD。更新数值满秩但谱集中，远离源权重的奇异主子空间。",
+    "verdict_en": "• Alpha Potential: Moderate. Insights on sparsity could lead to efficient fine-tuning strategies, but direct trading alpha is unclear.\n• Implementation Risk: Low to moderate. Sparsity patterns may reduce computational cost, but require careful optimizer selection (AdamW preferred).\n• Novelty: High. Provides novel geometric and sparsity analysis of OPD, distinguishing it from dense parameter rewriting.",
+    "verdict_cn": "• 创新点: 首次从稀疏性和几何角度深入分析OPD，揭示其与密集参数重写的本质区别。\n• 实盘坑: 直接交易信号弱，需结合下游任务；SGD优化器表现差，需用AdamW。\n• 复现难度: 中等。需多模型对和计算资源，但子网络训练可降低开销。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.13649v1",
+    "title": "Operadic consistency: a label-free signal for compositional reasoning failures in LLMs",
+    "pdf_url": "https://arxiv.org/pdf/2606.13649v1",
+    "published": "2026-06-11",
+    "crawled_at": "2026-06-12 21:22:00",
+    "ai_score": 8.5,
+    "translated_title": "操作一致性：LLM组合推理失败的无标签信号",
+    "summary_en": "• Model Architecture: Operadic consistency (OC) is a label-free signal for detecting compositional reasoning failures in LLMs, derived from operad theory. It compares a model's direct answer to a compositional query with the answer composed from a stated decomposition.\n• Data used: Evaluated on 12 instruction-tuned LLMs (4B to 671B parameters, open-weights and closed-source) across four multi-hop QA datasets: HotpotQA, DROP, MuSiQue, and StrategyQA.\n• Performance metrics: OC strongly correlates with accuracy (Pearson r 0.86-0.94, p≤0.0004). It outperforms chain-of-thought self-consistency (CoT-SC) on MuSiQue and StrategyQA (r≈0.45 for CoT-SC vs OC). Selective prediction improvements over tuned CoT-SC baseline at K=3 budget: AUARC lifts +0.086 to +0.096, AUROC lifts +0.092 to +0.164. On five frontier models, positive lift on 16/16 cells, 95% CIs exclude zero on 12/16.",
+    "summary_cn": "• 核心模型: 提出操作一致性（OC）信号，基于操作理论，通过比较模型直接回答与分解组合回答来检测组合推理失败，无需标签。\n• 数据来源: 在12个指令微调LLM（4B-671B参数，开源和闭源）上评估，使用四个多跳问答数据集：HotpotQA、DROP、MuSiQue和StrategyQA。\n• 主要结论: OC与准确率强相关（Pearson r 0.86-0.94，p≤0.0004），在MuSiQue和StrategyQA上优于思维链自一致性（CoT-SC的r≈0.45）。在K=3预算下，选择性预测提升显著：AUARC提升+0.086至+0.096，AUROC提升+0.092至+0.164。在五个前沿模型上，16个测试单元中12个95%置信区间排除零。",
+    "verdict_en": "• Alpha Potential: High. OC provides a novel, label-free signal for detecting reasoning failures, which can improve selective prediction and potentially enhance LLM-based trading strategies by filtering unreliable outputs.\n• Implementation Risk: Medium. Requires extracting decompositions from LLMs, which may be computationally expensive. The signal's effectiveness depends on the model's ability to generate valid decompositions.\n• Novelty: High. Operadic consistency is a theoretically grounded approach, distinct from existing confidence baselines like self-consistency and semantic entropy.",
+    "verdict_cn": "• 创新点: 基于操作理论提出新信号，无需标签即可检测组合推理失败，理论新颖且实用。\n• 实盘坑: 需要模型生成分解，计算成本高；分解质量影响信号有效性，对弱模型可能失效。\n• 复现难度: 中等。需实现操作一致性计算，但论文提供了详细方法，数据集公开。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.13647v1",
+    "title": "SkMTEB: Slovak Massive Text Embedding Benchmark and Model Adaptation",
+    "pdf_url": "https://arxiv.org/pdf/2606.13647v1",
+    "published": "2026-06-11",
+    "crawled_at": "2026-06-12 21:22:07",
+    "ai_score": 6.5,
+    "translated_title": "SkMTEB：斯洛伐克大规模文本嵌入基准与模型适配",
+    "summary_en": "• Introduces SkMTEB, the first comprehensive MTEB-style benchmark for Slovak, covering 31 datasets across 7 task types.\n• Evaluates 31 embedding models, finding that large instruction-tuned multilingual models perform best, while Slovak-specific NLU models transfer poorly.\n• Develops e5-sk-small (45M params) and e5-sk-large (365M) by trimming vocabulary and fine-tuning Multilingual E5 models, achieving up to 62% size reduction.\n• The open-source models achieve competitive performance with proprietary APIs for semantic search and RAG tasks.",
+    "summary_cn": "• 核心模型: 基于Multilingual E5模型进行词汇裁剪和微调，开发了e5-sk-small（45M参数）和e5-sk-large（365M参数）。\n• 数据来源: 构建了包含31个数据集、7种任务类型的SkMTEB基准，覆盖斯洛伐克语。\n• 主要结论: 大型指令微调多语言模型表现最佳，斯洛伐克特定NLU模型迁移效果差；所提模型在尺寸减少62%的情况下仍具竞争力。",
+    "verdict_en": "• Alpha Potential: Low for trading; primarily NLP benchmark and model adaptation for low-resource languages.\n• Implementation Risk: Low; models and data are open-source, but relevance to quantitative finance is minimal.\n• Novelty: Moderate; first comprehensive Slovak embedding benchmark, but methodology is standard fine-tuning.",
+    "verdict_cn": "• 创新点: 首个斯洛伐克语嵌入基准，但方法论为常规微调，创新有限。\n• 实盘坑: 与量化交易无关，无法直接用于金融策略。\n• 复现难度: 低，代码和数据开源，但需语言资源。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.13637v1",
+    "title": "The Stable Recovery Manifold: Geometric Principles Governing Recoverability in Continual Learning",
+    "pdf_url": "https://arxiv.org/pdf/2606.13637v1",
+    "published": "2026-06-11",
+    "crawled_at": "2026-06-12 21:22:13",
+    "ai_score": 6.5,
+    "translated_title": "稳定恢复流形：持续学习中可恢复性的几何原理",
+    "summary_en": "• Model Architecture: ResNet-18 trained sequentially on 10 tasks of Split CIFAR-100.\n• Data used: Split CIFAR-100 dataset with 10 disjoint tasks.\n• Performance metrics: Recovery Subspace Dimensionality (k_t), principal-angle drift, recoverability variance explained (82.2%).",
+    "summary_cn": "• 核心模型: 使用ResNet-18在Split CIFAR-100上顺序训练10个任务。\n• 数据来源: Split CIFAR-100数据集，包含10个不重叠的任务。\n• 主要结论: 恢复子空间维度稳定（平均k_t=8.0），主角度漂移与可恢复性强相关（r=-0.862），几何模型解释82.2%的方差。",
+    "verdict_en": "• Alpha Potential: Low; focuses on theoretical understanding of forgetting, not directly applicable to trading.\n• Implementation Risk: High; requires careful geometric analysis and may not generalize to financial data.\n• Novelty: Moderate; introduces Recovery Subspace Dimensionality but builds on existing frameworks.",
+    "verdict_cn": "• 创新点: 提出恢复子空间维度（k_t）度量，揭示遗忘知识的几何结构。\n• 实盘坑: 理论性强，与金融时序数据差距大，难以直接用于策略。\n• 复现难度: 中等；需要深度学习框架和几何计算，但数据集和模型公开。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.13633v1",
+    "title": "Aerial Wildfire Suppression Planning with a Hybrid CNN-Cellular Automata Fire Model",
+    "pdf_url": "https://arxiv.org/pdf/2606.13633v1",
+    "published": "2026-06-11",
+    "crawled_at": "2026-06-12 21:22:21",
+    "ai_score": 5.5,
+    "translated_title": "基于混合CNN-元胞自动机火灾模型的空中野火抑制规划",
+    "summary_en": [
+      "• Model Architecture: Combines a hybrid neural-cellular automaton (CNN-CA) model for fire spread prediction with a gradient-based optimization module for aerial drop planning.",
+      "• Data used: Terrain, fuel, and wind data; case study based on the 2020 Bear Fire.",
+      "• Performance metrics: Evaluates robustness via Monte Carlo sampling (aleatoric uncertainty) and spatially correlated perturbations (epistemic uncertainty); reduces total fire-affected area.",
+      "• Intervention: Binary drop actions with continuous-valued location and orientation; water and retardant modeled with distinct suppression effects."
+    ],
+    "summary_cn": [
+      "• 核心模型: 混合神经网络-元胞自动机（CNN-CA）火灾模型，结合梯度优化进行空中投放规划。",
+      "• 数据来源: 地形、燃料和风场数据；基于2020年Bear Fire案例研究。",
+      "• 主要结论: 通过蒙特卡洛采样和空间相关扰动评估不确定性，有效减少火灾影响面积。",
+      "• 干预措施: 二元投放动作，连续位置和方向参数；水和阻燃剂具有不同抑制效果。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low for financial markets; domain-specific to wildfire suppression, not directly applicable to trading.",
+      "• Implementation Risk: High; requires specialized data (terrain, fuel, wind) and integration with physical models.",
+      "• Novelty: Moderate; hybrid CNN-CA for fire spread is novel, but optimization framework is standard gradient-based.",
+      "• Relevance: Minimal to quantitative finance; no financial data or trading signals."
+    ],
+    "verdict_cn": [
+      "• 创新点: 混合CNN-CA模型预测火灾蔓延，结合梯度优化规划空中投放，有一定新颖性。",
+      "• 实盘坑: 与金融市场无关，无法直接用于交易策略；需要大量非金融数据。",
+      "• 复现难度: 高；需要火灾模拟、地形数据等专业领域知识。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.13629v1",
+    "title": "Valid Inference with Synthetic Data via Task Exchangeability",
+    "pdf_url": "https://arxiv.org/pdf/2606.13629v1",
+    "published": "2026-06-11",
+    "crawled_at": "2026-06-12 21:22:27",
+    "ai_score": 7.5,
+    "translated_title": "通过任务可交换性实现合成数据的有效推断",
+    "summary_en": "• Proposes a new condition called 'task exchangeability' for valid inference with synthetic data.\n• Develops methods that provide provable guarantees under task exchangeability and extensions beyond.\n• Demonstrates framework on public opinion surveys using LLM-generated 'silicon samples' and AI evaluation with autoraters.\n• No specific model architecture or performance metrics are detailed; focus is on statistical principles.",
+    "summary_cn": "• 核心模型: 提出任务可交换性条件，用于合成数据的统计推断。\n• 数据来源: 使用LLM生成的硅样本和AI评估中的自动评分器。\n• 主要结论: 在任务可交换性下可提供有效推断，并扩展到非可交换情形。",
+    "verdict_en": "• Alpha Potential: Moderate; provides theoretical foundation for using synthetic data in quantitative research, potentially improving data efficiency.\n• Implementation Risk: High; requires identifying exchangeable historical tasks, which may be challenging in practice.\n• Novelty: High; introduces a novel statistical framework for synthetic data validity.",
+    "verdict_cn": "• 创新点: 首次提出任务可交换性概念，为合成数据推断提供理论保障。\n• 实盘坑: 实际中难以找到严格可交换的历史任务，应用门槛高。\n• 复现难度: 中等；理论框架清晰，但需具体实现细节。",
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.13626v1",
+    "title": "Generative Modeling of Bach-Style Symbolic Music: A Comparative Study of Autoregressive, Latent-Variable, and Adversarial Approaches",
+    "pdf_url": "https://arxiv.org/pdf/2606.13626v1",
+    "published": "2026-06-11",
+    "crawled_at": "2026-06-12 21:22:35",
+    "ai_score": 6.5,
+    "translated_title": "巴赫风格符号音乐的生成建模：自回归、潜变量和对抗方法的比较研究",
+    "summary_en": "• Model Architecture: Compares autoregressive LSTMs with attention, latent-variable models (recurrent VAEs and vector-quantized VAEs), and generative adversarial networks for symbolic music generation.\n• Data used: Shared MIDI corpus of Bach-style piano music.\n• Performance metrics: Evaluates musical coherence, latent representation quality, and stylistic consistency.\n• Key findings: Autoregressive LSTM with attention yields most coherent samples; vector quantization mitigates posterior collapse; adversarial approach captures local patterns but is hard to train.",
+    "summary_cn": "• 核心模型: 比较了带注意力的自回归LSTM、潜变量模型（循环VAE和向量量化VAE）以及生成对抗网络。\n• 数据来源: 共享的巴赫风格钢琴MIDI语料库。\n• 主要结论: 自回归LSTM+注意力生成最连贯的音乐；向量量化缓解后验塌陷；对抗方法捕捉局部模式但训练困难。",
+    "verdict_en": "• Alpha Potential: Low for direct trading; may inspire feature engineering for music-related assets or sentiment analysis.\n• Implementation Risk: High; music generation models are computationally expensive and require domain-specific tuning.\n• Novelty: Moderate; comparative study of existing methods on a specific style, but no groundbreaking new architecture.\n• Practical relevance: Limited for hedge fund unless applied to alternative data like audio streams or music royalties.",
+    "verdict_cn": "• 创新点: 系统比较了三种生成模型在巴赫风格音乐上的表现，但方法本身不新。\n• 实盘坑: 音乐生成与金融交易关联度低，直接应用价值有限。\n• 复现难度: 中等；需要MIDI数据和大量计算资源。\n• 潜在价值: 可能用于音频替代数据或音乐版权分析，但非主流策略。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.13621v1",
+    "title": "Beyond Runtime Enforcement: Shield Synthesis as Defensibility Analysis for Adversarial Networks",
+    "pdf_url": "https://arxiv.org/pdf/2606.13621v1",
+    "published": "2026-06-11",
+    "crawled_at": "2026-06-12 21:22:42",
+    "ai_score": 5.5,
+    "translated_title": "超越运行时强制：作为对抗网络可防御性分析的盾牌综合",
+    "summary_en": [
+      "• Model Architecture: Proposes a constrained two-player safety game for network defense, using automata-theoretic machinery (specification compilation, product game construction, attractor computation, winning-region extraction) to analyze defensibility rather than enforce runtime constraints.",
+      "• Data used: The paper does not specify a particular dataset; it uses synthetic network topologies and specifications for what-if analysis.",
+      "• Performance metrics: Defensibility verdict (binary), topology-level metrics from attractor structure, and post-convergence behavior from shield-constrained adversarial multi-agent reinforcement learning."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出一种约束双人安全博弈用于网络防御，利用自动机理论工具（规范编译、乘积博弈构建、吸引子计算、获胜区域提取）分析可防御性，而非运行时约束。",
+      "• 数据来源: 未指定具体数据集，使用合成网络拓扑和规范进行假设分析。",
+      "• 主要结论: 形式可防御性与操作有效性捕捉安全的不同方面；盾牌综合最有价值的是作为回答系统可防御性问题的框架，而非部署安全策略。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low. The paper focuses on security analysis, not financial trading. No direct alpha generation.",
+      "• Implementation Risk: High. Requires significant domain adaptation to finance; concepts like attractor computation and shield synthesis are not standard in quantitative finance.",
+      "• Novelty: Moderate. The idea of using formal methods for defensibility analysis is novel in security, but not directly applicable to trading."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将形式化方法用于可防御性分析，而非运行时强制，在安全领域有创新。",
+      "• 实盘坑: 与金融交易无关，无法直接用于量化策略；需要大量领域转换。",
+      "• 复现难度: 高，涉及自动机理论和博弈求解，非标准金融工具。"
+    ],
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2606.12411v1",
     "title": "Context-Driven Incremental Compression for Multi-Turn Dialogue Generation",
     "pdf_url": "https://arxiv.org/pdf/2606.12411v1",
