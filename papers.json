@@ -1,5 +1,282 @@
 [
   {
+    "id": "2606.14703v1",
+    "title": "Gaze Heads: How VLMs Look at What They Describe",
+    "pdf_url": "https://arxiv.org/pdf/2606.14703v1",
+    "published": "2026-06-12",
+    "crawled_at": "2026-06-15 22:06:41",
+    "ai_score": 7.5,
+    "translated_title": "凝视头：视觉语言模型如何观察它们所描述的内容",
+    "summary_en": "• Model Architecture: Identifies 'gaze heads' in the language-model backbone of VLMs (e.g., LLaVA) that attend to image regions being described.\n• Data used: Comic strips (controlled testbed) and natural COCO images; models from 2B to 32B parameters.\n• Performance metrics: Top-100 gaze head intervention steers description to chosen comic panel with 83.1% accuracy; random heads fail, all heads destroy generation.\n• Key finding: Gaze heads enable continuous control; switching target mid-generation shifts description within few tokens.\n• Generalization: Mechanism recurs across model sizes and architectures, but not in frozen-encoder families.",
+    "summary_cn": "• 核心模型: 在VLM（如LLaVA）的语言模型骨干中发现'凝视头'，其注意力跟踪当前描述的图像区域。\n• 数据来源: 连环画（受控测试）和自然COCO图像；模型参数从2B到32B。\n• 主要结论: 干预前100个凝视头（少于9%）以83.1%准确率引导描述到指定连环画面板；随机头失败，干预所有头破坏生成。\n• 额外发现: 凝视头支持连续控制，中途切换目标可在几个token内转换描述。\n• 泛化性: 机制跨模型规模和架构重现，但冻结编码器家族不适用。",
+    "verdict_en": "• Alpha Potential: Low direct alpha; more relevant for multimodal model interpretability and control.\n• Implementation Risk: Requires access to internal attention heads; not directly applicable to trading.\n• Novelty: High novelty in mechanistic interpretability for VLMs; practical steering without retraining.\n• Relevance: Limited for quantitative finance; may inspire NLP/LLM strategies for sentiment or news analysis.\n• Caveat: Results on comic strips may not fully transfer to complex financial images.",
+    "verdict_cn": "• 创新点: 首次发现VLM中的'凝视头'并实现无需重训练的推理时控制，方法新颖。\n• 实盘坑: 直接交易应用价值低；需要模型内部访问，不适合黑盒场景。\n• 复现难度: 中等；需VLM和注意力头分析代码，但开源代码可用。\n• 相关性: 对金融多模态分析（如财报图表）有潜在启发，但非直接策略。\n• 局限性: 连环画测试环境与金融图像差异大，泛化性待验证。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.14695v1",
+    "title": "Persona-Pruner: Sculpting Lightweight Models for Role-Playing",
+    "pdf_url": "https://arxiv.org/pdf/2606.14695v1",
+    "published": "2026-06-12",
+    "crawled_at": "2026-06-15 22:06:48",
+    "ai_score": 7.5,
+    "translated_title": "Persona-Pruner：为角色扮演雕刻轻量级模型",
+    "summary_en": [
+      "• Model Architecture: Persona-Pruner isolates persona-specific sub-networks from a full LLM via pruning, retaining only weights crucial for a given character identity.",
+      "• Data used: The framework uses a single persona description (no additional training data) to guide pruning, evaluated on RoleBench benchmark.",
+      "• Performance metrics: Reduces performance drop from dense model by up to 93.8% over strongest baseline in LLM-as-a-judge score on RoleBench, while maintaining general LLM capabilities."
+    ],
+    "summary_cn": [
+      "• 核心模型: 通过剪枝从完整LLM中提取角色特定子网络，仅保留对给定角色身份至关重要的权重。",
+      "• 数据来源: 仅使用单一角色描述（无需额外训练数据）指导剪枝，在RoleBench基准上评估。",
+      "• 主要结论: 在RoleBench的LLM-as-a-judge评分中，性能下降相比最强基线减少高达93.8%，同时保持通用LLM能力。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low direct alpha; more relevant for cost reduction in LLM deployment (e.g., NPC ecosystems) than trading signal generation.",
+      "• Implementation Risk: Moderate; requires access to LLM weights and careful pruning to avoid catastrophic forgetting of persona traits.",
+      "• Novelty: High; introduces task-specific pruning for role-playing, outperforming generic pruning techniques significantly."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次提出针对角色扮演的任务特定剪枝，显著优于通用剪枝方法。",
+      "• 实盘坑: 直接交易信号弱；更适合降低LLM部署成本（如NPC生态系统），而非生成交易信号。",
+      "• 复现难度: 中等；需要LLM权重访问权限，且剪枝过程需谨慎避免角色特征灾难性遗忘。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.14690v1",
+    "title": "A Complexity Measure for Active Learning in Multi-group Mean Estimation",
+    "pdf_url": "https://arxiv.org/pdf/2606.14690v1",
+    "published": "2026-06-12",
+    "crawled_at": "2026-06-15 22:06:59",
+    "ai_score": 7.5,
+    "translated_title": "多组均值估计中主动学习的复杂度度量",
+    "summary_en": "• Model Architecture: The paper studies a max-risk objective for active learning in multi-group mean estimation, modeled as a d-armed bandit problem where the learner allocates T samples across d groups to minimize the worst-case uncertainty index.\n• Data used: The analysis is theoretical, assuming finite-variance distributions for each arm, with no specific real-world dataset.\n• Performance metrics: The key metric is the worst-case uncertainty index max_k σ_k^2/n_k, and the lower bound involves budget, heteroscedasticity index, and Variance Local Curvature (VLC).\n• Key contributions: Proves the first general lower bound for this objective, introduces VLC as a complexity measure, and provides closed-form values for common families.\n• Theoretical insights: The bound separates difficulty into three orthogonal factors, and the proof uses loss-induced ℓ1 geometry and a representation-based instance generator.",
+    "summary_cn": "• 核心模型: 研究多组均值估计中主动学习的最大风险目标，建模为d臂老虎机问题，学习者分配T个样本以最小化最坏情况不确定性指标。\n• 数据来源: 理论分析，假设每臂具有有限方差分布，未使用具体真实数据集。\n• 主要结论: 首次证明该目标的一般下界，引入方差局部曲率（VLC）作为复杂度度量，并给出常见族的闭式值。\n• 理论贡献: 下界将难度分解为预算、异方差指数和VLC三个正交因素，证明使用了损失诱导的ℓ1几何和基于表示的实例生成器。\n• 性能指标: 关键指标为最坏情况不确定性指标max_k σ_k^2/n_k。",
+    "verdict_en": "• Alpha Potential: Low to moderate. The paper is theoretical and does not directly provide a trading strategy; however, the active learning framework could be applied to portfolio allocation or risk management where groups represent assets.\n• Implementation Risk: High. The method requires knowledge of variance structures and involves complex optimization; practical deployment would need approximations and careful tuning.\n• Novelty: High. The VLC measure and the lower bound are novel contributions to active learning theory, but the direct applicability to quantitative finance is limited.\n• Practical relevance: The max-risk objective is relevant for risk-averse strategies, but the paper lacks empirical validation on financial data.\n• Computational cost: The proposed algorithms are not detailed; the theoretical nature suggests potential computational challenges.",
+    "verdict_cn": "• 创新点: 提出VLC复杂度度量并证明主动学习下界，理论贡献显著，但金融应用需进一步转化。\n• 实盘坑: 理论假设强（已知方差结构），实际中方差未知且时变，直接应用风险高；缺乏实证验证。\n• 复现难度: 高。需要深入理解理论证明和优化方法，且未提供具体算法实现。\n• 策略潜力: 低至中等。最大风险目标适用于风险厌恶策略，但需结合金融数据调整。\n• 计算成本: 理论复杂，实际部署可能计算密集。",
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.14688v1",
+    "title": "Flood and Harvest: The Provable Necessity of Trivia for Generating Valuable Mathematics via the Lens of Language Generation in the Limit",
+    "pdf_url": "https://arxiv.org/pdf/2606.14688v1",
+    "published": "2026-06-12",
+    "crawled_at": "2026-06-15 22:07:08",
+    "ai_score": 8.5,
+    "translated_title": "洪水与收获：通过语言极限生成视角证明琐事对于生成有价值数学的必要性",
+    "summary_en": "• Model Architecture: Formalizes valuable math generation as nested language generation in the limit, with a verifiable formal language F accessed via a membership oracle (proof checker) and an unknown valuable language H revealed through adversarial enumeration of a core C of density α.\n• Data used: Theoretical framework; no empirical data. Core C represents the literature (known valuable statements).\n• Performance metrics: Coverage of unseen valuable statements; trade-off between trivia and hallucination rates; optimal coverage bounds (α/2 with finite trivia, 1-α/2 with infinite trivia).",
+    "summary_cn": "• 核心模型: 将有价值数学生成建模为极限中的嵌套语言生成，通过成员预言机（证明检查器）访问可验证形式语言F，并通过对抗性枚举密度为α的核心C揭示未知的有价值语言H。\n• 数据来源: 理论框架，无实证数据；核心C代表文献（已知有价值陈述）。\n• 主要结论: 验证器无法替代品味；覆盖未记录的有价值数学需要无限但渐近可忽略的琐碎陈述流；琐事数量而非比率决定最优覆盖率（有限琐事时α/2，无限琐事时1-α/2）。",
+    "verdict_en": "• Alpha Potential: Low direct alpha; theoretical insights may inform AI-driven theorem proving but not trading strategies.\n• Implementation Risk: High; purely theoretical with no empirical validation; requires significant adaptation for practical use.\n• Novelty: High; provides formal proof that trivial but correct statements are necessary for covering unknown valuable math, challenging assumptions about verifier sufficiency.",
+    "verdict_cn": "• 创新点: 首次严格证明琐碎但正确的陈述对于覆盖未知有价值数学的必要性，挑战验证器足够性的假设。\n• 实盘坑: 纯理论，无实证数据，难以直接应用于量化交易；需要大量转化工作。\n• 复现难度: 极高；依赖复杂的形式语言和极限概念，非标准机器学习框架。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.14684v1",
+    "title": "HumP-KD: A Hybrid Uncertainty-Aware Multi-Stage Progressive Knowledge Distillation Framework for Efficient Fire Classification",
+    "pdf_url": "https://arxiv.org/pdf/2606.14684v1",
+    "published": "2026-06-12",
+    "crawled_at": "2026-06-15 22:07:18",
+    "ai_score": 7.2,
+    "translated_title": "HumP-KD：一种用于高效火灾分类的混合不确定性感知多阶段渐进知识蒸馏框架",
+    "summary_en": "• Model Architecture: Proposes HumP-KD, a hybrid uncertainty-aware multi-stage progressive knowledge distillation framework that distills knowledge from two frozen heterogeneous transformer teachers (Swin-Tiny, ViT-Base) and their Meta-MLP ensemble into a lightweight MobileViT-S student, using hierarchical progressive knowledge distillation with spatial attention masks and multi-stage activation.\n• Data used: Two fire classification datasets: FlameVision (8,600 images) and Dataset-II (31,309 images). Evaluated under standard preprocessing, online augmentation, Gaussian noise, and motion blur robustness conditions.\n• Performance metrics: On Dataset-II, achieves mean F1 score of 0.9876 ± 0.0063 across 10 trials, significantly outperforming MobileViT-S baseline (0.9537 ± 0.0351) with p-values 0.0195 (t-test) and 0.0039 (Wilcoxon). Student model has 4.94M parameters, 19.01Mb size, 37.72 CPU FPS, with 5.7× parameter reduction over Swin-Tiny and 17.5× over ViT-Base.",
+    "summary_cn": "• 核心模型: 提出HumP-KD框架，从两个冻结的异构Transformer教师（Swin-Tiny、ViT-Base）及其Meta-MLP集成中蒸馏知识到轻量级MobileViT-S学生，采用分层渐进知识蒸馏（空间注意力掩码）和多阶段激活。\n• 数据来源: 使用两个火灾分类数据集：FlameVision（8,600张图像）和Dataset-II（31,309张图像），在标准预处理、在线增强、高斯噪声和运动模糊鲁棒性条件下评估。\n• 主要结论: 在Dataset-II上，10次试验平均F1分数为0.9876 ± 0.0063，显著优于MobileViT-S基线（0.9537 ± 0.0351），p值分别为0.0195（t检验）和0.0039（Wilcoxon）。学生模型仅4.94M参数、19.01Mb大小、37.72 CPU FPS，参数减少5.7倍（对比Swin-Tiny）和17.5倍（对比ViT-Base）。",
+    "verdict_en": "• Alpha Potential: Low direct alpha for finance; fire classification is a niche application. However, the distillation framework could be adapted for financial time-series or image-based trading signals, but requires significant domain adaptation.\n• Implementation Risk: High. The multi-stage progressive distillation with heterogeneous teachers and spatial attention masks is complex to reproduce. Sensitivity to hyperparameters and teacher selection may hinder robust deployment.\n• Novelty: Moderate. Combines existing techniques (knowledge distillation, uncertainty, progressive learning) in a novel way for fire classification. The hierarchical feature builder and multi-stage activation are interesting but not groundbreaking.",
+    "verdict_cn": "• 创新点: 将知识蒸馏、不确定性估计和渐进学习结合用于火灾分类，层次化特征构建器和多阶段激活有一定新意，但整体方法属于组合创新。\n• 实盘坑: 金融领域直接应用价值低，需大量领域适配。框架复杂度高，复现困难，超参数敏感，教师模型选择对性能影响大，实际部署风险高。\n• 复现难度: 高。多阶段蒸馏、异构教师集成、空间注意力掩码等组件实现细节多，代码未公开，复现需大量调试。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.14679v1",
+    "title": "Optimal Hidden-Target Learning for Online Inventory Optimization on General Convex Sets",
+    "pdf_url": "https://arxiv.org/pdf/2606.14679v1",
+    "published": "2026-06-12",
+    "crawled_at": "2026-06-15 22:07:27",
+    "ai_score": 8.5,
+    "translated_title": "一般凸集上在线库存优化的最优隐藏目标学习",
+    "summary_en": [
+      "• Model Architecture: Proposes a hidden-target learning framework with online gradient descent as base learner, projecting onto feasible order-up-to sets under general convex capacity constraints.",
+      "• Data used: Synthetic and real-world inventory data for experimental validation.",
+      "• Performance metrics: Achieves inverse-square-root regret dependence on common-demand probability, improving from prior inverse dependence; first polylogarithmic regret for strongly convex losses; dynamic regret adapting to Euclidean path variation.",
+      "• Key innovation: Introduces norm alignment principle, reducing state dependence to one-dimensional queue control, enabling optimality on arbitrary bounded convex sets."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出隐藏目标学习框架，以在线梯度下降为基础学习器，在一般凸容量约束下投影到可行订单-up-to集。",
+      "• 数据来源: 使用合成数据和真实库存数据进行实验验证。",
+      "• 主要结论: 将遗憾对常见需求概率的依赖从反比改进为反平方根，对强凸损失实现首个多对数遗憾，并实现适应欧几里得路径变化的动态遗憾。",
+      "• 创新点: 引入范数对齐原则，将状态依赖降为一维队列控制，从而在任意有界凸集上达到最优。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for supply chain and inventory optimization in finance (e.g., commodity trading), as regret bounds directly translate to cost savings.",
+      "• Implementation Risk: Moderate; requires careful tuning of learning rates and projection steps, but framework is principled and general.",
+      "• Novelty: High; norm alignment and queue reduction are elegant theoretical contributions, extending beyond prior productwise approaches."
+    ],
+    "verdict_cn": [
+      "• 创新点: 范数对齐与队列降维是优雅的理论贡献，突破了先前逐产品方法的局限。",
+      "• 实盘坑: 学习率与投影步骤需精细调参，且实际库存约束可能偏离凸集假设。",
+      "• 复现难度: 中等；算法框架清晰，但理论证明复杂，需扎实的优化基础。"
+    ],
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.14673v1",
+    "title": "Compressed Computation is (probably) not Computation in Superposition",
+    "pdf_url": "https://arxiv.org/pdf/2606.14673v1",
+    "published": "2026-06-12",
+    "crawled_at": "2026-06-15 22:07:36",
+    "ai_score": 5.5,
+    "translated_title": "压缩计算（可能）不是叠加态中的计算",
+    "summary_en": [
+      "• Model Architecture: The Compressed Computation (CC) toy model uses 50 neurons to compute 100 ReLU functions via a noisy residual stream, mixing inputs.",
+      "• Data used: Synthetic data generated from a mixing matrix applied to ReLU targets, with noise in the residual stream.",
+      "• Performance metrics: Loss comparison between CC model and baselines (e.g., SNMF), showing CC outperforms but gains vanish when mixing matrix is removed.",
+      "• Key finding: Performance gains scale with mixing matrix magnitude; learned neuron directions align with top 50 eigenvalues of mixing matrix.",
+      "• Conclusion: CC is not a suitable toy model for computation in superposition; mixing term dominates solution."
+    ],
+    "summary_cn": [
+      "• 核心模型: CC模型使用50个神经元通过带噪声的残差流计算100个ReLU函数，混合输入。",
+      "• 数据来源: 基于混合矩阵和ReLU目标生成的合成数据。",
+      "• 主要结论: 性能提升与混合矩阵大小相关，去除混合矩阵后性能消失；神经元方向集中在混合矩阵前50个特征值子空间。",
+      "• 局限性: CC模型不适合作为叠加态计算的玩具模型，混合项主导了解决方案。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low; paper is theoretical, no direct trading signal, but insights on superposition may inform feature learning in factor models.",
+      "• Implementation Risk: High; requires careful control of mixing dynamics, not directly applicable to markets.",
+      "• Novelty: Moderate; provides critical analysis of existing model, but limited practical novelty for quantitative finance.",
+      "• Replicability: Medium; synthetic data and simple architecture make replication feasible, but results are negative (model fails)."
+    ],
+    "verdict_cn": [
+      "• 创新点: 对CC模型作为叠加态计算实例的批判性分析，揭示了混合矩阵的主导作用。",
+      "• 实盘坑: 纯理论，无直接交易信号，混合机制难以映射到市场数据。",
+      "• 复现难度: 中等，使用合成数据，但负结果（模型不成立）限制了应用价值。",
+      "• 量化启示: 对因子模型中特征叠加的潜在风险有警示作用，但需进一步转化。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.14668v1",
+    "title": "When to Write and When to Suppress: Route-Specialized Dual Adapters for Memory-Assisted Knowledge Editing",
+    "pdf_url": "https://arxiv.org/pdf/2606.14668v1",
+    "published": "2026-06-12",
+    "crawled_at": "2026-06-15 22:07:46",
+    "ai_score": 7.5,
+    "translated_title": "何时写入何时抑制：面向记忆辅助知识编辑的路径专用双适配器",
+    "summary_en": [
+      "• Model Architecture: Proposes a route-specialized dual-adapter editor with a relevance router that decides whether to apply an edit memory; edit adapter for routed prompts and locality adapter for non-routed prompts.",
+      "• Data used: Evaluated on three 1,000-case protocols: CounterFact (CF), ZsRE, and MQuAKE, under the same memory protocol with Llama-3.1-8B-Instruct and Qwen3-8B base models.",
+      "• Performance metrics: Achieves best overall probability-preference accuracy on all benchmarks: 0.8180 on CF, 0.8946 on ZsRE, 0.9922 on MQuAKE with Llama-3.1-8B-Instruct; similar trend on Qwen3-8B.",
+      "• Router ablations show optimal router type varies by dataset: lexical neural router for CF, BGE embedding router for ZsRE and MQuAKE.",
+      "• Component ablations confirm gains from separating edit injection from off-route suppression, not just increased LoRA capacity."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出路径专用双适配器编辑器，包含相关性路由器决定是否应用编辑记忆；路由提示使用编辑适配器，非路由提示使用局部性适配器。",
+      "• 数据来源: 在CounterFact、ZsRE和MQuAKE三个1000样本协议上评估，使用Llama-3.1-8B-Instruct和Qwen3-8B基座模型。",
+      "• 主要结论: 在Llama-3.1-8B-Instruct上取得最佳概率偏好准确率：CF 0.8180，ZsRE 0.8946，MQuAKE 0.9922；Qwen3-8B上趋势一致。",
+      "• 路由器消融实验显示最优路由器类型因数据集而异：CF适合词汇神经路由器，ZsRE和MQuAKE适合BGE嵌入路由器。",
+      "• 组件消融证实性能提升来自分离编辑注入与路径外抑制，而非单纯增加LoRA容量。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; knowledge editing is niche but relevant for LLM-based trading agents needing dynamic fact updates.",
+      "• Implementation Risk: High; requires careful router tuning per dataset and dual-adapter management, increasing complexity.",
+      "• Novelty: High; introduces explicit suppression mechanism for off-route prompts, a novel perspective in memory-assisted editing.",
+      "• Practicality: Limited; evaluated on synthetic benchmarks, real-world financial knowledge editing may require domain-specific adaptation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次提出路径外抑制机制，区分编辑写入与无关提示的保留，思路新颖。",
+      "• 实盘坑: 路由器需针对不同数据集精细调参，增加部署复杂度；金融领域知识编辑的鲁棒性未验证。",
+      "• 复现难度: 中等；依赖特定基座模型和适配器训练，但代码未开源，复现需自行实现。",
+      "• 应用前景: 适合需要动态更新知识的LLM交易系统，但当前评估场景与金融差异大，需额外适配。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.14662v1",
+    "title": "Beyond task performance: Decoding bioacoustic embeddings with speech features",
+    "pdf_url": "https://arxiv.org/pdf/2606.14662v1",
+    "published": "2026-06-12",
+    "crawled_at": "2026-06-15 22:07:55",
+    "ai_score": 7.5,
+    "translated_title": "超越任务性能：用语音特征解码生物声学嵌入",
+    "summary_en": "• Model Architecture: Uses linear and nonlinear regression probes to decode 88 eGeMAPS speech features from pretrained bioacoustic embeddings, including a concatenated embedding approach. • Data used: Bioacoustic recordings across six taxonomic groups, with eGeMAPS features as targets. • Performance metrics: Loudness best encoded (R²=0.76), F0 hardest (R²=0.33); concatenated embedding achieves highest overall performance. • Key finding: No single model captures full feature space; complementary coverage across models. • Practical guidance: Cross-referencing recoverability with per-species feature salience (NMI) for model selection.",
+    "summary_cn": "• 核心模型: 使用线性和非线性回归探针从预训练的生物声学嵌入中解码88个eGeMAPS语音特征，包括拼接嵌入方法。 • 数据来源: 跨六个分类群的生物声学记录，以eGeMAPS特征为目标。 • 主要结论: 响度编码最好（R²=0.76），基频最难（R²=0.33）；拼接嵌入整体性能最高。 • 关键发现: 没有单一模型能覆盖全部特征空间，模型间存在互补覆盖。 • 实用指导: 通过可恢复性与物种特征显著性（NMI）的交叉参考进行模型选择。",
+    "verdict_en": "• Alpha Potential: Low for direct trading; insights on feature encoding may improve audio-based alternative data models. • Implementation Risk: Moderate; requires domain-specific audio data and pretrained embeddings, not directly applicable to financial markets. • Novelty: High in bioacoustics; introduces interpretability and model selection framework for pretrained embeddings. • Relevance: Limited to hedge funds using bioacoustic data for e.g., environmental monitoring or commodity prediction.",
+    "verdict_cn": "• 创新点: 首次系统揭示生物声学嵌入编码的语音特征，提出模型选择框架。 • 实盘坑: 与金融交易无直接关联，需大量领域特定音频数据，转化成本高。 • 复现难度: 中等；需要生物声学数据集和预训练模型，计算资源要求不高。 • 适用性: 仅对使用生物声学数据（如环境监测、大宗商品预测）的对冲基金有参考价值。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.14654v1",
+    "title": "Abstracting Cross-Domain Action Sequences into Interpretable Workflows",
+    "pdf_url": "https://arxiv.org/pdf/2606.14654v1",
+    "published": "2026-06-12",
+    "crawled_at": "2026-06-15 22:08:03",
+    "ai_score": 7.5,
+    "translated_title": "将跨领域动作序列抽象为可解释的工作流",
+    "summary_en": [
+      "• Model Architecture: Uses LLMs (e.g., GPT) to abstract low-level action sequences into high-level activities, with a framework called WorkflowView.",
+      "• Data used: Browser logs, MOOC interaction logs, and Microsoft Word document workflows.",
+      "• Performance metrics: Zero-shot task description reconstruction achieves semantic similarity μ_sim=0.91; few-shot dropout prediction reaches weighted F1=0.90 with only 5 examples.",
+      "• Generalization: Demonstrated across three distinct domains and tasks, showing robustness to noise and cross-application generalization."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于大语言模型（LLM）的WorkflowView框架，将低层动作序列抽象为高层活动。",
+      "• 数据来源: 浏览器日志、MOOC交互日志、Microsoft Word文档工作流。",
+      "• 主要结论: 零样本任务描述重建语义相似度达0.91；少样本辍学预测F1达0.90（仅5个样本）。",
+      "• 泛化能力: 在三个不同领域和任务中验证，对噪声鲁棒且跨应用泛化。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; useful for understanding user behavior but not directly a trading signal.",
+      "• Implementation Risk: Low to moderate; relies on LLM API calls, which may introduce latency and cost.",
+      "• Novelty: High; combines LLMs with behavioral sequence abstraction, a novel approach for workflow analysis.",
+      "• Practical Considerations: Discusses computational efficiency and privacy, important for real-world deployment."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将LLM用于行为序列抽象，跨领域泛化能力强，方法新颖。",
+      "• 实盘坑: 依赖LLM推理，延迟和成本较高；隐私和效率需权衡。",
+      "• 复现难度: 中等，需访问LLM API和特定日志数据，但框架设计清晰。",
+      "• 应用局限: 主要面向用户行为分析，非直接交易信号，需进一步转化。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2606.13677v1",
     "title": "Mana: Dexterous Manipulation of Articulated Tools",
     "pdf_url": "https://arxiv.org/pdf/2606.13677v1",
