@@ -1,5 +1,258 @@
 [
   {
+    "id": "2606.17048v1",
+    "title": "Exact Posterior Score Estimation for Solving Linear Inverse Problems",
+    "pdf_url": "https://arxiv.org/pdf/2606.17048v1",
+    "published": "2026-06-15",
+    "crawled_at": "2026-06-16 22:03:06",
+    "ai_score": 8.5,
+    "translated_title": "精确后验分数估计用于解决线性逆问题",
+    "summary_en": "• Model Architecture: Derives exact posterior score for linear Gaussian inverse problems under general Gaussian interpolants, reducing posterior sampling to a denoising problem with shifted pivot and anisotropic noise covariance. Proposes EPS training objective that preserves denoiser input/output structure, enabling training from scratch or fine-tuning from pretrained denoisers.\n• Data used: Evaluated on FFHQ and ImageNet datasets for five linear inverse problems (e.g., super-resolution, deblurring, inpainting).\n• Performance metrics: Outperforms training-free and training-based baselines on fidelity (PSNR), perceptual (LPIPS), and distributional (FID) metrics, using roughly an order of magnitude fewer denoiser evaluations than gradient-based posterior samplers.",
+    "summary_cn": "• 核心模型: 在一般高斯插值下推导线性高斯逆问题的精确后验分数，将后验采样转化为具有偏移枢轴和各向异性噪声协方差的去噪问题。提出EPS训练目标，保留去噪器输入/输出结构，支持从头训练或从预训练去噪器微调。\n• 数据来源: 在FFHQ和ImageNet数据集上评估五种线性逆问题（如超分辨率、去模糊、修复）。\n• 主要结论: 在保真度（PSNR）、感知（LPIPS）和分布（FID）指标上优于无训练和基于训练的基线，且去噪器评估次数比基于梯度的后验采样器少一个数量级。",
+    "verdict_en": "• Alpha Potential: High for applications requiring high-quality image restoration (e.g., medical imaging, satellite imagery) where posterior sampling is critical. Could be leveraged for synthetic data generation in quantitative finance (e.g., generating realistic market states).\n• Implementation Risk: Requires access to pretrained diffusion/flow models and careful tuning of Gaussian interpolants. Inference is efficient due to reduced denoiser evaluations, but training from scratch may be computationally expensive.\n• Novelty: Provides exact closed-form posterior score, a significant theoretical contribution over approximate methods. The shift-pivot interpretation is elegant and practical.",
+    "verdict_cn": "• 创新点: 首次给出线性高斯逆问题精确后验分数的闭式解，理论贡献显著；偏移枢轴解释简洁实用。\n• 实盘坑: 依赖预训练扩散模型，实际部署需适配特定逆问题；各向异性噪声协方差可能增加调参难度。\n• 复现难度: 中等，需熟悉扩散模型和线性逆问题，但开源代码可降低门槛。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2606.17046v1",
+    "title": "Geometric Action Model for Robot Policy Learning",
+    "pdf_url": "https://arxiv.org/pdf/2606.17046v1",
+    "published": "2026-06-15",
+    "crawled_at": "2026-06-16 22:03:15",
+    "ai_score": 7.5,
+    "translated_title": "几何动作模型：机器人策略学习",
+    "summary_en": "• Model Architecture: Proposes Geometric Action Model (GAM) that repurposes a pretrained geometric foundation model (GFM) as a shared substrate for perception, temporal prediction, and action decoding. GFM is split at an intermediate layer: shallow layers encode observations, a causal future predictor forecasts latent tokens, and remaining blocks decode future geometry and actions.\n• Data used: Trained on simulation and real-robot manipulation benchmarks; leverages pretrained GFM weights, language conditioning, proprioception, and action history.\n• Performance metrics: Outperforms current foundation-model-scale baselines in accuracy, robustness, speed, and model size across multiple manipulation tasks.",
+    "summary_cn": "• 核心模型: 提出几何动作模型（GAM），复用预训练的几何基础模型（GFM）作为感知、时序预测和动作解码的共享基座。GFM在中间层分割：浅层编码观测，因果未来预测器预测潜在令牌，剩余模块解码未来几何和动作。\n• 数据来源: 在仿真和真实机器人操作基准上训练；利用预训练的GFM权重、语言条件、本体感觉和动作历史。\n• 主要结论: 在多个操作任务中，在准确性、鲁棒性、速度和模型大小上均优于当前基础模型规模的基线。",
+    "verdict_en": "• Alpha Potential: Moderate; the geometric priors could improve manipulation tasks in robotics, but direct financial alpha is limited unless applied to automated trading of physical assets or high-precision tasks.\n• Implementation Risk: High; requires specialized hardware and simulation environments, and pretrained GFM may not be publicly available.\n• Novelty: High; introduces a novel architecture that integrates geometric foundation models with language-conditioned temporal prediction, advancing robot policy learning.",
+    "verdict_cn": "• 创新点: 创新性地将几何基础模型与语言条件时序预测结合，为机器人策略学习提供新范式。\n• 实盘坑: 依赖特定硬件和仿真环境，预训练GFM可能不公开，复现成本高；金融领域直接应用有限。\n• 复现难度: 高；需要大量计算资源和机器人平台，代码和数据可能未开源。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.17043v1",
+    "title": "Hierarchical Advantage Weighting for Online RL Fine-Tuning of VLAs from Sparse Episode Outcomes",
+    "pdf_url": "https://arxiv.org/pdf/2606.17043v1",
+    "published": "2026-06-15",
+    "crawled_at": "2026-06-16 22:03:24",
+    "ai_score": 7.5,
+    "translated_title": "基于层级优势加权的在线强化学习微调VLA策略：从稀疏回合结果中学习",
+    "summary_en": [
+      "• Model Architecture: Proposes Hierarchical Advantage-Weighted Behavior Cloning (HABC) with separate critic heads for viability and efficiency, combined via a state-adaptive gate.",
+      "• Data used: Real-robot rollouts on three contact-rich bimanual tasks, with sparse binary success/failure outcomes per episode and intervention segments.",
+      "• Performance metrics: Raises success rates from SFT baselines of 36%, 44%, 12% to 92%, 88%, 38% respectively.",
+      "• Key innovation: Intervention-aware credit assignment prevents incorrect credit across autonomous and intervention segments."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出层级优势加权行为克隆（HABC），分别训练生存性和效率两个评论家头，并通过状态自适应门控融合。",
+      "• 数据来源: 真实机器人三个接触性双臂任务，每回合仅提供稀疏二元成功/失败标签，并包含自主与干预片段。",
+      "• 主要结论: 成功率从监督微调基线的36%、44%、12%提升至92%、88%、38%。",
+      "• 关键创新: 干预感知的信用分配避免跨自主/干预边界的错误信用传播。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; addresses practical RL fine-tuning for robotics, but direct financial alpha is limited unless applied to trading robot control.",
+      "• Implementation Risk: High; requires real-robot setup, careful intervention handling, and tuning of dual critics and gate.",
+      "• Novelty: High; hierarchical advantage weighting and intervention-aware credit assignment are novel contributions to RL fine-tuning."
+    ],
+    "verdict_cn": [
+      "• 创新点: 层级优势加权与干预感知信用分配在RL微调中具有新颖性。",
+      "• 实盘坑: 依赖真实机器人环境，干预边界定义困难，双评论家调参复杂。",
+      "• 复现难度: 高；需要物理机器人平台和大量工程实现。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.17037v1",
+    "title": "The Importance of Phase in Neural Representations: An Internal Oppenheim-Lim Test of Image Classifiers",
+    "pdf_url": "https://arxiv.org/pdf/2606.17037v1",
+    "published": "2026-06-15",
+    "crawled_at": "2026-06-16 22:03:32",
+    "ai_score": 7.5,
+    "translated_title": "相位在神经表征中的重要性：图像分类器的内部Oppenheim-Lim测试",
+    "summary_en": [
+      "• Model Architecture: Analyzes PRISM2D, GFNet, ViT-B/16, and ResNet-50, focusing on phase/sign vs magnitude in hidden layers.",
+      "• Data used: Natural images (likely ImageNet or similar) for reconstruction and transplant experiments.",
+      "• Performance metrics: Accuracy after magnitude deletion; prediction alignment with phase/sign donor in transplant tests.",
+      "• Key finding: Phase/sign carries identity; magnitude is dispensable; ResNet-50 shows latent sign code before ReLU."
+    ],
+    "summary_cn": [
+      "• 核心模型: 分析PRISM2D、GFNet、ViT-B/16和ResNet-50，研究隐藏层中相位/符号与幅度的作用。",
+      "• 数据来源: 自然图像（可能ImageNet等），用于重建和移植实验。",
+      "• 主要结论: 相位/符号承载图像身份，幅度可丢弃；ResNet-50在ReLU前存在潜在符号编码。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low direct alpha; insights on phase vs magnitude may inform feature engineering for image-based strategies.",
+      "• Implementation Risk: High; requires deep learning expertise and custom layer interventions.",
+      "• Novelty: High; extends classic Oppenheim-Lim to neural networks, revealing architectural biases."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将经典Oppenheim-Lim实验引入神经网络，揭示不同架构的相位/符号编码差异。",
+      "• 实盘坑: 直接交易应用有限，需结合图像数据策略；复现需深度学习框架修改。",
+      "• 复现难度: 高，需自定义层操作和精确控制实验条件。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2606.17035v1",
+    "title": "Your Privacy My Cloak: Backdoor Attacks on Differentially Private Federated Learning",
+    "pdf_url": "https://arxiv.org/pdf/2606.17035v1",
+    "published": "2026-06-15",
+    "crawled_at": "2026-06-16 22:03:40",
+    "ai_score": 8.5,
+    "translated_title": "你的隐私我的斗篷：差分隐私联邦学习中的后门攻击",
+    "summary_en": "• Model Architecture: Proposes RING attack that exploits differential privacy (DP) to mask backdoor signals in federated learning (FL), operating as a perturbation layer agnostic to underlying backdoor techniques.\n• Data used: Evaluated on four image and text datasets (e.g., CIFAR-10, FEMNIST, etc.) under non-iid distributions.\n• Performance metrics: Achieves 90.3% average attack success rate against six state-of-the-art defenses under moderate privacy budget, up to 26.08x improvement over baseline strategies.",
+    "summary_cn": "• 核心模型: 提出RING攻击，利用差分隐私掩盖联邦学习中的后门信号，作为与底层后门技术无关的扰动层。\n• 数据来源: 在四个图像和文本数据集（如CIFAR-10、FEMNIST等）上评估，采用非独立同分布设置。\n• 主要结论: 在中等隐私预算下，对六种先进防御的平均攻击成功率达90.3%，较基线策略提升高达26.08倍。",
+    "verdict_en": "• Alpha Potential: High, as it reveals a fundamental security gap in DP-FL, which could be exploited for adversarial trading signals or model poisoning in quant systems.\n• Implementation Risk: Moderate; requires control over multiple clients in FL, but the attack is composable and broadly applicable.\n• Novelty: Strong, challenges the common belief that DP inherently enhances robustness against backdoors, introducing a novel masking effect.",
+    "verdict_cn": "• 创新点: 颠覆了差分隐私增强鲁棒性的传统认知，揭示了DP对后门攻击的掩盖效应，具有理论突破。\n• 实盘坑: 攻击需控制多个客户端，在真实联邦学习场景中实施成本较高，且防御方可能通过更严格的聚合规则缓解。\n• 复现难度: 中等，攻击框架清晰，但需要分布式环境模拟和隐私预算调参。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.17034v1",
+    "title": "KVEraser: Learning to Steer KV Cache for Efficient Localized Context Erasing",
+    "pdf_url": "https://arxiv.org/pdf/2606.17034v1",
+    "published": "2026-06-15",
+    "crawled_at": "2026-06-16 22:03:50",
+    "ai_score": 7.5,
+    "translated_title": "KVEraser：学习操控KV缓存以实现高效的局部上下文擦除",
+    "summary_en": "• Model Architecture: KVEraser uses a learned KV-cache editing method, replacing KV states of the erased span with learned steering states while reusing the remaining cache. It employs a two-stage training pipeline: generic span-neighbor pre-training and task-specific fine-tuning.\n• Data used: The model is trained on synthetic data for pre-training and fine-tuned on downstream tasks such as long-document QA with harmful factual distractors.\n• Performance metrics: KVEraser nearly matches full recomputation in post-erasure performance across 1K–32K context lengths, with latency increase of only 24% compared to 17.6x for full recomputation. It achieves 3–4x speedup over full recomputation on unseen tasks.",
+    "summary_cn": "• 核心模型: KVEraser采用学习型KV缓存编辑方法，用学习到的引导状态替换被擦除区间的KV状态，同时重用剩余缓存。训练分为两阶段：通用跨度邻居预训练和任务特定微调。\n• 数据来源: 预训练使用合成数据，微调使用下游任务数据，如包含有害事实干扰的长文档问答。\n• 主要结论: KVEraser在1K–32K上下文长度上几乎匹配完全重计算的擦除后性能，延迟仅增加24%（完全重计算增加17.6倍），在未见任务上实现3–4倍加速。",
+    "verdict_en": "• Alpha Potential: Low. This is an LLM efficiency technique, not directly applicable to financial alpha generation. However, it could be useful for managing context in LLM-based trading agents.\n• Implementation Risk: Medium. Requires integration with existing LLM inference pipelines and careful tuning of steering states. The two-stage training may be resource-intensive.\n• Novelty: High. The idea of learned KV cache editing for localized erasing is novel and addresses a practical problem in long-context LLMs.",
+    "verdict_cn": "• 创新点: 提出学习型KV缓存编辑方法，实现局部擦除，避免完全重计算，创新性高。\n• 实盘坑: 金融量化中直接应用有限，但可用于LLM交易代理的上下文管理。训练成本高，且需与现有推理框架集成。\n• 复现难度: 中等。需要大量计算资源进行两阶段训练，且依赖特定模型架构。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.17032v1",
+    "title": "Sharpe Ratio and Return-VaR Ratio Maximization for Option Portfolios with Skew-Elliptical $t$ Underlying Returns",
+    "pdf_url": "https://arxiv.org/pdf/2606.17032v1",
+    "published": "2026-06-15",
+    "crawled_at": "2026-06-16 22:03:58",
+    "ai_score": 7.5,
+    "translated_title": "基于偏斜椭圆t分布的期权组合夏普比率与收益-VaR比率最大化",
+    "summary_en": [
+      "• Model Architecture: Extends Sharpe ratio maximization to skew-elliptical t-distributed underlying returns, departing from normality.",
+      "• Data used: Numerical experiments with simulated data; no real market data employed.",
+      "• Performance metrics: Provides explicit formulas for optimal portfolio weights under Sharpe ratio and return-to-VaR ratio maximization.",
+      "• Key finding: Optimal portfolios for the two ratios differ significantly in the skew-elliptical setting."
+    ],
+    "summary_cn": [
+      "• 核心模型: 将夏普比率最大化扩展到偏斜椭圆t分布收益，突破正态假设。",
+      "• 数据来源: 仅使用模拟数据进行数值实验，未采用真实市场数据。",
+      "• 主要结论: 在偏斜椭圆设定下，夏普比率与收益-VaR比率的最优组合权重存在显著差异。",
+      "• 贡献: 提供了两种比率下组合权重的显式公式，具有理论价值。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; skewness and fat tails are relevant for option strategies, but lack of empirical validation limits practical alpha.",
+      "• Implementation Risk: High; requires accurate estimation of skew-elliptical parameters, which is non-trivial and may lead to instability.",
+      "• Novelty: Theoretical contribution is solid, but similar ideas exist in robust portfolio optimization literature."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次在偏斜椭圆t分布下推导出夏普比率和收益-VaR比率的显式解，理论贡献明确。",
+      "• 实盘坑: 参数估计困难，偏斜和尾部参数微小变化会导致组合权重剧烈波动，实盘风险高。",
+      "• 复现难度: 中等，需掌握偏斜椭圆分布和优化理论，但模拟实验可复现。"
+    ],
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.17028v1",
+    "title": "HAMON: Passive Optical Sequence Mixing for Long-Horizon Forecasting",
+    "pdf_url": "https://arxiv.org/pdf/2606.17028v1",
+    "published": "2026-06-15",
+    "crawled_at": "2026-06-16 22:04:09",
+    "ai_score": 7.5,
+    "translated_title": "HAMON：用于长时域预测的无源光学序列混合",
+    "summary_en": "• Model Architecture: HAMON uses a passive diffractive optical core with cascaded trainable phase masks and free-space diffraction to perform sequence mixing optically, replacing digital temporal mixing layers.\n• Data used: Evaluated on standard long-horizon forecasting benchmarks including ETTm2, ETTh2, Weather, Traffic, and Electricity datasets.\n• Performance metrics: Outperforms strongest digital baselines on ETTm2 at all horizons and ETTh2 at all but longest horizon, with MSE improvements up to 14%; competitive on Weather, trails on Traffic and Electricity.\n• Ablation studies: Phase encoding, intensity-compatible readout, and phase-scrambling ablations confirm forecasts originate from optical field, not digital head.\n• Hardware relevance: Uses standard Fourier optics, defining a concrete target for optical hardware implementation.",
+    "summary_cn": "• 核心模型: HAMON采用无源衍射光学核心，通过级联可训练相位掩模和自由空间衍射实现光学序列混合，替代数字时序混合层。\n• 数据来源: 在标准长时域预测基准上评估，包括ETTm2、ETTh2、Weather、Traffic和Electricity数据集。\n• 主要结论: 在ETTm2所有预测长度和ETTh2除最长外所有长度上超越最强数字基线，MSE提升高达14%；在Weather上具有竞争力，在Traffic和Electricity上落后。\n• 消融实验: 相位编码、强度兼容读出和相位扰乱消融证实预测来自光学场而非数字头。\n• 硬件意义: 使用标准傅里叶光学，为光学硬件实现定义了具体目标。",
+    "verdict_en": "• Alpha Potential: Moderate; optical computing may offer speed/power advantages for high-frequency trading, but performance on high-channel datasets is weaker, limiting applicability.\n• Implementation Risk: High; requires custom optical hardware, precise alignment, and environmental stability; digital simulation is feasible but hardware realization is challenging.\n• Novelty: High; first passive optical sequence mixing for forecasting, bridging optics and time-series ML; conceptually innovative but practical impact uncertain.\n• Scalability: Limited; performance degrades on high-channel data (Traffic, Electricity), suggesting difficulty with multivariate forecasting.\n• Comparison: Outperforms simple linear models but not consistently against advanced transformers; niche use case.",
+    "verdict_cn": "• 创新点: 首次将无源光学序列混合用于时间序列预测，概念新颖，结合光学与机器学习。\n• 实盘坑: 需要定制光学硬件，环境敏感，部署成本高；在高维数据上性能不佳，适用范围有限。\n• 复现难度: 极高；光学硬件实现复杂，数字仿真可复现但实际部署困难。\n• 竞争性: 在部分数据集上优于线性模型，但并非全面超越先进Transformer；可能仅适用于特定场景。\n• 可扩展性: 在高通道数据上表现下降，多变量预测能力存疑。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.17024v1",
+    "title": "ExpRL: Exploratory RL for LLM Mid-Training",
+    "pdf_url": "https://arxiv.org/pdf/2606.17024v1",
+    "published": "2026-06-15",
+    "crawled_at": "2026-06-16 22:04:18",
+    "ai_score": 7.5,
+    "translated_title": "ExpRL：用于LLM中期训练的探索性强化学习",
+    "summary_en": "• Model Architecture: Uses RL-based mid-training with an LLM judge to compare on-policy reasoning traces against reference solutions, providing dense rewards (outcome-level or process-level) instead of sparse final-answer rewards.\n• Data used: Large corpora of human-written question-answer data; reference solutions are used as reward scaffolds (hidden from policy) to construct grading rubrics.\n• Performance metrics: Outperforms SFT, sparse-reward GRPO, and self-distillation on challenging math reasoning tasks; provides better initialization for subsequent sparse-reward RL.\n• Additional mixed-domain experiments suggest ExpRL extends beyond math-only settings.",
+    "summary_cn": "• 核心模型: 基于强化学习的中期训练方法，使用LLM裁判比较在线推理轨迹与参考答案，提供密集奖励（结果级或过程级），而非稀疏的最终答案奖励。\n• 数据来源: 大规模人工编写的问答数据；参考答案作为奖励支架（对策略隐藏），用于构建评分标准。\n• 主要结论: 在挑战性数学推理任务上优于SFT、稀疏奖励GRPO和自蒸馏；为后续稀疏奖励RL提供更好的初始化。\n• 额外混合领域实验表明ExpRL可扩展到数学以外的场景。",
+    "verdict_en": "• Alpha Potential: High for reasoning-heavy tasks (e.g., math, logic) where dense rewards can capture partial progress; may improve model reasoning capabilities significantly.\n• Implementation Risk: Requires an LLM judge for reward assignment, which adds computational overhead and potential bias; reliance on reference solutions may limit exploration.\n• Novelty: Introduces reward scaffolding using reference solutions as grading rubrics, a clever twist on RL for LLM mid-training; combines exploration with dense reward shaping.",
+    "verdict_cn": "• 创新点: 利用参考答案作为评分标准进行奖励支架，巧妙结合探索与密集奖励塑造，提升LLM推理能力。\n• 实盘坑: 依赖LLM裁判分配奖励，增加计算成本和潜在偏差；参考答案可能限制策略探索空间。\n• 复现难度: 中等，需要大规模问答数据和LLM裁判，但核心方法相对直接。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.17022v1",
+    "title": "Learning the Geometry of Data: A Mathematical Review of Shape Space Analysis",
+    "pdf_url": "https://arxiv.org/pdf/2606.17022v1",
+    "published": "2026-06-15",
+    "crawled_at": "2026-06-16 22:04:26",
+    "ai_score": 7.5,
+    "translated_title": "学习数据的几何结构：形状空间分析的数学综述",
+    "summary_en": [
+      "• Model Architecture: The paper reviews a pipeline including shape representation, geodesic metric construction, statistical analysis on shape spaces, and geometry-aware learning methods, leveraging differential geometry and statistics.",
+      "• Data used: The survey covers geometric datasets from biology, medicine, anthropology, and computer vision, with examples like subcellular morphology and primate tooth evolution.",
+      "• Performance metrics: The review does not present quantitative results but emphasizes theoretical foundations and qualitative comparisons of methods for shape variability characterization and structural trajectory analysis.",
+      "• Key contribution: It synthesizes a growing body of work on shape space analysis, highlighting common challenges in nonlinear and unaligned geometric variation."
+    ],
+    "summary_cn": [
+      "• 核心模型: 综述了形状表示与参数化、测地度量构建、形状空间统计分析和几何感知学习方法的分析流程，融合微分几何与统计学。",
+      "• 数据来源: 涵盖生物学、医学、人类学和计算机视觉中的几何数据集，例如亚细胞形态和灵长类牙齿演化。",
+      "• 主要结论: 未提供定量结果，但强调理论框架，并指出非线性、未对齐几何变异的共同挑战。",
+      "• 应用领域: 展示了从亚细胞到宏观演化的多尺度生物组织应用。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low direct alpha; the paper is a survey on geometric data analysis, not directly applicable to financial markets.",
+      "• Implementation Risk: High; requires deep expertise in differential geometry and shape analysis, with no ready-to-use trading models.",
+      "• Novelty: Moderate; it synthesizes existing work but does not introduce new methods or empirical results.",
+      "• Relevance: Limited for quantitative finance; may inspire alternative data analysis (e.g., 3D object shapes) but not core trading strategies."
+    ],
+    "verdict_cn": [
+      "• 创新点: 综述性质，整合已有工作，缺乏新方法或实证结果。",
+      "• 实盘坑: 与金融交易直接相关性低，需大量领域知识转化，实施风险高。",
+      "• 复现难度: 高，依赖微分几何和形状分析专业工具，无现成模型。",
+      "• 应用前景: 可能启发另类数据分析（如3D物体形状），但非核心量化策略。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2606.14703v1",
     "title": "Gaze Heads: How VLMs Look at What They Describe",
     "pdf_url": "https://arxiv.org/pdf/2606.14703v1",
