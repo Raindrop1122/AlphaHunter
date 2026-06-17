@@ -1,5 +1,306 @@
 [
   {
+    "id": "2606.18237v1",
+    "title": "ReproRepo: Scaling Reproducibility Audits with GitHub Repository Issues",
+    "pdf_url": "https://arxiv.org/pdf/2606.18237v1",
+    "published": "2026-06-16",
+    "crawled_at": "2026-06-17 21:48:11",
+    "ai_score": 7.5,
+    "translated_title": "ReproRepo：利用GitHub仓库问题扩展可重复性审计",
+    "summary_en": [
+      "• Model Architecture: Uses LLM agents (Codex with GPT-5.5) to analyze paper-repository pairs and identify reproducibility blockers from GitHub issues.",
+      "• Data used: 1,149 recent machine learning papers from major conferences, paired with their GitHub repositories and human-raised issues.",
+      "• Performance metrics: Best agent surfaces at least one semantically related human-reported blocker for ~90% of papers; effective for visible failures and semantic region identification but less so for exact localization.",
+      "• Framework: ReproRepo is a scalable, reusable evaluation framework that leverages naturally occurring supervision from GitHub issues."
+    ],
+    "summary_cn": [
+      "• 核心模型: 使用LLM代理（如Codex with GPT-5.5）分析论文-仓库对，从GitHub问题中识别可重复性障碍。",
+      "• 数据来源: 来自主要会议的1,149篇近期机器学习论文及其GitHub仓库和人工提交的问题。",
+      "• 主要结论: 最佳代理能为约90%的论文找到至少一个语义相关的人工报告障碍；在可见故障和语义区域识别上有效，但精确定位不足。",
+      "• 框架: ReproRepo是一个可扩展、可复用的评估框架，利用GitHub问题的自然监督信号。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low for direct trading; more relevant for evaluating LLM agents in scientific reproducibility, not financial markets.",
+      "• Implementation Risk: Moderate; requires access to LLM APIs and GitHub data, but framework is open-source and scalable.",
+      "• Novelty: High; introduces a scalable benchmark for reproducibility auditing using naturally occurring data, reducing manual effort.",
+      "• Practical Use: Useful for research teams assessing LLM capabilities, but not directly applicable to quantitative finance strategies."
+    ],
+    "verdict_cn": [
+      "• 创新点: 利用GitHub问题作为自然监督信号，构建可扩展的可重复性审计基准，减少人工标注成本。",
+      "• 实盘坑: 与量化交易无直接关联，无法直接用于策略开发或市场预测。",
+      "• 复现难度: 中等；代码开源，但需要LLM API和GitHub数据，计算资源要求较高。",
+      "• 适用性: 更适合AI研究社区，而非金融量化领域。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.18236v1",
+    "title": "Sign-Rank, Index, and List Replicability: Connections and Separations",
+    "pdf_url": "https://arxiv.org/pdf/2606.18236v1",
+    "published": "2026-06-16",
+    "crawled_at": "2026-06-17 21:48:19",
+    "ai_score": 4.5,
+    "translated_title": "符号秩、索引和列表可复制性：联系与分离",
+    "summary_en": [
+      "• The paper studies the sign rank of binary concept classes, a measure of representation complexity.",
+      "• It establishes an ordering between Z2-index and list replicability number, showing Z2-index is bounded by a linear function of list replicability.",
+      "• A strong separation between sign rank and Z2-index is proved, resolving an open question.",
+      "• Upper bounds on list replicability number are derived using height and minimum star number.",
+      "• A composition result shows that the product of two concept classes has list replicability bounded by the sum of individual numbers."
+    ],
+    "summary_cn": [
+      "• 核心模型: 研究二元概念类的符号秩，衡量表示复杂度。",
+      "• 数据来源: 理论分析，无实证数据。",
+      "• 主要结论: 证明Z2-指数被列表可复制数的线性函数上界，并实现符号秩与Z2-指数的强分离。",
+      "• 理论贡献: 通过高度和最小星数给出列表可复制数的上界，并证明乘积类的组合性质。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low; purely theoretical with no direct trading application.",
+      "• Implementation Risk: High; requires translation to quantitative models, unclear practical use.",
+      "• Novelty: Moderate; resolves an open question but limited to learning theory.",
+      "• Relevance: Minimal for hedge fund; better suited for academic research."
+    ],
+    "verdict_cn": [
+      "• 创新点: 解决了符号秩与Z2-指数分离的开放问题，理论上有意义。",
+      "• 实盘坑: 无实证数据，无法直接用于交易策略。",
+      "• 复现难度: 高，需要深厚的数学和机器学习理论背景。",
+      "• 实用性: 对量化投资几乎无直接价值，属于纯理论贡献。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.18231v1",
+    "title": "Adaptive Volumetric Mechanical Property Fields Invariant to Resolution",
+    "pdf_url": "https://arxiv.org/pdf/2606.18231v1",
+    "published": "2026-06-16",
+    "crawled_at": "2026-06-17 21:48:27",
+    "ai_score": 7.5,
+    "translated_title": "自适应体积极力学属性场：分辨率无关的预测方法",
+    "summary_en": [
+      "• Model Architecture: Proposes AdaVoMP, a sparse transformer encoder-decoder that autoregressively generates a sparse adaptive voxel structure (SAV) for each input 3D shape, replacing fixed-voxel models.",
+      "• Data used: Utilizes 3D objects with unknown mechanical properties; training likely involves synthetic or simulated data with ground-truth material fields.",
+      "• Performance metrics: Achieves 16^3× higher resolution than prior art (VoMP), with more accurate volumetric properties and lower test-time compute.",
+      "• Key result: Enables conversion of high-resolution complex 3D objects into simulation-ready assets for realistic deformable simulations."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出AdaVoMP，采用稀疏Transformer编码器-解码器，自回归生成稀疏自适应体素结构（SAV），替代固定体素模型。",
+      "• 数据来源: 使用未知力学属性的3D物体，训练数据可能来自合成或模拟数据，包含真实材料场。",
+      "• 主要结论: 分辨率比先前方法VoMP高16^3倍，体积属性更准确，测试时计算量更低。",
+      "• 应用价值: 可将高分辨率复杂3D物体转换为可直接用于仿真的资产，实现逼真的可变形模拟。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low for financial trading; paper focuses on physics simulation, not market data or predictive modeling for finance.",
+      "• Implementation Risk: High; requires 3D shape processing and specialized transformer architecture, not directly applicable to financial time series.",
+      "• Novelty: Moderate; combines sparse voxel structures with autoregressive transformers for material property prediction, but limited to graphics/engineering domain."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将稀疏体素与自回归Transformer结合用于材料属性预测，在图形学领域有创新。",
+      "• 实盘坑: 与金融交易无关，无法直接用于量化策略，缺乏市场数据关联。",
+      "• 复现难度: 高，需要3D数据处理和专用模型架构，且训练数据不公开。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.18223v1",
+    "title": "Learning Red Agent Policy from Observations for Neurosymbolic Autonomous Cyber Agents",
+    "pdf_url": "https://arxiv.org/pdf/2606.18223v1",
+    "published": "2026-06-16",
+    "crawled_at": "2026-06-17 21:48:34",
+    "ai_score": 4.5,
+    "translated_title": "从观测中学习红方智能体策略用于神经符号自主网络智能体",
+    "summary_en": "• Model Architecture: Uses imitation learning to learn red agent policies from observations, integrated with a neurosymbolic cyber-defense agent based on behavior trees with learning-enabled components.\n• Data: Simulated autonomous cyber environment data, including network observations and defender actions, with discrete states and actions.\n• Performance Metrics: Achieves high prediction accuracy across diverse simulated scenarios, effectively handling different red policies.\n• Key Finding: The method addresses partial observability by predicting red agent actions without direct observation of attacker actions.",
+    "summary_cn": "• 核心模型: 采用模仿学习从观测中学习红方策略，并与基于行为树和学习组件的神经符号防御智能体集成。\n• 数据来源: 使用模拟自主网络环境数据，包括网络观测和防御者动作，状态和动作均为离散。\n• 主要结论: 在多种模拟场景下实现高预测准确率，有效处理不同红方策略，解决了部分可观测性问题。",
+    "verdict_en": "• Alpha Potential: Low; the paper focuses on cybersecurity, not financial trading; no direct alpha generation.\n• Implementation Risk: High; requires specialized cyber environment and integration with neurosymbolic systems; not directly applicable to finance.\n• Novelty: Moderate; applies imitation learning to partially observable cyber defense, but methods are standard.\n• Relevance: Minimal for hedge fund; no financial data or trading strategies discussed.",
+    "verdict_cn": "• 创新点: 将模仿学习应用于部分可观测的自主网络防御场景，但方法本身并不新颖。\n• 实盘坑: 与金融交易无关，无法直接用于量化策略；需要特定网络环境，复现成本高。\n• 复现难度: 高；依赖模拟环境和神经符号系统，缺乏公开数据集和代码。\n• 评分: 4.5/10，不适合量化投资。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.18218v1",
+    "title": "Finite-Time Queue Peak Laws in Stochastic Networks: Logarithmic Scaling After Geometric Thresholds",
+    "pdf_url": "https://arxiv.org/pdf/2606.18218v1",
+    "published": "2026-06-16",
+    "crawled_at": "2026-06-17 21:48:44",
+    "ai_score": 7.5,
+    "translated_title": "随机网络中的有限时间队列峰值定律：几何阈值后的对数缩放",
+    "summary_en": [
+      "• Model Architecture: Generalized switches with multiple queues sharing constrained service resources, under drift-minimizing scheduling policies like MaxWeight.",
+      "• Data used: Theoretical analysis with stochastic arrivals that may be dependent, time-varying, and adapted to the past; no empirical data.",
+      "• Performance metrics: Finite-time queue peak bounds (running maximum) in high probability and expectation, with logarithmic scaling after a geometric threshold.",
+      "• Key result: Square-root envelope persists only up to a geometry-dependent threshold; beyond that, logarithmic growth dominates.",
+      "• Mechanism: Self-normalization removes capacity geometry from logarithmic coefficient, while geometry remains in threshold."
+    ],
+    "summary_cn": [
+      "• 核心模型: 广义交换机模型，多个队列共享受限服务资源，采用漂移最小化调度策略（如MaxWeight）。",
+      "• 数据来源: 纯理论分析，无实证数据；假设到达过程可依赖、时变且适应历史。",
+      "• 主要结论: 有限时间队列峰值在几何阈值后仅对数增长，平方根包络仅适用于阈值前。",
+      "• 机制: 自归一化消除了容量几何对对数系数的影响，但几何仍体现在阈值中。",
+      "• 下界: 对数项和几何阈值均不可避免，匹配下界证明其最优性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low for direct trading; theoretical insights may inform queue-aware scheduling in high-frequency trading systems.",
+      "• Implementation Risk: High; requires precise estimation of geometry-dependent thresholds and slack conditions, which are hard in practice.",
+      "• Novelty: High; provides rigorous finite-time peak laws beyond asymptotic regimes, with self-normalization mechanism.",
+      "• Relevance: Moderate for quant finance; more applicable to network engineering and data center scheduling."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次严格刻画有限时间队列峰值的两阶段行为，自归一化机制新颖。",
+      "• 实盘坑: 几何阈值和松弛条件难以实时估计，实际网络负载波动大，理论假设严格。",
+      "• 复现难度: 高；需要随机网络和调度策略的深度数学背景，模拟验证复杂。",
+      "• 量化价值: 低；更适用于网络工程，对高频交易中订单队列管理有间接启发。"
+    ],
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.18209v1",
+    "title": "Rethinking Dataset Distillation for Classification: Do Distilled Sets Outperform Coresets?",
+    "pdf_url": "https://arxiv.org/pdf/2606.18209v1",
+    "published": "2026-06-16",
+    "crawled_at": "2026-06-17 21:48:51",
+    "ai_score": 6.5,
+    "translated_title": "重新思考分类任务的数据集蒸馏：蒸馏集是否优于核心集？",
+    "summary_en": [
+      "• Model Architecture: Evaluates seven state-of-the-art dataset distillation (DD) methods against three coreset selection (CS) strategies.",
+      "• Data used: Experiments on ImageNet-1K, ImageNet100, and ImageNette datasets.",
+      "• Performance metrics: Accuracy under three training protocols, plus representativeness, diversity, and quality of condensed sets.",
+      "• Key finding: SOTA DD methods are comparable to or worse than coresets on large-scale datasets, with higher construction cost.",
+      "• Additional insight: Coresets consistently achieve better coverage of the original data distribution."
+    ],
+    "summary_cn": [
+      "• 核心模型: 对比了七种最先进的数据集蒸馏方法与三种核心集选择策略。",
+      "• 数据来源: 在ImageNet-1K、ImageNet100和ImageNette数据集上进行实验。",
+      "• 主要结论: 在大规模数据集上，最先进的蒸馏方法性能与核心集相当或更差，且构建成本更高。",
+      "• 额外发现: 核心集在覆盖原始数据分布方面表现更优。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low; DD methods show no clear advantage over simpler coresets, limiting alpha generation.",
+      "• Implementation Risk: High; DD methods are computationally expensive and may not justify the cost.",
+      "• Novelty: Moderate; challenges prevailing assumptions but largely confirms coreset competitiveness.",
+      "• Practical insight: For practitioners, coresets remain a more efficient and competitive choice for data-centric learning."
+    ],
+    "verdict_cn": [
+      "• 创新点: 质疑了数据集蒸馏优于核心集的普遍假设，但结论偏向保守。",
+      "• 实盘坑: 蒸馏方法计算成本高，且在大规模数据上表现不佳，实际部署风险大。",
+      "• 复现难度: 中等；实验设计清晰，但需要大量计算资源复现大规模实验。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.18208v1",
+    "title": "Looped World Models",
+    "pdf_url": "https://arxiv.org/pdf/2606.18208v1",
+    "published": "2026-06-16",
+    "crawled_at": "2026-06-17 21:48:59",
+    "ai_score": 8.5,
+    "translated_title": "循环世界模型",
+    "summary_en": "• Model Architecture: Looped World Models (LoopWM) use a parameter-shared transformer block that iteratively refines latent environment states, enabling adaptive computation depth per prediction step.\n• Data used: The paper does not specify a particular dataset; it likely uses standard world model benchmarks (e.g., Atari, DMControl) but details are omitted.\n• Performance metrics: Achieves up to 100x parameter efficiency over conventional world models, with adaptive depth scaling that matches task complexity.",
+    "summary_cn": "• 核心模型: LoopWM采用参数共享的Transformer模块，通过循环迭代优化潜在环境状态，实现自适应计算深度。\n• 数据来源: 未明确指定数据集，可能使用Atari、DMControl等标准世界模型基准。\n• 主要结论: 相比传统方法，参数效率提升高达100倍，且计算深度可自动适应预测步骤的复杂度。",
+    "verdict_en": "• Alpha Potential: High, as iterative latent depth offers a new scaling axis orthogonal to model size and data, potentially improving simulation fidelity for RL and planning.\n• Implementation Risk: Medium; looped architectures may introduce training instability and require careful tuning of iteration count and gradient flow.\n• Novelty: High; first to apply looped architectures to world models, addressing the depth-accuracy trade-off efficiently.",
+    "verdict_cn": "• 创新点: 首次将循环架构引入世界模型，通过迭代深度作为新缩放轴，突破传统模型深度与效率的权衡。\n• 实盘坑: 循环结构可能导致训练不稳定，迭代次数和梯度传播需精细调参，复现门槛较高。\n• 复现难度: 中等；核心思想简洁，但实现细节（如循环次数、参数共享方式）可能影响性能，需谨慎验证。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.18190v1",
+    "title": "Multi-Source Cybersecurity Logs: An ATT&CK-Labeled Dataset and SLM Evaluation",
+    "pdf_url": "https://arxiv.org/pdf/2606.18190v1",
+    "published": "2026-06-16",
+    "crawled_at": "2026-06-17 21:49:07",
+    "ai_score": 7.5,
+    "translated_title": "多源网络安全日志：一个ATT&CK标注数据集及小语言模型评估",
+    "summary_en": "• Introduces a new multi-source cybersecurity log dataset combining system, network, and browser logs with per-event ATT&CK technique labels, covering 12 tactics and 53 techniques.\n• Dataset includes 870 sessions (70 attack, 800 benign) and ~2.3 million events, generated using real attack tools (RAT, C2 tunnels, cloud exfiltration).\n• Evaluates three Small Language Models (Qwen2.5-1.5B, Llama-3.2-3B, Phi-4-Mini) fine-tuned with LoRA on chunk classification and ATT&CK technique identification tasks.\n• Fine-tuning improves chunk classification accuracy from ~8% to 90-97%, but technique identification exact-match accuracy remains at 42%, though partial-match scores are high.",
+    "summary_cn": "• 核心模型: 使用LoRA微调三个小语言模型（Qwen2.5-1.5B、Llama-3.2-3B、Phi-4-Mini）进行日志分类和ATT&CK技术识别。\n• 数据来源: 构建了包含系统、网络和浏览器日志的多源数据集，共870个会话（70个攻击，800个正常），约230万事件，标注了12种战术和53种技术。\n• 主要结论: 微调后分块分类准确率从约8%提升至90-97%，但技术识别精确匹配准确率仅42%，部分匹配分数较高。",
+    "verdict_en": "• Alpha Potential: Low for direct trading; dataset and SLM evaluation are more relevant for cybersecurity operations than financial alpha generation.\n• Implementation Risk: High; requires integration with real-time log pipelines and domain-specific tuning; technique identification accuracy is insufficient for automated threat response.\n• Novelty: High; first public dataset combining three log sources with per-event ATT&CK labels; useful for security research but not directly applicable to finance.",
+    "verdict_cn": "• 创新点: 首个结合系统、网络和浏览器日志并逐事件标注ATT&CK技术的公开数据集，对安全研究有价值。\n• 实盘坑: 与金融量化交易无关，无法直接用于生成alpha；技术识别准确率低（42%），不适合自动化安全决策。\n• 复现难度: 中等；需要搭建多源日志采集环境并复现攻击，但模型微调相对标准。",
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.18186v1",
+    "title": "Kolmogorov Regression for Robust Diffusion Policies",
+    "pdf_url": "https://arxiv.org/pdf/2606.18186v1",
+    "published": "2026-06-16",
+    "crawled_at": "2026-06-17 21:49:15",
+    "ai_score": 7.5,
+    "translated_title": "用于鲁棒扩散策略的科尔莫戈罗夫回归",
+    "summary_en": "• Model Architecture: Introduces a backward Kolmogorov equation to lift diffusion policies to Cameron-Martin space, replacing stochastic score matching with a deterministic boundary-value PDE problem. Uses precision-weighted Cameron-Martin loss and Kolmogorov residual as a diagnostic.\n• Data used: Validated on PushT manipulation benchmark and a 6-station manufacturing line with CONWIP flow control.\n• Performance metrics: On PushT, 17% improvement in max episode reward (0.95 vs 0.78) and 67.6% reduction in inter-step drifts. On manufacturing line, 28.4% lower RMSE than LSTM, high starvation recall (1.0), and effective bottleneck identification (Precision@1=1.0).",
+    "summary_cn": "• 核心模型: 引入后向科尔莫戈罗夫方程将扩散策略提升至卡梅隆-马丁空间，用确定性边界值PDE问题替代随机分数匹配，使用精度加权卡梅隆-马丁损失和科尔莫戈罗夫残差作为诊断工具。\n• 数据来源: 在PushT操作基准和6站CONWIP流水线控制上验证。\n• 主要结论: PushT上最大回合奖励提升17%（0.95 vs 0.78），步间漂移减少67.6%；流水线上RMSE比LSTM低28.4%，饥饿事件召回率1.0，瓶颈识别Precision@1=1.0。",
+    "verdict_en": "• Alpha Potential: Moderate; improvements in trajectory regularity and failure detection could be applied to trading execution or robotic control, but direct financial alpha is unclear.\n• Implementation Risk: High; requires solving PDEs and spectral weighting, which may be computationally intensive and sensitive to hyperparameters.\n• Novelty: High; combines Kolmogorov equations with diffusion models and Cameron-Martin space, offering theoretical convergence guarantees.",
+    "verdict_cn": "• 创新点: 将科尔莫戈罗夫方程与扩散模型结合，引入卡梅隆-马丁空间，提供理论收敛保证，思路新颖。\n• 实盘坑: 计算复杂度高，PDE求解和谱权重调参困难，直接应用于金融交易场景的alpha潜力不明确。\n• 复现难度: 高，需要扎实的随机分析和PDE背景，代码未公开。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.18183v1",
+    "title": "A Diffusion Approximation for Temporal-Difference Learning with Linear Features under Markovian Noise",
+    "pdf_url": "https://arxiv.org/pdf/2606.18183v1",
+    "published": "2026-06-16",
+    "crawled_at": "2026-06-17 21:49:23",
+    "ai_score": 7.5,
+    "translated_title": "马尔可夫噪声下线性特征时序差分学习的扩散近似",
+    "summary_en": [
+      "• Model Architecture: Introduces a stochastic differential equation (SDE) approximation for linear TD(0) under Markovian noise, distinguishing contraction dynamics from Markovian sampling effects.",
+      "• Data used: Theoretical analysis; no empirical data used.",
+      "• Performance metrics: Explains constant-stepsize error floor via interaction between Markovian long-run covariance and contraction geometry of the projected Bellman operator.",
+      "• Key contribution: Provides a continuous-time SDE model that captures stochastic fluctuations beyond the classical ODE approximation."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出马尔可夫噪声下线性TD(0)的随机微分方程(SDE)近似，区分投影Bellman算子的收缩动力学与马尔可夫采样的影响。",
+      "• 数据来源: 纯理论分析，未使用实证数据。",
+      "• 主要结论: 通过马尔可夫长期协方差与投影Bellman算子收缩几何的相互作用，解释了恒定步长下的误差地板。",
+      "• 创新点: 提供了超越经典ODE近似的连续时间SDE模型，捕捉随机波动。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low; theoretical paper with no direct trading application, but may inform adaptive learning rate methods.",
+      "• Implementation Risk: High; requires deep understanding of SDEs and Markov chains; not directly implementable.",
+      "• Novelty: Moderate; extends ODE approximation to SDE for TD learning, but similar SDE approximations exist in RL theory.",
+      "• Practical Relevance: Limited for hedge fund; more relevant for reinforcement learning algorithm design."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将TD学习的ODE近似推广到SDE，理论上有新意，但类似方法在RL理论中已有先例。",
+      "• 实盘坑: 纯理论，无直接交易应用，需额外转化才能用于量化策略。",
+      "• 复现难度: 高，需要随机微分方程和马尔可夫链的深厚功底。",
+      "• 对冲基金价值: 低，更适合强化学习算法研究，而非直接交易信号。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2606.17048v1",
     "title": "Exact Posterior Score Estimation for Solving Linear Inverse Problems",
     "pdf_url": "https://arxiv.org/pdf/2606.17048v1",
