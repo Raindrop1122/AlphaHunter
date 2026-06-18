@@ -1,5 +1,252 @@
 [
   {
+    "id": "2606.19334v1",
+    "title": "Freeing the Law with LOCUS: A Local Ordinance Corpus for the United States",
+    "pdf_url": "https://arxiv.org/pdf/2606.19334v1",
+    "published": "2026-06-17",
+    "crawled_at": "2026-06-18 21:53:16",
+    "ai_score": 7.5,
+    "translated_title": "用LOCUS解放法律：美国地方条例语料库",
+    "summary_en": "• Model Architecture: Uses ModernBERT-based classifiers and scorers for analyzing local law dimensions like opacity and paternalism.\n• Data used: Raw corpus includes codes from 9,239 cities and counties; county-harmonized layer covers 2,309 of 3,144 U.S. counties, representing majority population.\n• Performance metrics: Not explicitly provided; focuses on corpus creation and OCR handling of diverse document formats.\n• Key contribution: First comprehensive machine-readable corpus of U.S. local ordinances, enabling large-scale legal AI research.\n• Reproducibility: Releases corpus with coverage metadata and derivative models on Hugging Face.",
+    "summary_cn": "• 核心模型: 基于ModernBERT的分类器和评分器，用于分析地方法律的透明度和家长主义等维度。\n• 数据来源: 原始语料包含9,239个市县的法规；县级统一层覆盖美国3,144个县中的2,309个，代表多数人口。\n• 主要结论: 创建了首个全面的美国地方法规机器可读语料库，支持大规模法律AI研究。\n• 技术亮点: 使用OCR处理多种文档格式，突破法律文本数字化障碍。\n• 可复现性: 在Hugging Face上发布语料库及衍生模型，附带覆盖元数据。",
+    "verdict_en": "• Alpha Potential: Low for direct trading; useful for NLP/LLM strategies analyzing regulatory impact on local markets.\n• Implementation Risk: High due to OCR errors and fragmented data; requires significant preprocessing.\n• Novelty: High; first large-scale corpus of U.S. local ordinances, enabling novel legal AI research.\n• Practical Use: Best suited for risk management or factor construction related to local regulations.\n• Scalability: Corpus covers majority population but may miss rural areas; updates unclear.",
+    "verdict_cn": "• 创新点: 首个大规模美国地方法规语料库，填补法律AI数据空白。\n• 实盘坑: OCR错误和数据碎片化导致预处理成本高；直接交易信号弱。\n• 复现难度: 中等；数据公开但需大量清洗和OCR校正。\n• 应用场景: 更适合风险管理或因子构建，而非高频交易。\n• 局限性: 覆盖主要人口但遗漏农村地区，更新频率不明确。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.19329v1",
+    "title": "The Chandra-Gaia Catalog of Counterparts: Resolving ambiguous Gaia matches to X-ray sources in the Chandra Source Catalog using Machine Learning",
+    "pdf_url": "https://arxiv.org/pdf/2606.19329v1",
+    "published": "2026-06-17",
+    "crawled_at": "2026-06-18 21:53:25",
+    "ai_score": 7.5,
+    "translated_title": "钱德拉-盖亚对应天体目录：利用机器学习解决钱德拉源目录中X射线源与盖亚光学源的模糊匹配",
+    "summary_en": [
+      "• Model Architecture: Uses a gradient-boosted classifier (LightGBM) trained on features from both Chandra and Gaia catalogs, including magnitudes, colors, and distances, to identify true counterparts and resolve ambiguities.",
+      "• Data used: Cross-matches Chandra Source Catalog (CSC v2.1) with Gaia Data Release 3, using a training set of high-confidence matches from NWAY Bayesian framework. Validated on Chandra Orion Ultradeep Project (COUP) dataset.",
+      "• Performance metrics: Achieves 95% reproduction of NWAY cross-matches on COUP without positional information. Identifies counterparts for ~113k of ~254k X-ray sources, with ~7k having multiple counterparts and ~20k having no counterpart (half attributed to chance coincidences)."
+    ],
+    "summary_cn": [
+      "• 核心模型: 使用LightGBM梯度提升分类器，结合钱德拉和盖亚星表的特征（星等、颜色、距离）进行匹配，解决模糊对应问题。",
+      "• 数据来源: 交叉匹配钱德拉源目录(CSC v2.1)与盖亚DR3，利用NWAY贝叶斯框架构建高置信度训练集，并在猎户座超深项目(COUP)上验证。",
+      "• 主要结论: 在COUP上无需位置信息即可复现95%的NWAY匹配结果。为约113k个X射线源找到对应体，其中约7k有多个候选，约20k无对应（一半归因于偶然重合）。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Limited for direct trading; useful for constructing clean multi-wavelength catalogs for astrophysical research, which may indirectly inform factor models in quant finance.",
+      "• Implementation Risk: Requires careful handling of ambiguous matches and chance coincidences; the ML framework is not directly applicable to financial data without significant adaptation.",
+      "• Novelty: Applies ML to cross-matching astronomical catalogs, improving upon purely spatial methods; the methodology is novel in astrophysics but not directly transferable to finance."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将机器学习应用于天文星表交叉匹配，优于纯空间方法，但金融领域类似技术已成熟。",
+      "• 实盘坑: 模型依赖特定星表特征，直接用于金融数据需大量改造；模糊匹配和偶然重合的处理在金融中对应噪声和虚假信号。",
+      "• 复现难度: 中等，需天文数据处理经验；金融量化团队若缺乏相关背景，复现价值低。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.19328v1",
+    "title": "UBP2: Uncertainty-Balanced Preference Planning for Efficient Preference-based Reinforcement Learning",
+    "pdf_url": "https://arxiv.org/pdf/2606.19328v1",
+    "published": "2026-06-17",
+    "crawled_at": "2026-06-18 21:53:34",
+    "ai_score": 7.5,
+    "translated_title": "UBP2：不确定性平衡的偏好规划用于高效基于偏好的强化学习",
+    "summary_en": [
+      "• Model Architecture: UBP2 uses ensembles of reward, dynamics, and value function models to evaluate candidate trajectories via a unified score combining expected reward, terminal value, and epistemic uncertainty.",
+      "• Data used: The method relies on pairwise preference comparisons of behaviors, without requiring explicit reward design; experiments are conducted on the Meta-World benchmark.",
+      "• Performance metrics: Achieves substantially higher sample efficiency than model-free preference-based methods and non-optimistic model-based baselines on Meta-World.",
+      "• Theoretical guarantees: Sublinear regret bounds are established for both finite-horizon and infinite-horizon settings under standard regularity assumptions."
+    ],
+    "summary_cn": [
+      "• 核心模型: 使用奖励、动力学和价值函数的集成模型，通过统一评分（结合期望奖励、终端价值和认知不确定性）评估候选轨迹。",
+      "• 数据来源: 基于行为对的偏好比较，无需显式奖励设计；实验在Meta-World基准上进行。",
+      "• 主要结论: 在样本效率上显著优于无模型偏好方法和非乐观模型基线。",
+      "• 理论保证: 在标准正则性假设下，为有限和无限视界场景建立了次线性遗憾界。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the method improves sample efficiency in preference-based RL, which could be applied to automated trading strategy optimization where reward design is costly.",
+      "• Implementation Risk: High; requires ensembles of multiple models and careful uncertainty estimation, which may be computationally intensive and sensitive to hyperparameters.",
+      "• Novelty: High; introduces a principled uncertainty-balancing approach for exploration in preference-based RL, with theoretical guarantees."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出不确定性平衡的探索机制，将奖励、动力学和价值函数的不确定性统一建模，理论扎实。",
+      "• 实盘坑: 计算成本高，需要维护多个集成模型，且偏好数据获取在金融场景中可能不直接。",
+      "• 复现难度: 高；涉及复杂的不确定性估计和规划优化，对调参要求高。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2606.19318v1",
+    "title": "Fitting Accumulated Stock Returns with Tempered Skew t-Distribution",
+    "pdf_url": "https://arxiv.org/pdf/2606.19318v1",
+    "published": "2026-06-17",
+    "crawled_at": "2026-06-18 21:53:41",
+    "ai_score": 7.2,
+    "translated_title": "用调和偏斜t分布拟合累积股票收益",
+    "summary_en": [
+      "• Model: Uses a 'capped Inverse Gamma' stationary distribution for stochastic volatility, leading to a 'tempered Student-t' distribution for returns, extended to a 'tempered Skew-t' via Jones-Faddy symmetry breaking.",
+      "• Data: Analyzes S&P500 multi-day returns with accumulation periods from 20 to 120 days.",
+      "• Performance: The tempered Skew-t distribution provides good fits, capturing positive mean and negative skew, with near perfect linear dependence of mean and variance on accumulation days."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用'有界逆伽马'平稳分布描述随机波动率，导出'调和t分布'，并通过Jones-Faddy对称破缺机制扩展为'调和偏斜t分布'。",
+      "• 数据来源: 使用标普500指数多日收益率，累积天数从20到120天。",
+      "• 主要结论: 调和偏斜t分布能很好拟合数据，捕捉正均值和负偏度，均值和方差与累积天数呈近乎完美的线性关系。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low; the model is descriptive rather than predictive, offering limited direct trading signals.",
+      "• Implementation Risk: Moderate; fitting tempered distributions requires careful numerical optimization and may be sensitive to parameter estimation.",
+      "• Novelty: Moderate; extends known tempered stable distributions with skewness, but application to multi-day returns is not groundbreaking."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将调和偏斜t分布应用于多日收益率分布拟合，但本质上仍是描述性统计，缺乏预测能力。",
+      "• 实盘坑: 参数估计复杂，对极端值敏感，且模型未提供交易信号，难以直接用于策略。",
+      "• 复现难度: 中等；需要实现调和偏斜t分布的密度函数和优化算法，但已有开源代码可参考。"
+    ],
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.19317v1",
+    "title": "Explaining Attention with Program Synthesis",
+    "pdf_url": "https://arxiv.org/pdf/2606.19317v1",
+    "published": "2026-06-17",
+    "crawled_at": "2026-06-18 21:53:49",
+    "ai_score": 7.2,
+    "translated_title": "用程序合成解释注意力机制",
+    "summary_en": "• Model Architecture: Uses a pre-trained language model (e.g., GPT-2) to generate Python programs that approximate attention head behavior in transformer models (GPT-2, TinyLlama-1.1B, Llama-3B).\n• Data used: Attention matrices computed on randomly selected training examples from TinyStories; programs are re-ranked on held-out inputs.\n• Performance metrics: Achieves >75% average Intersection-over-Union similarity on TinyStories; replacing 25% of attention heads with programs incurs only 16% average perplexity increase and maintains performance on question answering benchmarks.",
+    "summary_cn": "• 核心模型: 利用预训练语言模型（如GPT-2）生成Python程序，近似替代Transformer模型（GPT-2、TinyLlama-1.1B、Llama-3B）中的注意力头行为。\n• 数据来源: 在TinyStories数据集上随机选取训练样本计算注意力矩阵，并在留出输入上重新排序程序。\n• 主要结论: 在TinyStories上平均IoU相似度超过75%；替换25%的注意力头仅导致平均困惑度增加16%，且在问答基准上保持性能。",
+    "verdict_en": "• Alpha Potential: Low direct alpha; interpretability tools may indirectly improve model selection or risk management for NLP strategies.\n• Implementation Risk: High; requires generating and validating thousands of programs per head, computationally expensive and model-specific.\n• Novelty: Moderate; combines program synthesis with attention explanation, but practical utility for trading is limited.",
+    "verdict_cn": "• 创新点: 将程序合成与注意力解释结合，生成可读代码替代黑箱组件。\n• 实盘坑: 计算成本高，每头需生成数千程序，且仅适用于特定模型，难以直接用于交易策略。\n• 复现难度: 高，依赖大型预训练模型和大量采样，对硬件要求高。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.19315v1",
+    "title": "Diffusion-Proof: Recipe for Formal Theorem Proving Beyond Auto-Regressive Generation",
+    "pdf_url": "https://arxiv.org/pdf/2606.19315v1",
+    "published": "2026-06-17",
+    "crawled_at": "2026-06-18 21:53:58",
+    "ai_score": 7.5,
+    "translated_title": "扩散证明：超越自回归生成的形式化定理证明配方",
+    "summary_en": "• Model Architecture: Proposes Diffusion-Proof framework with two models: dLLM-Prover-7B for whole-proof generation and dLLM-Corrector-7B for local proof correction using diffusion-based infilling.\n• Data used: Trained on formal theorem proving datasets (ProofNet, MiniF2F) with baseline AR LLM for comparison.\n• Performance metrics: Achieves absolute improvements of 1.61% on ProofNet-Test and 6.14% on MiniF2F-Test over AR baseline; solves one IMO problem that DeepSeek-Prover-V2-7B could not.\n• Key innovation: First application of diffusion LLMs to formal theorem proving, addressing long-range coherence issues in AR models.",
+    "summary_cn": "• 核心模型: 提出Diffusion-Proof框架，包含dLLM-Prover-7B（整体证明生成）和dLLM-Corrector-7B（局部证明修正）两个扩散模型。\n• 数据来源: 使用ProofNet和MiniF2F等定理证明数据集训练，并与自回归基线模型对比。\n• 主要结论: 在ProofNet-Test和MiniF2F-Test上分别提升1.61%和6.14%，并解决了一个DeepSeek-Prover-V2-7B无法解决的IMO问题。\n• 创新点: 首次将扩散LLM应用于形式化定理证明，缓解了自回归模型的长程连贯性问题。",
+    "verdict_en": "• Alpha Potential: Moderate; diffusion models show promise in long-range coherence but gains are modest (1-6%) and on specialized benchmarks.\n• Implementation Risk: High; training diffusion LLMs is computationally expensive and requires careful tuning; integration with existing proof assistants is non-trivial.\n• Novelty: High; first application of diffusion to formal theorem proving, but limited to small-scale experiments.\n• Practicality: Low for trading; formal math reasoning is niche, but techniques may inspire NLP/LLM strategies for long-context tasks.",
+    "verdict_cn": "• 创新点: 首次将扩散模型引入形式化定理证明，思路新颖，但效果提升有限（1-6%）。\n• 实盘坑: 计算成本高，训练复杂，且与现有证明工具集成困难，短期内难以落地。\n• 复现难度: 高；需要大量GPU资源和领域知识，代码未开源。\n• 交易价值: 低；直接应用于量化交易可能性小，但长程连贯性技术可能对NLP策略有启发。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.19303v1",
+    "title": "P-K-GCN: Physics-augmented Koopman-enhanced Graph Convolutional Network for Deep Spatiotemporal Super-resolution",
+    "pdf_url": "https://arxiv.org/pdf/2606.19303v1",
+    "published": "2026-06-17",
+    "crawled_at": "2026-06-18 21:54:05",
+    "ai_score": 7.5,
+    "translated_title": "物理增强的Koopman图卷积网络用于深度时空超分辨率",
+    "summary_en": "• Model Architecture: Proposes P-K-GCN combining spline-based GCN for spatial dependencies and Koopman operator theory for linearized temporal dynamics, with physics-based loss augmentation.\n• Data used: Evaluated on reconstructing high-resolution cardiac electrodynamics from sparse low-resolution measurements on a 3D heart geometry.\n• Performance metrics: Achieves superior accuracy compared to baseline models, with theoretical guarantees on error reduction via Rademacher complexity and generalization bounds.",
+    "summary_cn": "• 核心模型: 提出P-K-GCN，结合样条GCN提取空间依赖和Koopman算子理论线性化时间演化，并加入物理损失约束。\n• 数据来源: 在3D心脏几何上，从稀疏低分辨率测量重建高分辨率心脏电动力学数据。\n• 主要结论: 相比基线模型，该方法在精度上表现更优，且通过Rademacher复杂度和泛化界理论保证误差降低。",
+    "verdict_en": "• Alpha Potential: Low for typical financial alpha; more relevant for scientific computing or medical imaging.\n• Implementation Risk: High due to complex architecture (GCN, Koopman, physics loss) and need for domain-specific physical equations.\n• Novelty: High novelty in combining physics-informed learning with Koopman theory for irregular geometries.",
+    "verdict_cn": "• 创新点: 将物理约束与Koopman理论结合用于不规则几何上的超分辨率，理论分析扎实。\n• 实盘坑: 金融量化应用场景有限，模型复杂且依赖物理方程，难以直接迁移。\n• 复现难度: 高，需要图网络、Koopman理论和物理建模的深度知识。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.19302v1",
+    "title": "Optimal scenario design for climate emulation",
+    "pdf_url": "https://arxiv.org/pdf/2606.19302v1",
+    "published": "2026-06-17",
+    "crawled_at": "2026-06-18 21:54:14",
+    "ai_score": 7.5,
+    "translated_title": "气候模拟的最优情景设计",
+    "summary_en": "• Model Architecture: Uses a differentiable Simple Climate Model (SCM) to compute gradients of emulator loss w.r.t. training data, enabling iterative optimization of training scenarios.\n• Data used: Optimized scenarios generated via gradient-based perturbation of standard ScenarioMIP pathways; tested on SCM and an intermediate-complexity climate model (MAGICC).\n• Performance metrics: Emulator trained on one optimized scenario outperforms one trained on six standard scenarios, achieving higher predictive skill with smaller dataset; successfully isolates distinct physical behaviors of different forcing agents.\n• Key finding: Dynamically rich scenarios provide greater marginal value for emulation than expanding traditional emissions pathways.",
+    "summary_cn": "• 核心模型: 使用可微简单气候模型（SCM）计算模拟器损失对训练数据的梯度，迭代优化训练情景。\n• 数据来源: 基于标准ScenarioMIP路径的梯度扰动生成优化情景，并在SCM和中等复杂度气候模型（MAGICC）上测试。\n• 主要结论: 一个优化情景训练的模拟器优于六个标准情景训练的模拟器，以更小数据集实现更高预测技能；成功隔离不同强迫因子的物理行为。\n• 关键发现: 动态丰富的情景比扩展传统排放路径对模拟器有更大边际价值。",
+    "verdict_en": "• Alpha Potential: Low direct alpha; relevant for climate risk modeling and scenario generation in long-term investment strategies.\n• Implementation Risk: High; requires access to differentiable climate models and computational resources for gradient-based optimization.\n• Novelty: High; introduces training data optimization for climate emulators, shifting focus from architecture to data design.\n• Practicality: Limited for short-term trading; more applicable to macro/ESG risk management and portfolio stress testing.",
+    "verdict_cn": "• 创新点: 首次提出优化训练数据而非模型架构来提升气候模拟器泛化能力，方法新颖。\n• 实盘坑: 直接交易应用有限；需依赖可微气候模型，计算成本高，且优化情景可能过拟合特定模拟器。\n• 复现难度: 高；需要气候科学和深度学习交叉背景，且可微SCM非公开。\n• 适用场景: 更适合宏观/ESG风险管理及长期投资情景分析，非高频交易。",
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.19300v1",
+    "title": "Confidence is Not Reliability: Rethinking MC Dropout in Brain Tumour Segmentation",
+    "pdf_url": "https://arxiv.org/pdf/2606.19300v1",
+    "published": "2026-06-17",
+    "crawled_at": "2026-06-18 21:54:24",
+    "ai_score": 7.5,
+    "translated_title": "置信度并非可靠性：重新思考脑肿瘤分割中的MC Dropout",
+    "summary_en": "• Model Architecture: Evaluates two models - a high-performance pretrained SegResNet and a locally trained UNet with residual units (UNet-Res).\n• Data used: 126 patients from the BraTS21 dataset with multiparametric MRI.\n• Performance metrics: MC Dropout preserves segmentation accuracy (|ΔDice| < 0.01) and achieves strong uncertainty-error alignment (AUROC for entropy ≈ 0.97).\n• Key finding: Global alignment metrics (AUROC) can mask severe miscalibration in clinically critical sub-regions (e.g., enhancing tumor).\n• Conclusion: Sub-region-specific calibration assessment is necessary for clinical safety.",
+    "summary_cn": "• 核心模型: 评估了预训练的高性能SegResNet和本地训练的带残差单元的UNet（UNet-Res）。\n• 数据来源: 使用BraTS21数据集中126例患者的多参数MRI数据。\n• 主要结论: MC Dropout保持了分割精度（|ΔDice| < 0.01），并实现了强不确定性-误差对齐（熵的AUROC ≈ 0.97）。\n• 关键发现: 全局对齐指标（AUROC）可能掩盖临床关键子区域（如增强肿瘤）的严重校准错误。\n• 结论: 临床部署需要子区域特定的校准评估。",
+    "verdict_en": "• Alpha Potential: Low for direct trading; insights on model calibration could improve risk management in medical AI applications.\n• Implementation Risk: High; requires access to medical imaging data and specialized models; findings are domain-specific.\n• Novelty: Moderate; highlights a critical failure mode of MC Dropout that is often overlooked in segmentation tasks.\n• Relevance: Limited to medical imaging; not directly applicable to financial markets.\n• Practicality: Useful for developing safer AI systems but not for alpha generation.",
+    "verdict_cn": "• 创新点: 揭示了MC Dropout在临床关键子区域校准失败的问题，对医学AI安全有重要警示。\n• 实盘坑: 与金融量化交易无关，无法直接用于策略开发；复现需要医学影像数据和专业模型。\n• 复现难度: 中等，需BraTS数据集和深度学习框架，但方法本身不复杂。\n• 适用性: 仅适用于医学图像分割领域，对金融量化无直接价值。\n• 评分理由: 方法严谨，但领域局限，alpha潜力低。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.19297v1",
+    "title": "Does VLA Even Know the Basics? Measuring Commonsense and World Knowledge Retention in Vision-Language-Action Models",
+    "pdf_url": "https://arxiv.org/pdf/2606.19297v1",
+    "published": "2026-06-17",
+    "crawled_at": "2026-06-18 21:54:32",
+    "ai_score": 6.5,
+    "translated_title": "VLA模型是否掌握基础知识？衡量视觉-语言-动作模型中的常识和世界知识保留能力",
+    "summary_en": [
+      "• Introduces Act2Answer, a protocol to evaluate commonsense and world knowledge retention in Vision-Language-Action (VLA) models by requiring agents to answer through object-placement actions.",
+      "• Curates a test suite of tabletop environments across diverse commonsense and world-knowledge categories, using action-grounded success rate to reduce control confounds.",
+      "• Evaluates 7 VLA models and 9 VLM baselines, finding VLAs perform well on simple concepts but show larger gaps on richer semantic categories relative to source VLMs.",
+      "• Finds that VQA co-training is associated with better knowledge retention, and answer-relevant signals peak in middle VLA layers but attenuate in upper layers."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出Act2Answer协议，通过物体放置动作评估VLA模型的常识和世界知识保留能力。",
+      "• 数据来源: 构建涵盖多种常识和世界知识类别的桌面环境测试套件。",
+      "• 主要结论: VLA在简单概念上表现良好，但在丰富语义类别上相比源VLM差距较大；VQA联合训练有助于知识保留；答案相关信号在中间层最强，上层减弱。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low direct alpha; focuses on model evaluation rather than trading strategy, but insights on knowledge retention could inform model selection for robotics-based trading.",
+      "• Implementation Risk: Low for evaluation protocol; high for applying findings to real-world trading due to domain gap between robotics and finance.",
+      "• Novelty: Moderate; introduces a novel evaluation protocol for VLA models, but the core idea of probing knowledge retention is not entirely new."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出Act2Answer协议，将VLM知识基准适配到VLA评估，方法新颖。",
+      "• 实盘坑: 与金融交易领域差距大，直接应用价值低，需大量领域迁移工作。",
+      "• 复现难度: 中等；需要机器人硬件和仿真环境，但协议设计清晰，可复现。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2606.18237v1",
     "title": "ReproRepo: Scaling Reproducibility Audits with GitHub Repository Issues",
     "pdf_url": "https://arxiv.org/pdf/2606.18237v1",
