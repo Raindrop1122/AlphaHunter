@@ -1,5 +1,201 @@
 [
   {
+    "id": "2606.20560v1",
+    "title": "How Transparent is DiffusionGemma?",
+    "pdf_url": "https://arxiv.org/pdf/2606.20560v1",
+    "published": "2026-06-18",
+    "crawled_at": "2026-06-19 20:57:10",
+    "ai_score": 7.5,
+    "translated_title": "DiffusionGemma的透明度如何？",
+    "summary_en": "• Model Architecture: DiffusionGemma is a diffusion-based LLM that performs a large fraction of computation in a continuous latent space, with denoising steps that allow all token predictions to change at each step.\n• Data used: The paper does not specify training data; it is a study of transparency using the pre-trained DiffusionGemma and Gemma 4 models.\n• Performance metrics: The paper measures opaque serial depth, variable transparency, algorithmic transparency, and monitorability, finding that DiffusionGemma's opaque serial depth is 28.6X higher than Gemma 4 naively, but can be reduced to 1.1X using a token bottleneck. Monitorability is similar to Gemma 4.",
+    "summary_cn": "• 核心模型: DiffusionGemma是一种基于扩散的LLM，在连续潜在空间中进行大量计算，去噪步骤中所有token预测均可改变。\n• 数据来源: 未指定训练数据，基于预训练的DiffusionGemma和Gemma 4模型进行透明度研究。\n• 主要结论: 朴素情况下，DiffusionGemma的不透明序列深度是Gemma 4的28.6倍，但通过可解释的token瓶颈可降至1.1倍；可监控性与Gemma 4相当。",
+    "verdict_en": "• Alpha Potential: Low direct alpha; the paper focuses on interpretability, not trading signals. However, insights into diffusion model reasoning could inform NLP-based strategies.\n• Implementation Risk: High; requires understanding of diffusion models and interpretability techniques. The token bottleneck method may not generalize.\n• Novelty: Moderate; introduces transparency analysis for diffusion LLMs, but the findings are preliminary and case-study based.",
+    "verdict_cn": "• 创新点: 首次系统分析扩散LLM的透明度，提出token瓶颈方法降低不透明深度。\n• 实盘坑: 缺乏直接交易信号，可解释性方法复杂且可能不稳健，复现需大量计算资源。\n• 复现难度: 高；依赖特定模型和实验设置，结果可能不具普适性。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.20559v1",
+    "title": "UNIEGO: Proxies as Mediators for Unified Egocentric Video Representation Learning",
+    "pdf_url": "https://arxiv.org/pdf/2606.20559v1",
+    "published": "2026-06-18",
+    "crawled_at": "2026-06-19 20:57:21",
+    "ai_score": 7.5,
+    "translated_title": "UNIEGO：代理作为中介的统一自我中心视频表示学习",
+    "summary_en": "• Model Architecture: A hierarchical multi-teacher distillation framework with Proxy models and Selective Proxy Distillation (SPD) to unify knowledge from nine teachers spanning ego-exo viewpoints, RGB, depth, skeleton, and four foundation models.\n• Data used: Egocentric video datasets for action recognition, video retrieval, and action segmentation on three ego-exo benchmarks.\n• Performance metrics: Achieves state-of-the-art performance across all three tasks, outperforming naive multi-teacher distillation baselines.\n• Key innovation: Proxy models translate heterogeneous teacher knowledge into a homogeneous egocentric space, and SPD adaptively selects reliable supervision signals.\n• Training stability: Initializes UNIEGO as a convex combination of proxy parameters to improve loss landscape conditioning.",
+    "summary_cn": "• 核心模型: 提出层次化多教师蒸馏框架，通过代理模型和选择性代理蒸馏（SPD）统一来自九个教师的知识，涵盖自我-外部视角、RGB、深度、骨架和四个基础模型。\n• 数据来源: 使用自我中心视频数据集，在三个自我-外部基准上进行动作识别、视频检索和动作分割任务。\n• 主要结论: 在所有三个任务上达到最先进性能，优于朴素多教师蒸馏基线。\n• 创新点: 代理模型将异构教师知识转化为同质自我中心空间，SPD自适应选择可靠监督信号。\n• 训练稳定性: 将UNIEGO初始化为代理参数的凸组合，改善损失景观条件。",
+    "verdict_en": "• Alpha Potential: Moderate; egocentric video understanding is niche but growing in applications like AR/VR and robotics, offering potential for novel alpha signals.\n• Implementation Risk: High; requires multiple teachers and proxy models, complex training pipeline, and significant computational resources.\n• Novelty: High; proxy-mediated distillation and selective supervision are novel contributions to multi-teacher distillation.\n• Practicality: Low for hedge fund use; video understanding is not directly applicable to financial markets unless combined with alternative data.\n• Reproducibility: Moderate; details provided but training such a large model is resource-intensive.",
+    "verdict_cn": "• 创新点: 代理介导蒸馏和选择性监督是多教师蒸馏领域的新贡献，具有较高学术价值。\n• 实盘坑: 视频理解与金融市场直接关联度低，除非结合另类数据（如监控视频），否则难以直接用于量化策略。\n• 复现难度: 高；需要多个教师模型和代理模型，训练流程复杂且计算资源需求大。\n• 实用性: 低；当前阶段更适合学术研究，实际交易应用场景有限。\n• 潜在应用: 若与行为金融学结合，可能从视频中提取人类行为信号，但需大量工程化工作。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.20557v1",
+    "title": "Optimal Deterministic Multicalibration and Omniprediction",
+    "pdf_url": "https://arxiv.org/pdf/2606.20557v1",
+    "published": "2026-06-18",
+    "crawled_at": "2026-06-19 20:57:30",
+    "ai_score": 8.5,
+    "translated_title": "最优确定性多校准与全知预测",
+    "summary_en": "• The paper presents a deterministic algorithm achieving minimax-optimal sample complexity for multicalibration, resolving an open problem on whether randomization is necessary.\n• It generalizes the algorithm to produce deterministic predictors satisfying outcome indistinguishability (OI) for finite or finitely covered test collections.\n• As applications, it provides deterministic omnipredictors and panpredictors with optimal sample complexity, addressing open problems from prior works.\n• The theoretical analysis focuses on sample complexity rates, achieving Õ(ε^{-3}) for ε-multicalibration.\n• No empirical evaluation or data is used; the contribution is purely theoretical.",
+    "summary_cn": "• 核心模型: 提出确定性算法实现多校准的极小极大最优样本复杂度，解决随机化是否必要的问题。\n• 数据来源: 无实证数据，纯理论分析。\n• 主要结论: 推广算法至结果不可区分性，并给出确定性全知预测器和泛预测器，样本复杂度最优。\n• 理论贡献: 样本复杂度达到 Õ(ε^{-3})，与随机化算法相当。",
+    "verdict_en": "• Alpha Potential: Low – The paper is theoretical and not directly applicable to trading; no empirical alpha signals are provided.\n• Implementation Risk: High – Requires deep understanding of multicalibration and OI; no code or practical guidance.\n• Novelty: High – Resolves open problems in algorithmic fairness and prediction, but relevance to quantitative finance is limited.",
+    "verdict_cn": "• 创新点: 解决多校准中随机化必要性的开放问题，理论贡献显著。\n• 实盘坑: 纯理论，无实证，无法直接用于交易策略。\n• 复现难度: 极高，需要扎实的机器学习理论背景，且无公开代码。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.20547v1",
+    "title": "The Token Is a Group Element: On Lie-Algebra Attention over Matrix Lie Groups",
+    "pdf_url": "https://arxiv.org/pdf/2606.20547v1",
+    "published": "2026-06-18",
+    "crawled_at": "2026-06-19 20:57:38",
+    "ai_score": 7.5,
+    "translated_title": "令牌是群元素：关于矩阵李群上的李代数注意力机制",
+    "summary_en": "• Model Architecture: Proposes Lie-Algebra Attention where tokens are bare matrix Lie group elements, using closed-form algebra norm of relative pose as attention score, avoiding learned kernels and representation-theoretic machinery.\n• Data used: Synthetic sequence-completion tasks on SE(2), SO(3), and Aff(2) groups.\n• Performance metrics: Outperforms learned MLP kernel on SE(2) with 50-80x fewer score parameters; vector-token baseline breaks invariance by 5-12 orders of magnitude.",
+    "summary_cn": "• 核心模型: 提出李代数注意力机制，令牌为矩阵李群元素，使用相对姿态的闭式代数范数作为注意力分数，无需学习核或表示论工具。\n• 数据来源: 在SE(2)、SO(3)和Aff(2)群上的合成序列补全任务。\n• 主要结论: 在SE(2)上以50-80倍更少的分数参数超越学习MLP核；向量令牌基线破坏不变性达5-12个数量级。",
+    "verdict_en": "• Alpha Potential: High for problems with inherent group structure (e.g., robotics, molecular dynamics), but limited for typical financial data lacking such symmetries.\n• Implementation Risk: Moderate; requires understanding of Lie groups and matrix exponentials, but closed-form scores reduce complexity.\n• Novelty: High; first attention mechanism with bare group element tokens, bypassing representation theory.",
+    "verdict_cn": "• 创新点: 首个使用裸群元素作为令牌的注意力机制，绕过表示论，具有理论优雅性。\n• 实盘坑: 金融数据通常缺乏明确的群结构，直接应用有限；需要领域知识将问题映射到李群。\n• 复现难度: 中等；需要李群和矩阵指数知识，但闭式分数简化了实现。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.20546v1",
+    "title": "Predictability as a Fine-Grained Measure for Privacy",
+    "pdf_url": "https://arxiv.org/pdf/2606.20546v1",
+    "published": "2026-06-18",
+    "crawled_at": "2026-06-19 20:57:47",
+    "ai_score": 6.5,
+    "translated_title": "可预测性作为隐私的细粒度度量",
+    "summary_en": "• Introduces a fine-grained privacy framework called predictability, which measures privacy leakage as the incremental gain in attacker's ability to predict sensitive information after observing algorithm output, given compromised data. • The framework explicitly incorporates attacker's core knowledge, a compromised portion of the dataset generated by a stochastic process, and a specified family of queries. • Shows that predictability and differential privacy (DP) are generally incomparable, but in worst-case regimes predictability implies mutual-information DP. • Uses generalized method of moments (GMM) to analyze asymptotic predictability for stationary, ergodic, mixing processes. • Derives a predictability-calibrated output perturbation scheme for empirical risk minimization (ERM).",
+    "summary_cn": "• 核心模型: 提出可预测性（predictability）作为隐私的细粒度度量框架，衡量攻击者在观察算法输出后对敏感信息预测能力的增量提升。 • 数据来源: 假设攻击者掌握部分数据集（由随机过程生成）和特定查询族。 • 主要结论: 可预测性与差分隐私（DP）通常不可比较，但在最坏情况下可预测性蕴含互信息DP；基于广义矩估计（GMM）分析渐近可预测性，并推导出针对ERM的可预测性校准输出扰动方案。",
+    "verdict_en": "• Alpha Potential: Low for direct trading; primarily a theoretical contribution to privacy metrics, not directly applicable to alpha generation. • Implementation Risk: High; requires modeling attacker knowledge and stochastic processes, which is complex and domain-specific. • Novelty: Moderate; introduces a new privacy framework but lacks empirical validation on real financial data. • Practicality: Limited for hedge fund use; more relevant for data privacy compliance than trading strategies.",
+    "verdict_cn": "• 创新点: 提出可预测性隐私度量，与DP互补，提供更细粒度的隐私控制。 • 实盘坑: 理论性强，实际应用需精确建模攻击者知识，金融场景下难以直接落地。 • 复现难度: 高；需要随机过程建模和GMM估计，且缺乏金融数据验证。 • 交易价值: 低；主要贡献在隐私领域，对量化策略无直接alpha贡献。",
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.20544v1",
+    "title": "Toward Calibrated Mixture-of-Experts Under Distribution Shift",
+    "pdf_url": "https://arxiv.org/pdf/2606.20544v1",
+    "published": "2026-06-18",
+    "crawled_at": "2026-06-19 20:57:55",
+    "ai_score": 7.5,
+    "translated_title": "面向分布偏移的校准混合专家模型",
+    "summary_en": "• Model Architecture: Mixture-of-Experts (MoE) with hard and soft routing mechanisms, focusing on expert-level calibration.\n• Data used: Not specified; experiments likely on standard benchmarks (e.g., image classification, regression) with synthetic distribution shifts.\n• Performance metrics: Calibration error (ECE), accuracy, accuracy-calibration tradeoff on average and on difficult subsets.",
+    "summary_cn": "• 核心模型: 混合专家模型（MoE），包括硬路由和软路由，研究专家级校准对整体模型的影响。\n• 数据来源: 未明确指定，可能使用标准基准数据集（如图像分类）并引入合成分布偏移。\n• 主要结论: 硬路由下专家校准足以保证整体校准，但软路由不足；提出的对抗性重加权方法改善了准确率-校准权衡。",
+    "verdict_en": "• Alpha Potential: Moderate; calibration improvements can enhance model reliability, but direct trading alpha is unclear.\n• Implementation Risk: High; requires careful tuning of adversarial reweighting and expert calibration, may not generalize to all market regimes.\n• Novelty: Moderate; extends calibration to MoE under distribution shift, but adversarial reweighting is a known technique.",
+    "verdict_cn": "• 创新点: 首次系统研究分布偏移下MoE的校准问题，提出对抗性重加权方法。\n• 实盘坑: 软路由模型校准不足，且对抗性重加权可能增加过拟合风险，实盘环境分布偏移复杂。\n• 复现难度: 中等；需要MoE框架和校准训练，但方法细节清晰。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2606.20538v1",
+    "title": "Multi-Task Bayesian In-Context Learning",
+    "pdf_url": "https://arxiv.org/pdf/2606.20538v1",
+    "published": "2026-06-18",
+    "crawled_at": "2026-06-19 20:58:06",
+    "ai_score": 8.5,
+    "translated_title": "多任务贝叶斯上下文学习",
+    "summary_en": "• Model Architecture: Uses a transformer trained on sequences of prior and target tasks to perform amortized hierarchical Bayesian inference, with prior information encoded as a prefix in the in-context dataset.\n• Data used: Synthetic datasets generated from a family of priors, including out-of-meta-distribution priors and high-dimensional latent structures; also tested on a real-world spatiotemporal temperature prediction benchmark.\n• Performance metrics: Matches oracle Bayesian predictors in accuracy while being orders of magnitude faster; demonstrates robustness under distribution shift.\n• Key result: The method adapts to new priors at test time without retraining, improving generalization under prior shift.\n• Code availability: Open-source code provided for reproducibility.",
+    "summary_cn": "• 核心模型: 采用Transformer架构，通过将先验信息编码为上下文数据集的前缀，实现分层贝叶斯推断的摊销学习，支持多任务上下文学习。\n• 数据来源: 使用合成数据集（包括元分布外先验和高维潜在结构）以及真实世界时空温度预测基准。\n• 主要结论: 在准确率上媲美贝叶斯最优预测器，但速度提升数个数量级；对先验分布偏移具有鲁棒性。\n• 额外发现: 测试时可自适应新先验，无需重新训练。\n• 代码开源: 提供完整代码，便于复现。",
+    "verdict_en": "• Alpha Potential: High for applications requiring robust Bayesian inference under prior shift, such as adaptive trading strategies or risk management.\n• Implementation Risk: Medium; requires careful tuning of transformer architecture and prior family design; computational cost may be high for very large datasets.\n• Novelty: Strong; combines multi-task learning with in-context Bayesian inference, addressing a key limitation of prior-data fitted networks.\n• Practicality: Real-world temperature prediction benchmark shows applicability, but financial domain adaptation needs further validation.\n• Limitation: Assumes access to a family of priors; performance may degrade if prior family is misspecified.",
+    "verdict_cn": "• 创新点: 将多任务学习与上下文贝叶斯推断结合，解决了现有方法无法适应新先验的痛点，理论贡献显著。\n• 实盘坑: 需要设计合理的先验族，否则性能可能下降；Transformer训练成本高，高频场景可能不适用。\n• 复现难度: 中等，代码已开源但需调整超参数和先验结构。\n• 应用前景: 适合需要动态更新先验的量化策略（如波动率预测），但金融数据验证尚缺。\n• 风险提示: 模型对先验族的选择敏感，过度依赖合成数据可能低估真实市场复杂性。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2606.20537v1",
+    "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
+    "pdf_url": "https://arxiv.org/pdf/2606.20537v1",
+    "published": "2026-06-18",
+    "crawled_at": "2026-06-19 20:58:17",
+    "ai_score": 7.5,
+    "translated_title": "执行状态胶囊：面向低延迟、小批量、设备端物理AI服务的图绑定执行状态检查点与恢复",
+    "summary_en": "• Model Architecture: Introduces execution-state capsules for graph-bound checkpoint and restore of complete execution state (KV cache, recurrent state, convolution state, MTP state, metadata) using a white-box kernel runtime (FlashRT) with contiguous static buffers and no block-table indirection.\n• Data used: Evaluated on NVIDIA CUDA backend (RTX 5090, Jetson AGX Thor, DGX Spark) using LLM serving workloads; no specific dataset mentioned.\n• Performance metrics: GPU-resident snapshot/restore sub-millisecond; TTFT speedup over cold prefill ranges from 3.9x (2k tokens) to 27x (16k tokens); byte-exact restore and token-identical under greedy decode; KV-only ablation diverges, showing recurrent state is load-bearing.",
+    "summary_cn": "• 核心模型: 提出执行状态胶囊，通过图绑定检查点与恢复机制，完整保存执行状态（KV缓存、循环状态、卷积状态、MTP状态、元数据），基于白盒内核运行时FlashRT，使用连续静态缓冲区，无块表间接寻址。\n• 数据来源: 在NVIDIA CUDA后端（RTX 5090、Jetson AGX Thor、DGX Spark）上评估，使用LLM服务负载，未提及具体数据集。\n• 主要结论: GPU驻留快照/恢复亚毫秒级；TTFT加速比从2k tokens的3.9倍到16k tokens的27倍；恢复字节级精确且贪婪解码下token一致；仅KV缓存的消融实验发散，表明循环状态至关重要。",
+    "verdict_en": "• Alpha Potential: Low direct alpha; focuses on latency reduction for on-device AI serving, which could enable new real-time trading strategies (e.g., high-frequency NLP/LLM agents) but not directly applicable to traditional quant finance.\n• Implementation Risk: High; requires custom CUDA kernel runtime (FlashRT) and graph-bound execution, not easily integrated with existing trading infrastructure.\n• Novelty: High; introduces complete execution-state checkpointing beyond KV caches, with sub-millisecond restore, addressing a gap in low-latency serving.",
+    "verdict_cn": "• 创新点: 首次提出完整执行状态（不仅是KV缓存）的图绑定检查点与恢复，亚毫秒级恢复速度，填补低延迟设备端AI服务空白。\n• 实盘坑: 直接量化交易应用有限；依赖特定硬件（NVIDIA GPU）和自定义运行时，集成成本高；仅适用于小批量、低延迟场景，与高频交易系统兼容性存疑。\n• 复现难度: 高；需要CUDA编程和底层系统优化，论文未提供开源代码，复现需大量工程投入。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.20520v1",
+    "title": "Sovereign Execution Brokers: Enforcing Certificate-Bound Authority in Agentic Control Planes",
+    "pdf_url": "https://arxiv.org/pdf/2606.20520v1",
+    "published": "2026-06-18",
+    "crawled_at": "2026-06-19 20:58:26",
+    "ai_score": 6.5,
+    "translated_title": "主权执行经纪人：在代理控制平面中强制执行证书绑定权限",
+    "summary_en": [
+      "• Model Architecture: Introduces Sovereign Execution Broker (SEB) as a runtime enforcement boundary that separates proposal, admission, and execution of mutations, consuming certificates from Sovereign Assurance Boundary (SAB).",
+      "• Data used: The prototype is evaluated on AWS and Kubernetes clusters, using synthetic workloads to measure latency, revocation propagation, drift detection, and fault injection.",
+      "• Performance metrics: Reports latency overheads, revocation propagation times, drift detection accuracy, and security under fault injection, though specific numerical results are not detailed in the abstract."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出主权执行经纪人（SEB），作为运行时强制边界，将变更的提议、准入和执行分离，使用来自主权保证边界（SAB）的证书。",
+      "• 数据来源: 在AWS和Kubernetes集群上评估原型，使用合成工作负载测量延迟、撤销传播、漂移检测和故障注入。",
+      "• 主要结论: SEB将认证权限转化为短生命周期、可撤销、可审计的运行时能力，前提是生产变更API拒绝非经纪人身份。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low for quantitative finance; focuses on infrastructure security for agentic systems, not trading strategies.",
+      "• Implementation Risk: High; requires integration with existing cloud and Kubernetes APIs, and bypass-prevention deployment patterns are complex.",
+      "• Novelty: Moderate; combines certificate-bound authority with runtime enforcement, but similar concepts exist in service mesh and policy engines."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将证书绑定权限与运行时强制结合，但类似概念在服务网格和策略引擎中已有体现。",
+      "• 实盘坑: 与现有云和Kubernetes API集成复杂，绕过预防部署模式难以实现。",
+      "• 复现难度: 高；需要特定基础设施和证书管理支持，原型代码未公开。"
+    ],
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.20512v1",
+    "title": "Probe-and-Refine Tuning of Repository Guidance for Coding Agents",
+    "pdf_url": "https://arxiv.org/pdf/2606.20512v1",
+    "published": "2026-06-18",
+    "crawled_at": "2026-06-19 20:58:36",
+    "ai_score": 7.2,
+    "translated_title": "编码代理的仓库引导的探测与精炼调优",
+    "summary_en": "• Model Architecture: Uses a probe-and-refine tuning procedure with single-shot LLM calls (no agent loop or tool use) to iteratively diagnose and patch repository guidance files for coding agents.\n• Data: Synthetic bug-fix probes on SWE-bench Verified; experiments with Qwen3.5-35B-A3B and NVIDIA-Nemotron-3-Nano-30B-A3B models.\n• Performance: Achieves 33.0% mean resolve rate vs. 28.3% for static knowledge base and 25.5% for unguided baseline (p<0.001). Improvement driven by coverage (+14.5 pp instances) rather than precision (~59%, p=0.119).",
+    "summary_cn": "• 核心模型: 采用探测与精炼调优流程，通过单次LLM调用（无代理循环或工具使用）迭代诊断和修复仓库指导文件。\n• 数据来源: 基于SWE-bench Verified的合成bug修复探针；使用Qwen3.5-35B-A3B和NVIDIA-Nemotron-3-Nano-30B-A3B模型。\n• 主要结论: 平均解决率33.0%，优于静态知识库的28.3%和无指导基线的25.5%（p<0.001）。改进源于覆盖率提升（+14.5个百分点），而非精度（约59%，p=0.119）。",
+    "verdict_en": "• Alpha Potential: Moderate. The method improves agent resolve rates significantly, which could translate to productivity gains in software development, but direct financial alpha is limited.\n• Implementation Risk: Low to medium. The procedure is simple (no agent loop) but requires careful prompt engineering and model selection; cross-model degradation noted.\n• Novelty: High. Introduces a novel iterative tuning approach for repository guidance, with clear ablation showing coverage vs. precision trade-off.",
+    "verdict_cn": "• 创新点: 提出探测与精炼调优方法，创新性地通过单次LLM调用迭代优化仓库指导，并清晰区分覆盖率和精度的影响。\n• 实盘坑: 对模型诊断能力敏感，弱模型可能导致调优失效；改进主要来自覆盖率，而非修复质量，可能在实际复杂场景中效果有限。\n• 复现难度: 中等。需要SWE-bench环境及特定LLM，但流程简单，无复杂工具链。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2606.19334v1",
     "title": "Freeing the Law with LOCUS: A Local Ordinance Corpus for the United States",
     "pdf_url": "https://arxiv.org/pdf/2606.19334v1",
