@@ -1,5 +1,241 @@
 [
   {
+    "id": "2606.23689v1",
+    "title": "AutoDex: An Automated Real-World System for Dexterous Grasping Data Collection",
+    "pdf_url": "https://arxiv.org/pdf/2606.23689v1",
+    "published": "2026-06-22",
+    "crawled_at": "2026-06-23 21:20:34",
+    "ai_score": 7.5,
+    "translated_title": "AutoDex：一种用于灵巧抓取数据收集的自动化真实世界系统",
+    "summary_en": [
+      "• Model Architecture: AutoDex is an automated real-world data-collection system that integrates perception (20-camera setup for object localization under occlusion), execution (collision-monitored robot motions), labeling (lift-and-hold success/failure), and active object reset to close the loop.",
+      "• Data used: The system collects 3,593 grasp trials across Allegro and Inspire hands on 100 diverse objects, with synchronized multi-view observations and robot-state logs.",
+      "• Performance metrics: AutoDex achieves a 4.8x throughput improvement over teleoperation (10.3 h vs 49.4 h for 500 trajectories), and grasps retrieved from the AutoDex-validated database succeed 76% versus 34% for simulation-only validation."
+    ],
+    "summary_cn": [
+      "• 核心模型: AutoDex是一个自动化真实世界数据收集系统，集成了感知（20相机设置用于遮挡下的物体定位）、执行（碰撞监测的机器人运动）、标注（提拉保持成功/失败）和主动物体重置，形成闭环。",
+      "• 数据来源: 系统在Allegro和Inspire手上收集了100种不同物体的3,593次抓取试验，包含同步多视角观测和机器人状态日志。",
+      "• 主要结论: AutoDex相比遥操作实现了4.8倍的吞吐量提升（500次轨迹耗时10.3小时对比49.4小时），且从AutoDex验证数据库中检索的抓取成功率为76%，而仅仿真验证的成功率为34%。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low for financial markets; the paper focuses on robotics data collection, not directly applicable to trading strategies.",
+      "• Implementation Risk: High for financial use; requires significant adaptation to convert grasp validation into market signals.",
+      "• Novelty: High in robotics; the automated closed-loop system for real-world dexterous grasping data collection is innovative and addresses a key bottleneck."
+    ],
+    "verdict_cn": [
+      "• 创新点: 在机器人领域创新性高，自动化闭环系统解决了灵巧抓取真实数据收集的瓶颈。",
+      "• 实盘坑: 对金融交易无直接应用价值，转化为市场信号需要大量改造，风险高。",
+      "• 复现难度: 硬件依赖强（20相机、机器人手），复现成本高，不适合量化金融场景。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.23680v1",
+    "title": "CoorDex: Coordinating Body and Hand Priors for Continuous Dexterous Humanoid Loco-Manipulation",
+    "pdf_url": "https://arxiv.org/pdf/2606.23680v1",
+    "published": "2026-06-22",
+    "crawled_at": "2026-06-23 21:20:45",
+    "ai_score": 7.5,
+    "translated_title": "CoorDex：协调身体与手部先验实现连续灵巧人形机器人移动操作",
+    "summary_en": "• Model Architecture: CoorDex uses a learning pipeline with privileged motion tracking teachers for body and hand, distilled into latent priors, and a coordinated latent residual policy with shared task context and separate body-hand residual heads.\n• Data used: Simulated whole-body and hand demonstrations for training, with proprioception-conditioned latent priors.\n• Performance metrics: Enables a Unitree G1 humanoid with a 20-DoF WUJI hand to perform non-stop bottle grasping, fridge door opening, and cube pick-and-turn. Ablations show joint-space PPO, joint-space hand control, and monolithic latent prediction fail under same reward budget.\n• Key innovation: High-dimensional body and dexterous hand control converted into coordinated latent residual control, enabling high-DoF dexterous loco-manipulation on the move.\n• Limitations: Only demonstrated in simulation; real-world deployment challenges remain.",
+    "summary_cn": "• 核心模型: CoorDex采用学习流水线，包含身体和手部的特权运动跟踪教师，蒸馏为潜在先验，并通过协调的潜在残差策略（共享任务上下文和独立身体-手部残差头）组合这些先验。\n• 数据来源: 使用模拟全身和手部演示进行训练，并基于本体感觉条件化潜在先验。\n• 主要结论: 使配备20自由度WUJI手的Unitree G1人形机器人能够执行非停止抓取瓶子、移动中打开冰箱门和立方体拾取旋转等任务。消融实验表明，在相同奖励预算下，关节空间PPO、关节空间手部控制和整体潜在预测均失败。\n• 创新点: 将高维身体和灵巧手部控制转化为协调的潜在残差控制，实现移动中的高自由度灵巧操作。\n• 局限性: 仅在仿真中演示，现实部署仍面临挑战。",
+    "verdict_en": "• Alpha Potential: Low for financial markets; paper focuses on robotics, not finance. No direct trading application.\n• Implementation Risk: High; requires specialized hardware (humanoid robot, dexterous hand) and simulation environment. Not applicable to algorithmic trading.\n• Novelty: High in robotics for combining body and hand priors with residual RL for continuous loco-manipulation.\n• Relevance: None to quantitative finance or hedge fund strategies.\n• Recommendation: Skip for trading; consider for robotics investment thesis if applicable.",
+    "verdict_cn": "• 创新点: 在机器人领域，将身体和手部先验与残差强化学习结合，实现连续移动操作，具有较高创新性。\n• 实盘坑: 与金融交易完全无关，无法直接应用于量化策略。需要专用硬件和仿真环境，实施风险极高。\n• 复现难度: 高，依赖特定机器人平台（Unitree G1、WUJI手）和仿真数据生成。\n• 相关性: 对量化对冲基金无直接价值，除非涉及机器人投资主题。\n• 建议: 跳过，不纳入交易策略研究。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.23679v1",
+    "title": "Semantic Browsing: Controllable Diversity for Image Generation",
+    "pdf_url": "https://arxiv.org/pdf/2606.23679v1",
+    "published": "2026-06-22",
+    "crawled_at": "2026-06-23 21:20:54",
+    "ai_score": 6.5,
+    "translated_title": "语义浏览：可控多样性的图像生成",
+    "summary_en": [
+      "• Model Architecture: Uses a Vision Language Model (VLM) with an agentic workflow to enforce structured variation at the text level, decoupling semantic decisions from pixel generation.",
+      "• Data: Leverages text-to-image models trained on elaborated captions, but no specific dataset is introduced; method is model-agnostic.",
+      "• Performance Metrics: Demonstrates diverse and navigable design spaces with user-understandable semantic variations, but lacks quantitative metrics like FID or user study results.",
+      "• Key Contribution: Introduces Semantic Browsing for controlled diversity, enabling structured image galleries through systematic traversal of meaningful axes."
+    ],
+    "summary_cn": [
+      "• 核心模型: 使用视觉语言模型（VLM）结合智能体工作流，在文本层面强制结构化变化，将语义决策与像素生成解耦。",
+      "• 数据来源: 利用基于详细描述训练的文本到图像模型，但未引入特定数据集；方法具有模型无关性。",
+      "• 主要结论: 实现了语义浏览，通过系统遍历有意义的轴生成结构化图像画廊，但缺乏定量指标（如FID）或用户研究。",
+      "• 创新点: 在文本层面诱导多样性，而非依赖随机噪声，提供可控且可解释的生成结果。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low for finance; no direct trading application; may be useful for synthetic data generation in alternative data.",
+      "• Implementation Risk: High; requires integration of VLM and agentic workflows, computationally expensive.",
+      "• Novelty: Moderate; idea of text-level diversity is interesting but lacks rigorous evaluation and comparison to baselines.",
+      "• Practicality: Limited for hedge fund use; more relevant to creative AI or content generation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 在文本层面控制多样性，思路新颖，但缺乏与现有方法的定量对比。",
+      "• 实盘坑: 计算成本高，且生成结果难以直接用于金融交易策略。",
+      "• 复现难度: 中等；依赖预训练模型，但智能体工作流实现细节不明确。",
+      "• 应用前景: 更适合创意生成，而非量化投资；可能用于生成合成数据增强另类数据集。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.23676v1",
+    "title": "Open Problem: Is AdamW Effective Under Heavy-Tailed Noise?",
+    "pdf_url": "https://arxiv.org/pdf/2606.23676v1",
+    "published": "2026-06-22",
+    "crawled_at": "2026-06-23 21:21:04",
+    "ai_score": 7.5,
+    "translated_title": "开放问题：AdamW在重尾噪声下是否有效？",
+    "summary_en": "• Model Architecture: The paper focuses on AdamW optimizer, analyzing its convergence under heavy-tailed noise assumptions, contrasting with sign-based optimizers like Lion and Muon.\n• Data used: No empirical data; theoretical analysis using stochastic gradient noise models with heavy-tailed distributions.\n• Performance metrics: Convergence rates and theoretical guarantees; no empirical performance metrics.\n• Key findings: Proves a positive weighted-metric benchmark and a corridor lower-bound mechanism showing denominator memory can hide large gradients, but leaves open whether AdamW converges under heavy-tailed noise.\n• Contribution: Formulates an open problem and provides theoretical tools for future analysis.",
+    "summary_cn": "• 核心模型: 分析AdamW优化器在重尾噪声下的收敛性，与Lion、Muon等基于符号的优化器对比。\n• 数据来源: 无实证数据，基于重尾分布随机梯度噪声的理论分析。\n• 主要结论: 证明了加权度量基准和走廊下界机制，表明分母记忆可能隐藏大梯度，但AdamW在重尾噪声下的收敛性仍为开放问题。\n• 贡献: 提出开放问题并提供理论分析工具。",
+    "verdict_en": "• Alpha Potential: Low; theoretical open problem with no direct trading strategy, but may influence optimizer selection for LLM-based strategies.\n• Implementation Risk: High; no concrete algorithm or empirical validation, purely theoretical.\n• Novelty: Moderate; extends heavy-tailed analysis to AdamW, but builds on existing work on sign-based optimizers and AdaGrad.\n• Relevance: Indirect; relevant for NLP/LLM strategies relying on AdamW, but no immediate alpha.\n• Verdict: Interesting theoretical question but not actionable for quant trading.",
+    "verdict_cn": "• 创新点: 将重尾噪声分析扩展到AdamW，但基于已有工作，创新性中等。\n• 实盘坑: 纯理论，无实证验证，无法直接用于交易策略。\n• 复现难度: 低，但无实际代码或数据。\n• 交易价值: 低，仅对LLM策略的优化器选择有间接影响。\n• 总体评价: 有趣的开放问题，但缺乏量化交易直接应用价值。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.23673v1",
+    "title": "PsyBridge: A Hybrid Intelligent Framework for Multi-Dimensional Mental Health Assessment and Decision Support",
+    "pdf_url": "https://arxiv.org/pdf/2606.23673v1",
+    "published": "2026-06-22",
+    "crawled_at": "2026-06-23 21:21:11",
+    "ai_score": 5.5,
+    "translated_title": "PsyBridge：一种用于多维心理健康评估与决策支持的混合智能框架",
+    "summary_en": "• Model Architecture: PsyBridge integrates PHQ-9, GAD-7, cognitive evaluation, and personality profiling via a modular design with weighted aggregation for interpretable risk classification.\n• Data: A semi-synthetic dataset of 500 patient profiles was constructed based on clinically grounded score distributions.\n• Performance: Achieves overall accuracy of 0.84, outperforming standalone PHQ-9 and GAD-7; sensitivity analysis shows cognitive and personality components improve stability.",
+    "summary_cn": "• 核心模型: PsyBridge采用模块化设计，整合PHQ-9、GAD-7、认知评估和人格特征，通过加权聚合生成可解释的风险分类。\n• 数据来源: 基于临床评分分布构建了500个患者档案的半合成数据集。\n• 主要结论: 整体准确率0.84，优于单独使用PHQ-9和GAD-7；认知和人格组件提高了分类稳定性。",
+    "verdict_en": "• Alpha Potential: Low; the framework targets mental health assessment, not financial markets; no direct trading signal.\n• Implementation Risk: High; relies on semi-synthetic data and subjective clinical scores; real-world deployment requires validation.\n• Novelty: Moderate; hybrid integration of existing tools is incremental; lacks rigorous statistical testing for financial applications.",
+    "verdict_cn": "• 创新点: 将多个临床量表与认知人格评估整合，但方法学上缺乏突破。\n• 实盘坑: 半合成数据无法代表真实市场；心理健康评估与量化交易无直接关联。\n• 复现难度: 中等；依赖特定量表和数据分布，金融领域复现价值低。",
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.23670v1",
+    "title": "Tapered Language Models",
+    "pdf_url": "https://arxiv.org/pdf/2606.23670v1",
+    "published": "2026-06-22",
+    "crawled_at": "2026-06-23 21:21:19",
+    "ai_score": 7.5,
+    "translated_title": "锥形语言模型",
+    "summary_en": "• Model Architecture: Proposes Tapered Language Models (TLMs) where MLP width is monotonically tapered across depth using a cosine schedule, under a fixed parameter budget.\n• Data used: Experiments conducted on standard language modeling datasets (e.g., WikiText-103, C4) across multiple scales.\n• Performance metrics: TLMs improve perplexity and downstream benchmark performance over uniform-width baselines across Transformer, Gated Attention, Hope-attention, and Titans architectures, at no additional parameter or compute cost.",
+    "summary_cn": "• 核心模型: 提出锥形语言模型（TLM），在固定参数预算下，通过余弦调度沿深度单调缩减MLP宽度。\n• 数据来源: 在标准语言建模数据集（如WikiText-103、C4）上进行多尺度实验。\n• 主要结论: 在Transformer、Gated Attention、Hope-attention和Titans架构上，TLM在无额外参数或计算成本下，提升了困惑度和下游基准性能。",
+    "verdict_en": "• Alpha Potential: High – offers a free performance improvement without extra compute, directly applicable to LLM-based trading models.\n• Implementation Risk: Low – simple architectural change (cosine tapering) easily integrated into existing transformer-based models.\n• Novelty: Moderate – builds on known non-uniform layer importance, but provides a clean, architecture-agnostic solution.",
+    "verdict_cn": "• 创新点: 简洁的架构改进，利用深度不对称性，无需额外计算即可提升性能。\n• 实盘坑: 仅验证了语言建模任务，对金融时序数据的有效性需进一步测试。\n• 复现难度: 低，代码修改量小，易于在现有框架中实现。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.23668v1",
+    "title": "On the Limits of Prompt-Conditioned Language Models as General-Purpose Learners",
+    "pdf_url": "https://arxiv.org/pdf/2606.23668v1",
+    "published": "2026-06-22",
+    "crawled_at": "2026-06-23 21:21:28",
+    "ai_score": 7.5,
+    "translated_title": "论提示条件语言模型作为通用学习器的局限性",
+    "summary_en": "• Model Architecture: The paper analyzes prompt-conditioned LLMs as general-purpose learners, framing User-System interaction as a bilevel cheap-talk game.\n• Data used: No specific dataset; theoretical analysis using PAC-Bayes bounds and information theory.\n• Performance metrics: The paper establishes theoretical error floors: an expressivity floor from limited channel capacity and an objective-misalignment floor from alignment constraints.\n• Key findings: Prompt-conditioned LLMs cannot universally solve all tasks; irreducible errors exist even with infinite data.\n• Implications: Suggests multimodal interfaces and external memory to overcome limitations.",
+    "summary_cn": "• 核心模型: 将用户-系统交互建模为双层廉价谈话博弈，分析提示条件LLM作为通用学习器的局限性。\n• 数据来源: 无特定数据集，基于PAC-Bayes界和信息论的理论分析。\n• 主要结论: 提出两个不可约误差下界：表达能力下限（通道容量限制）和目标错配下限（对齐约束）。\n• 关键发现: 提示条件LLM不能通过提示单独解决所有任务，即使无限数据也存在固有误差。\n• 建议: 多模态接口和外部记忆可缓解限制。",
+    "verdict_en": "• Alpha Potential: Low direct alpha; theoretical insights may guide better model design but not trading strategies.\n• Implementation Risk: High; purely theoretical with no empirical validation or practical implementation.\n• Novelty: Moderate; formalizes known limitations of LLMs with rigorous bounds.\n• Relevance: Limited for quant finance; more relevant for NLP/LLM research.\n• Verdict: Interesting theory but not actionable for hedge funds.",
+    "verdict_cn": "• 创新点: 用信息论和PAC-Bayes严格证明LLM的通用性上限，理论贡献扎实。\n• 实盘坑: 纯理论无实证，无法直接用于交易策略开发。\n• 复现难度: 低（理论推导），但无代码或实验可复现。\n• 量化价值: 对因子挖掘无直接帮助，但可启发模型设计。\n• 总体评价: 学术价值高，但非量化投资实用论文。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.23664v1",
+    "title": "MAS-PromptBench: When Does Prompt Optimization Improve Multi-Agent LLM Systems?",
+    "pdf_url": "https://arxiv.org/pdf/2606.23664v1",
+    "published": "2026-06-22",
+    "crawled_at": "2026-06-23 21:21:37",
+    "ai_score": 7.5,
+    "translated_title": "MAS-PromptBench：提示优化何时能改进多智能体LLM系统？",
+    "summary_en": "• Model Architecture: Multi-agent systems (MAS) with LLM-based agents, each assigned a system prompt and workflow position.\n• Data used: Broad range of MAS setups varying in task, workflow, communication protocol, and team size.\n• Performance metrics: Evaluates prompt optimization gains across diverse MAS configurations.\n• Key finding: Prompt optimization can unlock significant gains but effectiveness depends on system configuration.\n• Contribution: Systematic study characterizing when and how much prompt optimization helps in MAS.",
+    "summary_cn": "• 核心模型: 基于LLM的多智能体系统，每个智能体分配系统提示和工作流位置。\n• 数据来源: 多种MAS设置，包括任务、工作流、通信协议和团队规模的变化。\n• 主要结论: 提示优化可带来显著收益，但效果取决于系统配置。\n• 贡献: 系统性地研究了提示优化在MAS中何时及多大程度上有效。",
+    "verdict_en": "• Alpha Potential: Moderate; prompt optimization for MAS could improve automated trading systems but requires careful tuning.\n• Implementation Risk: High; exponential search space and sensitivity to configuration make deployment challenging.\n• Novelty: High; first systematic study of prompt optimization in multi-agent LLM systems.\n• Practicality: Limited; results are preliminary and may not generalize to real-world financial applications.\n• Relevance: Indirect; relevant for NLP/LLM strategies but not directly applicable to quantitative finance.",
+    "verdict_cn": "• 创新点: 首次系统研究多智能体LLM系统中的提示优化，填补空白。\n• 实盘坑: 搜索空间指数级增长，配置敏感，实际部署难度大。\n• 复现难度: 中等；需要大量计算资源和多样化的MAS设置。\n• 应用前景: 对自动化交易系统有潜在价值，但需进一步验证。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.23662v1",
+    "title": "Action-BED: Task-Driven Bayesian Experimental Design with Singly Intractable Objectives",
+    "pdf_url": "https://arxiv.org/pdf/2606.23662v1",
+    "published": "2026-06-22",
+    "crawled_at": "2026-06-23 21:21:45",
+    "ai_score": 7.5,
+    "translated_title": "Action-BED：具有单重难解目标的任务驱动贝叶斯实验设计",
+    "summary_en": "• Model Architecture: Proposes Action-BED, a framework that reformulates Bayesian experimental design (BED) as optimizing expected future loss (EFL) on downstream actions, leading to singly intractable objectives that can be jointly optimized with design and action policies using stochastic gradients.\n• Data used: The method is implicit and requires only the ability to sample from the joint model over model parameters and data, and evaluate the downstream loss function; no explicit posterior or marginal likelihood estimation is needed.\n• Performance metrics: The approach is claimed to be more effective, efficient, and simpler than existing BED methods, with easy customization to different downstream tasks and losses.",
+    "summary_cn": "• 核心模型: 提出Action-BED框架，将贝叶斯实验设计重新表述为优化下游行动的期望未来损失，得到单重难解目标，可通过随机梯度联合优化设计和行动策略。\n• 数据来源: 方法隐式，仅需从模型参数和数据的联合模型中采样，并评估下游损失函数；无需显式后验或边际似然估计。\n• 主要结论: 声称比现有BED方法更有效、高效、简单，且易于定制到不同下游任务和损失。",
+    "verdict_en": "• Alpha Potential: Low direct alpha; the paper is methodological, focusing on experimental design rather than trading strategies. However, it could be used to optimize data collection for factor research.\n• Implementation Risk: High; requires careful integration of design and action policies, and stochastic gradient optimization may be unstable in practice.\n• Novelty: Moderate; reformulating BED as task-driven optimization is novel, but the core idea of using expected loss is not entirely new.",
+    "verdict_cn": "• 创新点: 将贝叶斯实验设计重新定义为任务驱动优化，避免了双重难解问题，具有一定新颖性。\n• 实盘坑: 方法偏理论，实际应用于量化交易需大量适配；随机梯度优化可能不稳定，且下游任务定义需谨慎。\n• 复现难度: 较高；需要实现联合采样和策略优化，对计算资源要求高。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.23655v1",
+    "title": "Dynamic estimation of slowly varying sequences",
+    "pdf_url": "https://arxiv.org/pdf/2606.23655v1",
+    "published": "2026-06-22",
+    "crawled_at": "2026-06-23 21:21:55",
+    "ai_score": 7.5,
+    "translated_title": "缓慢变化序列的动态估计",
+    "summary_en": [
+      "• Model Architecture: Proposes a general framework for sequentially estimating functions of slowly-varying sequences, extending implicit trace estimation to linear and nonlinear functions on diverse vector spaces.",
+      "• Data used: The framework is applied to matrix powers, spectral densities, Monte Carlo integration, and a PDE boundary value problem; no specific real-world dataset is used.",
+      "• Performance metrics: Achieves path-length-style variation bounds of O(∑α_i), improving over previous O(m·max α_i) bounds; adapts estimation budget locally based on α_t.",
+      "• Key contribution: Introduces a novel algorithm that scales estimation budget with local changes, and shows how to estimate changes on-the-fly with nearly no added cost."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出一个通用框架，用于顺序估计缓慢变化序列的函数，将隐式迹估计扩展到多种向量空间上的线性和非线性函数。",
+      "• 数据来源: 应用于矩阵幂、谱密度、蒙特卡洛积分和PDE边界值问题；未使用特定真实数据集。",
+      "• 主要结论: 实现路径长度型变分界O(∑α_i)，优于之前的O(m·max α_i)界；根据局部变化自适应调整估计预算。",
+      "• 创新点: 提出新算法，根据局部变化缩放估计预算，并展示如何以几乎零额外成本在线估计变化。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the adaptive budget allocation could reduce computational costs in dynamic risk models or portfolio optimization, but direct trading alpha is limited.",
+      "• Implementation Risk: High; requires careful tuning of change detection and budget scaling, and may not generalize well to non-smooth sequences.",
+      "• Novelty: High; generalizes prior work on dynamic trace estimation to a broader class of problems, with improved theoretical guarantees.",
+      "• Practical Relevance: Low for high-frequency trading; more suited for offline or low-frequency estimation tasks in quantitative research."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将动态迹估计推广到更广泛的问题，理论界有显著改进，但实际应用场景有限。",
+      "• 实盘坑: 需要精确估计序列变化率α_i，且对非平滑序列可能失效；计算开销在实时系统中可能过高。",
+      "• 复现难度: 中等；算法细节清晰，但需要较强的数学背景和数值优化经验。",
+      "• 交易价值: 低；更适合量化研究中的离线估计，而非高频交易策略。"
+    ],
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
     "id": "2606.20560v1",
     "title": "How Transparent is DiffusionGemma?",
     "pdf_url": "https://arxiv.org/pdf/2606.20560v1",
