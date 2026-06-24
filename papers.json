@@ -1,5 +1,315 @@
 [
   {
+    "id": "2606.24884v1",
+    "title": "InSight: Self-Guided Skill Acquisition via Steerable VLAs",
+    "pdf_url": "https://arxiv.org/pdf/2606.24884v1",
+    "published": "2026-06-23",
+    "crawled_at": "2026-06-24 21:14:10",
+    "ai_score": 7.5,
+    "translated_title": "洞察：通过可操控的视觉-语言-动作模型实现自主技能获取",
+    "summary_en": "• Model Architecture: InSight enhances Vision-Language-Action (VLA) models with primitive-level steerability, using an automated segmentation pipeline to decompose demonstrations into labeled primitives (e.g., 'move gripper to bowl') via VLM plan decomposition and end-effector poses. • Data used: Demonstrations are autonomously generated and labeled through a VLM-guided data flywheel that identifies missing primitives, attempts low-level control, and integrates successful attempts into the training set. • Performance metrics: Evaluated on simulation and real-world tasks (block flipping, drawer closing, sweeping, twisting, pouring) without human demonstrations of target skills, showing successful primitive learning and composition for novel long-horizon tasks.",
+    "summary_cn": "• 核心模型: InSight通过原始动作级别的可操控性增强VLA模型，利用自动分割管道将演示分解为带标签的原始动作（如'将夹爪移动到碗'），基于VLM计划分解和末端执行器位姿。 • 数据来源: 通过VLM引导的数据飞轮自主生成和标注演示，识别缺失的原始动作，尝试低级控制，并将成功尝试集成到训练集中。 • 主要结论: 在仿真和真实世界任务（翻转方块、关抽屉、扫地、扭转、倒水）中评估，无需目标技能的人类演示，展示了原始动作学习和组合以执行新颖长时任务的能力。",
+    "verdict_en": "• Alpha Potential: Moderate; primitive-level steerability could enable adaptive robotic trading or manufacturing, but direct financial alpha is unclear. • Implementation Risk: High; requires robust VLM and real-world robotic setup, with potential failure in complex environments. • Novelty: High; introduces a self-guided skill acquisition framework that reduces human annotation effort, advancing continual learning in robotics.",
+    "verdict_cn": "• 创新点: 提出自引导技能获取框架，通过原始动作可操控性减少人工标注，推动机器人持续学习。 • 实盘坑: 直接金融应用有限，需大量硬件投入，且VLM在复杂场景下可能不稳定。 • 复现难度: 高；依赖特定VLM和机器人平台，代码未开源，实验设置复杂。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.24879v1",
+    "title": "New Bounds for the Last Iterate of the Stochastic subGradient Method",
+    "pdf_url": "https://arxiv.org/pdf/2606.24879v1",
+    "published": "2026-06-23",
+    "crawled_at": "2026-06-24 21:14:17",
+    "ai_score": 6.5,
+    "translated_title": "随机次梯度方法最后迭代的新界",
+    "summary_en": [
+      "• Model Architecture: Analyzes the last iterate of the stochastic subgradient method (SsGM) for one-dimensional convex Lipschitz objectives with fixed stepsizes η = Θ(1/√n).",
+      "• Data used: Assumes additive i.i.d. subgradient noise with uniformly bounded variance; also considers non-i.i.d. noise.",
+      "• Performance metrics: Optimization error of order 1/√n under i.i.d. noise, and (log n)/√n without i.i.d. assumption.",
+      "• Key result: Removes extra log n factor under i.i.d. noise, but shows suboptimality without i.i.d., resolving an open problem."
+    ],
+    "summary_cn": [
+      "• 核心模型: 一维凸Lipschitz目标函数上的随机次梯度方法（SsGM），采用固定步长η=Θ(1/√n)。",
+      "• 数据来源: 假设加性i.i.d.次梯度噪声，方差一致有界；也考虑非i.i.d.噪声。",
+      "• 主要结论: i.i.d.噪声下优化误差为O(1/√n)，非i.i.d.下为O(log n/√n)，去除了log因子但显示非i.i.d.时次优。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low; theoretical result on convex optimization, not directly applicable to alpha generation.",
+      "• Implementation Risk: High; requires specific noise assumptions (i.i.d.) rarely met in financial data.",
+      "• Novelty: Moderate; resolves an open problem but limited to one-dimensional case and specific stepsize."
+    ],
+    "verdict_cn": [
+      "• 创新点: 解决了Koren和Segal提出的开放问题，但仅限一维和固定步长。",
+      "• 实盘坑: 金融数据噪声通常非i.i.d.，结论不直接适用。",
+      "• 复现难度: 理论证明复杂，但数值实验简单，复现难度中等。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.24851v1",
+    "title": "Real vs. Complex Spectral Bases for Neural Operators: The Role of Green's Function Alignment",
+    "pdf_url": "https://arxiv.org/pdf/2606.24851v1",
+    "published": "2026-06-23",
+    "crawled_at": "2026-06-24 21:14:26",
+    "ai_score": 7.5,
+    "translated_title": "神经算子的实部与复部谱基：格林函数对齐的作用",
+    "summary_en": [
+      "• Model Architecture: Introduces Hartley Neural Operator (HNO), a real-valued alternative to Fourier Neural Operator (FNO), using Discrete Hartley Transform instead of FFT to avoid complex arithmetic and conjugate symmetry redundancy.",
+      "• Data used: Benchmarks across PDE classes including Poisson, biharmonic, heat, wave, advection, Burgers, and Navier-Stokes equations, with various initial conditions and boundary conditions.",
+      "• Performance metrics: Compares HNO and FNO in terms of solution accuracy (relative error) across different PDEs, showing a monotonic relationship with operator phase content.",
+      "• Key finding: Self-adjoint elliptic operators favor HNO, while time-dependent operators with phase content favor FNO, with heat equation as borderline case."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出Hartley神经算子(HNO)，用实值离散Hartley变换替代FFT，消除复共轭冗余，参数与FNO等量但谱基不同。",
+      "• 数据来源: 在泊松、双调和、热传导、波动、对流、Burgers和Navier-Stokes等多种PDE上测试，涵盖不同初始和边界条件。",
+      "• 主要结论: 自伴椭圆算子（如泊松）适合HNO，含相位的时间依赖算子（如波动）适合FNO，热传导为临界情况。",
+      "• 性能指标: 以相对误差衡量，结果与算子相位含量单调相关，符合格林函数理论预测。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low direct alpha; focuses on scientific computing, not financial markets. However, PDE solvers are used in derivatives pricing and risk models.",
+      "• Implementation Risk: Moderate; requires understanding of PDEs and spectral methods. Replacing FFT with Hartley transform is straightforward but may not yield financial edge.",
+      "• Novelty: High theoretical contribution in aligning spectral basis with operator symmetry; provides predictive rule rather than universal winner."
+    ],
+    "verdict_cn": [
+      "• 创新点: 理论深度高，揭示谱基与算子对称性的匹配原则，而非简单追求通用模型。",
+      "• 实盘坑: 金融应用有限，PDE求解器在定价中已有成熟方法，HNO未必带来显著改进。",
+      "• 复现难度: 中等，需数值PDE和深度学习基础，Hartley变换实现简单但调参可能复杂。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ICML",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2606.24825v1",
+    "title": "L3Cube-MahaPOS: A Marathi Part-of-Speech Tagging Dataset and BERT Models",
+    "pdf_url": "https://arxiv.org/pdf/2606.24825v1",
+    "published": "2026-06-23",
+    "crawled_at": "2026-06-24 21:14:33",
+    "ai_score": 5.5,
+    "translated_title": "L3Cube-MahaPOS：马拉地语词性标注数据集与BERT模型",
+    "summary_en": [
+      "• Model Architecture: Evaluates HMM, CRF, BiLSTM, BiLSTM+CharCNN, MuRIL, and MahaBERT-v2 (Marathi-specific transformer).",
+      "• Data used: 32,354 manually annotated Marathi sentences from news text, with 16-tag Universal Dependencies-aligned POS scheme.",
+      "• Performance metrics: Best system (MahaBERT-v2) achieves 88.67% token accuracy and 81.67% macro-F1 over 15 tag classes.",
+      "• Preprocessing: Includes Unicode normalization, Devanagari-aware tokenization, and noise filtering."
+    ],
+    "summary_cn": [
+      "• 核心模型: 对比HMM、CRF、BiLSTM、BiLSTM+CharCNN、MuRIL及马拉地语专用Transformer MahaBERT-v2。",
+      "• 数据来源: 32,354条手工标注的新闻文本句子，采用16标签通用依赖对齐方案。",
+      "• 主要结论: 最佳模型MahaBERT-v2达到88.67%词级准确率和81.67%宏F1分数。",
+      "• 预处理: 包括Unicode标准化、天城文感知分词和噪声过滤。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low; POS tagging is a foundational task with limited direct trading signal.",
+      "• Implementation Risk: Medium; requires Marathi-specific models and preprocessing, but dataset is released.",
+      "• Novelty: Moderate; first gold-standard Marathi POS dataset, but methodology is standard.",
+      "• Relevance: Useful for Marathi NLP applications, but not directly applicable to financial alpha generation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首个马拉地语黄金标准POS数据集，但方法无突破。",
+      "• 实盘坑: POS标注任务与金融alpha关联弱，难以直接用于交易策略。",
+      "• 复现难度: 低，数据集和模型已开源，但需马拉地语语言能力。",
+      "• 应用前景: 对马拉地语NLP有贡献，但量化交易价值有限。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.24790v1",
+    "title": "Grad Detect: Gradient-Based Hallucination Detection in LLMs",
+    "pdf_url": "https://arxiv.org/pdf/2606.24790v1",
+    "published": "2026-06-23",
+    "crawled_at": "2026-06-24 21:14:41",
+    "ai_score": 7.5,
+    "translated_title": "梯度检测：基于梯度的LLM幻觉检测方法",
+    "summary_en": [
+      "• Model Architecture: Grad Detect analyzes layer-wise gradient patterns from a single forward-backward pass during inference, using the internal gradient structure of LLMs to predict hallucinations.",
+      "• Data used: Evaluated on several Q&A benchmarks for hallucination detection and model abstention prediction, including standard datasets like TruthfulQA and SQuAD.",
+      "• Performance metrics: Consistently outperforms confidence-based and sampling-based baselines across multiple benchmarks; layer ablation studies show final five layers concentrate over 97% of discriminative gradient signal.",
+      "• Key finding: Gradient-based signals provide rich information about output correctness not accessible through output-level signals alone."
+    ],
+    "summary_cn": [
+      "• 核心模型: Grad Detect通过单次前向-反向传播分析层间梯度模式，利用LLM内部梯度结构预测幻觉。",
+      "• 数据来源: 在多个问答基准（如TruthfulQA、SQuAD）上评估，涵盖幻觉检测和模型弃权预测。",
+      "• 主要结论: 在多个基准上持续优于基于置信度和采样的基线方法；层消融实验显示最后五层集中了超过97%的判别梯度信号。",
+      "• 创新点: 梯度信号提供了输出层面无法获得的丰富正确性信息。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; hallucination detection is crucial for LLM reliability in finance, but direct trading alpha is limited.",
+      "• Implementation Risk: Low; requires only one extra backward pass, computationally efficient.",
+      "• Novelty: High; first to use gradient patterns for hallucination detection, offering interpretable insights.",
+      "• Practicality: Easy to integrate into existing LLM pipelines; layer ablation enables efficient deployment."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次利用梯度模式检测幻觉，提供可解释的模型失败定位。",
+      "• 实盘坑: 幻觉检测本身不直接产生交易信号，需结合其他策略。",
+      "• 复现难度: 中等；需要访问模型内部梯度，但开源LLM可轻松实现。",
+      "• 应用前景: 可用于风控模块，提升LLM在金融文本生成中的可靠性。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.24769v1",
+    "title": "Dirac-Frenkel dynamics with inertia for nonlinearly parametrized solutions of evolution problems",
+    "pdf_url": "https://arxiv.org/pdf/2606.24769v1",
+    "published": "2026-06-23",
+    "crawled_at": "2026-06-24 21:14:48",
+    "ai_score": 5.5,
+    "translated_title": "带惯性的Dirac-Frenkel动力学用于演化问题的非线性参数化解",
+    "summary_en": [
+      "• Model Architecture: Proposes adding inertia to Dirac-Frenkel dynamics for nonlinearly parametrized solutions, such as neural networks or mixture models.",
+      "• Data used: Numerical experiments on synthetic problems; no real-world financial data.",
+      "• Performance metrics: Demonstrates increased robustness and well-posedness compared to standard Dirac-Frenkel dynamics.",
+      "• Key result: Inertial formulation yields well-posed parameter dynamics and a posteriori error bounds."
+    ],
+    "summary_cn": [
+      "• 核心模型: 在Dirac-Frenkel动力学中加入惯性项，用于神经网络或混合模型等非线性参数化问题。",
+      "• 数据来源: 仅使用合成数据进行数值实验，无真实金融数据。",
+      "• 主要结论: 惯性公式使参数动力学适定，并提供后验误差界，相比标准方法更鲁棒。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low; paper is purely mathematical with no financial application or market data.",
+      "• Implementation Risk: High; requires deep understanding of functional analysis and PDEs, not directly applicable to trading.",
+      "• Novelty: Moderate; inertia addition is a mathematical tweak, but well-posedness proof is solid."
+    ],
+    "verdict_cn": [
+      "• 创新点: 在Dirac-Frenkel动力学中引入惯性，数学上新颖但离量化很远。",
+      "• 实盘坑: 无金融场景，无法直接用于策略，复现需要大量数学功底。",
+      "• 复现难度: 高，涉及泛函分析和偏微分方程，代码未公开。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.24715v1",
+    "title": "Model selection with proper scoring rules on data sets of time series",
+    "pdf_url": "https://arxiv.org/pdf/2606.24715v1",
+    "published": "2026-06-23",
+    "crawled_at": "2026-06-24 21:14:54",
+    "ai_score": 5.5,
+    "translated_title": "基于适当评分规则的时间序列数据集模型选择",
+    "summary_en": "• The paper studies model selection between probabilistic models on datasets of time series using proper scoring rules.\n• It compares three summary statistics: mean score, median score, and mean rank, showing they can yield conflicting decisions due to skewness of score distributions.\n• As test set size increases, the criteria converge; for short test sets, only mean score identifies the true model.\n• Experiments on intermittent time series and the M5 competition dataset highlight the importance of large test sets.\n• Mean rank-based selection is invariant to different scaling factors.",
+    "summary_cn": "• 核心模型: 基于适当评分规则的概率模型选择，比较均值、中位数和平均排名三种统计量。\n• 数据来源: 间歇性时间序列数据及M5竞赛数据集。\n• 主要结论: 评分分布偏态导致不同统计量产生冲突；大测试集下标准收敛，小测试集仅均值有效；平均排名对缩放因子不敏感。",
+    "verdict_en": "• Alpha Potential: Low; the paper focuses on model selection methodology rather than generating trading signals.\n• Implementation Risk: Medium; requires careful choice of scoring rule and test set size, but conceptually straightforward.\n• Novelty: Moderate; extends known results on scoring rules to time series model selection, but lacks groundbreaking insights.",
+    "verdict_cn": "• 创新点: 系统分析了时间序列模型选择中评分分布偏态的影响，但理论贡献有限。\n• 实盘坑: 小样本下均值统计量可能误导，需大测试集，实际中难以满足。\n• 复现难度: 低，方法简单，但需注意评分规则选择。",
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.24696v1",
+    "title": "A Physics-Informed Fourier-Wavelet Transformer for Multiscale Computational Fluid Dynamics Surrogate Modeling",
+    "pdf_url": "https://arxiv.org/pdf/2606.24696v1",
+    "published": "2026-06-23",
+    "crawled_at": "2026-06-24 21:15:02",
+    "ai_score": 7.2,
+    "translated_title": "一种物理信息傅里叶-小波变换器用于多尺度计算流体动力学代理建模",
+    "summary_en": [
+      "• Model Architecture: Combines hybrid Fourier-wavelet spectral encoding with physics-biased self-attention based on PDE residual diagnostics, and uses self-supervised pretraining via Masked Physics Prediction and Equation Consistency Prediction.",
+      "• Data used: Two real-world flow benchmarks: cylinder-wake flow and fluid-structure interaction.",
+      "• Performance metrics: On cylinder-wake, achieves NMSE of 0.05875 and Pearson correlation of 0.97019; on fluid-structure interaction, achieves NMSE of 2.70e-4, outperforming baselines.",
+      "• Additional diagnostics: Component-wise field comparisons and scale-separated diagnostics show stronger recovery of localized wake structures."
+    ],
+    "summary_cn": [
+      "• 核心模型: 结合混合傅里叶-小波谱编码和基于PDE残差诊断的物理偏置自注意力，并采用掩码物理预测和方程一致性预测进行自监督预训练。",
+      "• 数据来源: 两个真实世界流场基准：圆柱尾流和流固耦合。",
+      "• 主要结论: 在圆柱尾流基准上，NMSE为0.05875，皮尔逊相关系数为0.97019；在流固耦合基准上，NMSE为2.70e-4，优于所有基线。",
+      "• 额外分析: 分量场比较和尺度分离诊断显示对局部尾流结构有更强的恢复能力。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low for direct financial trading; CFD surrogate modeling is more relevant to engineering than finance.",
+      "• Implementation Risk: High; requires specialized knowledge in physics-informed ML and PDEs, and computational resources for training.",
+      "• Novelty: Moderate; combines existing techniques (Fourier, wavelet, transformer, physics-informed) in a novel way, but not groundbreaking.",
+      "• Relevance: Limited to quantitative finance unless applied to related physical simulations (e.g., fluid dynamics for weather derivatives)."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将傅里叶-小波编码与物理偏置自注意力结合，并引入自监督预训练，有一定新意。",
+      "• 实盘坑: 直接应用于金融交易可能性低，主要面向工程流体力学，缺乏金融数据适配。",
+      "• 复现难度: 高，需要物理信息机器学习、偏微分方程知识及大量计算资源。",
+      "• 金融价值: 低，除非用于天气衍生品等物理模拟相关领域。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.24679v1",
+    "title": "FlowPipe: LLM-Enhanced Conditional Generative Flow Networks for Data Preparation Pipeline Construction",
+    "pdf_url": "https://arxiv.org/pdf/2606.24679v1",
+    "published": "2026-06-23",
+    "crawled_at": "2026-06-24 21:15:09",
+    "ai_score": 7.5,
+    "translated_title": "FlowPipe：基于LLM增强的条件生成流网络用于数据准备流水线构建",
+    "summary_en": "• Model Architecture: Proposes FlowPipe, a unified framework using Conditional Generative Flow Networks (C-GFlowNets) with Trajectory Balance objective for pipeline synthesis as conditional probabilistic flow generation over a DAG. Incorporates Deep Semantic Modulation via FiLM to inject LLM-derived logical priors into policy activations.\n• Data used: Evaluated on two benchmark suites with 74 real-world datasets for data preparation pipeline construction.\n• Performance metrics: Outperforms SOTA baselines (Multi-DQN) by 11.96% average accuracy improvement and achieves 12.5x faster training convergence.",
+    "summary_cn": "• 核心模型: 提出FlowPipe框架，使用条件生成流网络（C-GFlowNets）结合轨迹平衡目标，将流水线合成建模为有向无环图上的条件概率流生成。通过FiLM实现深度语义调制，将LLM逻辑先验注入策略激活。\n• 数据来源: 在包含74个真实数据集的基准套件上评估。\n• 主要结论: 相比SOTA基线（Multi-DQN），平均准确率提升11.96%，训练收敛速度提升12.5倍。",
+    "verdict_en": "• Alpha Potential: Moderate; the method improves automated ML pipeline construction, which could indirectly enhance factor generation efficiency in quant research.\n• Implementation Risk: High; requires integration of LLM, GFlowNets, and FiLM, with computational overhead and dependency on LLM quality.\n• Novelty: High; combines GFlowNets with LLM-based semantic modulation and failure awareness, addressing key limitations of prior work.",
+    "verdict_cn": "• 创新点: 将GFlowNets与LLM语义调制结合，引入失败感知机制，有效解决多智能体DQN的信用分配和探索效率问题。\n• 实盘坑: 依赖LLM先验质量，且GFlowNets训练不稳定，实际部署需大量调参；对量化因子挖掘的直接贡献有限。\n• 复现难度: 高；涉及多个复杂组件（LLM、GFlowNets、FiLM），代码已开源但复现成本大。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.24660v1",
+    "title": "Extended pseudo-spectral physics-informed neural networks for phase-field models",
+    "pdf_url": "https://arxiv.org/pdf/2606.24660v1",
+    "published": "2026-06-23",
+    "crawled_at": "2026-06-24 21:15:16",
+    "ai_score": 6.5,
+    "translated_title": "用于相场模型的扩展伪谱物理信息神经网络",
+    "summary_en": [
+      "• Model Architecture: Extended pseudo-spectral physics-informed neural network (ESPINN) combining spectral methods with PINNs for inverse identification.",
+      "• Data used: Transient snapshot data from 1D Cahn-Hilliard equation simulations, including noiseless and noisy regimes.",
+      "• Performance metrics: Accurate reconstruction of bulk chemical potential and gradient coefficients; graceful degradation under noise; improved robustness with more snapshots.",
+      "• Key result: Single snapshot pair sufficient for substantial constitutive information recovery in noiseless case."
+    ],
+    "summary_cn": [
+      "• 核心模型: 扩展伪谱物理信息神经网络（ESPINN），融合谱方法与PINN进行逆向辨识。",
+      "• 数据来源: 一维Cahn-Hilliard方程的瞬态快照数据，包括无噪声和有噪声场景。",
+      "• 主要结论: 在无噪声情况下，单对快照即可恢复大量本构信息；噪声下性能优雅退化，增加快照数量可提高鲁棒性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low; phase-field models are niche in materials science, not directly applicable to financial markets.",
+      "• Implementation Risk: High; requires specialized knowledge of PDEs and spectral methods; limited to specific physical systems.",
+      "• Novelty: Moderate; extends PINNs with pseudo-spectral methods for inverse problems, but similar ideas exist in scientific ML.",
+      "• Practicality: Low for quant finance; no clear path to trading or risk management applications."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将伪谱方法与PINN结合，提升逆向辨识精度，但属于科学计算领域增量改进。",
+      "• 实盘坑: 与金融量化无关，无法直接用于交易或风险管理，需大量领域适配。",
+      "• 复现难度: 高，需熟悉谱方法和相场模型，代码和数据未公开。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2606.23689v1",
     "title": "AutoDex: An Automated Real-World System for Dexterous Grasping Data Collection",
     "pdf_url": "https://arxiv.org/pdf/2606.23689v1",
