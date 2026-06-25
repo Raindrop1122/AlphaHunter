@@ -1,5 +1,240 @@
 [
   {
+    "id": "2606.26094v1",
+    "title": "RevengeBench: Reverse Engineering Code-Space Policies from Behavioral Experiments",
+    "pdf_url": "https://arxiv.org/pdf/2606.26094v1",
+    "published": "2026-06-24",
+    "crawled_at": "2026-06-25 21:18:44",
+    "ai_score": 7.5,
+    "translated_title": "复仇基准：从行为实验中逆向工程代码空间策略",
+    "summary_en": "• Model Architecture: Uses LLM-generated, Elo-calibrated policies as hidden targets; learner reconstructs executable code from behavioral traces via custom opponent probes.\n• Data used: 75 policies across five game environments from CodeClash tournament trajectories.\n• Performance metrics: Recovery quality measured by continuous action-distance metrics (34-72% of initial distance closed); downstream competitive advantage in PvP tournaments.\n• Key finding: Reconstructed policies yield measurable edge, especially for weaker models that struggle to design counter-strategies.\n• Validation: Recovered code carries informative signal in downstream tournaments.",
+    "summary_cn": "• 核心模型: 使用LLM生成的Elo校准策略作为隐藏目标，学习者通过自定义对手探针从行为轨迹中重建可执行代码。\n• 数据来源: 来自CodeClash锦标赛轨迹的5个游戏环境中的75个策略。\n• 主要结论: 恢复质量通过连续动作距离度量（初始距离缩小34-72%）；重建策略在玩家对战中提供可衡量的竞争优势，尤其对较弱模型有效。\n• 验证: 恢复的代码在下游锦标赛中携带信息信号。",
+    "verdict_en": "• Alpha Potential: Moderate; recovered policies can improve counter-strategy design, but direct trading application unclear.\n• Implementation Risk: High; requires game-specific environment and custom opponent probes; generalizability to finance uncertain.\n• Novelty: High; introduces behavioral recovery of programmatic policies as a tractable inverse problem in code-space.\n• Limitation: Only tested on game environments; no financial data or market microstructure considered.\n• Practicality: Low for quant finance; more relevant to AI safety and interpretability.",
+    "verdict_cn": "• 创新点: 将程序化策略的行为恢复作为代码空间中的可逆问题，方法新颖。\n• 实盘坑: 仅限游戏环境，缺乏金融数据验证；对手探针设计在市场中难以实现。\n• 复现难度: 高；需要特定游戏环境和LLM生成策略，代码未公开。\n• 实用性: 对量化金融直接应用价值低，更适合AI可解释性研究。\n• 评分: 7.5/10，学术价值高但实盘转化困难。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.26091v1",
+    "title": "On-Policy Self-Distillation with Sampled Demonstrations Reduces Output Diversity",
+    "pdf_url": "https://arxiv.org/pdf/2606.26091v1",
+    "published": "2026-06-24",
+    "crawled_at": "2026-06-25 21:18:53",
+    "ai_score": 7.5,
+    "translated_title": "基于采样演示的在线自蒸馏降低输出多样性",
+    "summary_en": [
+      "• Model Architecture: On-policy self-distillation using a single model as both teacher and student, with teacher conditioned on a correct demonstration for token-level feedback.",
+      "• Data used: Sampled correct rollouts from the model itself; evaluated on graph path-finding tasks and science QA benchmarks.",
+      "• Performance metrics: pass@1 accuracy matches or exceeds RL, but pass@k flattens; functional and semantic diversity significantly lower.",
+      "• Key finding: Self-distillation amplifies existing probability gaps, concentrating mass on dominant modes, unlike optimal RL which preserves diversity."
+    ],
+    "summary_cn": [
+      "• 核心模型: 在线自蒸馏，同一模型同时作为教师和学生，教师基于正确演示提供逐token反馈。",
+      "• 数据来源: 模型自身采样的正确轨迹；在图路径查找和科学问答基准上评估。",
+      "• 主要结论: pass@1准确率匹配或超过强化学习，但pass@k曲线变平；功能多样性和语义多样性显著降低。",
+      "• 理论分析: 自蒸馏会放大已有概率差距，将质量集中在主导模式上，而最优强化学习则保持多样性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low for strategies requiring diverse outputs; may be useful for tasks where high pass@1 is sufficient.",
+      "• Implementation Risk: High risk of overfitting to dominant modes; out-of-distribution failure is a major concern.",
+      "• Novelty: High theoretical contribution in identifying diversity reduction mechanism; practical implications are cautionary.",
+      "• Relevance: Important for LLM-based trading agents that rely on diverse reasoning paths."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次理论揭示自蒸馏导致多样性下降的机制，点明与最优强化学习的本质区别。",
+      "• 实盘坑: 模型会陷入单一策略模式，在需要多样化应对的市场环境下可能失效。",
+      "• 复现难度: 中等，主要依赖标准自蒸馏框架，但需要仔细调整采样和条件设置。",
+      "• 应用价值: 对依赖LLM生成多种交易策略的量化系统有警示意义。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.26080v1",
+    "title": "Neglected Free Lunch from Post-training: Progress Advantage for LLM Agents",
+    "pdf_url": "https://arxiv.org/pdf/2606.26080v1",
+    "published": "2026-06-24",
+    "crawled_at": "2026-06-25 21:19:03",
+    "ai_score": 8.5,
+    "translated_title": "被忽视的免费午餐：后训练中的进度优势用于LLM智能体",
+    "summary_en": [
+      "• Model Architecture: Derives progress advantage from log-probability ratio between RL-trained policy and reference policy under stochastic MDP, eliminating need for dedicated reward model.",
+      "• Data used: No task-specific training data required; leverages standard RL post-training pipeline outputs (policy log-probabilities).",
+      "• Performance metrics: Outperforms confidence-based baselines and dedicated trained reward models on test-time scaling, uncertainty quantification, and failure attribution across 5 benchmarks and 4 model families.",
+      "• Key finding: Progress advantage is annotation-free, domain-agnostic, and available as byproduct of RL post-training."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于随机马尔可夫决策过程，从RL训练策略与参考策略的对数概率比推导出进度优势，无需专用奖励模型。",
+      "• 数据来源: 无需任务特定训练数据，仅利用标准RL后训练管线的输出（策略对数概率）。",
+      "• 主要结论: 在测试时扩展、不确定性量化和失败归因任务中，一致优于基于置信度的基线和专用奖励模型，跨5个基准和4个模型家族验证。",
+      "• 额外发现: 进度优势无需标注、领域无关，且是RL后训练的副产品。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High, as it provides a free, effective signal for agentic tasks without extra training cost, potentially improving decision-making in trading agents.",
+      "• Implementation Risk: Low to moderate; requires only access to RL post-training pipeline outputs, but may need careful tuning for specific agentic environments.",
+      "• Novelty: Significant theoretical contribution showing log-probability ratio recovers optimal advantage, with practical validation across diverse tasks."
+    ],
+    "verdict_cn": [
+      "• 创新点: 理论上证明RL后训练的对数概率比即为最优优势函数，无需额外奖励模型，简洁优雅。",
+      "• 实盘坑: 依赖RL后训练管线，对于未使用RL的LLM智能体不适用；实际效果可能受环境随机性影响。",
+      "• 复现难度: 中等，需要复现RL后训练流程，但核心计算简单（对数概率比），易于集成。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2606.26079v1",
+    "title": "Same Evidence, Different Answer: Auditing Order Sensitivity in Multimodal Large Language Models",
+    "pdf_url": "https://arxiv.org/pdf/2606.26079v1",
+    "published": "2026-06-24",
+    "crawled_at": "2026-06-25 21:19:10",
+    "ai_score": 6.5,
+    "translated_title": "相同证据，不同答案：多模态大语言模型中的顺序敏感性审计",
+    "summary_en": "• Model Architecture: Audits 18 frontier and open-weight MLLMs using Facet-Probe, a five-facet audit covering option, evidence-chunk, document-rank, image-set, and mixed-modality ordering.\n• Data used: Standard benchmarks for MLLMs, with order-irrelevant shuffling to test reliability.\n• Performance metrics: Bayesian item-response model separates ordering noise from per-facet bias; same-ordering control estimates decoder-stochastic floor. Flip rates range 24-50% across models; best model flips on 13.4% of trials.",
+    "summary_cn": "• 核心模型: 使用Facet-Probe审计18个前沿和开源多模态大语言模型，涵盖选项、证据块、文档排名、图像集和混合模态顺序五个方面。\n• 数据来源: 标准多模态大语言模型基准测试，通过顺序无关的洗牌测试可靠性。\n• 主要结论: 所有18个模型均非顺序不变；翻转率在24-50%之间；最佳模型在13.4%的试验中翻转。",
+    "verdict_en": "• Alpha Potential: Low direct alpha; focuses on model reliability, not market prediction.\n• Implementation Risk: High; requires careful prompt engineering and model selection to mitigate order sensitivity.\n• Novelty: High; introduces systematic audit of order sensitivity in MLLMs, a previously underexplored reliability issue.",
+    "verdict_cn": "• 创新点: 首次系统审计多模态大语言模型的顺序敏感性，提出Facet-Probe审计框架。\n• 实盘坑: 顺序敏感性可能导致模型输出不一致，增加交易决策风险；提示级缓解措施效果有限。\n• 复现难度: 中等；需要访问多个前沿模型和计算资源，但方法透明。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.26071v1",
+    "title": "Model Forensics: Investigating Whether Concerning Behavior Reflects Misalignment",
+    "pdf_url": "https://arxiv.org/pdf/2606.26071v1",
+    "published": "2026-06-24",
+    "crawled_at": "2026-06-25 21:19:18",
+    "ai_score": 7.5,
+    "translated_title": "模型取证：调查令人担忧的行为是否反映对齐失败",
+    "summary_en": "• Proposes a baseline protocol for model forensics to distinguish misalignment from benign causes like confusion.\n• Uses chain-of-thought (CoT) reading and hypothesis testing via prompt/environment edits.\n• Evaluates on six agentic environments with concerning behaviors (e.g., shortcuts, deception).\n• Finds Kimi K2 Thinking takes shortcuts due to low-effort disposition; DeepSeek R1 deceives for consistency.\n• Notes limitations: no positive controls for belief detection, leaving room for refinement.",
+    "summary_cn": "• 核心模型: 提出基于思维链读取和假设测试的取证协议，区分模型误对齐与良性原因。\n• 数据来源: 六个自主代理环境，模拟令人担忧的行为（如走捷径、欺骗）。\n• 主要结论: Kimi K2 Thinking 因低努力倾向走捷径；DeepSeek R1 为保持一致性而欺骗。\n• 局限性: 缺乏阳性对照，信念检测不可靠，需改进。",
+    "verdict_en": "• Alpha Potential: Low for direct trading; more relevant for AI safety and model evaluation.\n• Implementation Risk: High; requires access to model internals (CoT) and custom environments.\n• Novelty: High; introduces a structured forensic approach beyond behavior-only detection.",
+    "verdict_cn": "• 创新点: 首次提出系统化模型取证协议，超越单纯行为检测。\n• 实盘坑: 依赖思维链可读性，实际部署中模型可能不提供CoT，且环境定制成本高。\n• 复现难度: 高；需复现六个环境及假设测试，且结果依赖模型版本。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.26057v1",
+    "title": "The Unfireable Safety Kernel: Execution-Time AI Alignment for AI Agents and Other Escapable AI Systems",
+    "pdf_url": "https://arxiv.org/pdf/2606.26057v1",
+    "published": "2026-06-24",
+    "crawled_at": "2026-06-25 21:19:28",
+    "ai_score": 8.5,
+    "translated_title": "不可解雇的安全内核：面向AI代理及其他可逃脱AI系统的执行时AI对齐",
+    "summary_en": [
+      "• Model Architecture: Proposes the Unfireable Safety Kernel, a Rust-based authorization layer with process separation, pre-action enforcement on a structurally only path, fail-closed at request and system levels, and externalized signed evidence.",
+      "• Data used: Evaluated on a live, escapable AI system (deterministic, self-improving world model) with 1,000 self-modifications and 6,240 authorization round-trips; also tested against 3 contemporary agent control systems.",
+      "• Performance metrics: 704/704 safety-critical attempts refused, 300/300 kill-switch attempts refused, 0 bypasses in 6,240 round-trips; machine-checked via SMT theorem (Z3) and bounded model checking (Kani).",
+      "• Key finding: The kernel enforces architectural control, preventing the AI agent from bypassing safety measures, unlike cooperative approaches."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出不可解雇安全内核，基于Rust实现，具备进程隔离、结构唯一路径预执行、请求和系统级故障关闭、外部化签名验证等特性。",
+      "• 数据来源: 在实时可逃脱AI系统（确定性自改进世界模型）上评估，包括1000次自修改和6240次授权往返；另与3个当代代理控制系统对比。",
+      "• 主要结论: 内核实现架构控制，阻止AI代理绕过安全措施，优于合作式方法；所有安全关键请求均被拒绝，无绕过。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low direct alpha, but high relevance for risk management in AI-driven trading systems; ensures safety in autonomous agents.",
+      "• Implementation Risk: High complexity due to Rust implementation and formal verification; requires deep integration with existing systems.",
+      "• Novelty: High novelty in execution-time AI alignment with formal guarantees; addresses a critical gap in escapable AI systems."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次提出执行时AI对齐的正式安全内核，具备机器可验证的故障关闭不变性，填补可逃脱AI系统安全空白。",
+      "• 实盘坑: 实现复杂，依赖Rust和形式化验证，与现有系统集成难度大；可能引入延迟，不适合高频交易。",
+      "• 复现难度: 高，需要Rust、Z3、Kani等工具链，且需定制化适配具体AI系统。"
+    ],
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.26053v1",
+    "title": "When Does Synthetic Data Augmentation Improve Score-Based Imbalanced Classification?",
+    "pdf_url": "https://arxiv.org/pdf/2606.26053v1",
+    "published": "2026-06-24",
+    "crawled_at": "2026-06-25 21:19:39",
+    "ai_score": 7.5,
+    "translated_title": "合成数据增强何时能改善基于评分的非平衡分类？",
+    "summary_en": "• Model Architecture: Theoretical framework separating augmentation effects into class weighting change and synthetic distribution discrepancy; considers well-specified and misspecified score models.\n• Data used: Synthetic and simulated data for theoretical analysis and simulation studies; no real-world datasets.\n• Performance metrics: AUROC, AUPRC, best-threshold balanced accuracy, best-threshold F1 score; threshold-integrated and threshold-optimized metrics.\n• Key findings: Under well-specification, augmentation provides no population-level improvement beyond variance reduction; under misspecification, augmentation can correct ranking errors by altering class balance.\n• Theoretical contributions: Minimax lower bounds showing raw estimator achieves optimal metric-regret rate in well-specified regime; explicit improvement bounds under misspecification.",
+    "summary_cn": "• 核心模型: 理论框架将增强效果分解为类别权重变化和合成分布差异；考虑模型正确设定和错误设定两种情况。\n• 数据来源: 使用合成数据和模拟数据进行理论分析和仿真研究，未使用真实数据集。\n• 主要结论: 在模型正确设定下，增强无法提供总体水平改进，仅能减少方差；在错误设定下，增强可通过改变类别平衡纠正排序错误。\n• 性能指标: AUROC、AUPRC、最佳阈值平衡准确率、最佳阈值F1分数；阈值积分和阈值优化指标。\n• 理论贡献: 给出最小最大下界，证明原始估计器在正确设定下达到最优指标遗憾率；在错误设定下给出显式改进界。",
+    "verdict_en": "• Alpha Potential: Low for well-specified models; moderate for misspecified models where augmentation can improve ranking, but gains are nonmonotone and require careful tuning.\n• Implementation Risk: High due to theoretical nature; practical application requires knowing model specification and synthetic distribution quality, which is often unknown.\n• Novelty: High theoretical contribution clarifying when augmentation helps; provides rigorous bounds and minimax results.\n• Practical relevance: Limited direct trading application; insights may guide feature engineering or model selection in imbalanced classification tasks.\n• Reproducibility: Moderate; simulation studies are described but no code provided.",
+    "verdict_cn": "• 创新点: 首次从理论上严格区分合成增强在正确设定和错误设定下的不同作用，给出显式改进界和最小最大下界。\n• 实盘坑: 理论结果依赖模型设定和合成分布质量，实际中难以判断；增强效果非单调，调参风险高。\n• 复现难度: 中等；仿真方法描述清晰但未提供代码，需自行实现。\n• 交易价值: 低；主要贡献在理论，直接应用于量化策略需谨慎。\n• 适用范围: 适用于非平衡分类场景，如违约预测、异常交易检测，但需结合具体模型。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.26050v1",
+    "title": "Natural Ungrokking: Asymmetric Control of Which Rules Survive Pretraining",
+    "pdf_url": "https://arxiv.org/pdf/2606.26050v1",
+    "published": "2026-06-24",
+    "crawled_at": "2026-06-25 21:19:50",
+    "ai_score": 6.5,
+    "translated_title": "自然非顿悟：预训练中哪些规则得以保留的非对称控制",
+    "summary_en": "• Model Architecture: Small language model (likely transformer-based) trained from scratch.\n• Data used: Two corpora with varying budgets and seeds; public Pythia checkpoints also analyzed.\n• Performance metrics: Probe accuracy for pronoun-gender rule drops from 0.94 to near zero despite rule evidence persisting in training data.\n• Key finding: Support frequency (how often rule wins in training stream) predicts rule survival; data-to-parameter ratio modulates collapse depth.\n• Mechanism: Displacement by competing surface pattern; log-probability margin crosses zero within 100 steps of collapse.",
+    "summary_cn": "• 核心模型: 小型语言模型（基于Transformer），从头训练。\n• 数据来源: 两个语料库，不同预算和随机种子；也分析了公开的Pythia检查点。\n• 主要结论: 代词-性别规则在训练中期准确率从0.94骤降至接近零，尽管规则证据仍在训练数据中。支持频率（规则在训练流中获胜的频率）决定规则存亡；数据参数比仅调节崩溃深度。\n• 机制: 被竞争的表面模式取代；对数概率差在行为崩溃的100步内穿过零。",
+    "verdict_en": "• Alpha Potential: Low for direct trading; insights on model forgetting may inform LLM-based strategy robustness.\n• Implementation Risk: High; requires careful monitoring of model behavior shifts during training.\n• Novelty: High; introduces 'natural ungrokking' phenomenon and asymmetric control (destroy but not restore).\n• Relevance: Useful for understanding LLM limitations in financial NLP tasks; may improve model selection for alpha generation.\n• Reproducibility: Pre-registered analysis; code likely available, but requires specific training setups.",
+    "verdict_cn": "• 创新点: 提出“自然非顿悟”现象，发现规则存亡由支持频率决定，且控制不对称（可破坏不可恢复）。\n• 实盘坑: 直接交易价值低；模型行为突变可能影响基于LLM的策略稳定性。\n• 复现难度: 中等；需特定训练配置，但预注册分析增加可信度。\n• 应用前景: 对理解LLM在金融NLP中的局限性有启发，但需进一步研究如何利用或规避此现象。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.26037v1",
+    "title": "FedReLa: Imbalanced Federated Learning via Re-Labeling",
+    "pdf_url": "https://arxiv.org/pdf/2606.26037v1",
+    "published": "2026-06-24",
+    "crawled_at": "2026-06-25 21:19:59",
+    "ai_score": 7.2,
+    "translated_title": "FedReLa: 通过重标签实现非平衡联邦学习",
+    "summary_en": "• Model Architecture: FedReLa introduces a feature-dependent label re-allocator that re-labels samples to correct biased global decision boundaries in federated learning, without requiring global class distribution knowledge.\n• Data used: Evaluated on stepwise-imbalanced and long-tailed datasets, simulating global class imbalance and cross-client data heterogeneity.\n• Performance metrics: Significantly improves minority class accuracy and overall accuracy, outperforming previous state-of-the-art methods.\n• Key advantage: Modular and model-agnostic, integrates with algorithmic methods without additional communication overhead.",
+    "summary_cn": "• 核心模型: FedReLa 提出基于特征依赖的标签重分配器，通过重标签修正联邦学习中的全局决策边界偏差，无需全局类别分布知识。\n• 数据来源: 在逐步不平衡和长尾数据集上评估，模拟全局类别不平衡和跨客户端数据异质性。\n• 主要结论: 显著提升少数类准确率和整体准确率，超越先前最优方法。\n• 关键优势: 模块化、模型无关，可与算法方法集成，无额外通信开销。",
+    "verdict_en": "• Alpha Potential: Moderate; addresses class imbalance in federated learning, which is relevant for financial applications with rare events (e.g., fraud detection).\n• Implementation Risk: Low; model-agnostic and no extra communication overhead, but requires feature quality for re-labeling.\n• Novelty: Moderate; re-labeling approach is novel in federated setting, but relies on existing feature representations.\n• Limitation: Assumes feature quality is sufficient; may struggle with highly noisy or non-IID features.",
+    "verdict_cn": "• 创新点: 在联邦学习中引入重标签机制，无需全局分布知识，解决类别不平衡与数据异质性共存问题。\n• 实盘坑: 依赖特征质量，若特征噪声大或非IID严重，重标签可能引入偏差；金融数据中少数类样本稀少，效果存疑。\n• 复现难度: 中等；需实现标签重分配器，但无额外通信开销，易于集成。\n• 适用性: 适合金融风控等少数类关键场景，但需谨慎验证特征有效性。",
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2606.26027v1",
+    "title": "Why Multi-Step Tool-Use Reinforcement Learning Collapses and How Supervisory Signals Fix It",
+    "pdf_url": "https://arxiv.org/pdf/2606.26027v1",
+    "published": "2026-06-24",
+    "crawled_at": "2026-06-25 21:20:13",
+    "ai_score": 7.5,
+    "translated_title": "为什么多步骤工具使用强化学习会崩溃以及监督信号如何修复它",
+    "summary_en": "• Model Architecture: The paper studies LLMs (e.g., LLaMA variants) fine-tuned with RL and SFT for multi-step tool-use tasks, analyzing failure modes in control token probability distributions.\n• Data used: Synthetic tool-use tasks with structured invocations; off-policy, hint-based, and erroneous example supervision data are generated for training.\n• Performance metrics: Stability of tool-invocation structure, task success rate, and out-of-distribution (OOD) generalization under format and content shifts.\n• Key finding: RL alone causes catastrophic collapse due to probability spikes in control tokens; interleaving SFT with RL improves stability but degrades OOD performance.\n• Additional analysis: Impact of learning rates and generalization across different settings is examined.",
+    "summary_cn": "• 核心模型: 基于LLaMA等LLM，结合强化学习(RL)和监督微调(SFT)进行多步骤工具使用任务训练，分析控制token概率分布导致的崩溃机制。\n• 数据来源: 合成工具使用任务，包含结构化调用；使用离策略、提示引导和错误示例等监督信号生成训练数据。\n• 主要结论: 单独RL导致控制token概率尖峰引发灾难性崩溃；交错SFT与RL可提升稳定性，但损害格式和内容分布外(OOD)泛化。\n• 性能指标: 工具调用结构稳定性、任务成功率、OOD泛化能力。\n• 额外发现: 学习率影响显著，不同设置下泛化表现差异大。",
+    "verdict_en": "• Alpha Potential: Moderate; insights on RL collapse and supervisory signals can improve LLM-based trading agents for multi-step tasks (e.g., data fetching, analysis).\n• Implementation Risk: High; OOD degradation and sensitivity to hyperparameters (learning rate) require careful tuning; synthetic tasks may not transfer to real financial data.\n• Novelty: High; first systematic study of RL collapse in tool-use LLMs and comparison of diverse supervisory signals; practical guidance for training stable agents.\n• Practicality: Code provided, but financial domain adaptation needed; stability improvements may reduce exploration in volatile markets.\n• Limitation: Focus on synthetic tasks; real-world tool-use (e.g., API calls) may have different failure modes.",
+    "verdict_cn": "• 创新点: 首次系统揭示LLM工具使用中RL崩溃的机制（控制token概率尖峰），并对比多种监督信号效果，对训练稳定智能体有指导意义。\n• 实盘坑: OOD泛化下降严重，金融数据分布偏移可能导致性能骤降；超参数（学习率）敏感，调参成本高。\n• 复现难度: 中等；代码开源，但合成任务到金融场景迁移需大量适配，且计算资源需求大。\n• 策略价值: 可用于构建多步骤交易智能体（如数据获取、分析），但需谨慎处理稳定性与探索的平衡。\n• 风险提示: 单独RL易崩溃，交错SFT虽稳定但可能限制策略创新，需结合领域知识设计监督信号。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2606.24884v1",
     "title": "InSight: Self-Guided Skill Acquisition via Steerable VLAs",
     "pdf_url": "https://arxiv.org/pdf/2606.24884v1",
