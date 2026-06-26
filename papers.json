@@ -1,5 +1,262 @@
 [
   {
+    "id": "2606.27377v1",
+    "title": "DanceOPD: On-Policy Generative Field Distillation",
+    "pdf_url": "https://arxiv.org/pdf/2606.27377v1",
+    "published": "2026-06-25",
+    "crawled_at": "2026-06-26 21:10:05",
+    "ai_score": 7.5,
+    "translated_title": "DanceOPD：在线策略生成场蒸馏",
+    "summary_en": "• Model Architecture: DanceOPD is an on-policy generative field distillation framework for flow-matching models, routing each sample to one capability field and querying a low-noise student-induced state.\n• Data: The framework uses text-to-image (T2I), local editing, and global editing capabilities as velocity fields over the shared flow state space, with no specific dataset mentioned.\n• Performance Metrics: Comprehensive experiments show improved multi-capability composition, strengthening target capabilities while preserving anchor generation quality, with metrics including T2I quality, editing accuracy, and CFG absorption.",
+    "summary_cn": "• 核心模型: DanceOPD是一种基于在线策略的生成场蒸馏框架，用于流匹配模型，通过将每个样本路由到一个能力场并查询低噪声学生诱导状态来训练。\n• 数据来源: 框架使用文本到图像（T2I）、局部编辑和全局编辑能力作为共享流状态空间上的速度场，未提及具体数据集。\n• 主要结论: 综合实验表明，该方法改善了多能力组合，增强了目标能力同时保持锚点生成质量，评估指标包括T2I质量、编辑准确性和CFG吸收。",
+    "verdict_en": "• Alpha Potential: Moderate; multi-capability models are trending but direct trading application is unclear.\n• Implementation Risk: High; requires flow-matching infrastructure and careful tuning of on-policy distillation.\n• Novelty: High; introduces on-policy distillation for generative fields, a novel approach to composing multiple capabilities.",
+    "verdict_cn": "• 创新点: 提出在线策略蒸馏用于生成场，创新性地组合多种能力（T2I、编辑等）。\n• 实盘坑: 交易应用不直接，需大量计算资源，且流匹配模型在金融领域未验证。\n• 复现难度: 高，依赖特定框架和超参数调优，代码未公开。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.27369v1",
+    "title": "Reinforcement Learning without Ground-Truth Solutions can Improve LLMs",
+    "pdf_url": "https://arxiv.org/pdf/2606.27369v1",
+    "published": "2026-06-25",
+    "crawled_at": "2026-06-26 21:10:13",
+    "ai_score": 7.5,
+    "translated_title": "无需真实解即可改进大语言模型的强化学习",
+    "summary_en": "• Introduces RiVER, a framework that trains LLMs on score-based optimization tasks without ground-truth solutions, using deterministic execution feedback as continuous rewards.\n• Identifies two key challenges in group-relative RL with continuous rewards: scale dominance and frequency dominance, and proposes calibrated reward shaping to address them.\n• Trains on 12 AtCoder Heuristic Contest tasks and evaluates on ALE-Bench, LiveCodeBench, and USACO.\n• RiVER improves Qwen3-8B and GLM-Z1-9B-0414 by 8.9% and 9.4% in ALE rating rank, and also improves exact-solution benchmarks by 2.4% and 3.5% on average.",
+    "summary_cn": "• 核心模型: RiVER框架，利用确定性执行反馈作为连续奖励，无需真实解即可训练LLM在基于分数的优化任务上。\n• 数据来源: 12个AtCoder启发式竞赛任务，评估于ALE-Bench、LiveCodeBench和USACO。\n• 主要结论: RiVER在ALE评级排名上分别提升Qwen3-8B和GLM-Z1-9B-0414达8.9%和9.4%，同时在精确解基准上平均提升2.4%和3.5%。",
+    "verdict_en": "• Alpha Potential: High, as it enables training on tasks without ground-truth solutions, expanding the scope of RL for LLMs and potentially improving coding abilities.\n• Implementation Risk: Moderate; the reward calibration mechanism is novel but may require careful tuning for different tasks.\n• Novelty: High; addresses a key limitation of RLVR by removing the need for ground-truth answers, with transfer learning benefits.",
+    "verdict_cn": "• 创新点: 首次在无真实解场景下通过连续奖励训练LLM，并解决尺度主导和频率主导问题，具有较高创新性。\n• 实盘坑: 奖励校准机制可能对超参数敏感，且需要确保执行反馈的可靠性和一致性。\n• 复现难度: 中等；需要AtCoder竞赛环境及大量计算资源，但方法描述清晰。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.27361v1",
+    "title": "Autoregressive Boltzmann Generators",
+    "pdf_url": "https://arxiv.org/pdf/2606.27361v1",
+    "published": "2026-06-25",
+    "crawled_at": "2026-06-26 21:10:22",
+    "ai_score": 8.5,
+    "translated_title": "自回归玻尔兹曼生成器",
+    "summary_en": [
+      "• Model Architecture: Proposes Autoregressive Boltzmann Generators (ArBG) that replace normalizing flows with autoregressive models, enabling sequential sampling and avoiding topological constraints.",
+      "• Data used: Evaluated on molecular systems including alanine dipeptide, deca-alanine, and the 10-residue Chignolin peptide; also uses a transferable model Robin trained on diverse peptide data.",
+      "• Performance metrics: Achieves significant improvements over flow-based BGs in sampling efficiency and accuracy; Robin reduces zero-shot energy error (E-W2) on 8-residue systems by over 60%.",
+      "• Scalability: Leverages architectures effective in Large Language Models, allowing scaling to 132 million parameters for the Robin model."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出自回归玻尔兹曼生成器 (ArBG)，用自回归模型替代归一化流，实现顺序采样并避免拓扑约束。",
+      "• 数据来源: 在丙氨酸二肽、十丙氨酸及10残基Chignolin肽等分子系统上评估；Robin模型使用多样化肽数据训练。",
+      "• 主要结论: ArBG在采样效率和精度上显著优于基于流的模型；Robin在8残基系统上将零样本能量误差 (E-W2) 降低超过60%。",
+      "• 可扩展性: 利用大语言模型中的高效架构，Robin模型参数规模达1.32亿。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for molecular simulation and drug discovery; direct trading alpha is low, but could be used for risk modeling in biotech portfolios.",
+      "• Implementation Risk: Moderate; requires significant computational resources for training large autoregressive models, but inference is efficient.",
+      "• Novelty: High; first to apply autoregressive models to Boltzmann generators, overcoming limitations of normalizing flows."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次将自回归模型引入玻尔兹曼生成器，突破归一化流的拓扑限制，理论贡献显著。",
+      "• 实盘坑: 直接交易应用有限，需结合生物科技或制药领域；计算成本高，小团队复现困难。",
+      "• 复现难度: 中等；代码已开源，但训练大规模模型需大量GPU资源。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.27359v1",
+    "title": "When are likely answers right? On Sequence Probability and Correctness in LLMs",
+    "pdf_url": "https://arxiv.org/pdf/2606.27359v1",
+    "published": "2026-06-25",
+    "crawled_at": "2026-06-26 21:10:29",
+    "ai_score": 7.5,
+    "translated_title": "何时可能的答案是正确的？关于LLM中的序列概率与正确性",
+    "summary_en": "• The paper investigates the relationship between sequence probability and correctness in LLMs across multiple levels: decoding methods, hyperparameters, prompt-answer pairs, and repeated responses.\n• It uses various LLMs and benchmarks to quantify this relationship, finding that higher sequence probability often predicts correctness across prompt-answer pairs within a fixed dataset.\n• However, increasing sequence probability via hyperparameter or method changes does not reliably improve accuracy, and sequence probability is not a good indicator for responses to the same prompt.\n• The study provides practical guidance for decoding, self-consistency, and verifier-free self-improvement.",
+    "summary_cn": "• 核心模型: 多种大型语言模型（LLMs），包括不同解码方法。\n• 数据来源: 多个基准测试数据集，涵盖不同任务。\n• 主要结论: 序列概率在固定数据集内跨提示-答案对时与正确性正相关，但通过调整超参数或方法提高序列概率并不总能提升准确性；对于同一提示的不同响应，序列概率不是正确性的良好指标。",
+    "verdict_en": "• Alpha Potential: Moderate; insights can improve decoding strategies and self-consistency methods, but not directly a trading signal.\n• Implementation Risk: Low; findings are empirical and can be integrated into LLM-based systems without complex changes.\n• Novelty: High; systematically quantifies the sequence probability-correctness relationship, clarifying when it holds and when it fails.",
+    "verdict_cn": "• 创新点: 系统量化了序列概率与正确性在不同层面的关系，揭示了其适用边界。\n• 实盘坑: 不能直接作为交易信号，需结合其他指标；调整解码参数未必提升正确性。\n• 复现难度: 中等；需要多种LLM和基准测试，但方法清晰可复现。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.27354v1",
+    "title": "Error-Conditioned Neural Solvers",
+    "pdf_url": "https://arxiv.org/pdf/2606.27354v1",
+    "published": "2026-06-25",
+    "crawled_at": "2026-06-26 21:10:38",
+    "ai_score": 7.5,
+    "translated_title": "误差条件神经求解器",
+    "summary_en": [
+      "• Model Architecture: ENS uses a neural network that takes the PDE residual field as input at each iteration, learning an update policy to iteratively correct predictions.",
+      "• Data used: Evaluated on four PDE families, including turbulent Kolmogorov flow, with zero-shot parameter changes and cross-equation transfer.",
+      "• Performance metrics: Achieves up to 10x improvement in prediction accuracy on turbulent Kolmogorov flow compared to baselines, and generalizes under distribution shift.",
+      "• Key finding: Numerically minimizing PDE residual is an unreliable proxy for reconstruction accuracy in ill-conditioned systems."
+    ],
+    "summary_cn": [
+      "• 核心模型: ENS通过将PDE残差场作为网络输入，学习迭代修正预测的策略，而非直接优化残差。",
+      "• 数据来源: 在四个PDE系列上评估，包括湍流科尔莫戈罗夫流，并测试了零样本参数变化和跨方程迁移。",
+      "• 主要结论: 在病态系统中，最小化PDE残差不能可靠地反映重建精度，ENS在多数设置中达到最高预测精度，最高提升10倍。",
+      "• 性能指标: 在分布偏移下泛化良好，尤其在残差最小化不可靠的病态区域优势最大。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for physics-based trading models (e.g., weather derivatives, energy markets) where PDE solvers are used; ENS's accuracy gains could improve risk pricing.",
+      "• Implementation Risk: Requires careful integration with existing PDE solvers; computational cost may be higher than pure neural surrogates, though lower than hybrid methods.",
+      "• Novelty: Novel approach of using residual as input rather than optimization target; addresses a key weakness of hybrid methods in ill-conditioned systems."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将残差作为输入而非优化目标，创新性地解决了混合方法在病态系统中的不可靠问题。",
+      "• 实盘坑: 应用于金融场景需验证PDE模型与市场数据的匹配度；计算成本虽低于混合方法，但仍可能高于纯神经网络。",
+      "• 复现难度: 中等，需要PDE求解器和神经网络训练经验，但代码已开源。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2606.27342v1",
+    "title": "Understanding Domain-Aware Distribution Alignment in Budgeted Entity Matching",
+    "pdf_url": "https://arxiv.org/pdf/2606.27342v1",
+    "published": "2026-06-25",
+    "crawled_at": "2026-06-26 21:10:45",
+    "ai_score": 5.5,
+    "translated_title": "理解预算实体匹配中的领域感知分布对齐",
+    "summary_en": [
+      "• Model Architecture: Investigates BEACON, a state-of-the-art method for low-resource, domain-aware entity matching, focusing on distribution alignment techniques.",
+      "• Data used: Likely uses benchmark entity matching datasets (e.g., from the EM community), though specific datasets are not named in the abstract.",
+      "• Performance metrics: Evaluates performance under varying data constraints and supervision levels, but no specific metrics (e.g., F1, precision) are mentioned.",
+      "• Key findings: Provides insights into how algorithmic choices and data availability affect BEACON's behavior, but lacks concrete quantitative results."
+    ],
+    "summary_cn": [
+      "• 核心模型: 研究BEACON框架，一种面向低资源、领域感知的实体匹配方法，重点分析分布对齐的作用。",
+      "• 数据来源: 可能使用实体匹配基准数据集，但摘要未明确说明。",
+      "• 主要结论: 通过实验揭示了算法选择和数据可用性对BEACON性能的影响，但缺乏具体数值结果。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low; entity matching is a data integration task, not directly applicable to trading alpha generation.",
+      "• Implementation Risk: High; requires domain-specific data and alignment techniques, with unclear financial relevance.",
+      "• Novelty: Moderate; extends existing work on domain-aware EM but offers limited new theoretical or practical breakthroughs."
+    ],
+    "verdict_cn": [
+      "• 创新点: 对BEACON框架进行了系统分析，但创新性一般，未提出新模型。",
+      "• 实盘坑: 实体匹配与量化交易无直接关联，难以转化为交易策略。",
+      "• 复现难度: 中等，依赖特定数据集和超参数调优，但代码可能开源。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.27335v1",
+    "title": "Valuing American options and Flexible Forwards contracts in time-dependent models",
+    "pdf_url": "https://arxiv.org/pdf/2606.27335v1",
+    "published": "2026-06-25",
+    "crawled_at": "2026-06-26 21:10:54",
+    "ai_score": 7.5,
+    "translated_title": "时变模型中美式期权与灵活远期合约的定价",
+    "summary_en": "• Model Architecture: Extends the integral-equation decomposition approach to time-dependent coefficients under a time-inhomogeneous Heston model, using a recursive matrix Riccati solution for the joint characteristic function.\n• Data used: Synthetic data for benchmarking; no empirical market data used.\n• Performance metrics: Both COS and DSINC methods price a contract in about 1-2 seconds, roughly 10x faster than the finest finite-difference grid; DSINC improves median accuracy over COS by a factor of twelve.\n• Key finding: Early-exercise surface is substantially nonlinear in variance, contradicting the common linear-in-variance approximation.",
+    "summary_cn": "• 核心模型: 在时间不均匀Heston模型下，将积分方程分解方法扩展到时变系数，利用递归矩阵Riccati解得到联合特征函数。\n• 数据来源: 使用合成数据进行基准测试，未使用实证市场数据。\n• 主要结论: COS和DSINC方法均在约1-2秒内完成定价，比最精细的有限差分网格快约10倍；DSINC的中位数精度比COS提高12倍。\n• 关键发现: 提前执行曲面关于方差显著非线性，与常见的线性方差近似相反。",
+    "verdict_en": "• Alpha Potential: Moderate; the fast pricing of American-style FX options could enable high-frequency trading strategies on volatility skew, but the model's complexity may limit direct alpha generation.\n• Implementation Risk: High; requires careful calibration of time-dependent Heston parameters and numerical stability of DSINC method; reliance on synthetic data raises concerns about real-world robustness.\n• Novelty: High; introduces a tractable analytical framework for time-dependent Heston with early exercise, and the DSINC method offers a novel solution to Gibbs oscillations.\n• Practicality: The 1-2 second pricing speed is promising for real-time applications, but the need for accurate volatility surface calibration remains a hurdle.",
+    "verdict_cn": "• 创新点: 首次在时变Heston模型中实现美式期权定价的解析可处理性，DSINC方法有效抑制Gibbs振荡。\n• 实盘坑: 模型依赖时变参数校准，数值稳定性要求高；仅用合成数据验证，实盘波动率曲面可能引发偏差。\n• 复现难度: 较高，需实现递归Riccati求解和DSINC数值方法，对编程和金融数学能力要求高。\n• 策略价值: 适合作为波动率套利或期权做市商的定价引擎，但直接产生alpha需结合其他信号。",
+    "ai_strategy": "Arbitrage",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.27330v1",
+    "title": "Empowering GUI Agents via Autonomous Experience Exploration and Hindsight Experience Utilization for Task Planning",
+    "pdf_url": "https://arxiv.org/pdf/2606.27330v1",
+    "published": "2026-06-25",
+    "crawled_at": "2026-06-26 21:11:04",
+    "ai_score": 7.5,
+    "translated_title": "通过自主经验探索与事后经验利用赋能GUI代理的任务规划",
+    "summary_en": [
+      "• Model Architecture: Introduces PEEU method for small open-source MLLMs to autonomously explore GUI environments and synthesize high-level training data via hindsight experience.",
+      "• Data used: Constructs strictly aligned, high-level training data from autonomous exploration and hindsight experience; no external labeled data required.",
+      "• Performance metrics: Achieves 30.6% accuracy on real-world benchmarks with a 7B model, outperforming Qwen2.5-VL-32B.",
+      "• Analysis framework: Proposes TDHAF to study compositional generalization across low, middle, and high task granularities.",
+      "• Key finding: High-level task training yields stronger out-of-distribution generalization than low-level atomic skill mastery."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出PEEU方法，使小型开源多模态大语言模型能自主探索GUI环境，并通过事后经验合成高质量训练数据。",
+      "• 数据来源: 无需外部标注数据，完全通过自主探索和事后经验生成严格对齐的高层训练数据。",
+      "• 主要结论: 7B模型在真实基准上达到30.6%准确率，超越Qwen2.5-VL-32B；高层任务训练比低层技能掌握更能提升泛化能力。",
+      "• 分析框架: 提出TDHAF，系统研究低、中、高三个任务粒度的组合泛化。",
+      "• 关键发现: 掌握低层原子技能并不能保证高层规划能力，而高层任务训练带来更强的分布外泛化。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; improves GUI automation for small models, but direct trading alpha is limited unless applied to automated data extraction or workflow.",
+      "• Implementation Risk: Low to moderate; PEEU is self-supervised and model-agnostic, but requires careful environment setup and hindsight experience synthesis.",
+      "• Novelty: High; introduces autonomous experience exploration and hindsight utilization for task planning, with a novel analysis framework for compositional generalization.",
+      "• Weakness: Performance (30.6%) is still low for production; generalization claims rely on specific benchmarks and may not transfer to diverse real-world tasks.",
+      "• Relevance: Indirectly applicable to quantitative research for automating data collection or report generation; not a direct trading strategy."
+    ],
+    "verdict_cn": [
+      "• 创新点: 自主探索+事后经验利用提升小模型规划能力，分析框架TDHAF揭示高层训练对泛化的重要性。",
+      "• 实盘坑: 30.6%准确率在真实场景中偏低，环境设置和事后经验合成可能引入偏差，泛化性存疑。",
+      "• 复现难度: 中等；方法依赖自主探索环境，需定制GUI模拟器，但无外部数据依赖。",
+      "• 量化价值: 间接用于自动化数据抓取或报告生成，但直接作为交易策略信号价值有限。",
+      "• 局限性: 仅在特定基准测试，跨网站泛化能力未充分验证，小模型能力天花板明显。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.27326v1",
+    "title": "Hallucination in World Models is Predictable and Preventable",
+    "pdf_url": "https://arxiv.org/pdf/2606.27326v1",
+    "published": "2026-06-25",
+    "crawled_at": "2026-06-26 21:11:13",
+    "ai_score": 7.5,
+    "translated_title": "世界模型中的幻觉是可预测且可预防的",
+    "summary_en": "• Model Architecture: A 350M-parameter generative world model trained on MMBench2, a 427-hour, 210-task dataset with ground-truth actions, rewards, and live simulators.\n• Data: MMBench2 dataset, which provides diverse state-action coverage for visual world modeling.\n• Performance Metrics: The model identifies three hallucination modes (perceptual, action-marginalized, scene-diverging) and uses coverage-aware sampling and curiosity rewards to mitigate them, achieving adaptation to unseen environments with as few as 50 real trajectories.\n• Key Finding: Hallucination is primarily a data coverage issue, and lightweight data-centric signals can both detect and prevent it.",
+    "summary_cn": "• 核心模型: 350M参数生成式世界模型，基于MMBench2数据集训练，该数据集包含427小时、210个任务，带有真实动作、奖励和实时模拟器。\n• 数据来源: MMBench2数据集，提供丰富的状态-动作覆盖，用于视觉世界建模。\n• 主要结论: 识别出三种幻觉模式（感知、动作边缘化、场景发散），并通过覆盖感知采样和好奇心奖励进行缓解，仅需50条真实轨迹即可适应全新环境。\n• 核心发现: 幻觉本质上是数据覆盖问题，轻量级数据驱动信号可同时检测和预防。",
+    "verdict_en": "• Alpha Potential: Low for direct trading; the paper focuses on world model robustness, not financial prediction. However, the coverage-aware sampling and curiosity-driven data collection could inspire novel data augmentation or active learning strategies for alpha factor generation.\n• Implementation Risk: High; requires a custom world model and simulator, which are computationally expensive and domain-specific. The approach is not directly applicable to financial time series without significant adaptation.\n• Novelty: High; the paper provides a systematic analysis of hallucination in world models and proposes practical detection and mitigation methods. The idea of using data coverage signals for both detection and mitigation is novel.\n• Practical Relevance: Low for quantitative finance; the work is more relevant to robotics and simulation-based reinforcement learning.",
+    "verdict_cn": "• 创新点: 系统分析了世界模型中的幻觉问题，并提出基于数据覆盖的检测与缓解方法，思路新颖。\n• 实盘坑: 直接应用于金融交易可能性低，需要大量定制化工作，计算成本高，且金融时间序列缺乏类似模拟器。\n• 复现难度: 高，依赖特定数据集MMBench2和350M参数模型，复现需大量资源。\n• 金融价值: 低，但覆盖感知采样和好奇心奖励机制可启发因子生成中的数据增强策略。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2606.27321v1",
+    "title": "Beyond the Hard Budget: Sparsity Regularizers for More Interpretable Top-k Sparse Autoencoders",
+    "pdf_url": "https://arxiv.org/pdf/2606.27321v1",
+    "published": "2026-06-25",
+    "crawled_at": "2026-06-26 21:11:21",
+    "ai_score": 7.5,
+    "translated_title": "超越硬预算：稀疏正则化器用于更可解释的Top-k稀疏自编码器",
+    "summary_en": "• Model Architecture: Introduces two sparsity regularizers (ℓ1 penalty on off-support units and scale-invariant ℓ1/ℓ2 ratio penalty) compatible with Top-k SAE, applied to batch-active units before Top-k selection.\n• Data used: Evaluated on two datasets and three vision foundation models (e.g., CLIP, DINOv2, MAE) across a range of k values.\n• Performance metrics: Consistently improves monosemanticity without sacrificing reconstruction quality; ℓ1/ℓ2 penalty enhances robustness to inference-time k choice and improves small-budget linear probing.",
+    "summary_cn": "• 核心模型：在Top-k稀疏自编码器基础上引入两种稀疏正则化器（对未选单元的ℓ1惩罚和尺度不变的ℓ1/ℓ2比率惩罚），作用于批量活跃单元。\n• 数据来源：使用两个数据集和三个视觉基础模型（如CLIP、DINOv2、MAE）进行评估。\n• 主要结论：正则化器在不降低重构质量的前提下持续提升单语义性；ℓ1/ℓ2惩罚增强了对推理时k选择的鲁棒性，并改善了小预算线性探针性能。",
+    "verdict_en": "• Alpha Potential: Low direct alpha; focuses on interpretability of vision models, not directly on financial prediction.\n• Implementation Risk: Moderate; requires careful tuning of regularizer hyperparameters and integration with existing SAE pipelines.\n• Novelty: High; challenges the assumption that hard sparsity and soft regularization are mutually exclusive, showing complementary benefits.",
+    "verdict_cn": "• 创新点：挑战了硬稀疏与软正则化互斥的假设，证明两者互补，并引入两种有效正则化器。\n• 实盘坑：直接应用于金融量化交易场景有限，需结合其他模型或任务才能产生alpha。\n• 复现难度：中等；需要深度学习框架和SAE实现基础，超参数调优较敏感。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2606.26094v1",
     "title": "RevengeBench: Reverse Engineering Code-Space Policies from Behavioral Experiments",
     "pdf_url": "https://arxiv.org/pdf/2606.26094v1",
