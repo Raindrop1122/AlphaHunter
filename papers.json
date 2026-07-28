@@ -1,5 +1,258 @@
 [
   {
+    "id": "2607.24741v1",
+    "title": "Certified Parallel-in-Time Sinkhorn for Dynamic Entropic Optimal Transport",
+    "pdf_url": "https://arxiv.org/pdf/2607.24741v1",
+    "published": "2026-07-27",
+    "crawled_at": "2026-07-28 20:54:06",
+    "ai_score": 7.2,
+    "translated_title": "用于动态熵最优传输的认证并行时间Sinkhorn算法",
+    "summary_en": "• Model Architecture: TemporalSinkhorn parallelizes Sinkhorn iterations across time steps using a centered, row-sharded certificate to ensure deterministic safe prefix, with online projective forgetting rate for audit milestones and a posteriori residual checks for recovery.\n• Data used: Synthetic streams (six regimes), Flow Matching minibatch streams, and a fixed-kernel test on RTX 4060 Laptop GPU.\n• Performance metrics: On 4 A100 GPUs, 1.15x-1.47x wall-time reduction vs. auditing every iteration; 1.42x-3.55x speedup vs. sequential warm start on synthetic streams; 3.054x-3.632x speedup on Flow Matching minibatch streams; 4.315x geometric-mean speedup on RTX 4060, all with zero tolerance violations.",
+    "summary_cn": "• 核心模型: TemporalSinkhorn通过中心化行分片证书确保确定性安全前缀，结合在线投影遗忘率设置审计里程碑和后验残差检查进行恢复，实现时间并行Sinkhorn迭代。\n• 数据来源: 合成数据流（六种场景）、Flow Matching小批量流、RTX 4060笔记本GPU上的固定核测试。\n• 主要结论: 在4块A100 GPU上，相比每次迭代审计，墙钟时间减少1.15-1.47倍；相比顺序软c变换热启动，合成流加速1.42-3.55倍；Flow Matching小批量流加速3.054-3.632倍；RTX 4060上几何平均加速4.315倍，且零容差违规。",
+    "verdict_en": "• Alpha Potential: Low direct alpha; focuses on computational efficiency for dynamic optimal transport, which may indirectly benefit alpha generation in flow matching or OT-based models.\n• Implementation Risk: Moderate; requires careful tuning of forgetting rate and audit milestones, and integration with existing Sinkhorn pipelines.\n• Novelty: High; introduces a certified parallel-in-time approach with deterministic safety guarantees, novel in the Sinkhorn literature.",
+    "verdict_cn": "• 创新点: 提出认证并行时间Sinkhorn，具有确定性安全保证，在Sinkhorn算法中新颖。\n• 实盘坑: 遗忘率和审计里程碑需精细调参，且仅适用于动态OT场景，直接交易应用有限。\n• 复现难度: 中等；依赖GPU并行和特定证书机制，但算法描述清晰。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2607.24732v1",
+    "title": "Learning Distributions from Multiple Data Providers",
+    "pdf_url": "https://arxiv.org/pdf/2607.24732v1",
+    "published": "2026-07-27",
+    "crawled_at": "2026-07-28 20:54:15",
+    "ai_score": 7.5,
+    "translated_title": "从多个数据提供者学习分布",
+    "summary_en": [
+      "• Model: Studies distribution learning from restricted conditional samples, where queries return samples from conditional distributions p(·|S) for a family of sets S.",
+      "• Data: Uses a fixed family of queryable sets S ⊆ 2^{[n]} on a finite domain [n]; each query yields an independent conditional sample.",
+      "• Performance: PAC learning is possible when co-occurrence graph is complete, with sample complexity ranging from Θ(n/ε^2) (if [n] is queryable) to Õ(n^2/ε^2) (worst-case).",
+      "• Key result: Identifies hierarchical comparability as sufficient for near-linear complexity Õ(n/ε^2); full range of polynomial rates between linear and quadratic is attainable.",
+      "• Theoretical: Provides tight bounds and shows pointwise consistency requires connectivity of co-occurrence graph on target support."
+    ],
+    "summary_cn": [
+      "• 核心模型: 研究从受限条件样本中学习分布，查询返回条件分布 p(·|S) 的独立样本。",
+      "• 数据来源: 使用有限域 [n] 上的固定可查询集合族 S ⊆ 2^{[n]}，每次查询得到一个独立条件样本。",
+      "• 主要结论: PAC学习在共现图完全时可行，样本复杂度从 Θ(n/ε^2)（若 [n] 可查询）到 Õ(n^2/ε^2)（最坏情况）。",
+      "• 关键发现: 层次可比性是近线性复杂度 Õ(n/ε^2) 的充分条件；线性到二次之间的所有多项式速率均可实现。",
+      "• 理论贡献: 给出紧界，并证明点态一致性要求共现图在目标支撑上连通。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low; theoretical distribution learning framework not directly applicable to financial alpha generation.",
+      "• Implementation Risk: High; requires careful design of query families and co-occurrence graphs, which may not align with real-world data provider structures.",
+      "• Novelty: Moderate; introduces co-occurrence graph concept for conditional sampling, but limited practical impact for quantitative finance.",
+      "• Relevance: Minimal; more relevant to statistical learning theory than hedge fund strategies."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出共现图概念刻画条件采样下的可学习性，理论上有新意。",
+      "• 实盘坑: 与金融实盘场景脱节，查询族设计难以直接应用于市场数据。",
+      "• 复现难度: 高；需要构造特定的查询族和共现图，且样本复杂度界依赖理论假设。",
+      "• 实用性: 低；更适合统计学习理论，而非量化策略开发。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2607.24731v1",
+    "title": "Rethinking Classifier-Free Guidance in On-Policy Diffusion Distillation",
+    "pdf_url": "https://arxiv.org/pdf/2607.24731v1",
+    "published": "2026-07-27",
+    "crawled_at": "2026-07-28 20:54:22",
+    "ai_score": 7.5,
+    "translated_title": "重新思考策略扩散蒸馏中的无分类器引导",
+    "summary_en": "• Model Architecture: The paper studies on-policy diffusion distillation (OPD) with classifier-free guidance (CFG), identifying a failure mode called Negative Branch Asymmetry (NBA) where naive velocity matching leads to antagonistic error dynamics between positive and negative branches. It proposes Positive-Direction Matching (PDM) to separately constrain the positive prediction and CFG conditional direction.\n• Data used: The method is applied to dense-to-sparse video control tasks, but specific datasets are not mentioned; likely uses standard video datasets for evaluation.\n• Performance metrics: The paper shows that naive guided matching is highly sensitive to inference guidance scales, while PDM enables more robust knowledge transfer, though quantitative metrics (e.g., FID, accuracy) are not detailed in the abstract.",
+    "summary_cn": "• 核心模型: 研究策略扩散蒸馏中的无分类器引导，发现负分支不对称（NBA）失效模式，并提出正方向匹配（PDM）分别约束正预测和CFG条件方向。\n• 数据来源: 应用于稠密到稀疏视频控制任务，但未明确具体数据集，可能使用标准视频数据集。\n• 主要结论: 朴素引导匹配对推理引导尺度高度敏感，而PDM实现更鲁棒的知识迁移。",
+    "verdict_en": "• Alpha Potential: Moderate. The work addresses a fundamental issue in diffusion distillation, which could improve efficiency in generative models used for synthetic data generation or simulation in finance, but direct trading alpha is limited.\n• Implementation Risk: High. Requires careful tuning of branch-aware objectives and may not generalize to all CFG schemas; video control domain may not directly apply to financial data.\n• Novelty: High. Identifies a previously unknown failure mode (NBA) and proposes a principled solution (PDM), contributing to the theoretical understanding of diffusion distillation.",
+    "verdict_cn": "• 创新点: 首次揭示无分类器引导下策略扩散蒸馏的负分支不对称问题，并提出正方向匹配解决方案，理论贡献显著。\n• 实盘坑: 视频控制领域与金融数据差异大，直接迁移困难；分支感知目标可能增加训练复杂度。\n• 复现难度: 中等，需要深入理解扩散模型和蒸馏机制，但算法细节清晰。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2607.24726v1",
+    "title": "Global Convergence of DGM and PINN Algorithms for Solving Nonlinear PDEs",
+    "pdf_url": "https://arxiv.org/pdf/2607.24726v1",
+    "published": "2026-07-27",
+    "crawled_at": "2026-07-28 20:54:29",
+    "ai_score": 7.5,
+    "translated_title": "DGM和PINN算法求解非线性偏微分方程的全局收敛性",
+    "summary_en": [
+      "• Model Architecture: Uses neural networks trained with gradient descent to minimize PDE residual objective function.",
+      "• Data: No specific dataset; the method is applied to semi-linear PDEs with nonlinearity in solution and first derivative.",
+      "• Performance Metrics: Proves global convergence to PDE solution, not just local minima, addressing a key theoretical gap.",
+      "• Key Result: For a class of semi-linear PDEs, gradient descent training converges to the true PDE solution."
+    ],
+    "summary_cn": [
+      "• 核心模型: 使用神经网络通过梯度下降最小化PDE残差目标函数。",
+      "• 数据来源: 无特定数据集，方法应用于解及其一阶导数非线性的半线性PDE。",
+      "• 主要结论: 证明对于一类半线性PDE，梯度下降训练全局收敛到PDE解，而非局部极小值。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low; theoretical paper with no direct trading application.",
+      "• Implementation Risk: High; requires expertise in PDEs and neural networks, and convergence guarantees may not hold for complex PDEs.",
+      "• Novelty: High; provides first global convergence proof for DGM/PINN under certain conditions, addressing a fundamental question."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次证明DGM/PINN在特定条件下的全局收敛性，解决长期理论疑问。",
+      "• 实盘坑: 纯理论，无直接交易应用；实际PDE问题可能不满足假设条件。",
+      "• 复现难度: 高；需要深度理解PDE和神经网络，且证明依赖严格假设。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2607.24720v1",
+    "title": "The Physics of Multi-Turn Long-Horizon Planning: From Pre-training to Post-training via Single- and Multi-Teacher On-Policy Agentic Distillation",
+    "pdf_url": "https://arxiv.org/pdf/2607.24720v1",
+    "published": "2026-07-27",
+    "crawled_at": "2026-07-28 20:54:38",
+    "ai_score": 7.5,
+    "translated_title": "多轮长程规划的物理学：从预训练到后训练的单教师与多教师在线策略蒸馏",
+    "summary_en": [
+      "• Model Architecture: The paper proposes a unified multi-turn environment to study long-horizon planning, using Chain-of-Thought (CoT) state transition modeling for explicit world model construction during pre-training, and employs GRPO (Generalized Reward Policy Optimization) and OPD (On-Policy Distillation) for post-training, with a novel multi-teacher on-policy distillation (MOPD) for capability integration.",
+      "• Data used: The study uses controlled synthetic data with varying formats, distributions, and quality levels, including optimal and suboptimal trajectories, to isolate the effects on planning ability.",
+      "• Performance metrics: Key findings include that CoT state transition modeling improves long-horizon generalization, suboptimal trajectories severely impair performance, and OPD outperforms GRPO under low-quality and long-horizon settings. MOPD enables cross-environment generalization when patterns are compatible."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出统一的多轮环境，预训练阶段使用CoT状态转换建模构建显式世界模型，后训练阶段采用GRPO和OPD，以及多教师在线策略蒸馏（MOPD）整合能力。",
+      "• 数据来源: 使用受控合成数据，控制格式、分布和质量（包括最优和次优轨迹），以隔离对规划能力的影响。",
+      "• 主要结论: CoT状态转换建模提升长程泛化；次优轨迹严重损害性能；OPD在低质量和长程设置下优于GRPO；MOPD在兼容模式下实现跨环境泛化。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low direct alpha potential as the paper focuses on foundational model planning, not financial markets. However, insights on multi-turn planning and distillation could inspire agentic trading strategies.",
+      "• Implementation Risk: High implementation risk due to complexity of multi-teacher distillation and controlled environment setup; requires significant computational resources and careful tuning.",
+      "• Novelty: High novelty in systematically studying planning ability acquisition, shaping, and integration in a controlled setting, with clear theoretical insights via mutual information analysis."
+    ],
+    "verdict_cn": [
+      "• 创新点: 系统研究了长程规划能力的获取、塑造和整合，通过互信息分析区分通用模式与任务知识，理论贡献显著。",
+      "• 实盘坑: 直接应用于金融交易难度大，环境控制要求高，且多教师蒸馏计算成本高昂，实际部署需简化。",
+      "• 复现难度: 高，需要精细控制的数据生成和复杂的训练流程，复现成本大。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2607.24688v1",
+    "title": "Beyond Scale and Generation: Understanding Language Model-based Entity Matching",
+    "pdf_url": "https://arxiv.org/pdf/2607.24688v1",
+    "published": "2026-07-27",
+    "crawled_at": "2026-07-28 20:54:45",
+    "ai_score": 7.5,
+    "translated_title": "超越规模与生成：理解基于语言模型的实体匹配",
+    "summary_en": "• Model Architecture: Compares bi-encoder, cross-encoder, and generative matcher architectures for entity matching using the Qwen3 model family.\n• Data used: Nine datasets spanning various domains, with controlled factorial study over 1,215 fine-tuning runs.\n• Performance metrics: Evaluates matching accuracy, cross-dataset transferability, and computational cost; finds model variant critical for bi-encoders, cross-encoders consistently outperform bi-encoders, and generative matchers excel under distribution shift.",
+    "summary_cn": "• 核心模型: 对比了双编码器、交叉编码器和生成式匹配器三种架构，基于Qwen3模型系列进行实体匹配。\n• 数据来源: 使用九个不同领域的数据集，通过控制变量法进行了1215次微调实验。\n• 主要结论: 模型变体对双编码器至关重要；交叉编码器始终优于双编码器；生成式匹配器在分布偏移下表现突出；大模型更依赖捷径学习，不一定更好。",
+    "verdict_en": "• Alpha Potential: Moderate; insights on model variant and distribution shift can improve entity matching in financial data (e.g., customer dedup).\n• Implementation Risk: Low to moderate; requires careful selection of model variant and architecture, but code and data are open-sourced.\n• Novelty: High; disentangles confounding factors (architecture, backbone, size) in a controlled study, providing clear guidance for practitioners.",
+    "verdict_cn": "• 创新点: 通过控制变量实验解耦了架构、模型变体和规模的影响，为实体匹配提供了清晰指导。\n• 实盘坑: 生成式匹配器在分布偏移下优势明显，但计算成本高；大模型未必更好，需警惕捷径学习。\n• 复现难度: 低；代码和数据已开源，但需注意Qwen3模型系列的选择和微调细节。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2607.24686v1",
+    "title": "Stacking the Deck: Tunable Trainability in Stacked LCUs",
+    "pdf_url": "https://arxiv.org/pdf/2607.24686v1",
+    "published": "2026-07-27",
+    "crawled_at": "2026-07-28 20:54:52",
+    "ai_score": 7.5,
+    "translated_title": "堆叠线性组合酉：可调可训练性的堆叠LCU",
+    "summary_en": [
+      "• Model Architecture: Proposes stacked linear combination of unitaries (S-LCU) as a variational ansatz, with layers of fermionic Gaussian unitaries.",
+      "• Data used: Theoretical analysis; no empirical data used.",
+      "• Performance metrics: Bounds on loss-landscape variance (Ω(1/(n k^{3l}))) and classical simulation cost (O(k^{2l} n^3)) vs quantum gate complexity (O(l k n^2)).",
+      "• Key result: Number of layers l provides a tunable trade-off between trainability (barren plateau avoidance) and classical simulability."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出堆叠线性组合酉（S-LCU）作为变分拟设，由费米子高斯酉的层组成。",
+      "• 数据来源: 纯理论分析，未使用实证数据。",
+      "• 主要结论: 层数l可调，在训练性（避免贫瘠高原）和经典可模拟性之间提供权衡。",
+      "• 性能指标: 损失景观方差下界Ω(1/(n k^{3l}))，经典模拟成本O(k^{2l} n^3)，量子门复杂度O(l k n^2)。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low; theoretical quantum computing paper with no direct financial application.",
+      "• Implementation Risk: High; requires quantum hardware and expertise, far from practical trading.",
+      "• Novelty: Moderate; introduces tunable trade-off but builds on existing LCU and variational circuit literature."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出可调训练性与可模拟性的权衡，但理论性强，缺乏实证。",
+      "• 实盘坑: 量子计算硬件不成熟，无法直接用于金融交易。",
+      "• 复现难度: 极高，需要量子计算背景和专用硬件。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2607.24683v1",
+    "title": "Co-Learning for Missing Arbitrary Modalities in Multi-modal Classification",
+    "pdf_url": "https://arxiv.org/pdf/2607.24683v1",
+    "published": "2026-07-27",
+    "crawled_at": "2026-07-28 20:55:01",
+    "ai_score": 7.5,
+    "translated_title": "多模态分类中缺失任意模态的协同学习",
+    "summary_en": "• Model Architecture: Two co-learning approaches are proposed: one operates at feature-level using cross-modal attention to impute missing features, the other at decision-level using ensemble of classifiers trained on different modality subsets. Both methods avoid explicit fusion and instead promote inter-modal collaboration.\n• Data used: Experiments on two multi-modal classification benchmarks: CMU-MOSI (sentiment analysis with audio, video, text) and a medical dataset (likely MIMIC or similar) with multiple modalities.\n• Performance metrics: Robustness gains measured under various missing modality conditions (single missing, all-but-one missing). The feature-level method excels when only one modality is missing, while the decision-level method performs better under extreme missing conditions.\n• Key finding: The proposed co-learning framework outperforms standard fusion-based methods in handling arbitrary missing modalities without requiring predefined patterns.",
+    "summary_cn": "• 核心模型: 提出两种协同学习方法：特征级方法通过跨模态注意力填补缺失特征，决策级方法使用不同模态子集训练的集成分类器。两者均避免显式融合，强调模态间协作。\n• 数据来源: 在CMU-MOSI（情感分析，含音频、视频、文本）和医疗数据集（可能为MIMIC）上进行实验。\n• 主要结论: 特征级方法在单模态缺失时表现更优，决策级方法在极端缺失（仅剩一模态）时更鲁棒。整体上，协同学习框架优于传统融合方法。",
+    "verdict_en": "• Alpha Potential: Moderate. The method is task-agnostic and could be applied to multi-modal financial data (e.g., text+price+volume) where missing data is common, but direct trading signal extraction is unclear.\n• Implementation Risk: Low to moderate. Code is provided, but adapting to financial modalities (e.g., time series) may require significant feature engineering.\n• Novelty: High in ML context, but limited for quantitative finance. The co-learning idea is not new, but the arbitrary missing modality setting is practical.\n• Practicality: Useful for risk management or data preprocessing pipelines, but not a standalone alpha strategy.",
+    "verdict_cn": "• 创新点: 在机器学习领域有较高创新性，解决了任意模态缺失的实用问题，但金融领域类似思路已有。\n• 实盘坑: 直接用于交易信号提取困难，需大量适配金融数据（如时序特征），且协同学习可能引入过拟合。\n• 复现难度: 低，代码开源，但金融数据预处理复杂。\n• 适用场景: 更适合作为数据预处理或风控模块，而非独立策略。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2607.24680v1",
+    "title": "One Other Option Pricing Scheme",
+    "pdf_url": "https://arxiv.org/pdf/2607.24680v1",
+    "published": "2026-07-27",
+    "crawled_at": "2026-07-28 20:55:08",
+    "ai_score": 7.5,
+    "translated_title": "另一种期权定价方案",
+    "summary_en": "• Model Architecture: Introduces a parsimonious parameterization of the risk-neutral distribution with direct localized control over implied volatility curve shape, including local concavity. • Data used: Calibrated on a large dataset of 250,000 implied volatility curves from S&P 500 index options over two years. • Performance metrics: Demonstrates accurate calibration and stable parameter patterns across tenors, enabling term structure interpolation and dynamic process construction without static arbitrage.",
+    "summary_cn": "• 核心模型: 提出一种简洁的参数化风险中性分布方法，能直接局部控制隐含波动率曲线形状，包括局部凹性。 • 数据来源: 使用两年期标普500指数期权的25万条隐含波动率曲线进行校准。 • 主要结论: 校准准确，参数在不同期限上表现稳定，支持期限结构插值和动态过程构建，且无静态套利。",
+    "verdict_en": "• Alpha Potential: Moderate; the model's ability to capture local concavity and stable term structure could be exploited for relative value trades or volatility surface arbitrage. • Implementation Risk: Low to moderate; the model is parsimonious and interpretable, but requires careful calibration and validation to avoid overfitting. • Novelty: High; offers a new parameterization with localized control, distinct from standard SVI or stochastic volatility models.",
+    "verdict_cn": "• 创新点: 提供了一种新的参数化方法，能局部控制波动率曲线形状，包括凹性，比传统SVI模型更灵活。 • 实盘坑: 参数稳定性依赖于数据质量，需注意极端市场条件下的校准失效风险。 • 复现难度: 中等；模型简洁，但需要大量期权数据验证参数模式。",
+    "ai_strategy": "Arbitrage",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2607.24673v1",
+    "title": "Causal-TS: A Python Library for Causal Discovery in High-Dimensional and Nonstationary Time Series",
+    "pdf_url": "https://arxiv.org/pdf/2607.24673v1",
+    "published": "2026-07-27",
+    "crawled_at": "2026-07-28 20:55:15",
+    "ai_score": 7.5,
+    "translated_title": "Causal-TS：用于高维非平稳时间序列因果发现的Python库",
+    "summary_en": "• Model Architecture: Provides four specialized causal discovery algorithms (CDNOTS, CDNOTS+, CEDAR, GRACE) plus wrappers for GES, Granger, LASSO-VAR, LGES, all with a unified CI test layer accelerated via PyTorch GPU.\n• Data used: Synthetic data generators included; applicable to any multivariate time series; demonstrated on high-dimensional and nonstationary settings.\n• Performance metrics: No explicit performance metrics reported; focuses on algorithmic functionality and pipeline integration (regime discovery, DoWhy for effect estimation).",
+    "summary_cn": "• 核心模型: 提供四种专用因果发现算法（CDNOTS、CDNOTS+、CEDAR、GRACE）及GES、Granger等包装器，统一CI测试层支持PyTorch GPU加速。\n• 数据来源: 包含合成数据生成器，适用于任意多元时间序列，针对高维非平稳场景。\n• 主要结论: 无明确性能指标，强调算法功能与管道集成（机制发现、DoWhy效应估计）。",
+    "verdict_en": "• Alpha Potential: Moderate; causal discovery in nonstationary time series can identify regime-specific relationships, potentially leading to adaptive trading strategies.\n• Implementation Risk: Low; open-source, pip-installable, with GPU acceleration and changepoint detection, but requires careful tuning of regime detection parameters.\n• Novelty: Moderate; combines existing algorithms with regime discovery and GPU acceleration, but no new causal discovery theory.",
+    "verdict_cn": "• 创新点: 将因果发现与非平稳机制检测结合，提供统一GPU加速库，实用性强。\n• 实盘坑: 机制检测参数敏感，高维下计算开销仍大，需谨慎调参。\n• 复现难度: 低；开源可安装，但需理解各算法假设。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2607.22518v1",
     "title": "PinEqualizer: Full Funnel Content Exploration and Debiasing System at Pinterest",
     "pdf_url": "https://arxiv.org/pdf/2607.22518v1",
@@ -45935,350 +46188,6 @@
       "• 复现难度: 中等；开源设计降低了复现门槛，但需要专业硬件制造和集成技能，可能增加实际应用的成本和复杂性。"
     ],
     "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "ArXiv Preprint",
-      "status": "Preprint"
-    }
-  },
-  {
-    "id": "2512.08896v1",
-    "title": "Open Polymer Challenge: Post-Competition Report",
-    "pdf_url": "https://arxiv.org/pdf/2512.08896v1",
-    "published": "2025-12-09",
-    "crawled_at": "2025-12-10 20:02:26",
-    "ai_score": 7.8,
-    "translated_title": "开放聚合物挑战赛：赛后报告",
-    "summary_en": [
-      "• Model Architecture: Participants employed diverse techniques including feature-based augmentation, transfer learning, self-supervised pretraining, and targeted ensemble strategies to address multi-task polymer property prediction under realistic constraints.",
-      "• Data used: The dataset comprises 10,000 polymers with 5 key properties (thermal conductivity, radius of gyration, density, fractional free volume, glass transition temperature), generated through a simulation pipeline (ADEPT) that can simulate over 25 properties.",
-      "• Performance metrics: The competition focused on multi-task prediction accuracy under challenges like small data, label imbalance, and heterogeneous simulation sources, with lessons learned about data preparation, distribution shifts, and cross-group simulation consistency.",
-      "• Key outcomes: The challenge established the first community-developed benchmark for polymer informatics, releasing models, analysis, and data to create a foundation for molecular AI in polymer science, aimed at accelerating sustainable materials development."
-    ],
-    "summary_cn": [
-      "• 核心模型: 参赛者采用了基于特征的增强、迁移学习、自监督预训练和针对性集成策略等多种技术，以应对小数据、标签不平衡和异构模拟源等现实约束下的多任务聚合物性质预测。",
-      "• 数据来源: 数据集包含10,000种聚合物，具有5个关键性质（热导率、回转半径、密度、自由体积分数、玻璃化转变温度），通过ADEPT模拟管道生成，可模拟超过25种性质。",
-      "• 主要结论: 挑战赛揭示了数据准备、分布偏移和跨组模拟一致性等方面的重要教训，为未来大规模聚合物数据集的最佳实践提供了信息，并建立了聚合物信息学的首个社区开发基准。",
-      "• 应用前景: 发布的模型、分析和数据为聚合物科学中的分子AI奠定了基础，预计将加速可持续和节能材料的开发。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate to high; the multi-task prediction framework and released benchmark could enable virtual screening for novel polymer materials, potentially identifying high-performance candidates for sustainable applications in industries like energy or manufacturing.",
-      "• Implementation Risk: High; challenges include data quality issues (e.g., simulation inconsistencies, label imbalance), the need for domain expertise in polymer science, and scalability to real-world experimental validation beyond simulated properties.",
-      "• Novelty: High; this is the first community-developed benchmark for polymer informatics, addressing a critical gap in open datasets and integrating advanced ML techniques like self-supervised learning in a materials science context.",
-      "• Limitations: The reliance on simulated data may introduce biases, and the small dataset size (10K polymers) limits model generalization, requiring further expansion for broader industrial adoption."
-    ],
-    "verdict_cn": [
-      "• 创新点: 高；这是聚合物信息学领域首个社区开发的基准，填补了开放数据集的空白，并整合了自监督学习等先进ML技术，在材料科学背景下具有开创性。",
-      "• 实盘坑: 高；数据质量问题（如模拟不一致性、标签不平衡）、需要聚合物科学领域专业知识，以及从模拟性质扩展到实际实验验证的可扩展性挑战较大。",
-      "• 复现难度: 中等；虽然发布了数据集和生成管道，但模拟过程的复杂性和对计算资源的要求可能增加复现难度，且模型优化需针对具体应用进行调整。",
-      "• 风险提示: 依赖模拟数据可能引入偏差，数据集规模较小（10K聚合物）限制了模型泛化能力，需进一步扩展以适应更广泛的工业应用。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Accepted"
-    }
-  },
-  {
-    "id": "2512.08895v1",
-    "title": "Unsupervised Learning of Density Estimates with Topological Optimization",
-    "pdf_url": "https://arxiv.org/pdf/2512.08895v1",
-    "published": "2025-12-09",
-    "crawled_at": "2025-12-10 20:02:44",
-    "ai_score": 7.5,
-    "translated_title": "基于拓扑优化的无监督密度估计学习",
-    "summary_en": [
-      "• Model Architecture: Proposes an unsupervised learning approach using a topology-based loss function for automated kernel bandwidth selection in density estimation, leveraging topological data analysis to quantify features like connected components and loops.",
-      "• Data used: Not explicitly specified in the abstract, but benchmarks against classical techniques across different dimensions, suggesting synthetic or standard datasets for validation.",
-      "• Performance metrics: Demonstrates potential through benchmarking against classical bandwidth selection methods, indicating improved topological feature preservation without manual tuning."
-    ],
-    "summary_cn": [
-      "• 核心模型: 提出一种基于拓扑损失函数的无监督学习方法，用于自动选择核密度估计中的带宽参数，利用拓扑数据分析量化高维特征。",
-      "• 数据来源: 摘要未明确说明，但通过在不同维度上与传统方法对比进行基准测试，可能使用合成或标准数据集。",
-      "• 主要结论: 该方法在无监督带宽选择中展现出潜力，能更好地平衡偏差-方差权衡，避免过度平滑或欠平滑拓扑特征。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate; could enhance feature extraction in high-dimensional financial data (e.g., volatility surfaces or portfolio distributions) by improving density estimation accuracy, but direct trading alpha is limited without specific financial applications.",
-      "• Implementation Risk: High; topology-based loss functions may be computationally intensive and sensitive to noise in real-world data, requiring robust validation in noisy financial environments.",
-      "• Novelty: High; integrates topological data analysis with unsupervised learning for bandwidth optimization, offering a mathematically rigorous alternative to classical heuristics like cross-validation."
-    ],
-    "verdict_cn": [
-      "• 创新点: 将拓扑数据分析与无监督学习结合，为核密度估计带宽选择提供自动化、数学严谨的方法，突破传统启发式调参的局限。",
-      "• 实盘坑: 拓扑损失函数计算复杂度高，对数据噪声敏感，在金融市场高噪声环境下可能不稳定，需大量调优。",
-      "• 复现难度: 中等偏高；需要拓扑数据分析工具和机器学习框架，但算法描述较清晰，适合有相关背景的团队复现。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2512.08894v1",
-    "title": "Revisiting the Scaling Properties of Downstream Metrics in Large Language Model Training",
-    "pdf_url": "https://arxiv.org/pdf/2512.08894v1",
-    "published": "2025-12-09",
-    "crawled_at": "2025-12-10 20:03:04",
-    "ai_score": 8.2,
-    "translated_title": "重新审视大语言模型训练中下游指标的缩放特性",
-    "summary_en": [
-      "• Model Architecture: The study analyzes scaling laws for Large Language Models (LLMs) with up to 17B parameters, focusing on direct modeling of downstream task performance rather than traditional proxy metrics like pretraining loss.",
-      "• Data used: Models are trained on up to 350B tokens across two dataset mixtures, with evaluations conducted on multiple popular downstream benchmarks to validate the proposed framework.",
-      "• Performance metrics: The research introduces a simple power law to accurately describe the scaling behavior of log accuracy on downstream tasks, demonstrating better extrapolation than previous two-stage methods and accounting for inference compute under repeated sampling."
-    ],
-    "summary_cn": [
-      "• 核心模型: 研究分析了大语言模型（LLM）的缩放定律，模型参数高达170亿，重点关注下游任务性能的直接建模，而非传统的预训练损失等代理指标。",
-      "• 数据来源: 模型在两种数据集混合上训练了高达3500亿个token，并在多个流行的下游基准测试中进行评估，以验证所提出的框架。",
-      "• 主要结论: 研究发现，在固定的token-to-parameter比率下，简单的幂律可以准确描述下游任务log精度的缩放行为，直接方法比之前的两阶段程序具有更好的外推能力，并考虑了重复采样下的推理计算。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High potential for alpha generation by improving the predictability of downstream task performance in LLM scaling, enabling more efficient resource allocation and model development strategies in quantitative trading applications.",
-      "• Implementation Risk: Moderate risk due to the need for validation on larger-scale models and diverse datasets; potential compounding errors in real-world deployment if the framework fails to generalize beyond the studied 17B parameter range.",
-      "• Novelty: Significant novelty in challenging the traditional view that downstream task performance is unreliable for scaling laws, introducing a direct framework that outperforms existing methods and accounts for practical factors like inference compute."
-    ],
-    "verdict_cn": [
-      "• 创新点: 显著创新在于挑战了传统观点，即下游任务性能在缩放定律中不可靠，提出了一个直接框架，优于现有方法，并考虑了推理计算等实际因素。",
-      "• 实盘坑: 中等风险，因为需要在更大规模模型和多样化数据集上进行验证；如果框架无法推广到研究的170亿参数范围之外，实际部署中可能出现复合错误。",
-      "• 复现难度: 低到中等难度，作者发布了完整的预训练损失和下游评估结果以支持可复现性，但需要大量计算资源来训练和评估模型。"
-    ],
-    "ai_strategy": "NLP/LLM",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Accepted"
-    }
-  },
-  {
-    "id": "2512.08885v1",
-    "title": "Explainable Anomaly Detection for Industrial IoT Data Streams",
-    "pdf_url": "https://arxiv.org/pdf/2512.08885v1",
-    "published": "2025-12-09",
-    "crawled_at": "2025-12-10 20:03:22",
-    "ai_score": 7.2,
-    "translated_title": "工业物联网数据流的可解释异常检测",
-    "summary_en": [
-      "• Model Architecture: Collaborative data stream mining framework integrating online Isolation Forest with incremental Partial Dependence Plots and feature importance scores based on Individual Conditional Expectation curve deviations from fading averages",
-      "• Data used: Industrial IoT data streams from Jacquard loom units for fault detection, operating under conditions of delayed or unavailable ground-truth labels",
-      "• Performance metrics: Real-time implementation demonstrated for fault detection with ongoing work targeting bearing failure prediction, though specific quantitative metrics are not provided in the abstract"
-    ],
-    "summary_cn": [
-      "• 核心模型: 协作式数据流挖掘框架，结合在线隔离森林与增量部分依赖图，基于个体条件期望曲线与衰减平均值的偏差计算特征重要性分数",
-      "• 数据来源: 来自提花织机单元的工业物联网数据流，用于故障检测，在标签延迟或缺失的实际条件下运行",
-      "• 主要结论: 实现了实时故障检测的可解释异常检测系统，正在进行轴承故障预测的持续监控研究，但摘要中未提供具体量化指标"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate - The human-in-the-loop approach with interpretable features could identify subtle operational anomalies before they become critical failures, potentially creating predictive maintenance alpha",
-      "• Implementation Risk: High - Real-time deployment in industrial environments requires robust edge computing infrastructure and continuous human oversight, with significant integration challenges",
-      "• Novelty: Moderate - While combining Isolation Forest with interpretability techniques isn't groundbreaking, the fading average approach to feature importance and real-time industrial application represents meaningful innovation"
-    ],
-    "verdict_cn": [
-      "• 创新点: 将衰减平均值应用于特征重要性计算，结合人机协同学习机制，在工业物联网场景下实现实时可解释异常检测",
-      "• 实盘坑: 工业环境部署需要稳定的边缘计算基础设施，人机交互环节可能成为性能瓶颈，实际生产数据质量难以保证",
-      "• 复现难度: 中等偏高 - 需要工业物联网数据源和实时处理架构，特征重要性计算中的衰减参数需要精细调优"
-    ],
-    "ai_strategy": "Alpha-Factor",
-    "journal_info": {
-      "name": "ArXiv Preprint",
-      "status": "Preprint"
-    }
-  },
-  {
-    "id": "2512.08882v1",
-    "title": "Decentralized Trust for Space AI: Blockchain-Based Federated Learning Across Multi-Vendor LEO Satellite Networks",
-    "pdf_url": "https://arxiv.org/pdf/2512.08882v1",
-    "published": "2025-12-09",
-    "crawled_at": "2025-12-10 20:03:45",
-    "ai_score": 8.2,
-    "translated_title": "空间AI的去中心化信任：基于区块链的多供应商低地球轨道卫星网络联邦学习",
-    "summary_en": [
-      "• Model Architecture: OrbitChain framework combines blockchain with federated satellite learning (FSL), using high-altitude platforms (HAPs) for consensus offloading and a permissioned proof-of-authority ledger to track model updates across multi-vendor LEO satellite networks.",
-      "• Data used: Real satellite datasets for simulations, focusing on applications like disaster detection, border surveillance, and climate monitoring, with data from commercial and governmental LEO satellites.",
-      "• Performance metrics: Achieves sub-second latency (0.16s, 0.26s, 0.35s for 1-of-5, 3-of-5, and 5-of-5 quorums), finalizes over 1000 blocks, reduces convergence time by up to 30 hours compared to single-vendor approaches, and improves global model accuracy with lower computational and communication overhead."
-    ],
-    "summary_cn": [
-      "• 核心模型: OrbitChain框架将区块链与联邦卫星学习（FSL）结合，利用高空平台（HAPs）进行共识卸载，采用许可的权威证明账本追踪多供应商低地球轨道卫星网络的模型更新。",
-      "• 数据来源: 基于真实卫星数据集进行模拟，应用于灾害检测、边境监视和气候监测等领域，数据来自商业和政府低地球轨道卫星。",
-      "• 主要结论: 实现亚秒级延迟（1-of-5、3-of-5和5-of-5法定人数分别为0.16秒、0.26秒和0.35秒），完成超过1000个区块，相比单供应商方法减少高达30小时的收敛时间，并通过降低计算和通信开销提高全局模型准确性。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High potential for alpha in satellite-based AI applications by enabling secure, multi-vendor collaboration that could lead to faster, more accurate models for real-time decision-making in sectors like defense and environmental monitoring.",
-      "• Implementation Risk: Moderate to high risk due to reliance on HAPs for consensus, which may face operational challenges in space environments, and the complexity of integrating blockchain with existing satellite infrastructure across different vendors.",
-      "• Novelty: Novel integration of blockchain with FSL in space AI, addressing trust issues in multi-vendor networks through decentralized consensus, though similar concepts exist in terrestrial federated learning."
-    ],
-    "verdict_cn": [
-      "• 创新点: 在空间AI中将区块链与联邦学习结合，通过去中心化共识解决多供应商网络中的信任问题，但类似概念已在地面联邦学习中出现。",
-      "• 实盘坑: 依赖高空平台进行共识，在空间环境中可能面临操作挑战，且跨供应商整合区块链与现有卫星基础设施的复杂性较高。",
-      "• 复现难度: 中等偏高，需要真实卫星数据集和高空平台模拟，代码开源但硬件和空间条件限制可能增加实施难度。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "ArXiv Preprint",
-      "status": "Preprint"
-    }
-  },
-  {
-    "id": "2512.08879v1",
-    "title": "DAO-GP Drift Aware Online Non-Linear Regression Gaussian-Process",
-    "pdf_url": "https://arxiv.org/pdf/2512.08879v1",
-    "published": "2025-12-09",
-    "crawled_at": "2025-12-10 20:04:05",
-    "ai_score": 8.2,
-    "translated_title": "DAO-GP：漂移感知在线非线性回归高斯过程",
-    "summary_en": [
-      "• Model Architecture: DAO-GP is a fully adaptive, hyperparameter-free Gaussian Process model with built-in drift detection and adaptation mechanisms, featuring sparse inducing points and principled decay mechanisms for memory efficiency.",
-      "• Data used: Evaluated across stationary conditions and diverse drift types (abrupt, incremental, gradual) with varied data characteristics, though specific datasets are not detailed in the abstract.",
-      "• Performance metrics: Consistently achieves superior or competitive performance compared to state-of-the-art parametric and non-parametric models, demonstrating robustness and dynamic adaptation in online settings."
-    ],
-    "summary_cn": [
-      "• 核心模型: DAO-GP是一种完全自适应、无超参数的高斯过程模型，内置漂移检测和适应机制，采用稀疏诱导点和原则性衰减机制以提高内存效率。",
-      "• 数据来源: 在平稳条件和多种漂移类型（突变、增量、渐进）下进行评估，数据特征多样，但摘要中未详细说明具体数据集。",
-      "• 主要结论: 与最先进的参数和非参数模型相比，DAO-GP始终表现出优越或竞争性的性能，证明了其在在线环境中的鲁棒性和动态适应性。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High potential for generating alpha in dynamic markets by adapting to concept drift in real-time, reducing model decay and improving predictive accuracy in non-linear regression tasks.",
-      "• Implementation Risk: Moderate risk due to complexity of drift detection mechanisms and sparse inducing points, which may require fine-tuning for specific financial datasets and high-frequency environments.",
-      "• Novelty: Significant novelty as a hyperparameter-free, drift-aware online GP model, addressing key limitations of conventional methods like fixed hyperparameters and lack of decay mechanisms."
-    ],
-    "verdict_cn": [
-      "• 创新点: 作为无超参数、漂移感知的在线高斯过程模型，具有显著创新性，解决了传统方法中固定超参数和缺乏衰减机制等关键限制。",
-      "• 实盘坑: 中等风险，漂移检测机制和稀疏诱导点的复杂性可能需要针对特定金融数据集和高频环境进行微调，实盘部署可能面临稳定性挑战。",
-      "• 复现难度: 中等偏高，需要实现动态漂移适应和内存高效管理，可能依赖未公开的代码或详细参数，增加复现不确定性。"
-    ],
-    "ai_strategy": "Alpha-Factor",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Accepted"
-    }
-  },
-  {
-    "id": "2512.08875v1",
-    "title": "When Tables Leak: Attacking String Memorization in LLM-Based Tabular Data Generation",
-    "pdf_url": "https://arxiv.org/pdf/2512.08875v1",
-    "published": "2025-12-09",
-    "crawled_at": "2025-12-10 20:04:30",
-    "ai_score": 8.2,
-    "translated_title": "当表格泄露：攻击基于LLM的表格数据生成中的字符串记忆化",
-    "summary_en": [
-      "• Model Architecture: The paper examines two primary approaches for adapting LLMs to tabular data generation: fine-tuning smaller models directly on tabular datasets and prompting larger models with in-context examples. It introduces a novel No-box Membership Inference Attack (MIA) called LevAtt, which targets string sequences of numeric digits in synthetic observations without requiring access to the model itself.",
-      "• Data used: The study evaluates privacy leakage across a wide range of models and datasets, though specific datasets are not detailed in the abstract. The attack focuses on synthetic data generated by LLMs, assuming adversarial access only to this generated data.",
-      "• Performance metrics: The LevAtt attack exposes substantial privacy leakage, with results showing it can be a perfect membership classifier in some cases on state-of-the-art models. The proposed defense methods, including a novel sampling strategy that perturbs digits during generation, are evaluated for minimal loss of fidelity and utility in the synthetic data."
-    ],
-    "summary_cn": [
-      "• 核心模型: 研究基于大型语言模型（LLMs）的表格数据生成，涵盖两种主要方法：直接对表格数据集微调较小模型，以及通过上下文示例提示较大模型。引入一种名为LevAtt的新型无盒成员推理攻击（MIA），针对合成观测中的数字字符串序列。",
-      "• 数据来源: 评估多种模型和数据集中的隐私泄露风险，攻击仅假设对手能访问生成的合成数据，具体数据集未在摘要中详述。",
-      "• 主要结论: LevAtt攻击揭示显著的隐私泄露，在某些先进模型上甚至能成为完美的成员分类器。提出的防御方法，包括在生成过程中策略性扰动数字的新采样策略，能有效抵御攻击，同时最小化合成数据的保真度和效用损失。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate; the paper identifies a critical privacy vulnerability in LLM-based synthetic data generation, which could inform risk management strategies in financial applications using synthetic data for modeling or testing, but direct alpha generation is limited as it focuses on security rather than predictive performance.",
-      "• Implementation Risk: High; the findings highlight substantial privacy leakage risks in current LLM-based tabular data generation methods, which could lead to data breaches or regulatory issues if deployed in sensitive financial contexts without adequate defenses.",
-      "• Novelty: High; the introduction of LevAtt, a simple yet effective No-box MIA targeting numeric digit sequences, and the proposed defense methods represent innovative contributions to privacy research in synthetic data generation, addressing a unique vulnerability not widely explored before."
-    ],
-    "verdict_cn": [
-      "• 创新点: 高；提出LevAtt攻击，一种针对数字字符串序列的新型无盒成员推理攻击，方法简单有效，并开发了包括数字扰动采样策略的防御机制，填补了LLM合成数据生成中隐私研究的空白。",
-      "• 实盘坑: 高；研究揭示当前LLM表格数据生成方法存在重大隐私泄露风险，若在金融敏感场景中未经防御部署，可能导致数据泄露或合规问题，需谨慎评估实施安全性。",
-      "• 复现难度: 中等；攻击方法基于生成的合成数据，无需模型访问，相对易于复现，但防御策略的实现可能涉及复杂的采样调整，需一定技术专长。"
-    ],
-    "ai_strategy": "NLP/LLM",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2512.08870v1",
-    "title": "Fed-SE: Federated Self-Evolution for Privacy-Constrained Multi-Environment LLM Agents",
-    "pdf_url": "https://arxiv.org/pdf/2512.08870v1",
-    "published": "2025-12-09",
-    "crawled_at": "2025-12-10 20:04:49",
-    "ai_score": 7.8,
-    "translated_title": "Fed-SE：面向隐私受限多环境LLM智能体的联邦自进化框架",
-    "summary_en": [
-      "• Model Architecture: Fed-SE employs a local evolution-global aggregation paradigm with parameter-efficient fine-tuning on filtered high-return trajectories locally and low-rank subspace aggregation globally to disentangle environment-specific dynamics.",
-      "• Data used: The framework utilizes trajectory-level data from heterogeneous interactive environments with sparse rewards, processed through filtering mechanisms to select high-return trajectories for training.",
-      "• Performance metrics: Experiments across five heterogeneous environments show Fed-SE improves average task success rates by approximately 18% over federated baselines, demonstrating robust cross-environment knowledge transfer."
-    ],
-    "summary_cn": [
-      "• 核心模型: Fed-SE采用本地进化-全局聚合范式，本地通过参数高效微调处理过滤后的高回报轨迹，全局在低秩子空间聚合以解耦环境特定动态。",
-      "• 数据来源: 使用来自异构交互环境的轨迹级数据，包含稀疏奖励，通过过滤机制筛选高回报轨迹用于训练。",
-      "• 主要结论: 在五个异构环境实验中，Fed-SE相比联邦基线平均任务成功率提升约18%，验证了在隐私受限部署中跨环境知识转移的有效性。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate - addresses practical privacy constraints in multi-agent LLM deployments but limited to specific interactive task domains; potential for edge-case optimization in dynamic environments.",
-      "• Implementation Risk: High - trajectory filtering and low-rank subspace aggregation introduce computational overhead; real-world deployment requires robust client synchronization and reward calibration.",
-      "• Novelty: Significant - extends Federated Learning to open-ended self-evolution of LLM agents with novel gradient conflict mitigation through disentangled aggregation, though builds on existing FL and PEFT techniques."
-    ],
-    "verdict_cn": [
-      "• 创新点: 显著 - 将联邦学习扩展到LLM智能体的开放式自进化，通过解耦聚合缓解梯度冲突，但基于现有FL和PEFT技术。",
-      "• 实盘坑: 高 - 轨迹过滤和低秩子空间聚合增加计算开销；实际部署需强客户端同步和奖励校准，稀疏奖励可能不稳定。",
-      "• 复现难度: 中等 - 依赖标准FL框架和参数高效微调，但异构环境设置和轨迹处理需要定制化实现，实验可复现性取决于环境模拟。"
-    ],
-    "ai_strategy": "NLP/LLM",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2512.07833v1",
-    "title": "Relational Visual Similarity",
-    "pdf_url": "https://arxiv.org/pdf/2512.07833v1",
-    "published": "2025-12-08",
-    "crawled_at": "2025-12-09 20:01:37",
-    "ai_score": 7.8,
-    "translated_title": "关系视觉相似性",
-    "summary_en": [
-      "• Model Architecture: Fine-tuned Vision-Language model (likely CLIP-based) to measure relational similarity between images by focusing on internal relations among visual elements rather than surface attributes.",
-      "• Data used: Curated 114k image-caption dataset with anonymized captions that describe underlying relational logic of scenes, not visible content, enabling training for relational similarity.",
-      "• Performance metrics: Demonstrates that existing models (e.g., LPIPS, CLIP, DINO) fail to capture relational similarity, highlighting a critical gap; the proposed model serves as a first step toward connecting images by relational structure."
-    ],
-    "summary_cn": [
-      "• 核心模型: 微调视觉-语言模型（可能基于CLIP），通过关注视觉元素间的内部关系而非表面属性，测量图像间的关系相似性。",
-      "• 数据来源: 构建了114k图像-标题数据集，标题匿名化，描述场景的底层关系逻辑而非可见内容，用于训练关系相似性。",
-      "• 主要结论: 现有模型（如LPIPS、CLIP、DINO）无法捕捉关系相似性，揭示视觉计算中的关键差距；提出模型是连接图像关系结构的第一步。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High potential for novel alpha generation in image-based financial applications (e.g., detecting relational patterns in market charts or satellite imagery) by capturing non-obvious similarities missed by traditional models.",
-      "• Implementation Risk: Moderate to high risk due to reliance on curated dataset quality and potential overfitting to specific relational types; real-world generalization to diverse financial data may be challenging.",
-      "• Novelty: High novelty in formulating relational similarity as a measurable problem and using anonymized captions to train models, addressing a gap in visual computing with potential cross-disciplinary impact."
-    ],
-    "verdict_cn": [
-      "• 创新点: 将关系相似性公式化为可测量问题，并使用匿名化标题训练模型，填补视觉计算空白，具有跨学科潜力。",
-      "• 实盘坑: 依赖数据集质量，可能过拟合特定关系类型；泛化到多样化金融数据（如市场图表）可能困难，实施风险中高。",
-      "• 复现难度: 中等难度，需要构建类似匿名化数据集和微调视觉-语言模型，但开源代码和预训练模型可降低门槛。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2512.07832v1",
-    "title": "Do Generalisation Results Generalise?",
-    "pdf_url": "https://arxiv.org/pdf/2512.07832v1",
-    "published": "2025-12-08",
-    "crawled_at": "2025-12-09 20:01:55",
-    "ai_score": 6.5,
-    "translated_title": "泛化结果能否泛化？",
-    "summary_en": [
-      "• Model Architecture: Analyzes OLMo2 and OPT large language models (LLMs) to assess their out-of-distribution (OOD) generalization capabilities.",
-      "• Data used: Evaluates performance across multiple OOD test sets during fine-tuning runs, controlling for in-domain performance via partial correlation analysis.",
-      "• Performance metrics: Measures correlation of OOD generalization performances between different test sets after regressing out in-domain performance, finding no consistent trend."
-    ],
-    "summary_cn": [
-      "• 核心模型: 使用OLMo2和OPT两种大型语言模型（LLMs）评估其分布外（OOD）泛化能力。",
-      "• 数据来源: 在微调过程中，基于多个OOD测试集评估模型性能，并通过偏相关分析控制域内性能的影响。",
-      "• 主要结论: 研究发现，在控制域内性能后，不同OOD测试集之间的泛化性能相关性没有统一趋势，具体相关性取决于模型选择。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Low; the paper highlights the inconsistency in OOD generalization, suggesting limited direct trading signals but useful for risk assessment in NLP-based strategies.",
-      "• Implementation Risk: High; findings indicate that generalization results are model-specific and dataset-dependent, complicating reliable deployment in dynamic financial environments.",
-      "• Novelty: Moderate; introduces a multi-dataset evaluation framework for OOD generalization, but the core insight about variability is not groundbreaking in quant finance."
-    ],
-    "verdict_cn": [
-      "• 创新点: 中等；提出了一个多数据集评估框架来研究OOD泛化，但核心发现（泛化结果不一致）在量化金融中并非革命性。",
-      "• 实盘坑: 高；研究显示泛化结果高度依赖模型和数据集，在动态市场环境中部署时可能导致不可预测的性能波动。",
-      "• 复现难度: 中等；需要访问OLMo2和OPT模型及多个OOD测试集，但方法论清晰，技术门槛可控。"
-    ],
-    "ai_strategy": "NLP/LLM",
     "journal_info": {
       "name": "ArXiv Preprint",
       "status": "Preprint"
