@@ -1,5 +1,256 @@
 [
   {
+    "id": "2607.26055v1",
+    "title": "$π\\mathbf{R}^2$: Reactive Real-time Flow Policies",
+    "pdf_url": "https://arxiv.org/pdf/2607.26055v1",
+    "published": "2026-07-28",
+    "crawled_at": "2026-07-29 20:40:08",
+    "ai_score": 7.5,
+    "translated_title": "πR²：反应式实时流策略",
+    "summary_en": "• Model Architecture: πR² enhances action-chunking flow policies with a dual-channel conditioning mechanism (fast proprioception channel and slow vision-language channel) and a latency-adaptive flow schedule using diffusion forcing. It requires minimal modification to existing architectures and can be finetuned from pretrained policies like GR00T-N1.7.\n• Data used: The paper uses simulation and real-world manipulation tasks on a xArm6+XHand platform. Specific datasets are not detailed, but the method is designed for generalist manipulation policies.\n• Performance metrics: On an A5000 GPU, πR² achieves ~25Hz replanning (4x faster than baseline), with a fresh observation every 40ms. It improves success rate by up to 23% in simulation and 30% in real-world tasks over the strongest baseline.",
+    "summary_cn": "• 核心模型: πR²通过双通道条件机制（快速本体感知通道和慢速视觉语言通道）和基于扩散强制的延迟自适应流调度，增强了动作分块流策略。对现有架构改动极小，可从预训练策略（如GR00T-N1.7）微调。\n• 数据来源: 在xArm6+XHand平台上进行仿真和真实世界操作任务。未详细说明具体数据集，但方法面向通用操作策略。\n• 主要结论: 在A5000 GPU上，πR²实现约25Hz重规划（比基线快4倍），每40ms处理一次新观测。在仿真和真实世界中，成功率分别比最强基线提高23%和30%。",
+    "verdict_en": "• Alpha Potential: Low for financial trading. The paper focuses on robotic manipulation, not financial markets. The concept of reactive real-time control may inspire latency-sensitive trading strategies, but direct application is unlikely.\n• Implementation Risk: High. Requires specialized hardware (robot arm, GPU) and domain-specific pretrained models. Not directly transferable to financial data or systems.\n• Novelty: Moderate. The dual-channel conditioning and latency-adaptive schedule are novel for robotics, but similar ideas exist in control theory and real-time systems.",
+    "verdict_cn": "• 创新点: 双通道条件机制和延迟自适应调度在机器人领域有创新性，但类似概念在控制理论和实时系统中已有先例。\n• 实盘坑: 直接应用于金融交易几乎不可能，需要专用硬件和领域模型，且金融数据与机器人感知差异巨大。\n• 复现难度: 高。需要机器人平台、预训练模型和特定硬件（如A5000 GPU），复现成本高。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2607.26052v1",
+    "title": "Spend Experts Where You Are Unsure: Confidence-Adaptive Routing for Mixture-of-Experts LoRA",
+    "pdf_url": "https://arxiv.org/pdf/2607.26052v1",
+    "published": "2026-07-28",
+    "crawled_at": "2026-07-29 20:40:15",
+    "ai_score": 7.5,
+    "translated_title": "在你不确定的地方花费专家：面向混合专家LoRA的置信度自适应路由",
+    "summary_en": "• Model Architecture: Proposes CARE, a confidence-adaptive routing mechanism for MoE-LoRA that activates experts based on cumulative router weight threshold, with a disagreement-based extension and budget thermostat to control average expert count.\n• Data used: Evaluated on eight commonsense benchmarks (e.g., ARC, HellaSwag) using LLaMA-3.1-8B and Qwen2.5-7B, plus math, code, and knowledge tasks.\n• Performance metrics: Improves over fixed top-k MoE-LoRA at matched compute; matches fixed-k=4 baseline while activating fewer experts; also improves out-of-distribution detection over MSP, entropy, and multi-pass proxies.",
+    "summary_cn": "• 核心模型: 提出CARE，一种基于置信度的自适应路由机制，通过累积路由器权重阈值激活专家，并引入分歧扩展和预算恒温器控制平均专家数。\n• 数据来源: 在LLaMA-3.1-8B和Qwen2.5-7B上评估了八个常识基准（如ARC、HellaSwag），以及数学、代码和知识任务。\n• 主要结论: 在匹配计算量下优于固定top-k MoE-LoRA；以更少的专家数匹配固定k=4基线；在分布外检测上优于MSP、熵和多遍代理方法。",
+    "verdict_en": "• Alpha Potential: Moderate; routing efficiency can reduce compute costs, but direct trading alpha is limited unless combined with LLM-based strategies.\n• Implementation Risk: Low; CARE is a drop-in replacement with no extra parameters, easy to integrate into existing MoE-LoRA pipelines.\n• Novelty: High; introduces confidence-adaptive routing with theoretical support (nucleus fidelity, budget optimality, epistemic disagreement).",
+    "verdict_cn": "• 创新点: 高；提出置信度自适应路由，有理论支撑（核保真度、预算最优性、认知分歧）。\n• 实盘坑: 直接交易alpha有限，需结合LLM策略；计算节省在量化中可能不显著。\n• 复现难度: 低；即插即用，无额外参数，代码已开源。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2607.26043v1",
+    "title": "Re-thinking Mammography Transfer Learning: The Dataset-Informed Transfer Learning (DITL) Framework for Breast Cancer Screening and Lesion Diagnosis",
+    "pdf_url": "https://arxiv.org/pdf/2607.26043v1",
+    "published": "2026-07-28",
+    "crawled_at": "2026-07-29 20:40:24",
+    "ai_score": 7.5,
+    "translated_title": "重新思考乳腺X线摄影迁移学习：面向乳腺癌筛查与病变诊断的数据集知情迁移学习框架",
+    "summary_en": [
+      "• Model Architecture: Proposes Dataset-Informed Transfer Learning (DITL) framework with two adaptive components: Adaptive Difficulty-Weighted Cross-Entropy (A-DWCE) and Adaptive Neighborhood Representation Triplet (A-NR-Triplet), integrating dataset-derived difficulty signals with neighborhood-based triplet supervision.",
+      "• Data used: Evaluated on large-scale VinDR-Mammo dataset for whole-image breast density classification and small ROI datasets for lesion diagnosis, covering both screening and diagnosis tasks.",
+      "• Performance metrics: Achieves state-of-the-art on VinDR-Mammo with significant improvements in accuracy, F1-score, and AUC (p < 0.0001); also shows consistent gains on small ROI datasets (p < 0.0001).",
+      "• Key innovation: No hyperparameter tuning required, removes heuristic weighting and fixed margins, with negligible computational overhead."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出数据集知情迁移学习（DITL）框架，包含自适应难度加权交叉熵（A-DWCE）和自适应邻域表示三元组（A-NR-Triplet），融合数据集难度信号与邻域三元组监督。",
+      "• 数据来源: 在大规模VinDR-Mammo数据集上进行全图像乳腺密度分类，并在小ROI数据集上进行病变诊断，覆盖筛查和诊断任务。",
+      "• 主要结论: 在VinDR-Mammo上达到最先进性能，准确率、F1分数和AUC显著提升（p < 0.0001）；在小ROI数据集上也有一致提升（p < 0.0001）。",
+      "• 创新点: 无需超参数调优，去除启发式权重和固定边界，计算开销可忽略。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; improves classification accuracy in mammography, which could be used as a feature in risk models, but direct trading signal is limited.",
+      "• Implementation Risk: Low; framework is scalable and requires no hyperparameter tuning, but depends on self-supervised feature space quality.",
+      "• Novelty: High; introduces dataset-informed weighting and adaptive triplet loss, bridging small and large datasets effectively.",
+      "• Practicality: Results are statistically significant, but medical imaging domain may have regulatory hurdles for deployment."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出数据集知情加权和自适应三元组损失，有效桥接小规模和大规模数据集，无需调参。",
+      "• 实盘坑: 直接交易信号有限，更适合作为风险模型特征；依赖自监督特征空间质量。",
+      "• 复现难度: 中等；框架公开，但需要大规模医学影像数据和计算资源。",
+      "• 应用前景: 在医学影像分类中有潜力，但监管障碍可能影响实际部署。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2607.26042v1",
+    "title": "VetClaw: An Edge-Cloud Multimodal Agentic System for Veterinary Disease Screening",
+    "pdf_url": "https://arxiv.org/pdf/2607.26042v1",
+    "published": "2026-07-28",
+    "crawled_at": "2026-07-29 20:40:33",
+    "ai_score": 4.5,
+    "translated_title": "VetClaw：一种用于兽医疾病筛查的边缘-云端多模态智能系统",
+    "summary_en": "• Model Architecture: Edge-cloud multimodal agentic system combining camera module (edge) with vision-language model (cloud) for zero-shot disease classification.\n• Data: Uses captured images and optional symptom descriptions; no specific dataset mentioned, likely proprietary or public veterinary datasets.\n• Performance Metrics: Image-only VLM prediction limited; symptom-guided and multimodal inputs improve zero-shot classification performance.\n• Workflow: Separates agent interaction (OpenClaw) from workflow orchestration (LangGraph), enabling tool use, safety checks, and failure handling.\n• Key Result: Transforms static prediction into coordinated, safety-aware system with diagnostic-support alerts.",
+    "summary_cn": "• 核心模型: 边缘-云端多模态智能系统，结合边缘摄像头模块和云端视觉语言模型进行零样本疾病分类。\n• 数据来源: 使用捕获图像和可选症状描述；未提及具体数据集，可能为专有或公共兽医数据集。\n• 主要结论: 仅图像预测有限，症状引导和多模态输入提升零样本分类性能；系统将静态预测转化为协调、安全感知的诊断支持系统。",
+    "verdict_en": "• Alpha Potential: Low - veterinary disease screening is niche, not directly applicable to financial markets.\n• Implementation Risk: High - requires specialized hardware (camera module) and cloud infrastructure; workflow complexity may hinder deployment.\n• Novelty: Moderate - combines existing techniques (VLM, edge computing, LangGraph) in a novel application domain.\n• Practicality: Limited for quant finance; could inspire multimodal agentic systems for alternative data analysis.\n• Scalability: Unclear - performance depends on VLM quality and symptom input; zero-shot may not generalize well.",
+    "verdict_cn": "• 创新点: 将边缘计算与视觉语言模型结合用于兽医筛查，工作流分离设计有参考价值。\n• 实盘坑: 领域高度垂直，金融量化直接应用价值低；依赖硬件和云服务，部署成本高。\n• 复现难度: 中高——需定制硬件和VLM模型，工作流代码复杂，但技术栈开源。\n• 量化启示: 多模态智能体架构可借鉴于另类数据分析，但需调整金融场景。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2607.26040v1",
+    "title": "Reinformed Dreamer: An Asymmetric World Model Efficiently Trained through Latent Guidance",
+    "pdf_url": "https://arxiv.org/pdf/2607.26040v1",
+    "published": "2026-07-28",
+    "crawled_at": "2026-07-29 20:40:41",
+    "ai_score": 6.5,
+    "translated_title": "强化梦想家：通过潜在引导高效训练的非对称世界模型",
+    "summary_en": [
+      "• Model Architecture: Proposes Reinformed Dreamer, an asymmetric model-based RL algorithm that uses latent guidance to improve representation learning in the world model, addressing limitations of the Informed Dreamer.",
+      "• Data used: Evaluated on standard RL benchmarks including DeepMind Control Suite and Atari games, with additional privileged state information during training.",
+      "• Performance metrics: Reports consistent improvement over Dreamer baseline across multiple tasks, with higher average returns and sample efficiency compared to prior asymmetric approaches.",
+      "• Key finding: The latent guidance objective enhances the quality of privileged information representations, leading to better policy learning."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出Reinformed Dreamer，一种非对称基于模型的强化学习算法，通过潜在引导改进世界模型中的表示学习，解决了Informed Dreamer的局限性。",
+      "• 数据来源: 在DeepMind Control Suite和Atari游戏等标准RL基准上评估，训练时使用额外的特权状态信息。",
+      "• 主要结论: 在多个任务上持续优于Dreamer基线，平均回报和样本效率高于先前的非对称方法。",
+      "• 关键发现: 潜在引导目标增强了特权信息表示的质量，从而改进了策略学习。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; improvements in sample efficiency could translate to faster strategy iteration, but direct trading alpha is unclear.",
+      "• Implementation Risk: High; requires privileged information (e.g., state features) not typically available in financial markets, limiting practical application.",
+      "• Novelty: Incremental; builds on Informed Dreamer with a new latent guidance loss, but the core asymmetric RL concept is not new."
+    ],
+    "verdict_cn": [
+      "• 创新点: 在Informed Dreamer基础上引入潜在引导损失，改进表示学习，但非对称RL框架本身并非全新。",
+      "• 实盘坑: 需要特权信息（如状态特征），在金融市场中通常不可得，实用性受限。",
+      "• 复现难度: 中等；依赖Dreamer代码库，但潜在引导实现细节需谨慎处理。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2607.26038v1",
+    "title": "Collaborative System Failure Prognostics via Federated Longitudinal-Survival Modeling",
+    "pdf_url": "https://arxiv.org/pdf/2607.26038v1",
+    "published": "2026-07-28",
+    "crawled_at": "2026-07-29 20:40:48",
+    "ai_score": 7.5,
+    "translated_title": "基于联邦纵向生存建模的协同系统故障预测",
+    "summary_en": "• Model Architecture: Combines longitudinal sensor representation learning with a client-separable discrete-time hazard objective for federated learning.\n• Data used: Four C-MAPSS turbofan engine degradation subsets under simulated decentralized settings.\n• Performance metrics: Improves prognostic performance over isolated local training while maintaining performance comparable to centralized training.\n• Key contribution: Enables collaborative training without sharing raw sensor measurements or individual failure records.",
+    "summary_cn": "• 核心模型: 结合纵向传感器表示学习与客户端可分离的离散时间风险目标，实现联邦学习框架下的协同故障预测。\n• 数据来源: 使用C-MAPSS涡扇发动机退化数据集的四个子集，模拟去中心化场景。\n• 主要结论: 相比孤立的本地训练，该框架显著提升预测性能，且性能接近集中式训练。\n• 关键贡献: 在不共享原始传感器测量或个体故障记录的情况下实现协同训练。",
+    "verdict_en": "• Alpha Potential: Low for direct trading; more relevant for industrial asset management and maintenance scheduling.\n• Implementation Risk: High due to need for federated infrastructure and domain-specific sensor data.\n• Novelty: Moderate; applies federated learning to survival analysis with a separable hazard objective, but similar ideas exist in other domains.\n• Practicality: Limited for hedge funds unless applied to physical asset portfolios or insurance risk modeling.",
+    "verdict_cn": "• 创新点: 将联邦学习与生存分析结合，提出可分离风险目标，解决分布式故障预测中的数据隐私问题。\n• 实盘坑: 对交易策略直接应用价值低，需依赖工业传感器数据，且联邦基础设施部署成本高。\n• 复现难度: 中等，需要C-MAPSS数据集和联邦学习框架，但模型复杂度可控。\n• 适用性: 更适合工业资产管理和保险精算，而非高频或量化交易。",
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2607.26004v1",
+    "title": "Parallel Decoding Distillation for Fast Image and Video Generation",
+    "pdf_url": "https://arxiv.org/pdf/2607.26004v1",
+    "published": "2026-07-28",
+    "crawled_at": "2026-07-29 20:40:56",
+    "ai_score": 7.5,
+    "translated_title": "并行解码蒸馏：快速图像与视频生成",
+    "summary_en": [
+      "• Model Architecture: Proposes Parallel Decoding Distillation (PDD), a trajectory-based distillation method that predicts multiple denoising steps per network evaluation, compatible with any pre-trained diffusion or flow matching model.",
+      "• Data used: Evaluated on LTX-2.3 Text-to-Video/Audio, Wan 14B Text-to-Video, and Qwen-Image Text-to-Image datasets.",
+      "• Performance metrics: Achieves state-of-the-art performance with 4-8 NFE (number of function evaluations), significantly improving generation speed while maintaining quality and diversity."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出并行解码蒸馏（PDD），一种基于轨迹的蒸馏方法，每次网络评估预测多个去噪步骤，兼容任何预训练扩散或流匹配模型。",
+      "• 数据来源: 在LTX-2.3文本到视频/音频、Wan 14B文本到视频和Qwen-Image文本到图像数据集上评估。",
+      "• 主要结论: 在4-8次函数评估（NFE）下达到最先进性能，显著提升生成速度，同时保持质量和多样性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; distillation techniques for generative models are not directly applicable to financial alpha, but may inspire efficient sampling methods in time-series generation.",
+      "• Implementation Risk: Low; method is architecture-agnostic and uses simple trajectory distillation without adversarial losses, reducing training instability.",
+      "• Novelty: High; introduces parallel decoding in distillation, avoiding complex losses like VSD and adversarial training, and supports variable NFE."
+    ],
+    "verdict_cn": [
+      "• 创新点: 在蒸馏中引入并行解码，避免VSD和对抗训练等复杂损失，支持可变NFE，方法简洁且可扩展。",
+      "• 实盘坑: 金融领域直接应用有限，但可借鉴其高效采样思路用于时间序列生成；需注意生成多样性可能影响稳定性。",
+      "• 复现难度: 中等；依赖预训练模型，但训练过程简化，无需复杂损失函数，代码可能公开。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2607.26001v1",
+    "title": "Sharpness-Aware Minimization and Muon: Robustness under the Spectral Norm",
+    "pdf_url": "https://arxiv.org/pdf/2607.26001v1",
+    "published": "2026-07-28",
+    "crawled_at": "2026-07-29 20:41:03",
+    "ai_score": 7.5,
+    "translated_title": "锐度感知最小化与Muon：谱范数下的鲁棒性",
+    "summary_en": [
+      "• Model Architecture: Combines Sharpness-Aware Minimization (SAM) with matrix-aware geometry, using spectral inner perturbations for hidden-layer weights and Muon or AdamW/SGDW for outer updates.",
+      "• Data used: ImageNet-1K dataset for training and validation.",
+      "• Performance metrics: Top-1 validation accuracy on ViT-Small/16 and ResNet-50 models.",
+      "• Key finding: Spectral inner step with Muon outer step achieves best validation accuracy on both models among evaluated methods."
+    ],
+    "summary_cn": [
+      "• 核心模型: 将锐度感知最小化（SAM）与矩阵感知几何结合，对隐藏层权重使用谱内扰动，外更新使用Muon或AdamW/SGDW。",
+      "• 数据来源: ImageNet-1K数据集。",
+      "• 主要结论: 谱内步骤与Muon外步骤的组合在ViT-Small/16和ResNet-50上均取得最佳验证准确率。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; improves generalization in vision tasks, but direct financial alpha unclear; may benefit portfolio optimization via robust training.",
+      "• Implementation Risk: High; requires careful tuning of spectral radius and outer optimizer, and computational overhead of SAM.",
+      "• Novelty: Moderate; extends SAM with matrix-aware geometry inspired by Muon, but limited to vision benchmarks."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将Muon的矩阵感知思想引入SAM，提出谱内扰动，但仅验证于视觉任务。",
+      "• 实盘坑: 计算成本高，超参数敏感，金融场景适用性未验证。",
+      "• 复现难度: 中等；需实现谱范数扰动和Muon优化器，依赖ImageNet规模数据。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2607.26000v1",
+    "title": "Empirical Evaluation of Out-Of-Distribution Performance of Tabular Foundation Models",
+    "pdf_url": "https://arxiv.org/pdf/2607.26000v1",
+    "published": "2026-07-28",
+    "crawled_at": "2026-07-29 20:41:10",
+    "ai_score": 7.2,
+    "translated_title": "表格基础模型在分布外性能上的实证评估",
+    "summary_en": "• Evaluated nine Tabular Foundation Models (TFMs) including TabPFNv2, TabICL, Mitra, LimiX, etc., covering diverse pre-training strategies and architectures.\n• Used three real-world datasets from TableShift study (HELOC, Voting, Childhood Lead) with label, socioeconomic, and geographic shift types.\n• All TFMs degrade systematically under distribution shift, with shift gaps from 0.003 to 0.060; in-distribution vs OOD performance relationship holds for TFMs.\n• Identified a scalability gap: high-performing models require memory/compute beyond standard deployment infrastructure.",
+    "summary_cn": "• 核心模型: 评估了9种表格基础模型（TFM），包括TabPFNv2、TabICL、Mitra、LimiX等，涵盖不同预训练策略和架构。\n• 数据来源: 使用TableShift研究中的三个真实数据集（HELOC、Voting、Childhood Lead），覆盖标签、社会经济和地理偏移类型。\n• 主要结论: 所有TFM在分布偏移下系统性退化，偏移差距在0.003至0.060之间；分布内与分布外性能关系在TFM中成立。\n• 发现可扩展性差距：高性能模型需要超出标准部署基础设施的内存和计算资源。",
+    "verdict_en": "• Alpha Potential: Low to moderate; TFMs still underperform tree-based models under shift, limiting direct trading alpha.\n• Implementation Risk: High; scalability issues and systematic degradation under shift make real-world deployment challenging.\n• Novelty: Moderate; extends known OOD behavior to TFMs, but no breakthrough in robustness.\n• Practical Use: Useful for risk management in tabular data applications, but not yet for high-frequency or alpha strategies.",
+    "verdict_cn": "• 创新点: 系统评估了TFM在分布偏移下的表现，填补了该领域空白，但未提出新方法。\n• 实盘坑: 所有模型在偏移下性能下降，且计算资源需求高，难以实际部署。\n• 复现难度: 中等；数据集公开，但模型众多且计算成本高。\n• 建议: 暂不适合直接用于量化策略，可作为风控参考。",
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2607.25989v1",
+    "title": "Untangling Co-Drift: Proactive Multi-Intent Failure Prediction and Root-Cause Disambiguation for Self-Driving Networks",
+    "pdf_url": "https://arxiv.org/pdf/2607.25989v1",
+    "published": "2026-07-28",
+    "crawled_at": "2026-07-29 20:41:17",
+    "ai_score": 7.5,
+    "translated_title": "解开共漂移：面向自驱动网络的多意图故障预测与根因消歧",
+    "summary_en": "• Model Architecture: Teacher-augmented Mixture-of-Experts (MoE) with hybrid objective for joint failure prediction and root-cause attribution; uses SHAP for KPI-level diagnostics and multi-horizon modeling for urgency estimation.\n• Data used: Three environments: controlled statistical benchmark, microservices application, and SDN-based edge-to-cloud testbed; likely includes telemetry KPIs and intent-level metrics.\n• Performance metrics: High failure detection rates, strong remediation lead times, accurate intent-level root-cause disambiguation across all environments.",
+    "summary_cn": "• 核心模型: 教师增强的混合专家架构，联合优化故障预测与根因归因；使用SHAP进行KPI级诊断，多时间跨度建模估计紧急程度。\n• 数据来源: 三个环境：受控统计基准、微服务应用、SDN边缘到云测试床；可能包含遥测KPI和意图级指标。\n• 主要结论: 在所有环境中实现高故障检测率、强修复提前时间、准确的意图级根因消歧。",
+    "verdict_en": "• Alpha Potential: Moderate; framework for proactive failure prediction in self-driving networks could reduce downtime and operational costs, but direct trading alpha is limited.\n• Implementation Risk: High; requires integration with network infrastructure and real-time telemetry; MoE architecture may be computationally intensive.\n• Novelty: High; addresses co-drift problem in multi-intent systems with novel teacher-augmented MoE and hybrid objective.",
+    "verdict_cn": "• 创新点: 首次提出多意图系统中的共漂移问题，并用教师增强MoE和混合目标解决，具有较高学术价值。\n• 实盘坑: 直接交易alpha有限，主要面向网络运维；部署需改造现有网络基础设施，计算开销大。\n• 复现难度: 高；依赖特定网络环境数据，MoE训练复杂，SHAP解释需领域知识。",
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2607.24741v1",
     "title": "Certified Parallel-in-Time Sinkhorn for Dynamic Entropic Optimal Transport",
     "pdf_url": "https://arxiv.org/pdf/2607.24741v1",
@@ -45847,350 +46098,6 @@
     "journal_info": {
       "name": "NeurIPS",
       "status": "Accepted"
-    }
-  },
-  {
-    "id": "2512.09912v1",
-    "title": "Supervised learning pays attention",
-    "pdf_url": "https://arxiv.org/pdf/2512.09912v1",
-    "published": "2025-12-10",
-    "crawled_at": "2025-12-11 20:02:13",
-    "ai_score": 7.8,
-    "translated_title": "监督学习引入注意力机制",
-    "summary_en": [
-      "• Model Architecture: Proposes attention-weighted supervised learning methods for tabular data, adapting in-context learning concepts to traditional algorithms like lasso regression and gradient boosting. The approach fits personalized local models for each test observation by weighting training data based on supervised similarity measures.",
-      "• Data used: Applied to real and simulated datasets, including time series and spatial data, demonstrating adaptability to heterogeneous data without pre-specified clusters or similarity structures.",
-      "• Performance metrics: Shows improved predictive performance across datasets while preserving interpretability. Theoretical analysis indicates lower mean squared error than standard linear models under mixture-of-models data-generating processes with known subgroup structure."
-    ],
-    "summary_cn": [
-      "• 核心模型: 提出针对表格数据的注意力加权监督学习方法，将上下文学习概念应用于传统算法（如lasso回归和梯度提升），通过基于监督相似性度量的训练数据加权为每个测试观测拟合个性化局部模型。",
-      "• 数据来源: 应用于真实和模拟数据集，包括时间序列和空间数据，展示了对异构数据的适应性，无需预先指定聚类或相似性结构。",
-      "• 主要结论: 在保持可解释性的同时，提高了跨数据集的预测性能。理论分析表明，在已知子组结构的混合模型数据生成过程中，注意力加权线性模型比标准线性模型具有更低的均方误差。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate to high potential for generating alpha in quantitative strategies, particularly for handling heterogeneous data and distributional shifts in tabular datasets, which are common in financial applications like factor modeling and risk assessment.",
-      "• Implementation Risk: Moderate risk due to the complexity of implementing attention mechanisms in traditional supervised learning frameworks and the need for careful calibration of similarity measures to avoid overfitting in real-world financial data.",
-      "• Novelty: High novelty in bridging in-context learning from neural networks to interpretable supervised methods, offering a fresh approach to personalized modeling without sacrificing transparency, though the core attention concept is not entirely new."
-    ],
-    "verdict_cn": [
-      "• 创新点: 将神经网络中的上下文学习概念引入可解释的监督学习方法，实现了在不牺牲透明度的前提下进行个性化建模，为处理表格数据中的异质性和分布偏移提供了新思路。",
-      "• 实盘坑: 在实际金融数据中实施时，需注意相似性度量的校准以避免过拟合，且注意力机制在传统框架中的集成可能增加计算复杂性和调参难度。",
-      "• 复现难度: 中等难度，需要实现注意力加权算法并适配到现有监督学习流程中，但对数据集和代码的依赖性较强，可能受限于特定应用场景。"
-    ],
-    "ai_strategy": "Alpha-Factor",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Accepted"
-    }
-  },
-  {
-    "id": "2512.09909v1",
-    "title": "STACHE: Local Black-Box Explanations for Reinforcement Learning Policies",
-    "pdf_url": "https://arxiv.org/pdf/2512.09909v1",
-    "published": "2025-12-10",
-    "crawled_at": "2025-12-11 20:02:33",
-    "ai_score": 7.8,
-    "translated_title": "STACHE：强化学习策略的局部黑盒解释框架",
-    "summary_en": [
-      "• Model Architecture: STACHE generates Composite Explanations with two components: Robustness Region (connected neighborhood where action remains invariant) and Minimal Counterfactuals (smallest state perturbations to alter decision). It uses an exact, search-based algorithm exploiting factored state spaces to avoid surrogate model fidelity gaps.",
-      "• Data used: Empirical validation conducted on Gymnasium environments (standard RL benchmarks), focusing on discrete Markov games with sparse-reward or safety-critical settings.",
-      "• Performance metrics: Framework effectively explains policy actions and captures evolution of policy logic during training, from erratic to optimized strategies, providing insights into agent sensitivity and decision boundaries."
-    ],
-    "summary_cn": [
-      "• 核心模型: STACHE框架生成复合解释，包含鲁棒性区域（动作不变的连通邻域）和最小反事实（改变决策的最小状态扰动），采用基于精确搜索的算法，利用因子化状态空间结构避免代理模型保真度差距。",
-      "• 数据来源: 在Gymnasium环境（标准强化学习基准）上进行实证验证，专注于稀疏奖励或安全关键的离散马尔可夫游戏。",
-      "• 主要结论: 框架不仅能解释策略动作，还能有效捕捉训练过程中策略逻辑的演变（从不稳定到优化策略），提供关于智能体敏感性和决策边界的可操作见解。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate - provides debugging tools for RL policies in financial applications like algorithmic trading or portfolio optimization, but direct alpha generation requires integration with specific trading strategies.",
-      "• Implementation Risk: High - search-based algorithms in high-dimensional state spaces may be computationally expensive; real-time application in dynamic markets could face latency issues.",
-      "• Novelty: Significant - introduces Composite Explanations combining robustness and counterfactuals, addressing black-box nature of RL policies without surrogate models, offering fresh approach to interpretability in RL."
-    ],
-    "verdict_cn": [
-      "• 创新点: 显著 - 提出复合解释结合鲁棒性和反事实，无需代理模型直接处理RL策略的黑盒特性，为强化学习可解释性提供新思路。",
-      "• 实盘坑: 高 - 高维状态空间中的搜索算法计算成本高；动态市场中的实时应用可能面临延迟问题；稀疏奖励环境下的解释可能不适用于高频交易场景。",
-      "• 复现难度: 中等 - 基于Gymnasium环境的标准实现相对直接，但自定义状态空间和算法优化可能需要专业知识；论文未提供完整代码或超参数细节。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Accepted"
-    }
-  },
-  {
-    "id": "2512.09894v1",
-    "title": "Exploring Protein Language Model Architecture-Induced Biases for Antibody Comprehension",
-    "pdf_url": "https://arxiv.org/pdf/2512.09894v1",
-    "published": "2025-12-10",
-    "crawled_at": "2025-12-11 20:02:55",
-    "ai_score": 7.5,
-    "translated_title": "探索蛋白质语言模型架构诱导的抗体理解偏见",
-    "summary_en": [
-      "• Model Architecture: The study systematically compares three state-of-the-art protein language models (AntiBERTa, BioBERT, ESM2) against a general-purpose language model baseline (GPT-2) for antibody-specific tasks.",
-      "• Data used: The evaluation is conducted on antibody target specificity prediction tasks, focusing on biological features such as V gene usage, somatic hypermutation patterns, and isotype information.",
-      "• Performance metrics: All PLMs achieve high classification accuracy but exhibit distinct biases in capturing biological features; attention attribution analysis reveals that antibody-specific models naturally focus on complementarity-determining regions (CDRs), while general protein models benefit from explicit CDR-focused training strategies."
-    ],
-    "summary_cn": [
-      "• 核心模型: 系统比较了三种先进的蛋白质语言模型（AntiBERTa、BioBERT、ESM2）与通用语言模型基线（GPT-2）在抗体特异性任务上的表现。",
-      "• 数据来源: 基于抗体靶标特异性预测任务进行评估，重点关注V基因使用、体细胞超突变模式和同种型信息等生物学特征。",
-      "• 主要结论: 所有蛋白质语言模型均实现高分类准确率，但在捕获生物学特征时表现出不同偏见；注意力归因分析显示，抗体特异性模型自然聚焦于互补决定区（CDRs），而通用蛋白质模型则显著受益于明确的CDR聚焦训练策略。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate; the insights into model architecture biases could inform the development of more accurate antibody design tools, potentially leading to improved drug discovery pipelines and reduced experimental costs.",
-      "• Implementation Risk: High; translating these findings into practical trading strategies is indirect, as the research focuses on biological applications rather than financial markets, requiring significant adaptation and validation.",
-      "• Novelty: Moderate; while the comparison of PLMs for antibody tasks is novel, the core concepts of architecture-induced biases and attention analysis are established in machine learning, limiting groundbreaking contributions."
-    ],
-    "verdict_cn": [
-      "• 创新点: 中等；研究通过系统比较不同蛋白质语言模型在抗体任务上的表现，揭示了架构诱导的偏见，为计算抗体设计提供了新见解，但未突破现有机器学习范式。",
-      "• 实盘坑: 高；该研究聚焦生物学应用，直接转化为金融交易策略的路径不明确，需大量跨领域适配和验证，实盘部署风险较大。",
-      "• 复现难度: 中等；模型和任务描述清晰，但依赖专业生物数据集和计算资源，复现需领域知识和基础设施支持，可能增加成本和复杂性。"
-    ],
-    "ai_strategy": "NLP/LLM",
-    "journal_info": {
-      "name": "ArXiv Preprint",
-      "status": "Preprint"
-    }
-  },
-  {
-    "id": "2512.09892v1",
-    "title": "Provably Learning from Modern Language Models via Low Logit Rank",
-    "pdf_url": "https://arxiv.org/pdf/2512.09892v1",
-    "published": "2025-12-10",
-    "crawled_at": "2025-12-11 20:03:14",
-    "ai_score": 8.5,
-    "translated_title": "通过低对数秩从现代语言模型中可证明学习",
-    "summary_en": [
-      "• Model Architecture: The paper proposes a theoretical framework based on the observation that modern language models exhibit approximately low logit rank, meaning the matrix of log probabilities for tokens conditioned on sequences can be approximated by a low-rank matrix.",
-      "• Data used: The study does not rely on specific datasets but focuses on a query learning model with logit queries, simulating access to common APIs for language models, without empirical data validation.",
-      "• Performance metrics: The main result is an efficient algorithm for learning any approximately low logit rank model from queries, providing provable learning guarantees, though no quantitative metrics like accuracy or speed are detailed."
-    ],
-    "summary_cn": [
-      "• 核心模型: 基于现代语言模型具有近似低对数秩的观察，提出理论框架，即令牌条件序列的对数概率矩阵可用低秩矩阵近似。",
-      "• 数据来源: 未使用具体数据集，而是基于查询学习模型，模拟通过API访问语言模型的对数查询，缺乏实证数据验证。",
-      "• 主要结论: 提出高效算法，可从查询中学习任何近似低对数秩模型，提供可证明的学习保证，但未详细说明量化性能指标。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High potential for developing novel trading strategies by leveraging low logit rank structure to extract predictive signals from language models, possibly enhancing NLP-based alpha factors in financial markets.",
-      "• Implementation Risk: Moderate to high risk due to theoretical nature; practical implementation requires bridging gap between abstract queries and real-world API constraints, with potential issues in scalability and noise handling.",
-      "• Novelty: High novelty as it offers first end-to-end learning guarantee for generative models mimicking modern language models, introducing low logit rank as a tractable abstraction for complex systems."
-    ],
-    "verdict_cn": [
-      "• 创新点: 高创新性，首次为模拟现代语言模型的生成模型提供端到端学习保证，引入低对数秩作为复杂系统的可处理抽象。",
-      "• 实盘坑: 中等至高风险，理论性强，实际应用需解决抽象查询与真实API限制的差距，可能存在可扩展性和噪声处理问题。",
-      "• 复现难度: 高难度，算法基于理论假设，缺乏开源代码或实证验证，复现需深入数学推导和自定义实现。"
-    ],
-    "ai_strategy": "NLP/LLM",
-    "journal_info": {
-      "name": "ArXiv Preprint",
-      "status": "Preprint"
-    }
-  },
-  {
-    "id": "2512.09890v1",
-    "title": "Analysis of Dirichlet Energies as Over-smoothing Measures",
-    "pdf_url": "https://arxiv.org/pdf/2512.09890v1",
-    "published": "2025-12-10",
-    "crawled_at": "2025-12-11 20:03:39",
-    "ai_score": 7.5,
-    "translated_title": "狄利克雷能量作为过平滑度量的分析",
-    "summary_en": [
-      "• Model Architecture: The paper analyzes two functionals derived from graph Laplacians (unnormalized and normalized) used as over-smoothing measures in Graph Neural Networks (GNNs).",
-      "• Data used: The study is theoretical and does not specify empirical datasets; it relies on formal spectral properties and axiomatic definitions from prior work.",
-      "• Performance metrics: The analysis focuses on spectral compatibility with GNN architectures, highlighting that the normalized graph Laplacian fails to meet axiomatic criteria for node-similarity measures.",
-      "• Key findings: It resolves ambiguities in monitoring GNN dynamics by clarifying distinctions between the two Dirichlet energy definitions, aiding in metric selection for over-smoothing detection."
-    ],
-    "summary_cn": [
-      "• 核心模型: 分析基于图拉普拉斯算子（未归一化和归一化）的两种函数，用作图神经网络（GNN）中的过平滑度量。",
-      "• 数据来源: 研究为理论性分析，未指定实证数据集；依赖于先验工作的形式化谱性质和公理化定义。",
-      "• 主要结论: 归一化图拉普拉斯算子不满足节点相似性度量的公理化标准，通过澄清两种狄利克雷能量定义的区别，解决了监测GNN动态时的模糊性。",
-      "• 理论贡献: 形式化了两种定义的基本谱性质，强调了选择与GNN架构谱兼容的度量的关键区别。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Low; the paper is theoretical and focuses on methodological clarification rather than direct financial applications, but could indirectly improve GNN-based models in quantitative finance if integrated with alpha-generating architectures.",
-      "• Implementation Risk: Moderate; while the concepts are well-defined, applying them to real-world financial graphs (e.g., stock correlation networks) requires careful adaptation to noisy, non-stationary data, risking overfitting if not properly validated.",
-      "• Novelty: Moderate; it builds on existing work by Rusch et al. to formalize distinctions, offering a clear resolution to an ambiguity in the field, but does not introduce groundbreaking new techniques or empirical results.",
-      "• Practical Impact: The analysis could enhance monitoring of over-smoothing in GNNs used for tasks like portfolio optimization or risk assessment, potentially improving model stability and performance in long-term strategies."
-    ],
-    "verdict_cn": [
-      "• 创新点: 中等；基于Rusch等人的工作形式化区分，解决了领域内的模糊性，但未引入突破性新技术或实证结果，属于理论深化。",
-      "• 实盘坑: 中等；将概念应用于实际金融图（如股票相关性网络）需适应噪声和非平稳数据，若验证不当可能导致过拟合风险。",
-      "• 复现难度: 低；研究为理论分析，依赖标准数学框架，易于复现核心论证，但集成到实盘GNN模型需额外工程工作。",
-      "• 量化价值: 间接；通过改进GNN过平滑监测，可能提升基于图的量化模型（如风险因子提取）的稳定性，但无直接阿尔法生成策略。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "ArXiv Preprint",
-      "status": "Preprint"
-    }
-  },
-  {
-    "id": "2512.09886v1",
-    "title": "HPM-KD: Hierarchical Progressive Multi-Teacher Framework for Knowledge Distillation and Efficient Model Compression",
-    "pdf_url": "https://arxiv.org/pdf/2512.09886v1",
-    "published": "2025-12-10",
-    "crawled_at": "2025-12-11 20:03:57",
-    "ai_score": 8.2,
-    "translated_title": "HPM-KD：用于知识蒸馏和高效模型压缩的分层渐进式多教师框架",
-    "summary_en": [
-      "• Model Architecture: HPM-KD integrates six components: Adaptive Configuration Manager (meta-learning), Progressive Distillation Chain, Attention-Weighted Multi-Teacher Ensemble, Meta-Learned Temperature Scheduler, Parallel Processing Pipeline, and Shared Optimization Memory.",
-      "• Data used: Experiments conducted on CIFAR-10, CIFAR-100, and unspecified tabular datasets.",
-      "• Performance metrics: Achieves 10x-15x compression with 85% accuracy retention, reduces training time by 30-40%, and ablation studies show component contributions of 0.10-0.98 percentage points."
-    ],
-    "summary_cn": [
-      "• 核心模型: HPM-KD包含六个协同组件：自适应配置管理器（元学习）、渐进蒸馏链、注意力加权多教师集成、元学习温度调度器、并行处理管道和共享优化内存。",
-      "• 数据来源: 在CIFAR-10、CIFAR-100和未指定的表格数据集上进行实验。",
-      "• 主要结论: 实现10-15倍压缩，保持85%准确率，训练时间减少30-40%，消融研究确认各组件独立贡献为0.10-0.98个百分点。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High potential for deploying compressed models in latency-sensitive trading strategies, enabling faster inference without significant accuracy loss.",
-      "• Implementation Risk: Moderate risk due to reliance on meta-learning and complex multi-teacher coordination, which may require extensive computational resources for fine-tuning.",
-      "• Novelty: Novel integration of meta-learning for hyperparameter tuning and progressive distillation, addressing key limitations in traditional knowledge distillation methods."
-    ],
-    "verdict_cn": [
-      "• 创新点: 创新性地结合元学习进行超参数调优和渐进蒸馏，有效解决传统知识蒸馏中的容量差距和协调问题。",
-      "• 实盘坑: 依赖元学习和复杂多教师协调，可能在实际部署中需要大量计算资源进行微调，增加实施成本。",
-      "• 复现难度: 中等难度，框架已开源在DeepBridge库，但需要熟悉元学习和并行处理技术，可能面临环境配置挑战。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Accepted"
-    }
-  },
-  {
-    "id": "2512.09850v1",
-    "title": "Conformal Bandits: Bringing statistical validity and reward efficiency to the small-gap regime",
-    "pdf_url": "https://arxiv.org/pdf/2512.09850v1",
-    "published": "2025-12-10",
-    "crawled_at": "2025-12-11 20:04:14",
-    "ai_score": 8.2,
-    "translated_title": "保形赌博机：将统计有效性和奖励效率引入小差距机制",
-    "summary_en": [
-      "• Model Architecture: Integrates Conformal Prediction (CP) into bandit algorithms, combining Thompson Sampling/UCB with statistical coverage guarantees, and incorporates hidden Markov models for regime-switching in financial applications.",
-      "• Data used: Simulation studies for validation and portfolio allocation data in small-gap regimes where classical policies underperform.",
-      "• Performance metrics: Demonstrates improved regret efficiency in small-gap settings, achieves nominal coverage guarantees where UCB fails, and shows higher risk-adjusted returns while preserving statistical validity."
-    ],
-    "summary_cn": [
-      "• 核心模型: 将保形预测（CP）集成到赌博机算法中，结合汤普森采样/UCB与统计覆盖保证，并引入隐马尔可夫模型捕捉金融市场的机制转换行为。",
-      "• 数据来源: 通过模拟研究验证，并应用于投资组合配置的小差距机制数据，其中经典策略表现不佳。",
-      "• 主要结论: 在小差距设置中提升后悔效率，在UCB失败时实现名义覆盖保证，并在保持统计有效性的同时获得更高的风险调整后回报。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High in small-gap regimes like portfolio allocation, where traditional bandit algorithms struggle; risk-adjusted returns improvement is promising for quantitative finance applications.",
-      "• Implementation Risk: Moderate; integration of CP with bandits and HMMs adds complexity, and real-world financial data may deviate from simulation assumptions.",
-      "• Novelty: Significant; bridges regret minimization with statistical guarantees using CP, addressing a gap in traditional bandit literature focused solely on asymptotic performance."
-    ],
-    "verdict_cn": [
-      "• 创新点: 显著；利用保形预测将后悔最小化与统计保证结合，填补了传统赌博机文献仅关注渐近性能的空白。",
-      "• 实盘坑: 中等；CP与赌博机及HMM的集成增加了复杂性，实际金融数据可能偏离模拟假设，覆盖保证在动态市场中可能不稳定。",
-      "• 复现难度: 中等偏高；需要实现CP、赌博机算法和HMM的集成，模拟设置和金融应用的数据处理可能具有挑战性。"
-    ],
-    "ai_strategy": "Alpha-Factor",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2512.09836v1",
-    "title": "Fast Factorized Learning: Powered by In-Memory Database Systems",
-    "pdf_url": "https://arxiv.org/pdf/2512.09836v1",
-    "published": "2025-12-10",
-    "crawled_at": "2025-12-11 20:04:31",
-    "ai_score": 7.5,
-    "translated_title": "快速因子化学习：基于内存数据库系统的驱动",
-    "summary_en": [
-      "• Model Architecture: Implements factorized learning for linear regression using cofactors pre-computed from factorized joins in database systems, leveraging in-memory engines like HyPer and disk-based systems like PostgreSQL.",
-      "• Data used: Benchmarks conducted on factorized joins within databases, comparing performance between in-memory (HyPer) and disk-based (PostgreSQL) systems, with no specific external dataset mentioned.",
-      "• Performance metrics: Shows a 70% performance gain for factorized learning on in-memory systems compared to non-factorized learning, and a 100x speedup over disk-based systems, highlighting efficiency improvements."
-    ],
-    "summary_cn": [
-      "• 核心模型: 基于因子化连接的线性回归学习模型，利用数据库系统预计算共享余因子，实现因子化学习，支持内存和磁盘数据库引擎。",
-      "• 数据来源: 使用数据库内的因子化连接数据进行基准测试，对比内存数据库（HyPer）和磁盘数据库（PostgreSQL）的性能，未提及外部数据集。",
-      "• 主要结论: 在内存数据库系统上，因子化学习比非因子化学习性能提升70%，比磁盘数据库系统快100倍，证明现代数据库引擎可加速机器学习训练。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate; the approach could enhance data preprocessing efficiency in ML pipelines for financial models, potentially reducing latency in factor-based strategies, but direct alpha generation is limited without integration into specific trading algorithms.",
-      "• Implementation Risk: High; relies on in-memory database systems like HyPer, which may not be widely adopted in production environments, and requires significant engineering effort to adapt to real-world financial data workflows.",
-      "• Novelty: Low to moderate; builds on prior work on factorized learning in disk-based systems, but extends it to in-memory databases with open-source implementation, offering incremental innovation rather than groundbreaking methods."
-    ],
-    "verdict_cn": [
-      "• 创新点: 将因子化学习从磁盘数据库扩展到内存数据库，提供开源实现，但创新性有限，主要基于已有技术优化。",
-      "• 实盘坑: 依赖特定内存数据库系统（如HyPer），在金融生产环境中部署风险高，需大量工程适配，且性能增益可能受数据规模和复杂度影响。",
-      "• 复现难度: 中等；论文提供开源代码，但需要配置内存数据库和因子化连接数据，技术门槛较高，可能难以直接应用于复杂金融场景。"
-    ],
-    "ai_strategy": "Alpha-Factor",
-    "journal_info": {
-      "name": "ArXiv Preprint",
-      "status": "Preprint"
-    }
-  },
-  {
-    "id": "2512.08931v1",
-    "title": "Astra: General Interactive World Model with Autoregressive Denoising",
-    "pdf_url": "https://arxiv.org/pdf/2512.08931v1",
-    "published": "2025-12-09",
-    "crawled_at": "2025-12-10 20:01:41",
-    "ai_score": 8.2,
-    "translated_title": "Astra：基于自回归去噪的通用交互式世界模型",
-    "summary_en": [
-      "• Model Architecture: Astra employs an autoregressive denoising architecture with temporal causal attention for past observation aggregation, noise-augmented history memory to balance responsiveness and coherence, and an action-aware adapter plus mixture of action experts for precise multi-modal action control.",
-      "• Data used: Experiments conducted across multiple datasets covering diverse scenarios like autonomous driving and robot grasping, though specific dataset names and sizes are not detailed in the abstract.",
-      "• Performance metrics: Demonstrates improvements in fidelity, long-range prediction, and action alignment over state-of-the-art world models, supporting interactive, consistent video prediction for tasks such as exploration, manipulation, and camera control."
-    ],
-    "summary_cn": [
-      "• 核心模型: Astra采用自回归去噪架构，结合时序因果注意力聚合历史观测，噪声增强历史记忆平衡响应性与连贯性，以及动作感知适配器和动作专家混合机制实现多模态精确控制。",
-      "• 数据来源: 在多个数据集上进行实验，涵盖自动驾驶、机器人抓取等多样化场景，但摘要未具体说明数据集名称和规模。",
-      "• 主要结论: 在保真度、长程预测和动作对齐方面优于现有最先进世界模型，支持交互式、一致的视频预测，适用于探索、操作和相机控制等任务。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High potential for generating synthetic market environments and simulating agent interactions in algorithmic trading, enabling robust backtesting and strategy optimization in dynamic scenarios.",
-      "• Implementation Risk: Moderate risk due to reliance on diverse real-world datasets and complex multi-modal action routing, which may introduce scalability and generalization challenges in financial applications.",
-      "• Novelty: Significant novelty in integrating autoregressive denoising with action-aware adapters and mixture of experts for general-purpose world modeling, advancing beyond traditional video generation to interactive prediction."
-    ],
-    "verdict_cn": [
-      "• 创新点: 将自回归去噪与动作感知适配器及专家混合机制结合，实现通用世界建模，超越传统视频生成，支持多模态交互预测，在架构设计上具有突破性。",
-      "• 实盘坑: 依赖多样化真实世界数据，在金融场景中可能面临数据稀缺和领域适应性问题；复杂动作路由机制可能增加计算开销和延迟风险。",
-      "• 复现难度: 较高，需要处理多模态动作集成、时序因果注意力等复杂组件，且实验细节和超参数未充分公开，可能阻碍快速复现和验证。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2512.08920v1",
-    "title": "OSMO: Open-Source Tactile Glove for Human-to-Robot Skill Transfer",
-    "pdf_url": "https://arxiv.org/pdf/2512.08920v1",
-    "published": "2025-12-09",
-    "crawled_at": "2025-12-10 20:02:00",
-    "ai_score": 7.8,
-    "translated_title": "OSMO：用于人机技能迁移的开源触觉手套",
-    "summary_en": [
-      "• Model Architecture: OSMO is an open-source wearable tactile glove with 12 three-axis tactile sensors distributed across fingertips and palm, designed to be compatible with state-of-the-art hand-tracking methods for in-the-wild data collection.",
-      "• Data used: The system uses human demonstrations collected exclusively with the OSMO glove, without any real robot data, to train robot policies for contact-rich manipulation tasks.",
-      "• Performance metrics: On a real-world wiping task requiring sustained contact pressure, the tactile-aware policy achieves a 72% success rate, outperforming vision-only baselines by eliminating contact-related failure modes."
-    ],
-    "summary_cn": [
-      "• 核心模型: OSMO是一款开源可穿戴触觉手套，配备12个三轴触觉传感器，分布在指尖和手掌，兼容先进的手部追踪方法，支持野外数据采集。",
-      "• 数据来源: 系统仅使用通过OSMO手套收集的人类演示数据训练机器人策略，无需真实机器人数据，专注于接触丰富的操作任务。",
-      "• 主要结论: 在需要持续接触压力的真实世界擦拭任务中，触觉感知策略达到72%的成功率，优于仅基于视觉的基线，消除了接触相关的失败模式。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate; the technology could enhance robotic manipulation in finance for automated trading or data handling, but direct alpha generation is limited without integration into financial algorithms.",
-      "• Implementation Risk: High; hardware dependency and real-world deployment challenges pose significant risks, including sensor reliability and scalability issues in dynamic environments.",
-      "• Novelty: High; OSMO introduces a novel approach to human-to-robot skill transfer by minimizing the visual and tactile embodiment gap, enabling direct force feedback transfer without vision-based inference."
-    ],
-    "verdict_cn": [
-      "• 创新点: 高；OSMO通过最小化视觉和触觉体现差距，引入了一种新颖的人机技能迁移方法，支持直接力反馈传输，无需基于视觉的推断。",
-      "• 实盘坑: 高；硬件依赖性和实际部署挑战带来显著风险，包括传感器可靠性问题以及在动态环境中的可扩展性限制。",
-      "• 复现难度: 中等；开源设计降低了复现门槛，但需要专业硬件制造和集成技能，可能增加实际应用的成本和复杂性。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "ArXiv Preprint",
-      "status": "Preprint"
     }
   }
 ]
