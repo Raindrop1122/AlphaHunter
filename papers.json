@@ -1,5 +1,259 @@
 [
   {
+    "id": "2607.27203v1",
+    "title": "Do You Really Need to Pretrain Q-Functions for Online RL Fine-Tuning?",
+    "pdf_url": "https://arxiv.org/pdf/2607.27203v1",
+    "published": "2026-07-29",
+    "crawled_at": "2026-07-30 20:51:50",
+    "ai_score": 7.5,
+    "translated_title": "你真的需要为在线RL微调预训练Q函数吗？",
+    "summary_en": "• Model Architecture: Uses a pretrained policy with either a randomly initialized Q-function or a pretrained Q-function, and proposes Initialization via Policy Ensemble (IPE) that trains multiple diverse policies and uses their pooled rollouts to bootstrap Q-function learning.\n• Data used: Offline datasets for pretraining, and online interaction data for fine-tuning. Benchmarks include challenging continuous control tasks.\n• Performance metrics: Fine-tuning performance measured as average improvement over naive Q-function pretraining, with IPE yielding 1.26x improvement.\n• Key finding: Naive Q-function pretraining often provides little benefit over random initialization due to a mismatch between the pretrained Q-function and the online fine-tuning target.\n• Proposed method: IPE mitigates this mismatch by using an ensemble of diverse policies to initialize the Q-function.",
+    "summary_cn": "• 核心模型: 使用预训练策略，搭配随机初始化或预训练的Q函数，并提出基于策略集成的初始化方法（IPE），通过训练多个多样化策略并利用其混合轨迹来引导Q函数学习。\n• 数据来源: 离线数据集用于预训练，在线交互数据用于微调。基准测试包括具有挑战性的连续控制任务。\n• 主要结论: 朴素Q函数预训练相比随机初始化通常收益甚微，原因是预训练Q函数与在线微调目标之间存在根本性不匹配。IPE方法通过多样化策略集成缓解了这一问题，平均性能提升1.26倍。\n• 创新点: 揭示了Q函数预训练与在线微调之间的不匹配问题，并提出了简单有效的IPE解决方案。",
+    "verdict_en": "• Alpha Potential: Moderate. The finding that naive Q-function pretraining is often unnecessary could lead to simpler and more efficient fine-tuning pipelines, but the performance gains are modest (1.26x).\n• Implementation Risk: Low. IPE is simple to implement and does not require complex changes to existing RL algorithms.\n• Novelty: High. Challenges conventional wisdom that pretraining Q-functions is beneficial, and provides a clear explanation for the mismatch.\n• Practical relevance: Directly applicable to RL fine-tuning in robotics and control, but less so for financial trading where RL is less common.\n• Limitations: Evaluated only on continuous control; applicability to discrete action spaces or other domains is unclear.",
+    "verdict_cn": "• 创新点: 挑战了Q函数预训练有益的常规认知，揭示了预训练与在线微调之间的不匹配问题，并提出了简洁的IPE方法。\n• 实盘坑: 性能提升有限（1.26倍），且仅在连续控制任务上验证，对金融交易等离散动作空间场景的适用性存疑。\n• 复现难度: 低。IPE方法简单，无需复杂修改，易于复现。\n• 交易应用: 直接应用于量化交易的可能性较低，因为RL在交易中并非主流，但思想可借鉴于其他预训练-微调场景。\n• 总体评价: 学术价值较高，但实际交易应用潜力有限。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2607.27196v1",
+    "title": "From Classification to Regression: Using a Fruitfly to Solve Equations",
+    "pdf_url": "https://arxiv.org/pdf/2607.27196v1",
+    "published": "2026-07-29",
+    "crawled_at": "2026-07-30 20:51:58",
+    "ai_score": 6.5,
+    "translated_title": "从分类到回归：利用果蝇求解方程",
+    "summary_en": [
+      "• Model Architecture: Proposes a regression framework inspired by fruitfly olfaction, using a library of local patterns and weighted reconstruction for prediction.",
+      "• Data used: Applied to nonlinear dynamical systems, data-driven regression, and physics-informed learning; uses embeddings and similarity measures.",
+      "• Performance metrics: Emphasizes trade-off among accuracy, storage, and inference cost; offline-online workflow reduces computational and memory demands.",
+      "• Key result: Achieves explicit control over accuracy-efficiency trade-off, but no quantitative benchmarks against state-of-the-art methods."
+    ],
+    "summary_cn": [
+      "• 核心模型: 受果蝇嗅觉启发，用局部模式库和加权重构替代全局代理模型进行回归。",
+      "• 数据来源: 应用于非线性动力系统、数据驱动回归和物理信息学习，使用嵌入和相似性度量。",
+      "• 主要结论: 离线-在线工作流降低计算和内存需求，但缺乏与SOTA的定量对比。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low for financial alpha; method is generic and lacks financial domain adaptation or backtesting.",
+      "• Implementation Risk: High; requires careful tuning of pattern library and similarity measures, no clear advantage over existing methods.",
+      "• Novelty: Moderate; bio-inspired approach is interesting but incremental, with limited empirical validation.",
+      "• Practicality: Unclear; offline-online scheme may suit low-latency applications, but not tailored for financial data."
+    ],
+    "verdict_cn": [
+      "• 创新点: 生物启发式框架有一定新意，但本质是局部加权回归的变体。",
+      "• 实盘坑: 缺乏金融场景验证，模式库构建和相似度度量选择高度依赖经验。",
+      "• 复现难度: 中等；算法细节较清晰，但超参数调优复杂，且未提供代码。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2607.27191v1",
+    "title": "Can AI agents conduct open-ended AI research? Early evidence from two case studies",
+    "pdf_url": "https://arxiv.org/pdf/2607.27191v1",
+    "published": "2026-07-29",
+    "crawled_at": "2026-07-30 20:52:07",
+    "ai_score": 4.5,
+    "translated_title": "AI智能体能否进行开放式AI研究？来自两个案例研究的初步证据",
+    "summary_en": "• The paper introduces 'shadow evaluations' where AI agents attempt to replicate the core research question of unpublished high-quality papers, with original authors grading outputs.\n• Two unpublished NeurIPS 2026 submissions were used as test cases, with agents given six days and thousands of dollars of compute.\n• Agents completed all engineering tasks without human help but failed to make substantial progress on research questions, leading to unambiguous rejection by authors.\n• Five recurring failure modes identified: poor judgment of publishable research bar, uncreative responses to shortcomings, ineffective backtracking, poor resource awareness, and instruction drift.\n• Robustness check with a second model and scaffold reproduced the failures.",
+    "summary_cn": "• 核心方法：提出“影子评估”，让AI智能体尝试复现未发表高质量论文的核心研究问题，由原论文作者评分。\n• 数据来源：两篇未发表的NeurIPS 2026投稿论文，智能体获得六天时间和数千美元计算资源。\n• 主要结论：智能体可完成所有工程任务，但无法在研究问题上取得实质性进展，被作者明确拒绝。\n• 失败模式：对发表标准判断差、对缺陷缺乏创造性应对、无效回溯、资源意识差、指令漂移。\n• 稳健性检验：使用另一模型和框架复现了失败。",
+    "verdict_en": "• Alpha Potential: Low. The paper highlights fundamental limitations of current AI agents in open-ended research, suggesting no immediate trading edge from AI-driven research automation.\n• Implementation Risk: High. The failure modes (e.g., poor judgment, uncreative responses) indicate that deploying agents for alpha generation is premature and risky.\n• Novelty: Moderate. The shadow evaluation methodology is novel, but the negative result is expected given current AI capabilities.",
+    "verdict_cn": "• 创新点：提出影子评估方法，但结果负面，显示当前AI智能体无法进行开放式研究。\n• 实盘坑：智能体在工程上可行但研究上失败，若用于量化研究可能浪费资源且无实质进展。\n• 复现难度：低，但失败模式普遍，短期内难以突破。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2607.27188v1",
+    "title": "Inverse Learning of Latent Risk-Neutral Densities from Irregular Option Quotes",
+    "pdf_url": "https://arxiv.org/pdf/2607.27188v1",
+    "published": "2026-07-29",
+    "crawled_at": "2026-07-30 20:52:16",
+    "ai_score": 7.5,
+    "translated_title": "从非规则期权报价中逆学习潜在风险中性密度",
+    "summary_en": [
+      "• Model Architecture: Compares two-component lognormal mixture, DeepONet, and quote transformer for learning risk-neutral densities from option quotes.",
+      "• Data used: Synthetic benchmark with simulator-truth densities and chronological NIFTY option quotes for held-out market price testing.",
+      "• Performance metrics: Evaluates aggregate price error, L1, Wasserstein, fixed-tail errors, and RMSE; DeepONet reduces 1% quantile and variance error by 39.0% and 34.6% relative to mixture.",
+      "• Key finding: No universal winner; target-dependent inductive bias is supported; mixture has lowest overall errors on synthetic benchmark, while learned operators have narrower strengths."
+    ],
+    "summary_cn": [
+      "• 核心模型: 比较了两成分对数正态混合模型、DeepONet和报价变换器，用于从期权报价中学习风险中性密度。",
+      "• 数据来源: 使用具有模拟器真实密度的合成基准和按时间顺序的NIFTY期权报价进行持有市场价格的测试。",
+      "• 主要结论: 没有通用赢家；支持目标依赖的归纳偏差；混合模型在合成基准上总体误差最低，而学习算子具有更窄的优势。",
+      "• 性能指标: 评估了总价格误差、L1、Wasserstein、固定尾部误差和RMSE；DeepONet将1%分位数和方差误差分别降低了39.0%和34.6%。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; improving density recovery could enhance option pricing and hedging, but no direct trading strategy is proposed.",
+      "• Implementation Risk: High; requires careful numerical conditioning and validation; 95 of 126 pricing directions are numerically null, indicating instability.",
+      "• Novelty: High; introduces controlled benchmark for latent density evaluation and highlights the disconnect between price accuracy and density recovery."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出了用于潜在密度评估的受控基准，并揭示了价格准确性与密度恢复之间的脱节。",
+      "• 实盘坑: 数值条件分析显示126个定价方向中95个数值无效，模型不稳定；没有直接交易策略。",
+      "• 复现难度: 高；需要大量期权数据、数值优化和验证，且无统一最优模型。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2607.27169v1",
+    "title": "When Do Learned Diffusion Proposals Help Constraint Solving? A Controlled Study on Continuous Algebraic Systems",
+    "pdf_url": "https://arxiv.org/pdf/2607.27169v1",
+    "published": "2026-07-29",
+    "crawled_at": "2026-07-30 20:52:26",
+    "ai_score": 6.5,
+    "translated_title": "学习型扩散提议何时有助于约束求解？连续代数系统的受控研究",
+    "summary_en": "• Model Architecture: Uses a graph-neural diffusion denoiser to propose assignments, refined by exact computer-algebra energy descent, and certified by symbolic checker. MARC converts constraint systems into factor graphs.\n• Data: Synthetic low- and high-dimensional algebraic families, plus eight real-world systems from robotics, positioning, optimization, and algebra.\n• Performance Metrics: Learned proposals outperform random (0.997 vs 0.236 balanced nonlinear menu accuracy; p<10^-70; 0.982±0.006 across seeds). However, compared to random multi-start with same refinement budget, learned proposals only narrowly beat it in high dimensions, and tie in low dimensions. Real-world systems are all solved by classical multi-start, none in learning-favorable regime.",
+    "summary_cn": "• 核心模型: 采用图神经网络扩散去噪器生成候选解，经精确计算机代数能量下降精炼，并由符号检查器验证。MARC将约束系统转化为因子图。\n• 数据来源: 合成低维和高维代数族，以及来自机器人、定位、优化和代数的八个真实系统。\n• 主要结论: 学习型提议在平衡非线性菜单准确率上优于随机（0.997 vs 0.236，p<10^-70，跨种子0.982±0.006）。但与相同精炼预算的随机多次启动相比，仅在维度高时微弱领先，低维时持平。真实系统均被经典多次启动解决，无处于学习有利区间。",
+    "verdict_en": "• Alpha Potential: Low. The paper shows learned proposals rarely beat random multi-start in practical settings, limiting direct trading alpha. However, the framework (MARC) could be adapted for combinatorial optimization in portfolio construction.\n• Implementation Risk: High. Requires symbolic algebra and graph neural networks, with domain-specific tuning. Real-world systems all solved by simpler methods, questioning practical benefit.\n• Novelty: Moderate. Introduces controlled comparison revealing limitations of learned proposals, but the core idea (diffusion for constraint solving) is not new.",
+    "verdict_cn": "• 创新点: 通过受控实验揭示了学习型提议在约束求解中的局限性，对比随机多次启动，提供了清晰的性能边界。\n• 实盘坑: 真实系统均被经典方法解决，学习型提议无优势；依赖符号计算和GNN，部署复杂且收益不确定。\n• 复现难度: 高。需要实现符号代数引擎和扩散模型，且超参数敏感。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2607.27152v1",
+    "title": "Skillful forecasting of offshore winds from satellite scatterometer constellations",
+    "pdf_url": "https://arxiv.org/pdf/2607.27152v1",
+    "published": "2026-07-29",
+    "crawled_at": "2026-07-30 20:52:35",
+    "ai_score": 7.5,
+    "translated_title": "利用卫星散射计星座对海上风进行精准预报",
+    "summary_en": "• Model Architecture: WindCastNet uses a partial convolutional long short-term memory (ConvLSTM) network to handle spatiotemporally irregular satellite observations.\n• Data used: Microwave radar observations from European, Chinese, and Indian scatterometer constellations, with spatial observation masks and inter-observation intervals encoded.\n• Performance metrics: Reduces RMSE by 23% and 7% relative to HARMONIE MEPS at 1h and 2h lead times, and outperforms persistence by 9-15% during first 3 hours.\n• Key finding: Satellite scatterometer constellations can provide independent and competitive short-term offshore wind forecasts, with skill decreasing under strong-wind and non-uniform flow conditions.",
+    "summary_cn": "• 核心模型: WindCastNet采用部分卷积长短期记忆网络（ConvLSTM），处理时空不规则卫星观测数据。\n• 数据来源: 欧洲、中国和印度散射计星座的微波雷达观测，编码空间观测掩码和观测间隔。\n• 主要结论: 在北海评估中，相比HARMONIE MEPS模型，1小时和2小时提前期的RMSE分别降低23%和7%，前3小时优于持续性预报9-15%。\n• 局限性: 强风和非均匀流条件下预报技能下降。",
+    "verdict_en": "• Alpha Potential: High for renewable energy trading and power system operations, but limited direct applicability to traditional financial markets.\n• Implementation Risk: Requires access to satellite scatterometer data and specialized deep learning infrastructure; model complexity may hinder real-time deployment.\n• Novelty: First direct use of satellite scatterometer observations for nowcasting, introducing a new paradigm for intraday forecasting.\n• Practicality: More relevant for energy sector than quantitative finance; could be adapted for weather derivative pricing or risk management.",
+    "verdict_cn": "• 创新点: 首次直接利用卫星散射计观测进行临近预报，开创了日内预报新范式。\n• 实盘坑: 数据获取门槛高（需卫星数据），模型复杂，实时部署成本大，且对传统金融市场直接alpha有限。\n• 复现难度: 高，需要处理多源异构卫星数据，且ConvLSTM训练调参复杂。\n• 适用性: 更适合能源领域，可间接用于天气衍生品定价或风险管理策略。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2607.27146v1",
+    "title": "MindForge: Teaching Small Language Models Whole-Life-Cycle Software Engineering via Source-Free Program Synthesis",
+    "pdf_url": "https://arxiv.org/pdf/2607.27146v1",
+    "published": "2026-07-29",
+    "crawled_at": "2026-07-30 20:52:43",
+    "ai_score": 7.5,
+    "translated_title": "MindForge：通过无源程序合成教授小语言模型全生命周期软件工程",
+    "summary_en": [
+      "• Model Architecture: Fine-tunes Qwen3.6-27B (a small language model) on synthetic trajectories generated by GLM-5.2 teacher agent.",
+      "• Data used: Source-free environments built from open-source command-line programs via MindForge pipeline, using repositories disjoint from ProgramBench.",
+      "• Performance metrics: ProgramBench test pass rate improved from 37.98% to 49.51%; consistent gains across 7 benchmarks (e.g., +31.00 on RepoZero-C2Rust, +5.04 on SWE-bench Verified).",
+      "• Key result: Achieves performance comparable to larger frontier models despite smaller size."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于Qwen3.6-27B小模型，使用GLM-5.2教师模型生成的合成轨迹进行微调。",
+      "• 数据来源: 通过MindForge流水线从开源命令行程序构建无源环境，数据与ProgramBench不重叠。",
+      "• 主要结论: ProgramBench测试通过率从37.98%提升至49.51%，在7个基准测试上均有提升（如RepoZero-C2Rust提升31.00，SWE-bench Verified提升5.04）。",
+      "• 性能对比: 小模型性能可媲美更大规模的先进模型。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate. Improves small model coding ability, but direct trading alpha is unclear; may be useful for automated code generation in quant systems.",
+      "• Implementation Risk: Low to moderate. Fine-tuning recipe is clear but requires access to GLM-5.2 and large-scale compute; source-free environments reduce data dependency.",
+      "• Novelty: High. Introduces MindForge pipeline for creating training environments from compiled executables, enabling whole-life-cycle software engineering training."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出MindForge流水线，从编译可执行文件创建训练环境，覆盖全生命周期软件工程，新颖性高。",
+      "• 实盘坑: 直接交易alpha不明确，需评估代码生成能力在量化系统中的应用价值；依赖GLM-5.2教师模型可能带来成本。",
+      "• 复现难度: 中等。微调流程清晰，但需大规模计算资源和特定教师模型，无源环境降低数据获取难度。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2607.27143v1",
+    "title": "Cost-Sensitive Conformal Prediction and Human-in-the-Loop Abstention for Imbalanced High-Stakes Decision Support: A Multi-Domain Benchmark",
+    "pdf_url": "https://arxiv.org/pdf/2607.27143v1",
+    "published": "2026-07-29",
+    "crawled_at": "2026-07-30 20:52:52",
+    "ai_score": 7.5,
+    "translated_title": "代价敏感共形预测与人在回路弃权机制用于不平衡高风险决策支持：多领域基准研究",
+    "summary_en": "• Model Architecture: Compares marginal conformal prediction (CP), class-conditional (Mondrian) CP, and cost-controlled abstention mechanisms for imbalanced classification.\n• Data used: 15 real-world imbalanced tabular datasets from credit scoring, fraud detection, healthcare, and industrial safety.\n• Performance metrics: Minority-class coverage, expected decision cost under human review budgets, and break-even thresholds for deferral.\n• Key results: Mondrian CP improves minority coverage by 61.7 percentage points on average over marginal CP; combining with cost-controlled abstention reduces expected cost.\n• Experimental setup: 7 classification models, 3 calibration techniques, 10 random seeds, 3,150 runs.",
+    "summary_cn": "• 核心模型: 比较边际共形预测、类别条件（Mondrian）共形预测和代价控制弃权机制，用于不平衡分类。\n• 数据来源: 15个真实世界不平衡表格数据集，涵盖信用评分、欺诈检测、医疗和工业安全。\n• 主要结论: Mondrian CP将少数类覆盖率平均提高61.7个百分点；结合代价控制弃权可降低预期决策成本。\n• 实验设计: 7个分类模型、3种校准技术、10个随机种子，共3150次实验。",
+    "verdict_en": "• Alpha Potential: Moderate; methods improve decision cost efficiency but are not directly tradable; could inform risk management for imbalanced credit/fraud models.\n• Implementation Risk: Low; conformal prediction is model-agnostic and easy to integrate; Mondrian CP requires class-conditional calibration.\n• Novelty: High; comprehensive benchmark with cost-sensitive abstention is novel for high-stakes decision support.\n• Limitation: Focus on tabular data; applicability to time-series or high-frequency trading data is unclear.\n• Practicality: Provides break-even thresholds for human review, useful for operational decisions.",
+    "verdict_cn": "• 创新点: 首次系统比较边际CP、Mondrian CP和代价控制弃机在不平衡高风险决策中的表现，提供成本效益分析。\n• 实盘坑: 方法基于表格数据，对高频交易或时间序列数据适用性未知；弃机机制依赖人类专家，成本高。\n• 复现难度: 低；共形预测实现简单，但需注意类别条件校准和代价函数定义。\n• 量化潜力: 中等；可用于信用评分或欺诈检测中的风险控制，但直接生成alpha信号有限。\n• 改进方向: 可扩展至在线学习或动态弃机策略，以适应市场变化。",
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2607.27140v1",
+    "title": "Investigating reservoir computing for branch predictionin pipelined processors using emerging CMOS memristor devices",
+    "pdf_url": "https://arxiv.org/pdf/2607.27140v1",
+    "published": "2026-07-29",
+    "crawled_at": "2026-07-30 20:53:00",
+    "ai_score": 4.2,
+    "translated_title": "利用新兴CMOS忆阻器件的储层计算在流水线处理器中的分支预测研究",
+    "summary_en": "• Model Architecture: Novel memristor-based reservoir computing (RC) framework designed for high-speed operation and CMOS integration, implemented in System Verilog and Verilog-AMS.\n• Data used: Dhrystone benchmark targeting RISC-V RV64GC ISA for branch prediction workload.\n• Performance metrics: Achieves impressive overall prediction accuracy but is 15x slower to adapt to branching changes compared to state-of-the-art TAGE predictor.\n• Key finding: RC shows promise for branch prediction but requires refinement in adaptability.",
+    "summary_cn": "• 核心模型: 基于忆阻器的储层计算框架，面向高速CMOS集成，使用System Verilog和Verilog-AMS实现。\n• 数据来源: 针对RISC-V RV64GC指令集的Dhrystone基准测试。\n• 主要结论: 整体预测精度高，但适应性比TAGE预测器慢15倍，需进一步优化。",
+    "verdict_en": "• Alpha Potential: Low; branch prediction is a hardware problem with limited direct financial alpha.\n• Implementation Risk: High; memristor-based RC is still experimental and far from practical deployment.\n• Novelty: Moderate; applies RC to branch prediction but lacks breakthrough performance.\n• Practicality: Unlikely to be adopted in real trading systems due to hardware dependency and slow adaptation.",
+    "verdict_cn": "• 创新点: 将储层计算引入分支预测，但性能未超越现有方法。\n• 实盘坑: 忆阻器硬件不成熟，适应性差，无法用于高频交易。\n• 复现难度: 高，需要专用硬件和模拟环境。\n• 实用性: 低，与量化交易无关。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2607.27132v1",
+    "title": "Minimal Markovization via Stable Quotients in Holonomy-Cover Decision Processes",
+    "pdf_url": "https://arxiv.org/pdf/2607.27132v1",
+    "published": "2026-07-29",
+    "crawled_at": "2026-07-30 20:53:09",
+    "ai_score": 7.5,
+    "translated_title": "通过稳定商实现最小马尔可夫化：和乐覆盖决策过程",
+    "summary_en": [
+      "• Model Architecture: Introduces the stable quotient, a coarsest observation-wise abstraction that preserves one-step rewards and quotient successors, forming an exact finite Markov state when combined with current observation.",
+      "• Data used: Theoretical analysis on holonomy-cover decision processes, a structured POMDP class; experiments use synthetic data with raw states and paired-order accuracy metrics.",
+      "• Performance metrics: Achieves perfect paired-order accuracy with three decision-time memory states, matching the quotient oracle and outperforming non-oracle baselines.",
+      "• Key result: Under reachability and pairwise decision separation, the stable class requires exactly minimal memory symbols; no arbitrary finite-memory controller can use fewer."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出稳定商（stable quotient），一种最粗的观测层面抽象，保留一步奖励和商后继，与当前观测结合形成精确的有限马尔可夫状态。",
+      "• 数据来源: 理论分析基于和乐覆盖决策过程（结构化POMDP类）；实验使用合成数据，以原始状态和配对顺序准确率为指标。",
+      "• 主要结论: 在可达性和成对决策分离条件下，稳定类需要恰好最少的记忆符号；任何有限记忆控制器无法使用更少。",
+      "• 性能: 使用三个决策时间记忆状态达到完美配对顺序准确率，匹配商oracle并优于非oracle基线。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low direct alpha; theoretical contribution to POMDP memory reduction may inspire new RL-based trading strategies with minimal state representations.",
+      "• Implementation Risk: High; requires exact knowledge of holonomy structure and observation permutations, which are rare in financial markets.",
+      "• Novelty: High theoretical novelty; introduces stable quotient and minimal Markovization concept, but practical applicability to finance is limited.",
+      "• Verdict: More suited for RL theory than quantitative finance; unlikely to generate alpha without significant adaptation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 理论创新高，提出稳定商和最小马尔可夫化概念，但金融应用场景有限。",
+      "• 实盘坑: 需要精确知道和乐结构和观测置换，这在金融市场中几乎不可行。",
+      "• 复现难度: 高；依赖特定POMDP结构，且实验使用合成数据，复现需大量定制。",
+      "• 总体评价: 更适合强化学习理论，而非量化金融；直接产生alpha可能性低。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2607.26055v1",
     "title": "$π\\mathbf{R}^2$: Reactive Real-time Flow Policies",
     "pdf_url": "https://arxiv.org/pdf/2607.26055v1",
@@ -45753,346 +46007,6 @@
       "• 创新点: 将数据集选择形式化为独立于样本选择的问题具有概念突破性；分层建模数据集组的方法在结构上新颖，但实现细节相对现有多臂老虎机方法改进有限。",
       "• 实盘坑: 金融数据集通常缺乏清晰分层结构；机构间数据共享面临监管和隐私障碍；在噪声金融时间序列数据上性能增益可能不明显。",
       "• 复现难度: 中等 - 基于公开基准测试，代码和数据应可获取；但需要适应金融领域特有的数据异质性和时效性要求，调整成本较高。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Accepted"
-    }
-  },
-  {
-    "id": "2512.10946v1",
-    "title": "ImplicitRDP: An End-to-End Visual-Force Diffusion Policy with Structural Slow-Fast Learning",
-    "pdf_url": "https://arxiv.org/pdf/2512.10946v1",
-    "published": "2025-12-11",
-    "crawled_at": "2025-12-12 20:02:24",
-    "ai_score": 8.2,
-    "translated_title": "ImplicitRDP：一种具有结构慢快学习的端到端视觉-力扩散策略",
-    "summary_en": [
-      "• Model Architecture: ImplicitRDP is an end-to-end visual-force diffusion policy that integrates visual planning and reactive force control in a single network, using Structural Slow-Fast Learning with causal attention to process asynchronous visual and force tokens, and Virtual-target-based Representation Regularization to prevent modality collapse.",
-      "• Data used: The paper mentions extensive experiments on contact-rich manipulation tasks, but does not specify exact datasets; likely involves simulated or real-world robotic manipulation environments with visual and force feedback data.",
-      "• Performance metrics: ImplicitRDP significantly outperforms vision-only and hierarchical baselines in contact-rich tasks, achieving superior reactivity and success rates, as demonstrated through experimental results."
-    ],
-    "summary_cn": [
-      "• 核心模型: ImplicitRDP是一种端到端的视觉-力扩散策略，通过结构慢快学习机制，利用因果注意力处理异步视觉和力令牌，并结合虚拟目标表示正则化防止模态崩溃。",
-      "• 数据来源: 论文未明确指定数据集，但基于接触丰富的操作任务进行广泛实验，可能涉及模拟或真实机器人环境中的视觉和力反馈数据。",
-      "• 主要结论: ImplicitRDP在接触丰富的任务中显著优于仅视觉和分层基线，实现了更高的反应性和成功率，验证了其统一网络的有效性。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High potential for applications in robotic manipulation and autonomous systems where integrating multi-modal sensory data (vision and force) is critical for real-time, adaptive control, potentially leading to improved efficiency in industrial or service robotics.",
-      "• Implementation Risk: Moderate risk due to the complexity of end-to-end training with diffusion models and the need for precise synchronization of asynchronous modalities; real-world deployment may face challenges in sensor noise and environmental variability.",
-      "• Novelty: High novelty in proposing a unified diffusion policy for visual-force integration, with innovative components like Structural Slow-Fast Learning and Virtual-target-based Representation Regularization, addressing key gaps in multi-modal reinforcement learning."
-    ],
-    "verdict_cn": [
-      "• 创新点: 提出了一种端到端的视觉-力扩散策略，结合结构慢快学习和虚拟目标正则化，有效解决了多模态频率差异和模态崩溃问题，在机器人操作领域具有前沿性。",
-      "• 实盘坑: 端到端训练复杂度高，异步模态同步可能在实际部署中受传感器噪声和环境变化影响，导致性能下降或稳定性问题。",
-      "• 复现难度: 中等偏高，需要实现扩散模型、因果注意力机制和多模态数据处理，代码和实验细节的公开程度将影响复现可行性。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2512.10938v1",
-    "title": "Stronger Normalization-Free Transformers",
-    "pdf_url": "https://arxiv.org/pdf/2512.10938v1",
-    "published": "2025-12-11",
-    "crawled_at": "2025-12-12 20:02:44",
-    "ai_score": 7.8,
-    "translated_title": "更强归一化自由Transformer",
-    "summary_en": [
-      "• Model Architecture: Introduces Derf(x) = erf(αx + s) as a point-wise function to replace normalization layers in Transformer architectures, where erf is the rescaled Gaussian cumulative distribution function, with parameters α and s learned during training.",
-      "• Data used: Evaluated across multiple domains including vision (image recognition and generation), speech representation, and DNA sequence modeling, though specific datasets are not detailed in the abstract.",
-      "• Performance metrics: Outperforms LayerNorm, RMSNorm, and Dynamic Tanh (DyT) in various tasks, with gains attributed to improved generalization rather than stronger fitting capacity."
-    ],
-    "summary_cn": [
-      "• 核心模型: 提出Derf(x) = erf(αx + s)作为点函数，替代Transformer中的归一化层，其中erf是重缩放高斯累积分布函数，参数α和s在训练中学习。",
-      "• 数据来源: 在多个领域评估，包括视觉（图像识别和生成）、语音表示和DNA序列建模，但摘要中未指定具体数据集。",
-      "• 主要结论: Derf在性能上超越LayerNorm、RMSNorm和Dynamic Tanh (DyT)，其优势主要源于更好的泛化能力而非更强的拟合能力。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate to high; Derf's improved generalization could enhance model robustness and performance in diverse applications, potentially leading to better predictive models in finance if adapted to time-series or NLP tasks.",
-      "• Implementation Risk: Low to moderate; as a simple point-wise function, Derf is easy to integrate into existing architectures, but domain-specific tuning and validation are needed to ensure stability and effectiveness in real-world scenarios.",
-      "• Novelty: High; introduces a novel function design based on erf, moving beyond traditional normalization layers and Dynamic Tanh, with empirical evidence of superior performance across multiple domains."
-    ],
-    "verdict_cn": [
-      "• 创新点: 高；基于erf函数设计新点函数，突破传统归一化层和Dynamic Tanh，在多个领域实证性能优越，为归一化自由架构提供新思路。",
-      "• 实盘坑: 中低；作为简单点函数易于集成，但需针对金融任务（如时间序列或NLP）进行调优和验证，以确保在实际应用中的稳定性和有效性。",
-      "• 复现难度: 低；模型设计简洁，参数少，易于复现和实验，但需注意跨领域性能可能依赖具体数据集和任务设置。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "ArXiv Preprint",
-      "status": "Preprint"
-    }
-  },
-  {
-    "id": "2512.10936v1",
-    "title": "Empirical evaluation of the Frank-Wolfe methods for constructing white-box adversarial attacks",
-    "pdf_url": "https://arxiv.org/pdf/2512.10936v1",
-    "published": "2025-12-11",
-    "crawled_at": "2025-12-12 20:03:01",
-    "ai_score": 7.2,
-    "translated_title": "Frank-Wolfe方法构建白盒对抗攻击的实证评估",
-    "summary_en": [
-      "• Model Architecture: Evaluates modified Frank-Wolfe methods for constructing white-box adversarial attacks, comparing them with standard projection-based approaches and geometrical intuition methods.",
-      "• Data used: Conducts numerical experiments on MNIST and CIFAR-10 datasets, utilizing multiclass logistic regression, convolutional neural networks (CNNs), and Vision Transformer (ViT) models.",
-      "• Performance metrics: Focuses on efficiency and effectiveness of attack construction, with theoretical analysis and empirical validation of optimization performance."
-    ],
-    "summary_cn": [
-      "• 核心模型: 采用改进的Frank-Wolfe方法构建白盒对抗攻击，对比标准投影方法和几何直觉方法。",
-      "• 数据来源: 在MNIST和CIFAR-10数据集上进行实验，使用多类逻辑回归、卷积神经网络和Vision Transformer模型。",
-      "• 主要结论: 从数值优化角度提出高效对抗攻击构建方法，通过理论分析和实验验证其性能优势。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate - The optimization approach could enhance adversarial robustness testing in financial ML models, but direct trading alpha generation is limited.",
-      "• Implementation Risk: High - Adversarial attacks in production systems require careful validation; real-world financial data noise may reduce effectiveness.",
-      "• Novelty: Low to Moderate - Frank-Wolfe methods are established in optimization; application to adversarial attacks is incremental rather than groundbreaking."
-    ],
-    "verdict_cn": [
-      "• 创新点: 将经典Frank-Wolfe优化方法应用于对抗攻击构建，属于方法迁移而非理论突破。",
-      "• 实盘坑: 金融数据的高噪声和动态特性可能显著降低攻击效果，实际部署需大量调参和验证。",
-      "• 复现难度: 中等 - 方法描述清晰，但需要优化算法和深度学习框架的专业知识。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2512.10935v1",
-    "title": "Any4D: Unified Feed-Forward Metric 4D Reconstruction",
-    "pdf_url": "https://arxiv.org/pdf/2512.10935v1",
-    "published": "2025-12-11",
-    "crawled_at": "2025-12-12 20:03:24",
-    "ai_score": 8.2,
-    "translated_title": "Any4D：统一的馈送式度量4D重建",
-    "summary_en": [
-      "• Model Architecture: Any4D is a scalable multi-view transformer that uses a modular 4D scene representation with egocentric factors (depthmaps, camera intrinsics in local coordinates) and allocentric factors (camera extrinsics, scene flow in global coordinates) for feed-forward metric 4D reconstruction.",
-      "• Data used: The model processes multi-view RGB frames and can incorporate additional modalities such as RGB-D frames, IMU-based egomotion, and Radar Doppler measurements when available, enabling flexible input handling.",
-      "• Performance metrics: The paper claims superior performance with 2-3X lower error in accuracy and 15X faster compute efficiency compared to prior methods, across diverse setups."
-    ],
-    "summary_cn": [
-      "• 核心模型: Any4D采用可扩展的多视角Transformer架构，通过模块化4D场景表示（包括以局部相机坐标表示的自我中心因素如深度图和相机内参，以及以全局世界坐标表示的他者中心因素如相机外参和场景流）实现馈送式度量4D重建。",
-      "• 数据来源: 模型处理多视角RGB帧，并可整合RGB-D帧、基于IMU的自我运动、雷达多普勒测量等多种模态数据，支持灵活输入。",
-      "• 主要结论: 论文声称在多样设置下，相比先前方法，Any4D在准确性上误差降低2-3倍，计算效率提升15倍，为下游应用开辟新途径。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High potential for applications in autonomous systems, robotics, and augmented reality due to its ability to handle multiple sensor modalities and provide dense 4D reconstructions with improved accuracy and speed, which could enhance real-time decision-making in dynamic environments.",
-      "• Implementation Risk: Moderate risk due to reliance on diverse sensor inputs (e.g., RGB-D, IMU, Radar), which may not be consistently available in all real-world scenarios, and the complexity of integrating the modular representation into existing pipelines.",
-      "• Novelty: High novelty in unifying feed-forward 4D reconstruction with a modular approach that separates egocentric and allocentric factors, enabling flexible multi-modal processing and outperforming prior work focused on 2-view or sparse methods."
-    ],
-    "verdict_cn": [
-      "• 创新点: 创新性高，通过模块化表示将自我中心和他者中心因素分离，统一了馈送式4D重建，支持多模态处理，在密集运动预测和几何重建方面超越先前基于双视角或稀疏点的方法。",
-      "• 实盘坑: 中等风险，模型依赖多种传感器输入（如RGB-D、IMU、雷达），在实际部署中可能面临数据不一致或缺失问题，且模块化表示的集成复杂度较高，可能增加系统维护成本。",
-      "• 复现难度: 中等难度，需要多视角RGB数据和可选的多模态数据，以及Transformer架构的实现，但论文提供了清晰的框架描述，有助于复现，不过传感器校准和数据处理可能带来挑战。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "ArXiv Preprint",
-      "status": "Preprint"
-    }
-  },
-  {
-    "id": "2512.10934v1",
-    "title": "Curriculum-Based Reinforcement Learning for Autonomous UAV Navigation in Unknown Curved Tubular Conduit",
-    "pdf_url": "https://arxiv.org/pdf/2512.10934v1",
-    "published": "2025-12-11",
-    "crawled_at": "2025-12-12 20:03:45",
-    "ai_score": 7.8,
-    "translated_title": "基于课程学习的强化学习用于无人机在未知弯曲管道中的自主导航",
-    "summary_en": [
-      "• Model Architecture: Uses PPO (Proximal Policy Optimization) reinforcement learning with a curriculum learning strategy that progressively increases tube curvature, incorporating a turning-negotiation mechanism based on LiDAR symmetry cues, directional memory, and conditional visual detection of tube center.",
-      "• Data used: Relies solely on local observations from LiDAR sensors and conditional visual detection of tube center; no prior geometric knowledge of the tubular environment is provided during training or deployment.",
-      "• Performance metrics: Consistently outperforms Pure Pursuit algorithm (deterministic baseline) despite information asymmetry; demonstrates robust and generalizable behavior validated in high-fidelity 3D environment with continuous physical dynamics."
-    ],
-    "summary_cn": [
-      "• 核心模型: 采用PPO强化学习框架，结合课程学习策略逐步增加管道曲率，并引入基于LiDAR对称性线索、方向记忆和条件视觉检测的转弯协商机制。",
-      "• 数据来源: 仅依赖LiDAR传感器的局部观测数据和管道中心的视觉检测信号，训练和部署阶段均无需管道几何形状的先验知识。",
-      "• 主要结论: 在信息不对称条件下持续超越Pure Pursuit确定性基线算法；在高保真3D环境中验证了学习行为的鲁棒性、泛化性和物理动力学可迁移性。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate - demonstrates RL's ability to compensate for geometric information deficits in constrained environments, potentially applicable to other perception-limited autonomous systems.",
-      "• Implementation Risk: High - real-world deployment faces challenges with sensor noise, dynamic obstacles, and computational latency in continuous physical environments.",
-      "• Novelty: Significant - curriculum learning approach for progressive exposure to curved geometries combined with multi-modal perception fusion (LiDAR+vision+memory) addresses partial observability in novel way."
-    ],
-    "verdict_cn": [
-      "• 创新点: 课程学习与多模态感知融合的创新组合，通过渐进式曲率暴露和LiDAR对称性分析有效解决管道导航中的部分可观测性问题。",
-      "• 实盘坑: 实际部署面临传感器噪声干扰、动态障碍物处理、计算延迟等挑战，且缺乏对管道材质、光照变化等环境扰动的鲁棒性验证。",
-      "• 复现难度: 中等偏高 - 需要构建高保真3D仿真环境，集成LiDAR和视觉传感器模型，并实现复杂的课程学习调度机制。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "ICRA or IROS",
-      "status": "Accepted"
-    }
-  },
-  {
-    "id": "2512.10931v1",
-    "title": "Asynchronous Reasoning: Training-Free Interactive Thinking LLMs",
-    "pdf_url": "https://arxiv.org/pdf/2512.10931v1",
-    "published": "2025-12-11",
-    "crawled_at": "2025-12-12 20:04:06",
-    "ai_score": 7.8,
-    "translated_title": "异步推理：无需训练的交互式思维大语言模型",
-    "summary_en": [
-      "• Model Architecture: The paper proposes a method to augment reasoning-capable LLMs for asynchronous operation without additional training, leveraging the properties of rotary embeddings to enable simultaneous thinking, listening, and output generation.",
-      "• Data used: The evaluation is conducted on math, commonsense, and safety reasoning tasks, though specific datasets are not detailed in the abstract; it likely uses standard benchmarks for these domains.",
-      "• Performance metrics: The approach reduces time to first non-thinking token from minutes to ≤5 seconds and decreases overall real-time delays by 6-11x, while maintaining accuracy in thinking-augmented answers."
-    ],
-    "summary_cn": [
-      "• 核心模型: 提出一种无需额外训练的方法，通过利用旋转嵌入的特性，使具备推理能力的大语言模型能够异步操作，实现同时思考、监听和生成输出。",
-      "• 数据来源: 在数学、常识和安全推理任务上进行评估，可能使用这些领域的标准基准数据集，但摘要中未具体说明。",
-      "• 主要结论: 该方法将首个非思考令牌的生成时间从几分钟减少到≤5秒，整体实时延迟降低6-11倍，同时保持思维增强答案的准确性。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate; the method addresses a key limitation in real-time LLM applications like voice assistants, potentially improving user experience and enabling new interactive use cases, but direct financial alpha is indirect and depends on deployment in trading or analysis systems.",
-      "• Implementation Risk: High; integrating asynchronous reasoning into existing LLM pipelines may require significant architectural changes, and the reliance on rotary embeddings could limit compatibility with models not using this technique, posing scalability and robustness challenges.",
-      "• Novelty: High; the concept of training-free asynchronous reasoning for LLMs is innovative, leveraging embedding properties to mimic human-like multitasking in AI systems, though it builds on prior work in rotary embeddings and interactive LLMs."
-    ],
-    "verdict_cn": [
-      "• 创新点: 高；无需训练的异步推理概念新颖，利用嵌入特性模拟人类多任务处理，提升大语言模型在实时交互中的表现，但基于旋转嵌入和交互式大语言模型的现有研究。",
-      "• 实盘坑: 高；集成到现有大语言模型管道可能需要重大架构调整，依赖旋转嵌入可能限制与不使用此技术的模型的兼容性，带来可扩展性和鲁棒性风险。",
-      "• 复现难度: 中等；方法基于公开的旋转嵌入技术，但实现异步操作需要深入理解大语言模型内部机制，可能涉及复杂的工程优化。"
-    ],
-    "ai_strategy": "NLP/LLM",
-    "journal_info": {
-      "name": "ArXiv Preprint",
-      "status": "Preprint"
-    }
-  },
-  {
-    "id": "2512.10929v1",
-    "title": "Noisy Quantum Learning Theory",
-    "pdf_url": "https://arxiv.org/pdf/2512.10929v1",
-    "published": "2025-12-11",
-    "crawled_at": "2025-12-12 20:04:27",
-    "ai_score": 8.5,
-    "translated_title": "噪声量子学习理论",
-    "summary_en": [
-      "• Model Architecture: Introduces NBQP (noisy BQP) complexity class to model noisy fault-tolerant quantum computers that query uncharacterized systems through noisy couplings, analyzing quantum learning advantages under noise.",
-      "• Data used: Theoretical framework based on oracle problems and concrete noisy learning tasks (purity testing, Pauli shadow tomography), with analysis of noise effects like local depolarizing noise and noise-resilient structures.",
-      "• Performance metrics: Shows noise can eliminate exponential quantum learning advantages for ideal noiseless learners while preserving superpolynomial gaps between NISQ and fault-tolerant devices, with sample complexity bounds for noisy Pauli shadow tomography."
-    ],
-    "summary_cn": [
-      "• 核心模型: 引入NBQP（噪声BQP）复杂性类，建模通过噪声耦合查询未表征系统的噪声容错量子计算机，分析噪声下的量子学习优势。",
-      "• 数据来源: 基于预言机问题和具体噪声学习任务（纯度测试、泡利影子层析成像）的理论框架，分析局部去极化噪声和噪声弹性结构等噪声效应。",
-      "• 主要结论: 噪声可消除理想无噪声学习者的指数级量子学习优势，同时保持NISQ与容错设备间的超多项式差距；除非实验系统具有潜在的噪声鲁棒结构，否则量子学习优势对噪声敏感。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High for quantum computing and machine learning applications, as it identifies conditions where noise-resilient structures can restore quantum advantages, relevant for future experimental designs in quantum-enhanced learning.",
-      "• Implementation Risk: Moderate to high; practical implementation depends on developing fault-tolerant quantum devices with specific noise-robust properties, and real-world noise may be more complex than modeled.",
-      "• Novelty: Strong; introduces NBQP class and bridges quantum learning theory with noise analysis, offering insights into the fragility of quantum primitives like Bell-basis and SWAP-test under noise."
-    ],
-    "verdict_cn": [
-      "• 创新点: 引入NBQP复杂性类，将量子学习理论与噪声分析结合，揭示贝尔基和SWAP测试等量子原语在噪声下的脆弱性，为噪声鲁棒量子优势提供理论框架。",
-      "• 实盘坑: 高；实际应用需依赖具有特定噪声弹性结构的容错量子设备，且现实噪声可能比模型更复杂，实现量子学习优势面临技术挑战。",
-      "• 复现难度: 中高；基于理论分析和预言机问题，实验复现需先进量子硬件和噪声控制，但算法设计部分（如泡利影子层析成像）可能较易模拟验证。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "ArXiv Preprint",
-      "status": "Preprint"
-    }
-  },
-  {
-    "id": "2512.10926v1",
-    "title": "Decoupled Q-Chunking",
-    "pdf_url": "https://arxiv.org/pdf/2512.10926v1",
-    "published": "2025-12-11",
-    "crawled_at": "2025-12-12 20:04:49",
-    "ai_score": 7.5,
-    "translated_title": "解耦Q分块",
-    "summary_en": [
-      "• Model Architecture: Proposes a novel algorithm that decouples critic chunk length from policy chunk length, using a distilled critic for partial action chunks to approximate maximum value when extended to complete chunks.",
-      "• Data used: Evaluated on challenging, long-horizon offline goal-conditioned tasks, though specific datasets or environments are not detailed in the abstract.",
-      "• Performance metrics: Reported to reliably outperform prior methods on the evaluated tasks, indicating improved value estimation and policy reactivity."
-    ],
-    "summary_cn": [
-      "• 核心模型: 提出解耦评论家与策略分块长度的算法，通过蒸馏评论家优化部分动作分块的价值估计，避免长分块策略学习困难。",
-      "• 数据来源: 在具有挑战性的长时域离线目标条件任务上进行评估，但摘要未具体说明数据集或环境细节。",
-      "• 主要结论: 该方法在评估任务中稳定优于现有方法，提升了价值估计准确性和策略反应性，解决了分块评论家中的开环次优问题。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate; addresses bootstrapping bias in TD methods and improves policy reactivity in long-horizon tasks, potentially applicable to sequential decision-making in finance.",
-      "• Implementation Risk: High; relies on optimistic value backup and distillation, which may introduce approximation errors and require careful hyperparameter tuning for stable performance.",
-      "• Novelty: High; introduces decoupled chunking concept, a novel approach to mitigate open-loop sub-optimality in chunked critics, though building on existing chunked critic work."
-    ],
-    "verdict_cn": [
-      "• 创新点: 高；提出解耦分块的核心洞察，通过蒸馏评论家优化部分动作分块，有效结合多步价值传播与策略灵活性，解决长分块策略建模难题。",
-      "• 实盘坑: 高；乐观价值回溯和蒸馏过程可能引入估计偏差，在复杂金融环境中泛化性存疑，且超参数敏感可能导致性能不稳定。",
-      "• 复现难度: 中等；算法依赖现有分块评论家框架，但蒸馏和优化步骤增加实现复杂度，需谨慎处理价值近似和策略优化交互。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2512.09929v1",
-    "title": "Closing the Train-Test Gap in World Models for Gradient-Based Planning",
-    "pdf_url": "https://arxiv.org/pdf/2512.09929v1",
-    "published": "2025-12-10",
-    "crawled_at": "2025-12-11 20:01:31",
-    "ai_score": 7.8,
-    "translated_title": "缩小基于梯度规划的世界模型中的训练-测试差距",
-    "summary_en": [
-      "• Model Architecture: World models paired with model predictive control (MPC) for gradient-based planning, focusing on closing the train-test gap between next-state prediction training and action sequence estimation at inference.",
-      "• Data used: Large-scale datasets of expert trajectories for offline training, with train-time data synthesis techniques to improve planning performance.",
-      "• Performance metrics: Outperforms or matches classical gradient-free cross-entropy method (CEM) across object manipulation and navigation tasks in 10% of the time budget, demonstrating significant efficiency gains."
-    ],
-    "summary_cn": [
-      "• 核心模型: 结合模型预测控制（MPC）的世界模型，用于基于梯度的规划，旨在缩小训练时的下一状态预测与测试时的动作序列估计之间的差距。",
-      "• 数据来源: 基于专家轨迹的大规模离线训练数据集，采用训练时数据合成技术以提升规划性能。",
-      "• 主要结论: 在10%的时间预算内，在多种物体操作和导航任务中优于或匹配传统的无梯度交叉熵方法（CEM），显示出显著的效率提升。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate; gradient-based planning offers computational efficiency for real-time decision-making in dynamic markets, but performance historically lags behind other methods, limiting immediate alpha generation.",
-      "• Implementation Risk: High; reliance on expert trajectories and data synthesis may introduce biases or overfitting, and integration with existing trading systems could be complex due to model predictive control requirements.",
-      "• Novelty: Moderate; the focus on closing the train-test gap is a novel twist, but world models and gradient-based planning are established concepts, reducing breakthrough potential."
-    ],
-    "verdict_cn": [
-      "• 创新点: 中等；通过训练时数据合成技术缩小训练-测试差距是新颖之处，但世界模型和基于梯度的规划已有基础，创新性有限。",
-      "• 实盘坑: 高；依赖专家轨迹可能导致数据偏差，模型预测控制的集成复杂度高，实时市场环境中的泛化能力未经充分验证。",
-      "• 复现难度: 中等；方法基于标准深度学习框架，但需要大规模专家数据和精细调参，复现成本较高。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Accepted"
-    }
-  },
-  {
-    "id": "2512.09914v1",
-    "title": "FALCON: Few-step Accurate Likelihoods for Continuous Flows",
-    "pdf_url": "https://arxiv.org/pdf/2512.09914v1",
-    "published": "2025-12-10",
-    "crawled_at": "2025-12-11 20:01:51",
-    "ai_score": 7.8,
-    "translated_title": "FALCON：连续流的少步精确似然",
-    "summary_en": [
-      "• Model Architecture: FALCON introduces a hybrid training objective for continuous normalizing flows (CNFs) that encourages invertibility, enabling few-step sampling with accurate likelihoods for importance sampling applications.",
-      "• Data used: The paper focuses on molecular Boltzmann sampling, likely using molecular dynamics simulation datasets or standard benchmarks in statistical physics for evaluating thermodynamic equilibrium states.",
-      "• Performance metrics: FALCON outperforms state-of-the-art normalizing flow models in molecular Boltzmann sampling and is two orders of magnitude faster than equivalently performing CNF models, significantly reducing computational cost from thousands to few function evaluations per sample."
-    ],
-    "summary_cn": [
-      "• 核心模型: FALCON采用混合训练目标优化连续归一化流（CNF），增强可逆性，实现少步采样和精确似然计算，适用于重要性采样。",
-      "• 数据来源: 基于分子玻尔兹曼采样任务，可能使用分子动力学模拟数据集或统计物理标准基准来评估热力学平衡态。",
-      "• 主要结论: FALCON在分子玻尔兹曼采样中优于现有归一化流模型，速度比同等性能的CNF快两个数量级，大幅降低计算开销。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate; FALCON's speed-up in likelihood computation could enhance generative modeling for financial time series or option pricing, but direct alpha generation is limited without specific financial applications tested.",
-      "• Implementation Risk: High; integrating FALCON into trading systems requires adaptation from molecular physics to financial data, with risks in model stability and real-time performance in noisy markets.",
-      "• Novelty: High; the hybrid training objective for invertibility in CNFs is innovative, addressing a key bottleneck in Boltzmann Generators, though it builds on existing flow matching techniques."
-    ],
-    "verdict_cn": [
-      "• 创新点: 高；通过混合训练目标提升CNF可逆性，解决玻尔兹曼生成器中似然计算成本高的核心问题，方法新颖但基于现有流匹配技术。",
-      "• 实盘坑: 高；将模型从分子物理迁移到金融数据需大量调整，市场噪声和实时性要求可能影响性能，实施风险较大。",
-      "• 复现难度: 中等；论文方法描述清晰，但依赖专业统计物理数据集和计算资源，复现需跨领域专业知识，可能耗时。"
     ],
     "ai_strategy": "Deep-Learning",
     "journal_info": {
