@@ -1,5 +1,301 @@
 [
   {
+    "id": "2607.29675v1",
+    "title": "Differentially Private Nonparametric Modal Learning with Applications to Regression and Clustering",
+    "pdf_url": "https://arxiv.org/pdf/2607.29675v1",
+    "published": "2026-07-31",
+    "crawled_at": "2026-08-03 20:48:40",
+    "ai_score": 6.5,
+    "translated_title": "差分隐私非参数模态学习及其在回归和聚类中的应用",
+    "summary_en": [
+      "• Model Architecture: Proposes DP-GRAMS, a mean-shift inspired method that performs noisy gradient ascent on a differentially private score estimator, using higher-order kernels for bias reduction and gradient clipping with Gaussian noise for privacy.",
+      "• Data: Utilizes synthetic and real datasets for experiments, demonstrating privacy-utility trade-offs.",
+      "• Performance: Establishes asymptotic error rates and minimax lower bounds, showing near-optimality up to logarithmic factors in MSE."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出DP-GRAMS方法，基于均值漂移思想，在差分隐私得分估计器上进行噪声梯度上升，采用高阶核减少偏差，并通过梯度裁剪和高斯噪声实现隐私保护。",
+      "• 数据来源: 使用合成数据和真实数据评估方法，展示隐私-效用权衡。",
+      "• 主要结论: 证明了所有总体模态以高概率恢复，并建立了渐近误差率，同时给出极小极大下界，表明估计器在MSE上近乎最优。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Limited direct trading alpha, but could be used for robust clustering in alternative data (e.g., market regimes) with privacy constraints.",
+      "• Implementation Risk: High complexity in tuning privacy parameters and kernel bandwidths; requires careful calibration for financial data.",
+      "• Novelty: First to address differentially private mode estimation with theoretical guarantees, extending to regression and clustering."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次在差分隐私约束下研究模态估计，并提供理论保证，扩展至回归和聚类。",
+      "• 实盘坑: 隐私参数和核带宽调优复杂，金融数据噪声大，可能影响模态识别的稳定性。",
+      "• 复现难度: 高，需要深厚的统计学习和差分隐私背景，代码未公开。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2607.29674v1",
+    "title": "Sign compression for Muon: SignMuon, MuonSign, and the Limits of Error Feedback",
+    "pdf_url": "https://arxiv.org/pdf/2607.29674v1",
+    "published": "2026-07-31",
+    "crawled_at": "2026-08-03 20:48:49",
+    "ai_score": 7.5,
+    "translated_title": "Muon的符号压缩：SignMuon、MuonSign与误差反馈的极限",
+    "summary_en": [
+      "• Model Architecture: The paper introduces SignMuon, which compresses the Muon optimizer update to one bit per parameter by taking the elementwise sign. It also explores variants: sign-before the LMO (MuonUSign) and sign-on-both-sides (MuonSign).",
+      "• Data used: Experiments are conducted on centralized CIFAR-10, federated CIFAR-10, and the nanoGPT speedrun benchmark.",
+      "• Performance metrics: The paper evaluates convergence rates (squared gradient norm) and practical performance in terms of accuracy and training speed. It shows that sign-after-the-LMO (SignMuon) outperforms SignSGD and other variants in practice, despite theoretical divergence."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出SignMuon，将Muon优化器的更新压缩为每个参数一位（符号），并探索了符号在LMO之前（MuonUSign）和两侧（MuonSign）的变体。",
+      "• 数据来源: 实验使用集中式CIFAR-10、联邦CIFAR-10和nanoGPT速度跑基准。",
+      "• 主要结论: 理论上，符号压缩在一般凸函数上可能发散，误差反馈无法修复SignMuon；但实践中，符号在LMO之后（SignMuon）表现最好，优于SignSGD和其他变体，尽管理论上发散。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: The paper focuses on communication-efficient optimization, which is crucial for federated learning and distributed training. The practical gains of SignMuon could translate to faster training and lower bandwidth costs, but the theoretical divergence is a red flag for reliability in critical applications.",
+      "• Implementation Risk: High risk due to theoretical divergence. The paper shows that sign-after-LMO can ascend on simple linear functions, meaning it may fail in certain optimization landscapes. Error feedback does not rescue it, so practitioners must be cautious.",
+      "• Novelty: The paper provides a thorough analysis of sign compression for Muon, including theoretical counterexamples and empirical evaluation. The finding that heuristic sign-after-LMO outperforms provably convergent variants is interesting and challenges conventional wisdom."
+    ],
+    "verdict_cn": [
+      "• 创新点: 系统分析了Muon优化器的符号压缩，提出了多种变体，并给出了理论反例，揭示了符号压缩的局限性。",
+      "• 实盘坑: 理论上发散，可能在简单线性函数上上升，误差反馈无法修复，因此在实际应用中存在不稳定性风险，需谨慎使用。",
+      "• 复现难度: 中等，实验基于常见数据集和基准，但理论部分需要深入理解优化和压缩理论。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2607.29665v1",
+    "title": "Freeze, Then Select: Structured Field Adapters and Stability-Validated Weak Selection for PDE Discovery from Sparse Observations",
+    "pdf_url": "https://arxiv.org/pdf/2607.29665v1",
+    "published": "2026-07-31",
+    "crawled_at": "2026-08-03 20:48:58",
+    "ai_score": 7.2,
+    "translated_title": "冻结，然后选择：用于稀疏观测下PDE发现的结构化场适配器与稳定性验证的弱选择",
+    "summary_en": [
+      "• Model Architecture: The method uses a structured field adapter that factorizes the field into learned spatial features and temporal coefficients represented by cubic splines, trained without PDE residual, then freezes the field and applies Stability-Validated Weak Selection (SVWS) to identify recurrent terms across independent weak-form systems.",
+      "• Data used: Sparse, noisy observations from six MDBench regimes, including challenging Kuramoto-Sivashinsky dynamics, and also applied to unknown nonlinear diffusion function with power-law form.",
+      "• Performance metrics: Achieves highest exact support recovery rate across all six MDBench regimes, with clearest gains over classical and neural baselines on Kuramoto-Sivashinsky dynamics."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出冻结-然后-选择方法，结合结构化场适配器（空间特征+三次样条时间系数）和稳定性验证的弱选择（SVWS），先训练场适配器，冻结后识别候选项并选择最终方程。",
+      "• 数据来源: 使用MDBench六个稀疏观测场景，包括Kuramoto-Sivashinsky动力学，以及未知非线性扩散函数（幂律形式）的稀疏含噪数据。",
+      "• 主要结论: 在所有六个MDBench场景中，方法达到最高的精确支持恢复率，尤其在KS动力学上显著优于经典和神经基线。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for scientific discovery and model identification, but direct alpha generation in finance is limited; could be adapted for regime-switching models or factor dynamics.",
+      "• Implementation Risk: Requires careful tuning of weak-form integration and stability validation; computational cost may be high for large-scale financial data.",
+      "• Novelty: Combines freeze-then-select with weak-form and genetic programming, offering a robust approach to discover governing equations from sparse data, which is novel in PDE discovery."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将冻结-然后-选择策略与弱形式验证结合，并扩展到遗传编程生成的表达式，提高了从稀疏数据中发现控制方程的鲁棒性。",
+      "• 实盘坑: 金融数据噪声大、非平稳，弱形式积分可能不稳定；且计算复杂度高，实时应用困难。",
+      "• 复现难度: 中等偏难，需要实现弱形式积分、稳定性验证和遗传编程，对数值优化要求高。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2607.29659v1",
+    "title": "GQ-FSL: Green Quantized Federated Split Learning",
+    "pdf_url": "https://arxiv.org/pdf/2607.29659v1",
+    "published": "2026-07-31",
+    "crawled_at": "2026-08-03 20:49:06",
+    "ai_score": 5.5,
+    "translated_title": "GQ-FSL：绿色量化联邦拆分学习",
+    "summary_en": [
+      "• Model Architecture: Proposes GQ-FSL, a federated split learning framework with stochastic quantization for both local training and wireless transmission, allowing asymmetric precision for client and server submodels.",
+      "• Data used: The paper does not specify a particular dataset; it focuses on theoretical analysis and simulations for DNN deployment on resource-constrained devices.",
+      "• Performance metrics: Demonstrates superior energy efficiency compared to quantized federated learning and full-precision FSL, while meeting target accuracy constraints."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出GQ-FSL框架，结合随机量化和拆分学习，支持客户端与服务器子模型非对称精度，以解耦设备能量约束与全局收敛退化。",
+      "• 数据来源: 论文未指定具体数据集，主要基于理论分析和仿真验证，面向资源受限设备上的DNN部署。",
+      "• 主要结论: 相比量化联邦学习和全精度FSL，GQ-FSL在满足目标精度约束下显著提升能量效率。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low for financial trading; the focus is on energy efficiency in edge computing, not directly applicable to market alpha generation.",
+      "• Implementation Risk: High for quant finance; requires adaptation to financial data and infrastructure, with unclear benefits for trading strategies.",
+      "• Novelty: Moderate; combines quantization and split learning, but similar ideas exist in federated learning literature."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将随机量化引入拆分学习，并实现非对称精度，理论上可降低能耗，但金融领域应用价值有限。",
+      "• 实盘坑: 与金融市场无关，难以直接用于交易策略；若强行迁移，需大量改造且收益不明。",
+      "• 复现难度: 中等；需要分布式系统和量化实现，但论文提供理论框架，复现需一定工程能力。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2607.29621v1",
+    "title": "CENDRe: Concept Extraction with Natural Domain Representations",
+    "pdf_url": "https://arxiv.org/pdf/2607.29621v1",
+    "published": "2026-07-31",
+    "crawled_at": "2026-08-03 20:49:15",
+    "ai_score": 7.2,
+    "translated_title": "CENDRe：基于自然域表示的概念提取",
+    "summary_en": [
+      "• Model Architecture: CENDRe is a concept extraction method for CNNs, using two-stage clustering of per-timestep latent representations with silhouette-guided aggregation to automatically determine the number of concepts. It localizes concepts via gradients of a presence score contrasting latent representations with prototypes, and propagates gradients through a differentiable invertible mapping (e.g., Fourier transform) to obtain frequency-domain localizations.",
+      "• Data used: The method is evaluated on synthetic benchmarks and real bearing-fault data, which is a type of time-series data commonly used in industrial fault diagnosis.",
+      "• Performance metrics: On synthetic benchmarks, CENDRe achieves representation correctness comparable to state-of-the-art CE methods and significantly higher importance correctness. On real bearing-fault data, it extracts frequency bands driving model predictions, which are in regions commonly inspected for fault diagnosis."
+    ],
+    "summary_cn": [
+      "• 核心模型: CENDRe是一种针对CNN的概念提取方法，通过两阶段聚类（基于轮廓系数自动确定概念数量）和原型对比的梯度定位，结合可逆映射（如傅里叶变换）实现时域和频域的概念定位。",
+      "• 数据来源: 使用合成基准数据和真实轴承故障数据，后者是工业故障诊断中常见的时间序列数据。",
+      "• 主要结论: 在合成基准上，表示正确性与现有方法相当，重要性正确性显著更高；在真实轴承故障数据上，能提取模型预测所依赖的频率带，为模型评估提供时域方法无法提供的证据。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: The method is primarily for interpretability, not directly generating alpha. However, in quantitative trading, understanding model decisions on time-series data (e.g., price or sensor data) could improve model trust and feature engineering, potentially leading to more robust strategies.",
+      "• Implementation Risk: The method requires access to internal CNN representations and gradients, which may be complex to implement and computationally intensive. The use of Fourier transform for frequency localization adds complexity. The paper does not provide code, increasing replication difficulty.",
+      "• Novelty: The approach is novel in addressing limitations of existing time-series CE methods by incorporating frequency domain and automatic concept number selection. This is a meaningful contribution to interpretability research."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次在时间序列概念提取中结合频域分析，并自动确定概念数量，解决了现有方法需预设概念数且仅限时域的问题。",
+      "• 实盘坑: 该方法主要用于模型解释，不直接产生交易信号；在实盘中，若用于高频或传感器数据，需确保计算效率，且解释结果可能受模型架构影响，需谨慎验证。",
+      "• 复现难度: 需要深入理解CNN内部表示和梯度计算，且未提供代码，复现难度较高。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2607.29617v1",
+    "title": "When Does On-Policy Interaction Help? Representational Tradeoffs in Value-Based Imitation Learning",
+    "pdf_url": "https://arxiv.org/pdf/2607.29617v1",
+    "published": "2026-07-31",
+    "crawled_at": "2026-08-03 20:49:24",
+    "ai_score": 7.5,
+    "translated_title": "在线交互何时有帮助？基于价值的模仿学习中的表征权衡",
+    "summary_en": "• Model Architecture: Introduces OVI, an interactive on-policy IL algorithm that requires only expert value function realizability, not policy realizability, and uses a linear maximization oracle for computational efficiency.\n• Data used: Demonstrations from an expert, with interactive queries along the learner's own trajectories (on-policy interaction).\n• Performance metrics: Outperforms offline policy-based (BC), interactive policy-based (DAgger), and offline value-based IL methods, with largest gains when learner network is less expressive than expert's.",
+    "summary_cn": "• 核心模型: 提出OVI算法，一种在线交互式模仿学习算法，仅需专家价值函数的可实现性，而非策略可实现性，并利用线性最大化预言机保证计算效率。\n• 数据来源: 使用专家示范数据，并在学习者自身轨迹上进行交互式查询（在线交互）。\n• 主要结论: OVI在性能上优于离线策略方法（BC）、交互式策略方法（DAgger）和离线价值方法，尤其在学习者网络表达能力远低于专家时增益最大。",
+    "verdict_en": "• Alpha Potential: The theoretical insight (interaction relaxes representational demands) could inspire new algorithms for model compression or distillation in trading, potentially improving sample efficiency.\n• Implementation Risk: Requires interactive expert queries, which may be costly or infeasible in financial markets; also assumes access to a linear maximization oracle, which may not hold for complex policy classes.\n• Novelty: Provides a clear theoretical framework and negative result, but the practical impact on quantitative finance is indirect; the algorithm is not directly applicable to trading without adaptation.",
+    "verdict_cn": "• 创新点: 理论上证明了在线交互可以放宽表征需求，为模仿学习提供了新视角，但金融领域应用需进一步转化。\n• 实盘坑: 需要交互式专家查询，在金融市场中成本高且难以实现；线性最大化预言机假设可能不成立。\n• 复现难度: 算法实现需要精心设计交互策略和优化过程，复现难度中等；但理论部分清晰，易于验证。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2607.29614v1",
+    "title": "A Human-Centered Validation of the Explainability-Performance Coefficient",
+    "pdf_url": "https://arxiv.org/pdf/2607.29614v1",
+    "published": "2026-07-31",
+    "crawled_at": "2026-08-03 20:49:32",
+    "ai_score": 5.5,
+    "translated_title": "以人为中心的解释性-性能系数验证",
+    "summary_en": "• Model Architecture: Proposes a model-agnostic EPC score extending the Explainability-Performance Coefficient, balancing feature selection sparsity and preserved model performance.\n• Data used: Empirical validation across tabular, text, and image modalities, including human-based explanations (lexical sentiment and spatial visual annotations).\n• Performance metrics: EPC score effectiveness in uncovering operational dependencies among network activations, data dimensionality, and explainer performance; alignment with human judgments.\n• Key results: Higher EPC scores strongly align with human lexical sentiment and spatial visual annotations, indicating improved explanation quality.\n• Limitations: No direct comparison with existing XAI metrics or baseline methods; human validation limited to specific tasks.",
+    "summary_cn": "• 核心模型: 提出模型无关的EPC分数，扩展了解释性-性能系数，平衡特征选择稀疏性与模型性能保持。\n• 数据来源: 在表格、文本和图像三种模态上进行实证验证，包括基于人类的解释（词汇情感和空间视觉标注）。\n• 主要结论: EPC分数能有效揭示网络激活、数据维度和解释器性能之间的操作依赖；高EPC分数与人类判断高度一致。\n• 局限性: 未与现有XAI指标或基线方法直接比较；人类验证局限于特定任务。",
+    "verdict_en": "• Alpha Potential: Low direct alpha; XAI metrics are not directly tradeable, but could inform feature selection for alpha factors.\n• Implementation Risk: High; requires human validation and multiple modalities, complex to integrate into trading pipelines.\n• Novelty: Moderate; extends existing EPC concept, but validation with human annotations adds value.\n• Relevance: More relevant to model risk management and interpretability than alpha generation.\n• Overall: Not a trading strategy; useful for improving model trust but not directly actionable.",
+    "verdict_cn": "• 创新点: 将EPC分数扩展到多模态，并用人类标注验证，增强了解释性度量的可信度。\n• 实盘坑: 与交易无关，难以直接产生alpha；需要大量人工标注，成本高。\n• 复现难度: 中等；需要多模态数据和人类评估，复现复杂。\n• 实用性: 更适合风控和模型治理，而非量化策略开发。",
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2607.29606v1",
+    "title": "QASP: Query-Adaptive Robust Vector Search Policy",
+    "pdf_url": "https://arxiv.org/pdf/2607.29606v1",
+    "published": "2026-07-31",
+    "crawled_at": "2026-08-03 20:49:43",
+    "ai_score": 7.5,
+    "translated_title": "QASP：查询自适应的鲁棒向量搜索策略",
+    "summary_en": "• Model Architecture: QASP uses a single upfront supervised regression to predict the complete recall progression curve per query, avoiding iterative model invocations during search. It also includes a lightweight reactive component that adjusts search depth based on predicted-versus-observed deviations without additional inference.\n• Data used: The method is evaluated on large-scale datasets and hierarchical indices, demonstrating generalization across recall targets, index configurations, and datasets. The training sample size is finite and independent of dataset size and dimensionality.\n• Performance metrics: QASP achieves significantly lower recall variance and deviation from target, higher query satisfaction rate, and scales to large data. It achieves 99% recall with 80% less data access compared to fixed probing.\n• Theoretical guarantees: The paper proves that QASP requires a finite training sample independent of dataset size, its loss exceeds the irreducible lower bound of any fixed policy by a vanishing margin, and data access savings grow exponentially in intrinsic dimensionality.",
+    "summary_cn": "• 核心模型: QASP通过一次前置监督回归预测每个查询的完整召回率进展曲线，避免搜索过程中的迭代模型调用，并包含一个轻量级反应组件，根据预测与观测偏差调整搜索深度，无需额外推理。\n• 数据来源: 在大型数据集和分层索引上进行评估，展示了跨召回目标、索引配置和数据集的泛化能力。训练样本大小有限，与数据集大小和维度无关。\n• 主要结论: QASP显著降低了召回率方差和目标偏差，提高了查询满意度，并扩展到大型数据。在实现99%召回率时，数据访问量比固定探测减少80%。\n• 理论保证: 论文证明了QASP需要有限训练样本，其损失超过任何固定策略的不可约下界的边际趋于零，且数据访问节省随内在维度呈指数增长。",
+    "verdict_en": "• Alpha Potential: While not directly a trading strategy, QASP can enhance vector search efficiency in NLP/LLM-based alpha generation, reducing latency and cost for real-time retrieval, potentially improving alpha capture in high-frequency or news-driven strategies.\n• Implementation Risk: The method requires training a regression model on query features, which may be sensitive to distribution shift. The reactive component adds complexity but is lightweight. Integration into existing search pipelines is feasible but requires careful tuning.\n• Novelty: The idea of predicting the entire recall curve per query and deriving policies for any target is novel. The theoretical guarantees on sample complexity and data access savings are strong contributions.\n• Overall: Solid paper with practical implications for vector search, but not directly applicable to trading. The alpha potential is indirect via improved data processing.",
+    "verdict_cn": "• 创新点: 提出预测每个查询的完整召回曲线，并从中推导任意目标的搜索策略，避免了多次模型调用，具有理论保证，如样本复杂度独立于数据规模，数据访问节省指数增长。\n• 实盘坑: 该方法并非直接交易策略，应用于量化需通过提升NLP/LLM检索效率间接实现。对查询特征分布变化敏感，需定期重训。反应组件虽轻量，但增加系统复杂度。\n• 复现难度: 中等。需要实现回归模型和反应机制，并验证在不同索引和数据集上的泛化。理论部分较深，但实验设计清晰。\n• 总体: 对向量搜索领域有贡献，但对量化交易直接alpha有限，更适合作为基础设施优化。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2607.29601v1",
+    "title": "The Parts Are Greater Than the Sum: Automated Task Sequencing for Efficient Training of Multi-Policy LLMs",
+    "pdf_url": "https://arxiv.org/pdf/2607.29601v1",
+    "published": "2026-07-31",
+    "crawled_at": "2026-08-03 20:49:51",
+    "ai_score": 7.5,
+    "translated_title": "部分大于整体：用于高效训练多策略LLM的自动任务排序",
+    "summary_en": [
+      "• Model Architecture: Proposes an automatic multi-policy PEFT framework that organizes optimization paths via task grouping and sequencing, implemented as independent QLoRA adapters.",
+      "• Data used: Evaluated on the TRACE benchmark, which includes heterogeneous tasks for LLM fine-tuning.",
+      "• Performance metrics: Achieves best performance of 44.78 under same trainable capacity, outperforming single-policy PEFT and other multi-policy baselines.",
+      "• Key mechanism: Decouples optimization spaces for heterogeneous tasks to reduce interference while preserving positive transfer among compatible tasks."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出自动多策略PEFT框架，通过任务分组和排序组织优化路径，使用独立QLoRA适配器实现。",
+      "• 数据来源: 使用TRACE基准，包含异构任务，用于评估LLM微调性能。",
+      "• 主要结论: 在相同可训练参数预算下，达到44.78的最佳性能，优于单策略PEFT和其他多策略基线。",
+      "• 关键机制: 解耦异构任务的优化空间以减少干扰，同时保留兼容任务间的正迁移。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; improves LLM fine-tuning efficiency, but direct trading alpha is limited; may enhance NLP-based strategies.",
+      "• Implementation Risk: Low to moderate; requires careful task grouping and sequencing, but architecture is based on existing QLoRA.",
+      "• Novelty: High; introduces optimization-path organization as a new dimension for PEFT, distinct from increasing capacity or composition.",
+      "• Limitations: Performance gains may be benchmark-specific; real-world task heterogeneity and budget constraints need validation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出优化路径组织新概念，通过任务分组和排序提升多任务微调效果，而非简单增加参数。",
+      "• 实盘坑: 对任务分组和排序的依赖可能导致过拟合特定基准，实际应用中需谨慎调整。",
+      "• 复现难度: 中等；需要实现自动分组和排序算法，但基于QLoRA，复现门槛不高。",
+      "• 交易应用: 直接交易信号有限，但可提升NLP模型在金融文本分析中的性能，间接影响策略。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2607.29593v1",
+    "title": "Convergence and Regret of the Policy Gradient for Multi-Armed Bandits in Diffusion Environment",
+    "pdf_url": "https://arxiv.org/pdf/2607.29593v1",
+    "published": "2026-07-31",
+    "crawled_at": "2026-08-03 20:49:59",
+    "ai_score": 6.5,
+    "translated_title": "扩散环境中多臂老虎机策略梯度的收敛性与遗憾界",
+    "summary_en": [
+      "• Model Architecture: The paper analyzes the policy gradient update for multi-armed bandits in a diffusion environment modeled by a stochastic differential equation (SDE), using logit parameterization for the stochastic policy.",
+      "• Data: The study is theoretical, using mathematical analysis rather than empirical data; no specific datasets are employed.",
+      "• Performance Metrics: The key metrics are almost sure convergence to the optimal arm and non-asymptotic regret upper bound, which is shown to be O(log T) under a constant learning rate below a threshold."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于随机微分方程（SDE）的扩散环境，采用逻辑斯蒂参数化的随机策略，分析策略梯度更新。",
+      "• 数据来源: 纯理论分析，无实证数据。",
+      "• 主要结论: 在常数学习率下几乎必然收敛到最优臂，且遗憾界为O(log T)。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: The theoretical results are interesting but not directly applicable to trading; the O(log T) regret is standard, and the diffusion environment may not capture market dynamics.",
+      "• Implementation Risk: High risk for practical implementation; the assumptions (e.g., SDE environment) may not hold in real markets, and the algorithm's performance under model misspecification is unclear.",
+      "• Novelty: The novelty lies in the Lyapunov function construction and the analysis technique, but the problem setting is niche; it may not attract broad attention in quantitative finance."
+    ],
+    "verdict_cn": [
+      "• 创新点: 构造了新颖的Lyapunov函数，改进了已有分析，但问题设定较为狭窄。",
+      "• 实盘坑: 扩散环境假设过于理想，实际市场复杂，算法可能失效；常数学习率阈值难以确定。",
+      "• 复现难度: 理论推导复杂，复现需要深厚的数学功底，且无代码或实证验证。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2607.28628v1",
     "title": "Learning to Trace Seiberg Dualities",
     "pdf_url": "https://arxiv.org/pdf/2607.28628v1",
@@ -45647,349 +45943,6 @@
     "journal_info": {
       "name": "NeurIPS",
       "status": "Accepted"
-    }
-  },
-  {
-    "id": "2512.13668v1",
-    "title": "A Scientific Reasoning Model for Organic Synthesis Procedure Generation",
-    "pdf_url": "https://arxiv.org/pdf/2512.13668v1",
-    "published": "2025-12-15",
-    "crawled_at": "2025-12-16 20:02:29",
-    "ai_score": 8.2,
-    "translated_title": "有机合成程序生成的科学推理模型",
-    "summary_en": [
-      "• Model Architecture: QFANG is a scientific reasoning language model that integrates a Chemistry-Guided Reasoning (CGR) framework for chain-of-thought reasoning and uses Reinforcement Learning from Verifiable Rewards (RLVR) to enhance procedural accuracy.",
-      "• Data used: The model is trained on a high-quality dataset of 905,990 chemical reactions paired with structured action sequences, extracted and processed from patent literature using large language models.",
-      "• Performance metrics: QFANG outperforms advanced general-purpose reasoning models and nearest-neighbor retrieval baselines, as measured by traditional NLP similarity metrics and a chemically aware evaluator using an LLM-as-a-judge.",
-      "• Generalization: The model demonstrates the ability to generalize to certain out-of-domain reaction classes and adapt to variations in laboratory conditions and user-specific constraints."
-    ],
-    "summary_cn": [
-      "• 核心模型: QFANG是一个科学推理语言模型，采用化学引导推理（CGR）框架生成链式思维数据，并通过可验证奖励的强化学习（RLVR）优化程序准确性。",
-      "• 数据来源: 基于从专利文献中提取和处理的905,990个化学反应与结构化动作序列配对的高质量数据集，使用大语言模型进行预处理。",
-      "• 主要结论: QFANG在传统NLP相似性指标和基于LLM-as-a-judge的化学感知评估中，优于先进通用推理模型和最近邻检索基线。",
-      "• 泛化能力: 模型能够泛化到某些域外反应类别，并适应实验室条件和用户特定约束的变化。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High potential for alpha generation in pharmaceutical and chemical industries by automating synthesis planning, potentially reducing drug discovery timelines and costs, with applications in predictive modeling for chemical production efficiency.",
-      "• Implementation Risk: Moderate to high risk due to reliance on large-scale, high-quality data curation and the complexity of integrating RLVR in real-world laboratory settings; domain-specific adaptation may require significant fine-tuning.",
-      "• Novelty: Novel approach combining chain-of-thought reasoning with chemistry-specific guidance and RLVR, addressing the gap between computational route design and practical execution, though building on existing LLM and reinforcement learning techniques."
-    ],
-    "verdict_cn": [
-      "• 创新点: 结合链式思维推理与化学特定引导及RLVR，针对计算路线设计与实际执行之间的差距提出新方法，但基于现有LLM和强化学习技术。",
-      "• 实盘坑: 依赖大规模高质量数据整理，RLVR在真实实验室环境中的集成复杂，域特定适应可能需要大量微调，存在数据偏差和泛化不足的风险。",
-      "• 复现难度: 高难度，需要获取专利文献数据集、实施CGR框架和RLVR训练，计算资源要求高，且化学知识整合增加复杂性。"
-    ],
-    "ai_strategy": "NLP/LLM",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Accepted"
-    }
-  },
-  {
-    "id": "2512.13666v1",
-    "title": "SEDULity: A Proof-of-Learning Framework for Distributed and Secure Blockchains with Efficient Useful Work",
-    "pdf_url": "https://arxiv.org/pdf/2512.13666v1",
-    "published": "2025-12-15",
-    "crawled_at": "2025-12-16 20:02:47",
-    "ai_score": 7.5,
-    "translated_title": "SEDULity：一种用于分布式安全区块链的高效有用工作量证明学习框架",
-    "summary_en": [
-      "• Model Architecture: Proposes SEDULity framework that encodes template blocks into ML training process, replacing PoW puzzles with useful functions that are hard to solve but easy to verify",
-      "• Data used: No specific datasets mentioned; framework designed for general ML training tasks in distributed blockchain environment",
-      "• Performance metrics: Theoretical security analysis showing rational miners incentivized to train honestly; simulation results demonstrating framework performance; claims efficient ML training while maintaining blockchain security"
-    ],
-    "summary_cn": [
-      "• 核心模型: 提出SEDULity框架，将模板区块编码到机器学习训练过程中，用难以解决但易于验证的有用函数替代工作量证明谜题",
-      "• 数据来源: 未提及具体数据集；框架设计用于分布式区块链环境中的通用机器学习训练任务",
-      "• 主要结论: 理论分析表明理性矿工有动机诚实训练；仿真结果验证框架性能；声称在保持区块链安全的同时实现高效机器学习训练"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate - combines blockchain security with useful ML computation, potentially creating new crypto-economic models, but practical trading alpha unclear",
-      "• Implementation Risk: High - requires coordination between blockchain consensus and ML training infrastructure; incentive mechanism needs real-world testing; scalability concerns for complex ML models",
-      "• Novelty: Good - integrates PoL with distributed blockchain security in systematic framework; extends beyond single ML tasks to general useful work; includes verification incentive design"
-    ],
-    "verdict_cn": [
-      "• 创新点: 较好 - 将工作量证明学习与分布式区块链安全系统集成；超越单一机器学习任务扩展到通用有用工作；包含验证激励机制设计",
-      "• 实盘坑: 高 - 需要区块链共识与机器学习训练基础设施协调；激励机制需实际验证；复杂模型可扩展性存疑",
-      "• 复现难度: 中等偏高 - 需要搭建分布式区块链测试环境；机器学习训练与共识机制集成复杂；参数调优需要专业知识"
-    ],
-    "ai_strategy": "Crypto",
-    "journal_info": {
-      "name": "ArXiv Preprint",
-      "status": "Preprint"
-    }
-  },
-  {
-    "id": "2512.13641v1",
-    "title": "From Code to Field: Evaluating the Robustness of Convolutional Neural Networks for Disease Diagnosis in Mango Leaves",
-    "pdf_url": "https://arxiv.org/pdf/2512.13641v1",
-    "published": "2025-12-15",
-    "crawled_at": "2025-12-16 20:03:07",
-    "ai_score": 7.8,
-    "translated_title": "从代码到田间：评估卷积神经网络在芒果叶病害诊断中的鲁棒性",
-    "summary_en": [
-      "• Model Architecture: The study benchmarks five CNN architectures: ResNet-50, ResNet-101, VGG-16, Xception, and LCNN (a lightweight model designed specifically for mango leaf diagnosis).",
-      "• Data used: Adapted the MangoLeafDB dataset to create MangoLeafDB-C, which includes 19 types of artificial corruptions (e.g., noise, blurring, weather variations) at five severity levels to simulate real-world adverse conditions.",
-      "• Performance metrics: Evaluated using F1 score, corruption error (CE), and relative mean corruption error (relative mCE), with LCNN achieving the lowest mCE and outperforming complex models in scenarios like Defocus Blur and Motion Blur."
-    ],
-    "summary_cn": [
-      "• 核心模型: 对比了五种卷积神经网络架构：ResNet-50、ResNet-101、VGG-16、Xception和LCNN（专为芒果叶病害诊断设计的轻量级模型）。",
-      "• 数据来源: 基于MangoLeafDB数据集创建了MangoLeafDB-C，包含19种人工损坏类型（如噪声、模糊、天气变化）和五个严重级别，以模拟现实世界中的不利条件。",
-      "• 主要结论: LCNN在损坏场景中表现最佳，尤其在Defocus Blur和Motion Blur等真实世界常见损坏中优于复杂模型，且具有最低的平均损坏误差（mCE）。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate; the focus on robustness in agricultural AI could inform edge device applications, but direct financial alpha is limited without market integration.",
-      "• Implementation Risk: High; real-world deployment in agriculture faces challenges like variable environmental conditions, data scarcity, and hardware constraints in resource-limited regions.",
-      "• Novelty: Moderate; while robustness assessment is not new, applying it to mango leaf disease diagnosis with a specialized lightweight model (LCNN) and comprehensive corruption benchmarks adds value to the field."
-    ],
-    "verdict_cn": [
-      "• 创新点: 中等；将鲁棒性评估应用于芒果叶病害诊断，并引入专为农业设计的轻量级模型LCNN，在特定领域有创新性。",
-      "• 实盘坑: 高；农业环境多变，数据获取困难，边缘设备部署面临硬件和网络限制，实际应用风险较大。",
-      "• 复现难度: 中等；数据集和模型架构公开，但需要模拟多种损坏条件，实验设置较为复杂，可能增加复现成本。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "ArXiv Preprint",
-      "status": "Preprint"
-    }
-  },
-  {
-    "id": "2512.13634v1",
-    "title": "Universality of high-dimensional scaling limits of stochastic gradient descent",
-    "pdf_url": "https://arxiv.org/pdf/2512.13634v1",
-    "published": "2025-12-15",
-    "crawled_at": "2025-12-16 20:03:32",
-    "ai_score": 7.8,
-    "translated_title": "随机梯度下降高维标度极限的普适性",
-    "summary_en": [
-      "• Model Architecture: Analyzes stochastic gradient descent (SGD) dynamics for one and two-layer neural networks in high-dimensional settings, focusing on classification of mixture distributions and learning of single/multi-index models with cross-entropy loss.",
-      "• Data used: Primarily isotropic Gaussian mixture distributions, extended to mixtures of product measures with matching first two moments, assuming coordinate-delocalized initialization and ground truth vectors.",
-      "• Performance metrics: Convergence of finite family of summary statistics to autonomous ordinary differential equation (ODE) limits as dimension and sample size approach infinity and step size approaches zero, with universality demonstrated under specific conditions.",
-      "• Key findings: ODE limits are universal for sufficiently delocalized initializations when data moments match Gaussian distributions, but non-universal for coordinate-aligned initializations; stochastic differential equation (SDE) limits around fixed points are not universal."
-    ],
-    "summary_cn": [
-      "• 核心模型: 研究高维环境下单层和双层神经网络的随机梯度下降（SGD）动力学，重点分析混合分布分类和单/多索引模型学习，使用交叉熵损失函数。",
-      "• 数据来源: 主要基于各向同性高斯混合分布，扩展到具有匹配前两阶矩的乘积测度混合，假设初始化和真实向量充分坐标去局域化。",
-      "• 主要结论: 在维度和样本量趋于无穷、步长趋于零时，有限族摘要统计量收敛到自治常微分方程（ODE）极限；在特定条件下（如去局域化初始化）该极限具有普适性，但坐标对齐初始化会导致非普适性，且固定点附近的随机微分方程（SDE）极限非普适。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate; provides theoretical insights into SGD universality in high dimensions, potentially informing robust training strategies for neural networks in finance (e.g., portfolio optimization or risk modeling), but direct alpha generation limited without empirical validation.",
-      "• Implementation Risk: High; relies on strong assumptions (e.g., coordinate-delocalized initialization, matching moments) that may not hold in real-world financial data, and non-universality results indicate sensitivity to initialization and fluctuations, increasing deployment uncertainty.",
-      "• Novelty: Significant; extends known Gaussian results to broader data distributions with moment matching, offering a nuanced view of universality and non-universality in SGD limits, contributing to theoretical machine learning literature with practical caveats."
-    ],
-    "verdict_cn": [
-      "• 创新点: 显著；将高斯分布下的已知结果扩展到具有匹配矩的更广泛数据分布，深入探讨SGD极限的普适性与非普适性，为理论机器学习提供新见解，但强调实际限制。",
-      "• 实盘坑: 高；依赖强假设（如坐标去局域化初始化、矩匹配），金融实盘数据可能不满足，且非普适性结果表明对初始化和波动敏感，增加部署风险。",
-      "• 复现难度: 中等；理论推导清晰，但需要高维模拟验证，实盘应用需调整假设，可能因数据复杂性而挑战较大。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Accepted"
-    }
-  },
-  {
-    "id": "2512.13632v1",
-    "title": "StutterFuse: Mitigating Modality Collapse in Stuttering Detection with Jaccard-Weighted Metric Learning and Gated Fusion",
-    "pdf_url": "https://arxiv.org/pdf/2512.13632v1",
-    "published": "2025-12-15",
-    "crawled_at": "2025-12-16 20:03:53",
-    "ai_score": 7.8,
-    "translated_title": "StutterFuse：通过Jaccard加权度量学习和门控融合缓解口吃检测中的模态崩溃",
-    "summary_en": [
-      "• Model Architecture: Introduces StutterFuse, a Retrieval-Augmented Classifier (RAC) combining a Conformer encoder with a non-parametric memory bank of clinical examples, using SetCon (Jaccard-Weighted Metric Learning) and Gated Mixture-of-Experts fusion to dynamically balance acoustic evidence and retrieved context.",
-      "• Data used: Evaluated on the SEP-28k dataset, focusing on multi-label stuttering detection with complex, overlapping disfluencies like 'block' with 'prolongation'.",
-      "• Performance metrics: Achieves a weighted F1-score of 0.65, outperforming baselines and demonstrating zero-shot cross-lingual generalization."
-    ],
-    "summary_cn": [
-      "• 核心模型: 提出StutterFuse，首个用于多标签口吃检测的检索增强分类器（RAC），结合Conformer编码器和临床示例的非参数记忆库，采用SetCon（Jaccard加权度量学习）和门控专家混合融合策略。",
-      "• 数据来源: 基于SEP-28k数据集，专注于复杂重叠性口吃（如'阻塞'与'延长'同时发生）的检测。",
-      "• 主要结论: 加权F1分数达0.65，超越基线模型，并展现出显著的零样本跨语言泛化能力。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate; the retrieval-augmented approach and zero-shot generalization could be adapted for financial anomaly detection in multi-modal data streams, but direct trading alpha is limited.",
-      "• Implementation Risk: High; relies on specialized clinical speech data (SEP-28k), and the gated fusion mechanism may be computationally intensive for real-time applications.",
-      "• Novelty: High; first application of Retrieval-Augmented Generation (RAG) to pathological speech processing, with innovative solutions to 'Modality Collapse' using metric learning and dynamic fusion."
-    ],
-    "verdict_cn": [
-      "• 创新点: 首次将检索增强生成（RAG）范式应用于病理语音处理，通过Jaccard加权度量学习和门控融合解决'模态崩溃'问题，具有前沿性。",
-      "• 实盘坑: 高风险；依赖特定临床数据集（SEP-28k），门控融合策略在实时处理中可能计算开销大，且金融场景适配性待验证。",
-      "• 复现难度: 中等；需要SEP-28k数据集和临床示例库，但模型架构细节较清晰，开源可能性较高。"
-    ],
-    "ai_strategy": "NLP/LLM",
-    "journal_info": {
-      "name": "ArXiv Preprint",
-      "status": "Preprint"
-    }
-  },
-  {
-    "id": "2512.13618v1",
-    "title": "Temporal Tokenization Strategies for Event Sequence Modeling with Large Language Models",
-    "pdf_url": "https://arxiv.org/pdf/2512.13618v1",
-    "published": "2025-12-15",
-    "crawled_at": "2025-12-16 20:04:13",
-    "ai_score": 7.2,
-    "translated_title": "面向大语言模型事件序列建模的时间标记化策略",
-    "summary_en": [
-      "• Model Architecture: Fine-tuned large language models (LLMs) with five distinct temporal tokenization strategies: naive numeric strings, high-precision byte-level representations, human-semantic calendar tokens, uniform binning, and adaptive residual scalar quantization.",
-      "• Data used: Real-world datasets with diverse statistical distributions, including smooth log-normal patterns and discrete, spiky event sequences, to evaluate tokenizer alignment with data properties.",
-      "• Performance metrics: Prediction performance assessed based on how well each tokenization strategy matches the statistical characteristics of the data, with log-based methods performing best on skewed distributions and human-centric formats showing robustness for mixed modalities."
-    ],
-    "summary_cn": [
-      "• 核心模型: 采用五种时间标记化策略微调大语言模型（LLMs），包括朴素数字字符串、高精度字节级表示、人类语义日历标记、均匀分箱和自适应残差标量量化。",
-      "• 数据来源: 使用真实世界数据集，涵盖从平滑对数正态分布到离散尖峰模式等多种统计分布，以评估标记化策略与数据特性的匹配度。",
-      "• 主要结论: 预测性能高度依赖于标记化器与数据统计特性的对齐，对数基策略在偏斜分布上表现优异，而人类中心格式在混合模态中展现出稳健性。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate; the findings on tokenizer-data alignment could inform better temporal feature engineering for event-driven trading signals, but direct alpha generation is limited without specific financial applications.",
-      "• Implementation Risk: High; adapting tokenization strategies to real-time market data with non-stationary distributions poses significant challenges, and the paper lacks robustness tests under regime shifts.",
-      "• Novelty: High; this is the first empirical study comparing temporal tokenization strategies for LLMs in event sequence modeling, addressing an under-explored challenge in continuous time representation."
-    ],
-    "verdict_cn": [
-      "• 创新点: 首次对大语言模型事件序列建模中的时间标记化策略进行实证比较，填补了连续时间表示这一未充分探索领域的空白。",
-      "• 实盘坑: 高风险；将标记化策略应用于非平稳分布的市场实时数据时面临重大挑战，且论文缺乏在制度转换下的稳健性测试。",
-      "• 复现难度: 中等；需要获取多样化的真实世界事件序列数据集，并实现复杂的自适应量化方法，但核心LLM微调流程相对标准化。"
-    ],
-    "ai_strategy": "NLP/LLM",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2512.13617v1",
-    "title": "LightTopoGAT: Enhancing Graph Attention Networks with Topological Features for Efficient Graph Classification",
-    "pdf_url": "https://arxiv.org/pdf/2512.13617v1",
-    "published": "2025-12-15",
-    "crawled_at": "2025-12-16 20:04:36",
-    "ai_score": 7.8,
-    "translated_title": "LightTopoGAT：通过拓扑特征增强图注意力网络以实现高效图分类",
-    "summary_en": [
-      "• Model Architecture: LightTopoGAT is a lightweight graph attention network that enhances node features by incorporating topological features such as node degree and local clustering coefficient, using streamlined attention mechanisms to maintain parameter efficiency.",
-      "• Data used: The model was evaluated on three benchmark datasets: MUTAG (chemical compounds), ENZYMES (protein structures), and PROTEINS (protein graphs), which are standard in graph classification research.",
-      "• Performance metrics: LightTopoGAT achieved a 6.6% accuracy improvement on MUTAG and a 2.2% improvement on PROTEINS compared to baselines like GCN, GraphSAGE, and standard GAT, with ablation studies confirming gains from topological features."
-    ],
-    "summary_cn": [
-      "• 核心模型: LightTopoGAT是一种轻量级图注意力网络，通过整合节点度和局部聚类系数等拓扑特征来增强节点表示，采用精简的注意力机制以保持参数效率。",
-      "• 数据来源: 在三个基准数据集上进行测试：MUTAG（化学化合物）、ENZYMES（蛋白质结构）和PROTEINS（蛋白质图），这些是图分类研究中的常用数据集。",
-      "• 主要结论: 模型在MUTAG上准确率提升6.6%，在PROTEINS上提升2.2%，优于GCN、GraphSAGE和标准GAT等基线，消融实验证明性能提升直接源于拓扑特征的引入。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate; the method's simplicity and efficiency could be adapted for financial graph tasks like credit network analysis or market microstructure modeling, but direct alpha generation is unproven in trading contexts.",
-      "• Implementation Risk: Low to moderate; the lightweight design reduces computational overhead, but reliance on topological features may limit applicability to dynamic or noisy financial graphs where such features are less stable.",
-      "• Novelty: Limited; integrating topological features into GATs is an incremental improvement over existing work, with the main contribution being a practical, low-complexity enhancement rather than a groundbreaking innovation."
-    ],
-    "verdict_cn": [
-      "• 创新点: 有限；将拓扑特征融入图注意力网络是对现有方法的渐进式改进，主要贡献在于提供了一种简单、低复杂度的增强策略，而非突破性创新。",
-      "• 实盘坑: 中低风险；轻量级设计降低了计算成本，但依赖拓扑特征可能限制其在动态或噪声金融图（如交易网络）中的应用，因为这些特征可能不稳定。",
-      "• 复现难度: 低；模型结构简单，基于公开基准数据集，代码和实验设置应易于复现，适合快速验证和迭代。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "ArXiv Preprint",
-      "status": "Preprint"
-    }
-  },
-  {
-    "id": "2512.13609v1",
-    "title": "Do-Undo: Generating and Reversing Physical Actions in Vision-Language Models",
-    "pdf_url": "https://arxiv.org/pdf/2512.13609v1",
-    "published": "2025-12-15",
-    "crawled_at": "2025-12-16 20:04:55",
-    "ai_score": 7.5,
-    "translated_title": "Do-Undo：视觉语言模型中的物理动作生成与逆转",
-    "summary_en": [
-      "• Model Architecture: Introduces a vision-language model framework specifically designed for the Do-Undo task, which simulates physical scene transformations and their reversals, emphasizing cause-and-effect reasoning in multimodal systems.",
-      "• Data used: Curates a large-scale dataset of reversible actions from real-world videos, ensuring diverse and physically plausible action sequences for robust training and evaluation.",
-      "• Performance metrics: Evaluates models on their ability to accurately generate and reverse physical actions, revealing that current models struggle with physical reversibility, highlighting a critical gap in existing approaches."
-    ],
-    "summary_cn": [
-      "• 核心模型: 提出一个专门针对Do-Undo任务的视觉语言模型框架，模拟物理场景变换及其逆转，强调多模态系统中的因果推理能力。",
-      "• 数据来源: 从真实世界视频中构建大规模可逆动作数据集，确保多样化和物理上合理的动作序列，用于鲁棒训练和评估。",
-      "• 主要结论: 实验显示现有模型在物理可逆性方面表现不佳，突显了该任务在具身AI、机器人和物理感知生成建模中的重要性。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate; the task addresses a fundamental gap in physical reasoning for AI, which could enhance predictive models in robotics and simulation-based trading strategies, but direct financial applications are indirect.",
-      "• Implementation Risk: High; real-world physical actions are complex and noisy, making accurate reversal challenging; dataset quality and model generalization to unseen scenarios pose significant risks.",
-      "• Novelty: High; introduces the novel Do-Undo benchmark focusing on reversible physical actions, moving beyond object-level edits to cause-and-effect understanding, offering a fresh testbed for multimodal AI evaluation."
-    ],
-    "verdict_cn": [
-      "• 创新点: 高；提出新颖的Do-Undo基准，专注于可逆物理动作，超越对象级编辑，强调因果理解，为多模态AI评估提供新测试平台。",
-      "• 实盘坑: 高；真实世界物理动作复杂且嘈杂，准确逆转困难；数据集质量和模型对未见场景的泛化能力存在重大风险。",
-      "• 复现难度: 中等；需要大规模真实视频数据和专门训练策略，但框架描述清晰，开源可能性较高，复现可行但资源密集。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2512.11793v1",
-    "title": "A General Algorithm for Detecting Higher-Order Interactions via Random Sequential Additions",
-    "pdf_url": "https://arxiv.org/pdf/2512.11793v1",
-    "published": "2025-12-12",
-    "crawled_at": "2025-12-15 20:01:28",
-    "ai_score": 7.5,
-    "translated_title": "通过随机顺序添加检测高阶交互的通用算法",
-    "summary_en": [
-      "• Model Architecture: The paper introduces a geometric method based on random sequential additions of elements, where contributions are plotted over trials to reveal L-shaped patterns. It formalizes this with the L-score, a continuous measure ranging from -1 (perfect synergy) to +1 (perfect redundancy), and uses pairwise measurements to infer higher-order interactions through cross-pair relationships.",
-      "• Data used: The method is metric-agnostic and broadly applicable to any domain where performance can be evaluated incrementally over non-repeating element sequences, such as features in machine learning models or components in complex systems, without specifying particular datasets.",
-      "• Performance metrics: The L-score quantifies interaction structure on a unified scale, distinguishing synergy, independence, and redundancy. It also reveals feature dominance through the relative scaling of L-shaped arms, providing insights into how elements contribute individually or together."
-    ],
-    "summary_cn": [
-      "• 核心模型: 提出一种基于随机顺序添加元素的几何方法，通过多次试验绘制贡献图以揭示L形模式，并使用L分数（范围从-1到+1）形式化量化交互结构，通过成对测量推断高阶交互。",
-      "• 数据来源: 方法不依赖特定指标，适用于任何可增量评估性能的领域（如机器学习特征或复杂系统组件），未指定具体数据集。",
-      "• 主要结论: L分数在统一尺度上区分协同、独立和冗余交互，并通过L形臂的相对缩放揭示特征主导性，提供元素贡献模式的几何洞察。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate; the method could help identify synergistic feature combinations in financial models (e.g., factor investing) by detecting non-linear interactions, potentially uncovering hidden alpha signals in multi-factor strategies.",
-      "• Implementation Risk: High; the approach requires extensive computational trials over random sequences, which may be slow and noisy in real-time trading environments, and its reliance on pairwise measurements might miss complex higher-order effects in noisy market data.",
-      "• Novelty: High; the geometric L-score framework offers a unified, intuitive way to quantify interactions beyond traditional correlation measures, with applications across domains, though it builds on existing concepts like Shapley values in a novel visual form."
-    ],
-    "verdict_cn": [
-      "• 创新点: 较高；L分数框架提供统一、直观的交互量化方法，超越传统相关性度量，具有跨领域应用潜力，尽管基于夏普利值等概念以新颖视觉形式呈现。",
-      "• 实盘坑: 高；方法需大量随机序列计算试验，在实时交易中可能缓慢且嘈杂，且依赖成对测量可能在嘈杂市场数据中遗漏复杂高阶效应。",
-      "• 复现难度: 中等；算法概念简单，但实现需处理随机顺序和多次试验，对计算资源要求较高，且结果可能因随机性而波动。"
-    ],
-    "ai_strategy": "Alpha-Factor",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Accepted"
-    }
-  },
-  {
-    "id": "2512.11784v1",
-    "title": "Softmax as Linear Attention in the Large-Prompt Regime: a Measure-based Perspective",
-    "pdf_url": "https://arxiv.org/pdf/2512.11784v1",
-    "published": "2025-12-12",
-    "crawled_at": "2025-12-15 20:01:47",
-    "ai_score": 8.5,
-    "translated_title": "大提示词机制下的Softmax作为线性注意力：基于测度的视角",
-    "summary_en": [
-      "• Model Architecture: Analyzes single-layer softmax attention in transformers, focusing on its convergence to a linear operator in the infinite-prompt limit using a measure-based framework.",
-      "• Data used: Assumes i.i.d. Gaussian inputs and sub-Gaussian tokens for theoretical analysis, with specific application to in-context linear regression scenarios.",
-      "• Performance metrics: Establishes non-asymptotic concentration bounds for output and gradient, quantifying convergence rates from finite to infinite prompts and proving stability across training trajectories."
-    ],
-    "summary_cn": [
-      "• 核心模型: 基于测度框架分析单层softmax注意力机制，研究其在无限提示词极限下收敛为线性算子的性质。",
-      "• 数据来源: 理论分析假设独立同分布高斯输入和次高斯标记，具体应用于上下文线性回归场景。",
-      "• 主要结论: 建立输出和梯度的非渐近集中界，量化有限到无限提示词的收敛速度，证明训练轨迹的稳定性。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High for NLP/LLM strategies; provides theoretical foundation for analyzing softmax attention in large-prompt regimes, potentially improving model interpretability and optimization in transformer-based trading systems.",
-      "• Implementation Risk: Moderate; theoretical results rely on specific distributional assumptions (Gaussian/sub-Gaussian), which may not hold in real-world financial data, requiring careful validation.",
-      "• Novelty: Significant; introduces a unified measure-based framework to bridge softmax and linear attention, offering new tools for studying training dynamics in large-prompt settings."
-    ],
-    "verdict_cn": [
-      "• 创新点: 提出统一的测度框架，将softmax注意力与线性注意力联系起来，为大提示词机制下的训练动力学分析提供新工具。",
-      "• 实盘坑: 理论假设（高斯/次高斯分布）在真实金融数据中可能不成立，需额外验证；无限提示词极限在实际应用中难以实现。",
-      "• 复现难度: 中等；需要较强的数学背景实现测度理论和集中界推导，但核心结论可直接应用于现有Transformer架构。"
-    ],
-    "ai_strategy": "NLP/LLM",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
     }
   }
 ]
