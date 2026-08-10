@@ -1,5 +1,307 @@
 [
   {
+    "id": "2608.07463v1",
+    "title": "MirrorWorld: Taming Video Diffusion Models for Mirror Reflection Generation",
+    "pdf_url": "https://arxiv.org/pdf/2608.07463v1",
+    "published": "2026-08-07",
+    "crawled_at": "2026-08-10 20:27:13",
+    "ai_score": 5.5,
+    "translated_title": "MirrorWorld：驯服视频扩散模型以生成镜面反射",
+    "summary_en": [
+      "• Model Architecture: MirrorWorld is a reflection-aware video inpainting framework that integrates Semantic Relation Distillation (SRD) and Geometric Transformation Alignment (GTA) into a video diffusion model to model scene-to-mirror relationships.",
+      "• Data used: The authors construct a benchmark by repurposing four existing video mirror datasets into a unified reflection reconstruction task.",
+      "• Performance metrics: The method achieves improved reflection reconstruction quality over representative image-based reflection generation methods and strong video inpainting baselines, but no quantitative metrics are provided in the abstract."
+    ],
+    "summary_cn": [
+      "• 核心模型: MirrorWorld是一个反射感知的视频修复框架，通过语义关系蒸馏（SRD）和几何变换对齐（GTA）增强视频扩散模型，以建模场景到镜面的关系。",
+      "• 数据来源: 作者将四个现有的视频镜面数据集重新整合为一个统一的反射重建任务基准。",
+      "• 主要结论: 该方法在反射重建质量上优于代表性的基于图像的反射生成方法和强视频修复基线，但摘要中未提供具体量化指标。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low for quantitative trading; this is a computer vision paper with no direct financial application.",
+      "• Implementation Risk: High if attempting to adapt to financial data; requires significant domain transfer and computational resources.",
+      "• Novelty: Moderate; introduces a new task and two novel components (SRD and GTA) but builds on existing video diffusion models."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出了镜面反射生成的新任务，并设计了SRD和GTA两个互补模块，但整体架构基于现有视频扩散模型，创新性中等。",
+      "• 实盘坑: 与金融量化无关，若强行应用需大量领域迁移，且计算成本高，实际交易中难以落地。",
+      "• 复现难度: 中等偏高，需要视频扩散模型基础，且依赖多个数据集，复现成本较高。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2608.07458v1",
+    "title": "CoinRAG: Contextualized Information Nugget KV Cache Reuse for Long-Context RAG",
+    "pdf_url": "https://arxiv.org/pdf/2608.07458v1",
+    "published": "2026-08-07",
+    "crawled_at": "2026-08-10 20:27:20",
+    "ai_score": 6.5,
+    "translated_title": "CoinRAG：用于长上下文RAG的上下文信息片段KV缓存复用",
+    "summary_en": [
+      "• Model Architecture: CoinRAG introduces a two-stage retrieval mechanism to identify query-relevant semantic units (nuggets) within retrieved chunks, and assembles their sliced KV representations with chunk-level context for efficient decoding.",
+      "• Data used: Evaluated on LongBench multi-hop question answering tasks, which involve long-context reasoning.",
+      "• Performance metrics: Achieves a new Pareto frontier, with an average 5.3% relative improvement in F1 score under a standard fast prefill latency budget, while significantly reducing operational costs."
+    ],
+    "summary_cn": [
+      "• 核心模型: CoinRAG采用两阶段检索识别检索块中的查询相关语义单元（nuggets），并将其切片KV表示与块级上下文组装，实现高效解码。",
+      "• 数据来源: 在LongBench多跳问答任务上评估，涉及长上下文推理。",
+      "• 主要结论: 在标准快速预填充延迟预算下，实现了新的帕累托前沿，平均F1相对提升5.3%，同时显著降低运营成本。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: The efficiency gains and accuracy improvements could translate to lower latency and cost for LLM-based trading systems, but direct alpha generation is unclear.",
+      "• Implementation Risk: Requires offline computation of nugget caches and two-stage retrieval, adding complexity; performance may vary across domains.",
+      "• Novelty: The idea of fine-grained KV cache reuse is novel and could inspire more efficient RAG systems, but it is an incremental step over chunk-level reuse."
+    ],
+    "verdict_cn": [
+      "• 创新点: 细粒度KV缓存复用概念新颖，相比块级复用更精细，有潜力提升RAG效率。",
+      "• 实盘坑: 需要离线计算和两阶段检索，增加系统复杂度；在金融领域效果未知，可能受限于数据分布。",
+      "• 复现难度: 中等，需要实现两阶段检索和KV切片组装，对工程能力有一定要求。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2608.07444v1",
+    "title": "RIS-Aided mmWave Localization Under Cross-Link Interference via Beam-Domain ML Fingerprinting",
+    "pdf_url": "https://arxiv.org/pdf/2608.07444v1",
+    "published": "2026-08-07",
+    "crawled_at": "2026-08-10 20:27:28",
+    "ai_score": 4.5,
+    "translated_title": "RIS辅助毫米波定位在跨链路干扰下的波束域ML指纹识别",
+    "summary_en": [
+      "• Model Architecture: The paper proposes a beam-domain fingerprint framework that maps received SNR across predefined RIS reflection states to UE azimuth angle and range, using four ML regressors (KNN, etc.) without requiring CSI.",
+      "• Data: Simulation data at 28 GHz with a 20x20 RIS, including clean and interference-impaired scenarios (with CLI).",
+      "• Performance: Under clean conditions, KNN achieves lowest angle MAE of 0.37 degrees and range MAE of 4 cm; under interference, MAEs rise to 1.4 degrees and 7.6 cm.",
+      "• Key Finding: Interference degrades angle estimation more than range estimation across all models, due to asymmetric encoding of location information."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出波束域指纹框架，利用预定义RIS反射状态下的SNR映射到UE方位角和距离，采用四种ML回归器（如KNN），无需CSI。",
+      "• 数据来源: 28 GHz频段、20x20 RIS的仿真数据，包括干净场景和跨链路干扰（CLI）场景。",
+      "• 主要结论: 干净条件下KNN达到最低角度MAE 0.37度和距离MAE 4厘米；干扰下分别升至1.4度和7.6厘米。",
+      "• 关键发现: 干扰对角度估计的影响大于距离估计，源于波束域指纹中位置信息的不对称编码。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low for financial trading; no direct market application.",
+      "• Implementation Risk: High for finance; requires domain adaptation to signal processing.",
+      "• Novelty: Moderate; applies ML to RIS localization, but not groundbreaking for quant finance.",
+      "• Relevance: Minimal; focuses on 6G networks, not financial data or strategies."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将ML指纹识别应用于RIS辅助定位，处理干扰场景，但创新有限。",
+      "• 实盘坑: 与金融交易无关，无法直接用于量化策略。",
+      "• 复现难度: 需要通信仿真环境，复现成本高，且对金融无价值。",
+      "• 总体评价: 对量化投资无实质贡献，不建议关注。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2608.07436v1",
+    "title": "Post-Grokking Collapse at the Representation-Readout Interface in Muon-Trained Transformers",
+    "pdf_url": "https://arxiv.org/pdf/2608.07436v1",
+    "published": "2026-08-07",
+    "crawled_at": "2026-08-10 20:27:40",
+    "ai_score": 4.2,
+    "translated_title": "Muon训练的Transformer中表示-读出接口处的后grokking崩溃",
+    "summary_en": [
+      "• Model Architecture: The paper studies a Transformer model trained with Muon optimizer for hidden matrices and AdamW for embeddings/output head, on modular addition tasks.",
+      "• Data used: The experiments use modular addition (a+b) mod 113, with variations including subtraction, different moduli, widths, training fractions, and depths.",
+      "• Performance metrics: All nine configurations grok (achieve perfect training accuracy) but later lose generalization. The selected AdamW reference falls below threshold on four out of five seeds, reaching 27.59% accuracy. Instability persists across various settings.",
+      "• Key finding: The failure arises at the representation-readout interface, where the loss does not uniquely select the mapping. Gradient magnitude drops to 1e-6, and optimizers respond differently: step-size elasticity is -0.03 for Muon vs +1.5 for AdamW, and Muon moves 8x faster per parameter.",
+      "• Intervention: Freezing either the embeddings/readout or the hidden groups prevents failure. Removing Muon's normalization and orthogonalization collapses representation from 326 to 4 effective conjugate pairs, leading to terminal failure."
+    ],
+    "summary_cn": [
+      "• 核心模型: 研究Muon优化器训练隐藏层矩阵、AdamW训练嵌入和输出头的Transformer，在模加法任务上观察grokking后的泛化崩溃现象。",
+      "• 数据来源: 使用模加法(a+b) mod 113，并变化模数、宽度、训练比例、深度以及减法任务，共九种配置。",
+      "• 主要结论: 所有配置在grok后都出现泛化崩溃；AdamW参考模型在五个种子中四个低于阈值，准确率降至27.59%。",
+      "• 机制分析: 失败源于表示-读出接口的不可辨识性，梯度降至1e-6，Muon和AdamW的步长弹性差异大（-0.03 vs +1.5），且Muon移动速度是AdamW的8倍。",
+      "• 干预效果: 冻结嵌入/读出或隐藏层可防止崩溃；移除Muon的归一化和正交化会导致表示坍缩（从326到4个有效共轭对），最终失败。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low. The paper focuses on a failure mode in a specific optimizer setting, not on a profitable trading strategy. The findings are more relevant to model robustness in ML, not directly to alpha generation.",
+      "• Implementation Risk: High. The instability is sensitive to optimizer choices and architecture details. Reproducing the exact conditions is challenging, and the paper does not provide a practical solution for trading.",
+      "• Novelty: Moderate. The paper identifies a new failure mode (post-grokking collapse) and analyzes its cause, but the phenomenon is specific to Muon and may not generalize to other optimizers or tasks.",
+      "• Relevance: Low for quantitative finance. The paper does not address financial data or trading signals. The insights could be applied to improve model stability in ML-based trading, but the direct applicability is limited."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次揭示Muon优化器在grokking后出现泛化崩溃，并定位到表示-读出接口的不可辨识性，为优化器稳定性研究提供新视角。",
+      "• 实盘坑: 该现象高度依赖优化器配置和架构细节，实盘中模型可能突然失效，且难以预测。若用于交易模型，需谨慎监控和回滚机制。",
+      "• 复现难度: 高。需要精确复现Muon和AdamW的混合使用、特定任务和超参数，且论文未提供完整代码，复现成本高。",
+      "• 应用前景: 对量化金融的直接应用价值低，但可启发对模型鲁棒性的重视，避免在交易中使用不稳定的优化器组合。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2608.07433v1",
+    "title": "Wasserstein Policy Gradient for Entropy-Regularized Linear-Quadratic Control",
+    "pdf_url": "https://arxiv.org/pdf/2608.07433v1",
+    "published": "2026-08-07",
+    "crawled_at": "2026-08-10 20:27:49",
+    "ai_score": 6.5,
+    "translated_title": "熵正则化线性二次控制的Wasserstein策略梯度",
+    "summary_en": "• Model Architecture: The paper proposes a Wasserstein policy gradient (WPG) method for entropy-regularized linear-quadratic (LQ) control, where the policy is updated via optimal transport in the action space, leading to a finite-dimensional ODE for the feedback gain and action covariance.\n• Data: The study is purely theoretical, using synthetic LQ control problems with known dynamics and cost parameters; no real-world data is used.\n• Performance Metrics: The key theoretical results include global well-posedness of the ODE, exponential convergence from any admissible initialization, and a positive convergence exponent in the zero-temperature limit without perturbative factors like exp(-c/τ).",
+    "summary_cn": "• 核心模型: 提出Wasserstein策略梯度（WPG）方法，通过动作空间中的最优传输更新策略，针对熵正则化线性二次（LQ）控制问题，将策略更新简化为关于反馈增益和动作协方差的有限维ODE。\n• 数据来源: 纯理论分析，使用合成LQ控制问题，无真实数据。\n• 主要结论: 证明了ODE的全局适定性和指数收敛性，且收敛指数在温度趋于零时保持正数，不包含exp(-c/τ)形式的微扰因子。",
+    "verdict_en": "• Alpha Potential: The theoretical guarantees are strong, but the setting is restrictive (LQ control) and may not directly translate to financial markets; potential for portfolio optimization with quadratic costs.\n• Implementation Risk: High, as it requires accurate estimation of system dynamics and cost matrices; the ODE-based update may be sensitive to model misspecification.\n• Novelty: The use of Wasserstein gradient in RL is novel, but the LQ setting is well-studied; the contribution is mainly theoretical, with limited practical guidance.",
+    "verdict_cn": "• 创新点: 将Wasserstein梯度引入策略优化，理论上证明了在LQ框架下的全局收敛性，为熵正则化RL提供了新视角。\n• 实盘坑: 理论假设强（线性动力学、二次成本），实际金融市场非线性、非平稳，直接应用风险高；ODE更新依赖精确模型，参数估计误差可能导致发散。\n• 复现难度: 高，需要扎实的数学功底和数值实现，且缺乏基准实验，难以验证实际效果。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2608.07430v1",
+    "title": "Diffusion LLMs as Targets and Adversaries: Mechanistic Safety Exploits",
+    "pdf_url": "https://arxiv.org/pdf/2608.07430v1",
+    "published": "2026-08-07",
+    "crawled_at": "2026-08-10 20:27:59",
+    "ai_score": 5.5,
+    "translated_title": "扩散大语言模型作为目标与对手：机制性安全漏洞利用",
+    "summary_en": [
+      "• Model Architecture: The paper investigates Diffusion Large Language Models (DLLMs) that replace autoregressive next-token prediction with iterative parallel denoising, focusing on their internal safety mechanisms.",
+      "• Data used: The study uses various open and proprietary DLLMs including LLaDA, Dream, Fast-dLLM, and targets like Llama-3-8B-Instruct, Qwen2.5-7B-Instruct, and Gemini-2.5-Flash-Lite, but does not specify the exact training datasets.",
+      "• Performance metrics: Key metrics include Attack Success Rate (ASR) and AUROC for prompt separability. Self-pruning increases ASR from 2.6% to 73.8% on LLaDA and from 1.9% to 86.6% on Dream; transfer pruning from Qwen2.5 increases ASR to 73.2% on Dream and 86.3% on Fast-dLLM. The proposed SN-Guided Diffusion achieves AUROC=1.0 and transfer ASR up to 77.1% on Llama-3-8B-Instruct, 86.9% on Qwen2.5-7B-Instruct, and 74.3% on Gemini-2.5-Flash-Lite with only 20 generation episodes per prompt."
+    ],
+    "summary_cn": [
+      "• 核心模型: 研究扩散大语言模型（DLLMs），其用迭代并行去噪替代自回归下一个词预测，并分析其内部安全机制。",
+      "• 数据来源: 使用多种开源和专有DLLM，包括LLaDA、Dream、Fast-dLLM，以及目标模型如Llama-3-8B-Instruct、Qwen2.5-7B-Instruct和Gemini-2.5-Flash-Lite，但未明确训练数据。",
+      "• 主要结论: 安全对齐在DLLM中稀疏且可迁移；自剪枝将ASR从2.6%提升至73.8%（LLaDA）和从1.9%提升至86.6%（Dream）；迁移剪枝从Qwen2.5将ASR提升至73.2%（Dream）和86.3%（Fast-dLLM）。提出的SN-Guided Diffusion实现AUROC=1.0，迁移ASR最高达77.1%（Llama-3-8B-Instruct）、86.9%（Qwen2.5-7B-Instruct）和74.3%（Gemini-2.5-Flash-Lite），仅需每个提示20次生成。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: The paper focuses on safety vulnerabilities, not directly on financial alpha. However, the techniques for manipulating LLM outputs could be used for market sentiment manipulation or generating misleading financial narratives, which might be exploited for trading strategies, but this is speculative and ethically questionable.",
+      "• Implementation Risk: High. The methods require deep understanding of DLLM internals and access to model weights or APIs. The transfer attacks are complex and may not generalize to other models. Additionally, using such attacks could violate terms of service and legal boundaries.",
+      "• Novelty: The paper introduces a novel framework (SN-Guided Diffusion) for black-box jailbreaking of DLLMs, which is a new area. The finding that safety alignment is sparse and transferable is interesting but not directly applicable to quantitative finance."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次系统研究DLLM的安全机制漏洞，提出SN-Guided Diffusion黑盒越狱框架，实现高攻击成功率和近乎完美的提示分离，但创新点主要在AI安全领域，与量化交易无关。",
+      "• 实盘坑: 直接应用于量化交易不现实。攻击技术可能被用于操纵市场情绪或生成误导性信息，但涉及法律和道德风险，且实施复杂，需要模型内部访问权限。",
+      "• 复现难度: 高。需要复现DLLM架构、安全神经元定位和剪枝技术，以及黑盒优化，对计算资源和专业知识要求高。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2608.07423v1",
+    "title": "Cloud-Boosted Low-Compute Multi-Channel Speech Enhancement",
+    "pdf_url": "https://arxiv.org/pdf/2608.07423v1",
+    "published": "2026-08-07",
+    "crawled_at": "2026-08-10 20:28:07",
+    "ai_score": 5.5,
+    "translated_title": "云增强的低计算量多通道语音增强",
+    "summary_en": "• Model Architecture: Proposes a collaborative framework with three techniques: delayed server output as additional input, layerwise feature boosting, and collaborative multichannel Wiener filtering for beamforming.\n• Data used: Not specified in the abstract; likely uses standard speech enhancement datasets (e.g., DNS Challenge) but details are omitted.\n• Performance metrics: Outperforms edge-only baseline with minimal additional computational overhead; specific metrics (e.g., PESQ, STOI) not mentioned in abstract.\n• Key contribution: Demonstrates that knowledge boosting can be effective for speech enhancement when combined with collaborative filtering and feature boosting.",
+    "summary_cn": "• 核心模型: 提出一种协作框架，包含三种技术：延迟服务器输出作为额外输入、逐层特征提升、以及协作多通道维纳滤波用于波束形成。\n• 数据来源: 摘要未明确提及，可能使用标准语音增强数据集（如DNS挑战），但细节缺失。\n• 主要结论: 该框架显著优于仅边缘模型，且额外计算开销极小；具体指标（如PESQ、STOI）未在摘要中给出。\n• 创新点: 将知识提升与协作滤波结合，改善了语音增强性能。",
+    "verdict_en": "• Alpha Potential: Low for financial trading; this is a speech enhancement paper, not directly applicable to alpha generation.\n• Implementation Risk: High for quant use; requires domain adaptation and is not directly transferable to financial data.\n• Novelty: Moderate; combines existing techniques (knowledge boosting, feature boosting, Wiener filtering) in a novel way for speech enhancement.\n• Relevance: Minimal for hedge fund; only useful if exploring cross-domain deep learning techniques.",
+    "verdict_cn": "• 创新点: 将知识提升与协作维纳滤波结合，在语音增强领域有一定新意，但技术本身并非颠覆性。\n• 实盘坑: 与金融交易无关，直接应用于量化策略几乎不可能，需大量改造。\n• 复现难度: 中等，需要语音处理背景和协作框架实现，但公开数据集可能可用。\n• 量化相关性: 极低，仅适合作为跨领域深度学习技术的参考。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2608.07420v1",
+    "title": "Beyond Myopic World Models: Long-Horizon End-to-End Training for Direct Future Prediction",
+    "pdf_url": "https://arxiv.org/pdf/2608.07420v1",
+    "published": "2026-08-07",
+    "crawled_at": "2026-08-10 20:28:15",
+    "ai_score": 7.2,
+    "translated_title": "超越短视世界模型：面向直接未来预测的长时程端到端训练",
+    "summary_en": [
+      "• Model Architecture: Introduces Direct Prediction World Model (DPWM), a non-recursive architecture that compresses an arbitrary-length action sequence into a single embedding and predicts the endpoint observation in a single forward pass, avoiding recurrent rollout in both prediction and gradient propagation.",
+      "• Data used: Evaluated on continuous-control benchmarks (e.g., MuJoCo) and pixel-based benchmarks (e.g., Atari), with varying prediction horizons.",
+      "• Performance metrics: Reports substantial improvements in long-horizon endpoint prediction over recursive world-model baselines, with larger gains as horizon increases; also shows recurrent baselines benefit from the same long-horizon endpoint objective, indicating the training objective is the main driver."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出直接预测世界模型（DPWM），一种非递归架构，将任意长度的动作序列压缩为单一嵌入，并通过单次前向传播预测终点观测，避免递归展开在预测和梯度传播中的使用。",
+      "• 数据来源: 在连续控制基准（如MuJoCo）和基于像素的基准（如Atari）上评估，涵盖不同预测时域。",
+      "• 主要结论: 在长时程终点预测上显著优于递归世界模型基线，且时域越长优势越大；同时显示递归基线在相同长时程目标下也能受益，表明训练目标而非骨干网络是主要驱动因素。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate. The focus on long-horizon prediction is relevant for model-based RL in trading, but direct application to financial time series is unclear; potential for improving simulation-based strategies.",
+      "• Implementation Risk: High. Requires careful adaptation to financial data (non-stationary, noisy), and the non-recursive architecture may not capture temporal dependencies as effectively as recurrent models in finance.",
+      "• Novelty: High. Challenges the common practice of short-horizon training in world models, proposing a paradigm shift to end-to-end long-horizon objectives; empirical evidence supports the claim."
+    ],
+    "verdict_cn": [
+      "• 创新点: 挑战世界模型普遍采用的短时程训练范式，提出端到端长时程目标，实证表明训练目标比网络结构更重要，具有较高学术价值。",
+      "• 实盘坑: 金融数据非平稳且噪声大，直接应用需大量调整；非递归架构可能难以捕捉金融时间序列的长期依赖，且计算成本可能较高。",
+      "• 复现难度: 中等。需要实现DPWM架构和长时程训练目标，但公开基准（如MuJoCo）可复现；金融领域需自行构建数据管道。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2608.07419v1",
+    "title": "Beyond Post-Hoc Temperature Scaling: Bilevel Optimization for LLM Calibration",
+    "pdf_url": "https://arxiv.org/pdf/2608.07419v1",
+    "published": "2026-08-07",
+    "crawled_at": "2026-08-10 20:28:23",
+    "ai_score": 6.5,
+    "translated_title": "超越事后温度缩放：用于LLM校准的双层优化",
+    "summary_en": [
+      "• Model Architecture: The paper proposes a bilevel optimization framework for calibrating LLMs, where the lower level trains the model with a parametric loss and the upper level selects loss hyperparameters to maximize predictive entropy.",
+      "• Data used: Experiments are conducted on multiple-choice and open-ended generative question answering tasks, likely using standard benchmarks such as MMLU and TriviaQA, though specific datasets are not detailed in the abstract.",
+      "• Performance metrics: The method demonstrates improved calibration, particularly in out-of-domain generalization, compared to traditional post-hoc temperature scaling."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出双层优化框架，下层用参数化损失训练模型，上层选择损失超参数以最大化预测熵，从而改善校准。",
+      "• 数据来源: 实验涵盖多项选择和开放式生成问答任务，可能使用MMLU、TriviaQA等标准基准，但摘要未明确具体数据集。",
+      "• 主要结论: 该方法在域外泛化上优于传统事后温度缩放，能有效降低LLM的过度自信。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: The method directly addresses model calibration, which is crucial for risk management in trading applications, but its direct alpha generation is limited; it may improve downstream decision-making.",
+      "• Implementation Risk: The bilevel optimization and first-order approximation add complexity; implementation requires careful tuning and may be computationally expensive for large models.",
+      "• Novelty: While temperature scaling is standard, the bilevel optimization for calibration is relatively novel and could be adapted to other domains, but the idea of entropy maximization is not entirely new."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将双层优化引入校准，通过最大化熵直接抑制过度自信，在域外泛化上有优势，但熵最大化并非全新概念。",
+      "• 实盘坑: 双层优化计算成本高，且校准改善对交易策略的直接影响有限，需结合具体应用场景评估。",
+      "• 复现难度: 需要大规模计算资源，且超参数选择敏感，复现门槛较高。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2608.07411v1",
+    "title": "GeoBenchLLM: A Comprehensive Benchmark for Evaluating LLMs on Geo-Related Tasks",
+    "pdf_url": "https://arxiv.org/pdf/2608.07411v1",
+    "published": "2026-08-07",
+    "crawled_at": "2026-08-10 20:28:31",
+    "ai_score": 4.5,
+    "translated_title": "GeoBenchLLM：评估大语言模型在地理相关任务上的综合基准",
+    "summary_en": "• Model Architecture: Evaluates a set of LLMs, likely including GPT, LLaMA, etc., on geo-spatial and temporal understanding tasks, focusing on reasoning and size effects.\n• Data used: Twelve publicly available datasets from diverse geo-related tasks and domains, covering spatial and temporal aspects.\n• Performance metrics: Overall performance measured across tasks, with results showing reasoning and model size strongly impact performance.\n• Benchmark design: Comprehensive benchmark for probing LLMs on geo-related tasks, publicly available on GitHub.\n• Key finding: Larger models with better reasoning capabilities perform better on geo-related tasks.",
+    "summary_cn": "• 核心模型: 评估了多种大语言模型（如GPT、LLaMA等）在地理空间和时间理解任务上的表现，重点关注推理能力和模型规模的影响。\n• 数据来源: 使用了12个公开数据集，涵盖多样化的地理相关任务和领域，包括空间和时间维度。\n• 主要结论: 推理能力和模型规模对整体性能有显著影响，模型越大、推理能力越强，表现越好。\n• 基准设计: 提供了一个全面的基准测试框架，用于探测LLM在地理相关任务上的能力，并公开了代码。",
+    "verdict_en": "• Alpha Potential: Low for direct trading; no financial market application, but may be useful for geo-spatial data analysis in commodity or real estate trading.\n• Implementation Risk: High for quant use; requires adaptation to financial data and tasks, which is not straightforward.\n• Novelty: Moderate; benchmark for geo-related LLM tasks is new, but similar benchmarks exist for other domains.\n• Practicality: Limited for hedge fund; more relevant for NLP/LLM research community.\n• Overall: Not directly applicable to alpha generation; may be a niche tool for alternative data processing.",
+    "verdict_cn": "• 创新点: 提出了一个针对地理相关任务的大语言模型综合基准，填补了该领域的空白，但创新性一般。\n• 实盘坑: 与金融市场关联度低，直接用于量化交易的可能性小，需要大量改造才能应用于地理空间数据分析。\n• 复现难度: 中等，数据集公开，但需要处理地理数据，且评估框架可能不适用于金融场景。\n• 总体评价: 对量化投资价值有限，更适合学术研究，不建议作为主要策略依据。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2608.06377v1",
     "title": "Learning When to Trust via Selective Context Preference Optimization",
     "pdf_url": "https://arxiv.org/pdf/2608.06377v1",
@@ -45531,346 +45833,6 @@
     "journal_info": {
       "name": "NeurIPS",
       "status": "Under Review"
-    }
-  },
-  {
-    "id": "2512.19649v1",
-    "title": "Deep Legendre Transform",
-    "pdf_url": "https://arxiv.org/pdf/2512.19649v1",
-    "published": "2025-12-22",
-    "crawled_at": "2025-12-23 20:01:57",
-    "ai_score": 7.8,
-    "translated_title": "深度勒让德变换",
-    "summary_en": [
-      "• Model Architecture: Uses implicit Fenchel formulation with gradient-based optimization framework for convex conjugation, incorporating symbolic regression via Kolmogorov-Arnold networks for exact solutions in specific cases.",
-      "• Data used: Numerical experiments on high-dimensional convex functions (exact functions not specified in abstract), likely synthetic test functions from convex analysis literature.",
-      "• Performance metrics: Demonstrates accurate results across high-dimensional examples with a posteriori error estimates; outperforms traditional methods in scalability and recent neural approaches in computational efficiency."
-    ],
-    "summary_cn": [
-      "• 核心模型: 基于隐式Fenchel公式的梯度优化框架，用于凸共轭计算，结合Kolmogorov-Arnold网络进行符号回归以获取精确解。",
-      "• 数据来源: 高维凸函数的数值实验（摘要未指定具体函数），可能采用凸分析文献中的合成测试函数。",
-      "• 主要结论: 在多个高维示例中实现准确结果，提供后验误差估计；相比传统方法具有更好的可扩展性，比近期神经网络方法计算更高效。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate - could enhance optimization-based trading strategies or risk modeling where convex conjugates are used, but direct financial applications are not demonstrated.",
-      "• Implementation Risk: High - requires expertise in convex analysis and deep learning; numerical stability in high-dimensional finance data untested.",
-      "• Novelty: Significant - novel integration of implicit Fenchel formulation with gradient methods for convex conjugation, addressing scalability issues in high dimensions."
-    ],
-    "verdict_cn": [
-      "• 创新点: 显著 - 将隐式Fenchel公式与梯度方法结合用于凸共轭计算，解决高维可扩展性问题，引入符号回归提升精确性。",
-      "• 实盘坑: 高 - 需凸分析和深度学习专业知识；高维金融数据的数值稳定性未经验证；计算复杂度可能影响实时交易。",
-      "• 复现难度: 中高 - 需要实现复杂的优化框架和符号回归组件，但对开源代码或详细方法论的依赖程度未知。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2512.19643v1",
-    "title": "The Best of Both Worlds: Hybridizing Neural Operators and Solvers for Stable Long-Horizon Inference",
-    "pdf_url": "https://arxiv.org/pdf/2512.19643v1",
-    "published": "2025-12-22",
-    "crawled_at": "2025-12-23 20:02:19",
-    "ai_score": 8.5,
-    "translated_title": "两全其美：融合神经算子与求解器实现稳定长时域推理",
-    "summary_en": [
-      "• Model Architecture: ANCHOR (Adaptive Numerical Correction for High-fidelity Operator Rollouts) hybrid framework combining pretrained neural operators with classical numerical solvers, using physics-informed residual-based error estimator with exponential moving average (EMA) monitoring",
-      "• Data used: Evaluated on four canonical PDEs: 1D and 2D Burgers' equations, 2D Allen-Cahn equation, and 3D heat conduction equation; training data not specified but presumably synthetic/benchmark datasets",
-      "• Performance metrics: Demonstrated reliable bounding of long-horizon error growth, stabilization of extrapolative rollouts, improved robustness over standalone neural operators, and substantial efficiency gains over high-fidelity numerical solvers; EMA-based estimator showed strong correlation with true relative L2 error"
-    ],
-    "summary_cn": [
-      "• 核心模型: ANCHOR混合框架，将预训练神经算子与经典数值求解器结合，采用基于物理的残差误差估计器，通过指数移动平均(EMA)监控误差累积",
-      "• 数据来源: 在四个经典PDE上进行评估：1D和2D Burgers方程、2D Allen-Cahn方程、3D热传导方程；训练数据未明确说明，推测为合成/基准数据集",
-      "• 主要结论: 可靠地限制了长时域误差增长，稳定了外推滚动预测，相比独立神经算子显著提升鲁棒性，同时比高保真数值求解器效率大幅提高；EMA估计器与真实相对L2误差强相关"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High for quantitative finance applications involving PDE-based pricing models (options, derivatives), risk simulations, or any time-series prediction where error accumulation is critical; enables stable long-horizon forecasting with controlled error bounds",
-      "• Implementation Risk: Moderate - requires integration of neural operators with traditional solvers, physics-informed error estimation adds complexity, real-time EMA monitoring may introduce computational overhead in production systems",
-      "• Novelty: Significant - introduces adaptive correction mechanism inspired by numerical analysis, data-free instance-aware error control during inference, addresses critical compounding error problem in autoregressive neural operators"
-    ],
-    "verdict_cn": [
-      "• 创新点: 显著 - 引入受数值分析启发的自适应校正机制，推理过程中实现无需数据的实例感知误差控制，解决了自回归神经算子中关键的误差累积问题",
-      "• 实盘坑: 中等 - 需要将神经算子与传统求解器集成，基于物理的误差估计增加复杂性，实时EMA监控可能在生产系统中引入计算开销",
-      "• 复现难度: 中等偏高 - 需要神经算子预训练、数值求解器集成、EMA监控系统实现；四个PDE基准测试提供了明确验证路径但需要相应数值模拟基础设施"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2512.19621v1",
-    "title": "Counterexamples for FX Options Interpolations -- Part I",
-    "pdf_url": "https://arxiv.org/pdf/2512.19621v1",
-    "published": "2025-12-22",
-    "crawled_at": "2025-12-23 20:02:36",
-    "ai_score": 7.5,
-    "translated_title": "外汇期权插值反例研究——第一部分",
-    "summary_en": [
-      "• Model Architecture: The paper critiques popular interpolation methods used in FX options pricing, focusing on their breakdown in specific scenarios rather than proposing a new model.",
-      "• Data used: The study employs theoretical counterexamples and simulated scenarios to demonstrate where interpolation methods fail, without specifying real market data.",
-      "• Performance metrics: The paper evaluates interpolation methods based on their robustness and accuracy in extreme or non-standard market conditions, highlighting potential pricing errors."
-    ],
-    "summary_cn": [
-      "• 核心模型: 本文批判性地分析外汇期权定价中常用的插值方法，而非提出新模型，重点揭示其在特定场景下的失效问题。",
-      "• 数据来源: 研究基于理论反例和模拟场景，展示插值方法在极端或非标准市场条件下的失败案例，未使用实际市场数据。",
-      "• 主要结论: 指出流行插值方法在风险管理中可能引入显著定价误差，特别是在处理奇异衍生品或局部波动率模型时。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Low to moderate; the paper identifies pitfalls in existing methods but does not provide a superior alternative, limiting direct alpha generation.",
-      "• Implementation Risk: High; the counterexamples highlight critical failures that could lead to mispricing and increased risk in FX options portfolios.",
-      "• Novelty: Moderate; while the focus on interpolation breakdowns is specific, the concept of testing interpolation robustness is not entirely new in quantitative finance."
-    ],
-    "verdict_cn": [
-      "• 创新点: 中等；集中于外汇期权插值方法的系统性反例分析，但未突破现有风险管理框架。",
-      "• 实盘坑: 高；揭示的插值失效可能导致定价偏差，在实盘中需谨慎验证插值方法的边界条件。",
-      "• 复现难度: 低；基于理论反例，易于复现和测试，适合作为风险管理的参考案例。"
-    ],
-    "ai_strategy": "Risk-Mgmt",
-    "journal_info": {
-      "name": "ArXiv Preprint",
-      "status": "Preprint"
-    }
-  },
-  {
-    "id": "2512.19611v1",
-    "title": "Heston vol-of-vol and the VVIX",
-    "pdf_url": "https://arxiv.org/pdf/2512.19611v1",
-    "published": "2025-12-22",
-    "crawled_at": "2025-12-23 20:02:55",
-    "ai_score": 7.2,
-    "translated_title": "Heston波动率模型的波动率参数与VVIX指数关系研究",
-    "summary_en": [
-      "• Model Architecture: Analyzes the Heston stochastic volatility model with focus on the vol-of-vol parameter, presenting four estimation methods: two based on variance transition density, one analytical approximation, and one PDE-based approach using SPX500 data.",
-      "• Data used: Utilizes SPX500 (S&P 500) underlying data for PDE-based VVIX estimation, with implied volatility data for calibration purposes.",
-      "• Performance metrics: Evaluates calibration stability improvement through VVIX estimation methods, though specific quantitative metrics are not detailed in the abstract."
-    ],
-    "summary_cn": [
-      "• 核心模型: 基于Heston随机波动率模型，重点研究波动率参数（vol-of-vol）与VVIX（波动率波动率指数）的关系，提出四种VVIX估计方法。",
-      "• 数据来源: 使用SPX500（标普500）基础数据用于PDE方法估计VVIX，并依赖隐含波动率数据进行模型校准。",
-      "• 主要结论: 通过VVIX估计方法可提升Heston模型的校准稳定性，但具体量化改进程度未在摘要中明确说明。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate - VVIX-based calibration could improve exotic option pricing accuracy, potentially generating alpha through better volatility surface fitting.",
-      "• Implementation Risk: High - Heston model calibration is notoriously unstable; real-time implementation requires robust numerical methods and market data quality control.",
-      "• Novelty: Limited - The paper applies existing VVIX concepts to Heston calibration rather than introducing fundamentally new models or methodologies."
-    ],
-    "verdict_cn": [
-      "• 创新点: 有限 - 将VVIX概念应用于Heston模型校准，属于现有方法的组合应用而非理论突破。",
-      "• 实盘坑: 高 - Heston模型校准本身不稳定，实盘需处理数值收敛问题、市场数据噪声及计算延迟。",
-      "• 复现难度: 中等 - 四种方法中PDE方法计算复杂，但基于过渡密度的方法相对标准，整体复现需较强数值计算能力。"
-    ],
-    "ai_strategy": "Risk-Mgmt",
-    "journal_info": {
-      "name": "ArXiv Preprint",
-      "status": "Preprint"
-    }
-  },
-  {
-    "id": "2512.19605v1",
-    "title": "KerJEPA: Kernel Discrepancies for Euclidean Self-Supervised Learning",
-    "pdf_url": "https://arxiv.org/pdf/2512.19605v1",
-    "published": "2025-12-22",
-    "crawled_at": "2025-12-23 20:03:17",
-    "ai_score": 7.5,
-    "translated_title": "KerJEPA：用于欧几里得自监督学习的核差异方法",
-    "summary_en": [
-      "• Model Architecture: Introduces KerJEPA, a family of self-supervised learning algorithms with kernel-based regularizers, expanding on Joint-Embedding Predictive Architectures (JEPAs) by incorporating flexible kernel choices and priors.",
-      "• Data used: Not explicitly specified in the abstract; typical for self-supervised learning papers, likely uses standard image or text datasets (e.g., ImageNet, CIFAR) for validation, but details are omitted.",
-      "• Performance metrics: Claims improved training stability and design flexibility; references provable gains in downstream generalization from regularizing Euclidean representations toward isotropic Gaussian priors, but no specific numerical results provided."
-    ],
-    "summary_cn": [
-      "• 核心模型: 提出KerJEPA，一种基于核正则化的自监督学习算法家族，扩展了联合嵌入预测架构（JEPA），通过引入灵活的核函数和先验分布来增强模型表达能力。",
-      "• 数据来源: 摘要中未明确说明；推测使用标准图像或文本数据集（如ImageNet、CIFAR）进行验证，但缺乏具体数据细节。",
-      "• 主要结论: 通过计算切片最大均值差异（MMD）的高维极限闭式解，开发出具有改进训练稳定性和设计灵活性的替代KerJEPA变体，理论上有助于下游任务泛化。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate; kernel-based regularizers could enhance representation learning in financial time series or alternative data, potentially improving feature extraction for alpha signals, but direct applications are untested.",
-      "• Implementation Risk: High; relies on theoretical advancements in self-supervised learning, with no empirical validation in the abstract; practical deployment in noisy, non-stationary market data poses significant challenges.",
-      "• Novelty: High; introduces a novel family of algorithms (KerJEPAs) by generalizing kernel choices and priors beyond existing methods like LeJEPA, offering a fresh approach to regularization in Euclidean spaces."
-    ],
-    "verdict_cn": [
-      "• 创新点: 高；通过扩展核函数和先验分布类别，提出KerJEPA新算法家族，在自监督学习的正则化方法上具有理论创新，可能推动表示学习领域发展。",
-      "• 实盘坑: 高；摘要缺乏实证结果，实际应用于金融市场数据时，面临数据非平稳性、噪声干扰等挑战，稳定性未经市场验证，风险较大。",
-      "• 复现难度: 中；基于公开的学术框架（如PyTorch/TensorFlow）可能较易复现，但需要高维极限计算和核函数调优，对工程实现有一定技术要求。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2512.19576v1",
-    "title": "LeLaR: The First In-Orbit Demonstration of an AI-Based Satellite Attitude Controller",
-    "pdf_url": "https://arxiv.org/pdf/2512.19576v1",
-    "published": "2025-12-22",
-    "crawled_at": "2025-12-23 20:03:33",
-    "ai_score": 8.2,
-    "translated_title": "LeLaR：首次在轨演示基于AI的卫星姿态控制器",
-    "summary_en": [
-      "• Model Architecture: Deep Reinforcement Learning (DRL) agent trained entirely in simulation for adaptive attitude control, deployed on InnoCube 3U nanosatellite.",
-      "• Data used: Training data generated from simulation environment; real-world data from in-orbit maneuvers on the satellite for validation and comparison.",
-      "• Performance metrics: Steady-state metrics confirm robust performance during repeated in-orbit maneuvers; comparison with classical PD controller shows AI-based controller's effectiveness."
-    ],
-    "summary_cn": [
-      "• 核心模型: 完全在模拟环境中训练的深度强化学习（DRL）智能体，用于自适应姿态控制，部署于InnoCube 3U纳米卫星。",
-      "• 数据来源: 训练数据来自模拟环境生成；验证和比较数据来自卫星在轨机动的真实世界数据。",
-      "• 主要结论: 稳态指标证实了在重复在轨机动中的鲁棒性能；与经典PD控制器的比较显示了基于AI的控制器的有效性。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High potential for adaptive control in dynamic environments like satellite operations, reducing design time and improving robustness against uncertainties.",
-      "• Implementation Risk: Significant risk due to Sim2Real gap; discrepancies between simulation and real satellite behavior must be carefully managed for reliable deployment.",
-      "• Novelty: First successful in-orbit demonstration of an AI-based attitude controller, pioneering the application of DRL in real-world satellite control systems."
-    ],
-    "verdict_cn": [
-      "• 创新点: 首次成功在轨演示基于AI的姿态控制器，开创了DRL在真实卫星控制系统中的应用先河。",
-      "• 实盘坑: Sim2Real差距带来显著风险；模拟与真实卫星行为之间的差异需仔细管理以确保可靠部署。",
-      "• 复现难度: 高难度，需要专业卫星硬件、模拟环境和DRL训练基础设施，对资源和专业知识要求苛刻。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "ArXiv Preprint",
-      "status": "Accepted"
-    }
-  },
-  {
-    "id": "2512.19554v1",
-    "title": "CARE What Fails: Contrastive Anchored-REflection for Verifiable Multimodal",
-    "pdf_url": "https://arxiv.org/pdf/2512.19554v1",
-    "published": "2025-12-22",
-    "crawled_at": "2025-12-23 20:03:56",
-    "ai_score": 7.8,
-    "translated_title": "CARE 关注失败：用于可验证多模态推理的对比锚定反思",
-    "summary_en": [
-      "• Model Architecture: CARE (Contrastive Anchored REflection) is a failure-centric post-training framework combining anchored-contrastive objective with Reflection-Guided Resampling (RGR) for multimodal reasoning.",
-      "• Data used: Evaluated on six verifiable visual-reasoning benchmarks including MathVista and MMMU-Pro, using Qwen2.5-VL-7B and Qwen3-VL-8B models.",
-      "• Performance metrics: Achieves 4.6-point macro-averaged accuracy improvement over GRPO on Qwen2.5-VL-7B, reaching competitive or state-of-the-art results on MathVista and MMMU-Pro with Qwen3-VL-8B."
-    ],
-    "summary_cn": [
-      "• 核心模型: CARE（对比锚定反思）是一个以失败为中心的后训练框架，结合锚定对比目标和反思引导重采样（RGR），用于多模态推理。",
-      "• 数据来源: 在六个可验证视觉推理基准（包括MathVista和MMMU-Pro）上评估，使用Qwen2.5-VL-7B和Qwen3-VL-8B模型。",
-      "• 主要结论: 在Qwen2.5-VL-7B上比GRPO提升4.6个百分点的宏观平均准确率，在Qwen3-VL-8B上于MathVista和MMMU-Pro达到竞争性或最先进水平。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate; failure-centric learning could improve model robustness in noisy financial data (e.g., news sentiment analysis), but direct trading applications are unclear.",
-      "• Implementation Risk: High; anchored-contrastive objective and RGR require precise tuning and may not scale well to real-time systems, with potential overfitting to specific benchmarks.",
-      "• Novelty: High; innovative focus on leveraging failures via contrastive subgroups and one-shot self-repair, addressing gradient stalling in RLVR, though builds on existing contrastive learning concepts."
-    ],
-    "verdict_cn": [
-      "• 创新点: 高；通过对比子组和一次性自我修复，创新性地利用失败数据，解决RLVR中的梯度停滞问题，但基于现有对比学习概念。",
-      "• 实盘坑: 高；锚定对比目标和RGR需要精细调参，可能难以扩展到实时系统，存在对特定基准过拟合的风险。",
-      "• 复现难度: 中等；依赖Qwen模型和特定基准，但框架描述清晰，复现需处理多模态数据和验证器集成。"
-    ],
-    "ai_strategy": "NLP/LLM",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2512.19550v1",
-    "title": "DFORD: Directional Feedback based Online Ordinal Regression Learning",
-    "pdf_url": "https://arxiv.org/pdf/2512.19550v1",
-    "published": "2025-12-22",
-    "crawled_at": "2025-12-23 20:04:17",
-    "ai_score": 7.2,
-    "translated_title": "DFORD：基于方向反馈的在线序数回归学习",
-    "summary_en": [
-      "• Model Architecture: Introduces an online algorithm for ordinal regression using directional feedback (left/right of actual label), with exploration-exploitation scheme and kernel-based variant for non-linear models; maintains threshold ordering via truncation trick for memory efficiency.",
-      "• Data used: Evaluated on synthetic and real-world datasets, comparing with full-information and weakly supervised ordinal regression baselines.",
-      "• Performance metrics: Achieves expected regret of O(log T); performs comparably or sometimes better than full-information counterpart in experiments."
-    ],
-    "summary_cn": [
-      "• 核心模型: 提出基于方向反馈（预测标签在真实标签左侧或右侧）的在线序数回归算法，采用探索-利用策略，并引入核方法变体处理非线性问题，通过截断技巧优化内存效率。",
-      "• 数据来源: 使用合成数据集和真实世界数据集进行测试，与全信息监督和弱监督序数回归方法对比。",
-      "• 主要结论: 算法在期望意义上保持阈值顺序，达到O(log T)的期望遗憾；在实验中表现与全信息方法相当或更优。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate; directional feedback reduces labeling cost vs. full supervision, potentially useful for sequential decision-making in finance (e.g., credit scoring, sentiment tiers) where exact labels are expensive, but limited by ordinal nature.",
-      "• Implementation Risk: High; online learning with kernel methods and truncation may face scalability issues in high-frequency settings; directional feedback assumes monotonic thresholds, which might not hold in noisy markets.",
-      "• Novelty: Moderate; introduces directional feedback to ordinal regression, extending online learning to weak supervision, but builds on existing exploration-exploitation and kernel techniques; theoretical regret bound is standard for online convex optimization."
-    ],
-    "verdict_cn": [
-      "• 创新点: 中等；将方向反馈引入序数回归，扩展了在线学习到弱监督场景，但基于现有探索-利用和核方法，理论遗憾界为在线凸优化常见结果。",
-      "• 实盘坑: 高；核方法与截断技巧在高频场景下可能扩展性不足；方向反馈假设阈值单调，在噪声市场中可能不成立；序数回归限制于有序类别，灵活性较低。",
-      "• 复现难度: 中等；算法描述清晰，但需处理在线学习和核实现细节；实验使用标准数据集，复现可行，但优化内存和实时性能需额外工程。"
-    ],
-    "ai_strategy": "Alpha-Factor",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Accepted"
-    }
-  },
-  {
-    "id": "2512.17908v1",
-    "title": "Re-Depth Anything: Test-Time Depth Refinement via Self-Supervised Re-lighting",
-    "pdf_url": "https://arxiv.org/pdf/2512.17908v1",
-    "published": "2025-12-19",
-    "crawled_at": "2025-12-22 20:01:34",
-    "ai_score": 7.8,
-    "translated_title": "重新深度任何事物：通过自监督重照明的测试时深度优化",
-    "summary_en": [
-      "• Model Architecture: Re-Depth Anything combines Depth Anything V2 (DA-V2) with large-scale 2D diffusion models, using a test-time self-supervision framework that freezes the encoder, updates intermediate embeddings, and fine-tunes the decoder to refine depth maps via re-lighting and input augmentation.",
-      "• Data used: The method operates label-free on real-world input images, leveraging shape from shading (SfS) cues in a generative context with Score Distillation Sampling (SDS), without requiring additional labeled training data.",
-      "• Performance metrics: Across diverse benchmarks, the framework achieves substantial gains in depth accuracy and realism over DA-V2, demonstrating improved handling of images far from the training distribution."
-    ],
-    "summary_cn": [
-      "• 核心模型: Re-Depth Anything 融合 Depth Anything V2 (DA-V2) 与大规模 2D 扩散模型，采用测试时自监督框架，冻结编码器、更新中间嵌入并微调解码器，通过重照明和输入增强优化深度图。",
-      "• 数据来源: 方法在真实世界输入图像上无标签运行，利用生成式上下文中的形状从阴影 (SfS) 线索和分数蒸馏采样 (SDS)，无需额外标注训练数据。",
-      "• 主要结论: 在多样化基准测试中，该框架在深度准确性和真实感上相比 DA-V2 有显著提升，展示了对远离训练分布图像的更好处理能力。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate; the method addresses domain gaps in monocular depth estimation, which could enhance computer vision applications in finance (e.g., surveillance analysis or autonomous trading environments), but direct alpha generation is limited without specific financial data integration.",
-      "• Implementation Risk: High; reliance on large-scale diffusion models and test-time optimization increases computational costs and latency, making real-time deployment challenging for high-frequency trading scenarios.",
-      "• Novelty: High; the approach innovatively bridges geometric reasoning with generative priors using SDS and targeted optimization, offering a new self-supervision avenue beyond classical photometric reconstruction."
-    ],
-    "verdict_cn": [
-      "• 创新点: 高; 该方法创新性地通过分数蒸馏采样 (SDS) 和定向优化，将几何推理与生成式先验结合，超越了传统光度重建，为自监督提供了新路径。",
-      "• 实盘坑: 高; 依赖大规模扩散模型和测试时优化增加了计算成本和延迟，对高频交易等实时场景部署构成挑战，且缺乏金融数据适配可能限制应用效果。",
-      "• 复现难度: 中等; 框架基于开源模型如 DA-V2，但集成扩散模型和优化策略需要专业知识，实验设置和基准测试的复现可能受资源限制影响。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "ArXiv Preprint",
-      "status": "Preprint"
-    }
-  },
-  {
-    "id": "2512.17899v1",
-    "title": "Distributionally Robust Imitation Learning: Layered Control Architecture for Certifiable Autonomy",
-    "pdf_url": "https://arxiv.org/pdf/2512.17899v1",
-    "published": "2025-12-19",
-    "crawled_at": "2025-12-22 20:01:56",
-    "ai_score": 7.5,
-    "translated_title": "分布鲁棒模仿学习：可认证自主性的分层控制架构",
-    "summary_en": [
-      "• Model Architecture: Proposes Distributionally Robust Imitation Policy (DRIP), a Layered Control Architecture (LCA) integrating Taylor Series Imitation Learning (TaSIL) and L1-Distributionally Robust Adaptive Control (ℓonedrac) to handle distribution shifts from policy errors and uncertainties.",
-      "• Data used: Relies on expert demonstrations for imitation learning, with robustness against aleatoric (exogenous disturbances) and epistemic (model errors) uncertainties, though specific datasets or simulation environments are not detailed.",
-      "• Performance metrics: Focuses on theoretical guarantees for certifiable autonomy, enabling safety certificates for the entire control pipeline by designing layer-centric input/output requirements, without empirical validation metrics."
-    ],
-    "summary_cn": [
-      "• 核心模型: 提出分布鲁棒模仿策略（DRIP），一种分层控制架构（LCA），整合泰勒级数模仿学习（TaSIL）和L1分布鲁棒自适应控制（ℓonedrac），以处理策略误差和不确定性引起的分布偏移。",
-      "• 数据来源: 基于专家演示进行模仿学习，针对偶发（外生扰动）和认知（模型误差）不确定性提供鲁棒性，但未指定具体数据集或仿真环境。",
-      "• 主要结论: 通过设计层中心输入/输出要求，为整个控制流程提供可认证的自主性保证，实现安全证书，但缺乏实证性能指标验证。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate; offers a framework for certifiable autonomy in robotics or autonomous systems, potentially reducing risk in high-stakes applications, but direct financial alpha generation is limited without market-specific adaptation.",
-      "• Implementation Risk: High; theoretical nature with no empirical results increases uncertainty; integration of multiple complex components (TaSIL and ℓonedrac) may lead to practical challenges in real-world deployment.",
-      "• Novelty: High; novel integration of imitation learning with distributionally robust control in a layered architecture addresses compounding errors and uncertainties, advancing certifiable autonomy pipelines."
-    ],
-    "verdict_cn": [
-      "• 创新点: 高；新颖地将模仿学习与分布鲁棒控制整合为分层架构，解决复合误差和不确定性，推动可认证自主性流程的发展。",
-      "• 实盘坑: 高；理论性强且无实证结果，增加不确定性；多个复杂组件（TaSIL和ℓonedrac）的集成可能在现实部署中带来实际挑战。",
-      "• 复现难度: 高；需要专业知识在模仿学习和鲁棒控制领域，且缺乏开源代码或详细实验设置，复现困难。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "ArXiv Preprint",
-      "status": "Preprint"
     }
   }
 ]
