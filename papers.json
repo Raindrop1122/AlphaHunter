@@ -1,5 +1,331 @@
 [
   {
+    "id": "2608.14539v1",
+    "title": "Decoding the Past: An Uncertainty-Aware Deep Learning Framework for Sex Attribution in Prehistoric Hand Stencils",
+    "pdf_url": "https://arxiv.org/pdf/2608.14539v1",
+    "published": "2026-08-14",
+    "crawled_at": "2026-08-17 20:10:47",
+    "ai_score": 2.5,
+    "translated_title": "解码过去：一种不确定性感知的深度学习框架用于史前手印模版的性别归属",
+    "summary_en": "• Model Architecture: An uncertainty-aware deep learning framework combining dual image processing, dual contour extraction, structured silhouette augmentation, model architectural diversity (EfficientNet-B3 and MobileViT-S), and ensemble-based decision aggregation. It generates twelve plausible silhouette realizations per stencil to capture boundary uncertainties, processed by two ensembles of ten deep neural networks each. • Data used: Trained on 14,036 contemporary hand samples; applied to prehistoric hand stencils. • Performance metrics: On contemporary data, ensemble models achieve accuracies exceeding 88% in older age groups. • Additional validation: Triangulated validation with UMAP + k-NN and LayerCAM for anatomical consistency.",
+    "summary_cn": "• 核心模型: 不确定性感知的深度学习框架，结合双图像处理、双轮廓提取、结构化剪影增强、模型架构多样性（EfficientNet-B3和MobileViT-S）以及集成决策聚合。每个模板生成12个可能的剪影实现以捕捉边界不确定性，由两个各含10个深度神经网络的集成处理。 • 数据来源: 使用14,036个当代手部样本训练，应用于史前手印模板。 • 主要结论: 在当代数据上，集成模型在较老年龄组中准确率超过88%。 • 额外验证: 通过UMAP + k-NN和LayerCAM进行三角验证，确保解剖一致性。",
+    "verdict_en": "• Alpha Potential: Extremely low for quantitative finance; no direct application to financial markets. • Implementation Risk: High; requires specialized archaeological data and domain expertise, not transferable to trading. • Novelty: Moderate in computer vision for archaeology, but irrelevant to hedge fund strategies. • Overall: Not suitable for investment research; lacks financial relevance.",
+    "verdict_cn": "• 创新点: 在考古学中应用不确定性感知深度学习，但金融领域无直接应用。 • 实盘坑: 无法用于交易策略，数据领域差异巨大，无alpha潜力。 • 复现难度: 需要考古学专业知识和特定数据集，复现成本高且无金融价值。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2608.14509v1",
+    "title": "Split the Labor: Separating Evidence Interpretation from Decision Aggregation",
+    "pdf_url": "https://arxiv.org/pdf/2608.14509v1",
+    "published": "2026-08-14",
+    "crawled_at": "2026-08-17 20:10:56",
+    "ai_score": 7.5,
+    "translated_title": "分工协作：将证据解释与决策聚合分离",
+    "summary_en": [
+      "• Model Architecture: Proposes a separation of evidence interpretation and decision aggregation, introducing a four-field evidence tuple (hypothesis, reliability bucket, rationale, provenance) to structure the interface. The aggregation uses calibrated log-likelihood ratios, and for the longitudinal corpus, a small sequence encoder on an auxiliary objective plus a tree ensemble with censored survival loss.",
+      "• Data used: A longitudinal corpus with outcomes resolved and before resolution, used to instantiate the principle in two settings. The paper also discusses general applicability to score-summing triage engines, diagnostic panels, and additive multi-signal detectors.",
+      "• Performance metrics: Achieves 0.921 AUPRC against 0.805 for a hand-crafted baseline in the second setting, demonstrating significant improvement. The paper also analyzes count-scale drift and posterior thresholding issues."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出将证据解释与决策聚合分离，采用四字段证据元组（假设、可靠性桶、理由、来源）作为接口，聚合使用校准的对数似然比。在纵向语料上，使用小型序列编码器加树集成（带删失生存损失）.",
+      "• 数据来源: 使用一个纵向语料库，在结果解决后和解决前分别实例化原则，同时讨论了对评分求和分诊引擎、诊断面板和加性多信号检测器的通用性.",
+      "• 主要结论: 在第二个设置中达到0.921 AUPRC，对比基线0.805，显著提升。论文还分析了计数尺度漂移和后验阈值问题，并提出了可证伪的预测."
+    ],
+    "verdict_en": [
+      "• Alpha Potential: The framework offers a principled way to improve aggregation in multi-source decision systems, which could be applied to trading signals from multiple models or data sources, potentially enhancing alpha by reducing systematic errors like count-scale drift.",
+      "• Implementation Risk: The separation requires careful design of the evidence tuple and calibration of log-likelihood ratios, which may be non-trivial in practice. The performance gain is demonstrated on a specific corpus, and generalization to financial data is uncertain.",
+      "• Novelty: The conceptual separation is novel and addresses a fundamental issue in LLM-based aggregation. The theoretical analysis of count-scale drift is insightful and applicable beyond language models, making it a valuable contribution to decision aggregation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出证据解释与决策聚合分离的框架，并识别出计数尺度漂移问题，理论分析深入，对多源信号聚合有普适意义.",
+      "• 实盘坑: 实际应用中需要精确校准对数似然比，且证据元组的设计可能复杂，在金融数据上效果未知，需谨慎验证.",
+      "• 复现难度: 中等，需要实现序列编码器和树集成，并处理删失数据，但核心思想易于理解，复现关键在于数据准备和校准."
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2608.14505v1",
+    "title": "RecipeNet: A Hierarchical Transformer for Recipe Data",
+    "pdf_url": "https://arxiv.org/pdf/2608.14505v1",
+    "published": "2026-08-14",
+    "crawled_at": "2026-08-17 20:11:04",
+    "ai_score": 6.5,
+    "translated_title": "RecipeNet：用于配方数据的层次化Transformer",
+    "summary_en": [
+      "• Model Architecture: RecipeNet uses a hierarchical Transformer with two levels: field-level encoders capture interactions within each step, and step-level encoders model sequential dependencies across steps.",
+      "• Data used: The model is evaluated on multiple recipe datasets from domains such as materials synthesis, pharmaceutical formulation, and industrial manufacturing, though specific dataset details are not provided in the abstract.",
+      "• Performance metrics: The paper reports that RecipeNet consistently outperforms existing tabular models on various tasks, but specific metrics (e.g., accuracy, F1) are not mentioned in the abstract."
+    ],
+    "summary_cn": [
+      "• 核心模型: RecipeNet采用层次化Transformer架构，包含字段级编码器（捕捉步骤内字段交互）和步骤级编码器（建模步骤间顺序依赖）。",
+      "• 数据来源: 实验涵盖材料合成、药物配方和工业制造等多个领域的配方数据集，但摘要未提供具体数据集名称和规模。",
+      "• 主要结论: 在多个配方数据集和任务上，RecipeNet一致优于现有表格学习方法，验证了层次化和序列建模对配方表示学习的价值。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: The hierarchical approach could be adapted to financial time series or order flow data, potentially capturing multi-scale dependencies for alpha generation, but direct application is unclear.",
+      "• Implementation Risk: The architecture is complex and may require significant computational resources; the paper lacks details on hyperparameters and training stability, increasing replication risk.",
+      "• Novelty: While hierarchical Transformers are not new, applying them to recipe data with structured fields is a novel contribution, but the general concept is not groundbreaking."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将层次化Transformer应用于配方数据，处理步骤内字段交互和步骤间依赖，具有一定新颖性，但并非颠覆性创新。",
+      "• 实盘坑: 金融数据与配方数据差异大，直接迁移可能失效；模型复杂度高，实盘部署成本高，且摘要未提供关键细节，复现难度大。",
+      "• 复现难度: 摘要信息不足，缺少数据集、超参数和详细实验设置，复现难度较高。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2608.14502v1",
+    "title": "Universal Thermodynamic Interatomic Potentials for Crystalline Materials",
+    "pdf_url": "https://arxiv.org/pdf/2608.14502v1",
+    "published": "2026-08-14",
+    "crawled_at": "2026-08-17 20:11:11",
+    "ai_score": 5.5,
+    "translated_title": "晶体材料的通用热力学原子间势",
+    "summary_en": [
+      "• Model Architecture: Introduces TIP, extending interatomic potentials to a thermodynamically consistent Gibbs free energy model, with automatic differentiation for thermodynamic responses.",
+      "• Data used: Trained on free energies from quasi-harmonic to molecular dynamics fidelity, calibrated to higher-resolution calculations or experiments.",
+      "• Performance metrics: Returns equation of state and locates phase transitions, including dynamically stabilized phases; fine-tuning extends to alloy solubility limits and miscibility gaps."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出TIP，将原子间势扩展为热力学一致的吉布斯自由能模型，通过自动微分获得热力学响应。",
+      "• 数据来源: 训练数据涵盖从准谐波到分子动力学精度的自由能，并校准到高分辨率计算或实验。",
+      "• 主要结论: 单次评估即可获得晶体状态方程，定位相变，包括动态稳定相；微调可扩展至合金溶解度极限和混溶间隙。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low for financial markets; this is a materials science breakthrough, not directly applicable to trading strategies.",
+      "• Implementation Risk: High complexity in reproducing and adapting to financial data; requires significant domain adaptation.",
+      "• Novelty: High within materials informatics, but irrelevant to quantitative finance; no direct alpha generation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 在材料科学中创新性强，但金融领域无直接应用。",
+      "• 实盘坑: 无法直接用于交易，需大量改造，且金融数据与物理数据差异大。",
+      "• 复现难度: 复现难度高，涉及复杂物理模型和训练，对量化团队不现实。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2608.14498v1",
+    "title": "Rollplex: Cross-Phase GPU Spatial Sharing for Vision Language Model Post-Training",
+    "pdf_url": "https://arxiv.org/pdf/2608.14498v1",
+    "published": "2026-08-14",
+    "crawled_at": "2026-08-17 20:11:20",
+    "ai_score": 7.2,
+    "translated_title": "Rollplex：面向视觉语言模型后训练的跨阶段GPU空间共享",
+    "summary_en": [
+      "• Model Architecture: Rollplex is a runtime system that decomposes the reference and training phases of VLM RL post-training, moving prefix computation into the rollout decode window to overlap phases.",
+      "• Data used: The paper focuses on VLM RL post-training with dense video inputs and prompt prefixes, but does not specify a particular dataset; it uses Qwen2.5-VL-32B as the model.",
+      "• Performance metrics: On 32 H800 GPUs, Rollplex achieves 1.23x-1.30x speedup over serial colocation and 1.57x-2.24x over disaggregation under the same GPU budget, while preserving synchronous RL update semantics."
+    ],
+    "summary_cn": [
+      "• 核心模型: Rollplex是一个运行时系统，将VLM RL后训练中的参考和训练阶段分解，将前缀计算移入rollout解码窗口，实现阶段重叠。",
+      "• 数据来源: 论文未指定具体数据集，但使用Qwen2.5-VL-32B模型，处理密集视频输入和提示前缀。",
+      "• 主要结论: 在32块H800 GPU上，相比串行共置获得1.23x-1.30x加速，相比分离部署获得1.57x-2.24x加速，同时保持同步RL更新语义。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: This is a systems optimization paper, not directly a trading strategy; alpha potential is indirect, but improving VLM training efficiency could enable faster model iteration for NLP/LLM strategies.",
+      "• Implementation Risk: Requires deep understanding of GPU memory management and distributed training; integrating into existing RL pipelines is complex and may have compatibility issues.",
+      "• Novelty: The idea of cross-phase GPU sharing and parallelism-aware weight sharing is novel in the context of VLM RL, but similar concepts exist in other systems; the specific mechanisms are well-engineered."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出跨阶段GPU空间共享和并行感知权重共享，有效解决VLM RL后训练中的资源浪费问题，具有系统创新性。",
+      "• 实盘坑: 作为系统优化，直接应用于量化交易需结合NLP/LLM策略，且实现复杂，需谨慎评估收益与成本。",
+      "• 复现难度: 高，需要H800级GPU集群和分布式训练经验，且依赖特定模型（Qwen2.5-VL），复现门槛较高。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2608.14496v1",
+    "title": "Generating Benchmark Health Data Using a Tabular Diffusion Transformer",
+    "pdf_url": "https://arxiv.org/pdf/2608.14496v1",
+    "published": "2026-08-14",
+    "crawled_at": "2026-08-17 20:11:30",
+    "ai_score": 6.5,
+    "translated_title": "使用表格扩散Transformer生成基准健康数据",
+    "summary_en": [
+      "• Model Architecture: Proposes a two-stage framework: first, heterogeneous raw tables are transformed into standardized statistical tables capturing marginal distributions and pairwise correlations; second, a diffusion transformer is trained on these homogeneous statistical tables to generate synthetic statistical tables, which are then converted back to raw tables via Gaussian sampling and inverse probability integral transform.",
+      "• Data used: The paper focuses on health data, but the framework is general for cross-tabular data generation. The experiments likely use multiple heterogeneous health-related tables, though specific datasets are not mentioned in the abstract.",
+      "• Performance metrics: The abstract reports high fidelity in learned statistical representations and a favorable fidelity-diversity trade-off, but no specific quantitative metrics are given."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出两阶段框架，第一阶段将异构原始表转换为标准化统计表（捕捉边际分布和成对相关性），第二阶段用扩散Transformer生成合成统计表，再通过高斯采样和逆概率积分变换重建原始表。",
+      "• 数据来源: 论文聚焦于健康数据，但框架适用于跨表格数据生成；具体数据集未在摘要中提及。",
+      "• 主要结论: 实验表明生成的统计表示保真度高，且在保真度和多样性之间取得了良好平衡，验证了方法的有效性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low direct alpha for trading; the method is for synthetic data generation, which could be used to augment training data for models predicting health outcomes, but not directly for market signals.",
+      "• Implementation Risk: High complexity in implementing the two-stage framework, especially the diffusion transformer and the statistical table transformation; requires careful tuning and domain expertise.",
+      "• Novelty: The idea of cross-tabular data generation with a diffusion transformer is novel and could be applied to financial tabular data with multiple heterogeneous tables (e.g., different asset classes), but the paper is not finance-focused."
+    ],
+    "verdict_cn": [
+      "• 创新点: 跨表格数据生成结合扩散Transformer，解决了多异构表格的生成问题，在方法论上有一定新意。",
+      "• 实盘坑: 直接用于量化交易信号生成的可能性低，且实现复杂，需要大量调参和领域知识，实盘部署成本高。",
+      "• 复现难度: 高，涉及统计表转换和扩散模型训练，对数据和计算资源要求高，且摘要未提供具体实验细节，复现需参考完整论文。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2608.14492v1",
+    "title": "Approximate Muon with low-rank adapters",
+    "pdf_url": "https://arxiv.org/pdf/2608.14492v1",
+    "published": "2026-08-14",
+    "crawled_at": "2026-08-17 20:11:38",
+    "ai_score": 6.5,
+    "translated_title": "使用低秩适配器近似Muon优化器",
+    "summary_en": [
+      "• Model Architecture: Proposes sMuon, a low-rank approximation of the Muon optimizer, which linearizes the orthogonalization constraint and solves a least-squares problem using only matmul operations, avoiding complex decompositions.",
+      "• Data used: Experiments include supervised fine-tuning (SFT) on various models and a ReLoRA pretraining experiment, though specific datasets are not detailed in the abstract.",
+      "• Performance metrics: Reports moderate performance improvements over standard LoRA across SFT and ReLoRA pretraining, with results being model- and eval-dependent."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出sMuon，一种Muon优化器的低秩近似方法，通过线性化和最小二乘求解，仅使用矩阵乘法，避免复杂分解。",
+      "• 数据来源: 实验涵盖监督微调（SFT）和ReLoRA预训练，但摘要未明确具体数据集。",
+      "• 主要结论: 在SFT和ReLoRA预训练中，相比标准LoRA有中等性能提升，但结果依赖模型和评估设置。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: The method offers a practical way to combine Muon's benefits with LoRA's efficiency, potentially improving fine-tuning performance, but gains are moderate and not consistently significant.",
+      "• Implementation Risk: Implementation is straightforward with matmul operations, reducing complexity, but the approximation may deviate from true Muon behavior, and performance varies across tasks.",
+      "• Novelty: Addresses a known limitation of LoRA with Muon, providing a novel approximation technique, but the overall impact is limited by the moderate improvements."
+    ],
+    "verdict_cn": [
+      "• 创新点: 解决了LoRA与Muon不兼容的问题，通过线性化近似，实现简单且高效。",
+      "• 实盘坑: 性能提升有限，且依赖具体任务，可能不适用于所有场景；近似可能引入偏差。",
+      "• 复现难度: 实现简单，仅需矩阵乘法，复现难度低，但需注意超参数调整。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2608.14472v1",
+    "title": "LP-NAS: Linear Programming-based Neural Architecture Search",
+    "pdf_url": "https://arxiv.org/pdf/2608.14472v1",
+    "published": "2026-08-14",
+    "crawled_at": "2026-08-17 20:11:49",
+    "ai_score": 6.5,
+    "translated_title": "LP-NAS：基于线性规划的神经架构搜索",
+    "summary_en": [
+      "• Model Architecture: Proposes LP-NAS, a mathematical programming framework for differentiable NAS, formulating a linear program using validation-loss gradient and training-loss Hessian to compute architecture update directions. Introduces two variants, S-LP-NAS and R-LP-NAS, and applies them to DARTS search space, yielding S-LP-DARTS and R-LP-DARTS.",
+      "• Data used: Evaluates on CIFAR-10 and CIFAR-100 for architecture search and evaluation, and validates transferability on ImageNet. Compares with DARTS variants (P-DARTS, PC-DARTS, STO-DARTS) on CIFAR-10.",
+      "• Performance metrics: Reports faster convergence and higher validation performance during early search iterations compared to standard DARTS. LP-DARTS outperforms DARTS in both search and evaluation phases on CIFAR-10/100, and shows effectiveness against other variants.",
+      "• Key results: Demonstrates improved efficiency and effectiveness of LP-based approach in NAS, with potential for broader application in continuous search spaces."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出LP-NAS，一种基于线性规划的微分NAS框架，利用验证损失梯度和训练损失Hessian构建线性规划以计算架构更新方向，并引入S-LP-NAS和R-LP-NAS两种变体，应用于DARTS搜索空间得到S-LP-DARTS和R-LP-DARTS。",
+      "• 数据来源: 在CIFAR-10和CIFAR-100上进行架构搜索和评估，并在ImageNet上验证迁移性；与P-DARTS、PC-DARTS、STO-DARTS等变体在CIFAR-10上比较。",
+      "• 主要结论: 相比标准DARTS，LP-DARTS在早期搜索迭代中收敛更快、验证性能更高；在CIFAR-10/100上搜索和评估阶段均优于DARTS，并优于其他变体，展示了LP方法的有效性和效率。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Limited direct trading alpha; NAS improvements are tangential to financial markets. However, efficient architecture search could enhance deep learning models for alpha generation, but indirect and uncertain.",
+      "• Implementation Risk: High complexity in implementing LP-based updates; requires careful tuning of Hessian and gradient computations. Risk of overfitting to specific search spaces; generalization to other NAS benchmarks unclear.",
+      "• Novelty: Novel application of linear programming to NAS, providing a fresh perspective. However, the core idea is incremental over existing differentiable NAS methods; the theoretical contribution is moderate.",
+      "• Practical relevance: For hedge funds, the value lies in potential improvements to model architecture search, but the paper lacks direct financial applications or benchmarks. The computational overhead may not justify gains in typical trading scenarios."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将线性规划引入NAS，利用二阶信息（Hessian）指导架构搜索，思路新颖，但本质是对现有可微NAS的增量改进，理论深度一般。",
+      "• 实盘坑: 金融领域直接应用价值低，架构搜索优化对交易信号提升不明确；实现复杂，需精确计算Hessian，计算成本高，可能不适合高频或大规模实盘。",
+      "• 复现难度: 中等偏高，需要扎实的优化和深度学习基础，且对超参数敏感；论文未提供代码，复现需自行实现，耗时较长。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2608.14466v1",
+    "title": "Expected Free Energy-based Informative Path Planning for Robotic Mars Exploration",
+    "pdf_url": "https://arxiv.org/pdf/2608.14466v1",
+    "published": "2026-08-14",
+    "crawled_at": "2026-08-17 20:11:56",
+    "ai_score": 5.5,
+    "translated_title": "基于期望自由能的火星探测机器人信息路径规划",
+    "summary_en": [
+      "• Model Architecture: The paper proposes an Expected Free Energy (EFE) based path planning framework for robotic exploration, integrating a Gaussian process belief over the information field and planning continuous trajectories under hard path-length constraints.",
+      "• Data used: The study uses simulated Mars-like environments with unknown information fields (e.g., water sources), and evaluates the approach through multiple realizations of the environment.",
+      "• Performance metrics: The method is compared against information-theoretic baselines, measuring accuracy of posterior maps and efficiency in locating high-value regions, with results showing EFE-based planning outperforms baselines."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出基于期望自由能（EFE）的路径规划框架，结合高斯过程信念，在硬路径长度约束下规划连续轨迹。",
+      "• 数据来源: 使用模拟的火星环境，包含未知信息场（如水源），并通过多次环境实现进行评估。",
+      "• 主要结论: 与信息论基线相比，EFE方法能同时构建准确的后验地图并高效定位高价值区域，性能更优。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low for financial markets; the method is domain-specific to robotics and not directly applicable to trading strategies.",
+      "• Implementation Risk: High if adapted to finance; requires significant modifications and validation in financial contexts.",
+      "• Novelty: Moderate; EFE is a known concept in active inference, but its application to budgeted informative path planning is novel in robotics."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将主动推理中的期望自由能应用于预算受限的信息路径规划，统一了信息寻求和奖励寻求目标，在机器人领域有一定新意。",
+      "• 实盘坑: 与金融交易无关，直接移植到量化投资不现实，需大量改造且缺乏金融数据验证。",
+      "• 复现难度: 中等；需要机器人仿真环境和高斯过程实现，但算法细节可能不完整。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2608.14465v1",
+    "title": "You Only Pass Once: Answering and Abstaining Together in a Single Forward Pass of a Frozen Language Model",
+    "pdf_url": "https://arxiv.org/pdf/2608.14465v1",
+    "published": "2026-08-14",
+    "crawled_at": "2026-08-17 20:12:05",
+    "ai_score": 7.5,
+    "translated_title": "只通过一次：在冻结语言模型的单次前向传播中同时回答和弃权",
+    "summary_en": [
+      "• Model Architecture: YOPO integrates a conditional steering probe and a zero-shot sufficiency direction in a single forward pass of a frozen Qwen2.5 backbone (1.5B/3B/7B). A small network reconstructs pre-steering residuals to avoid interference.",
+      "• Data used: Evaluated on alphaNLI, SQuAD2, RepLiQA, MuSiQue, and a four-domain suite. Training uses (steered, clean) pairs with MSE loss, no sufficiency labels.",
+      "• Performance metrics: Three-way accuracy more than doubles frozen baseline (0.375->0.798 on 1.5B alphaNLI). One pass beats two-pass reference at all scales (0.798/0.830/0.893 vs 0.753/0.790/0.863) and on ten backbones across six model families."
+    ],
+    "summary_cn": [
+      "• 核心模型: YOPO在冻结的Qwen2.5骨干上，通过条件引导探针和零样本充分性方向，在单次前向传播中同时实现回答和弃权，并用小网络重建残差以避免干扰。",
+      "• 数据来源: 使用alphaNLI、SQuAD2、RepLiQA、MuSiQue及四域套件；训练采用(引导后, 干净)对，MSE损失，无需充分性标签。",
+      "• 主要结论: 三路准确率比冻结基线提升一倍以上（1.5B alphaNLI上0.375->0.798）；单次前向传播在所有规模上优于两次前向参考（0.798/0.830/0.893 vs 0.753/0.790/0.863），并在六个模型家族的十个骨干上验证。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate. The method improves reasoning and abstention, but direct trading alpha is unclear. Could be used for NLP-based sentiment or event extraction in quant strategies.",
+      "• Implementation Risk: High. Requires careful residual stream manipulation and reconstruction network training; may not generalize to other domains without retuning.",
+      "• Novelty: High. Combines steering and abstention in one forward pass, addressing interference; introduces a capacity-transfer frontier and a new benchmark."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次在单次前向传播中结合引导和弃权，解决干扰问题；提出容量转移前沿和新基准，具有学术价值。",
+      "• 实盘坑: 直接用于交易信号有限，需额外映射到金融因子；残差操作对模型版本敏感，部署成本高。",
+      "• 复现难度: 高。需要精确控制残差流，训练重建网络，且依赖特定骨干模型，复现门槛高。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2608.13554v1",
     "title": "Defensive Boosting for Online Probabilistic Forecasting",
     "pdf_url": "https://arxiv.org/pdf/2608.13554v1",
@@ -45357,366 +45683,6 @@
       "• 创新点: 显著；在异构框架中整合稀疏同步与流水线压缩，解决分布式LLM训练在带宽受限环境下的可扩展性瓶颈，超越传统数据中心配置。",
       "• 实盘坑: 高；需精细调整压缩比和同步频率，异构设置可能增加训练不稳定性或收敛问题，实际部署复杂。",
       "• 复现难度: 中等偏高；依赖特定压缩算法和分布式协调，实验规模较大（1B参数），但开源代码和标准语料可能降低门槛。"
-    ],
-    "ai_strategy": "NLP/LLM",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2601.02353v1",
-    "title": "Meta-Learning Guided Pruning for Few-Shot Plant Pathology on Edge Devices",
-    "pdf_url": "https://arxiv.org/pdf/2601.02353v1",
-    "published": "2026-01-05",
-    "crawled_at": "2026-01-06 20:01:46",
-    "ai_score": 7.8,
-    "translated_title": "面向边缘设备少样本植物病理学的元学习引导剪枝方法",
-    "summary_en": [
-      "• Model Architecture: Proposes a three-stage Prune-then-Meta-Learn-then-Prune (PMP) pipeline with Disease-Aware Channel Importance Scoring (DACIS) for neural network pruning integrated with few-shot learning.",
-      "• Data used: Experiments conducted on PlantVillage and PlantDoc datasets, focusing on plant disease image classification with limited labeled examples.",
-      "• Performance metrics: Achieves 78% model size reduction while maintaining 92.3% of original accuracy, with compressed model running at 7 FPS on Raspberry Pi 4."
-    ],
-    "summary_cn": [
-      "• 核心模型: 提出三阶段剪枝-元学习-再剪枝（PMP）流程，结合疾病感知通道重要性评分（DACIS）进行神经网络剪枝与少样本学习集成。",
-      "• 数据来源: 使用PlantVillage和PlantDoc数据集进行实验，专注于有限标注样本的植物病害图像分类。",
-      "• 主要结论: 实现模型大小减少78%，同时保持92.3%的原始准确率，压缩模型在树莓派4上达到7帧/秒的推理速度。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate - addresses practical edge deployment for agricultural applications but limited direct financial market applications; potential for specialized hardware optimization strategies.",
-      "• Implementation Risk: High - agricultural field conditions introduce environmental variability; edge device performance consistency unproven in real-world deployment.",
-      "• Novelty: Moderate - combines established pruning and meta-learning techniques with disease-specific importance scoring; incremental rather than breakthrough innovation."
-    ],
-    "verdict_cn": [
-      "• 创新点: 将剪枝与元学习结合，引入疾病感知评分机制，针对农业边缘计算场景进行优化，但技术组合较为常规。",
-      "• 实盘坑: 农业现场环境复杂多变，光照、角度等因素影响图像质量；边缘设备在野外条件下的稳定性和可靠性未经充分验证。",
-      "• 复现难度: 中等 - 依赖公开数据集和标准深度学习框架，但需要精细调参和硬件适配，农业领域专业知识可能成为瓶颈。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "ArXiv Preprint",
-      "status": "Preprint"
-    }
-  },
-  {
-    "id": "2601.02324v1",
-    "title": "Hunting for \"Oddballs\" with Machine Learning: Detecting Anomalous Exoplanets Using a Deep-Learned Low-Dimensional Representation of Transit Spectra with Autoencoders",
-    "pdf_url": "https://arxiv.org/pdf/2601.02324v1",
-    "published": "2026-01-05",
-    "crawled_at": "2026-01-06 20:02:13",
-    "ai_score": 7.5,
-    "translated_title": "利用机器学习寻找“异类”：基于自编码器低维表示的凌星光谱异常系外行星检测",
-    "summary_en": [
-      "• Model Architecture: Autoencoder-based dimensionality reduction combined with four anomaly detection methods (Autoencoder Reconstruction Loss, One-Class SVM, K-means Clustering, Local Outlier Factor) in both original spectral space and latent space.",
-      "• Data used: Atmospheric Big Challenge (ABC) database with over 100,000 simulated exoplanet spectra, defining CO2-rich atmospheres as anomalies and CO2-poor atmospheres as normal class.",
-      "• Performance metrics: Evaluated using ROC curves and AUC metrics across Gaussian noise levels from 10-50 ppm, with latent space methods consistently outperforming raw spectral space approaches.",
-      "• Key finding: K-means clustering in latent space demonstrated superior stability and performance, maintaining robustness up to 30 ppm noise (realistic space-based observation levels) and remaining viable at 50 ppm."
-    ],
-    "summary_cn": [
-      "• 核心模型: 基于自编码器的降维架构，结合四种异常检测方法（自编码器重建损失、一类支持向量机、K均值聚类、局部离群因子），在原始光谱空间和潜在空间进行对比分析。",
-      "• 数据来源: 使用大气大数据挑战（ABC）数据库，包含超过10万条模拟系外行星光谱，将CO2富集大气定义为异常类，CO2贫乏大气定义为正常类。",
-      "• 主要结论: 潜在空间中的异常检测在所有噪声水平下均表现更优，其中潜在空间K均值聚类方法稳定性最高，在30ppm噪声（符合实际空间观测水平）下保持稳健，在50ppm噪声下仍具可行性。",
-      "• 方法优势: 自编码器驱动的降维为大规模巡天中识别化学异常目标提供了计算高效的解决方案，避免了计算量巨大的详尽反演过程。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate - The methodology could be adapted for financial anomaly detection in high-dimensional time series data (e.g., identifying unusual market regimes or outlier instruments), though direct financial application requires significant domain adaptation.",
-      "• Implementation Risk: High - Real-world financial data exhibits non-stationarity, regime changes, and complex noise structures that differ substantially from simulated exoplanet spectra; the 30ppm noise robustness may not translate to financial contexts.",
-      "• Novelty: Moderate - While autoencoders for anomaly detection are well-established, the systematic comparison of multiple methods across noise levels in both raw and latent spaces provides valuable empirical insights for robustness evaluation.",
-      "• Scalability Concern: The approach assumes anomalies are well-defined (CO2-rich vs poor), whereas financial anomalies are often ambiguous and context-dependent, requiring more sophisticated labeling strategies."
-    ],
-    "verdict_cn": [
-      "• 创新点: 在模拟系外行星光谱数据上系统比较了原始空间与潜在空间异常检测方法的噪声鲁棒性，为高维数据降维后的异常检测提供了实证基准。",
-      "• 实盘坑: 金融数据具有非平稳性、制度转换和复杂噪声结构，与模拟光谱数据差异显著；30ppm噪声鲁棒性结论难以直接迁移至金融场景。",
-      "• 复现难度: 中等 - 方法架构相对标准，但需要构建类似的大规模模拟数据集进行基准测试；金融领域应用需重新定义异常类别并处理实际数据质量问题。",
-      "• 迁移挑战: 该方法假设异常类别明确（CO2富集vs贫乏），而金融异常通常模糊且依赖上下文，需要更复杂的标签策略和领域适应技术。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "ArXiv Preprint",
-      "status": "Preprint"
-    }
-  },
-  {
-    "id": "2601.02316v1",
-    "title": "DatBench: Discriminative, Faithful, and Efficient VLM Evaluations",
-    "pdf_url": "https://arxiv.org/pdf/2601.02316v1",
-    "published": "2026-01-05",
-    "crawled_at": "2026-01-06 20:02:58",
-    "ai_score": 8.5,
-    "translated_title": "DatBench：判别性、忠实且高效的视觉语言模型评估基准",
-    "summary_en": [
-      "• Model Architecture: The paper does not propose a new VLM architecture but focuses on evaluation methodology. It critiques existing benchmarks and introduces DatBench, a curated suite of 33 datasets transformed to improve discriminability and efficiency.",
-      "• Data used: The work analyzes and cleans existing VLM evaluation datasets, identifying issues such as multiple-choice formats, blindly solvable questions (up to 70% in some cases), and mislabeled/ambiguous samples (up to 42%). It filters and transforms these to create DatBench-Full and a more efficient DatBench subset.",
-      "• Performance metrics: Key metrics include discriminability between models, faithfulness to modality/application, and computational efficiency. The paper reports capability drops of up to 35% when converting multiple-choice to generative tasks, and achieves a 13x average speedup (up to 50x) with DatBench while maintaining discriminative power."
-    ],
-    "summary_cn": [
-      "• 核心模型: 本文未提出新的视觉语言模型架构，而是专注于评估方法学。它批判现有基准测试，并引入DatBench——一个经过筛选和转换的33个数据集套件，旨在提升判别性和效率。",
-      "• 数据来源: 研究分析并清理了现有的VLM评估数据集，识别出多项问题：多项选择题格式、可盲目解答的问题（某些评估中占比高达70%）、以及错误标注或模糊样本（某些数据集中高达42%）。通过过滤和转换这些数据，创建了DatBench-Full和更高效的DatBench子集。",
-      "• 主要结论: 将多项选择题转换为生成式任务可揭示高达35%的能力下降；过滤盲目可解和错误标注样本能同时提升判别力并降低计算成本；DatBench实现了13倍平均加速（最高50倍），且判别能力接近原始数据集。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High potential for alpha generation in quant strategies that rely on accurate model evaluation, as improved discriminability can lead to better selection of top-performing VLMs for financial applications like sentiment analysis or document processing.",
-      "• Implementation Risk: Moderate risk; while the methodology is clear, integrating DatBench into existing evaluation pipelines may require significant re-engineering, and the reliance on curated datasets could introduce biases if not properly validated.",
-      "• Novelty: High novelty in addressing critical gaps in VLM evaluation practices. The focus on faithfulness, discriminability, and efficiency provides a fresh framework that challenges conventional benchmarking approaches, though it builds on prior critique of evaluation datasets."
-    ],
-    "verdict_cn": [
-      "• 创新点: 创新性高，针对VLM评估中的关键缺陷提出系统性解决方案。强调忠实性、判别性和效率的三重标准，为评估实践提供了新框架，挑战了传统基准测试方法。",
-      "• 实盘坑: 中等风险；方法虽清晰，但将DatBench集成到现有评估流程可能需要大量重构工作，且依赖筛选后的数据集可能引入偏差，需谨慎验证。",
-      "• 复现难度: 中等难度；论文提供了详细的方法和数据集发布，但复现需要访问原始基准数据并进行复杂的数据清洗和转换，计算资源要求较高。"
-    ],
-    "ai_strategy": "NLP/LLM",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Accepted"
-    }
-  },
-  {
-    "id": "2601.02313v1",
-    "title": "Game of Coding: Coding Theory in the Presence of Rational Adversaries, Motivated by Decentralized Machine Learning",
-    "pdf_url": "https://arxiv.org/pdf/2601.02313v1",
-    "published": "2026-01-05",
-    "crawled_at": "2026-01-06 20:03:23",
-    "ai_score": 7.8,
-    "translated_title": "编码博弈：理性对手存在下的编码理论及其在去中心化机器学习中的应用",
-    "summary_en": [
-      "• Model Architecture: Introduces a game-theoretic framework called 'game of coding' that extends classical coding theory to trust-minimized decentralized systems, focusing on repetition coding as a case study.",
-      "• Data used: Theoretical analysis based on game theory and coding theory principles; no empirical datasets are mentioned, relying on mathematical modeling of rational adversaries in decentralized networks.",
-      "• Performance metrics: Achieves non-zero probability of data recovery even when adversarial nodes are in the majority, and demonstrates Sybil resistance where equilibrium remains stable despite increasing adversarial nodes.",
-      "• Key innovation: Contrasts with classical worst-case adversarial models by incorporating strategic rational behavior motivated by incentive structures in decentralized machine learning (DeML)."
-    ],
-    "summary_cn": [
-      "• 核心模型: 提出'编码博弈'这一博弈论框架，将经典编码理论扩展到信任最小化的去中心化系统，以重复编码为例进行分析。",
-      "• 数据来源: 基于博弈论和编码理论原理的理论分析，未使用实证数据集，依赖于对去中心化网络中理性对手的数学建模。",
-      "• 主要结论: 即使在对手节点占多数的情况下，也能实现非零的数据恢复概率，并展示出Sybil抗性，即均衡状态在对手节点增加时保持不变。",
-      "• 应用背景: 针对去中心化机器学习（DeML）等新兴应用，其中节点因贡献获得奖励，从而催生理性而非纯粹恶意的对手行为。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate; the framework could enable more robust decentralized systems in DeML and blockchain applications, potentially reducing reliance on majority-honest assumptions and improving fault tolerance in incentive-driven networks.",
-      "• Implementation Risk: High; theoretical nature with no empirical validation, and practical deployment faces challenges such as accurately modeling rational behavior, scalability issues, and integration with existing DeML protocols.",
-      "• Novelty: High; introduces a novel intersection of game theory and coding theory for rational adversaries, addressing a gap in classical models and offering fresh insights for trust-minimized decentralized computing.",
-      "• Limitations: Lacks concrete algorithms or simulations, and open problems (e.g., unknown adversary strategies) indicate the framework is still in early stages, requiring further research for real-world applicability."
-    ],
-    "verdict_cn": [
-      "• 创新点: 高；首次将博弈论与编码理论结合，针对理性对手模型，突破了经典最坏情况假设，为去中心化系统提供了新的理论视角。",
-      "• 实盘坑: 高；纯理论框架缺乏实证验证，实际部署需解决理性行为建模、可扩展性以及与现有DeML协议集成等难题，风险较大。",
-      "• 复现难度: 中；基于数学推导，复现理论分析相对直接，但实现具体应用（如编码方案）需额外开发，且未提供代码或详细算法。",
-      "• 潜在价值: 中；若能实证验证，可提升去中心化机器学习等系统的鲁棒性，减少对多数诚实节点的依赖，但当前仍处概念阶段。"
-    ],
-    "ai_strategy": "Crypto",
-    "journal_info": {
-      "name": "ArXiv Preprint",
-      "status": "Preprint"
-    }
-  },
-  {
-    "id": "2601.02310v1",
-    "title": "Temporal Kolmogorov-Arnold Networks (T-KAN) for High-Frequency Limit Order Book Forecasting: Efficiency, Interpretability, and Alpha Decay",
-    "pdf_url": "https://arxiv.org/pdf/2601.02310v1",
-    "published": "2026-01-05",
-    "crawled_at": "2026-01-06 20:03:50",
-    "ai_score": 8.2,
-    "translated_title": "时序Kolmogorov-Arnold网络（T-KAN）在高频限价订单簿预测中的应用：效率、可解释性与Alpha衰减",
-    "summary_en": [
-      "• Model Architecture: Introduces Temporal Kolmogorov-Arnold Networks (T-KAN) that replace fixed linear weights in standard LSTMs with learnable B-spline activation functions to capture the 'shape' of market signals rather than just magnitude",
-      "• Data used: FI-2010 dataset containing high-frequency limit order book (LOB) data, which is notoriously noisy and non-linear",
-      "• Performance metrics: Achieves 19.1% relative improvement in F1-score at k=100 horizon compared to DeepLOB, generates 132.48% return versus -82.76% DeepLOB drawdown under 1.0 bps transaction costs",
-      "• Additional features: Model demonstrates interpretability through visible 'dead-zones' in splines and is optimized for low-latency FPGA implementation via High Level Synthesis (HLS)"
-    ],
-    "summary_cn": [
-      "• 核心模型: 提出时序Kolmogorov-Arnold网络（T-KAN），用可学习的B样条激活函数替代标准LSTM的固定线性权重，以捕捉市场信号的'形态'而非仅幅度",
-      "• 数据来源: 使用FI-2010数据集中的高频限价订单簿（LOB）数据，该数据以噪声大和非线性著称",
-      "• 主要结论: 在k=100时间窗口上F1分数相对提升19.1%，在1.0基点交易成本下实现132.48%回报，而DeepLOB策略亏损82.76%",
-      "• 附加特性: 模型通过样条中的'死区'实现可解释性，并通过高级综合（HLS）优化实现低延迟FPGA部署"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Strong short-term alpha generation demonstrated with 132.48% returns, but long-term sustainability unproven beyond k=100 horizon; addresses alpha decay better than DeepLOB but may still face decay at longer horizons",
-      "• Implementation Risk: FPGA optimization suggests practical deployment potential, but real-world latency requirements and market microstructure changes could impact performance; transaction cost sensitivity not fully explored beyond 1.0 bps",
-      "• Novelty: Innovative application of Kolmogorov-Arnold networks to temporal financial data with B-spline activations; combines interpretability with performance in a domain dominated by black-box models",
-      "• Limitations: FI-2010 dataset is dated (2010); no comparison to state-of-the-art models beyond DeepLOB; hardware implementation details sparse in abstract"
-    ],
-    "verdict_cn": [
-      "• 创新点: 将Kolmogorov-Arnold网络与B样条激活函数结合应用于时序金融数据，在保持可解释性的同时提升预测性能，突破传统LSTM的线性权重限制",
-      "• 实盘坑: 基于2010年数据集，市场微观结构可能已发生变化；FPGA部署虽提及但具体延迟指标未披露；仅测试1.0基点成本，未覆盖更广泛的交易成本场景",
-      "• 复现难度: 代码已开源（GitHub），但FPGA实现需要专业硬件知识；B样条参数调优可能复杂；需处理FI-2010数据集的噪声和非线性特性",
-      "• 风险提示: 长期Alpha衰减问题仅部分解决，未验证k>100的表现；缺乏与最新模型（如Transformer变体）的对比；实际交易中的滑点和市场影响未评估"
-    ],
-    "ai_strategy": "High-Freq",
-    "journal_info": {
-      "name": "ArXiv Preprint",
-      "status": "Preprint"
-    }
-  },
-  {
-    "id": "2601.02307v1",
-    "title": "Differential Privacy for Transformer Embeddings of Text with Nonparametric Variational Information Bottleneck",
-    "pdf_url": "https://arxiv.org/pdf/2601.02307v1",
-    "published": "2026-01-05",
-    "crawled_at": "2026-01-06 20:04:10",
-    "ai_score": 7.5,
-    "translated_title": "基于非参数变分信息瓶颈的Transformer文本嵌入差分隐私方法",
-    "summary_en": [
-      "• Model Architecture: Integrates a Nonparametric Variational Information Bottleneck (NVIB) layer into transformer architecture to inject noise into multi-vector embeddings, using Rényi divergence and Bayesian Differential Privacy (BDP) for privacy guarantees.",
-      "• Data used: Tested on the GLUE benchmark, which includes multiple natural language understanding tasks such as sentiment analysis and textual entailment.",
-      "• Performance metrics: Demonstrates a tradeoff between privacy and accuracy by varying noise levels; maintains high accuracy with lower noise while providing strong privacy protection."
-    ],
-    "summary_cn": [
-      "• 核心模型: 在Transformer架构中集成非参数变分信息瓶颈（NVIB）层，通过向多向量嵌入注入噪声实现差分隐私，使用Rényi散度和贝叶斯差分隐私（BDP）进行隐私度量。",
-      "• 数据来源: 在GLUE基准测试上进行评估，涵盖情感分析、文本蕴含等多种自然语言理解任务。",
-      "• 主要结论: 通过调整噪声水平实现隐私与准确性的权衡；在低噪声下保持高准确性并提供强隐私保护，有效平衡隐私与实用性。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate; useful for hedge funds handling sensitive text data (e.g., earnings calls, news) by enabling secure sharing of embeddings without compromising utility, potentially enhancing NLP-based strategies with privacy compliance.",
-      "• Implementation Risk: High; integrating NVIB into existing transformer models may require significant computational resources and fine-tuning, and real-world adversarial attacks could challenge the privacy guarantees in dynamic financial environments.",
-      "• Novelty: High; combines differential privacy with nonparametric variational methods for transformer embeddings, offering a novel approach to mitigate privacy risks in multi-vector representations, though similar concepts exist in other domains."
-    ],
-    "verdict_cn": [
-      "• 创新点: 较高；将差分隐私与非参数变分方法结合应用于Transformer嵌入，针对多向量表示提出新颖的隐私保护方案，尽管在其他领域有类似思路。",
-      "• 实盘坑: 高；将NVIB集成到现有Transformer模型可能需要大量计算资源和调优，且实际金融环境中的对抗性攻击可能威胁隐私保证的动态稳定性。",
-      "• 复现难度: 中等；基于公开的GLUE数据和标准Transformer架构，但NVIB层的实现和噪声校准需要专业知识，可能增加复现复杂性。"
-    ],
-    "ai_strategy": "NLP/LLM",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Accepted"
-    }
-  },
-  {
-    "id": "2601.02273v1",
-    "title": "TopoLoRA-SAM: Topology-Aware Parameter-Efficient Adaptation of Foundation Segmenters for Thin-Structure and Cross-Domain Binary Semantic Segmentation",
-    "pdf_url": "https://arxiv.org/pdf/2601.02273v1",
-    "published": "2026-01-05",
-    "crawled_at": "2026-01-06 20:04:34",
-    "ai_score": 8.2,
-    "translated_title": "TopoLoRA-SAM：面向细长结构与跨域二值语义分割的基础分割器拓扑感知参数高效适配方法",
-    "summary_en": [
-      "• Model Architecture: TopoLoRA-SAM injects Low-Rank Adaptation (LoRA) into a frozen ViT encoder, augmented with a lightweight spatial convolutional adapter and optional topology-aware supervision via differentiable clDice.",
-      "• Data used: Evaluated on five benchmarks: retinal vessel segmentation (DRIVE, STARE, CHASE_DB1), polyp segmentation (Kvasir-SEG), and SAR sea/land segmentation (SL-SSDD).",
-      "• Performance metrics: Achieved best retina-average Dice and best overall average Dice across datasets, training only 5.2% of model parameters (~4.9M). On CHASE_DB1, it substantially improved segmentation accuracy and robustness.",
-      "• Comparison: Outperformed U-Net, DeepLabV3+, SegFormer, and Mask2Former, matching or exceeding fully fine-tuned specialist models."
-    ],
-    "summary_cn": [
-      "• 核心模型: TopoLoRA-SAM 在冻结的 ViT 编码器中注入低秩适配（LoRA），并增强轻量级空间卷积适配器和可选的基于可微分 clDice 的拓扑感知监督。",
-      "• 数据来源: 在五个基准数据集上评估：视网膜血管分割（DRIVE、STARE、CHASE_DB1）、息肉分割（Kvasir-SEG）和 SAR 海陆分割（SL-SSDD）。",
-      "• 主要结论: 在仅训练 5.2% 模型参数（约 490 万）的情况下，实现了最佳视网膜平均 Dice 和最佳整体平均 Dice。在 CHASE_DB1 上显著提升了分割准确性和鲁棒性。",
-      "• 对比结果: 优于 U-Net、DeepLabV3+、SegFormer 和 Mask2Former，匹配或超越了完全微调的专家模型。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High for medical imaging and remote sensing applications where thin-structure segmentation is critical; parameter efficiency enables deployment on edge devices for real-time analysis.",
-      "• Implementation Risk: Moderate; dependency on foundation models like SAM may limit adaptability to proprietary datasets, and topology-aware supervision adds computational overhead.",
-      "• Novelty: Strong; combines LoRA with topology-aware loss (clDice) for parameter-efficient adaptation, addressing catastrophic forgetting and domain shift in binary segmentation tasks.",
-      "• Scalability: Limited to binary segmentation; extension to multi-class scenarios requires further validation and may increase complexity."
-    ],
-    "verdict_cn": [
-      "• 创新点: 将 LoRA 与拓扑感知损失（clDice）结合，实现参数高效适配，有效解决灾难性遗忘和域偏移问题，在细长结构分割中表现突出。",
-      "• 实盘坑: 依赖 SAM 等基础模型，可能限制对专有数据集的适应性；拓扑感知监督增加计算开销，影响实时性能。",
-      "• 复现难度: 中等；代码已开源，但需要特定数据集和计算资源，拓扑感知组件的调参可能复杂。",
-      "• 应用局限: 目前仅适用于二值分割任务，扩展到多类别场景需进一步验证，可能增加模型复杂性。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2601.02265v1",
-    "title": "Predicting Early and Complete Drug Release from Long-Acting Injectables Using Explainable Machine Learning",
-    "pdf_url": "https://arxiv.org/pdf/2601.02265v1",
-    "published": "2026-01-05",
-    "crawled_at": "2026-01-06 20:05:01",
-    "ai_score": 7.8,
-    "translated_title": "利用可解释机器学习预测长效注射剂的早期和完全药物释放",
-    "summary_en": [
-      "• Model Architecture: The paper employs an explainable machine learning framework with Shapley additive explanations (SHAP) for interpretability, using a time-independent approach to predict drug release profiles, including classification of release types and prediction of complete release curves.",
-      "• Data used: The study analyzes 321 long-acting injectable (LAI) formulations, focusing on physicochemical properties and drug release data at early time points (24, 48, 72 hours) and complete release profiles.",
-      "• Performance metrics: Achieves a strong correlation (>0.65) between true and predicted drug release at 72 hours, with a 0.87 F1-score for classifying release profile types, and outperforms current time-dependent methods in predicting delayed biphasic and triphasic curves.",
-      "• Key findings: The approach identifies material characteristics that influence early and complete drug release, providing actionable insights for optimizing LAI formulations, with publicly available source code for model implementation."
-    ],
-    "summary_cn": [
-      "• 核心模型: 采用可解释机器学习框架，结合Shapley加性解释（SHAP）提高模型透明度，使用时间无关方法预测药物释放曲线，包括释放类型分类和完全释放曲线预测。",
-      "• 数据来源: 基于321种长效注射剂（LAI）配方的数据，涵盖物理化学特性和药物释放数据，重点关注早期时间点（24、48、72小时）和完全释放曲线。",
-      "• 主要结论: 在72小时药物释放预测中实现强相关性（>0.65），释放类型分类的F1分数达0.87，在预测延迟双相和三相曲线方面优于现有时间依赖方法，揭示了影响释放的关键材料特性。",
-      "• 应用价值: 为科学家优化LAI药物释放动力学提供定量策略和建议，模型源代码已公开，便于复现和扩展。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate; the explainable ML approach could be adapted for financial time-series prediction or risk modeling by identifying key drivers in complex systems, but direct application to trading is limited due to the biomedical focus.",
-      "• Implementation Risk: High; translating the methodology to financial markets requires significant domain adaptation, as the data structure and objectives differ substantially from LAI formulations, increasing integration challenges.",
-      "• Novelty: High; the combination of time-independent ML with SHAP for interpretability in drug release prediction is innovative, offering a template for explainable AI in other domains, though novelty in core ML techniques is moderate.",
-      "• Practical limitations: The study relies on in-vitro data, which may not fully capture real-world variability, and the model's performance on unseen formulations or external datasets is untested, posing generalization risks."
-    ],
-    "verdict_cn": [
-      "• 创新点: 较高；将时间无关机器学习与SHAP可解释性结合用于药物释放预测，提供了一种跨领域可解释AI的模板，但在核心机器学习技术上创新性一般。",
-      "• 实盘坑: 高；该方法应用于金融市场需大量领域适配，因数据结构和目标与LAI配方差异大，集成风险显著，且依赖体外数据可能无法完全反映实际变异性。",
-      "• 复现难度: 中等；源代码公开降低了技术壁垒，但需要专业领域知识处理LAI数据，且模型在未见配方或外部数据集上的泛化能力未经验证，存在不确定性。",
-      "• 潜在价值: 中等；可解释ML框架可能用于金融时间序列预测或风险建模，识别复杂系统中的关键驱动因素，但直接交易应用受限。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "ArXiv Preprint",
-      "status": "Preprint"
-    }
-  },
-  {
-    "id": "2601.00794v1",
-    "title": "Two Deep Learning Approaches for Automated Segmentation of Left Ventricle in Cine Cardiac MRI",
-    "pdf_url": "https://arxiv.org/pdf/2601.00794v1",
-    "published": "2026-01-02",
-    "crawled_at": "2026-01-05 20:01:30",
-    "ai_score": 7.2,
-    "translated_title": "两种用于心脏电影磁共振图像左心室自动分割的深度学习方法",
-    "summary_en": [
-      "• Model Architecture: Proposes two novel deep learning architectures - LNU-Net (layer normalization U-Net) and IBU-Net (instance-batch normalized U-Net) for left ventricle segmentation, both featuring down-sampling paths for feature extraction and up-sampling paths for precise localization.",
-      "• Data used: Utilizes a dataset containing 805 MRI images from 45 patients, with image processing incorporating affine transformations and elastic deformations for data augmentation.",
-      "• Performance metrics: Evaluates using dice coefficient and average perpendicular distance, reporting that both proposed approaches outperform state-of-the-art methods on these metrics."
-    ],
-    "summary_cn": [
-      "• 核心模型: 提出两种新型深度学习架构LNU-Net（层归一化U-Net）和IBU-Net（实例-批量归一化U-Net），均采用下采样路径进行特征提取和上采样路径实现精确定位。",
-      "• 数据来源: 使用包含45名患者的805张MRI图像数据集，通过仿射变换和弹性变形进行图像数据增强处理。",
-      "• 主要结论: 实验结果表明，所提方法在骰子系数和平均垂直距离指标上优于现有最先进方法，验证了归一化策略在医学图像分割中的有效性。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate - specialized medical imaging segmentation has limited direct financial applications but could inform similar structured data segmentation problems in finance (e.g., chart pattern recognition).",
-      "• Implementation Risk: High - medical imaging datasets are highly regulated and domain-specific; financial applications would require complete retraining on financial data with uncertain transfer learning efficacy.",
-      "• Novelty: Limited - builds incrementally on established U-Net architecture with normalization variations; lacks breakthrough architectural innovations or novel loss functions."
-    ],
-    "verdict_cn": [
-      "• 创新点: 有限 - 在标准U-Net架构基础上进行归一化策略微调（层归一化与实例-批量归一化组合），属于渐进式改进而非突破性创新。",
-      "• 实盘坑: 极高 - 医学图像与金融数据分布差异巨大，模型迁移需完全重新训练；金融时序数据的分割任务定义模糊，缺乏明确标注标准。",
-      "• 复现难度: 中等 - 架构描述清晰，但缺少超参数细节和完整训练代码；医学数据获取受限，需寻找替代金融数据集进行验证。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "ArXiv Preprint",
-      "status": "Preprint"
-    }
-  },
-  {
-    "id": "2601.00791v1",
-    "title": "Geometry of Reason: Spectral Signatures of Valid Mathematical Reasoning",
-    "pdf_url": "https://arxiv.org/pdf/2601.00791v1",
-    "published": "2026-01-02",
-    "crawled_at": "2026-01-05 20:01:48",
-    "ai_score": 8.5,
-    "translated_title": "推理的几何：有效数学推理的谱特征",
-    "summary_en": [
-      "• Model Architecture: Analyzes seven transformer models from four architectural families (Meta Llama, Alibaba Qwen, Microsoft Phi, Mistral AI), with specific attention to Mistral-7B's Sliding Window Attention mechanism.",
-      "• Data used: No training data required; method is training-free and uses attention matrices from model outputs on mathematical proofs, validated through systematic label correction against formal verifiers.",
-      "• Performance metrics: Achieves 85.0-95.6% classification accuracy with effect sizes up to Cohen's d = 3.30 (p < 10^{-116}), calibrated thresholds reach 93-95% on full dataset, and identifies architectural dependencies (e.g., Mistral-7B shifts signal to late-layer Smoothness with d = 2.09)."
-    ],
-    "summary_cn": [
-      "• 核心模型: 分析了来自四个架构家族的七个Transformer模型（Meta Llama、阿里巴巴Qwen、Microsoft Phi、Mistral AI），重点关注Mistral-7B的滑动窗口注意力机制。",
-      "• 数据来源: 无需训练数据；方法基于模型在数学证明上的注意力矩阵，通过系统标签校正与形式验证器对比验证。",
-      "• 主要结论: 分类准确率达85.0-95.6%，效应量高达Cohen's d = 3.30（p < 10^{-116}），校准阈值在全数据集上达93-95%，并发现架构依赖性（如Mistral-7B将信号转移至晚层平滑度）。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High potential for detecting logical coherence in AI outputs, applicable to hallucination detection and AI safety monitoring, with immediate practical use in verifying reasoning without training.",
-      "• Implementation Risk: Moderate risk due to architectural dependencies (e.g., Mistral-7B requires different spectral features), which may limit generalization across all models without adjustments.",
-      "• Novelty: Novel training-free approach using spectral graph analysis of attention patterns, introducing interpretable diagnostics (Fiedler value, HFER, smoothness, entropy) for reasoning verification."
-    ],
-    "verdict_cn": [
-      "• 创新点: 创新性地使用注意力模式的谱图分析，无需训练即可验证推理，引入可解释的诊断指标（Fiedler值、高频能量比、平滑度、谱熵）。",
-      "• 实盘坑: 存在架构依赖性风险（如Mistral-7B需不同特征），可能影响跨模型泛化能力，需针对不同模型调整阈值。",
-      "• 复现难度: 中等难度，需访问多种Transformer模型和数学证明数据，但方法开源且无需复杂训练，复现可行性较高。"
     ],
     "ai_strategy": "NLP/LLM",
     "journal_info": {
