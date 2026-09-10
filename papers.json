@@ -1,5 +1,344 @@
 [
   {
+    "id": "2609.10534v1",
+    "title": "Likelihood-free inference with nuisance parameters through normalizing flows",
+    "pdf_url": "https://arxiv.org/pdf/2609.10534v1",
+    "published": "2026-09-09",
+    "crawled_at": "2026-09-10 21:59:31",
+    "ai_score": 7.5,
+    "translated_title": "通过归一化流处理冗余参数的似然无推断",
+    "summary_en": "• Model Architecture: A normalizing flow-based neural network that decomposes the likelihood to uncover a pivotal statistic in the presence of nuisance parameters, using only a sample generator.\n• Data: Synthetic and semi-synthetic data from known distributions (e.g., Gaussian with unknown variance, partial biserial correlation models) and possibly real data for validation.\n• Performance Metrics: Minimum average KL-divergence of p-values from uniform, worst-case size over constrained variance-ratio range, calibration on partial biserial correlations, power and speed compared to profile likelihood-ratio techniques.\n• Key Results: Discovers one-sample t-test almost exactly, outperforms Welch test in worst-case size, achieves good calibration, and shows higher power and faster computation on small-to-moderate samples.",
+    "summary_cn": "• 核心模型: 基于归一化流的神经网络，通过分解似然在存在冗余参数时自然揭示枢轴统计量，仅需从目标分布中采样的生成器。\n• 数据来源: 合成数据和半合成数据（如未知方差的高斯分布、部分双列相关模型），可能包含真实数据验证。\n• 主要结论: 统计量在p值均匀分布的最小平均KL散度意义下近似枢轴；能几乎精确发现单样本t检验，在约束方差比范围内最坏情况尺寸优于Welch检验，在部分双列相关上校准良好，且在小到中等样本上比轮廓似然比方法更高功效、更快。",
+    "verdict_en": "• Alpha Potential: Limited direct alpha; method is for inference, not prediction. Could improve risk model calibration and parameter estimation in factor models, indirectly aiding alpha generation.\n• Implementation Risk: High computational cost for training flows; sensitivity to flow architecture and hyperparameters; requires careful validation of pivotal property.\n• Novelty: Moderate; combines normalizing flows with likelihood-free inference for nuisance parameters, but similar ideas exist in simulation-based inference. The decomposition and pivotal statistic discovery are novel.\n• Practicality: May be useful for complex models where likelihood is intractable, but for standard financial models, traditional methods are faster and well-understood.",
+    "verdict_cn": "• 创新点: 利用归一化流分解似然，在冗余参数下自动发现枢轴统计量，并融入群不变性先验，理论上有一定新意。\n• 实盘坑: 训练流模型需要大量样本和计算资源，且对超参数敏感；在金融数据上，冗余参数结构可能复杂，方法可能不稳定；推断结果难以直接转化为交易信号。\n• 复现难度: 中等偏高，需要深度学习框架和调参经验；论文未提供代码，复现需从头实现，且理论保证（如最小KL散度）在实际中可能难以验证。\n• 应用场景: 更适合学术研究或复杂模拟数据的推断，在量化金融中可能用于风险模型校准或参数估计，但直接用于高频交易或因子挖掘不现实。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2609.10529v1",
+    "title": "A positive resolution of the gap-entropy conjecture",
+    "pdf_url": "https://arxiv.org/pdf/2609.10529v1",
+    "published": "2026-09-09",
+    "crawled_at": "2026-09-10 21:59:37",
+    "ai_score": 8.5,
+    "translated_title": "间隙-熵猜想的正面解决",
+    "summary_en": [
+      "• Model: Fixed-confidence best-arm identification with independent unit-variance Gaussian arms, means in [0,1], unique optimal arm.",
+      "• Data: Theoretical analysis; no empirical data used.",
+      "• Performance metrics: Expected number of samples, characterized by H(log(1/δ)+Ent(I)) up to constant factors, where H is the sum of inverse squared gaps and Ent(I) is the entropy of the gap distribution.",
+      "• Key result: Proves the gap-entropy conjecture, showing that the optimal sample complexity is within constant factors of H(log(1/δ)+Ent(I)) for any algorithm, and provides an instance-independent algorithm achieving this up to an additive g^{-2} log log(e^e/g) term."
+    ],
+    "summary_cn": [
+      "• 核心模型: 固定置信度下的最佳臂识别，臂为独立单位方差高斯分布，均值在[0,1]内，且存在唯一最优臂。",
+      "• 数据来源: 理论分析，未使用实证数据。",
+      "• 主要结论: 证明了间隙-熵猜想，即最优期望样本量在常数因子内等于 H(log(1/δ)+Ent(I))，其中 H 为逆间隙平方和，Ent(I) 为间隙分布的熵。",
+      "• 算法: 提出了一种与实例无关的算法，其期望样本量不超过该量的常数倍加上 g^{-2} log log(e^e/g)，其中 g 为最小间隙。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for quantitative research; provides fundamental limits for best-arm identification, which can inform optimal allocation in A/B testing, clinical trials, and multi-armed bandit strategies.",
+      "• Implementation Risk: Low; the algorithm is instance-independent and theoretically grounded, but practical performance may depend on constants and the additive term.",
+      "• Novelty: High; resolves a long-standing conjecture, offering a tight characterization of sample complexity in terms of gap entropy.",
+      "• Practical Impact: Could lead to more efficient experiment design and resource allocation in sequential decision-making problems."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次证明了间隙-熵猜想，给出了最优样本复杂度的紧致刻画，理论贡献显著。",
+      "• 实盘坑: 理论结果基于高斯假设和已知方差，实际数据可能偏离；算法中的常数因子可能较大，影响实际效率。",
+      "• 复现难度: 低，算法描述清晰，但需要仔细处理熵的计算和间隙估计。",
+      "• 应用前景: 可用于优化A/B测试、临床试验等需要最佳臂识别的场景，提升资源利用效率。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Accepted"
+    }
+  },
+  {
+    "id": "2609.10525v1",
+    "title": "Characterizing Language Generation in the Limit: Finite Witnesses and a Separation-Width Hierarch",
+    "pdf_url": "https://arxiv.org/pdf/2609.10525v1",
+    "published": "2026-09-09",
+    "crawled_at": "2026-09-10 21:59:44",
+    "ai_score": 5.5,
+    "translated_title": "极限语言生成的特征：有限见证与分离宽度层级",
+    "summary_en": [
+      "• Model Architecture: The paper provides a theoretical characterization of language generation in the limit, using finite positive witnesses and a separation-width hierarchy. It includes a Lean formalization of the main results.",
+      "• Data used: The analysis is purely mathematical, based on arbitrary countable families of languages and exhaustive positive presentations. No empirical data or experiments are involved.",
+      "• Performance metrics: The main outcomes are theoretical: a necessary and sufficient condition for generation, a hierarchy of separation widths (singleton, finite, unbounded, and none), and obstructions via countable-support and finite-profile arguments.",
+      "• Key results: Generation is possible iff each target can be assigned a finite positive witness such that targets activated by any finite sample have infinite common intersection. Every level of the width hierarchy is realized by explicit families.",
+      "• Formal verification: The characterization and hierarchy are checked in Lean, with a simplified normalization and a direct diagonal capture lemma, ensuring rigor."
+    ],
+    "summary_cn": [
+      "• 核心模型: 论文对极限语言生成任务进行了理论刻画，引入了有限正见证和分离宽度层级的概念，并给出了生成可能性的充要条件。",
+      "• 数据来源: 纯数学分析，基于可数语言族和穷举正呈现，不涉及任何实证数据或实验。",
+      "• 主要结论: 生成可行的充要条件是每个目标语言可分配有限正见证，使得任何有限样本激活的目标语言具有无限交集；分离宽度层级（单例、有限、无界、不存在）每一层都有实例。",
+      "• 形式化验证: 使用Lean定理证明器对主要结果进行了形式化验证，包括简化归一化和对角捕获引理，增强了结果的可靠性。",
+      "• 理论贡献: 通过可数支撑和有限轮廓障碍解释了局部组合数据无法决定极限生成，深化了对语言生成极限的理解。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low. This is a foundational theoretical computer science paper with no direct financial applications. It does not address trading, markets, or economic data.",
+      "• Implementation Risk: Not applicable for trading. The results are abstract and formal, with no practical algorithms or code that can be directly deployed in a hedge fund context.",
+      "• Novelty: Moderate to high within its subfield. The characterization and width hierarchy are new, and the Lean formalization adds rigor. However, the impact is confined to theoretical linguistics and computability theory.",
+      "• Relevance to Quant: Minimal. While the concepts of learning in the limit are tangentially related to online learning, the paper does not provide actionable insights for alpha generation or risk management.",
+      "• Overall: A solid theoretical contribution but irrelevant for quantitative finance. Not recommended for investment unless seeking abstract inspiration."
+    ],
+    "verdict_cn": [
+      "• 创新点: 在极限语言生成领域提出了有限见证的充要条件，并建立了分离宽度层级，理论上有新意；Lean形式化验证增加了可信度。",
+      "• 实盘坑: 与量化投资完全无关，无法直接应用于交易策略、风险管理或市场预测，缺乏实际数据支持和实证检验。",
+      "• 复现难度: 理论证明和Lean代码可复现，但需要深厚的数学逻辑背景，对量化研究员来说门槛较高且无直接收益。",
+      "• 应用前景: 极低。该研究属于理论计算机科学范畴，对金融领域的阿尔法挖掘没有直接帮助，不建议投入资源跟进。",
+      "• 总体评价: 一篇扎实的理论文章，但离华尔街实战太远，仅适合对计算理论有兴趣的研究者参考。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2609.10514v1",
+    "title": "Optimal Low-Rank Quantum State Tomography with Bounded-Sample Joint Measurements",
+    "pdf_url": "https://arxiv.org/pdf/2609.10514v1",
+    "published": "2026-09-09",
+    "crawled_at": "2026-09-10 21:59:50",
+    "ai_score": 7.5,
+    "translated_title": "有界样本联合测量的最优低秩量子态层析成像",
+    "summary_en": [
+      "• Model Architecture: The paper establishes optimal sample complexity for low-rank quantum state tomography with joint measurements on at most t samples, providing matching upper and lower bounds.",
+      "• Data used: Theoretical analysis based on quantum information theory, using Fisher information and van Trees inequality for lower bound, and a nonadaptive Gaussian joint measurement protocol for upper bound.",
+      "• Performance metrics: The optimal sample complexity is Θ(dr/ε² max{1, r/√t}), showing that joint measurements improve over single-sample measurements by at most a factor of √t, and measuring O(r²) samples jointly achieves the unrestricted collective rate."
+    ],
+    "summary_cn": [
+      "• 核心模型: 论文确定了低秩量子态层析成像在联合测量至多t个样本时的最优样本复杂度，给出了匹配的上界和下界。",
+      "• 数据来源: 基于量子信息理论的理论分析，下界使用Fisher信息和van Trees不等式，上界基于非自适应的联合高斯测量协议。",
+      "• 主要结论: 最优样本复杂度为Θ(dr/ε² max{1, r/√t})，表明联合测量相比单样本测量最多提升√t倍，且联合测量O(r²)个样本可达到无限制的集体速率。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: While the paper is theoretical and focused on quantum state tomography, the mathematical techniques (Fisher information, van Trees inequality) could inspire novel risk management or portfolio optimization approaches in finance, though direct alpha is limited.",
+      "• Implementation Risk: High risk due to the abstract quantum nature; translating to practical financial algorithms would require significant adaptation and may not yield immediate trading advantages.",
+      "• Novelty: The result is novel in quantum information theory, providing tight bounds for joint measurements, but its novelty for quantitative finance is low without further applied research."
+    ],
+    "verdict_cn": [
+      "• 创新点: 在量子信息理论中具有创新性，首次给出了联合测量下低秩量子态层析成像的紧致样本复杂度界限。",
+      "• 实盘坑: 直接应用于金融实盘风险极高，因为量子态层析与金融数据建模差异巨大，需大量转换且可能无直接收益。",
+      "• 复现难度: 复现难度高，需要深厚的量子信息理论背景和数学工具，且实验验证可能依赖量子计算资源。"
+    ],
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2609.10505v1",
+    "title": "Quantum Feature Engineering for Credit Default Prediction: When and Why IQP Circuits Help Linear Classifiers",
+    "pdf_url": "https://arxiv.org/pdf/2609.10505v1",
+    "published": "2026-09-09",
+    "crawled_at": "2026-09-10 21:59:58",
+    "ai_score": 5.5,
+    "translated_title": "量子特征工程用于信用违约预测：IQP电路何时以及为何有助于线性分类器",
+    "summary_en": [
+      "• Model Architecture: Uses Instantaneous Quantum Polynomial-time (IQP) circuits to generate 2n expectation values as new features, which are appended to a Logistic Regression classifier. The circuit runs in constant depth and encodes feature correlations in a 2^n-dimensional Hilbert space.",
+      "• Data: UCI Default of Credit Card Clients dataset with 23 financial attributes per client. For an n-qubit circuit, n features are selected and encoded as rotation angles.",
+      "• Performance: Appending 16 IQP features (n=8) to Logistic Regression raises F1 from 0.462 to 0.517 (+0.055, p<0.0001). Kernel PCA, the next-best method, reaches only 0.493 at the same feature count. The gap survives Benjamini-Hochberg correction across 12 tests (p=0.00007).",
+      "• Feature Selection: Random Forest importance-guided selection reaches F1=0.523, while encoding maximally uncorrelated features drops it to 0.496, showing the circuit amplifies informative structure rather than creating it.",
+      "• Other Classifiers: No other classifier (Random Forest, SVM, XGBoost, k-NN) benefits, indicating a linear-expressivity mechanism."
+    ],
+    "summary_cn": [
+      "• 核心模型: 使用瞬时量子多项式时间（IQP）电路生成2n个期望值作为新特征，并将其附加到逻辑回归分类器中。电路运行在恒定深度，并在2^n维希尔伯特空间中编码特征相关性。",
+      "• 数据来源: UCI信用卡客户违约数据集，每个客户有23个财务属性。对于n量子位电路，选择n个特征并编码为旋转角度。",
+      "• 主要结论: 将16个IQP特征（n=8）附加到逻辑回归模型，F1从0.462提升至0.517（+0.055，p<0.0001）。核PCA（次优方法）在相同特征数下仅达到0.493。该差距在12次测试的Benjamini-Hochberg校正后仍然显著（p=0.00007）。",
+      "• 特征选择: 随机森林重要性引导的选择达到F1=0.523，而编码最大不相关特征则降至0.496，表明电路放大了信息结构而非从头创建。",
+      "• 其他分类器: 其他分类器（随机森林、SVM、XGBoost、k-NN）均未受益，表明这是一种线性表达机制。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Limited. The improvement is modest (F1 +0.055) and only for Logistic Regression, which is rarely the best model for credit default. The quantum advantage is not demonstrated over classical non-linear methods like Kernel PCA, and the computational benefit is theoretical (exponential scaling of classical simulation) but not practical for n=8.",
+      "• Implementation Risk: High. Quantum circuits require specialized hardware or simulators, and the constant-depth IQP circuit may not be efficiently implementable on near-term devices due to noise. The feature selection method is critical and may not generalize.",
+      "• Novelty: Moderate. The use of IQP circuits for feature engineering is not entirely new, but the systematic comparison with Kernel PCA and the analysis of feature selection provide some insights. However, the paper does not establish a clear quantum advantage.",
+      "• Reproducibility: The method is described clearly, but the quantum circuit implementation details (e.g., exact gate sequences) are not fully specified, which may hinder exact replication. The dataset is public, and the classical part is straightforward.",
+      "• Overall: The paper presents a marginal improvement in a specific setting, but the practical significance for hedge funds is low. The quantum advantage is not compelling enough to justify the overhead."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将IQP电路用于信用违约预测的特征工程，并与核PCA进行对比，分析了特征选择的影响。但量子优势并不明显，且仅对逻辑回归有效。",
+      "• 实盘坑: 提升幅度小（F1仅提高0.055），且仅适用于逻辑回归，而实际中信用违约预测常用更复杂的模型。量子电路需要专用硬件或模拟器，噪声和错误可能使实际部署困难。特征选择方法依赖随机森林重要性，可能过拟合。",
+      "• 复现难度: 中等。数据集公开，但量子电路的具体实现（如门序列）未详细说明，可能难以精确复现。需要量子编程框架和模拟器。",
+      "• 总体评价: 论文在特定设置下展示了微小改进，但对对冲基金的实际价值有限。量子优势不足以证明其开销的合理性。"
+    ],
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2609.10495v1",
+    "title": "Cross-Model Agreement as a Deployment-Time Reliability Signal for Automatic Polyp Segmentation",
+    "pdf_url": "https://arxiv.org/pdf/2609.10495v1",
+    "published": "2026-09-09",
+    "crawled_at": "2026-09-10 22:00:05",
+    "ai_score": 6.5,
+    "translated_title": "跨模型一致性作为自动息肉分割的部署时可靠性信号",
+    "summary_en": [
+      "• Model Architecture: Proposes Referee-Based Quality Estimation (RBQE) using a primary segmentation model and an independently trained referee; evaluates same-architecture (different init) and cross-architecture referees (SegFormer-B0, UNet++, MedSAM).",
+      "• Data used: Standardized 1,223-image external benchmark from four public datasets; restricted evaluation excludes empty-mask cases (1,046 images for SegFormer-B0, 975 for same-architecture control).",
+      "• Performance metrics: Agreement Dice yields ROC-AUC 0.923 for same-architecture referee, 0.960 for SegFormer-B0; restricted ROC-AUC 0.876 and 0.783 respectively; outperforms Test-Time Augmentation baseline by 0.055 ROC-AUC.",
+      "• Key finding: Cross-model agreement provides a practical, interpretable reliability signal for selective prediction, requiring only one additional deterministic forward pass at inference."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出基于裁判的质量估计（RBQE），使用主分割模型与独立训练的裁判模型（同架构不同初始化或跨架构如SegFormer-B0、UNet++、MedSAM）计算一致性。",
+      "• 数据来源: 标准化外部基准包含来自四个公开数据集的1,223张图像；排除空掩码后，SegFormer-B0评估1,046张，同架构对照评估975张。",
+      "• 主要结论: 同架构裁判ROC-AUC达0.923，跨架构SegFormer-B0达0.960，显著优于同架构对照和UNet++，并比测试时增强基线高0.055 ROC-AUC；限制评估下ROC-AUC分别降至0.876和0.783，但优势扩大。",
+      "• 应用价值: RBQE通过拒绝低一致性预测提高保留预测的平均Dice，支持选择性预测，且推理时仅需一次额外的确定性前向传播。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Limited direct alpha for trading; reliability estimation could improve medical AI deployment safety, but not a financial signal.",
+      "• Implementation Risk: Requires an additional referee model, increasing inference cost and complexity; performance drops on restricted evaluation, indicating sensitivity to empty masks.",
+      "• Novelty: Moderate; cross-model agreement is not new, but systematic evaluation of referee independence and architectural diversity in polyp segmentation is a solid contribution.",
+      "• Practicality: The method is simple and interpretable, but clinical validation is needed; the benchmark is external but limited to four public datasets."
+    ],
+    "verdict_cn": [
+      "• 创新点: 系统评估了裁判独立性与架构多样性对可靠性信号的影响，提出无需参考的RBQE框架，在息肉分割任务中验证了跨模型一致性的有效性。",
+      "• 实盘坑: 在金融领域无直接应用；在医疗场景中，额外裁判模型增加计算开销，且空掩码导致性能高估，限制评估下ROC-AUC下降明显。",
+      "• 复现难度: 中等；需要训练多个分割模型，但方法本身简单，代码若开源则易于复现。",
+      "• 总体评价: 工作扎实但创新性一般，适合医学影像或可靠性学习会议，对量化投资无直接价值。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2609.10494v1",
+    "title": "IBIB: A Protocol for Measuring Enterprise AI Systems by Serving Route, Not Model Identifier",
+    "pdf_url": "https://arxiv.org/pdf/2609.10494v1",
+    "published": "2026-09-09",
+    "crawled_at": "2026-09-10 22:00:11",
+    "ai_score": 6.5,
+    "translated_title": "IBIB：通过服务路由而非模型标识符衡量企业AI系统的协议",
+    "summary_en": [
+      "• Model Architecture: The paper proposes IB2, a protocol for evaluating enterprise AI systems by serving route rather than model identifier, with three components: a gold-blind capability-binding preflight, a reliability-inclusive first-pass scoring rule, and structurally score-blind adjudication.",
+      "• Data used: A reference instantiation with 128 locked tasks and 987 assertions covering document, spreadsheet, chart, tool, and database work, kept sealed as the procedure is the artifact.",
+      "• Performance metrics: Across eleven systems, capability availability is measurable; discrimination is not uniform with four of seven suites saturating; serving-arm choice moved one revision and precision from 77.38 to 82.54; excluding failed responses changes point ordering."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出IB2协议，通过服务路由而非模型标识符评估企业AI系统，包含金盲能力绑定预检、可靠性包容的首轮评分规则和结构上分数盲的裁决。",
+      "• 数据来源: 参考实例化包含128个锁定任务和987个断言，覆盖文档、电子表格、图表、工具和数据库工作，但保持密封，因为程序本身才是产物。",
+      "• 主要结论: 在11个系统上，能力可用性可测量；区分度不均匀，7个套件中4个饱和；服务臂选择使一个声明的修订和精度从77.38移至82.54；排除失败响应会改变点排序。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low direct alpha; the protocol addresses measurement error in AI evaluation, which could improve model selection but does not generate trading signals.",
+      "• Implementation Risk: High; requires significant infrastructure to implement preflight, scoring, and adjudication, and the sealed corpus limits reproducibility.",
+      "• Novelty: Moderate; the focus on serving route over model identifier is a fresh perspective, but the components are incremental improvements to evaluation methodology."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将评估焦点从模型标识符转移到服务路由，强调实际部署中的能力可用性，提出了可报告测量误差的协议。",
+      "• 实盘坑: 协议实施复杂，需要大量工程投入；密封语料库导致无法独立验证；结果可能受评估器自身属性影响。",
+      "• 复现难度: 高，因为参考实例化未公开，且协议细节需要精确实现，跨系统比较可能因环境差异而不可靠。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2609.10490v1",
+    "title": "Learning with Covariance Matrices: Principal Component Analysis Meets Learning with Graphs",
+    "pdf_url": "https://arxiv.org/pdf/2609.10490v1",
+    "published": "2026-09-09",
+    "crawled_at": "2026-09-10 22:00:18",
+    "ai_score": 6.5,
+    "translated_title": "基于协方差矩阵的学习：主成分分析与图学习的融合",
+    "summary_en": [
+      "• Model Architecture: The paper introduces Covariance Neural Networks (VNNs), which are Graph Neural Networks (GNNs) that operate on covariance matrices as graphs, leveraging pairwise statistical dependencies.",
+      "• Data used: The theoretical insights are applied to neuroimaging datasets for characterizing brain age gap in neurodegenerative conditions, with broader applications across domains where covariance matrices are useful descriptors.",
+      "• Performance metrics: The paper provides refined stability bounds on predictive outcomes under finite sample-induced covariance matrix perturbations and characterizes transferability across multiscale datasets, but does not report empirical performance metrics such as accuracy or AUC.",
+      "• Key Theoretical Findings: VNNs are shown to have a conceptual equivalence with PCA-based information processing, offering a principled alternative to PCA pipelines."
+    ],
+    "summary_cn": [
+      "• 核心模型: 协方差神经网络（VNN），一种以协方差矩阵为图的图神经网络，利用成对统计依赖关系。",
+      "• 数据来源: 应用于神经影像数据集，用于表征神经退行性疾病的脑年龄差距，并讨论其他领域的应用。",
+      "• 主要结论: VNN与PCA信息处理存在概念等价性；在有限样本引起的协方差矩阵扰动下具有改进的稳定性边界；跨多尺度数据集的可迁移性得到细化。",
+      "• 性能指标: 理论分析为主，未提供实证性能指标如准确率或AUC。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate. The theoretical equivalence between VNNs and PCA suggests potential for improved feature extraction in financial covariance matrices, but the lack of empirical validation limits immediate alpha generation.",
+      "• Implementation Risk: High. Applying VNNs to financial data requires careful handling of non-stationarity and noise in covariance estimation, which may not be fully addressed by the theoretical bounds.",
+      "• Novelty: The integration of GNNs with covariance matrices is novel, but the practical advantages over established methods like PCA or factor models need demonstration.",
+      "• Practicality: The paper is a tutorial-style overview, so implementation details and code are not provided, increasing replication difficulty."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将图神经网络直接作用于协方差矩阵，并建立与PCA的理论联系，为处理统计依赖结构提供了新视角。",
+      "• 实盘坑: 金融协方差矩阵的时变性和噪声问题可能使理论稳定性边界在实际中失效；缺乏实证回测，难以评估真实收益。",
+      "• 复现难度: 高。论文为教程性质，未提供代码和具体实现细节，且神经影像数据与金融数据差异大，迁移需大量调整。",
+      "• 应用前景: 在风险管理和因子投资中有潜在价值，但需进一步验证其相对于传统方法的优势。"
+    ],
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2609.10487v1",
+    "title": "Nonmaximal sums of maximally monotone operators under Rockafellar's constraint qualification",
+    "pdf_url": "https://arxiv.org/pdf/2609.10487v1",
+    "published": "2026-09-09",
+    "crawled_at": "2026-09-10 22:00:24",
+    "ai_score": 2.5,
+    "translated_title": "Rockafellar约束限定下极大单调算子之和的非极大性",
+    "summary_en": [
+      "• Model Architecture: The paper constructs counterexamples to Rockafellar's sum conjecture using two maximally monotone operators that satisfy the interior-domain condition but whose sum is not maximally monotone.",
+      "• Data used: The counterexamples are built on the Banach spaces c0 and ℓ1 with their usual norms; no empirical data is used.",
+      "• Performance metrics: The paper establishes a general construction theorem computing the monotone polar of a class of graphs, provides a necessary and sufficient condition for maximal monotonicity, and shows that a positive rank-one perturbation yields a nonmaximal sum under this condition.",
+      "• Key results: The theorem's hypotheses and maximality criterion are verified on c0, yielding a counterexample; a bounded linear surjection from ℓ1 onto c0 is constructed to obtain the counterexample on ℓ1."
+    ],
+    "summary_cn": [
+      "• 核心模型: 构造了两个满足内点域条件的极大单调算子，但其和不是极大单调的，从而反驳了Rockafellar的和猜想。",
+      "• 数据来源: 在Banach空间c0和ℓ1（赋予通常范数）上构造反例，不涉及实证数据。",
+      "• 主要结论: 建立了一般构造定理，计算了一类图的单调极，给出了极大单调性的充要条件，并证明正秩一扰动在该条件下产生非极大和。",
+      "• 验证: 在c0上验证了定理假设和极大性准则，得到反例；通过构造从ℓ1到c0的有界线性满射，在ℓ1上得到反例。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: None. This is a pure functional analysis result with no direct financial applications; it does not address trading, markets, or data-driven strategies.",
+      "• Implementation Risk: Not applicable. The work is theoretical and does not involve implementation in financial systems.",
+      "• Novelty: High within mathematical convex analysis, as it resolves a long-standing conjecture, but irrelevant to quantitative finance.",
+      "• Practical Impact: Zero for hedge funds; the result may influence optimization theory but not alpha generation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 在数学凸分析领域具有高创新性，解决了长期存在的Rockafellar和猜想，但属于纯理论突破。",
+      "• 实盘坑: 无任何实盘应用价值，完全不涉及金融数据、交易策略或市场建模。",
+      "• 复现难度: 极高，需要深厚的泛函分析和单调算子理论背景，且复现仅对数学验证有意义。",
+      "• 总体评价: 对量化投资毫无用处，不建议投入资源研究。"
+    ],
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "Journal of Functional Analysis",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2609.10479v1",
+    "title": "Deep Learning-Based Detection of Electrical Faults and Power Quality Disturbances in Aerospace Power Systems",
+    "pdf_url": "https://arxiv.org/pdf/2609.10479v1",
+    "published": "2026-09-09",
+    "crawled_at": "2026-09-10 22:00:32",
+    "ai_score": 5.5,
+    "translated_title": "基于深度学习的航空航天电力系统电气故障与电能质量扰动检测",
+    "summary_en": "• Model Architecture: Compares 1D/2D CNNs, LSTM, CNN-LSTM hybrids, ResNet, MobileNet, and VGG; a compact ResNet (175,685 parameters) achieves the best accuracy-complexity tradeoff.\n• Data: High-fidelity simulation of Boeing 787 electrical architecture (400 Hz) generates 73,500 samples per dataset for 21 conditions; augmentation includes signal processing, domain randomization, and class-specific GANs.\n• Performance: Software test accuracy 96.94%; after 8-bit quantization on Xilinx Zynq UltraScale+ MPSoC ZCU102, accuracy 95.87% with 6.90 ms mean accelerator latency per input record.\n• Contribution: Releases time-series dataset via IEEE DataPort and demonstrates simulation-based, accelerator-level feasibility for embedded edge AI in aircraft electrical health monitoring.",
+    "summary_cn": "• 核心模型: 对比了1D/2D CNN、LSTM、CNN-LSTM、ResNet、MobileNet和VGG，紧凑ResNet（175,685参数）在精度与复杂度间取得最佳平衡。\n• 数据来源: 基于波音787电气架构的高保真仿真生成400 Hz电压电流波形，涵盖21种正常、扰动、开关、开路和短路条件，每个数据集73,500个样本；采用信号处理增强、域随机化和类特定GAN增加多样性。\n• 主要结论: 软件测试准确率96.94%；8位量化部署于Xilinx Zynq UltraScale+ MPSoC ZCU102后准确率95.87%，平均加速器延迟6.90 ms/输入记录。\n• 贡献: 通过IEEE DataPort发布时间序列数据集，验证了嵌入式边缘AI在飞机电气健康监测中的仿真级可行性。",
+    "verdict_en": "• Alpha Potential: Low for financial markets; niche application in aerospace power systems, not directly tradable. Potential indirect value for industrial IoT or defense sectors.\n• Implementation Risk: High; relies entirely on simulation data, no experimental validation. Domain gap between simulated and real 400 Hz systems may degrade performance.\n• Novelty: Moderate; applies existing deep learning models to a new domain (400 Hz aerospace) with hardware-aware optimization, but lacks methodological innovation.\n• Reproducibility: Good; dataset released, but simulation model details may be insufficient for exact replication. Hardware deployment specifics are provided.\n• Overall: Solid engineering work but limited alpha for quant finance. Score 5.5/10.",
+    "verdict_cn": "• 创新点: 将深度学习故障检测拓展至400 Hz航空电力系统，结合硬件感知量化部署，并公开数据集，具有一定工程价值。\n• 实盘坑: 完全依赖仿真数据，未进行实验验证，仿真与真实系统间的域差异可能导致实际部署性能大幅下降；且应用场景与金融交易无关，无直接阿尔法收益。\n• 复现难度: 中等；数据集已公开，但仿真模型细节（如波音787电气架构参数）可能未完全披露，影响精确复现。\n• 综合评分: 5.5/10，属于特定领域工程应用，对量化金融无直接价值。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "IEEE Transactions on Industrial Informatics",
+      "status": "Under Review"
+    }
+  },
+  {
     "id": "2609.09157v1",
     "title": "Learning Length-Extrapolatable Recurrent Models",
     "pdf_url": "https://arxiv.org/pdf/2609.09157v1",
@@ -44800,346 +45139,6 @@
     "journal_info": {
       "name": "ArXiv Preprint",
       "status": "Preprint"
-    }
-  },
-  {
-    "id": "2601.20861v1",
-    "title": "Evolutionary Strategies lead to Catastrophic Forgetting in LLMs",
-    "pdf_url": "https://arxiv.org/pdf/2601.20861v1",
-    "published": "2026-01-28",
-    "crawled_at": "2026-01-29 20:15:46",
-    "ai_score": 7.5,
-    "translated_title": "进化策略导致大语言模型灾难性遗忘",
-    "summary_en": [
-      "• Model Architecture: The paper analyzes Evolutionary Strategies (ES) as a gradient-free alternative to traditional gradient-based algorithms like GRPO for training Large Language Models (LLMs).",
-      "• Data used: The study evaluates ES on math and reasoning tasks, though specific datasets are not detailed in the abstract; it focuses on performance metrics and forgetting curves during training.",
-      "• Performance metrics: ES achieves performance close to GRPO on math and reasoning tasks with comparable compute budgets, but shows significant forgetting of prior abilities as update steps increase, measured via forgetting curves and update characteristics (e.g., ℓ₂ norm and sparsity)."
-    ],
-    "summary_cn": [
-      "• 核心模型: 分析进化策略（ES）作为无梯度替代方案，与传统基于梯度的算法（如GRPO）对比，用于训练大语言模型（LLMs）。",
-      "• 数据来源: 在数学和推理任务上评估ES，摘要未详述具体数据集；研究侧重于训练过程中的性能指标和遗忘曲线。",
-      "• 主要结论: ES在可比计算预算下，在数学和推理任务上性能接近GRPO，但随着更新步骤增加，表现出显著的先前能力遗忘，更新更不稀疏且ℓ₂范数更大。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate; highlights a critical limitation of ES for continual learning in LLMs, which could inform strategies to avoid forgetting in online training scenarios, but direct alpha generation is limited as it's more diagnostic than prescriptive.",
-      "• Implementation Risk: High; ES leads to catastrophic forgetting, making it unsuitable for real-time or continual learning applications without mitigation, posing risks for deployment in dynamic environments.",
-      "• Novelty: Moderate; ES is a re-emerging technique, but the comprehensive analysis of its forgetting behavior and comparison to GRPO provides new insights into gradient-free algorithms' limitations for LLMs."
-    ],
-    "verdict_cn": [
-      "• 创新点: 中等；ES作为重新兴起的无梯度方法，但其在LLMs中遗忘行为的全面分析及与GRPO的对比，为梯度自由算法的局限性提供了新见解。",
-      "• 实盘坑: 高；ES导致灾难性遗忘，不适合实时或持续学习应用，未缓解前在动态环境中部署风险大，可能破坏模型稳定性。",
-      "• 复现难度: 中等；基于标准ES和GRPO方法，但需要详细实验设置和任务数据，可能涉及复杂调参和计算资源。"
-    ],
-    "ai_strategy": "NLP/LLM",
-    "journal_info": {
-      "name": "ArXiv Preprint",
-      "status": "Preprint"
-    }
-  },
-  {
-    "id": "2601.20854v1",
-    "title": "Exploring Transformer Placement in Variational Autoencoders for Tabular Data Generation",
-    "pdf_url": "https://arxiv.org/pdf/2601.20854v1",
-    "published": "2026-01-28",
-    "crawled_at": "2026-01-29 20:16:04",
-    "ai_score": 7.2,
-    "translated_title": "探索Transformer在变分自编码器中用于表格数据生成的位置安排",
-    "summary_en": [
-      "• Model Architecture: Investigates integrating Transformers into different components of a VAE (encoder, decoder, latent space) to capture complex feature interactions in tabular data, with attention to linear relationships in decoder blocks.",
-      "• Data used: Experiments conducted on 57 datasets from the OpenML CC18 suite, covering diverse tabular data scenarios for robust evaluation.",
-      "• Performance metrics: Focuses on trade-offs between fidelity and diversity in generated data, with empirical analysis of Transformer block similarity and linear approximations in decoder outputs."
-    ],
-    "summary_cn": [
-      "• 核心模型: 研究将Transformer集成到VAE的不同组件（编码器、解码器、潜在空间）中，以捕捉表格数据中的复杂特征交互，特别关注解码器块的线性关系。",
-      "• 数据来源: 使用OpenML CC18套件中的57个数据集进行实验，覆盖多样化的表格数据场景以确保评估的稳健性。",
-      "• 主要结论: 发现Transformer在潜在空间和解码器中的位置安排会导致生成数据的保真度与多样性之间的权衡，并观察到Transformer块间高度相似性及解码器输入输出的近似线性关系。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate; the approach could enhance synthetic data generation for training financial models, but direct alpha extraction from tabular market data is limited without specific financial applications.",
-      "• Implementation Risk: High; integrating Transformers into VAEs adds complexity, and the trade-off between fidelity and diversity may require careful tuning for real-world datasets, increasing deployment challenges.",
-      "• Novelty: Low to moderate; while combining Transformers with VAEs for tabular data is innovative, the paper lacks groundbreaking architectural insights, focusing more on empirical placement effects rather than novel mechanisms."
-    ],
-    "verdict_cn": [
-      "• 创新点: 较低至中等；将Transformer与VAE结合用于表格数据生成具有新意，但论文缺乏突破性的架构见解，主要关注位置安排的实证效果而非创新机制。",
-      "• 实盘坑: 高；Transformer集成增加了模型复杂性，保真度与多样性的权衡需针对实际数据集精细调参，部署风险较大，且未涉及金融数据的具体优化。",
-      "• 复现难度: 中等；基于公开数据集和标准框架，复现实验可行，但需要处理Transformer-VAE集成的技术细节和超参数调整，可能耗时较长。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "ArXiv Preprint",
-      "status": "Preprint"
-    }
-  },
-  {
-    "id": "2601.20852v1",
-    "title": "C3Box: A CLIP-based Class-Incremental Learning Toolbox",
-    "pdf_url": "https://arxiv.org/pdf/2601.20852v1",
-    "published": "2026-01-28",
-    "crawled_at": "2026-01-29 20:16:23",
-    "ai_score": 7.5,
-    "translated_title": "C3Box：基于CLIP的类增量学习工具箱",
-    "summary_en": [
-      "• Model Architecture: C3Box integrates traditional CIL methods, ViT-based CIL methods, and state-of-the-art CLIP-based CIL methods into a unified framework built on CLIP's pre-trained vision-language model architecture.",
-      "• Data used: The paper does not specify particular datasets, but CIL typically uses benchmark datasets like CIFAR-100, ImageNet, or COCO for evaluation; C3Box likely supports standard continual learning datasets.",
-      "• Performance metrics: While not detailed in the abstract, C3Box aims to provide reproducible experimentation with standardized configurations, enabling fair comparison of accuracy, forgetting rates, and computational efficiency across methods."
-    ],
-    "summary_cn": [
-      "• 核心模型: C3Box基于CLIP预训练模型，整合了传统CIL方法、基于ViT的CIL方法以及最先进的基于CLIP的CIL方法，形成一个统一的类增量学习框架。",
-      "• 数据来源: 论文未明确指定数据集，但类增量学习通常使用CIFAR-100、ImageNet或COCO等基准数据集进行评估；C3Box可能支持标准持续学习数据集。",
-      "• 主要结论: C3Box通过模块化设计和JSON配置，解决了现有CLIP-based CIL方法代码分散、配置不一致的问题，提供了可复现的实验平台，降低了工程开销。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate; C3Box could enhance model adaptability in dynamic financial data environments (e.g., evolving market regimes or new asset classes), but direct alpha generation is limited as it's a toolbox rather than a trading strategy.",
-      "• Implementation Risk: Low to moderate; reliance on widely used open-source libraries and standardized pipelines reduces technical risk, but integration into live trading systems requires careful validation of CIL methods' stability and latency.",
-      "• Novelty: Moderate; the main innovation is the integration and standardization of existing CLIP-based CIL methods into a unified toolbox, addressing reproducibility issues rather than proposing new algorithmic breakthroughs."
-    ],
-    "verdict_cn": [
-      "• 创新点: 中等；主要创新在于将分散的CLIP-based CIL方法整合到一个统一的工具箱中，通过JSON配置和标准化流程解决可复现性问题，而非提出新的算法突破。",
-      "• 实盘坑: 低到中等；依赖广泛使用的开源库降低了技术风险，但将CIL方法集成到实盘交易系统时，需验证模型在动态数据流中的稳定性、延迟和过拟合风险。",
-      "• 复现难度: 低；基于PyCIL的流线型设计和开源代码（https://github.com/LAMDA-CL/C3Box）使得复现相对容易，适合作为研究基准平台。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "ArXiv Preprint",
-      "status": "Preprint"
-    }
-  },
-  {
-    "id": "2601.20848v1",
-    "title": "Post-Training Fairness Control: A Single-Train Framework for Dynamic Fairness in Recommendation",
-    "pdf_url": "https://arxiv.org/pdf/2601.20848v1",
-    "published": "2026-01-28",
-    "crawled_at": "2026-01-29 20:16:40",
-    "ai_score": 8.2,
-    "translated_title": "训练后公平性控制：推荐系统中动态公平性的单次训练框架",
-    "summary_en": [
-      "• Model Architecture: Cofair introduces a shared representation layer with fairness-conditioned adapter modules to generate user embeddings tailored to different fairness levels, coupled with a user-level regularization term ensuring monotonic fairness improvements.",
-      "• Data used: Comprehensive experiments conducted on multiple datasets (specific datasets not named in abstract), tested with various backbone models to validate framework robustness.",
-      "• Performance metrics: Framework achieves comparable or superior fairness-accuracy trade-off curves compared to state-of-the-art baselines, enabling dynamic fairness adjustments without retraining for each new requirement."
-    ],
-    "summary_cn": [
-      "• 核心模型: Cofair采用共享表示层结合公平条件适配器模块，生成针对不同公平性水平的用户嵌入，并通过用户级正则化项保证公平性单调改进。",
-      "• 数据来源: 在多个数据集上进行综合实验（摘要未具体命名），使用不同骨干模型验证框架通用性。",
-      "• 主要结论: 框架在公平性-准确性权衡曲线上达到或超越现有最优基线，无需为每个新公平性要求重新训练，实现动态公平性控制。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate - Framework enables rapid adaptation to changing regulatory or stakeholder fairness requirements in real-time recommendation systems, potentially reducing retraining costs and latency.",
-      "• Implementation Risk: High - User-level monotonic fairness guarantees require careful calibration; adversarial training components may introduce instability in production environments.",
-      "• Novelty: Significant - Single-train framework with post-training fairness control addresses a critical gap in dynamic fairness requirements, though adapter-based approaches are becoming more common in ML."
-    ],
-    "verdict_cn": [
-      "• 创新点: 显著 - 单次训练后公平性控制框架解决了动态公平性需求的关键缺口，适配器模块设计具有工程实用性。",
-      "• 实盘坑: 高 - 用户级单调公平性保证需要精细调参；对抗训练组件可能在生产环境中引入不稳定性；公平性指标与业务指标的平衡挑战。",
-      "• 复现难度: 中等 - 代码已公开，但需要理解对抗训练和正则化项的数学保证；多数据集实验要求较高计算资源。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Accepted"
-    }
-  },
-  {
-    "id": "2601.20845v1",
-    "title": "PatchFormer: A Patch-Based Time Series Foundation Model with Hierarchical Masked Reconstruction and Cross-Domain Transfer Learning for Zero-Shot Multi-Horizon Forecasting",
-    "pdf_url": "https://arxiv.org/pdf/2601.20845v1",
-    "published": "2026-01-28",
-    "crawled_at": "2026-01-29 20:16:57",
-    "ai_score": 8.7,
-    "translated_title": "PatchFormer：基于补丁的时间序列基础模型，采用分层掩码重建与跨领域迁移学习实现零样本多步预测",
-    "summary_en": [
-      "• Model Architecture: PatchFormer segments time series into patches and uses hierarchical masked reconstruction for self-supervised pretraining, with learnable aggregation across temporal scales and lightweight adapters for efficient transfer.",
-      "• Data used: Pretrained on up to 100 billion points across 24 benchmark datasets spanning weather, energy, traffic, finance, and healthcare domains.",
-      "• Performance metrics: Achieves 27.3% reduction in mean squared error compared to strong baselines in zero-shot multi-horizon forecasting, requires 94% less task-specific training data, and processes length-512 sequences 3.8x faster than full-sequence transformers."
-    ],
-    "summary_cn": [
-      "• 核心模型: PatchFormer将时间序列分割为补丁，采用分层掩码重建进行自监督预训练，通过可学习的跨时间尺度聚合和轻量级适配器实现高效迁移。",
-      "• 数据来源: 在涵盖天气、能源、交通、金融和医疗等领域的24个基准数据集上进行预训练，数据量高达1000亿个点。",
-      "• 主要结论: 在零样本多步预测中，相比强基线平均平方误差降低27.3%，任务特定训练数据需求减少94%，处理长度为512的序列速度比全序列Transformer快3.8倍。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High potential for cross-domain zero-shot forecasting in finance, enabling rapid deployment on new assets or markets with minimal labeled data, particularly valuable for multi-horizon predictions.",
-      "• Implementation Risk: Dynamic masking and hierarchical reconstruction may introduce instability in real-time trading environments; cross-domain transfer could suffer from distribution shifts in volatile markets.",
-      "• Novelty: Combines patch-based segmentation with hierarchical masked reconstruction and cross-domain knowledge distillation, offering a scalable foundation model approach that reduces data dependency significantly."
-    ],
-    "verdict_cn": [
-      "• 创新点: 将基于补丁的分割与分层掩码重建、跨领域知识蒸馏相结合，提供可扩展的基础模型方法，显著降低数据依赖性。",
-      "• 实盘坑: 动态掩码和分层重建在实时交易环境中可能引入不稳定性；跨领域迁移在波动市场中可能因分布偏移而失效。",
-      "• 复现难度: 中等偏高，需要处理大规模预训练数据（高达1000亿点）和复杂的掩码重建目标，但轻量级适配器设计有助于降低部署成本。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Accepted"
-    }
-  },
-  {
-    "id": "2601.20838v1",
-    "title": "Reward Models Inherit Value Biases from Pretraining",
-    "pdf_url": "https://arxiv.org/pdf/2601.20838v1",
-    "published": "2026-01-28",
-    "crawled_at": "2026-01-29 20:17:36",
-    "ai_score": 8.2,
-    "translated_title": "奖励模型从预训练中继承价值偏见",
-    "summary_en": [
-      "• Model Architecture: The study analyzes 10 leading open-weight reward models (RMs) initialized from large language models (LLMs), specifically comparing Llama and Gemma-based RMs. It demonstrates that RMs inherit representations from their base models, influencing their behavior along psychological axes.",
-      "• Data used: The research employs validated psycholinguistic corpora to measure human value dimensions. Experiments include training RMs with ablations for preference data source and quantity, using identical preference data and finetuning processes across models to isolate base model effects.",
-      "• Performance metrics: The study shows robust preferences: Llama RMs favor 'agency' and Gemma RMs favor 'communion' on the 'Big Two' psychological axes. These differences are traced back to logits of instruction-tuned and pre-trained models, with implicit reward scores derived from log-probability differences exhibiting the same biases."
-    ],
-    "summary_cn": [
-      "• 核心模型: 研究分析了10个领先的开源权重奖励模型（RMs），这些模型基于大型语言模型（LLMs）初始化，特别比较了基于Llama和Gemma的RMs，揭示了它们从基础模型中继承表征并影响行为。",
-      "• 数据来源: 使用经过验证的心理语言学语料库来测量人类价值维度，实验包括对偏好数据来源和数量进行消融训练，确保在不同模型间使用相同的偏好数据和微调过程以隔离基础模型影响。",
-      "• 主要结论: 研究发现Llama RMs在'Big Two'心理轴上偏好'能动性'，而Gemma RMs偏好'共融性'，这些差异可追溯到指令微调和预训练模型的logits，从对数概率差异推导的隐式奖励分数也表现出相同偏见。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate; the findings highlight that base model choice in RMs introduces systematic value biases, which could be exploited in NLP/LLM strategies by selecting models aligned with specific value orientations for targeted applications, though direct financial alpha may be limited.",
-      "• Implementation Risk: High; the durability of these biases despite identical training data suggests that pretraining stage safety and alignment efforts are critical, posing risks if overlooked in deployment, as RMs may not fully represent human preferences as intended.",
-      "• Novelty: High; the paper provides a comprehensive, empirical demonstration that RMs inherit value biases from pretraining, a previously understudied area, with implications for open-source development and alignment research, offering new insights into model behavior."
-    ],
-    "verdict_cn": [
-      "• 创新点: 高；论文通过实证研究首次全面揭示奖励模型从预训练中继承价值偏见，填补了该领域的研究空白，对开源开发和模型对齐有重要启示，提供了关于模型行为的新视角。",
-      "• 实盘坑: 高；即使使用相同训练数据，这些偏见仍持久存在，表明预训练阶段的安全性和对齐工作至关重要，若在部署中被忽视，可能导致奖励模型无法如预期代表人类偏好，带来实施风险。",
-      "• 复现难度: 中等；研究基于开源模型和验证语料库，方法透明，但需要访问多个领先的RMs和大量计算资源进行消融实验，复现需一定技术基础，但总体可行。"
-    ],
-    "ai_strategy": "NLP/LLM",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Accepted"
-    }
-  },
-  {
-    "id": "2601.20834v1",
-    "title": "Linear representations in language models can change dramatically over a conversation",
-    "pdf_url": "https://arxiv.org/pdf/2601.20834v1",
-    "published": "2026-01-28",
-    "crawled_at": "2026-01-29 20:17:54",
-    "ai_score": 7.8,
-    "translated_title": "语言模型中的线性表征在对话过程中会发生显著变化",
-    "summary_en": [
-      "• Model Architecture: The study examines linear representations in language models, focusing on how these evolve during simulated conversations across different model families and layers, without specifying a particular architecture but implying general applicability to transformer-based models.",
-      "• Data used: The research utilizes simulated conversations, including replaying conversation scripts written by different models, and compares these to contexts with sci-fi stories framed explicitly, indicating a mix of generated and curated textual data for analysis.",
-      "• Performance metrics: Findings show robust changes in linear representations, such as shifts in factuality dimensions, with adaptation weaker in non-conversational contexts, highlighting the dynamic nature of model responses over time."
-    ],
-    "summary_cn": [
-      "• 核心模型: 研究聚焦于语言模型中的线性表征，探讨其在模拟对话过程中的动态变化，适用于多种模型家族和层级，未指定具体架构但暗示基于Transformer的模型通用性。",
-      "• 数据来源: 使用模拟对话数据，包括重播由不同模型编写的对话脚本，并与明确标记为科幻故事的上下文进行比较，涉及生成和策划的文本数据。",
-      "• 主要结论: 线性表征在对话中会发生显著变化，如事实性维度的转换，这些变化在非对话语境中较弱，表明模型响应随上下文动态演化。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate; the findings on representational dynamics could inform strategies for adaptive NLP systems in trading contexts, such as real-time sentiment analysis or risk assessment that accounts for conversational shifts, but direct financial applications are not explored.",
-      "• Implementation Risk: High; the study highlights challenges for interpretability and steering, suggesting that static feature interpretations may be misleading, which could increase operational risks if applied without robust validation in live trading environments.",
-      "• Novelty: High; the paper introduces novel insights into how language model representations evolve dynamically over conversations, contrasting with static analysis approaches, and points to new research directions in model adaptation."
-    ],
-    "verdict_cn": [
-      "• 创新点: 高；论文揭示了语言模型表征在对话中的动态演化，突破了静态分析的传统框架，为理解模型上下文适应提供了新视角。",
-      "• 实盘坑: 高；研究指出可解释性和引导的挑战，静态特征解释可能误导，在实盘应用中需谨慎验证以避免操作风险。",
-      "• 复现难度: 中等；方法基于模拟对话和线性表征分析，技术门槛较高，但数据可生成，复现需专业知识但可行。"
-    ],
-    "ai_strategy": "NLP/LLM",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2601.20830v1",
-    "title": "VSCOUT: A Hybrid Variational Autoencoder Approach to Outlier Detection in High-Dimensional Retrospective Monitoring",
-    "pdf_url": "https://arxiv.org/pdf/2601.20830v1",
-    "published": "2026-01-28",
-    "crawled_at": "2026-01-29 20:18:16",
-    "ai_score": 8.2,
-    "translated_title": "VSCOUT：一种用于高维回顾性监测中异常值检测的混合变分自编码器方法",
-    "summary_en": [
-      "• Model Architecture: VSCOUT combines an Automatic Relevance Determination Variational Autoencoder (ARD-VAE) with ensemble-based latent outlier filtering and changepoint detection, featuring a two-stage refinement process that retrains after removing flagged observations to stabilize the in-control latent manifold.",
-      "• Data used: The framework is designed for high-dimensional, non-Gaussian, and contamination-prone data from modern industrial and service processes, addressing challenges like heavy tails, multimodality, nonlinear dependencies, and sparse special-cause observations.",
-      "• Performance metrics: Extensive experiments across benchmark datasets show VSCOUT achieves superior sensitivity to special-cause structure while maintaining controlled false alarms, outperforming classical SPC procedures, robust estimators, and modern machine-learning baselines in terms of scalability, distributional flexibility, and resilience to complex contamination patterns."
-    ],
-    "summary_cn": [
-      "• 核心模型: VSCOUT采用自动相关确定变分自编码器（ARD-VAE）架构，结合基于集成的潜在异常值过滤和变点检测，通过两阶段精炼过程（先标记再重训练）来稳定控制内潜在流形。",
-      "• 数据来源: 针对现代工业和服务过程产生的高维、非高斯、易受污染数据，处理重尾、多模态、非线性依赖和稀疏特殊原因观测等挑战。",
-      "• 主要结论: 在基准数据集上的广泛实验表明，VSCOUT在保持可控误报率的同时，对特殊原因结构具有卓越的敏感性，优于经典SPC程序、鲁棒估计器和现代机器学习基线，展现出可扩展性、分布灵活性和对复杂污染模式的韧性。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate to high; the method's ability to handle complex, high-dimensional data with distribution-free assumptions could uncover subtle anomalies in financial time series or alternative data streams, potentially leading to early signal detection for risk management or alpha generation in non-traditional datasets.",
-      "• Implementation Risk: High; the two-stage refinement and ensemble-based filtering require careful tuning and computational resources, with risks of overfitting in noisy environments or misalignment with real-time Phase II deployment needs in fast-paced markets.",
-      "• Novelty: Significant; the hybrid approach integrating ARD-VAE with outlier and changepoint filters for retrospective monitoring is innovative, addressing gaps in classical SPC by leveraging modern deep learning for robust baseline estimation in contaminated settings."
-    ],
-    "verdict_cn": [
-      "• 创新点: 显著；将ARD-VAE与异常值和变点过滤器结合用于回顾性监测的混合方法具有创新性，利用现代深度学习在污染环境中进行鲁棒基线估计，弥补了经典SPC的不足。",
-      "• 实盘坑: 高；两阶段精炼和基于集成的过滤需要精细调优和计算资源，在嘈杂环境中存在过拟合风险，或与快节奏市场中实时第二阶段部署需求不匹配。",
-      "• 复现难度: 中等偏高；ARD-VAE架构和集成过滤的实现需要专业知识，但论文提供了清晰框架，基准实验可复现，不过实际应用到金融数据可能需要额外适配和验证。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Accepted"
-    }
-  },
-  {
-    "id": "2601.20829v1",
-    "title": "Training Reasoning Models on Saturated Problems via Failure-Prefix Conditioning",
-    "pdf_url": "https://arxiv.org/pdf/2601.20829v1",
-    "published": "2026-01-28",
-    "crawled_at": "2026-01-29 20:18:34",
-    "ai_score": 7.8,
-    "translated_title": "通过失败前缀条件化在饱和问题上训练推理模型",
-    "summary_en": [
-      "• Model Architecture: Proposes failure-prefix conditioning method for RLVR training, where models are conditioned on prefixes from rare incorrect reasoning trajectories instead of original questions to expose failure-prone states.",
-      "• Data used: Saturated reasoning problems where standard RLVR training stalls due to poor accessibility of informative failures; uses incorrect reasoning trajectories as training prefixes.",
-      "• Performance metrics: Achieves performance gains comparable to training on medium-difficulty problems while maintaining token efficiency; reduces performance degradation under misleading failure prefixes; iterative approach unlocks additional gains after plateaus."
-    ],
-    "summary_cn": [
-      "• 核心模型: 提出失败前缀条件化方法，用于强化学习与可验证奖励训练，通过基于罕见错误推理轨迹的前缀而非原始问题来暴露模型于易失败状态。",
-      "• 数据来源: 使用饱和推理问题，其中标准训练因信息性失败难以访问而停滞；利用错误推理轨迹作为训练前缀。",
-      "• 主要结论: 在保持标记效率的同时，实现与中等难度问题训练相当的性能提升；减少在误导性失败前缀下的性能退化；迭代方法在平台期后解锁额外增益。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate - method could enhance reasoning robustness in financial NLP tasks like earnings call analysis or risk assessment, but direct market alpha generation is limited without domain-specific adaptation.",
-      "• Implementation Risk: High - requires careful tuning of failure prefix selection and iterative refresh mechanisms; risk of overfitting to failure patterns if not properly balanced with correct reasoning adherence.",
-      "• Novelty: High - introduces a novel conditioning approach to address saturation in RLVR training, leveraging rare failure states to improve learning efficiency, though builds on existing RLVR frameworks."
-    ],
-    "verdict_cn": [
-      "• 创新点: 高 - 提出新颖的条件化方法解决强化学习与可验证奖励训练中的饱和问题，利用罕见失败状态提升学习效率，但基于现有框架。",
-      "• 实盘坑: 高 - 需要精细调整失败前缀选择和迭代刷新机制；若未与正确推理保持平衡，存在过度拟合失败模式的风险。",
-      "• 复现难度: 中等 - 方法相对简单，但依赖饱和问题数据集和错误轨迹生成，可能需大量计算资源进行迭代训练。"
-    ],
-    "ai_strategy": "NLP/LLM",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2601.19897v1",
-    "title": "Self-Distillation Enables Continual Learning",
-    "pdf_url": "https://arxiv.org/pdf/2601.19897v1",
-    "published": "2026-01-27",
-    "crawled_at": "2026-01-28 20:15:00",
-    "ai_score": 7.8,
-    "translated_title": "自蒸馏实现持续学习",
-    "summary_en": [
-      "• Model Architecture: Self-Distillation Fine-Tuning (SDFT) uses a demonstration-conditioned model as its own teacher to generate on-policy training signals, enabling continual learning without explicit reward functions.",
-      "• Data used: Expert demonstrations for skill learning and knowledge acquisition tasks, with sequential learning experiments to test multi-skill accumulation over time.",
-      "• Performance metrics: Higher new-task accuracy and substantially reduced catastrophic forgetting compared to supervised fine-tuning (SFT), with no performance regression in sequential learning."
-    ],
-    "summary_cn": [
-      "• 核心模型: 自蒸馏微调（SDFT）利用演示条件模型作为自身教师，生成在线策略训练信号，实现无显式奖励函数的持续学习。",
-      "• 数据来源: 专家演示数据，用于技能学习和知识获取任务，并通过顺序学习实验测试多技能随时间累积。",
-      "• 主要结论: 在技能学习和知识获取任务中，SDFT持续优于监督微调（SFT），实现更高新任务准确率，同时显著减少灾难性遗忘，在顺序学习中无性能回归。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate; SDFT could enhance model adaptability in dynamic markets by enabling continual learning from new data without forgetting prior patterns, potentially improving predictive accuracy in evolving environments.",
-      "• Implementation Risk: High; On-policy learning from demonstrations may require high-quality, consistent expert data, and the method's scalability to complex, noisy financial datasets is unproven.",
-      "• Novelty: High; The approach innovatively combines self-distillation with on-policy learning for continual learning, addressing a key limitation in foundation models without relying on explicit rewards."
-    ],
-    "verdict_cn": [
-      "• 创新点: 高；将自蒸馏与在线策略学习结合，为持续学习提供新路径，无需显式奖励函数，解决基础模型的关键限制。",
-      "• 实盘坑: 高；依赖高质量专家演示数据，在复杂、嘈杂的金融数据上可扩展性未经验证，可能增加实施风险和成本。",
-      "• 复现难度: 中等；方法相对简单，但需要调整演示条件模型和蒸馏过程，对计算资源和数据预处理有一定要求。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Accepted"
     }
   }
 ]
