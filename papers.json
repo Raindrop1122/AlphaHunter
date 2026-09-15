@@ -1,5 +1,307 @@
 [
   {
+    "id": "2609.15987v1",
+    "title": "Bellman Policy Optimization",
+    "pdf_url": "https://arxiv.org/pdf/2609.15987v1",
+    "published": "2026-09-14",
+    "crawled_at": "2026-09-15 22:27:51",
+    "ai_score": 7.2,
+    "translated_title": "贝尔曼策略优化",
+    "summary_en": [
+      "• Model Architecture: BPO is a critic-free reinforcement learning method derived from Policy Mirror Descent (PMD), reformulating PMD as a trajectory-level objective using Bellman equations for autoregressive generation with terminal rewards.",
+      "• Data used: Evaluated on mathematical reasoning benchmarks, though specific datasets are not detailed in the abstract.",
+      "• Performance metrics: Demonstrates effectiveness on mathematical reasoning benchmarks, but no quantitative results are provided in the abstract.",
+      "• Key innovation: Avoids estimating state values at intermediate states, and the practical loss uses a smoothed ratio of complementary token probabilities for mismatch correction.",
+      "• Theoretical guarantee: Proves that BPO has the same unique optimal solution as the original PMD objective."
+    ],
+    "summary_cn": [
+      "• 核心模型: BPO是一种无评论家的强化学习方法，源自策略镜像下降（PMD），利用贝尔曼方程将PMD重新表述为轨迹级目标，适用于带终端奖励的自回归生成。",
+      "• 数据来源: 在数学推理基准上进行了实验评估，但摘要中未提供具体数据集细节。",
+      "• 主要结论: 在数学推理基准上证明了有效性，但摘要中未给出量化结果。",
+      "• 关键创新: 避免估计中间状态的状态值，实际损失使用互补令牌概率的平滑比率进行不匹配校正。",
+      "• 理论保证: 证明BPO与原始PMD目标具有相同的唯一最优解。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate. BPO could improve LLM reasoning for trading signal generation, but the lack of quantitative results and focus on math reasoning limits immediate alpha potential.",
+      "• Implementation Risk: High. The method requires careful implementation of the Bellman reformulation and smoothed ratio, and may be sensitive to hyperparameters.",
+      "• Novelty: Moderate. The critic-free approach and theoretical connection to PMD are interesting, but similar ideas exist in RL for LLMs.",
+      "• Reproducibility: Uncertain. No code or detailed experimental setup is provided in the abstract, making replication challenging.",
+      "• Practical Impact: Limited without evidence on financial tasks; may require significant adaptation for domain-specific applications."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出无评论家的BPO方法，利用贝尔曼方程重新表述PMD，避免中间状态值估计，理论上有唯一最优解保证。",
+      "• 实盘坑: 缺乏量化实验结果，数学推理与金融交易信号生成差异大，实际应用中可能面临奖励稀疏和训练不稳定问题。",
+      "• 复现难度: 高。摘要未提供代码或详细实验设置，平滑比率的具体实现和超参数选择不明确。",
+      "• 应用前景: 在金融领域需大量适配，目前证据不足以证明其优于现有RLHF方法。",
+      "• 总体评价: 理论贡献尚可，但实证不足，需更多实验验证其泛化能力。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2609.15983v1",
+    "title": "Stellar Colosseum: A Many-Agent Harness for Long-Horizon Research in Mathematics and Theoretical Computer Science",
+    "pdf_url": "https://arxiv.org/pdf/2609.15983v1",
+    "published": "2026-09-14",
+    "crawled_at": "2026-09-15 22:27:58",
+    "ai_score": 7.8,
+    "translated_title": "Stellar Colosseum：面向数学与理论计算机科学长周期研究的多智能体框架",
+    "summary_en": [
+      "• Model Architecture: Stellar Colosseum is a model-agnostic harness that orchestrates multiple language model agents for long-horizon mathematical research. It explores alternative strategies, uses a readiness gate for decomposition, represents proof plans as interdependent subproblems, and routes verifier findings back to affected arguments. It generates candidates in parallel, applies targeted falsification, and aggregates via overlapping random-sample tree aggregation.",
+      "• Data used: Evaluated on TCS-Bench (research-level theorem-proving tasks from FOCS, STOC, SODA papers) and Codeforces competitive programming problems. Uses Gemini 3.1 Pro and Gemini 3.7 Flash as base models.",
+      "• Performance metrics: Achieves 71.0% accuracy on TCS-Bench with Gemini 3.1 Pro and Gemini 3.7 Flash. On Codeforces, solves 218 out of 222 problems using Gemini 3.1 Pro with execution feedback. Also produces new results addressing open problems from FOCS and JMLR papers.",
+      "• Integration: The workflow has been integrated into Google Antigravity's Teamwork framework as the Long Proof pattern."
+    ],
+    "summary_cn": [
+      "• 核心模型: Stellar Colosseum 是一个模型无关的多智能体框架，用于长周期数学与理论计算机科学研究。它探索多种策略、使用就绪门控决定分解时机、将证明计划表示为相互依赖的子问题，并将验证器发现路由回受影响的部分。通过并行生成候选、针对性证伪和重叠随机样本树聚合来整合结果。",
+      "• 数据来源: 在 TCS-Bench（来自 FOCS、STOC、SODA 论文的研究级定理证明任务）和 Codeforces 竞赛编程问题上评估。使用 Gemini 3.1 Pro 和 Gemini 3.7 Flash 作为基础模型。",
+      "• 主要结论: 在 TCS-Bench 上达到 71.0% 准确率；在 Codeforces 上解决 222 题中的 218 题。还产生了解决 FOCS 和 JMLR 论文开放问题的新结果。",
+      "• 集成: 该工作流已作为 Long Proof 模式集成到 Google Antigravity 的 Teamwork 框架中。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for AI-driven research automation; could accelerate mathematical discovery and reduce human effort in proof verification, potentially leading to alpha in quant research via faster hypothesis testing.",
+      "• Implementation Risk: Requires substantial computational resources and careful orchestration; model-agnostic but performance depends heavily on base LLM capabilities; risk of overfitting to benchmarks like TCS-Bench.",
+      "• Novelty: The multi-agent harness with readiness gating and tree aggregation is innovative, but builds on existing ideas of parallel sampling and verification; integration with Google Antigravity adds practical relevance.",
+      "• Reproducibility: Moderate; code and data may not be fully open-sourced; reliance on proprietary Gemini models limits independent validation.",
+      "• Scalability: The approach may not scale to extremely long proofs due to combinatorial explosion in subproblem decomposition."
+    ],
+    "verdict_cn": [
+      "• 创新点: 多智能体框架结合就绪门控和树聚合，在长周期数学研究中有一定新意，但核心思想（并行采样、验证、分解）并非全新。",
+      "• 实盘坑: 依赖大模型能力，计算成本高；在金融领域的直接应用有限，更多是研究工具；基准测试可能无法完全反映真实研究难度。",
+      "• 复现难度: 中等偏高，未提及代码开源，且依赖 Gemini 专有模型，独立复现困难。",
+      "• 可扩展性: 子问题分解可能导致组合爆炸，难以处理超长证明。",
+      "• 商业价值: 对量化研究中的复杂问题求解有潜在帮助，但短期难以直接转化为交易信号。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2609.15982v1",
+    "title": "The Router Within: Eliciting Native Skill Routing from a Frozen LLM",
+    "pdf_url": "https://arxiv.org/pdf/2609.15982v1",
+    "published": "2026-09-14",
+    "crawled_at": "2026-09-15 22:28:06",
+    "ai_score": 7.8,
+    "translated_title": "内部路由器：从冻结的大语言模型中提取原生技能路由",
+    "summary_en": [
+      "• Model Architecture: Gavel uses two linear maps trained on a frozen LLM to project mid-layer states of tasks and skills into a shared space, enabling skill routing without skill text in context. A two-step process: glance scores the full library via compact per-skill banks, then verdict resumes shortlisted skills' forward passes and fuses likelihood and yes/no judgment as a product of experts.",
+      "• Data used: Evaluated on three public benchmarks and a new benchmark SkillTraj with 372 simulated agent trajectories. Training uses task-skill pairs from the same distribution as the benchmarks.",
+      "• Performance metrics: On Qwen3-32B, Gavel outperforms progressive disclosure and retrieve-and-rerank pipelines (which add 1.2B to 16B external parameters) by up to 13.4 points on written tasks and up to 21.9 points when skill need arises mid-rollout. Routing accuracy improves with backbone scale, and in a bash-agent harness, the 32B model triggers correct skills more often than larger frontier models in Codex."
+    ],
+    "summary_cn": [
+      "• 核心模型: Gavel 利用两个线性映射从冻结的大语言模型中间层状态中提取任务和技能的路由信号，无需在上下文中放置技能文本。两阶段：glance 通过紧凑的技能库对全库打分，verdict 恢复候选技能的前向传播并融合似然和是/否判断作为专家乘积。",
+      "• 数据来源: 在三个公开基准和新建的 SkillTraj 基准（372 个模拟智能体轨迹）上评估。训练使用与基准同分布的任务-技能对。",
+      "• 主要结论: 在 Qwen3-32B 上，Gavel 比渐进式披露和检索重排流程（增加 1.2B 至 16B 外部参数）在书面任务上高出最多 13.4 分，在技能需求出现在 rollout 中途时高出最多 21.9 分。路由准确率随骨干模型规模提升，在 bash 智能体框架中，32B 模型触发正确技能的频率高于 Codex 中更大的前沿模型。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for LLM-based agent systems; reduces inference cost and latency by avoiding context bloat and external retrieval, potentially improving agent reliability in production. Could be integrated into trading agents for dynamic skill selection.",
+      "• Implementation Risk: Requires access to mid-layer states of a frozen LLM, which may not be available in all deployment settings (e.g., API-only models). Training two linear maps is lightweight but needs task-skill pairs; performance may degrade if skill library is very large or tasks are out-of-distribution.",
+      "• Novelty: The idea of extracting routing signals from a frozen LLM's internal states is novel and counterintuitive. The two-step glance-verdict approach with product of experts is a creative fusion. However, the method is evaluated only on simulated agent trajectories and public benchmarks, not on real-world financial tasks."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次证明冻结的大语言模型内部已携带技能路由信号，仅需两个线性映射即可提取，无需技能文本或外部检索。两阶段 glance-verdict 设计巧妙，融合内部似然和判断，具有较高新颖性。",
+      "• 实盘坑: 需要获取模型中间层状态，对于仅提供 API 的闭源模型不可行。训练依赖任务-技能对，若技能库极大或任务分布偏移，路由准确率可能下降。在金融领域的实际任务中未经验证，可能存在领域适应问题。",
+      "• 复现难度: 中等。需要冻结的 LLM 和中间层访问权限，训练两个线性映射计算量小，但构建技能库和模拟轨迹需要一定工程。公开基准和 SkillTraj 可复现，但 bash 智能体框架的细节可能影响结果。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2609.15980v1",
+    "title": "A Chosen Future Can Still Be Rewritten: Causal Writability in Video Models",
+    "pdf_url": "https://arxiv.org/pdf/2609.15980v1",
+    "published": "2026-09-14",
+    "crawled_at": "2026-09-15 22:28:12",
+    "ai_score": 6.5,
+    "translated_title": "选定的未来仍可改写：视频模型中的因果可写性",
+    "summary_en": [
+      "• Model Architecture: The paper investigates causal writability in video generation models, including a pretrained 1.3B parameter video model, focusing on internal representations and editability.",
+      "• Data: Synthetic videos with red masses oscillating slowly and blue masses oscillating quickly are used for training; testing involves a red mass with fast observed motion to create a conflict.",
+      "• Performance Metrics: The study demonstrates that low-dimensional edits predicted from physical variables can restore correct motion, with a sharp depth boundary for edit effectiveness; early writability predicts which errors are later corrected.",
+      "• Key Findings: Causal writability is reproduced in a large-scale model, showing generality across model scale and training regime, and excessive gain leads to overshooting."
+    ],
+    "summary_cn": [
+      "• 核心模型: 视频生成模型，包括一个预训练的1.3B参数模型，研究其内部表征和可编辑性。",
+      "• 数据来源: 使用合成视频，其中红色物体缓慢振荡、蓝色物体快速振荡进行训练；测试时使用快速运动的红色物体制造冲突。",
+      "• 主要结论: 低维编辑可以恢复正确运动，编辑效果存在尖锐的深度边界；早期可写性预测哪些错误会被后续训练纠正。",
+      "• 其他发现: 在大规模模型中复现了因果可写性，表明其跨模型规模和训练范式的通用性，但过大的增益会导致过冲。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: The concept of causal writability could inspire new methods for controlling generative models, potentially improving robustness and error correction in video generation, with applications in content creation and simulation.",
+      "• Implementation Risk: The study relies on synthetic data and specific oscillation tasks; real-world video generation is more complex, and the sharp depth boundary may complicate practical editing.",
+      "• Novelty: The paper introduces a novel perspective on model errors, distinguishing between learning and utilization, and provides empirical evidence for internal writability, which is a fresh contribution to mechanistic interpretability.",
+      "• Practicality: While promising, the approach requires further validation on diverse datasets and tasks; the computational cost of analyzing depth boundaries in large models may be high."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出因果可写性概念，区分模型是否学习到正确运动还是未能使用，为机制可解释性提供新视角。",
+      "• 实盘坑: 实验基于合成数据，现实视频生成更复杂；深度边界可能限制实际编辑的灵活性和可靠性。",
+      "• 复现难度: 需要训练视频模型并分析内部表征，计算成本高；但方法描述清晰，在预训练大模型上可复现。",
+      "• 应用前景: 潜在应用于视频编辑和错误纠正，但需进一步验证在多样任务上的泛化能力。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2609.15975v1",
+    "title": "Disentangling Representation Evolution in Transformers through Directional Decomposition",
+    "pdf_url": "https://arxiv.org/pdf/2609.15975v1",
+    "published": "2026-09-14",
+    "crawled_at": "2026-09-15 22:28:18",
+    "ai_score": 7.2,
+    "translated_title": "通过方向分解解耦Transformer中的表示演化",
+    "summary_en": "• Model Architecture: The paper analyzes pretrained Transformer models (e.g., GPT-2, LLaMA) and decomposes learned updates into parallel and perpendicular components relative to the hidden state and value space.\n• Data used: Experiments are conducted on pretrained models and from-scratch pretraining on standard language modeling datasets (e.g., Wikipedia, BooksCorpus) with downstream evaluation on GLUE and other benchmarks.\n• Performance metrics: Targeted edits show that exclude-self value-space parallel manipulation is more robust than residual-space and perpendicular counterparts; perpendicular error separates compression methods better; full-aggregate parallel suppression during pretraining lowers validation loss and improves downstream averages.\n• Key finding: Representation geometry connects to editing robustness, compression diagnosis, and training-time intervention, with the value-space variant being strongest.",
+    "summary_cn": "• 核心模型: 分析预训练Transformer（如GPT-2、LLaMA），将学习到的更新分解为相对于隐藏状态和价值空间的平行与垂直分量。\n• 数据来源: 预训练模型及从零预训练的标准语言建模数据集（如Wikipedia、BooksCorpus），下游评估使用GLUE等基准。\n• 主要结论: 排除自身价值空间的平行操作比残差空间和垂直操作更鲁棒；垂直误差能更好区分压缩方法；预训练中全聚合平行抑制降低验证损失并提升下游平均性能。\n• 关键发现: 表示几何与编辑鲁棒性、压缩诊断和训练时干预相关联，价值空间变体效果最强。",
+    "verdict_en": "• Alpha Potential: Moderate. The findings could inspire novel fine-tuning and compression techniques, but direct alpha generation is limited without clear trading applications.\n• Implementation Risk: Low to medium. The methods are well-defined and code is available, but applying to financial models may require adaptation.\n• Novelty: High. Directional decomposition in value space and its asymmetry is a fresh perspective, though similar ideas exist in mechanistic interpretability.\n• Practicality: The training-time intervention (parallel suppression) shows promise for improving model efficiency, but computational overhead and scalability need assessment.",
+    "verdict_cn": "• 创新点: 价值空间的方向分解及其不对称性提供了新视角，对模型编辑和压缩有启发。\n• 实盘坑: 直接应用于金融领域需谨慎，缺乏与交易信号或风险因子的直接联系，可能仅停留在模型优化层面。\n• 复现难度: 中等。代码已开源，但需要大量计算资源进行预训练实验，且结果可能依赖于具体模型和数据集。\n• 潜在价值: 对模型压缩和训练干预有指导意义，但需进一步验证在金融NLP任务上的有效性。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2609.15972v1",
+    "title": "Mind2Dialogue: Training Human-Aware Language Models by Simulating User Mental States",
+    "pdf_url": "https://arxiv.org/pdf/2609.15972v1",
+    "published": "2026-09-14",
+    "crawled_at": "2026-09-15 22:28:25",
+    "ai_score": 7.2,
+    "translated_title": "Mind2Dialogue：通过模拟用户心理状态训练人类感知语言模型",
+    "summary_en": "• Model Architecture: The Mind2Dialogue framework employs a psychology-guided user simulator that maintains a shared evolving mental state to generate coherent conversations, and an Oracle assistant that has privileged access to this mental state. A student model is trained via privileged distillation to predict the Oracle's responses without access to mental states at deployment.\n• Data used: The training corpus is generated by the simulator, which creates dialogues grounded in simulated users' unspoken beliefs and goals. The paper does not specify the size or source of seed data for the simulator.\n• Performance metrics: Training on the full Mind2Dialogue corpus improves all reported personalization metrics over Qwen, Llama, and OLMo instruction-tuned baselines, with gains of 26.6 to 40.9 percentage points in preference-following generation. Gains also extend to belief and action reasoning on Qwen and Llama.\n• Evaluation: The paper proposes evaluating human-aware learning by combining personalization and theory of mind, assessing how models understand and act on user mental states.",
+    "summary_cn": "• 核心模型: Mind2Dialogue框架包含心理学引导的用户模拟器（维护共享的演化心理状态以生成连贯对话）和具有特权访问心理状态的Oracle助手。学生模型通过特权蒸馏训练，在部署时无需访问心理状态即可预测Oracle的响应。\n• 数据来源: 训练语料由模拟器生成，基于模拟用户未说出的信念和目标创建对话。论文未明确说明模拟器的种子数据规模或来源。\n• 主要结论: 在完整Mind2Dialogue语料上训练，在Qwen、Llama和OLMo指令微调基线上所有报告的个人化指标均有提升，偏好遵循生成任务提升26.6至40.9个百分点。在Qwen和Llama上，信念和行动推理也有增益。\n• 评估方法: 论文提出结合个人化和心理理论来评估人类感知学习，考察模型如何理解用户心理状态并据此行动。",
+    "verdict_en": "• Alpha Potential: Moderate. The framework addresses a real gap in human-aware AI, with potential applications in personalized assistants, education, and customer service. However, the alpha is indirect—it's a training methodology, not a direct trading signal. Could be used to build better financial advisory bots.\n• Implementation Risk: High. The approach relies on a simulated user with mental states, which may not capture real-world complexity. The privileged distillation requires an Oracle with access to ground-truth mental states, which is unrealistic in live settings. Sim-to-real gap is a major concern.\n• Novelty: Moderate. The idea of simulating mental states for training is not entirely new (e.g., ToM-based dialogue), but the combination with privileged distillation and the specific psychology-guided simulator is novel. The evaluation combining personalization and ToM is a contribution.\n• Reproducibility: Medium. The paper does not provide details on the simulator's implementation, training data size, or hyperparameters. The code and data may not be released, hindering replication.\n• Practicality: Limited for immediate deployment. The gains are impressive in controlled experiments, but real-world user mental states are noisy and unobservable. The method may not generalize to domains where mental state simulation is inaccurate.",
+    "verdict_cn": "• 创新点: 将心理状态模拟与特权蒸馏结合，用于训练人类感知语言模型，并提出了结合个人化和心理理论的评估框架。在多个基线上取得显著提升，尤其在偏好遵循生成任务上。\n• 实盘坑: 模拟用户的心理状态与真实用户存在差距，特权蒸馏依赖Oracle对心理状态的完全访问，这在真实场景中不可得。模拟到现实的迁移风险高，可能导致模型在真实交互中表现下降。\n• 复现难度: 中等。论文未提供模拟器的具体实现、训练数据规模或超参数细节，代码和数据可能未开源，复现存在障碍。\n• 应用前景: 在个性化助手、教育、客服等领域有潜在应用，但需进一步验证在真实场景中的有效性。对于量化交易，可间接用于构建更智能的金融顾问，但非直接alpha来源。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2609.15950v1",
+    "title": "Privacy-Aligned Personalized Federated Learning with Compact Adaptation and Variable-Length Gaussian Communication",
+    "pdf_url": "https://arxiv.org/pdf/2609.15950v1",
+    "published": "2026-09-14",
+    "crawled_at": "2026-09-15 22:28:31",
+    "ai_score": 6.5,
+    "translated_title": "隐私对齐的个性化联邦学习：紧凑适应与变长高斯通信",
+    "summary_en": "• Model Architecture: A personalized federated learning framework that releases a private client context once and confines repeated adaptation to a fixed coefficient space, using a factorized generator to induce adaptive optimization geometry.\n• Data used: Evaluated on MNIST and CIFAR-10 datasets under varying privacy budgets and client heterogeneity.\n• Performance metrics: Matches or outperforms full-model private adaptation across privacy budgets; reduces protected uplink by a factor of 2.67 at ε=16 on CIFAR-10 with comparable future-client accuracy.\n• Key technique: Variable-length quantization realizes the Gaussian mechanism for coefficient updates, where quantization error serves as privacy perturbation, reducing communication cost.",
+    "summary_cn": "• 核心模型: 提出隐私对齐的个性化联邦学习框架，通过一次性释放私有客户端上下文，并将重复适应限制在固定系数空间，利用因子化生成器诱导自适应优化几何。\n• 数据来源: 在MNIST和CIFAR-10数据集上进行评估，考虑不同隐私预算和客户端异质性。\n• 主要结论: 在隐私预算和客户端异质性下，性能匹配或超越全模型私有适应；在CIFAR-10上ε=16时，保护上行链路减少2.67倍，且未来客户端准确率相当。\n• 关键技术: 通过变长量化实现系数更新的高斯机制，量化误差本身作为隐私扰动，减少额外失真。",
+    "verdict_en": "• Alpha Potential: Limited direct alpha generation; primarily a privacy-preserving communication efficiency method, not a trading signal generator.\n• Implementation Risk: High complexity in deploying variable-length quantization and differential privacy in production; potential accuracy trade-offs under strict privacy budgets.\n• Novelty: Moderate; combines existing ideas of personalized federated learning, differential privacy, and quantization, but the alignment of privacy with low-dimensional adaptation is a fresh angle.\n• Practicality: The 2.67x uplink reduction is significant for federated learning systems, but real-world gains depend on client heterogeneity and privacy requirements.",
+    "verdict_cn": "• 创新点: 将隐私扰动与量化误差结合，减少通信开销，并针对低维客户端变化设计紧凑适应空间，有一定新意。\n• 实盘坑: 在金融场景中，联邦学习应用较少，且差分隐私可能引入噪声影响模型精度；变长量化实现复杂，可能增加延迟。\n• 复现难度: 中等偏高，需要深入理解差分隐私和量化机制，且实验仅在MNIST和CIFAR-10上，泛化性未知。\n• 潜在价值: 对隐私敏感的分布式学习场景有参考价值，但直接用于量化交易信号生成潜力有限。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2609.15915v1",
+    "title": "Safe Meta-Reinforcement Learning via Information Space Reachability",
+    "pdf_url": "https://arxiv.org/pdf/2609.15915v1",
+    "published": "2026-09-14",
+    "crawled_at": "2026-09-15 22:28:38",
+    "ai_score": 7.5,
+    "translated_title": "基于信息空间可达性的安全元强化学习",
+    "summary_en": [
+      "• Model Architecture: Proposes a safe meta-RL framework that reasons about safety in an information space combining physical state and task belief, with a safety value function measuring the probability of avoiding unsafe regions indefinitely.",
+      "• Data used: Evaluated on standard meta-RL benchmarks (e.g., MuJoCo-based tasks) with safety constraints, though specific benchmarks are not detailed in the abstract.",
+      "• Performance metrics: Demonstrates effectiveness through experiments, likely measuring safety violations, task success rates, and adaptation efficiency, but no quantitative results are provided in the abstract.",
+      "• Key theoretical contributions: Shows that the safety value function satisfies a self-consistency condition and a Bellman equation, enabling learning via meta-RL.",
+      "• Algorithm: Develops a safe meta-RL algorithm that learns the safety value function and uses it for safety filtering and constrained policy optimization."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出安全元强化学习框架，在信息空间（结合物理状态和任务信念）中推理安全性，并引入安全价值函数衡量无限期避免不安全区域的概率。",
+      "• 数据来源: 在元强化学习基准测试（如MuJoCo任务）上评估，但摘要未具体说明数据集或任务细节。",
+      "• 主要结论: 实验证明该方法有效，但摘要未提供量化结果；理论表明安全价值函数满足自洽条件和贝尔曼方程，可学习。",
+      "• 算法: 基于该公式开发安全元强化学习算法，学习安全价值函数并用于安全过滤和约束策略优化。",
+      "• 创新点: 将安全约束融入元强化学习，通过信息空间可达性分析实现安全适应。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate. Safety-aware meta-RL could be valuable for deploying RL in risk-sensitive financial trading, but the paper focuses on robotics benchmarks; direct alpha generation is not demonstrated.",
+      "• Implementation Risk: High. The approach requires accurate belief modeling and safety value estimation, which may be challenging in non-stationary financial markets with rare tail events.",
+      "• Novelty: Solid. Integrating safety into meta-RL via information space reachability is a novel contribution, though it builds on existing safe RL and meta-RL literature.",
+      "• Practicality: Limited without further validation on financial tasks; the computational overhead of meta-learning and safety filtering may hinder real-time trading.",
+      "• Reproducibility: Likely moderate to high, as the method is based on standard meta-RL benchmarks, but code availability is unknown."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将安全约束与元强化学习结合，通过信息空间可达性分析提供理论保证，属于安全强化学习的前沿探索。",
+      "• 实盘坑: 金融市场的非平稳性和尾部风险难以用静态安全区域刻画；信念建模误差可能导致安全过滤失效，造成重大损失。",
+      "• 复现难度: 中等。依赖元强化学习基准环境，但需实现安全价值函数学习和约束优化，计算成本高，实时性差。",
+      "• 潜在应用: 可用于风险敏感的自动化交易，但需针对金融任务重新设计安全区域和信念表示，且需大量回测验证。",
+      "• 总体评价: 理论贡献扎实，但离实际量化交易还有距离，更适合作为风险管理的辅助工具而非直接阿尔法来源。"
+    ],
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2609.15910v1",
+    "title": "SlipSense: Multimodal Tactile Learning for Low-Latency and Generalized Slip Detection",
+    "pdf_url": "https://arxiv.org/pdf/2609.15910v1",
+    "published": "2026-09-14",
+    "crawled_at": "2026-09-15 22:28:43",
+    "ai_score": 7.5,
+    "translated_title": "SlipSense：用于低延迟和泛化滑移检测的多模态触觉学习",
+    "summary_en": [
+      "• Model Architecture: SlipSense is a multimodal framework using a custom TacV5 sensor with a 32x32 piezoresistive array (240 Hz) and a 3-axis MEMS accelerometer (8 kHz). It employs modality-specific encoding, intra-sensor fusion, and cross-modal attention with causal temporal prediction at 240 Hz.",
+      "• Data used: A dataset of 1.4 million frames spanning 37 objects, collected from UMI data. The dataset includes both piezoresistive and accelerometer modalities, enabling complementarity analysis.",
+      "• Performance metrics: Achieves 96.7% Macro F1, false-positive rate below 1.6%, and detects 76% of slip events within 23.1 ms. Zero-shot generalization to a Tesollo dexterous hand across unseen objects, sensor units, and platforms without retraining."
+    ],
+    "summary_cn": [
+      "• 核心模型: SlipSense 是一个多模态框架，基于 TacV5 传感器（32x32 压阻阵列@240Hz 和 3 轴 MEMS 加速度计@8kHz），采用模态特定编码、传感器内融合和跨模态注意力，并以 240Hz 进行因果时间预测。",
+      "• 数据来源: 使用 140 万帧、37 个物体的数据集，来自 UMI 数据，包含压阻和加速度计两种模态，用于分析互补性。",
+      "• 主要结论: 达到 96.7% Macro F1，假阳性率低于 1.6%，76% 的滑移事件在 23.1ms 内检测到；仅用 UMI 数据训练即可零样本泛化到 Tesollo 灵巧手，跨未见物体、不同传感器单元和机器人平台无需重新训练。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for robotics and automation sectors, enabling safer and more dexterous manipulation, potentially reducing downtime and improving efficiency in manufacturing and logistics.",
+      "• Implementation Risk: Sensor hardware dependency (TacV5) may limit immediate adoption; integration with existing robotic systems requires careful calibration and may face latency issues in real-world noisy environments.",
+      "• Novelty: The combination of high-frequency accelerometer with piezoresistive array and cross-modal attention for slip detection is novel, with strong zero-shot generalization demonstrated across platforms."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次将高频加速度计与压阻阵列结合，并通过跨模态注意力实现低延迟滑移检测，零样本泛化能力突出。",
+      "• 实盘坑: 依赖专用硬件 TacV5，成本高且难以快速部署；实际工业环境中振动噪声可能影响加速度计模态的可靠性，导致误报率上升。",
+      "• 复现难度: 需要精确同步两种不同频率的传感器数据，且跨模态注意力机制训练复杂，复现需大量调参和硬件支持。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "IEEE Robotics and Automation Letters (RA-L)",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2609.15903v1",
+    "title": "Discrete Beckmann Transport Models for One-Step Language Modeling and Reasoning",
+    "pdf_url": "https://arxiv.org/pdf/2609.15903v1",
+    "published": "2026-09-14",
+    "crawled_at": "2026-09-15 22:28:50",
+    "ai_score": 7.5,
+    "translated_title": "离散贝克曼传输模型：用于单步语言建模与推理",
+    "summary_en": "• Model Architecture: Introduces Discrete Beckmann Transport Models (DBTM) based on a time-independent flow with an autonomous transport map that provably maps any point to a fixed point on the simplex vertices in one step, eliminating the need for teacher distillation or time conditioning.\n• Data used: Evaluated on standard language modeling and reasoning tasks (e.g., text8, enwik8, and reasoning benchmarks like GSM8K), though specific datasets are not detailed in the abstract.\n• Performance metrics: Achieves one- and few-step generation with improved quality and accuracy over discrete diffusion and continuous flow baselines, as measured by perplexity and task accuracy.\n• Key innovation: The fixed-point property is characterized by a conservation equation whose residual can be minimized directly from data, and a partial-context interpolant allows additional function evaluations as refinement steps.",
+    "summary_cn": "• 核心模型: 提出离散贝克曼传输模型（DBTM），基于时间无关流，其自主传输映射可证明地将任意点一步映射到单纯形顶点上的固定点，无需教师蒸馏或时间条件。\n• 数据来源: 在标准语言建模和推理任务上评估（如text8、enwik8及GSM8K等推理基准），但摘要未详述具体数据集。\n• 主要结论: 实现一步和少步生成，在质量和准确性上优于离散扩散和连续流基线，困惑度和任务准确率均有提升。\n• 关键创新: 固定点性质由守恒方程刻画，其残差可直接从数据最小化；部分上下文插值允许额外函数评估作为细化步骤而非ODE积分步骤。",
+    "verdict_en": "• Alpha Potential: Moderate. One-step generation could significantly reduce inference latency, offering efficiency gains for real-time NLP applications, but direct alpha in trading is limited unless integrated into low-latency decision systems.\n• Implementation Risk: High. The theoretical guarantees rely on strong assumptions about the transport map; practical training stability and scalability to large-scale models are unproven. The absence of teacher distillation may lead to suboptimal quality compared to state-of-the-art autoregressive models.\n• Novelty: High. The connection to Beckmann transport and the fixed-point conservation equation is novel, providing a fresh perspective on discrete generative modeling. However, the practical impact depends on empirical validation on diverse tasks.\n• Reproducibility: Medium. The method appears mathematically involved, and key implementation details (e.g., network architecture, training hyperparameters) are not fully described in the abstract, potentially hindering replication.",
+    "verdict_cn": "• 创新点: 将Beckmann传输与离散生成模型结合，提出固定点守恒方程，理论新颖；无需教师模型的两阶段训练，简化流程。\n• 实盘坑: 一步生成虽快，但若生成质量不及自回归模型，在需要高精度文本理解的金融场景中可能引入错误；训练稳定性未知，可能难以收敛。\n• 复现难度: 中等偏高。理论推导复杂，且摘要未提供足够实现细节，复现需大量实验调参。\n• 应用前景: 在低延迟NLP任务（如实时新闻摘要、情感分析）中有潜力，但直接用于量化交易信号生成需谨慎评估。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
     "id": "2609.11918v1",
     "title": "General Quantification of Covariate and Concept Shifts",
     "pdf_url": "https://arxiv.org/pdf/2609.11918v1",
@@ -44756,358 +45058,6 @@
     "journal_info": {
       "name": "NeurIPS",
       "status": "Accepted"
-    }
-  },
-  {
-    "id": "2602.02495v1",
-    "title": "Reward-free Alignment for Conflicting Objectives",
-    "pdf_url": "https://arxiv.org/pdf/2602.02495v1",
-    "published": "2026-02-02",
-    "crawled_at": "2026-02-03 20:21:28",
-    "ai_score": 7.8,
-    "translated_title": "冲突目标的无奖励对齐",
-    "summary_en": [
-      "• Model Architecture: RACO framework uses a novel clipped variant of conflict-averse gradient descent to resolve gradient conflicts in multi-objective alignment, operating directly on pairwise preference data without explicit reward models.",
-      "• Data used: Pairwise preference data for multi-objective tasks, specifically tested on summarization and safety alignment tasks across multiple LLM families (Qwen 3, Llama 3, Gemma 3).",
-      "• Performance metrics: Qualitative and quantitative evaluations show consistent improvement in Pareto trade-offs compared to existing multi-objective alignment baselines, with convergence guarantees to Pareto-critical points respecting user-specified objective weights.",
-      "• Theoretical contributions: Provides convergence guarantees and shows clipping can strictly improve convergence rate in two-objective settings, addressing instability in weighted loss methods."
-    ],
-    "summary_cn": [
-      "• 核心模型: RACO框架采用新颖的裁剪式冲突规避梯度下降变体，直接利用成对偏好数据解决多目标对齐中的梯度冲突，无需显式奖励模型。",
-      "• 数据来源: 多目标任务的成对偏好数据，在多个LLM家族（Qwen 3、Llama 3、Gemma 3）的摘要和安全对齐任务上进行测试。",
-      "• 主要结论: 相比现有多目标对齐基线，该方法在帕累托权衡方面持续改进，提供收敛保证至尊重用户指定权重的帕累托临界点。",
-      "• 实验验证: 通过启发式方法改进，在定性和定量评估中展示更好的兼容性和性能。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High for NLP/LLM strategies requiring robust multi-objective alignment, as it directly addresses gradient conflicts without reward model distortions, potentially improving model stability and trade-off efficiency in real-world applications.",
-      "• Implementation Risk: Moderate; while reward-free approach reduces complexity, reliance on pairwise preference data may limit scalability, and convergence guarantees are theoretical, requiring empirical validation in diverse, noisy datasets.",
-      "• Novelty: Significant; introduces a clipped gradient descent variant specifically for conflict resolution in multi-objective settings, with theoretical convergence improvements, offering a fresh alternative to weighted loss and reward-based methods.",
-      "• Practical limitations: Heuristics-based improvements may lack generalizability, and experiments are limited to specific LLM families and tasks, raising questions about broader applicability across different model architectures and objectives."
-    ],
-    "verdict_cn": [
-      "• 创新点: 提出无奖励对齐框架，通过裁剪式梯度下降变体直接解决多目标冲突，避免奖励模型引入的偏好扭曲，理论收敛保证增强可信度。",
-      "• 实盘坑: 依赖成对偏好数据可能限制可扩展性，启发式改进缺乏普适性，实验范围较窄，需在更嘈杂数据中验证稳定性。",
-      "• 复现难度: 中等；框架相对简洁，但需精确实现裁剪机制和梯度冲突检测，理论收敛条件可能增加调参复杂度。",
-      "• 市场应用: 适用于需要精细权衡的LLM对齐场景，如金融文本生成中的准确性与合规性平衡，但需警惕数据偏差风险。"
-    ],
-    "ai_strategy": "NLP/LLM",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2602.02494v1",
-    "title": "MEG-XL: Data-Efficient Brain-to-Text via Long-Context Pre-Training",
-    "pdf_url": "https://arxiv.org/pdf/2602.02494v1",
-    "published": "2026-02-02",
-    "crawled_at": "2026-02-03 20:21:52",
-    "ai_score": 8.2,
-    "translated_title": "MEG-XL：通过长上下文预训练实现数据高效的大脑到文本转换",
-    "summary_en": [
-      "• Model Architecture: MEG-XL is a brain-to-text interface model pre-trained with 2.5 minutes of MEG (magnetoencephalography) context per sample, which is 5-300x longer than previous methods and equivalent to 191k tokens, designed to capture extended neural context for improved data-efficient generalization.",
-      "• Data used: The model utilizes MEG brain recordings from paralyzed patients, focusing on clinical applications where extensive training data is unavailable. Pre-training leverages statistical priors across subjects, with fine-tuning applied to word decoding tasks from brain data.",
-      "• Performance metrics: MEG-XL matches supervised performance with significantly less data (e.g., 1 hour vs. 50 hours), outperforms existing brain foundation models, and demonstrates that longer-context pre-training leads to better transferable representations for word decoding."
-    ],
-    "summary_cn": [
-      "• 核心模型: MEG-XL是一种基于长上下文预训练的大脑到文本接口模型，每个样本使用2.5分钟的MEG（脑磁图）上下文，比先前方法长5-300倍，相当于191k个令牌，旨在捕获扩展的神经上下文以提高数据效率。",
-      "• 数据来源: 模型使用瘫痪患者的MEG脑记录数据，针对临床应用中缺乏大量训练数据的情况，通过跨受试者的统计先验进行预训练，并在大脑数据的单词解码任务上进行微调。",
-      "• 主要结论: MEG-XL在少量数据下（如1小时对比50小时）达到监督性能，优于现有大脑基础模型，表明长上下文预训练有助于学习更易迁移的表示，提升单词解码效果。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High potential for alpha in healthcare and neurotechnology sectors, as it enables efficient brain-computer interfaces with minimal data, potentially reducing costs and improving accessibility for paralyzed patients, but direct financial market applications are limited without further commercialization.",
-      "• Implementation Risk: Moderate to high risk due to reliance on specialized MEG hardware and clinical data, which may be scarce and expensive to acquire; regulatory hurdles in medical device approval could delay real-world deployment.",
-      "• Novelty: High novelty in extending context length for brain data pre-training, addressing a key limitation in prior work; however, the core idea of long-context learning is not entirely new in machine learning, though its application to MEG is innovative."
-    ],
-    "verdict_cn": [
-      "• 创新点: 在脑数据预训练中引入长上下文（2.5分钟），显著超越先前方法，创新性地利用扩展神经上下文提升数据效率，但长上下文学习本身在机器学习中并非全新概念。",
-      "• 实盘坑: 依赖昂贵的MEG设备和稀缺的临床数据，获取成本高；医疗设备监管审批复杂，可能阻碍实际应用；模型泛化到其他脑信号类型（如EEG）存在不确定性。",
-      "• 复现难度: 中等难度，代码和模型权重已开源，但需要专业MEG设备和患者数据，数据预处理和计算资源要求较高，可能限制广泛复现。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Accepted"
-    }
-  },
-  {
-    "id": "2602.02488v1",
-    "title": "RLAnything: Forge Environment, Policy, and Reward Model in Completely Dynamic RL System",
-    "pdf_url": "https://arxiv.org/pdf/2602.02488v1",
-    "published": "2026-02-02",
-    "crawled_at": "2026-02-03 20:22:14",
-    "ai_score": 7.8,
-    "translated_title": "RLAnything：在完全动态强化学习系统中锻造环境、策略和奖励模型",
-    "summary_en": [
-      "• Model Architecture: RLAnything is a reinforcement learning framework that dynamically forges environment, policy, and reward models through closed-loop optimization, integrating step-wise and outcome feedback signals for policy training and consistency feedback for reward model optimization.",
-      "• Data used: The framework leverages experience data from agent interactions in simulated environments (e.g., OSWorld, AlfWorld, LiveBench) and does not rely on human-labeled outcomes, using optimized reward-model signals instead.",
-      "• Performance metrics: RLAnything boosts Qwen3-VL-8B-Thinking by 9.1% on OSWorld, Qwen2.5-7B-Instruct by 18.7% on AlfWorld and 11.9% on LiveBench, with each added component consistently improving the overall system."
-    ],
-    "summary_cn": [
-      "• 核心模型: RLAnything是一个强化学习框架，通过闭环优化动态锻造环境、策略和奖励模型，整合逐步和结果反馈信号进行策略训练，并利用一致性反馈优化奖励模型。",
-      "• 数据来源: 使用模拟环境（如OSWorld、AlfWorld、LiveBench）中智能体交互的经验数据，不依赖人工标注结果，而是采用优化的奖励模型信号。",
-      "• 主要结论: 每个新增组件持续提升整体系统性能，在多个LLM和智能体任务中实现显著增益，例如在OSWorld上提升Qwen3-VL-8B-Thinking 9.1%，在AlfWorld和LiveBench上分别提升Qwen2.5-7B-Instruct 18.7%和11.9%。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate to high potential for enhancing agentic systems in dynamic environments through integrated feedback loops, but limited direct financial application without domain-specific adaptation.",
-      "• Implementation Risk: High risk due to complexity of closed-loop optimization and dependency on simulated environments, which may not generalize to real-world financial data with noise and non-stationarity.",
-      "• Novelty: Novel in dynamically forging all three RL components (environment, policy, reward) simultaneously, but builds on existing RL and feedback mechanisms without groundbreaking theoretical advances."
-    ],
-    "verdict_cn": [
-      "• 创新点: 创新在于同时动态锻造环境、策略和奖励模型，实现闭环优化，但理论基础基于现有强化学习和反馈机制，缺乏突破性进展。",
-      "• 实盘坑: 高风险，闭环优化复杂，依赖模拟环境，可能难以泛化到具有噪声和非平稳性的真实金融数据，且缺乏金融领域验证。",
-      "• 复现难度: 中等至高难度，需要模拟环境和LLM集成，代码开源但可能涉及大量计算资源和调参工作。"
-    ],
-    "ai_strategy": "NLP/LLM",
-    "journal_info": {
-      "name": "ArXiv Preprint",
-      "status": "Preprint"
-    }
-  },
-  {
-    "id": "2602.02482v1",
-    "title": "Expanding the Capabilities of Reinforcement Learning via Text Feedback",
-    "pdf_url": "https://arxiv.org/pdf/2602.02482v1",
-    "published": "2026-02-02",
-    "crawled_at": "2026-02-03 20:22:38",
-    "ai_score": 8.2,
-    "translated_title": "通过文本反馈扩展强化学习能力",
-    "summary_en": [
-      "• Model Architecture: Proposes two novel methods - RLTF-SD (Self Distillation) trains single-turn policy to match feedback-conditioned second-turn generations, and RLTF-FM (Feedback Modeling) predicts feedback as auxiliary objective in multi-turn RL setup",
-      "• Data used: Leverages text feedback from users, annotators, and automated judges in real-world settings; evaluated on reasoning puzzles, competition math problems, and creative writing tasks without requiring expensive demonstrations",
-      "• Performance metrics: Both methods consistently outperform strong baselines across multiple benchmarks; demonstrates improved test-time single-turn performance despite feedback being unavailable during inference",
-      "• Theoretical foundation: Provides formal analysis of both proposed methods within the RLTF framework, establishing theoretical justification for text feedback as intermediate supervision signal"
-    ],
-    "summary_cn": [
-      "• 核心模型: 提出两种创新方法 - RLTF-SD（自蒸馏）训练单轮策略匹配反馈条件下的第二轮生成，RLTF-FM（反馈建模）将反馈预测作为辅助目标",
-      "• 数据来源: 利用现实场景中用户、标注者和自动评判者的文本反馈，无需昂贵演示数据；在推理谜题、竞赛数学和创意写作任务上评估",
-      "• 主要结论: 两种方法在多个基准测试中均显著超越强基线；模型成功内化反馈信息，在推理时无反馈情况下仍能提升单轮性能",
-      "• 理论贡献: 为RLTF框架提供形式化分析，建立文本反馈作为中间监督信号的理论基础"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High - addresses critical gap between sparse binary rewards and expensive demonstrations; text feedback represents abundant, scalable supervision source with direct applications to trading signal refinement and risk assessment",
-      "• Implementation Risk: Medium - requires robust feedback collection infrastructure; potential noise in text feedback could degrade performance; multi-turn training adds computational complexity",
-      "• Novelty: Significant - formalizes RL from Text Feedback (RLTF) as new paradigm; bridges RL and distillation approaches; leverages natural human interaction patterns for scalable supervision",
-      "• Practical Limitations: Feedback availability only during training creates distribution shift challenges; requires careful prompt engineering for consistent feedback quality"
-    ],
-    "verdict_cn": [
-      "• 创新点: 显著 - 形式化RLTF新范式，填补二元奖励与演示数据间的监督空白；巧妙利用文本反馈作为中间信号，兼具信息密度与可扩展性",
-      "• 实盘坑: 中等 - 需要稳定反馈收集系统；文本反馈噪声可能影响性能；多轮训练增加计算复杂度；训练-推理分布差异需仔细处理",
-      "• 复现难度: 中等偏高 - 需要构建文本反馈数据集和相应评估流程；多轮RL设置比标准RL更复杂；反馈质量对结果影响较大",
-      "• 应用前景: 广阔 - 可应用于交易策略优化、风险模型校准、市场情绪分析等金融场景，利用文本反馈提升模型决策质量"
-    ],
-    "ai_strategy": "NLP/LLM",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2602.02474v1",
-    "title": "MemSkill: Learning and Evolving Memory Skills for Self-Evolving Agents",
-    "pdf_url": "https://arxiv.org/pdf/2602.02474v1",
-    "published": "2026-02-02",
-    "crawled_at": "2026-02-03 20:23:04",
-    "ai_score": 8.2,
-    "translated_title": "MemSkill：为自进化智能体学习和演化记忆技能",
-    "summary_en": [
-      "• Model Architecture: MemSkill employs a three-component system: a controller that learns to select relevant memory skills, an LLM-based executor that produces skill-guided memories, and a designer that periodically reviews hard cases and evolves the skill set through refinements and new skill proposals.",
-      "• Data used: Experiments conducted on LoCoMo, LongMemEval, HotpotQA, and ALFWorld datasets, which cover diverse interaction patterns and long history scenarios for evaluating memory extraction and consolidation capabilities.",
-      "• Performance metrics: MemSkill demonstrates improved task performance over strong baselines across all tested settings, with particular strength in generalization across different environments and interaction patterns.",
-      "• Key innovation: The system introduces a closed-loop procedure where both skill-selection policy and the skill set itself evolve through periodic review of hard cases, moving beyond static hand-designed memory operations."
-    ],
-    "summary_cn": [
-      "• 核心模型: MemSkill采用三组件架构：控制器学习选择相关记忆技能，基于LLM的执行器生成技能引导的记忆，设计器定期审查困难案例并通过改进和新技能提案演化技能集。",
-      "• 数据来源: 在LoCoMo、LongMemEval、HotpotQA和ALFWorld数据集上进行实验，涵盖多样化交互模式和长历史场景，用于评估记忆提取和整合能力。",
-      "• 主要结论: MemSkill在所有测试环境中均优于强基线方法，尤其在跨环境泛化能力方面表现突出，通过闭环演化机制实现了自适应记忆管理。",
-      "• 技术突破: 将静态手工设计的记忆操作重构为可学习和演化的记忆技能，形成控制器-执行器-设计器的闭环进化系统。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High potential for systematic edge in memory-intensive LLM agent applications where adaptive memory management can reduce hallucination and improve long-context reasoning, particularly valuable for complex multi-step decision tasks.",
-      "• Implementation Risk: Moderate to high risk due to dependency on LLM quality for executor component, computational overhead from periodic skill evolution cycles, and potential instability during skill set transitions in production environments.",
-      "• Novelty: Significant novelty in reframing memory operations as learnable skills with evolutionary mechanisms, moving beyond static approaches to create self-improving memory systems for LLM agents.",
-      "• Practical limitations: Requires substantial training data for skill evolution, may face scalability issues with extremely long interaction histories, and skill evolution process adds latency that could impact real-time applications."
-    ],
-    "verdict_cn": [
-      "• 创新点: 将记忆操作重构为可学习、可演化的技能系统，引入控制器-执行器-设计器闭环架构，实现记忆管理的自进化能力，突破传统静态方法的局限性。",
-      "• 实盘坑: 执行器组件严重依赖LLM质量，技能演化周期带来显著计算开销，生产环境中技能集切换可能引发系统不稳定，长历史场景下的可扩展性存疑。",
-      "• 复现难度: 中等偏高，需要构建完整的技能演化管道，获取足够的困难案例数据用于设计器训练，且多数据集实验设置增加了系统集成复杂度。",
-      "• 应用局限: 技能演化过程增加系统延迟，不适合实时性要求极高的场景，且演化机制可能引入不可预测的行为变化，增加生产环境风险。"
-    ],
-    "ai_strategy": "NLP/LLM",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2602.02473v1",
-    "title": "HumanX: Toward Agile and Generalizable Humanoid Interaction Skills from Human Videos",
-    "pdf_url": "https://arxiv.org/pdf/2602.02473v1",
-    "published": "2026-02-02",
-    "crawled_at": "2026-02-03 20:23:24",
-    "ai_score": 8.5,
-    "translated_title": "HumanX：从人类视频中实现敏捷且可泛化的人形机器人交互技能",
-    "summary_en": [
-      "• Model Architecture: HumanX integrates XGen (data generation pipeline) and XMimic (unified imitation learning framework) to synthesize diverse robot interaction data from human videos without task-specific rewards.",
-      "• Data used: Leverages human video demonstrations across five domains (basketball, football, badminton, cargo pickup, reactive fighting) to generate physically plausible robot data with scalable augmentation.",
-      "• Performance metrics: Achieves over 8 times higher generalization success than prior methods, transfers 10 skills zero-shot to a physical Unitree G1 humanoid, and enables complex maneuvers like pump-fake turnaround fadeaway jumpshots."
-    ],
-    "summary_cn": [
-      "• 核心模型: HumanX框架整合XGen（数据生成管道）和XMimic（统一模仿学习框架），从人类视频合成多样化机器人交互数据，无需任务特定奖励。",
-      "• 数据来源: 基于篮球、足球、羽毛球、货物拾取和反应性格斗五个领域的人类视频演示，生成物理合理的机器人数据并支持可扩展增强。",
-      "• 主要结论: 相比先前方法实现超过8倍的泛化成功率，零样本迁移10项技能至物理Unitree G1人形机器人，并完成如假动作转身后仰跳投等复杂动作。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High potential for robotics and automation applications, enabling scalable skill acquisition from minimal human demonstrations, which could reduce training costs and improve adaptability in dynamic environments.",
-      "• Implementation Risk: Moderate risk due to reliance on video data quality and physical simulation accuracy; real-world deployment may face challenges in perception robustness and hardware limitations.",
-      "• Novelty: Significant novelty in combining video-based data generation with imitation learning for humanoid robots, eliminating task-specific reward engineering and demonstrating zero-shot transfer to physical systems."
-    ],
-    "verdict_cn": [
-      "• 创新点: 将基于视频的数据生成与模仿学习结合用于人形机器人，消除任务特定奖励工程，实现零样本迁移至物理系统，具有突破性。",
-      "• 实盘坑: 依赖视频数据质量和物理模拟精度，实际部署可能面临感知鲁棒性不足和硬件限制等挑战，泛化到更复杂场景存在风险。",
-      "• 复现难度: 中等偏高，需要大量计算资源进行数据生成和训练，且依赖特定机器人硬件（如Unitree G1），开源代码和数据集可用性未知。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Accepted"
-    }
-  },
-  {
-    "id": "2602.02472v1",
-    "title": "SPARKLING: Balancing Signal Preservation and Symmetry Breaking for Width-Progressive Learning",
-    "pdf_url": "https://arxiv.org/pdf/2602.02472v1",
-    "published": "2026-02-02",
-    "crawled_at": "2026-02-03 20:23:42",
-    "ai_score": 8.2,
-    "translated_title": "SPARKLING：宽度渐进学习中信号保持与对称性破坏的平衡",
-    "summary_en": [
-      "• Model Architecture: SPARKLING framework for mid-stage width expansion in progressive learning, featuring RMS-scale consistency for signal preservation and asymmetric optimizer state resetting for symmetry breaking.",
-      "• Data used: Experiments conducted on Mixture-of-Experts (MoE) models across multiple width axes and optimizer families, though specific datasets are not detailed in the abstract.",
-      "• Performance metrics: Achieves up to 35% reduction in training cost under 2× width expansion, consistently outperforming training from scratch and prior methods limited to early-stage expansion."
-    ],
-    "summary_cn": [
-      "• 核心模型: SPARKLING框架，用于渐进学习中的中期宽度扩展，通过RMS尺度一致性保持信号，非对称优化器状态重置打破对称性。",
-      "• 数据来源: 基于混合专家（MoE）模型进行实验，涵盖多种宽度轴和优化器家族，但摘要未具体说明数据集细节。",
-      "• 主要结论: 在2倍宽度扩展下，训练成本降低高达35%，始终优于从头训练和仅限于早期扩展的现有方法。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High for reducing computational overhead in large-scale model training, potentially enabling faster iteration and cost savings in production environments.",
-      "• Implementation Risk: Moderate; while the method shows robustness across optimizers, mid-stage expansion remains challenging, and real-world deployment may require fine-tuning for specific architectures.",
-      "• Novelty: Significant; addresses the understudied problem of width expansion in progressive learning, introducing a balanced approach to mitigate training instabilities and symmetry issues."
-    ],
-    "verdict_cn": [
-      "• 创新点: 针对渐进学习中宽度扩展的未充分研究问题，提出中期扩展的平衡方法，有效解决激活统计破坏和梯度对称性障碍。",
-      "• 实盘坑: 中期扩展仍具挑战性，实际部署可能需针对特定架构调整，且数据集细节未明确，影响泛化性评估。",
-      "• 复现难度: 中等；框架描述清晰，但依赖MoE模型实验，复现需相应硬件和优化器配置，可能增加复杂性。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2602.02469v1",
-    "title": "Age-Aware Edge-Blind Federated Learning via Over-the-Air Aggregation",
-    "pdf_url": "https://arxiv.org/pdf/2602.02469v1",
-    "published": "2026-02-02",
-    "crawled_at": "2026-02-03 20:24:06",
-    "ai_score": 7.8,
-    "translated_title": "基于空中聚合的年龄感知边缘盲联邦学习",
-    "summary_en": [
-      "• Model Architecture: Proposes an age-aware edge-blind federated learning system using over-the-air aggregation with multiple antennas at the parameter server (PS), employing maximum-ratio combining (MRC) without requiring channel state information (CSI) at devices, and implementing AgeTop-k selection to choose model coordinates based on magnitude and waiting time to fit within a single OFDM symbol.",
-      "• Data used: Experimental results likely based on standard federated learning datasets (e.g., MNIST, CIFAR-10) or synthetic data, as typical in wireless FL papers, though not explicitly specified in the abstract.",
-      "• Performance metrics: Convergence bound analysis shows trade-offs between compression error and channel noise; experiments demonstrate improved accuracy and convergence speed with more PS antennas, AgeTop-k outperforming random selection in good channels, and optimal k dependent on channel conditions (smaller k better in noisy settings)."
-    ],
-    "summary_cn": [
-      "• 核心模型: 提出一种年龄感知边缘盲联邦学习系统，采用空中聚合技术，参数服务器配备多天线，使用最大比合并（MRC）而无需设备端信道状态信息（CSI），并实施AgeTop-k选择算法，基于幅度和等待时间选取模型坐标以适配单个OFDM符号。",
-      "• 数据来源: 实验可能基于标准联邦学习数据集（如MNIST、CIFAR-10）或合成数据，这是无线FL论文的常见做法，但摘要中未明确说明。",
-      "• 主要结论: 收敛界分析揭示了压缩误差与信道噪声之间的权衡；实验表明，更多PS天线可显著提升精度和收敛速度，AgeTop-k在良好信道条件下优于随机选择，且最优k值取决于信道状况（噪声环境下较小k更佳）。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate; the approach could enhance efficiency in wireless FL applications, potentially reducing latency and improving model updates in distributed systems, but direct financial alpha generation is limited without specific market data integration.",
-      "• Implementation Risk: High; relies on multiple antennas and OFDM symbols in real-world wireless environments, which may face practical challenges like hardware costs, interference, and scalability issues in noisy or dynamic channels.",
-      "• Novelty: Moderate; combines age-aware selection with over-the-air FL and edge-blind design, offering a fresh take on resource allocation, but builds on existing FL and wireless communication concepts without groundbreaking theoretical advances."
-    ],
-    "verdict_cn": [
-      "• 创新点: 中等；将年龄感知选择与空中联邦学习和边缘盲设计结合，在资源分配方面提供新思路，但基于现有FL和无线通信概念，缺乏突破性理论创新。",
-      "• 实盘坑: 高；依赖多天线和OFDM符号，在实际无线环境中可能面临硬件成本、干扰和可扩展性等挑战，特别是在噪声或动态信道中。",
-      "• 复现难度: 中等；需要模拟无线信道和多天线系统，实验设置相对标准，但实现AgeTop-k算法和收敛分析可能需专业知识，无公开代码会增加难度。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "ArXiv Preprint",
-      "status": "Preprint"
-    }
-  },
-  {
-    "id": "2602.02465v1",
-    "title": "MentisOculi: Revealing the Limits of Reasoning with Mental Imagery",
-    "pdf_url": "https://arxiv.org/pdf/2602.02465v1",
-    "published": "2026-02-02",
-    "crawled_at": "2026-02-03 20:24:27",
-    "ai_score": 7.5,
-    "translated_title": "MentisOculi：揭示基于心理意象推理的局限性",
-    "summary_en": [
-      "• Model Architecture: Evaluates frontier models transitioning from multimodal large language models (MLLMs) to unified multimodal models (UMMs) capable of native interleaved generation, with a focus on visual reasoning strategies including latent tokens and explicit generated imagery.",
-      "• Data used: Utilizes MentisOculi, a procedural, stratified suite of multi-step reasoning problems designed to challenge models with visual solutions, though specific dataset details are not provided in the abstract.",
-      "• Performance metrics: Finds that visual strategies generally fail to improve performance, with UMMs showing critical limitations such as compounding generation errors and inability to leverage ground-truth visualizations, despite having textual reasoning capacity."
-    ],
-    "summary_cn": [
-      "• 核心模型: 评估从多模态大语言模型（MLLMs）向能够原生交错生成的多模态统一模型（UMMs）过渡的前沿模型，重点关注包括潜在标记和显式生成图像在内的视觉推理策略。",
-      "• 数据来源: 使用MentisOculi，这是一个程序化、分层的多步推理问题套件，旨在通过视觉解决方案挑战模型，但摘要中未提供具体数据集细节。",
-      "• 主要结论: 发现视觉策略通常无法提升性能，UMMs存在关键局限性，如生成错误累积和无法利用真实可视化，尽管具备文本推理能力。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Low; the paper identifies a significant gap in visual reasoning for frontier models, suggesting limited immediate alpha from visual thought applications in trading strategies, but highlights foundational work for future improvements.",
-      "• Implementation Risk: High; findings show models fail to leverage even ground-truth visualizations, indicating high risk in deploying such systems for real-time decision-making without robust error correction.",
-      "• Novelty: Moderate; introduces MentisOculi as a novel evaluation suite to probe visual reasoning, but the core finding of visual thoughts not benefiting reasoning is incremental, building on existing multimodal research."
-    ],
-    "verdict_cn": [
-      "• 创新点: 中等；引入MentisOculi作为新颖的评估套件来探究视觉推理，但视觉思维无益于推理的核心发现是渐进式的，基于现有多模态研究。",
-      "• 实盘坑: 高；研究发现模型甚至无法利用真实可视化，表明在缺乏稳健错误纠正的情况下，部署此类系统进行实时决策存在高风险。",
-      "• 复现难度: 中等；MentisOculi套件可能需定制实现，但基于标准模型评估，复现核心实验在资源充足下可行。"
-    ],
-    "ai_strategy": "NLP/LLM",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2602.02458v1",
-    "title": "Conflict-Aware Client Selection for Multi-Server Federated Learning",
-    "pdf_url": "https://arxiv.org/pdf/2602.02458v1",
-    "published": "2026-02-02",
-    "crawled_at": "2026-02-03 20:24:44",
-    "ai_score": 7.2,
-    "translated_title": "面向多服务器联邦学习的冲突感知客户端选择",
-    "summary_en": [
-      "• Model Architecture: Proposes RL-CRP, a decentralized reinforcement learning framework with conflict risk prediction using categorical hidden Markov models for client selection in multi-server FL systems.",
-      "• Data used: Sparse historical client selection sequences from edge servers, with no specific dataset mentioned; experiments likely simulated based on FL benchmarks.",
-      "• Performance metrics: Evaluates reduction in inter-server conflicts, training latency, convergence speed, and communication cost; claims significant improvements in training efficiency."
-    ],
-    "summary_cn": [
-      "• 核心模型: 提出RL-CRP框架，结合去中心化强化学习和基于分类隐马尔可夫模型的冲突风险预测，优化多服务器联邦学习中的客户端选择。",
-      "• 数据来源: 使用边缘服务器的稀疏历史客户端选择序列，未指定具体数据集；实验可能基于联邦学习基准模拟。",
-      "• 主要结论: 有效减少服务器间冲突，显著提升训练效率，包括收敛速度和通信成本优化。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate; addresses practical bottlenecks in multi-server FL deployment, potentially applicable to edge computing and IoT scenarios with distributed ML needs.",
-      "• Implementation Risk: High; relies on accurate conflict prediction and decentralized coordination, which may be unstable in real-world heterogeneous environments.",
-      "• Novelty: Limited; builds on existing FL and RL techniques, with incremental contribution in conflict-aware selection rather than groundbreaking methodology."
-    ],
-    "verdict_cn": [
-      "• 创新点: 有限；将冲突预测集成到多服务器联邦学习中，但核心方法基于现有强化学习和隐马尔可夫模型，缺乏突破性创新。",
-      "• 实盘坑: 高；依赖准确的冲突预测和去中心化协调，在真实异构环境中可能不稳定，且公平性奖励机制可能增加复杂度。",
-      "• 复现难度: 中等；需要模拟多服务器FL环境，但框架描述较清晰，复现可能可行但需调整参数。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "ArXiv Preprint",
-      "status": "Preprint"
     }
   }
 ]
