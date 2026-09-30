@@ -1,5 +1,322 @@
 [
   {
+    "id": "2609.38178v1",
+    "title": "Skill-Space Shooting for Autonomous Robot Policy Improvement",
+    "pdf_url": "https://arxiv.org/pdf/2609.38178v1",
+    "published": "2026-09-29",
+    "crawled_at": "2026-09-30 23:13:59",
+    "ai_score": 7.2,
+    "translated_title": "技能空间射击：面向自主机器人策略改进",
+    "summary_en": [
+      "• Model Architecture: The paper introduces 'skill-space shooting', a framework that uses foundation model guidance to explore corrective behaviors through reusable skills, turning successful trials into policy improvement without human demonstrations.",
+      "• Data used: Real-world robot experiments with autonomous policy improvement; skills are shared across tasks to reduce teaching effort. No standard benchmark datasets are mentioned; evaluation is on physical robots.",
+      "• Performance metrics: The paper reports repeated improvement in policies acting autonomously, and skills can be shared to reduce teaching needed for new tasks. Quantitative metrics are not detailed in the abstract, but the website likely provides additional results.",
+      "• Key insight: Many corrections are familiar short behaviors (skills) that recur across tasks and can be reasoned about by foundation models from a scene, enabling scalable and generalizable policy improvement."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出“技能空间射击”框架，利用基础模型引导探索可重用技能中的纠正行为，将成功试验转化为策略改进，无需人类演示。",
+      "• 数据来源: 在真实机器人上进行实验，自主策略改进；技能可跨任务共享以减少教学需求。未提及标准基准数据集，评估基于物理机器人。",
+      "• 主要结论: 实验显示策略在自主行动中重复改进，技能共享可减少新任务的教学需求，实现可扩展和泛化的策略改进。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate. The approach addresses scalable robot policy improvement, which could reduce human supervision costs in robotics, but direct financial alpha is limited unless applied to trading or automation.",
+      "• Implementation Risk: High. Real-world robot experiments are costly and time-consuming; reproducibility may be challenging due to hardware dependencies and foundation model integration.",
+      "• Novelty: Solid. Combining foundation model guidance with skill-space exploration for policy improvement is a novel angle, but similar ideas exist in hierarchical RL and skill discovery.",
+      "• Scalability: Promising for robotics, but unclear how well it transfers to other domains like finance where 'skills' are less physically grounded.",
+      "• Practical Impact: Could lower the barrier for autonomous robot improvement, but immediate hedge fund applications are not evident."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将基础模型引导与技能空间探索结合，用于策略改进，思路新颖，但并非革命性突破。",
+      "• 实盘坑: 真实机器人实验成本高、复现难；依赖基础模型和硬件，泛化到金融领域存疑。",
+      "• 复现难度: 高。需要机器人平台和基础模型接口，细节未公开，网站可能提供更多但代码未必开源。",
+      "• 应用前景: 对机器人自主改进有潜力，但对冲基金直接应用有限，除非用于自动化交易或风控。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "CoRL",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2609.38176v1",
+    "title": "Breakdown of Local Denoising as Semantic Speciation",
+    "pdf_url": "https://arxiv.org/pdf/2609.38176v1",
+    "published": "2026-09-29",
+    "crawled_at": "2026-09-30 23:14:05",
+    "ai_score": 7.5,
+    "translated_title": "局部去噪的分解作为语义物种形成",
+    "summary_en": [
+      "• Model Architecture: The paper analyzes generative models, likely diffusion models, focusing on two temporal windows: speciation window (semantic class commitment) and nonlocality window (local context insufficiency).",
+      "• Data used: Theoretical analysis with Gaussian mixtures as a case study; no empirical data from real-world datasets mentioned in the abstract.",
+      "• Performance metrics: The paper proves conditions under which nonlocality window lies within speciation window, and conditions for phase transition where both windows shrink to a single time as system size grows.",
+      "• Key finding: Under a 'common cause' hypothesis, semantic labels explain correlations between distant tokens, leading to the concurrence of speciation and nonlocality."
+    ],
+    "summary_cn": [
+      "• 核心模型: 生成模型（如扩散模型），分析其两个时间窗口：语义物种形成窗口（样本确定语义类别）和非局部性窗口（局部上下文不足以生成）。",
+      "• 数据来源: 理论分析，以高斯混合模型为例进行验证；未提及真实数据集。",
+      "• 主要结论: 在“共同原因”假设下，证明非局部性窗口必然位于物种形成窗口内；并给出条件使两个窗口随系统规模增大而收缩为单一极限时间，定义相变。",
+      "• 方法: 通过语义信息的空间分布研究两个窗口的关系，连接生成模型中语义结构涌现的两种互补视角。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Limited direct trading alpha; theoretical insights may inspire new generative model architectures for financial time series generation, but not immediately actionable.",
+      "• Implementation Risk: High abstraction; assumptions like 'common cause' may not hold in financial data; requires significant adaptation for practical use.",
+      "• Novelty: Provides a theoretical link between two phenomena in generative models, potentially advancing understanding of semantic emergence.",
+      "• Reproducibility: Theoretical proofs and Gaussian mixture validation are reproducible, but empirical validation on complex data is lacking.",
+      "• Practical Impact: Could influence design of generative models for synthetic data, but far from production-ready for quant strategies."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次从理论上连接了生成模型中语义物种形成和非局部性窗口，提出“共同原因”假设，为理解语义涌现提供了新视角。",
+      "• 实盘坑: 理论假设在金融数据中可能不成立，且未涉及实际金融应用；直接用于交易策略的潜力低。",
+      "• 复现难度: 理论部分可复现，但需要深厚的数学背景；高斯混合实验简单，但扩展到复杂模型困难。",
+      "• 潜在价值: 可能启发新的生成模型设计，用于合成金融数据或风险建模，但需大量后续工作。",
+      "• 总体评价: 理论贡献扎实，但离实际量化应用较远，适合作为长期研究参考。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2609.38169v1",
+    "title": "STEPQuant: When and Where Errors Matter in Delta-Rule Recurrent State Quantization",
+    "pdf_url": "https://arxiv.org/pdf/2609.38169v1",
+    "published": "2026-09-29",
+    "crawled_at": "2026-09-30 23:14:11",
+    "ai_score": 7.8,
+    "translated_title": "STEPQuant：Delta规则循环状态量化中误差何时何地重要",
+    "summary_en": [
+      "• Model Architecture: STEPQuant is a spatial-temporal post-training quantization framework for Delta-rule recurrent states in linear attention models, allocating precision based on error magnitude and memory lifetime, and jointly fitting key-row and value-column scales.",
+      "• Data used: Evaluated on Qwen3.8-27B and Kimi-Linear-48B-A3B-Instruct across long- and short-generation benchmarks.",
+      "• Performance metrics: Under a nominal 6-bit budget, STEPQuant closely matches FP32-state accuracy and outperforms uniform INT8 in its 4-bit configuration; integrated into SGLang, it achieves over 5x recurrent-state compression and reduces total serving memory by up to 68.7%."
+    ],
+    "summary_cn": [
+      "• 核心模型: STEPQuant 是一种针对 Delta 规则循环状态的空间-时间训练后量化框架，根据误差幅度和内存寿命分配精度，并联合拟合键行和值列缩放因子。",
+      "• 数据来源: 在 Qwen3.8-27B 和 Kimi-Linear-48B-A3B-Instruct 模型上，跨长、短生成基准进行评估。",
+      "• 主要结论: 在标称 6 比特预算下，STEPQuant 精度接近 FP32 状态，且在 4 比特配置下优于均匀 INT8；集成到 SGLang 后，实现超过 5 倍的循环状态压缩，总服务内存降低高达 68.7%。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for reducing serving costs in LLM inference, directly impacting operational efficiency and scalability for hedge fund NLP workloads.",
+      "• Implementation Risk: Requires integration with SGLang and custom GPU kernels; potential overhead in kernel optimization and compatibility with existing serving infrastructure.",
+      "• Novelty: Introduces a spatial-temporal perspective to quantization of recurrent states, addressing error propagation and memory lifetime, which is a fresh angle in PTQ for linear attention."
+    ],
+    "verdict_cn": [
+      "• 创新点: 从空间和时间两个维度分析量化误差的影响，提出针对 Delta 规则循环状态的 PTQ 框架，创新性地结合误差幅度和内存寿命分配精度。",
+      "• 实盘坑: 需要集成到 SGLang 并优化 GPU 内核，实际部署可能面临兼容性和性能调优的挑战；量化误差在长序列生成中的累积效应仍需进一步验证。",
+      "• 复现难度: 中等偏高，需要复现 SGLang 集成和 GPU 内核优化，但代码已开源，降低了部分难度。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2609.38166v1",
+    "title": "LeapQuant: Efficient Linear Attention with Accurate Recurrent State Quantization",
+    "pdf_url": "https://arxiv.org/pdf/2609.38166v1",
+    "published": "2026-09-29",
+    "crawled_at": "2026-09-30 23:14:18",
+    "ai_score": 7.5,
+    "translated_title": "LeapQuant：高效线性注意力与精确循环状态量化",
+    "summary_en": "• Model Architecture: LeapQuant introduces a training-free quantization method for recurrent states in linear attention models (e.g., Gated DeltaNet, Kimi Delta Attention). It employs per-window quantization to reduce error accumulation and uses high-precision Compensator Tokens to handle outliers, with residual smoothing before quantization.\n• Data used: Experiments are conducted on Qwen, Kimi, and GLM model families, evaluating performance on long-context processing tasks.\n• Performance metrics: Achieves near-lossless 8-bit quantization, with kernel-level speedups of 2.05–3.70× and end-to-end inference speedup of 1.47× on NVIDIA B200, RTX PRO 6000, and RTX 5090 GPUs, while maintaining accuracy comparable to FP32 baseline.\n• Key innovation: Combines window-based quantization with outlier compensation to mitigate rounding errors and state outliers, enabling efficient inference without retraining.",
+    "summary_cn": "• 核心模型: LeapQuant 是一种无需训练的方法，针对线性注意力模型（如 Gated DeltaNet、Kimi Delta Attention）的循环状态进行 8 比特量化。它采用逐窗口量化减少误差累积，并保留高精度补偿令牌处理离群值，量化前进行残差平滑。\n• 数据来源: 在 Qwen、Kimi 和 GLM 模型家族上进行实验，评估长上下文处理任务。\n• 主要结论: 实现近乎无损的 8 比特量化，内核级加速 2.05–3.70 倍，端到端推理加速 1.47 倍（NVIDIA B200、RTX PRO 6000、RTX 5090），精度与 FP32 基线相当。\n• 创新点: 结合窗口量化和离群值补偿，减少舍入误差和状态离群值，无需重新训练即可高效推理。",
+    "verdict_en": "• Alpha Potential: High potential for reducing inference costs in long-context LLMs, enabling faster and cheaper deployment, which can be a competitive advantage in latency-sensitive applications.\n• Implementation Risk: The method is training-free, but relies on specific linear attention architectures; integration with other models may require adjustments. Hardware-specific optimizations might limit portability.\n• Novelty: The combination of per-window quantization and compensator tokens is novel, addressing key challenges in recurrent state quantization. However, similar ideas exist in quantization literature, so incremental innovation.\n• Reproducibility: Experiments are comprehensive across multiple models and GPUs, but code availability is not mentioned; potential difficulty in reproducing without detailed implementation.\n• Practical Impact: Speedups are significant, but real-world gains depend on model size and context length; overhead of compensator tokens may offset benefits in some scenarios.",
+    "verdict_cn": "• 创新点: 逐窗口量化和补偿令牌的结合有效解决了循环状态量化中的误差累积和离群值问题，无需训练即可实现近无损压缩，具有实用价值。\n• 实盘坑: 方法依赖于特定的线性注意力架构，迁移到其他模型可能需要重新调参；补偿令牌增加额外开销，在短上下文场景下可能得不偿失；硬件特定优化可能限制跨平台部署。\n• 复现难度: 实验覆盖多个模型和 GPU，但未提及代码开源，复现需详细实现细节；量化参数（如窗口大小、补偿令牌数量）可能需要针对不同模型调整。\n• 潜在收益: 在长上下文推理中可显著降低内存和计算成本，加速比可观，适合对延迟敏感的 LLM 服务，但需权衡精度与速度。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2609.38165v1",
+    "title": "Cropland PAtteRNS: Parallel Dimensional Attention Networks and Attention to Dataset Disparity for Crop Segmentation in Satellite Imagery Time Series Data",
+    "pdf_url": "https://arxiv.org/pdf/2609.38165v1",
+    "published": "2026-09-29",
+    "crawled_at": "2026-09-30 23:14:26",
+    "ai_score": 6.8,
+    "translated_title": "农田模式：用于卫星影像时间序列数据作物分割的并行维度注意力网络与数据集差异注意力",
+    "summary_en": [
+      "• Model Architecture: Introduces Cropland PAtteRNS, a hybrid transformer-convolutional model that applies self-attention separately to temporal, spectral, and spatial dimensions of Sentinel-2 SITS data, with a novel parallel transformer architecture reducing computational complexity of triple-factorized attention.",
+      "• Data used: Evaluated on multiple tile-size variants of the PASTIS and MTLCC datasets, which are popular benchmarks for crop segmentation in satellite imagery time series.",
+      "• Performance metrics: Outperforms state-of-the-art crop segmentation models across multiple segmentation metrics, with particularly strong gains in parcel delineation quality measured by Boundary IoU.",
+      "• Key findings: Flawed class groupings within datasets significantly degrade model performance, and different tile-size variants of crop segmentation datasets yield incomparable results, invalidating fair comparisons between models trained on different tile sizes.",
+      "• Recommendations: Calls for standardized best practices in constructing SITS crop segmentation datasets and for enabling dynamic tile sizing to achieve optimal model performance."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出Cropland PAtteRNS，一种混合Transformer-卷积模型，首次对Sentinel-2多光谱SITS数据的时间、光谱和空间维度分别应用自注意力，并通过新颖的并行Transformer架构显著降低三重因子化自注意力的计算复杂度。",
+      "• 数据来源: 在PASTIS和MTLCC数据集的多个瓦片尺寸变体上进行评估，这些是卫星影像时间序列作物分割的常用基准。",
+      "• 主要结论: 在多个分割指标上超越现有最优作物分割模型，尤其在边界IoU衡量的地块 delineation 质量上表现突出；发现数据集中的类别分组缺陷会显著降低模型性能，且不同瓦片尺寸变体的结果不可比，导致公平比较失效。",
+      "• 建议: 呼吁标准化SITS作物分割数据集构建的最佳实践，并支持未来动态瓦片尺寸以实现理想模型性能。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Limited direct alpha for financial trading; however, the methodology for handling multi-dimensional time series with parallel attention could be adapted to alternative data (e.g., satellite imagery for commodity supply forecasts) or multi-factor financial time series, offering indirect alpha generation.",
+      "• Implementation Risk: High risk in reproducing results due to reliance on specific dataset variants and potential sensitivity to tile sizes; the paper itself highlights incomparability across tile sizes, which complicates benchmarking and deployment.",
+      "• Novelty: Moderate to high; the parallel factorized attention for SITS is a novel architectural contribution, but the core idea of factorized attention exists in other domains. The critical analysis of dataset disparities adds valuable insights.",
+      "• Practicality: The model's complexity and computational demands may hinder real-time applications; however, the efficiency gains from parallel attention could make it feasible for large-scale processing.",
+      "• Overall: A solid methodological contribution with important caveats about dataset construction, but its direct applicability to quantitative finance is not immediate; more relevant for geospatial analytics or ESG-focused funds."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次对SITS数据的时间、光谱、空间维度分别应用自注意力，并提出并行Transformer架构降低计算复杂度，在作物分割任务上达到SOTA，尤其边界IoU提升显著。",
+      "• 实盘坑: 直接用于金融交易alpha有限，但可迁移至另类数据（如卫星影像预测大宗商品供应）或多因子时序建模；然而模型对瓦片尺寸敏感，且论文指出不同尺寸结果不可比，实际部署时需谨慎选择数据预处理方式。",
+      "• 复现难度: 中等偏高，依赖特定数据集变体和计算资源，并行注意力实现细节可能影响复现；但论文提供了消融研究，有助于理解关键组件。",
+      "• 应用前景: 对地理空间分析或ESG基金有潜在价值，但对传统量化交易团队而言，需评估数据获取成本和模型维护开销。",
+      "• 总体评价: 方法扎实，对数据集问题的批判性分析有见地，但金融领域直接应用需进一步适配和验证。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "IEEE Transactions on Geoscience and Remote Sensing",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2609.38161v1",
+    "title": "A Spectral Theory of Distortion in LLM Graph Reconstruction: Sharp Bounds and Empirical Characterization",
+    "pdf_url": "https://arxiv.org/pdf/2609.38161v1",
+    "published": "2026-09-29",
+    "crawled_at": "2026-09-30 23:14:31",
+    "ai_score": 6.5,
+    "translated_title": "LLM图重建中失真的谱理论：锐界与经验刻画",
+    "summary_en": "• Model Architecture: Evaluates three open-weight LLMs (unspecified) on graph reconstruction tasks, analyzing Laplacian spectral Wasserstein distance.\n• Data: 45 synthetic graphs, 135 reconstructions; no real-world graphs used.\n• Performance Metrics: Proves sharp bounds: distance bracketed by net edge change and symmetric difference, scaled by 2/n; residual X>0 certifies mixed editing.\n• Key Findings: 77 one-sided outputs, 29 mixed with X>0; models differ in editing policy (copying vs. hallucination), not revealed by aggregate distortion.",
+    "summary_cn": "• 核心模型: 评估三个开放权重LLM（未具体说明）在图重建任务上的表现，分析拉普拉斯谱的Wasserstein距离。\n• 数据来源: 45个合成图，135次重建；未使用真实世界图。\n• 主要结论: 证明锐界：距离被净边变化和对称差界定，缩放因子2/n；残差X>0证明混合编辑。\n• 关键发现: 77个单侧输出，29个混合输出X>0；模型编辑策略不同（复制 vs. 幻觉），聚合失真无法揭示。",
+    "verdict_en": "• Alpha Potential: Low direct alpha; theoretical bounds may aid graph anomaly detection but no trading strategy proposed.\n• Implementation Risk: High; requires spectral graph theory expertise, synthetic data limits generalizability, no code or model details.\n• Novelty: Moderate; sharp bounds for spectral distortion are new, but practical impact unclear.\n• Reproducibility: Low; models unspecified, synthetic graphs not released, no empirical validation on real data.",
+    "verdict_cn": "• 创新点: 为谱失真提供锐界，理论上有新意，但实际应用价值有限。\n• 实盘坑: 合成图数据不接地气，模型未指明，无法直接用于金融图数据；无交易信号。\n• 复现难度: 高；缺少模型细节和代码，合成图未公开，难以复现。\n• 总体评价: 理论扎实但离实盘远，适合学术圈，量化实战意义弱。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2609.38155v1",
+    "title": "Beyond the Timeline: Augmenting Long-Video Memory with Grounded Entity Biographies",
+    "pdf_url": "https://arxiv.org/pdf/2609.38155v1",
+    "published": "2026-09-29",
+    "crawled_at": "2026-09-30 23:14:37",
+    "ai_score": 7.5,
+    "translated_title": "超越时间线：用接地实体传记增强长视频记忆",
+    "summary_en": [
+      "• Model Architecture: Grounded Entity Biographies (GEB) is a long-video memory framework that groups visually grounded observations of the same physical instance across clips into retrievable biographies, preserving episodic context. During QA, the biography is retrieved alongside episodic evidence to follow entities via identity links.",
+      "• Data used: Evaluated on four benchmarks, including day-long and week-long recordings (e.g., EgoLifeQA).",
+      "• Performance metrics: On EgoLifeQA, GEB achieves 72.0% accuracy, 4.4 percentage points above the best published result. Ablations show grounded identity association and biography reading both contribute to gains, which additional descriptions alone do not fully recover."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出接地实体传记（GEB）框架，将跨视频片段中同一物理实例的视觉接地观察分组为可检索的传记，同时保留每个时刻的上下文。在问答时，传记与情景证据一起被检索，使模型能够通过记忆构建时建立的身份链接跟踪实体。",
+      "• 数据来源: 在四个基准上评估，包括长达一天和一周的录像（如EgoLifeQA）。",
+      "• 主要结论: 在EgoLifeQA上，GEB达到72.0%的准确率，比最佳已发表结果高出4.4个百分点。消融实验表明，接地身份关联和传记阅读都对性能提升有贡献，而仅添加描述无法完全恢复这些增益。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate. The method improves long-video QA, which could enhance video understanding for applications like surveillance, autonomous driving, and content moderation, but direct alpha in financial markets is limited unless integrated into alternative data pipelines.",
+      "• Implementation Risk: High. Requires robust visual grounding and identity association across long videos, which is computationally intensive and error-prone. Scalability to real-time or large-scale deployment is challenging.",
+      "• Novelty: Moderate to High. The concept of grounded entity biographies is novel, but builds on existing memory-augmented frameworks. The improvement over baselines is significant but incremental."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出接地实体传记概念，通过视觉接地将同一实体的跨片段观察链接起来，解决了长视频中实体身份不连贯的问题，提升了长视频问答的性能。",
+      "• 实盘坑: 计算复杂度高，需要处理长视频中的视觉接地和身份关联，实时性差；在金融领域直接应用有限，可能仅作为另类数据处理的辅助工具。",
+      "• 复现难度: 中等偏高。需要复现视觉接地和身份关联模块，依赖高质量的视频数据和标注，且训练和推理资源需求大。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2609.38143v1",
+    "title": "Learning Meta-Skills for Agent Harness Design in Test-Time AI4AI",
+    "pdf_url": "https://arxiv.org/pdf/2609.38143v1",
+    "published": "2026-09-29",
+    "crawled_at": "2026-09-30 23:14:43",
+    "ai_score": 6.5,
+    "translated_title": "学习元技能用于测试时AI4AI中的代理工具设计",
+    "summary_en": [
+      "• Model Architecture: A Builder-Target framework where both models' weights are fixed; the Builder learns meta-skills (principles for when and what support to provide) from Target's execution feedback, then uses a frozen skill bank to construct execution environments (harnesses) for unseen tasks.",
+      "• Data used: Evaluated on Harness-Bench and NewtonBench, with a development set for learning meta-skills and unseen tasks for testing generalization.",
+      "• Performance metrics: Full-bank meta-skills improve macro-average performance by 8.95 percentage points over no-skill construction and 12.02 points over direct delivery of the same bank to the Target.",
+      "• Additional finding: Gains are observed even when the same model serves both Builder and Target roles, suggesting a path to system-level self-improvement."
+    ],
+    "summary_cn": [
+      "• 核心模型: 采用Builder-Target框架，两者权重固定；Builder从Target的执行反馈中学习元技能（何时需要支持及提供何种资源的原则），然后使用冻结的技能库为未见任务构建执行环境（工具）。",
+      "• 数据来源: 在Harness-Bench和NewtonBench上进行评估，使用开发集学习元技能，并在未见任务上测试泛化能力。",
+      "• 主要结论: 完整技能库的元技能比无技能构建的宏平均性能提高8.95个百分点，比直接将相同技能库交付给Target提高12.02个百分点。",
+      "• 额外发现: 当同一模型同时担任Builder和Target时也能获得增益，表明通过学会构建更好的环境实现系统级自我改进的路径。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate. The approach could enhance AI agent performance in financial tasks by automatically designing better execution environments, but the gains (8-12%) may not directly translate to trading alpha without domain-specific adaptation.",
+      "• Implementation Risk: High. Requires careful setup of Builder-Target feedback loops and may be sensitive to task distribution; fixed weights limit adaptability to changing market regimes.",
+      "• Novelty: Moderate. Meta-learning for environment design is an emerging area, but similar ideas exist in neural architecture search and prompt optimization; the focus on test-time AI4AI is relatively new.",
+      "• Practicality: The method is computationally intensive and may not be cost-effective for high-frequency trading; better suited for complex, low-frequency decision tasks."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将元技能学习应用于测试时AI4AI的代理工具设计，通过Builder学习原则来构建执行环境，有一定新意，但并非颠覆性。",
+      "• 实盘坑: 在金融领域，市场动态变化快，固定权重和技能库可能无法适应；反馈循环可能引入延迟，不适合高频交易。",
+      "• 复现难度: 中等偏高，需要复现Builder-Target框架和技能库学习过程，且依赖特定基准（Harness-Bench, NewtonBench），迁移到金融数据需大量调整。",
+      "• 总体评价: 学术价值尚可，但直接用于量化投资需谨慎，建议作为辅助工具设计思路，而非直接alpha来源。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2609.38142v1",
+    "title": "AdviSD: Learning to Advise Frontier LLMs via Targeted Multi-Turn Self-Distillation",
+    "pdf_url": "https://arxiv.org/pdf/2609.38142v1",
+    "published": "2026-09-29",
+    "crawled_at": "2026-09-30 23:14:49",
+    "ai_score": 7.5,
+    "translated_title": "AdviSD：通过定向多轮自蒸馏学习为前沿LLM提供建议",
+    "summary_en": "• Model Architecture: A small trainable advisor (Qwen3-8B) steers a frozen LLM executor (Gemini/Claude) via natural-language advice, using outcome-based RL and selective self-distillation from a feedback-conditioned copy. • Data: Multi-turn interactions on BFCL-v3 and EnvScaler, with self-generated corrections and executor responses; no executor likelihoods or extra rollouts needed. • Performance: Outperforms advisor-GRPO by 4.2-6.4 percentage points on BFCL-v3 and 3.9-5.1 score points on EnvScaler; generalizes to out-of-domain tasks and transfers across executor versions and families. • Selection Rule: Magnitude of difference in advisor scores with/without advice selects decisions for supervision, beating matched-count random selection.",
+    "summary_cn": "• 核心模型: 小型可训练顾问（Qwen3-8B）通过自然语言建议指导冻结的LLM执行器（Gemini/Claude），结合结果强化学习与选择性自蒸馏。 • 数据来源: 在BFCL-v3和EnvScaler上的多轮交互，使用自生成修正和执行器响应；无需执行器似然或额外rollout。 • 主要结论: 在BFCL-v3上比advisor-GRPO提升4.2-6.4个百分点，在EnvScaler上提升3.9-5.1分；泛化到域外任务，并跨执行器版本和模型家族迁移。 • 选择规则: 通过有无建议时顾问评分的差异幅度选择监督决策，优于匹配数量的随机选择。",
+    "verdict_en": "• Alpha Potential: Moderate; the method improves advisor training efficiency and generalization, but the alpha is in better LLM steering, not directly in financial markets. • Implementation Risk: Low to medium; requires a frozen executor and a trainable advisor, but no extra rollouts, making it practical; however, dependence on executor feedback may introduce noise. • Novelty: Solid; the theoretical insight that not all corrections are equally useful and the selective self-distillation rule are novel contributions. • Reproducibility: High; experiments on public benchmarks with clear metrics, but code availability unknown. • Overall: A well-executed paper with practical implications for LLM agent training, though not a direct quant finance alpha source.",
+    "verdict_cn": "• 创新点: 理论证明并非所有修正都同等有用，并提出基于评分差异的选择性自蒸馏规则，具有新意。 • 实盘坑: 依赖执行器反馈，若反馈噪声大可能影响顾问学习；且方法针对LLM指导，非直接金融信号。 • 复现难度: 中等；需要冻结执行器和可训练顾问，但无需额外rollout，实验基于公开基准，复现相对容易。 • 总体评价: 论文扎实，对LLM智能体训练有实用价值，但作为量化金融的alpha来源较间接。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2609.38133v1",
+    "title": "Multi-Agent Flow Matching with Decoupled Generative Guidance",
+    "pdf_url": "https://arxiv.org/pdf/2609.38133v1",
+    "published": "2026-09-29",
+    "crawled_at": "2026-09-30 23:14:55",
+    "ai_score": 7.5,
+    "translated_title": "多智能体流匹配与解耦生成引导",
+    "summary_en": [
+      "• Model Architecture: DeGG-Flow represents multi-agent generative processes as control-affine dynamical systems, enabling decoupled guidance for shared and private requirements without relying on simultaneous computation of other agents' guidance inputs.",
+      "• Data used: Evaluated on two synthetic multi-agent tasks: multi-robot collaboration for gap crossing via environment reconfiguration and multi-object scene generation with affordance requirements; no real-world datasets mentioned.",
+      "• Performance metrics: The method directly generates objects satisfying all hard requirements, including at team sizes unseen during training; theoretical guarantees include feasibility conditions, finite-horizon convergence, and a Wasserstein bound on distributional deviation.",
+      "• Key innovation: Decoupled guidance allows each agent to compute its own guidance independently, addressing coupled constraints in multi-agent generation, with formal guarantees for hard constraint satisfaction."
+    ],
+    "summary_cn": [
+      "• 核心模型: DeGG-Flow将多智能体生成过程建模为控制仿射动力系统，为共享和私有需求提供解耦引导，每个智能体独立计算引导输入，无需依赖其他智能体的同时计算。",
+      "• 数据来源: 在合成多智能体任务上评估，包括多机器人协作通过重构环境跨越空间间隙和多物体场景生成与可供性需求；未提及真实世界数据集。",
+      "• 主要结论: 方法直接生成满足所有硬性要求的对象，包括训练中未见的团队规模；理论保证包括可行性条件、有限时间收敛和Wasserstein界。",
+      "• 创新点: 解耦引导允许每个智能体独立计算引导，解决多智能体生成中的耦合约束，并为硬约束满足提供形式化保证。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate. The framework addresses a niche problem in multi-agent generative modeling with hard constraints, but direct financial applications are not obvious; could inspire constraint-aware generative models for portfolio construction or risk management.",
+      "• Implementation Risk: High. Theoretical guarantees rely on assumptions that may not hold in real-world financial systems; scaling to large agent populations and complex constraints could be computationally prohibitive.",
+      "• Novelty: High. Decoupled guidance for multi-agent flow matching is a novel contribution, with formal guarantees that are rare in generative modeling literature.",
+      "• Practicality: Low for immediate trading. The method is demonstrated on robotics and scene generation, not finance; adaptation would require significant domain-specific modifications."
+    ],
+    "verdict_cn": [
+      "• 创新点: 解耦引导机制在多智能体流匹配中属首创，为共享和私有需求提供形式化保证，理论贡献扎实。",
+      "• 实盘坑: 金融场景中硬约束往往动态变化且难以形式化，该方法假设约束静态且可微，直接应用可能失效；计算复杂度随智能体数量增长，实时性存疑。",
+      "• 复现难度: 高。需要深入理解控制仿射系统和流匹配，且实验基于合成任务，复现到金融领域需大量调整。",
+      "• 潜在方向: 可探索用于多资产组合生成，其中每个资产有独立约束，但需解决约束动态性和市场噪声问题。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
     "id": "2609.35768v1",
     "title": "PDMD: Projected Distribution Matching Distillation for Video Diffusion Models",
     "pdf_url": "https://arxiv.org/pdf/2609.35768v1",
@@ -44236,346 +44553,6 @@
     "journal_info": {
       "name": "NeurIPS",
       "status": "Accepted"
-    }
-  },
-  {
-    "id": "2602.15830v1",
-    "title": "Ensemble-size-dependence of deep-learning post-processing methods that minimize an (un)fair score: motivating examples and a proof-of-concept solution",
-    "pdf_url": "https://arxiv.org/pdf/2602.15830v1",
-    "published": "2026-02-17",
-    "crawled_at": "2026-02-18 20:24:24",
-    "ai_score": 7.5,
-    "translated_title": "最小化（非）公平评分的深度学习后处理方法对集合大小的依赖性：动机示例与概念验证解决方案",
-    "summary_en": [
-      "• Model Architecture: Introduces trajectory transformers, an adaptation of the Post-processing Ensembles with Transformers (PoET) framework, which applies self-attention over lead time while preserving conditional independence required by aCRPS to achieve ensemble-size independence.",
-      "• Data used: Weekly mean T2m forecasts from the ECMWF subseasonal forecasting system, tested with varying ensemble sizes (3 vs 9 members in training, 9 vs 100 members in real-time forecasts).",
-      "• Performance metrics: Demonstrates that methods minimizing expected aCRPS (e.g., linear member-by-member calibration and deep-learning with transformer self-attention) can be sensitive to ensemble size, leading to over-dispersion and unreliability; trajectory transformers successfully reduce systematic model biases while improving or maintaining forecast reliability across different ensemble sizes."
-    ],
-    "summary_cn": [
-      "• 核心模型: 提出轨迹变换器，基于PoET框架改进，在时间维度应用自注意力机制，保持条件独立性以满足aCRPS要求，实现集合大小无关性。",
-      "• 数据来源: 使用ECMWF次季节预报系统的周平均T2m预报数据，训练集和实时预报分别测试不同集合大小（3 vs 9成员，9 vs 100成员）。",
-      "• 主要结论: 最小化aCRPS的方法（如线性逐成员校准和基于变换器的深度学习）对集合大小敏感，可能导致过度分散和不可靠性；轨迹变换器能有效减少系统偏差，在不同集合大小下保持或提升预报可靠性。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate; addresses a niche but critical issue in ensemble forecasting reliability, potentially improving risk-adjusted returns in weather-dependent trading strategies (e.g., energy, agriculture).",
-      "• Implementation Risk: High; requires domain-specific adaptation and careful tuning to avoid overfitting, with scalability concerns for high-frequency applications.",
-      "• Novelty: High; introduces a novel transformer-based approach to decouple ensemble-size dependence, offering a proof-of-concept solution with theoretical rigor in fair score optimization."
-    ],
-    "verdict_cn": [
-      "• 创新点: 高；首次将轨迹变换器应用于集合预报后处理，理论严谨地解决公平评分与集合大小的耦合问题，为深度学习在气象金融交叉领域提供新思路。",
-      "• 实盘坑: 高；依赖特定气象数据，泛化到其他资产类别需大量调整；实时计算开销大，可能影响高频策略执行。",
-      "• 复现难度: 中；代码和框架基于公开的PoET，但需要专业气象数据处理和深度学习调优经验，实验环境要求较高。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "ArXiv Preprint",
-      "status": "Preprint"
-    }
-  },
-  {
-    "id": "2602.15829v1",
-    "title": "Operationalising the Superficial Alignment Hypothesis via Task Complexity",
-    "pdf_url": "https://arxiv.org/pdf/2602.15829v1",
-    "published": "2026-02-17",
-    "crawled_at": "2026-02-18 20:24:37",
-    "ai_score": 7.8,
-    "translated_title": "通过任务复杂性操作化表面对齐假说",
-    "summary_en": [
-      "• Model Architecture: The paper introduces a novel metric called 'task complexity', defined as the length of the shortest program achieving target performance on a task, to operationalize the Superficial Alignment Hypothesis (SAH).",
-      "• Data used: The study evaluates task complexity across three domains: mathematical reasoning, machine translation, and instruction following, using standard benchmarks and datasets within these fields.",
-      "• Performance metrics: The key finding is that pre-training drastically reduces task complexity (by several orders of magnitude), with post-training collapsing complexity further, often requiring only kilobytes of information for task adaptation."
-    ],
-    "summary_cn": [
-      "• 核心模型: 提出'任务复杂性'新指标，定义为实现任务目标性能的最短程序长度，用于操作化表面对齐假说（SAH）。",
-      "• 数据来源: 在数学推理、机器翻译和指令跟随三个领域评估任务复杂性，使用这些领域的标准基准和数据集。",
-      "• 主要结论: 预训练显著降低任务复杂性（数个数量级），后训练进一步压缩复杂性，任务适应通常仅需几千字节信息。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate - The task complexity framework provides a quantitative lens to evaluate model efficiency and adaptation cost, potentially informing model selection and deployment strategies in trading systems.",
-      "• Implementation Risk: High - The metric relies on finding shortest programs, which is computationally intensive and may not scale to real-time trading environments; empirical validation across financial datasets is lacking.",
-      "• Novelty: High - The paper offers a concrete, program-length-based definition of SAH, unifying prior arguments and providing experimental evidence across multiple domains, advancing theoretical understanding of LLM capabilities."
-    ],
-    "verdict_cn": [
-      "• 创新点: 高 - 提供基于程序长度的SAH具体定义，统一先前论点，并在多领域提供实验证据，推进LLM能力理论理解。",
-      "• 实盘坑: 高 - 指标依赖寻找最短程序，计算密集，难以扩展到实时交易环境；缺乏金融数据集实证验证。",
-      "• 复现难度: 中 - 核心概念清晰，但实现最短程序搜索需要大量计算资源，实验设置依赖特定基准，可能影响泛化性。"
-    ],
-    "ai_strategy": "NLP/LLM",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2602.15828v1",
-    "title": "Dex4D: Task-Agnostic Point Track Policy for Sim-to-Real Dexterous Manipulation",
-    "pdf_url": "https://arxiv.org/pdf/2602.15828v1",
-    "published": "2026-02-17",
-    "crawled_at": "2026-02-18 20:24:51",
-    "ai_score": 8.2,
-    "translated_title": "Dex4D：面向仿真到现实灵巧操作的任务无关点轨迹策略",
-    "summary_en": [
-      "• Model Architecture: Dex4D learns a domain-agnostic 3D point track conditioned policy ('Anypose-to-Anypose') that manipulates objects to desired poses using online point tracking for closed-loop perception and control.",
-      "• Data used: Trained in simulation across thousands of objects with diverse pose configurations, covering broad robot-object interactions; uses generated videos for extracting object-centric point tracks at deployment.",
-      "• Performance metrics: Enables zero-shot transfer to real-world tasks without finetuning; shows consistent improvements over prior baselines in simulation and real robots; demonstrates strong generalization to novel objects, scene layouts, backgrounds, and trajectories."
-    ],
-    "summary_cn": [
-      "• 核心模型: Dex4D采用任务无关的3D点轨迹条件策略（'任意姿态到任意姿态'），通过在线点跟踪实现闭环感知与控制，灵活重组以执行多样化操作任务。",
-      "• 数据来源: 在仿真环境中使用数千个具有不同姿态配置的物体进行训练，覆盖广泛的机器人-物体交互空间；部署时利用生成视频提取物体中心点轨迹。",
-      "• 主要结论: 实现零样本迁移至现实任务，无需微调；在仿真和真实机器人实验中均优于现有基线；对新颖物体、场景布局、背景和轨迹表现出强泛化能力。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High potential for scalable robotic manipulation systems in logistics and manufacturing, reducing need for task-specific training and enabling rapid adaptation to new objects and environments.",
-      "• Implementation Risk: Moderate risk due to dependency on accurate point tracking in real-world conditions; potential issues with sensor noise, occlusions, and lighting variations affecting performance.",
-      "• Novelty: Novel approach combining task-agnostic policy learning with point track conditioning and zero-shot sim-to-real transfer, advancing beyond traditional task-specific or imitation learning methods."
-    ],
-    "verdict_cn": [
-      "• 创新点: 创新性地结合任务无关策略学习与点轨迹条件化，实现零样本仿真到现实迁移，突破传统任务特定或模仿学习的局限。",
-      "• 实盘坑: 依赖现实环境中精确的点跟踪，易受传感器噪声、遮挡和光照变化影响；大规模部署需解决计算效率和实时性挑战。",
-      "• 复现难度: 中等偏高，需构建大规模仿真数据集和复杂点跟踪系统；硬件要求高，涉及机器人控制和感知集成，对团队技术栈要求全面。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2602.15827v1",
-    "title": "Perceptive Humanoid Parkour: Chaining Dynamic Human Skills via Motion Matching",
-    "pdf_url": "https://arxiv.org/pdf/2602.15827v1",
-    "published": "2026-02-17",
-    "crawled_at": "2026-02-18 20:25:04",
-    "ai_score": 8.2,
-    "translated_title": "感知型人形机器人跑酷：通过运动匹配链接动态人类技能",
-    "summary_en": [
-      "• Model Architecture: Modular framework combining motion matching (nearest-neighbor search in feature space) for skill composition with RL-based motion-tracking policies, distilled into a single depth-based multi-skill policy using DAgger+RL hybrid training",
-      "• Data used: Retargeted atomic human skills for motion matching, depth sensing from onboard sensors for real-time perception, and kinematic trajectories from composed human motions for RL training",
-      "• Performance metrics: Successfully climbed obstacles up to 1.25m (96% robot height), demonstrated long-horizon multi-obstacle traversal with closed-loop adaptation to real-time perturbations on Unitree G1 humanoid"
-    ],
-    "summary_cn": [
-      "• 核心模型: 模块化框架，结合运动匹配（特征空间最近邻搜索）进行技能组合，与基于强化学习的运动跟踪策略，通过DAgger+RL混合训练蒸馏为单一深度感知多技能策略",
-      "• 数据来源: 重定向的原子人类技能用于运动匹配，机载传感器深度感知用于实时环境理解，组合人类运动的运动学轨迹用于强化学习训练",
-      "• 主要结论: 在Unitree G1人形机器人上实现高达1.25米（机器人身高96%）障碍攀爬，展示长视野多障碍穿越能力，具备实时扰动闭环适应"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High for robotics/automation applications requiring dynamic human-like motion in unstructured environments, potential transfer to industrial automation or entertainment robotics",
-      "• Implementation Risk: Moderate-high due to hardware dependency (specific humanoid platforms), sensor calibration requirements, and real-time computational demands for perception+control loops",
-      "• Novelty: Strong integration of motion matching for human-like fluidity with RL for robustness, plus perception-driven autonomous decision-making in complex obstacle courses"
-    ],
-    "verdict_cn": [
-      "• 创新点: 将运动匹配的人类运动优雅性与强化学习的鲁棒性深度融合，实现感知驱动的自主决策，在复杂障碍场景中展示类人动态技能链",
-      "• 实盘坑: 硬件平台依赖性高（特定人形机器人），传感器标定复杂，感知+控制回路的实时计算需求可能限制部署速度",
-      "• 复现难度: 中高难度，需要特定机器人硬件、大量人类运动数据用于运动匹配，以及深度强化学习训练基础设施"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "ArXiv Preprint",
-      "status": "Preprint"
-    }
-  },
-  {
-    "id": "2602.15823v1",
-    "title": "CrispEdit: Low-Curvature Projections for Scalable Non-Destructive LLM Editing",
-    "pdf_url": "https://arxiv.org/pdf/2602.15823v1",
-    "published": "2026-02-17",
-    "crawled_at": "2026-02-18 20:25:20",
-    "ai_score": 8.2,
-    "translated_title": "CrispEdit：用于可扩展非破坏性大语言模型编辑的低曲率投影方法",
-    "summary_en": [
-      "• Model Architecture: CrispEdit is a second-order editing algorithm that formulates LLM editing as constrained optimization, using Bregman divergence to express capability constraints and projecting updates onto low-curvature subspaces of the capability-loss landscape.",
-      "• Data used: The paper evaluates CrispEdit across standard model-editing benchmarks, though specific datasets are not detailed in the abstract; it likely includes common NLP editing datasets for testing edit success and capability preservation.",
-      "• Performance metrics: CrispEdit achieves high edit success while keeping capability degradation below 1% on average across datasets, significantly improving over prior editors, with efficiency enabled by Kronecker-factored approximate curvature (K-FAC) and a novel matrix-free projector."
-    ],
-    "summary_cn": [
-      "• 核心模型: CrispEdit是一种二阶编辑算法，将大语言模型编辑建模为约束优化问题，利用Bregman散度表达能力约束，并将更新投影到能力损失景观的低曲率子空间。",
-      "• 数据来源: 论文在标准模型编辑基准上评估CrispEdit，可能包括常见的NLP编辑数据集，用于测试编辑成功率和能力保持，但摘要中未具体说明数据集细节。",
-      "• 主要结论: CrispEdit在保持能力退化平均低于1%的同时实现高编辑成功率，显著优于先前编辑方法，通过Kronecker分解近似曲率（K-FAC）和新型无矩阵投影器实现高效计算。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High potential for alpha in NLP/LLM strategies by enabling precise, non-destructive model edits that preserve general capabilities, reducing risks of proxy hacking and model degradation in production systems.",
-      "• Implementation Risk: Moderate risk due to reliance on second-order methods and K-FAC approximations, which may introduce computational overhead or instability in large-scale deployments, though the matrix-free projector mitigates some scalability issues.",
-      "• Novelty: High novelty in unifying and generalizing existing editing approaches through constrained optimization with explicit capability constraints, and innovating with efficient second-order procedures using Bregman divergence and Kronecker structure exploitation."
-    ],
-    "verdict_cn": [
-      "• 创新点: 通过约束优化和显式能力约束统一并推广现有编辑方法，创新性地使用Bregman散度和Kronecker结构实现高效二阶计算，解决了能力保持的核心挑战。",
-      "• 实盘坑: 依赖二阶方法和K-FAC近似可能带来计算开销或不稳定性，尽管无矩阵投影器缓解了可扩展性问题，但在大规模部署中仍需谨慎测试和优化。",
-      "• 复现难度: 中等偏高，需要实现复杂的二阶优化算法、K-FAC近似和投影技术，对计算资源和专业知识要求较高，但开源代码或详细方法可降低难度。"
-    ],
-    "ai_strategy": "NLP/LLM",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2602.15820v1",
-    "title": "Stabilizing Test-Time Adaptation of High-Dimensional Simulation Surrogates via D-Optimal Statistics",
-    "pdf_url": "https://arxiv.org/pdf/2602.15820v1",
-    "published": "2026-02-17",
-    "crawled_at": "2026-02-18 20:25:33",
-    "ai_score": 8.2,
-    "translated_title": "基于D-最优统计的高维仿真代理模型测试时自适应稳定化方法",
-    "summary_en": [
-      "• Model Architecture: Proposes a test-time adaptation (TTA) framework using D-optimal statistics for storing maximally informative data, enabling stable adaptation and principled parameter selection in high-dimensional regression problems.",
-      "• Data used: Validated on SIMSHIFT and EngiBench benchmarks, which involve simulation surrogates for engineering applications with distribution shifts (e.g., unseen geometries or configurations).",
-      "• Performance metrics: Achieves up to 7% improvement in out-of-distribution performance at negligible computational cost, demonstrating effectiveness in high-dimensional simulation regression and generative design optimization."
-    ],
-    "summary_cn": [
-      "• 核心模型: 提出基于D-最优统计的测试时自适应框架，通过存储最大化信息数据，实现高维回归问题的稳定自适应和参数选择。",
-      "• 数据来源: 使用SIMSHIFT和EngiBench基准测试，涉及工程应用中的仿真代理模型，包含分布偏移（如未见几何或配置）。",
-      "• 主要结论: 在可忽略的计算成本下，实现高达7%的分布外性能提升，验证了在高维仿真回归和生成设计优化中的有效性。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate; the method's ability to adapt to distribution shifts in simulation surrogates could enhance predictive models in quantitative finance, such as risk assessment or option pricing under changing market regimes.",
-      "• Implementation Risk: High; deploying TTA in live trading requires robust handling of real-time data streams and potential overfitting to noisy test-time distributions, which may introduce instability.",
-      "• Novelty: High; this is the first systematic demonstration of effective TTA for high-dimensional simulation regression, addressing a gap in existing methods focused on lower-dimensional classification."
-    ],
-    "verdict_cn": [
-      "• 创新点: 高；首次系统展示高维仿真回归的有效测试时自适应，填补了现有方法集中于低维分类的空白。",
-      "• 实盘坑: 高；在实盘交易中部署需处理实时数据流和噪声测试分布，可能引入不稳定性或过拟合风险。",
-      "• 复现难度: 中等；基于D-最优统计的框架相对清晰，但需要特定仿真环境和基准数据，可能增加复现复杂性。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Accepted"
-    }
-  },
-  {
-    "id": "2602.15817v1",
-    "title": "Solving Parameter-Robust Avoid Problems with Unknown Feasibility using Reinforcement Learning",
-    "pdf_url": "https://arxiv.org/pdf/2602.15817v1",
-    "published": "2026-02-17",
-    "crawled_at": "2026-02-18 20:25:43",
-    "ai_score": 7.8,
-    "translated_title": "使用强化学习解决参数鲁棒避免问题与未知可行性",
-    "summary_en": [
-      "• Model Architecture: Feasibility-Guided Exploration (FGE) method that simultaneously identifies feasible initial conditions and learns safe policies through reinforcement learning",
-      "• Data used: Simulation environments including MuJoCo simulator and Kinetix simulator with pixel observations for empirical validation",
-      "• Performance metrics: Policies achieve over 50% more coverage than existing methods for challenging initial conditions across multiple tasks"
-    ],
-    "summary_cn": [
-      "• 核心模型: 可行性引导探索(FGE)方法，同时识别可行初始条件并学习安全策略",
-      "• 数据来源: MuJoCo模拟器和Kinetix模拟器（含像素观测）的仿真环境",
-      "• 主要结论: 在挑战性初始条件下，FGE策略比现有最佳方法覆盖范围提高50%以上"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate - addresses fundamental mismatch between RL optimization and reachability problems, potentially applicable to risk-sensitive trading scenarios",
-      "• Implementation Risk: High - relies on simulation environments; real-world transfer requires careful calibration of feasibility constraints",
-      "• Novelty: Significant - introduces simultaneous feasibility identification and policy learning framework for robust reachability problems"
-    ],
-    "verdict_cn": [
-      "• 创新点: 提出同时进行可行性识别与策略学习的框架，解决RL与可达性问题之间的根本性不匹配",
-      "• 实盘坑: 高度依赖仿真环境，真实市场转移需精确校准可行性约束，存在过拟合风险",
-      "• 复现难度: 中等偏高，需要搭建MuJoCo/Kinetix仿真环境，但方法描述相对清晰"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2602.15799v1",
-    "title": "The Geometry of Alignment Collapse: When Fine-Tuning Breaks Safety",
-    "pdf_url": "https://arxiv.org/pdf/2602.15799v1",
-    "published": "2026-02-17",
-    "crawled_at": "2026-02-18 20:25:57",
-    "ai_score": 8.5,
-    "translated_title": "对齐崩溃的几何学：当微调破坏安全性时",
-    "summary_en": [
-      "• Model Architecture: The paper analyzes fine-tuning of aligned language models, focusing on the geometric structure of parameter spaces where safety-critical alignment is concentrated in low-dimensional subspaces with sharp curvature.",
-      "• Data used: The study is theoretical and does not specify particular datasets; it assumes benign fine-tuning tasks with no harmful content in the training data, relying on mathematical proofs and simulations to demonstrate alignment collapse.",
-      "• Performance metrics: The main result establishes a quartic scaling law where alignment loss grows with the fourth power of training time, governed by geometric properties like curvature coupling between fine-tuning tasks and safety-critical parameters."
-    ],
-    "summary_cn": [
-      "• 核心模型: 分析对齐语言模型的微调过程，重点关注参数空间的几何结构，其中安全关键的对齐集中在具有尖锐曲率的低维子空间中。",
-      "• 数据来源: 研究为理论性，未指定具体数据集；假设微调任务为良性且训练数据不含有害内容，依赖数学证明和模拟来展示对齐崩溃。",
-      "• 主要结论: 建立四次方缩放定律，对齐损失随训练时间的四次方增长，受微调任务与安全关键参数间曲率耦合等几何性质控制。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High potential for developing predictive diagnostics and curvature-aware methods in AI safety, which could lead to new risk management tools for deploying open-weight models in financial NLP applications.",
-      "• Implementation Risk: Moderate to high risk due to the theoretical nature; practical implementation requires validation on real-world datasets and integration with existing fine-tuning pipelines, which may be complex and resource-intensive.",
-      "• Novelty: High novelty in introducing a geometric analysis of alignment collapse, formalizing the Alignment Instability Condition, and exposing a structural blind spot in current safety paradigms, shifting focus from reactive to predictive approaches."
-    ],
-    "verdict_cn": [
-      "• 创新点: 引入对齐崩溃的几何分析，形式化对齐不稳定性条件，揭示当前安全范式的结构盲点，推动从反应式到预测式方法的转变。",
-      "• 实盘坑: 理论性强，需在实际数据集上验证；集成到现有微调流程可能复杂且资源密集，曲率感知方法的开发尚处早期阶段。",
-      "• 复现难度: 中等至高，依赖数学证明和模拟，需深入理解几何动力学；复现实验需要定制代码和计算资源，可能涉及高维参数空间分析。"
-    ],
-    "ai_strategy": "NLP/LLM",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2602.15781v1",
-    "title": "Neural Scaling Laws for Boosted Jet Tagging",
-    "pdf_url": "https://arxiv.org/pdf/2602.15781v1",
-    "published": "2026-02-17",
-    "crawled_at": "2026-02-18 20:26:12",
-    "ai_score": 7.5,
-    "translated_title": "用于增强喷注标记的神经缩放定律",
-    "summary_en": [
-      "• Model Architecture: The study investigates neural scaling laws for boosted jet classification, deriving compute-optimal scaling laws and identifying effective performance limits through increased compute, without specifying a particular model architecture but focusing on scaling principles applicable to various models.",
-      "• Data used: The analysis utilizes the public JetClass dataset, common in High Energy Physics (HEP), and examines how data repetition due to expensive simulation modifies scaling, yielding quantifiable effective dataset size gains.",
-      "• Performance metrics: The research demonstrates that increased compute reliably drives performance toward an asymptotic limit, with more expressive, lower-level features raising the performance limit and improving results at fixed dataset size, though specific metrics like accuracy or AUC are not detailed in the abstract."
-    ],
-    "summary_cn": [
-      "• 核心模型: 研究聚焦于增强喷注分类的神经缩放定律，推导计算最优缩放定律，并通过增加计算资源识别有效性能极限，适用于多种模型架构。",
-      "• 数据来源: 使用公开的JetClass数据集，分析高能物理中因模拟成本高而导致的数据重复如何修改缩放，产生可量化的有效数据集大小增益。",
-      "• 主要结论: 增加计算资源可靠地将性能推向渐近极限，更富表达性的低级特征能提高性能极限并在固定数据集大小下改善结果，但摘要未详细说明具体性能指标如准确率或AUC。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate; the scaling laws could optimize compute allocation for HEP models, potentially leading to more efficient training and better performance in particle physics applications, but direct financial alpha is limited as it's focused on scientific research rather than market prediction.",
-      "• Implementation Risk: High; applying these scaling laws to financial models would require significant adaptation, as HEP data characteristics differ from market data, and the abstract lacks details on model specifics or real-world validation, increasing uncertainty.",
-      "• Novelty: Moderate; while scaling laws are well-established in LLMs, their application to HEP and boosted jet tagging is novel, but the approach may not be groundbreaking beyond the specific domain, with limited cross-disciplinary innovation."
-    ],
-    "verdict_cn": [
-      "• 创新点: 中等；将缩放定律应用于高能物理和增强喷注标记具有新颖性，但方法在跨学科创新上有限，主要局限于特定科学领域，而非金融建模。",
-      "• 实盘坑: 高；将这些缩放定律应用于金融模型需大量调整，因为高能物理数据与市场数据特性不同，且摘要缺乏模型细节或实际验证，增加不确定性。",
-      "• 复现难度: 中等；基于公开数据集和缩放定律，复现可能可行，但需要高能物理专业知识和对计算资源的访问，可能阻碍快速部署。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "ArXiv Preprint",
-      "status": "Preprint"
-    }
-  },
-  {
-    "id": "2602.15763v1",
-    "title": "GLM-5: from Vibe Coding to Agentic Engineering",
-    "pdf_url": "https://arxiv.org/pdf/2602.15763v1",
-    "published": "2026-02-17",
-    "crawled_at": "2026-02-18 20:26:27",
-    "ai_score": 8.5,
-    "translated_title": "GLM-5：从氛围编码到智能体工程",
-    "summary_en": [
-      "• Model Architecture: GLM-5 is a next-generation foundation model that builds upon agentic, reasoning, and coding (ARC) capabilities, adopting DSA to reduce training and inference costs while maintaining long-context fidelity. It implements a new asynchronous reinforcement learning infrastructure that decouples generation from training, along with novel asynchronous agent RL algorithms for improved learning from complex, long-horizon interactions.",
-      "• Data used: The abstract does not specify the exact datasets used, but the model is trained to handle real-world coding tasks and end-to-end software engineering challenges, likely utilizing large-scale code repositories and software development data.",
-      "• Performance metrics: GLM-5 achieves state-of-the-art performance on major open benchmarks and demonstrates unprecedented capability in real-world coding tasks, surpassing previous baselines in handling end-to-end software engineering challenges."
-    ],
-    "summary_cn": [
-      "• 核心模型: GLM-5 是基于智能体、推理和编码（ARC）能力的下一代基础模型，采用 DSA 降低训练和推理成本，同时保持长上下文保真度。它实现了新的异步强化学习基础设施，将生成与训练解耦，并提出了新颖的异步智能体 RL 算法，以更有效地从复杂、长视野的交互中学习。",
-      "• 数据来源: 摘要未明确指定具体数据集，但模型旨在处理现实世界编码任务和端到端软件工程挑战，可能利用大规模代码仓库和软件开发数据。",
-      "• 主要结论: GLM-5 在主要开放基准测试中达到最先进性能，并在现实世界编码任务中展现出前所未有的能力，在端到端软件工程挑战处理上超越先前基线。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High potential for alpha generation in algorithmic trading and quantitative strategies, as the model's advanced reasoning and coding capabilities could enable more sophisticated, adaptive trading agents and automated strategy development, particularly in dynamic markets.",
-      "• Implementation Risk: Moderate to high risk due to the complexity of the asynchronous RL infrastructure and novel algorithms, which may lead to integration challenges, increased computational overhead, and potential instability in real-time applications like high-frequency trading.",
-      "• Novelty: High novelty with the transition from vibe coding to agentic engineering, the DSA approach for cost reduction, and the asynchronous RL innovations, positioning it as a cutting-edge advancement in foundation models for autonomous systems."
-    ],
-    "verdict_cn": [
-      "• 创新点: 从氛围编码转向智能体工程，采用 DSA 降低成本，以及异步 RL 基础设施和算法，在基础模型和自主系统领域具有前沿创新性。",
-      "• 实盘坑: 异步 RL 基础设施和算法的复杂性可能导致集成困难、计算开销增加，以及在实时应用（如高频交易）中的潜在不稳定性，风险中等偏高。",
-      "• 复现难度: 高难度，由于涉及先进的模型架构、异步 RL 技术和专有数据，需要大量计算资源和专业知识，可能难以完全复现或部署。"
-    ],
-    "ai_strategy": "NLP/LLM",
-    "journal_info": {
-      "name": "ArXiv Preprint",
-      "status": "Preprint"
     }
   }
 ]
