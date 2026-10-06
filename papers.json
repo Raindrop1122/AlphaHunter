@@ -1,5 +1,319 @@
 [
   {
+    "id": "2610.06851v1",
+    "title": "Base Models Can Reason By Taking a Cue From Training Data",
+    "pdf_url": "https://arxiv.org/pdf/2610.06851v1",
+    "published": "2026-10-05",
+    "crawled_at": "2026-10-06 23:21:57",
+    "ai_score": 7.5,
+    "translated_title": "基础模型可以通过训练数据中的线索进行推理",
+    "summary_en": [
+      "• Model Architecture: The paper studies base language models (e.g., Olmo-3-7B, Qwen3-14B) and shows that fixing specific starting token cues (like '.\\n\\nOkay' or 'Alright,') significantly boosts reasoning performance on math and coding tasks, matching RL-trained counterparts.",
+      "• Data used: The authors trace the reasoning effects of token cues to training data through causal interventions, demonstrating that arbitrary words (e.g., 'chicken') can become effective reasoning cues, and that hidden state representations induced by cues correlate with different document types.",
+      "• Performance metrics: For Olmo-3-7B, cue '.\\n\\nOkay' raises MATH-500 pass@1 accuracy from 42% to 78%; for Qwen3-14B, 'Alright,' raises it from 72% to 87%. RL training increases the likelihood of these cues, and fixing them recovers much of the performance gain.",
+      "• Safety case study: Different cues elicit distinct refusal and compliance behaviors corresponding to different training data types, highlighting the role of training data associations in model safety."
+    ],
+    "summary_cn": [
+      "• 核心模型: 研究基础语言模型（如Olmo-3-7B、Qwen3-14B），发现固定特定的起始token线索（如'.\\n\\nOkay'或'Alright,'）能显著提升数学和编码任务的推理性能，媲美经过强化学习训练的模型。",
+      "• 数据来源: 通过因果数据干预，将任意词（如'chicken'）转化为有效的推理线索，或消除现有线索的效果，并将线索的推理效应追溯到训练数据；隐藏状态表示与训练集中的不同文档类型相关。",
+      "• 主要结论: 对于Olmo-3-7B，线索'.\\n\\nOkay'将MATH-500 pass@1准确率从42%提升至78%；对于Qwen3-14B，'Alright,'将准确率从72%提升至87%。强化学习使这些线索更可能出现，固定它们可以恢复大部分性能增益。",
+      "• 安全案例研究: 不同线索引发不同的拒绝和合规行为，对应不同类型的训练数据，突显了训练数据关联在模型安全中的作用。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High potential for enhancing LLM reasoning without expensive RL training, offering a low-cost method to boost performance on math and coding tasks, which could be exploited in trading strategies relying on LLM-generated signals.",
+      "• Implementation Risk: The approach relies on specific token cues that may be model-specific and not generalize across architectures; causal interventions require careful design, and the safety implications (e.g., compliance behaviors) could pose regulatory risks.",
+      "• Novelty: The paper provides a novel perspective on how training data associations create reasoning behaviors, with causal data interventions and safety case studies, advancing understanding of LLM reasoning mechanisms.",
+      "• Practicality: The method is simple to implement (just fix starting tokens) and could be integrated into existing pipelines, but the effectiveness may diminish with larger models or different tasks."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次系统性地揭示训练数据中token线索与推理行为的因果关系，通过因果干预证明任意词可成为推理线索，为LLM推理机制提供了新见解。",
+      "• 实盘坑: 线索可能过拟合于特定模型和任务，泛化性存疑；安全案例表明线索可能引发意外合规行为，在金融应用中需谨慎避免监管风险。",
+      "• 复现难度: 方法简单，易于复现，但需要访问基础模型和训练数据以进行因果干预；对于闭源模型，可能无法实施数据干预。",
+      "• 应用前景: 可低成本提升LLM在数学和编码任务上的表现，潜在用于生成交易信号，但需进一步验证在金融领域的稳定性和鲁棒性。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2610.06844v1",
+    "title": "Learning to Read the Contextual Tokens in Diffusion Transformers",
+    "pdf_url": "https://arxiv.org/pdf/2610.06844v1",
+    "published": "2026-10-05",
+    "crawled_at": "2026-10-06 23:22:03",
+    "ai_score": 7.5,
+    "translated_title": "学习阅读扩散Transformer中的上下文令牌",
+    "summary_en": [
+      "• Model Architecture: The paper introduces a framework to interpret Multimodal Diffusion Transformers (MM-DiTs) by training a lightweight bottleneck network that maps intermediate contextual tokens into the input space of a frozen LLM, enabling natural-language interrogation of the generation process.",
+      "• Data and Training: The approach is validated on image generation tasks, likely using standard datasets like MS-COCO or ImageNet, with human preference scores used as a metric. The Contextual Alignment technique is proposed to reinforce visual-semantic information in contextual tokens.",
+      "• Key Findings: Contextual tokens encode global scene semantics early in denoising, including attributes not specified in the prompt, and remain decodable even with empty prompts. More readable contextual representations correlate with higher human preference scores.",
+      "• Performance: The Contextual Alignment training improves generation quality and distributional coverage, demonstrating the practical utility of the interpretability framework."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出一个框架，通过训练轻量级瓶颈网络将MM-DiT中的中间上下文令牌映射到冻结LLM的输入空间，实现自然语言询问，从而解读生成过程中的隐藏表示。",
+      "• 数据来源: 在图像生成任务上验证，可能使用MS-COCO或ImageNet等标准数据集，并以人类偏好分数作为评估指标。",
+      "• 主要结论: 上下文令牌在去噪早期编码全局场景语义（包括提示未指定的属性），且即使输入空提示也可解码；可读性更高的上下文表示与更高的人类偏好分数相关。",
+      "• 方法创新: 提出Contextual Alignment训练技术，显式增强上下文令牌中的视觉语义信息，提升生成质量和分布覆盖。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: The interpretability framework could inspire new regularization techniques for diffusion models, potentially improving generation quality and alignment with human preferences, which may translate to better performance in creative or design-related tasks.",
+      "• Implementation Risk: The approach relies on a frozen LLM and a bottleneck network, adding computational overhead. The correlation between readability and human preference is promising but may not generalize across all domains or model sizes.",
+      "• Novelty: The idea of interrogating contextual tokens via an LLM is novel and provides a new lens for understanding MM-DiTs. The Contextual Alignment technique is a practical contribution.",
+      "• Practicality: While the method is innovative, its direct application in hedge fund strategies is limited unless integrated into generative models for financial data augmentation or scenario analysis, which is not explored."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次通过LLM自然语言询问来解读MM-DiT的上下文令牌，揭示了其编码全局语义的能力，并提出了Contextual Alignment训练技术，具有较高的新颖性。",
+      "• 实盘坑: 该方法主要针对图像生成，与金融量化直接关联弱；若用于金融数据生成，需验证跨域泛化性，且LLM推理增加延迟，可能不适合高频场景。",
+      "• 复现难度: 需要MM-DiT和LLM的预训练权重，训练瓶颈网络需大量计算资源，但整体框架清晰，复现难度中等。",
+      "• 应用前景: 在生成式AI领域有潜力，可提升图像生成质量，但对冲基金直接应用有限，或可用于另类数据生成，但需进一步探索。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2610.06834v1",
+    "title": "Direct Intermediate Initialization for Tilted Diffusion Samplers",
+    "pdf_url": "https://arxiv.org/pdf/2610.06834v1",
+    "published": "2026-10-05",
+    "crawled_at": "2026-10-06 23:22:10",
+    "ai_score": 6.5,
+    "translated_title": "倾斜扩散采样器的直接中间初始化",
+    "summary_en": [
+      "• Model Architecture: The paper proposes a hybrid sampling method for diffusion posterior samplers, specifically MCGDiff, by initializing the sequential Monte Carlo (SMC) process at an intermediate time step. It leverages a Gaussian bridge to map samples from a softened clean-space posterior to the tilted target distribution, thereby reducing the number of SMC steps.",
+      "• Data used: Experiments are conducted on a structured Gaussian-mixture inverse problem and a rare-mode problem, with comparisons to standard MCGDiff and a prior-initialization control.",
+      "• Performance metrics: The hybrid approach improves sliced Wasserstein distance by approximately 2× on the structured problem and by over an order of magnitude on the rare-mode problem, at matched particle counts.",
+      "• Key insight: The improvement is largely insensitive to conditioning on the standard benchmark, but conditioning becomes crucial for rare-mode problems where resampling cannot repopulate absent modes."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出一种混合采样方法，将MCGDiff的SMC初始化直接置于中间时间步，利用高斯桥将软化干净空间后验样本映射到倾斜目标分布，仅运行剩余的SMC后缀。",
+      "• 数据来源: 在结构化高斯混合逆问题和稀有模式问题上进行实验，并与标准MCGDiff及先验初始化控制组对比。",
+      "• 主要结论: 在匹配粒子数下，切片Wasserstein距离在结构化问题上提升约2倍，在稀有模式问题上提升超过一个数量级。",
+      "• 关键发现: 在标准基准上，改进对条件化不敏感；但在稀有模式问题上，条件化初始化至关重要，因为重采样无法补充初始种群中缺失的模式。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate. The method improves finite-particle performance of diffusion posterior samplers, which could enhance sampling efficiency in financial applications like risk modeling or scenario generation, but the gain is problem-dependent and may not translate to high-frequency alpha.",
+      "• Implementation Risk: The approach trades asymptotic consistency for finite-particle performance, introducing bias. The reliance on a Gaussian bridge and approximate solver may limit robustness in complex, high-dimensional posteriors.",
+      "• Novelty: The idea of pulling back tilted targets to clean-space posteriors and initializing SMC at an intermediate time is novel and provides theoretical insights, but the practical impact is incremental for standard benchmarks.",
+      "• Reproducibility: The method is built on existing frameworks (MCGDiff, MMPS) and should be reproducible, but requires careful tuning of the intermediate time and bridge parameters."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将倾斜扩散采样器的中间目标拉回干净空间后验，并利用高斯桥直接初始化SMC，理论上有新意，但实际提升在标准问题上有限。",
+      "• 实盘坑: 方法牺牲了渐近一致性，引入偏差；在复杂高维后验中，高斯桥和近似求解器的鲁棒性存疑，可能不适用于高频交易场景。",
+      "• 复现难度: 基于现有MCGDiff和MMPS框架，复现难度中等，但需要精细调整中间时间和桥参数，且实验规模较小。",
+      "• 应用前景: 在需要稀有模式采样的金融风险建模中或有价值，但对常规Alpha因子挖掘的直接帮助有限。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2610.06833v1",
+    "title": "Towards Looped Models Done Right, Part II: Rethinking at Fixed Points",
+    "pdf_url": "https://arxiv.org/pdf/2610.06833v1",
+    "published": "2026-10-05",
+    "crawled_at": "2026-10-06 23:22:16",
+    "ai_score": 7.5,
+    "translated_title": "迈向正确的循环模型，第二部分：在固定点上的重新思考",
+    "summary_en": "• Model Architecture: Looped language models with learned depth prior and orthogonal input injection, enabling truncated backpropagation and terminal KV sharing.\n• Data: Evaluated on language modeling benchmarks from 100M to 1.6B parameters, likely using standard corpora like C4 or The Pile.\n• Performance: Lower perplexity at all scales; at 1.6B, learned prior with 3x smaller KV cache matches fixed-depth training with full cache; up to 1.79x faster prefill and 2x faster RL updates.\n• Key Techniques: Entropy-regularized learned depth prior and orthogonal injection to improve fixed-point convergence.",
+    "summary_cn": "• 核心模型: 循环语言模型，采用可学习的深度先验和正交输入注入，支持截断反向传播和终端KV共享。\n• 数据来源: 在100M到1.6B参数规模的语言建模基准上评估，可能使用C4或The Pile等标准语料。\n• 主要结论: 所有规模下困惑度降低；1.6B模型使用3倍小的KV缓存达到固定深度全缓存的性能；预填充加速1.79倍，RL更新加速2倍。\n• 关键技术: 熵正则化的可学习深度先验和正交注入，改善固定点收敛。",
+    "verdict_en": "• Alpha Potential: Moderate; efficiency gains in training and inference could reduce costs for large-scale LLM deployment, but direct trading alpha is unclear.\n• Implementation Risk: High; looped models are complex to train and tune, requiring careful hyperparameter selection and infrastructure support.\n• Novelty: Solid; learned depth prior and orthogonal injection are incremental but effective improvements over Huginn.\n• Reproducibility: Medium; code not mentioned, but methods are described in detail; requires significant compute for 1.6B scale.",
+    "verdict_cn": "• 创新点: 可学习深度先验和正交注入，解决了固定点训练中的监督稀释和输入干扰问题，提升了循环模型的效率。\n• 实盘坑: 循环模型训练不稳定，超参数敏感，且实际交易场景中LLM的延迟和成本可能仍是瓶颈。\n• 复现难度: 中等；需要大量计算资源（1.6B参数），但方法描述清晰，无代码可能增加复现难度。\n• 潜在价值: 对LLM效率有贡献，但直接用于量化交易需进一步验证。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2610.06830v1",
+    "title": "MemPilot: Orchestrating On-Demand Multimodal Memory Curation for LLM Agents",
+    "pdf_url": "https://arxiv.org/pdf/2610.06830v1",
+    "published": "2026-10-05",
+    "crawled_at": "2026-10-06 23:22:22",
+    "ai_score": 7.5,
+    "translated_title": "MemPilot：为LLM智能体编排按需多模态记忆策展",
+    "summary_en": [
+      "• Model Architecture: MemPilot employs a multi-step LLM policy optimized via reinforcement learning to iteratively decide between retrieving from query-agnostic memory and delegating query-specific curation of raw multimodal history to heterogeneous LLMs and VLMs.",
+      "• Data used: The framework is evaluated on five multimodal agent-memory benchmarks, though specific datasets are not detailed in the abstract.",
+      "• Performance metrics: Experiments demonstrate favorable performance–cost–latency trade-offs across optimization preferences, with preference sweeps yielding broader frontiers than existing trade-off-aware baselines.",
+      "• Key techniques: Objective-wise advantage decoupling for competing objectives and prefix-based marginal utility estimation for fine-grained credit assignment across multi-step rollouts."
+    ],
+    "summary_cn": [
+      "• 核心模型: MemPilot采用多步LLM策略，通过强化学习优化，迭代选择从查询无关记忆检索或委托给异构LLM和VLM进行查询特定的原始多模态历史策展。",
+      "• 数据来源: 在五个多模态智能体记忆基准上评估，但摘要未详述具体数据集。",
+      "• 主要结论: 实验表明在不同优化偏好下实现了有利的性能-成本-延迟权衡，偏好扫描比现有权衡感知基线产生更广的前沿。",
+      "• 关键技术: 目标优势解耦用于竞争目标，以及基于前缀的边际效用估计用于多步展开中的细粒度信用分配。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate. The framework addresses a real inefficiency in agent memory systems, potentially reducing computational costs and improving latency in LLM-based trading agents, but direct alpha generation is indirect.",
+      "• Implementation Risk: High. Integrating multimodal memory curation into live trading systems requires robust infrastructure and may introduce latency overhead; RL policy training and tuning are complex.",
+      "• Novelty: Solid. The combination of on-demand curation, heterogeneous model selection, and multi-objective RL with advantage decoupling is novel, though each component has precedents.",
+      "• Practicality: The focus on performance-cost-latency trade-offs is highly relevant for production systems, but the paper lacks details on real-world deployment and scalability."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出了按需多模态记忆策展框架，结合异构模型选择和强化学习优化，在记忆处理中引入灵活的性能-成本-延迟权衡。",
+      "• 实盘坑: 在实盘交易中，多模态记忆策展可能增加延迟和复杂性，且RL策略的稳定性和泛化性未经验证，可能在高频场景下失效。",
+      "• 复现难度: 高。需要复现多步RL训练、异构模型集成和多模态数据处理，计算资源需求大，且依赖未公开的基准细节。",
+      "• 潜在价值: 对于需要长期记忆的LLM智能体（如对话式交易助手）有应用潜力，但直接用于alpha生成仍需适配和验证。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2610.06829v1",
+    "title": "CLIFT: Conformal Self-Verification for Web Agent Training and Test-Time Scaling",
+    "pdf_url": "https://arxiv.org/pdf/2610.06829v1",
+    "published": "2026-10-05",
+    "crawled_at": "2026-10-06 23:22:29",
+    "ai_score": 7.8,
+    "translated_title": "CLIFT：面向Web智能体训练与测试时扩展的共形自验证",
+    "summary_en": "• Model Architecture: CLIFT introduces a compositional conformal certifier that filters self-verification question signals based on URL-conditional agreement with a training-time judge, assigns signed trust weights via polarity-aware lift, and blends verifier scores into per-step rewards without subtracting from the judge baseline. At test time, the certified question bank is frozen and used for Conformal Trajectory Selection (CTS), which employs a conservative majority-vote rule to swap rollouts without external judges.\n• Data used: Evaluated on WebArena Infinity, VisualWebArena, and Online Mind2Web. Training uses agent rollouts and a training-time judge; test-time transfer includes GPT-5.5 on VisualWebArena.\n• Performance metrics: Achieves state-of-the-art among open-source web agents on WebArena Infinity; on VisualWebArena, transfers to GPT-5.5 and reaches SOTA under the canonical harness; on Online Mind2Web, zero-shot improvement without training on the benchmark.\n• Key innovation: Turns costly judge feedback into a reusable training signal and enables judge-free test-time scaling via conformal self-verification.",
+    "summary_cn": "• 核心模型: CLIFT采用组合共形认证器，基于URL条件证据与训练时评判器的一致性过滤自验证问题信号，通过极性感知提升分配带符号信任权重，并将验证器分数融入每步奖励且不削减评判器基线。测试时冻结认证问题库，用于共形轨迹选择（CTS），通过保守多数投票规则决定是否替换当前轨迹，无需外部评判器。\n• 数据来源: 在WebArena Infinity、VisualWebArena和Online Mind2Web上评估。训练使用智能体轨迹和训练时评判器；测试时在VisualWebArena上迁移至GPT-5.5。\n• 主要结论: 在WebArena Infinity上达到开源Web智能体最优性能；在VisualWebArena上迁移至GPT-5.5并在标准测试框架下达到最优；在Online Mind2Web上零样本提升实时Web智能体，无需在基准上训练。\n• 核心创新: 将昂贵的评判器反馈转化为可复用的训练信号，并通过共形自验证实现无评判器的测试时扩展。",
+    "verdict_en": "• Alpha Potential: High for web automation and agentic workflows; the judge-free test-time scaling can reduce inference costs and enable deployment in cost-sensitive environments. Potential to improve success rates of open-source agents, creating alpha in automation-heavy strategies.\n• Implementation Risk: Conformal certification depends on the quality of the training-time judge; if the judge is biased or unavailable, the certified bank may degrade. Transfer to new domains (e.g., finance-specific web tasks) requires re-certification, which may be costly. The conservative majority-vote rule might limit gains in high-variance tasks.\n• Novelty: The combination of conformal prediction with self-verification for web agents is novel and addresses a key bottleneck in RL training. The compositional certifier and polarity-aware lift are technically sound contributions.\n• Reproducibility: Code and models are not mentioned; however, the method is described in detail. Reproducing may require significant engineering effort, especially for the conformal certification pipeline and integration with existing web agent frameworks.",
+    "verdict_cn": "• 创新点: 将共形预测与自验证结合，用于Web智能体的训练和测试时扩展，解决了RL训练中奖励稀疏和评判器成本高的问题。组合共形认证器和极性感知提升是技术亮点。\n• 实盘坑: 认证过程依赖训练时评判器的质量，若评判器有偏或不可用，认证库可能失效。迁移到新领域（如金融网页任务）需要重新认证，成本较高。保守多数投票规则可能在高方差任务中限制收益。\n• 复现难度: 论文未提及代码开源，复现需要大量工程实现，尤其是共形认证管道和与现有Web智能体框架的集成。\n• 应用前景: 在自动化网页操作和智能体工作流中具有高潜力，可降低推理成本，为开源智能体提供性能提升，在自动化密集型策略中创造阿尔法。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2610.06823v1",
+    "title": "Deep Learning for Sleep Heart Rate Estimation from Accelerometers: Toward Population-Scale Cardiac Insight Without Optical Sensors",
+    "pdf_url": "https://arxiv.org/pdf/2610.06823v1",
+    "published": "2026-10-05",
+    "crawled_at": "2026-10-06 23:22:35",
+    "ai_score": 5.5,
+    "translated_title": "基于深度学习的睡眠心率估计：无需光学传感器的大规模心脏洞察",
+    "summary_en": "• Model Architecture: SeqSmoother, a transformer-based temporal corrector, combines spectral descriptors, a Nightbeat-derived frequency anchor, and a physics-motivated sub-harmonic feature to estimate sleep heart rate from wrist accelerometry.\n• Data: Uses large longitudinal cohorts with wrist accelerometry and ECG (for reference labels only); evaluated on 13 participant-disjoint held-out folds.\n• Performance: Achieved participant-macro MAE of 1.60 bpm; on Nightbeat-retained intervals, Nightbeat had lower error (0.615 vs 1.091 bpm) but SeqSmoother provided estimates for 72.85% more of the eligible grid.\n• Sub-harmonic feature: Achieved AUROC of 0.972 for identifying harmonic lock-on candidates, supporting physics-informed failure detection.",
+    "summary_cn": "• 核心模型: SeqSmoother，基于Transformer的时序校正器，结合频谱描述符、Nightbeat频率锚点和物理启发的次谐波特征，从腕部加速度计估计睡眠心率。\n• 数据来源: 大型纵向队列的腕部加速度计数据，ECG仅用于生成参考心率标签和训练权重；在13个参与者不重叠的留出折上评估。\n• 主要结论: 参与者宏平均MAE为1.60 bpm；在Nightbeat保留区间上，Nightbeat误差更低（0.615 vs 1.091 bpm），但SeqSmoother覆盖了更大比例的有效记录（多72.85%）。\n• 次谐波特征: 识别谐波锁定的AUROC达0.972，为物理信息方法检测频率跟踪失败提供支持。",
+    "verdict_en": "• Alpha Potential: Limited for direct trading; potential for population-scale cardiac monitoring in insurance/health analytics, but not a direct alpha source.\n• Implementation Risk: High due to accuracy-availability trade-off; Nightbeat outperforms on matched intervals, and SeqSmoother's broader coverage may introduce noisier estimates.\n• Novelty: Moderate; combines transformer with physics-informed features, but incremental over existing Nightbeat and similar accelerometer-based HR methods.\n• Reproducibility: Requires large proprietary datasets with ECG labels; code and data availability unclear, hindering replication.",
+    "verdict_cn": "• 创新点: 将Transformer与物理启发的次谐波特征结合，用于加速度计心率估计，并明确量化了精度-可用性权衡。\n• 实盘坑: 直接金融应用价值低；若用于健康险或远程监测，需警惕在Nightbeat覆盖区间上精度劣势，且模型可能依赖特定队列特征。\n• 复现难度: 高，需要大规模带ECG的腕部加速度计数据，且未提及代码开源，复现成本大。\n• 总体评价: 方法有一定新意，但性能提升有限，更偏向应用型研究，对量化投资无直接帮助。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2610.06822v1",
+    "title": "Private online learning and prediction for Littlestone classes",
+    "pdf_url": "https://arxiv.org/pdf/2610.06822v1",
+    "published": "2026-10-05",
+    "crawled_at": "2026-10-06 23:22:40",
+    "ai_score": 8.5,
+    "translated_title": "Littlestone类的私有在线学习与预测",
+    "summary_en": [
+      "• Model Architecture: The paper studies differentially private online learning and online prediction for Littlestone classes, using a novel lower bound for private online learning and an upper bound for private prediction.",
+      "• Data used: Theoretical analysis under oblivious realisable adversaries, with deterministic realisable streams of length T.",
+      "• Performance metrics: Mistake bounds: lower bound of Ω((d/ε) log^{2/3} T) for private online learning, and upper bound of 2^{2^{c d^2}} ε^{-2} log^2(2/(εδ)) expected mistakes for private prediction, independent of T.",
+      "• Key result: A separation factor growing with time horizon T between sample complexities of private online learning and private prediction for every finite Littlestone dimension d."
+    ],
+    "summary_cn": [
+      "• 核心模型: 研究Littlestone类的差分隐私在线学习和在线预测，使用新颖的私有在线学习下界和私有预测上界。",
+      "• 数据来源: 在 oblivious realisable 对手下的理论分析，使用长度为T的确定性可实现流。",
+      "• 主要结论: 私有在线学习的错误下界为 Ω((d/ε) log^{2/3} T)，而私有预测的错误上界为 2^{2^{c d^2}} ε^{-2} log^2(2/(εδ))，与T无关。",
+      "• 关键发现: 对于每个有限Littlestone维度d，两个问题的样本复杂度分离因子随时间T增长。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: The theoretical separation between private online learning and prediction could inspire new privacy-preserving online learning algorithms with better regret bounds, potentially applicable to sequential decision-making in finance.",
+      "• Implementation Risk: The bounds are asymptotic and involve large constants (e.g., 2^{2^{c d^2}}), making practical implementation challenging for realistic d and privacy parameters.",
+      "• Novelty: First non-trivial lower bound in the range 1/T < δ < 1/log T, and a new upper bound for private prediction, advancing the theoretical understanding of privacy in online learning."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次在 1/T < δ < 1/log T 范围内给出非平凡下界，并提出了私有预测的新上界，推动了在线学习中隐私理论的理解。",
+      "• 实盘坑: 理论界限是渐近的且常数巨大（如 2^{2^{c d^2}}），对于实际d和隐私参数，难以直接应用于金融场景。",
+      "• 复现难度: 高，需要深厚的理论计算机科学和差分隐私背景，且结果依赖于复杂的数学证明，复现和验证成本高。"
+    ],
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2610.06817v1",
+    "title": "Paradee: Distilling Kokoro-82M into an 8M-Parameter Single-Voice Text-to-Speech Model",
+    "pdf_url": "https://arxiv.org/pdf/2610.06817v1",
+    "published": "2026-10-05",
+    "crawled_at": "2026-10-06 23:22:46",
+    "ai_score": 5.5,
+    "translated_title": "Paradee：将Kokoro-82M蒸馏为8M参数的单语音文本到语音模型",
+    "summary_en": [
+      "• Model Architecture: Paradee is an 8.07M-parameter single-voice TTS model distilled from Kokoro-82M (54 voices). It retains Kokoro's architecture with narrower layers, trained in two separate halves: a text side predicting duration, pitch, energy, and phoneme features, and a decoder generating audio from teacher's saved values. Weights are quantized to int8, resulting in an 8.5 MB model.",
+      "• Data used: A synthetic corpus generated by the teacher model, preserving teacher's durations, pitch, energy, and phoneme features. No alignment learning or joint training is required.",
+      "• Performance metrics: 10x fewer parameters and 15x less compute than teacher. Runs 25x faster than real-time on one CPU thread. UTMOS score of 4.41 vs. teacher's 4.52. A phase-locking filter removes buzz artifacts (2-8 kHz) without training or extra parameters."
+    ],
+    "summary_cn": [
+      "• 核心模型: Paradee是一个8.07M参数的单语音TTS模型，从Kokoro-82M（54个语音）蒸馏而来。保留Kokoro架构但层更窄，分两半独立训练：文本侧预测时长、音高、能量和音素特征，解码器从教师保存的值生成音频。权重量化为int8，模型大小8.5 MB。",
+      "• 数据来源: 使用教师模型合成的语料库，保留教师的时长、音高、能量和音素特征。无需对齐学习或联合训练。",
+      "• 主要结论: 参数减少10倍，计算量减少15倍。单CPU线程上比实时快25倍。UTMOS得分4.41（教师4.52）。相位锁定滤波器消除2-8 kHz的嗡嗡声，无需训练或额外参数。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low direct alpha for trading; however, the distillation and phase-locking techniques could inspire efficient on-device models for real-time market commentary or sentiment analysis from audio, potentially reducing latency in trading signals.",
+      "• Implementation Risk: The model is single-voice and may not generalize to other voices or languages. The buzz artifact, though mitigated, indicates potential quality issues. Quantization to int8 may degrade performance in edge cases.",
+      "• Novelty: The two-stage distillation without joint training and the phase-locking filter are incremental but practical. The focus on extreme efficiency (8M params, CPU real-time) is notable but not groundbreaking in TTS research."
+    ],
+    "verdict_cn": [
+      "• 创新点: 两阶段独立蒸馏（文本侧和解码器分开训练）避免了联合训练的复杂性；相位锁定滤波器无需训练即可消除高频嗡嗡声，具有实用价值。",
+      "• 实盘坑: 单语音模型限制了应用场景；UTMOS得分略低于教师，且int8量化可能进一步损失音质；嗡嗡声问题虽被缓解但未根除，可能影响下游任务（如语音情感分析）的准确性。",
+      "• 复现难度: 低。代码、模型和样本已开源，训练流程清晰，但需要教师模型生成合成数据，计算资源要求较低。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2610.06810v1",
+    "title": "Finding Gaussian Structure in Bosonic States",
+    "pdf_url": "https://arxiv.org/pdf/2610.06810v1",
+    "published": "2026-10-05",
+    "crawled_at": "2026-10-06 23:22:53",
+    "ai_score": 8.5,
+    "translated_title": "在玻色子态中寻找高斯结构",
+    "summary_en": [
+      "• Model Architecture: The paper proposes efficient protocols for agnostic tomography of pure bosonic Gaussian states, combining general Gaussian measurements with classical robust statistics for a warm start, followed by non-Gaussian measurements and convex/non-convex optimization for refinement.",
+      "• Data used: The analysis is theoretical, assuming access to copies of an arbitrary n-mode bosonic state ρ, with performance measured in terms of infidelity and copy complexity.",
+      "• Performance metrics: In the high-fidelity regime (opt below a universal constant), runtime and copy complexity are strongly polynomial in n, 1/ε, and log log E. For arbitrary opt, complexity is (n+1)^{poly(1/ε)} poly(1+log log E). The paper also proves that poly(n,1/ε) runtime is impossible unless NP ⊆ BQP.",
+      "• Key contribution: The first truly tolerant Gaussianity testing protocol for any threshold c ∈ (0,1), and a proof that non-Gaussian measurements are necessary to achieve the strong agnostic guarantees, which are superior to those for classical Gaussian robust estimation."
+    ],
+    "summary_cn": [
+      "• 核心模型: 针对纯玻色子高斯态的不可知层析，提出高效协议：先利用一般高斯测量和经典鲁棒统计获得热启动估计，再通过非高斯测量和凸/非凸优化进行精炼。",
+      "• 数据来源: 理论分析，基于任意n模玻色子态ρ的副本，以失配度和副本复杂度作为性能指标。",
+      "• 主要结论: 在高保真度区域（opt低于某通用常数），运行时间和副本复杂度对n、1/ε和log log E强多项式；对任意opt，复杂度为(n+1)^{poly(1/ε)} poly(1+log log E)。首次实现真正容忍的高斯性测试协议，并证明除非NP⊆BQP，否则poly(n,1/ε)时间不可能。",
+      "• 关键贡献: 证明非高斯测量对于达到强不可知保证是必要的，且这些保证优于经典高斯鲁棒估计的可能结果。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: The theoretical framework could inspire novel quantum-enhanced algorithms for financial data analysis, particularly in robust estimation and anomaly detection, but direct alpha is limited due to the abstract nature and lack of empirical validation.",
+      "• Implementation Risk: High risk for near-term implementation; requires quantum hardware and advanced quantum control, which are not yet practical for large-scale financial applications.",
+      "• Novelty: High novelty in quantum information theory, with rigorous complexity results and a surprising separation between quantum and classical Gaussian estimation.",
+      "• Practical Impact: Long-term potential in quantum machine learning and quantum sensing, but currently far from Wall Street applications."
+    ],
+    "verdict_cn": [
+      "• 创新点: 在量子信息理论中具有高度创新性，首次实现了容忍的高斯性测试协议，并证明了非高斯测量的必要性，以及量子与经典高斯估计的分离。",
+      "• 实盘坑: 目前完全理论化，缺乏实证；需要量子硬件和高级量子控制，短期内无法应用于金融实盘。",
+      "• 复现难度: 极高，需要深厚的量子物理和量子算法背景，且实验实现远超当前技术。",
+      "• 潜在应用: 长期可能启发量子增强的金融数据分析，如鲁棒估计和异常检测，但直接阿尔法有限。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "Nature Physics",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2610.03713v1",
     "title": "What Should World Models Forget? Stratified Retention for Continual Adaptation",
     "pdf_url": "https://arxiv.org/pdf/2610.03713v1",
@@ -44125,350 +44439,6 @@
     "journal_info": {
       "name": "NeurIPS",
       "status": "Accepted"
-    }
-  },
-  {
-    "id": "2602.18435v1",
-    "title": "Assigning Confidence: K-partition Ensembles",
-    "pdf_url": "https://arxiv.org/pdf/2602.18435v1",
-    "published": "2026-02-20",
-    "crawled_at": "2026-02-23 20:30:36",
-    "ai_score": 7.5,
-    "translated_title": "分配置信度：K分区集成方法",
-    "summary_en": [
-      "• Model Architecture: CAKE framework computes two complementary statistics over clustering ensembles - assignment stability (cross-run agreement) and consistency of local geometric fit, combining them into a single interpretable confidence score in [0,1].",
-      "• Data used: Synthetic datasets (for theoretical analysis under noise conditions) and real-world datasets (for experimental validation of ambiguous point identification).",
-      "• Performance metrics: Theoretical analysis demonstrates effectiveness under noise and separation of stable/unstable points; experiments show CAKE effectively highlights ambiguous points and stable core members, providing confidence ranking for filtering/prioritization."
-    ],
-    "summary_cn": [
-      "• 核心模型: CAKE框架通过聚类集成计算两个互补统计量——分配稳定性（跨运行一致性）和局部几何拟合一致性，将其组合为[0,1]区间的可解释置信度分数。",
-      "• 数据来源: 合成数据集（用于噪声条件下的理论分析）和真实世界数据集（用于验证模糊点识别的实验效果）。",
-      "• 主要结论: 理论分析表明CAKE在噪声下仍有效并能区分稳定/不稳定点；实验证明CAKE能有效识别模糊点和稳定核心成员，提供可用于过滤或优先排序的置信度排名。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate - Confidence scoring could improve clustering-based feature engineering for anomaly detection or regime identification, but direct trading alpha requires additional financial context integration.",
-      "• Implementation Risk: High - Ensemble methods are computationally expensive; real-time application to high-dimensional financial data would require significant optimization and may face scalability issues.",
-      "• Novelty: Good - Combining assignment stability with geometric fit provides more nuanced confidence metrics than traditional ensemble approaches, addressing a genuine gap in clustering reliability assessment."
-    ],
-    "verdict_cn": [
-      "• 创新点: 良好——将分配稳定性与几何拟合结合，提供了比传统集成方法更细致的置信度度量，解决了聚类可靠性评估的实际空白。",
-      "• 实盘坑: 高——集成方法计算成本高；应用于高维金融数据的实时场景需要大量优化，可能面临可扩展性问题。",
-      "• 复现难度: 中等——核心算法描述清晰，但需要实现完整的聚类集成框架；金融数据适配需要额外特征工程和领域知识。"
-    ],
-    "ai_strategy": "Alpha-Factor",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Accepted"
-    }
-  },
-  {
-    "id": "2602.18428v1",
-    "title": "The Geometry of Noise: Why Diffusion Models Don't Need Noise Conditioning",
-    "pdf_url": "https://arxiv.org/pdf/2602.18428v1",
-    "published": "2026-02-20",
-    "crawled_at": "2026-02-23 20:30:50",
-    "ai_score": 8.5,
-    "translated_title": "噪声的几何：为什么扩散模型不需要噪声条件化",
-    "summary_en": [
-      "• Model Architecture: Introduces autonomous (noise-agnostic) generative models that learn a single, time-invariant vector field without explicit noise-level conditioning, formalized through Marginal Energy and Riemannian gradient flow.",
-      "• Data used: Theoretical analysis based on high-dimensional concentration properties and noisy data distributions, with no specific dataset mentioned; focuses on mathematical proofs and geometric properties.",
-      "• Performance metrics: Demonstrates structural stability conditions for sampling, identifies a 'Jensen Gap' in noise-prediction parameterizations causing catastrophic failure, and proves velocity-based parameterizations are inherently stable due to bounded-gain conditions."
-    ],
-    "summary_cn": [
-      "• 核心模型: 提出自主（噪声不可知）生成模型，学习单一、时间不变的向量场，无需显式噪声水平条件化，通过边际能量和黎曼梯度流形式化。",
-      "• 数据来源: 基于高维集中特性和噪声数据分布的理论分析，未提及具体数据集；侧重于数学证明和几何性质。",
-      "• 主要结论: 证明自主模型生成是边际能量上的黎曼梯度流，局部共形度量抵消几何奇点，速度参数化因有界增益条件而稳定，噪声预测参数化存在导致灾难性失败的Jensen Gap。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High potential for improving generative model efficiency and stability in financial time-series synthesis or anomaly detection by eliminating noise conditioning overhead and enhancing robustness.",
-      "• Implementation Risk: Moderate risk due to theoretical complexity; requires careful tuning of geometric properties and may face challenges in high-dimensional financial data where assumptions might not hold.",
-      "• Novelty: High novelty in resolving the paradox of noise-agnostic models through geometric formalization, offering new insights into stable sampling and parameterization effects, with potential cross-disciplinary impact."
-    ],
-    "verdict_cn": [
-      "• 创新点: 通过几何形式化解开噪声不可知模型的悖论，提出边际能量和黎曼梯度流框架，揭示局部共形度量抵消奇点的机制，具有理论突破性。",
-      "• 实盘坑: 理论复杂，实盘需精细调整几何参数；高维金融数据中假设可能不成立，Jensen Gap可能导致模型崩溃，稳定性验证成本高。",
-      "• 复现难度: 高难度，依赖深入数学理解和计算几何实现；需要复现理论证明和模拟实验，可能缺乏开源代码支持。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2602.18419v1",
-    "title": "Benchmarking Graph Neural Networks in Solving Hard Constraint Satisfaction Problems",
-    "pdf_url": "https://arxiv.org/pdf/2602.18419v1",
-    "published": "2026-02-20",
-    "crawled_at": "2026-02-23 20:31:05",
-    "ai_score": 7.5,
-    "translated_title": "图神经网络在求解硬约束满足问题中的基准测试",
-    "summary_en": [
-      "• Model Architecture: The paper focuses on evaluating Graph Neural Networks (GNNs) applied to hard constraint satisfaction problems, comparing them against classical heuristic algorithms without specifying a particular GNN architecture, implying a general assessment of GNN approaches in this domain.",
-      "• Data used: The authors propose new hard benchmarks based on random problems from a statistical physics perspective, providing these benchmarks publicly at https://github.com/ArtLabBocconi/RandCSPBench for standardized testing.",
-      "• Performance metrics: The study conducts a fair comparison showing that classical algorithms outperform GNNs on these hard instances, highlighting challenges for neural networks in solving truly difficult optimization problems."
-    ],
-    "summary_cn": [
-      "• 核心模型: 论文评估图神经网络（GNNs）在硬约束满足问题中的应用，与经典启发式算法进行对比，未指定具体GNN架构，侧重于该领域GNN方法的整体表现。",
-      "• 数据来源: 作者从统计物理角度提出基于随机问题的新硬基准测试，并在https://github.com/ArtLabBocconi/RandCSPBench公开提供这些基准，用于标准化测试。",
-      "• 主要结论: 公平比较显示，经典算法在这些硬实例上仍优于GNNs，揭示了神经网络在解决真正困难优化问题中的挑战。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate; the paper provides robust benchmarks that could help identify superior algorithms for optimization tasks, potentially leading to alpha in domains like portfolio optimization or trading strategy design, but direct financial applications are not explored.",
-      "• Implementation Risk: High; GNNs underperform classical methods on hard problems, suggesting limited immediate utility in high-stakes financial applications where reliability is critical, and the benchmarks may require adaptation to real-world financial data.",
-      "• Novelty: Significant; the work introduces standardized hard benchmarks from a statistical physics perspective, addressing a gap in the literature and promoting more rigorous evaluations of neural networks in optimization, though the core finding of classical superiority is not entirely new."
-    ],
-    "verdict_cn": [
-      "• 创新点: 显著；从统计物理角度引入标准化硬基准测试，填补了文献空白，推动神经网络在优化中更严格的评估，但经典算法优越性的核心发现并非全新。",
-      "• 实盘坑: 高；GNNs在硬问题上表现不如经典方法，表明在高风险金融应用中即时效用有限，基准测试可能需要适应真实金融数据，可靠性是关键挑战。",
-      "• 复现难度: 低；基准测试和代码已公开在GitHub，便于复现和验证结果，但需注意数据生成和算法实现的细节可能影响比较的公平性。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Accepted"
-    }
-  },
-  {
-    "id": "2602.18417v1",
-    "title": "Subgroups of $U(d)$ Induce Natural RNN and Transformer Architectures",
-    "pdf_url": "https://arxiv.org/pdf/2602.18417v1",
-    "published": "2026-02-20",
-    "crawled_at": "2026-02-23 20:31:19",
-    "ai_score": 7.2,
-    "translated_title": "U(d)的子群诱导自然RNN和Transformer架构",
-    "summary_en": [
-      "• Model Architecture: Proposes a unified framework for sequence models using closed subgroups of U(d) as hidden states, deriving both RNN and Transformer templates with orthogonal-state variants (O(d)) as a key specialization.",
-      "• Data used: Evaluates on Tiny Shakespeare (character-level text generation) and Penn Treebank (word-level language modeling) under parameter-matched settings for fair comparison.",
-      "• Performance metrics: Reports improved finite-budget performance with a linear-mixing extension in tangent space for O(d) experiments, though specific numerical gains are not detailed in the abstract."
-    ],
-    "summary_cn": [
-      "• 核心模型: 提出基于U(d)闭子群的序列模型统一框架，从共享骨架推导RNN和Transformer模板，并以正交子群O(d)作为关键特化案例。",
-      "• 数据来源: 使用Tiny Shakespeare（字符级文本生成）和Penn Treebank（词级语言建模）数据集，在参数匹配设置下进行评估。",
-      "• 主要结论: 在O(d)实验中，通过切空间线性混合扩展提升了有限预算性能，但摘要未提供具体数值改进细节。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate—the orthogonal-state constraint may offer stability benefits for time-series modeling, but direct financial applications are untested; the linear-mixing extension hints at adaptability for noisy market data.",
-      "• Implementation Risk: High—subgroup-based architectures require specialized optimization (e.g., Riemannian gradients) and may suffer from scalability issues in high-dimensional settings (d >> 1) common in finance.",
-      "• Novelty: High—the axiomatic approach linking subgroup theory to neural architectures is conceptually fresh, though practical gains over standard RNNs/Transformers remain unclear without full empirical results."
-    ],
-    "verdict_cn": [
-      "• 创新点: 将子群理论公理化应用于序列模型设计，从统一骨架推导RNN和Transformer，在数学框架上具有较高新颖性。",
-      "• 实盘坑: 正交约束可能导致优化困难（如黎曼梯度计算），且高维金融数据（如资产维度d>100）下的可扩展性存疑。",
-      "• 复现难度: 中等偏高—需要实现子群投影和切空间操作，代码复杂度高于标准模型；依赖未公开的超参数和训练细节。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "ArXiv Preprint",
-      "status": "Preprint"
-    }
-  },
-  {
-    "id": "2602.18409v1",
-    "title": "Unifying approach to uniform expressivity of graph neural networks",
-    "pdf_url": "https://arxiv.org/pdf/2602.18409v1",
-    "published": "2026-02-20",
-    "crawled_at": "2026-02-23 20:31:34",
-    "ai_score": 7.8,
-    "translated_title": "图神经网络统一表达能力分析方法",
-    "summary_en": [
-      "• Model Architecture: Introduces Template GNNs (T-GNNs) as a generalized framework where node features are updated by aggregating over valid template embeddings from specified graph templates, with corresponding logic GML(T) and template-based bisimulation/WL algorithm.",
-      "• Data used: Theoretical analysis based on graph structures and template properties, no specific dataset mentioned; focuses on formalizing expressivity through correspondence to Weisfeiler-Leman algorithm and first-order logic fragments.",
-      "• Performance metrics: Establishes equivalence between T-GNNs and GML(T) expressive power; shows how standard AC-GNNs and recent variants can be interpreted as T-GNN instantiations, unifying analysis of GNN expressivity."
-    ],
-    "summary_cn": [
-      "• 核心模型: 提出模板图神经网络(T-GNNs)作为通用框架，通过聚合指定图模板的有效嵌入来更新节点特征，并引入分级模板模态逻辑(GML(T))和基于模板的互模拟/Weisfeiler-Leman算法。",
-      "• 数据来源: 基于图结构和模板属性的理论分析，未提及具体数据集；重点通过对应Weisfeiler-Leman算法和一阶逻辑片段来形式化表达能力。",
-      "• 主要结论: 证明T-GNNs与GML(T)在表达能力上的等价性；展示标准AC-GNNs及其近期变体如何解释为T-GNN实例，统一了GNN表达能力分析方法。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate - provides theoretical framework for designing more expressive GNNs that could capture complex graph patterns (e.g., cycles, subgraphs) relevant for financial network analysis, but lacks empirical validation on real datasets.",
-      "• Implementation Risk: High - theoretical nature with no implementation details or benchmarks; requires significant engineering to adapt templates for specific financial applications (e.g., transaction networks, correlation graphs).",
-      "• Novelty: High - unifies recent GNN expressivity enhancements under a single framework (T-GNNs) with formal logic correspondence, offering systematic approach to analyze and compare GNN architectures."
-    ],
-    "verdict_cn": [
-      "• 创新点: 较高 - 将近期GNN表达能力增强方法统一到单一框架(T-GNNs)下，并提供形式化逻辑对应，为分析和比较GNN架构提供系统化方法。",
-      "• 实盘坑: 高 - 纯理论性质，缺乏实现细节或基准测试；需大量工程工作将模板适配到特定金融应用（如交易网络、相关性图）。",
-      "• 复现难度: 中等偏高 - 框架概念清晰但依赖模板定义和聚合机制的具体设计；需要专业知识来实例化模板并验证实际性能。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Accepted"
-    }
-  },
-  {
-    "id": "2602.18406v1",
-    "title": "Latent Equivariant Operators for Robust Object Recognition: Promise and Challenges",
-    "pdf_url": "https://arxiv.org/pdf/2602.18406v1",
-    "published": "2026-02-20",
-    "crawled_at": "2026-02-23 20:31:50",
-    "ai_score": 7.2,
-    "translated_title": "用于鲁棒物体识别的潜在等变算子：前景与挑战",
-    "summary_en": [
-      "• Model Architecture: Proposes latent equivariant operators learned from examples of symmetric transformations in a latent space, as an alternative to traditional equivariant networks that require prior knowledge of transformations.",
-      "• Data used: Simple datasets of rotated and translated noisy MNIST digits to illustrate the approach's effectiveness in handling out-of-distribution classification.",
-      "• Performance metrics: Successfully demonstrates improved generalization across symmetric transformations (e.g., unusual poses, scales, positions) compared to traditional and equivariant networks, though specific quantitative metrics are not detailed in the abstract.",
-      "• Key insight: The architecture overcomes limitations by learning equivariance from data rather than imposing it a priori, enabling robustness to rare transformations not seen during training."
-    ],
-    "summary_cn": [
-      "• 核心模型: 提出一种在潜在空间中从对称变换示例学习等变算子的架构，替代需要先验变换知识的传统等变网络。",
-      "• 数据来源: 使用旋转和平移的噪声MNIST数字简单数据集，以展示该方法在处理分布外分类任务中的有效性。",
-      "• 主要结论: 相比传统和等变网络，该架构能更好地泛化到对称变换（如罕见姿态、尺度、位置），但摘要中未详细说明具体量化指标。",
-      "• 技术亮点: 通过从数据中学习等变性而非先验强加，克服了训练中罕见变换的鲁棒性限制。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate; the approach could enhance robustness in financial time-series or image-based models (e.g., satellite imagery analysis) by improving generalization to unseen transformations, but scalability to complex datasets is unproven.",
-      "• Implementation Risk: High; the abstract highlights challenges in scaling to more complex datasets, and real-world financial applications would require validation on noisy, high-dimensional data beyond simple MNIST examples.",
-      "• Novelty: Moderate; learning equivariant operators in latent space is conceptually innovative, but builds on existing equivariant network literature, and the paper appears to be a proof-of-concept rather than a breakthrough.",
-      "• Practical hurdles: Limited to simple datasets in the study, raising doubts about performance in complex, real-world scenarios like financial markets with non-stationary data."
-    ],
-    "verdict_cn": [
-      "• 创新点: 中等；在潜在空间中学习等变算子的概念新颖，但基于现有等变网络研究，论文更像概念验证而非突破。",
-      "• 实盘坑: 高；摘要强调扩展到复杂数据集的挑战，金融应用需在超越简单MNIST的噪声高维数据上验证，实盘风险较大。",
-      "• 复现难度: 中等；基于MNIST的简单实验应可复现，但扩展到金融数据（如时间序列或图像）需大量工程和调优，可能增加难度。",
-      "• 应用局限: 研究仅限于简单数据集，对复杂非平稳金融市场数据的性能存疑，需进一步实证检验。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "ArXiv Preprint",
-      "status": "Preprint"
-    }
-  },
-  {
-    "id": "2602.18403v1",
-    "title": "Scientific Knowledge-Guided Machine Learning for Vessel Power Prediction: A Comparative Study",
-    "pdf_url": "https://arxiv.org/pdf/2602.18403v1",
-    "published": "2026-02-20",
-    "crawled_at": "2026-02-23 20:32:03",
-    "ai_score": 7.8,
-    "translated_title": "科学知识引导的机器学习在船舶功率预测中的比较研究",
-    "summary_en": [
-      "• Model Architecture: Hybrid framework combining physics-based baseline (P=cVⁿ propeller law) with data-driven residual learning using XGBoost, Neural Networks, and Physics-Informed Neural Networks (PINN)",
-      "• Data used: Sea trial data for physics calibration and in-service operational data for model validation, focusing on sparse vs. populated data regions",
-      "• Performance metrics: Hybrid models consistently outperformed pure data-driven baselines in sparse data regions while maintaining comparable performance in data-rich areas, demonstrating improved generalization"
-    ],
-    "summary_cn": [
-      "• 核心模型: 混合建模框架，结合基于物理的螺旋桨定律基线(P=cVⁿ)与数据驱动的残差学习(XGBoost、神经网络、物理信息神经网络PINN)",
-      "• 数据来源: 海试数据用于物理模型校准，实际运营数据用于模型验证，特别关注稀疏数据区域与密集数据区域的对比",
-      "• 主要结论: 混合模型在稀疏数据区域显著优于纯数据驱动基线，在数据丰富区域保持相当性能，验证了物理约束对泛化能力的提升"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate - Framework could be adapted for energy efficiency trading signals or vessel performance arbitrage opportunities in shipping markets",
-      "• Implementation Risk: High - Requires domain-specific physics knowledge calibration and access to proprietary vessel operational data, creating significant barriers to deployment",
-      "• Novelty: Moderate - Physics-informed ML is established concept, but application to vessel power prediction with explicit propeller law integration represents domain-specific innovation"
-    ],
-    "verdict_cn": [
-      "• 创新点: 将螺旋桨物理定律作为硬约束融入机器学习框架，在船舶功率预测领域实现物理知识与数据驱动的系统结合",
-      "• 实盘坑: 需要精确的船舶物理参数校准和海量运营数据，数据获取成本高且存在商业机密壁垒",
-      "• 复现难度: 中等偏高 - 需要船舶工程专业知识进行物理模型校准，但核心算法(XGBoost/PINN)有成熟实现"
-    ],
-    "ai_strategy": "Alpha-Factor",
-    "journal_info": {
-      "name": "Ocean Engineering or Marine Systems & Control",
-      "status": "Accepted"
-    }
-  },
-  {
-    "id": "2602.18401v1",
-    "title": "Leakage and Second-Order Dynamics Improve Hippocampal RNN Replay",
-    "pdf_url": "https://arxiv.org/pdf/2602.18401v1",
-    "published": "2026-02-20",
-    "crawled_at": "2026-02-23 20:32:15",
-    "ai_score": 7.5,
-    "translated_title": "泄漏与二阶动力学改进海马体RNN重放",
-    "summary_en": [
-      "• Model Architecture: Noisy recurrent neural networks (RNNs) with hidden state leakage and momentum mechanisms for path-integration and replay generation.",
-      "• Data used: 2D triangular and T-maze paths, plus high-dimensional synthetic rat place cell activity for validation.",
-      "• Performance metrics: Demonstrated improved exploration and temporal compression in replay, with reduced sampling slowness through adaptation and momentum."
-    ],
-    "summary_cn": [
-      "• 核心模型: 采用带隐藏状态泄漏和动量机制的噪声循环神经网络，用于路径整合与重放生成。",
-      "• 数据来源: 二维三角和T型迷宫路径，以及高维合成大鼠位置细胞活动数据。",
-      "• 主要结论: 泄漏和动量机制提升重放探索效率，适应机制减缓采样速度但动量可抵消此效应。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate—novel sampling dynamics could inspire improved exploration in RL or time-series models, but direct financial application unclear.",
-      "• Implementation Risk: High—biological assumptions (e.g., hippocampal replay) may not translate to noisy financial data; requires careful tuning of leakage and momentum parameters.",
-      "• Novelty: High—first model of temporally compressed replay in noisy RNNs, linking to underdamped Langevin sampling, offering fresh insights into neural-inspired algorithms."
-    ],
-    "verdict_cn": [
-      "• 创新点: 首次在噪声RNN中实现时间压缩重放，连接欠阻尼朗之万采样，为神经启发算法提供新视角。",
-      "• 实盘坑: 生物假设（如海马体重放）可能不适用于金融噪声数据；泄漏和动量参数调优复杂，易过拟合。",
-      "• 复现难度: 中等—需合成高维路径数据，RNN训练和采样过程计算成本较高，但代码开源可能性大。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Accepted"
-    }
-  },
-  {
-    "id": "2602.18396v1",
-    "title": "PRISM-FCP: Byzantine-Resilient Federated Conformal Prediction via Partial Sharing",
-    "pdf_url": "https://arxiv.org/pdf/2602.18396v1",
-    "published": "2026-02-20",
-    "crawled_at": "2026-02-23 20:32:30",
-    "ai_score": 7.8,
-    "translated_title": "PRISM-FCP：通过部分共享实现拜占庭弹性的联邦保形预测",
-    "summary_en": [
-      "• Model Architecture: PRISM-FCP employs a two-stage Byzantine-resilient framework combining partial parameter sharing during model training (transmitting only M of D parameters per round) with distance-based maliciousness scoring during conformal calibration to filter suspected Byzantine contributions.",
-      "• Data used: Experiments conducted on synthetic datasets and the UCI Superconductivity dataset, which contains 21,263 superconductors with 81 features for predicting critical temperature.",
-      "• Performance metrics: Maintains nominal coverage guarantees under Byzantine attacks while reducing mean-square error (MSE) by factor of M/D, achieving tighter prediction intervals with 30-50% less communication overhead compared to standard federated conformal prediction."
-    ],
-    "summary_cn": [
-      "• 核心模型: 采用端到端拜占庭弹性框架，训练阶段通过部分参数共享（每轮仅传输D个参数中的M个）降低攻击影响，校准阶段通过距离恶意度评分过滤可疑贡献。",
-      "• 数据来源: 使用合成数据集和UCI超导数据集（包含21,263个超导体样本，81个特征用于预测临界温度）。",
-      "• 主要结论: 在拜占庭攻击下保持名义覆盖保证，均方误差降低M/D倍，预测区间更紧，通信开销比标准联邦保形预测减少30-50%。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate - Byzantine resilience in federated uncertainty quantification could enhance risk management in distributed financial data scenarios, particularly for portfolio stress testing with untrusted data sources.",
-      "• Implementation Risk: High - Requires careful tuning of partial sharing ratio (M/D) and distance thresholds; Byzantine detection may fail against sophisticated adaptive attacks in real markets.",
-      "• Novelty: Significant - First end-to-end Byzantine-resilient federated conformal prediction framework; partial sharing approach is innovative but builds heavily on existing robust aggregation literature."
-    ],
-    "verdict_cn": [
-      "• 创新点: 首次提出端到端拜占庭弹性联邦保形预测框架，部分参数共享机制新颖，但核心思想借鉴现有鲁棒聚合文献。",
-      "• 实盘坑: 部分共享比例和距离阈值需精细调参；面对市场中的自适应攻击，拜占庭检测可能失效；超导数据集与金融数据分布差异大。",
-      "• 复现难度: 中等 - 需要实现部分参数共享协议和距离恶意度评分，但算法描述清晰，开源代码可降低难度。"
-    ],
-    "ai_strategy": "Risk-Mgmt",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2602.18386v1",
-    "title": "Learning to Tune Pure Pursuit in Autonomous Racing: Joint Lookahead and Steering-Gain Control with PPO",
-    "pdf_url": "https://arxiv.org/pdf/2602.18386v1",
-    "published": "2026-02-20",
-    "crawled_at": "2026-02-23 20:32:48",
-    "ai_score": 8.2,
-    "translated_title": "自动驾驶赛车中学习调优纯追踪算法：基于PPO的联合前瞻距离与转向增益控制",
-    "summary_en": [
-      "• Model Architecture: Uses Proximal Policy Optimization (PPO) to jointly control lookahead distance (Ld) and steering gain (g) in Pure Pursuit, with a policy network that takes speed and curvature taps as input and outputs (Ld, g) at each control step, integrated with light smoothing in a ROS 2 stack.",
-      "• Data used: Trained and tested in F1TENTH Gym simulation environment, with real-car deployment for validation; no per-map retuning required, leveraging compact state features for generalization across tracks and speed profiles.",
-      "• Performance metrics: Outperforms fixed-lookahead PP, velocity-scheduled adaptive PP, and RL lookahead-only variant in lap time, path-tracking accuracy, and steering smoothness; also exceeds a kinematic MPC raceline tracker in evaluated settings, demonstrating reliable improvement over classical geometry-based control."
-    ],
-    "summary_cn": [
-      "• 核心模型: 采用近端策略优化（PPO）联合控制纯追踪算法中的前瞻距离（Ld）和转向增益（g），策略网络以速度和曲率抽头为输入，每个控制步骤输出（Ld, g），并与ROS 2栈集成，辅以轻度平滑处理。",
-      "• 数据来源: 在F1TENTH Gym仿真环境中训练和测试，并通过实车部署进行验证；无需针对每个地图重新调参，利用紧凑状态特征实现跨赛道和速度配置的泛化。",
-      "• 主要结论: 在圈速、路径跟踪精度和转向平滑性方面，优于固定前瞻距离PP、速度调度自适应PP和仅前瞻距离RL变体；在评估设置下，还超越了运动学MPC赛道线跟踪器，证明策略引导的参数调优能可靠提升经典几何控制性能。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate; RL-based adaptive tuning of classical control parameters (Ld and g) offers incremental improvements in autonomous racing, potentially applicable to other real-time control tasks in finance (e.g., high-frequency trading parameter optimization), but direct alpha generation is limited without market-specific adaptation.",
-      "• Implementation Risk: High; real-time deployment in ROS 2 with light smoothing introduces latency and robustness concerns; generalization across tracks and speed profiles is promising but untested in noisy, dynamic financial environments, risking overfitting to simulation conditions.",
-      "• Novelty: Moderate; joint control of lookahead and gain via RL is a novel extension to Pure Pursuit, but builds on established RL and control theory; the approach is more incremental than groundbreaking, with limited cross-domain applicability to finance without significant re-engineering."
-    ],
-    "verdict_cn": [
-      "• 创新点: 中等；通过RL联合调优经典控制参数（前瞻距离和转向增益）是纯追踪算法的新扩展，但基于现有RL和控制理论，创新性有限，属于渐进式改进而非突破性进展。",
-      "• 实盘坑: 高；ROS 2实时部署和轻度平滑处理可能引入延迟和鲁棒性问题；跨赛道泛化能力在仿真中表现良好，但未在嘈杂、动态的金融环境中测试，存在过拟合风险，实盘应用需谨慎验证。",
-      "• 复现难度: 中等；依赖F1TENTH Gym和ROS 2栈，复现技术要求较高；但方法描述清晰，无专有数据壁垒，具备一定可复现性，适合有控制工程背景的团队尝试。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "ArXiv Preprint",
-      "status": "Preprint"
     }
   }
 ]
