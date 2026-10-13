@@ -1,5 +1,299 @@
 [
   {
+    "id": "2610.13935v1",
+    "title": "Hide and Seek: HIDE Concepts to SEEK explanations for black box models",
+    "pdf_url": "https://arxiv.org/pdf/2610.13935v1",
+    "published": "2026-10-09",
+    "crawled_at": "2026-10-13 01:39:01",
+    "ai_score": 7.5,
+    "translated_title": "捉迷藏：隐藏概念以寻求黑箱模型的解释",
+    "summary_en": "• Model Architecture: HnS is a concept-based attribution method that uses a vision-language model to retrieve concept-aligned images, localizes concepts, masks regions, and measures output changes in black-box models without accessing weights or labeled concept datasets.\n• Data used: Validated on CelebA and COCO-Stuff datasets, with additional demonstrations on image captioning and satellite image segmentation tasks.\n• Performance metrics: HnS showed better agreement with ground-truth attributions compared to existing methods, enabling faithful and local attributions.\n• Key innovation: First method to provide concept-level attribution for a wide range of vision models, including those beyond classification and regression, without requiring model internals or concept annotations.",
+    "summary_cn": "• 核心模型: HnS是一种基于概念的归因方法，利用视觉语言模型检索概念对齐图像，定位概念区域，掩码后测量黑箱模型输出变化，无需模型权重或标注概念数据集。\n• 数据来源: 在CelebA和COCO-Stuff数据集上验证，并扩展到图像描述和卫星图像分割任务。\n• 主要结论: 与现有方法相比，HnS与真实归因的一致性更高，能够提供忠实且局部的归因，适用于多种视觉模型。\n• 创新点: 首次实现无需模型内部信息或概念标注的概念级归因，支持分类、回归之外的多种任务。",
+    "verdict_en": "• Alpha Potential: Moderate; concept-based attribution can enhance model interpretability for risk management and regulatory compliance, but direct alpha generation is limited.\n• Implementation Risk: Low to moderate; method is model-agnostic and uses off-the-shelf vision-language models, but performance depends on the quality of concept retrieval and localization.\n• Novelty: High; addresses key limitations of existing concept attribution methods by eliminating need for model weights and labeled concept datasets, and enabling local attributions.\n• Practicality: Promising for real-world deployment in interpretability-critical domains like finance and healthcare, but computational cost of vision-language model inference may be a concern.",
+    "verdict_cn": "• 创新点: 首次实现无需模型权重和概念标注的概念级归因，支持黑箱模型和多种视觉任务，方法通用性强。\n• 实盘坑: 依赖视觉语言模型的质量，概念检索和定位的准确性可能影响归因结果；计算开销较大，可能不适合高频场景。\n• 复现难度: 中等，需要视觉语言模型和黑箱模型，但无需训练数据，代码已提供，复现相对容易。\n• 应用前景: 在需要模型可解释性的领域（如金融风控、医疗诊断）有潜在价值，但直接用于alpha生成需进一步探索。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2610.13931v1",
+    "title": "Constructive Bounds for the Topological Expressivity of Neural Networks",
+    "pdf_url": "https://arxiv.org/pdf/2610.13931v1",
+    "published": "2026-10-09",
+    "crawled_at": "2026-10-13 01:39:07",
+    "ai_score": 6.5,
+    "translated_title": "神经网络拓扑表达力的构造性边界",
+    "summary_en": [
+      "• Model Architecture: ReLU networks with specific architectures are constructed to express spaces homotopy equivalent to wedge sums of spheres, with bounds on Betti numbers.",
+      "• Data used: Theoretical analysis, no empirical data; proofs and constructions are provided.",
+      "• Performance metrics: The paper provides upper bounds on Betti numbers for given architectures and conjectures a tighter bound for spheres.",
+      "• Key contribution: Proposes studying topological expressivity via Betti numbers of network outputs, extending beyond decision boundaries."
+    ],
+    "summary_cn": [
+      "• 核心模型: 使用ReLU网络，通过特定架构构造同伦等价于球面楔和的输出空间，并给出Betti数的上界。",
+      "• 数据来源: 纯理论分析，无实证数据，基于数学证明和构造。",
+      "• 主要结论: 对于任意连通Betti序列，给出架构上界；对于球面乘积，得到更优上界；猜想球面的紧致界为(d,d+1,d+1)。",
+      "• 创新点: 将拓扑表达力从决策边界推广到网络输出，为回归等问题提供新视角。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Limited direct alpha; theoretical insights may inspire novel architectures for topological data analysis, but no immediate trading signal.",
+      "• Implementation Risk: High risk due to abstract nature and lack of empirical validation; practical implementation unclear.",
+      "• Novelty: Moderate; extends topological expressivity to output spaces, but builds on existing work in topological deep learning.",
+      "• Relevance: May appeal to quant researchers exploring topological features, but far from production."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将拓扑表达力度量从决策边界扩展到网络输出，为回归任务提供理论工具，但实际应用场景模糊。",
+      "• 实盘坑: 纯理论，无实验验证，难以直接转化为交易策略；拓扑特征计算复杂，实时性差。",
+      "• 复现难度: 高，需要深厚的拓扑学背景；构造性证明虽给出架构，但未涉及训练可行性。",
+      "• 潜在价值: 或为拓扑数据分析与深度学习结合提供新思路，但距离金融应用遥远。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2610.13928v1",
+    "title": "AI Models Can Provably Hide Arbitrary Capabilities",
+    "pdf_url": "https://arxiv.org/pdf/2610.13928v1",
+    "published": "2026-10-09",
+    "crawled_at": "2026-10-13 01:39:15",
+    "ai_score": 7.5,
+    "translated_title": "AI模型可证明地隐藏任意能力",
+    "summary_en": "• Model Architecture: The paper constructs backdoor attacks that embed encrypted neural networks (digital lockers) within host model weights, which decrypt and execute only upon a secret trigger.\n• Data: Evaluated on a small chemical reaction prediction task as a proxy for CBRN-relevant capabilities, using PyTorch implementations.\n• Performance: The hidden circuits remain provably hard to elicit under cryptographic assumptions, resisting fine-tuning, weight noising, gradient-based trigger search, and latent adversarial training.\n• Key Finding: Demonstrates a fundamental limit of elicitation-based capability audits, showing that hidden capabilities can be provably concealed even with full weight access.",
+    "summary_cn": "• 核心模型: 通过后门攻击将加密的神经网络（数字储物柜）嵌入宿主模型权重中，仅在收到秘密触发器时解密并执行。\n• 数据来源: 在小型化学反应预测任务（CBRN相关能力的代理）上进行评估，使用PyTorch实现。\n• 主要结论: 在密码学假设下，隐藏电路可证明地难以被激发和解释，即使完全访问模型权重；实验证明其抵抗微调、权重加噪、基于梯度的触发器搜索和潜在对抗训练。\n• 关键发现: 揭示了基于激发的模型能力审计的局限性，表明隐藏能力可被可证明地隐藏。",
+    "verdict_en": "• Alpha Potential: Low direct alpha; primarily a risk management and AI safety paper, but highlights potential for malicious use in hiding capabilities, which could impact regulatory and compliance landscapes.\n• Implementation Risk: High risk if such techniques are used by adversaries; defense mechanisms are not yet robust, posing a threat to model auditing and safety.\n• Novelty: Extends prior work from hiding fixed strings to arbitrary computations using digital lockers, providing cryptographic guarantees; novel in the context of AI capability hiding.\n• Practical Impact: Raises serious concerns for AI safety and security, potentially influencing policy and audit standards; may spur research in robust elicitation methods.",
+    "verdict_cn": "• 创新点: 将数字储物柜技术扩展到隐藏任意计算，而不仅仅是固定字符串，提供了密码学上的可证明安全性。\n• 实盘坑: 直接阿尔法潜力低，但作为风险因素，可能被恶意行为者利用，导致模型审计失效，增加合规和监管风险。\n• 复现难度: 中等，需要密码学和深度学习背景，但代码已发布，复现相对可行。\n• 安全影响: 对AI安全领域有重要警示，可能推动新的防御和审计技术发展。",
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2610.13924v1",
+    "title": "KL Before and After Mixing: A Round-Complexity Separation in Parallel Sampling",
+    "pdf_url": "https://arxiv.org/pdf/2610.13924v1",
+    "published": "2026-10-09",
+    "crawled_at": "2026-10-13 01:39:23",
+    "ai_score": 7.5,
+    "translated_title": "混合前后的KL散度：并行采样中的轮复杂度分离",
+    "summary_en": "• Model Architecture: The paper studies parallel sampling schedules where each output's schedule is drawn from a finite mixture, with rounds committing independent draws from exact conditional marginals frozen at the round's start.\n• Data used: Theoretical analysis on the uniform distribution over binary strings of even length n with n/2 ones, and extensions to weighted fixed-count targets and Beta(1,1)-Bernoulli target.\n• Performance metrics: The least expected number of rounds at tolerance ε is Θ_ε((log n)^2) under schedule-averaged KL divergence, but (e^{-ε}+o(1)) log_2 ln n under output-law KL divergence, showing a double-logarithmic separation.\n• Key results: Exact least output divergence via count-state recursion; sharp expected cost for Beta-Bernoulli target is (e^{-ε}/2+o(1)) log_2 log_2 n, attained with rare n-round runs.",
+    "summary_cn": "• 核心模型: 研究并行采样调度，每个输出的调度从有限混合中随机抽取，每轮从冻结的条件边际中独立采样。\n• 数据来源: 理论分析基于偶数长度n且含n/2个1的二进制串上的均匀分布，并扩展到加权固定计数目标和Beta(1,1)-伯努利目标。\n• 主要结论: 在调度平均KL散度下，最小期望轮数为Θ_ε((log n)^2)；而在输出律KL散度下，为(e^{-ε}+o(1)) log_2 ln n，呈现双对数分离。\n• 其他结果: 通过计数状态递归得到每轮上限下的精确最小输出散度；Beta-伯努利目标的尖锐期望成本为(e^{-ε}/2+o(1)) log_2 log_2 n，由稀有n轮运行实现。",
+    "verdict_en": "• Alpha Potential: The separation reveals that optimizing for schedule-averaged divergence can be highly suboptimal for the actual output law, which may impact the design of parallel sampling algorithms in applications like diffusion models or distributed MCMC.\n• Implementation Risk: The theoretical results rely on exact conditional marginals and specific target distributions; practical implementations may face approximation errors and computational overhead, limiting direct applicability.\n• Novelty: The round-complexity separation between two KL divergence criteria is novel and provides a deeper understanding of parallel sampling trade-offs, though the practical implications for finance are indirect.\n• Critical Assessment: The paper is highly theoretical with no empirical validation; the assumptions (e.g., exact marginals, finite mixture) may not hold in real-world scenarios, reducing immediate impact.",
+    "verdict_cn": "• 创新点: 首次揭示了并行采样中调度平均KL散度与输出律KL散度之间的轮复杂度分离，理论贡献显著。\n• 实盘坑: 结果依赖于精确条件边际和特定目标分布，实际应用中难以满足，且未考虑计算资源约束。\n• 复现难度: 理论推导复杂，需要深厚的概率论和统计物理背景，复现成本高。\n• 犀利点评: 纯理论工作，对量化金融的直接应用有限，但可能启发分布式采样算法的优化。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2610.13923v1",
+    "title": "Goal-Oriented Bundle Management and Flow Control for Deep-Space Communications via Reinforcement Learning",
+    "pdf_url": "https://arxiv.org/pdf/2610.13923v1",
+    "published": "2026-10-09",
+    "crawled_at": "2026-10-13 01:39:31",
+    "ai_score": 5.5,
+    "translated_title": "基于强化学习的深空通信中面向目标的束管理与流控制",
+    "summary_en": [
+      "• Model Architecture: The paper formulates relay control as a constrained semi-Markov decision process (CSMDP) and solves it using masked Lagrangian Proximal Policy Optimization (PPO) with feasibility-aware action masking.",
+      "• Data used: Evaluated via DTNSim simulations in a contact-driven deep-space network scenario with lunar and Martian updates forwarded through a shared-buffer relay to Earth.",
+      "• Performance metrics: Improved age-based utility and inter-flow fairness compared to baseline schedulers (e.g., FIFO), using a novel goal-oriented loss based on excess age Δ_i^e(t).",
+      "• Key innovation: Joint optimization of relay-side bundle scheduling, dropping, and flow control under contact-driven dynamics with explicit fairness considerations across heterogeneous sources."
+    ],
+    "summary_cn": [
+      "• 核心模型: 将中继控制建模为约束半马尔可夫决策过程（CSMDP），采用带掩码的拉格朗日近端策略优化（PPO）求解，并引入可行性感知的动作掩码。",
+      "• 数据来源: 基于DTNSim仿真，模拟月球和火星更新通过共享缓冲区中继转发至地球的深空通信场景。",
+      "• 主要结论: 与FIFO等基线调度器相比，所提方法在基于年龄的效用和流间公平性上均有提升，且能联合优化调度、丢弃和流控制。",
+      "• 创新点: 提出面向目标的损失函数，基于超额年龄Δ_i^e(t)支持源相关的非线性惩罚，实现按任务重要性优先调度。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Limited direct alpha for financial markets; the framework is domain-specific to deep-space communications, but the CSMDP and masked Lagrangian PPO could inspire constrained RL approaches in portfolio optimization or order scheduling.",
+      "• Implementation Risk: High complexity in real-world deployment due to intermittent connectivity and long delays; simulation-based evaluation may not capture all operational uncertainties.",
+      "• Novelty: Moderate; combines existing RL techniques (PPO, Lagrangian methods) with a new goal-oriented metric for deep-space networks, but the core algorithms are not fundamentally new.",
+      "• Practical Impact: Could improve deep-space communication efficiency, but requires significant adaptation for terrestrial or financial applications."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将约束半马尔可夫决策过程与掩码拉格朗日PPO结合，并引入超额年龄指标，在深空通信领域有一定新意。",
+      "• 实盘坑: 金融领域直接应用价值低，需大量改造；仿真环境与真实深空通信差异大，策略迁移风险高。",
+      "• 复现难度: 中等偏高，需要DTNSim仿真环境和强化学习调参经验，且依赖特定场景设定。",
+      "• 总体评价: 学术贡献尚可，但对冲基金实战意义有限，除非将约束RL方法迁移至金融调度问题。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "IEEE Transactions on Communications",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2610.13918v1",
+    "title": "DyssomniaNN: Multi-Scale Spiking Neural Modeling of Human Sleep Disorders and Perceived Restedness",
+    "pdf_url": "https://arxiv.org/pdf/2610.13918v1",
+    "published": "2026-10-09",
+    "crawled_at": "2026-10-13 01:39:38",
+    "ai_score": 2.5,
+    "translated_title": "DyssomniaNN：人类睡眠障碍与感知休息感的多尺度脉冲神经网络建模",
+    "summary_en": [
+      "• Model Architecture: Integrates Borbély's two-process model, Saper's flip-flop circuit, and a recurrent corticothalamic leaky integrate-and-fire spiking neural network to simulate sleep regulation across multiple scales.",
+      "• Data used: Validated against empirical human EEG spectra from the PhysioNet Sleep-EDF database, with synthetic local field potentials compared across canonical frequency bands.",
+      "• Performance metrics: Achieves spectral mean absolute error of 0.33–0.35; simulates five clinical cohorts (healthy, delayed-phase, chronic insomnia, paradoxical insomnia, narcolepsy type 1) over a 72-hour photoperiod.",
+      "• Key findings: Sleep duration does not predict restorative recovery; paradoxical insomnia shows normal total sleep time (21.15 h) but low restoration (37.6%) due to beta-band intrusion; narcolepsy exhibits severe fragmentation (781 min WASO) and 35 sleep-onset REM periods."
+    ],
+    "summary_cn": [
+      "• 核心模型: 耦合Borbély双过程模型、Saper下丘脑互抑开关电路和递归皮质丘脑泄漏积分点火脉冲神经网络，实现多尺度生物物理模拟。",
+      "• 数据来源: 使用PhysioNet Sleep-EDF数据库的人类EEG频谱进行验证，覆盖所有典型频段。",
+      "• 主要结论: 睡眠时长不能预测恢复效果；矛盾性失眠患者总睡眠时间正常（21.15小时）但恢复率仅37.6%，与未抑制的β波段侵入有关；发作性睡病1型表现为严重夜间碎片化（781分钟入睡后觉醒）和35次睡眠始发REM期。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Very low. The model is a mechanistic simulation tool for sleep research, not a predictive model for financial markets. No direct trading application.",
+      "• Implementation Risk: High for any financial use; requires deep domain expertise in neuroscience and computational psychiatry, with no clear mapping to market data or alpha signals.",
+      "• Novelty: Moderate within computational neuroscience, but the integration of existing models is incremental. The Well-Rested Index is a minor contribution.",
+      "• Overall: Not suitable for hedge fund alpha generation; better suited for academic or clinical research."
+    ],
+    "verdict_cn": [
+      "• 创新点: 在计算神经科学领域有一定新意，但主要是现有模型的整合，Well-Rested Index贡献有限。",
+      "• 实盘坑: 与金融市场无关，无法直接用于交易策略或风险建模，投入产出比极低。",
+      "• 复现难度: 高，需要神经科学和计算精神病学专业知识，且数据与代码可能不公开。",
+      "• 总体评价: 不适合对冲基金用于生成阿尔法，建议仅作为学术或临床研究参考。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2610.13917v1",
+    "title": "Designing Protein Structures from Natural Language",
+    "pdf_url": "https://arxiv.org/pdf/2610.13917v1",
+    "published": "2026-10-09",
+    "crawled_at": "2026-10-13 01:39:45",
+    "ai_score": 8.5,
+    "translated_title": "从自然语言设计蛋白质结构",
+    "summary_en": [
+      "• Model Architecture: Prompteina is the first all-atom structure generation model that supports natural language design objectives, adapting the pretrained Proteina-Complexa via text-conditioned pretraining and finetuning that aligns residues with their corresponding text.",
+      "• Data: Prompteina-Data, a paired text-protein structure dataset of 1.8M structures and 50M+ captions describing global and residue-specific structural and functional properties.",
+      "• Performance: Outperforms baselines on 15 of 18 structural properties; in binder design, leads on at least 13 of 20 targets and improves interface confidence by 14% over the strongest baseline; iterative in silico feedback yields 57% larger gain on hardest targets.",
+      "• Experimental Validation: Identified nine binders against GM2A (no reported de novo binders), with the strongest at an apparent KD of 107 nM."
+    ],
+    "summary_cn": [
+      "• 核心模型: Prompteina是首个支持自然语言设计目标的全原子结构生成模型，通过文本条件预训练和微调（对齐残基与文本）改编自预训练的Proteina-Complexa。",
+      "• 数据来源: 构建了Prompteina-Data数据集，包含180万个蛋白质结构和超过5000万条描述全局及残基特异性结构功能属性的文本标注。",
+      "• 主要结论: 在18个结构属性中的15个上超越基线；在结合剂设计中，20个靶标中至少13个领先，界面置信度比最强基线提升14%；迭代反馈在 hardest 靶标上增益比次优基线大57%。",
+      "• 实验验证: 针对GM2A（无报道的de novo结合剂）鉴定出9个结合剂，最强表观KD为107 nM。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for biotech and drug discovery applications; natural language interface enables rapid design of proteins with complex functions, potentially accelerating therapeutic development and reducing R&D costs.",
+      "• Implementation Risk: Requires significant computational resources for training and inference; experimental validation is costly and time-consuming; model may not generalize to all protein families or design objectives.",
+      "• Novelty: First to use natural language for all-atom protein structure generation, with a large-scale paired dataset and demonstrated experimental success; represents a significant advance in conditional generative modeling for proteins."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次将自然语言作为全原子蛋白质结构生成的条件接口，构建了大规模文本-结构配对数据集，并在实验验证中成功设计出针对GM2A的结合剂。",
+      "• 实盘坑: 计算成本高，训练和推理需要大量GPU资源；实验验证周期长、成本高；模型可能对某些蛋白质家族或设计目标泛化能力有限。",
+      "• 复现难度: 高，需要复现大规模数据集构建、文本条件预训练和微调流程，以及迭代反馈机制；但代码和模型可能开源，降低部分难度。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2610.13909v1",
+    "title": "Revisiting Tabular Deep Regression: Objectives and the Limits of Global Early Stopping",
+    "pdf_url": "https://arxiv.org/pdf/2610.13909v1",
+    "published": "2026-10-09",
+    "crawled_at": "2026-10-13 01:39:52",
+    "ai_score": 6.5,
+    "translated_title": "重新审视表格深度回归：目标函数与全局早停的局限性",
+    "summary_en": "• Model Architecture: Evaluates multiple neural backbones (e.g., MLP, ResNet, FT-Transformer) for tabular regression, focusing on objective functions rather than architecture design.\n• Data used: A broad collection of established tabular datasets from various domains, though specific datasets are not listed in the abstract.\n• Performance metrics: Compares regression objectives (MSE, quantile loss, etc.) using standard metrics like RMSE/MAE, with quantile loss showing consistent aggregate improvements over MSE.\n• Key finding: Global early stopping imposes a compromise across regions with different target noise levels, limiting performance even with heteroskedasticity-aware objectives.\n• Proposed method: A heteroskedasticity-aware extension of quantile loss using input-dependent label smoothing, which improves over quantile loss on several backbones.",
+    "summary_cn": "• 核心模型: 评估多种神经网络骨干（如MLP、ResNet、FT-Transformer）在表格回归任务上的表现，重点研究目标函数而非架构设计。\n• 数据来源: 使用多个已建立的表格数据集，涵盖不同领域，但摘要中未列出具体数据集名称。\n• 主要结论: 分位数损失在多个骨干上一致优于MSE，但全局早停在不同噪声区域间造成折衷，限制了性能。\n• 改进方法: 提出一种基于输入相关标签平滑的异方差感知分位数损失扩展，在多个骨干上优于标准分位数损失。\n• 性能指标: 使用RMSE/MAE等标准回归指标进行比较，强调分位数损失的聚合改进。",
+    "verdict_en": "• Alpha Potential: Moderate; the findings on quantile loss and heteroskedasticity-aware extension could improve predictive accuracy in noisy financial tabular data, but gains are incremental.\n• Implementation Risk: Low to moderate; code is available, but the method requires careful tuning of label smoothing and may not generalize to all financial datasets.\n• Novelty: Moderate; the systematic re-evaluation and identification of global early stopping limitations are valuable, but the proposed extension is a relatively straightforward combination of existing ideas.\n• Practical Impact: The insight about region-specific optimal stopping times could inspire new training strategies, but immediate alpha generation is limited without further adaptation to financial time series.",
+    "verdict_cn": "• 创新点: 系统性地重新评估表格回归目标函数，并指出全局早停在不同噪声区域间的局限性，提出异方差感知的分位数损失扩展。\n• 实盘坑: 金融数据通常具有时变异方差性和非平稳性，该方法在静态表格数据上的改进未必能直接迁移；标签平滑可能引入偏差，需谨慎调参。\n• 复现难度: 中等；代码已开源，但需要大量计算资源进行多骨干和多数据集的实验，且金融数据预处理可能不同。\n• 潜在价值: 对表格数据回归任务有参考意义，但直接用于量化交易需进一步验证，尤其是处理时间序列和概念漂移。",
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2610.13901v1",
+    "title": "Hitting-Time Bounds for Asynchronous Q-Learning",
+    "pdf_url": "https://arxiv.org/pdf/2610.13901v1",
+    "published": "2026-10-09",
+    "crawled_at": "2026-10-13 01:40:00",
+    "ai_score": 7.5,
+    "translated_title": "异步Q学习的命中时间界",
+    "summary_en": [
+      "• Model Architecture: Standard asynchronous Q-learning with zero initialization and constant step size, analyzed from a single trajectory of a finite MDP with irreducible and possibly periodic behavior policy.",
+      "• Data used: Theoretical analysis based on Markov chain properties; no empirical data, but an empirical state-action count rule is proposed for step-size selection.",
+      "• Performance metrics: Sup-norm error bound of order O~(H^4/(μ_min ε^2) + h_*), where H is effective horizon, μ_min is minimum stationary probability, and h_* is largest expected hitting time of reverse chain.",
+      "• Key results: Statistical term retains quartic horizon dependence; initialization cost is additive in h_*; for aperiodic chains, transient term is O~(t_mix/μ_min). Matching lower bounds up to logarithmic factors."
+    ],
+    "summary_cn": [
+      "• 核心模型: 标准异步Q学习，零初始化，常数步长，从单轨迹分析有限MDP。",
+      "• 数据来源: 理论分析，基于不可约且可能周期的行为策略下的马尔可夫链性质。",
+      "• 主要结论: 高概率下sup-norm误差界为O~(H^4/(μ_min ε^2) + h_*)，其中H为有效视界，μ_min为最小平稳概率，h_*为反向链最大期望命中时间。",
+      "• 统计项保持四次方视界依赖，初始化成本加性于h_*；非周期链下瞬态项为O~(t_mix/μ_min)。",
+      "• 提出基于状态-动作计数的经验步长选择规则，无需模型参数、目标精度或置信水平先验知识。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Limited direct alpha; theoretical bounds may inform step-size selection in RL trading agents, but no empirical validation on financial data.",
+      "• Implementation Risk: High; assumptions of irreducible behavior policy and single trajectory may not hold in non-stationary markets; constant step size may be suboptimal.",
+      "• Novelty: Moderate; introduces hitting-time bounds and reverse-time compensation, but builds on existing Q-learning analyses; lower bound extension is incremental.",
+      "• Practicality: The empirical step-size rule is a plus, but the quartic horizon dependence suggests slow convergence for high discount factors, common in finance."
+    ],
+    "verdict_cn": [
+      "• 创新点: 引入反向链命中时间补偿，分离统计误差与初始化误差，并给出匹配下界。",
+      "• 实盘坑: 假设行为策略不可约且单轨迹，金融市场非平稳性可能导致假设失效；常数步长在动态市场中可能表现不佳。",
+      "• 复现难度: 理论证明复杂，但算法简单；经验步长规则易于实现，但需大量样本。",
+      "• 潜在应用: 可用于强化学习交易代理的步长调参，但需实证检验；四次方视界依赖可能限制高频场景。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2610.13881v1",
+    "title": "Prediction Is Not a Sufficient Memory State",
+    "pdf_url": "https://arxiv.org/pdf/2610.13881v1",
+    "published": "2026-10-09",
+    "crawled_at": "2026-10-13 01:40:07",
+    "ai_score": 7.5,
+    "translated_title": "预测不是充分的内存状态",
+    "summary_en": [
+      "• Model Architecture: The paper provides a theoretical characterization of memory states in recurrent learning systems, distinguishing between prediction sufficiency and learning sufficiency. It analyzes exact cumulative learning for smooth convex residual losses and attention mechanisms.",
+      "• Data used: The study is purely theoretical, using mathematical frameworks such as smooth convex residual losses, ridge regression, and kernel attention. No empirical datasets are employed.",
+      "• Performance metrics: Key metrics include the minimal dimension of continuous recurrent states required for exact learning, which is shown to be r = binom(d+D, D) - 1 for polynomial losses of degree D. For nonpolynomial losses, the required dimension is unbounded on equal-prediction histories. For ridge regression, the exact state cost is dp + d(d+1)/2 versus dp for the predictor. Optimal B-bit compression yields average one-update error of order d^{-1} 2^{-2B/s_d} with s_d = d(d+1)/2."
+    ],
+    "summary_cn": [
+      "• 核心模型: 论文从理论上刻画了循环学习系统中的内存状态，区分了预测充分性与学习充分性。分析了平滑凸残差损失和注意力机制下的精确累积学习。",
+      "• 数据来源: 纯理论研究，使用平滑凸残差损失、岭回归和核注意力等数学框架，未使用实证数据集。",
+      "• 主要结论: 对于D次多项式损失，精确学习所需的最小连续循环状态维度为 r = binom(d+D, D) - 1；非多项式损失在等预测历史下需求无界。岭回归中，精确状态成本为 dp + d(d+1)/2，而预测器仅需 dp。最优B位压缩的平均单步更新误差阶为 d^{-1} 2^{-2B/s_d}，其中 s_d = d(d+1)/2。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: The theoretical insights could inform the design of more efficient memory architectures for sequential learning, potentially improving sample efficiency and adaptation in trading models. However, direct alpha generation is not immediate.",
+      "• Implementation Risk: The results are abstract and may be challenging to translate into practical algorithms. The assumptions (e.g., smooth convex residual losses) may not hold in real-world financial data, limiting applicability.",
+      "• Novelty: The distinction between prediction and learning sufficiency is novel and provides a rigorous foundation for understanding memory requirements. The exact characterizations for polynomial losses and ridge regression are valuable contributions."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次严格区分了预测充分性与学习充分性，为理解循环神经网络的内存需求提供了理论基础。对多项式损失和岭回归的精确刻画具有理论价值。",
+      "• 实盘坑: 理论假设（如平滑凸损失）在金融数据中往往不成立，且未提供实证验证。实际应用中，模型可能因非凸、噪声等问题而失效。",
+      "• 复现难度: 纯理论工作，复现需深厚的数学功底。但结论可能难以直接转化为可交易的策略，需进一步实证研究。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
     "id": "2610.12467v1",
     "title": "CSF: Contextual Safety Filtering for Motion Generators",
     "pdf_url": "https://arxiv.org/pdf/2610.12467v1",
@@ -43984,348 +44278,6 @@
     "journal_info": {
       "name": "IEEE Transactions on Power Systems",
       "status": "Accepted"
-    }
-  },
-  {
-    "id": "2602.23360v1",
-    "title": "Model Agreement via Anchoring",
-    "pdf_url": "https://arxiv.org/pdf/2602.23360v1",
-    "published": "2026-02-26",
-    "crawled_at": "2026-02-27 20:15:56",
-    "ai_score": 7.5,
-    "translated_title": "通过锚定实现模型一致性",
-    "summary_en": [
-      "• Model Architecture: The paper introduces a general anchoring technique to analyze model disagreement, applied to four algorithms: stacked aggregation, gradient boosting, neural network training with architecture search, and regression tree training.",
-      "• Data used: The analysis is theoretical and does not specify real-world datasets; it focuses on one-dimensional regression with squared error loss initially, then generalizes to multi-dimensional regression with strongly convex loss functions.",
-      "• Performance metrics: Model disagreement is measured as the expected squared difference in predictions between two independently trained models, with bounds proven to drive disagreement to zero based on parameters like number of models, iterations, architecture size, or tree depth."
-    ],
-    "summary_cn": [
-      "• 核心模型: 提出一种基于锚定的通用技术，用于分析模型分歧，应用于四种算法：堆叠聚合、梯度提升、带架构搜索的神经网络训练和回归树训练。",
-      "• 数据来源: 分析为理论性，未指定实际数据集；初始基于一维回归和平方误差损失，后推广到多维回归和强凸损失函数。",
-      "• 主要结论: 模型分歧定义为两个独立训练模型预测的期望平方差，通过参数（如模型数量、迭代次数、架构大小或树深度）证明可将分歧驱动至零。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate; the technique could enhance model stability in ensemble methods, potentially reducing prediction variance in financial models, but direct alpha generation is limited without empirical validation.",
-      "• Implementation Risk: High; theoretical bounds may not translate to real-world noisy data, and the generalization to multi-dimensional settings requires careful tuning of strongly convex loss functions.",
-      "• Novelty: Moderate; anchoring as an analytical tool is innovative for bounding disagreement, but the application to common algorithms is incremental rather than groundbreaking."
-    ],
-    "verdict_cn": [
-      "• 创新点: 锚定技术作为分析工具具有新意，能统一处理多种算法的模型分歧，但应用层面属于渐进式改进，非颠覆性突破。",
-      "• 实盘坑: 理论边界在真实嘈杂数据中可能失效，强凸损失函数的泛化需精细调参，实盘部署风险较高。",
-      "• 复现难度: 中等；理论推导清晰，但缺乏代码或实验细节，复现需较强数学背景和算法实现能力。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2602.23358v1",
-    "title": "A Dataset is Worth 1 MB",
-    "pdf_url": "https://arxiv.org/pdf/2602.23358v1",
-    "published": "2026-02-26",
-    "crawled_at": "2026-02-27 20:16:14",
-    "ai_score": 7.5,
-    "translated_title": "一个数据集价值1MB",
-    "summary_en": [
-      "• Model Architecture: PLADA (Pseudo-Labels as Data) method eliminates pixel transmission by transmitting only class labels for specific images from a preloaded reference dataset, with a pruning mechanism to filter semantically relevant images.",
-      "• Data used: Utilizes large, generic, unlabeled reference datasets (e.g., ImageNet-1K, ImageNet-21K) and tests on 10 diverse target datasets for classification tasks.",
-      "• Performance metrics: Achieves task knowledge transfer with payloads less than 1 MB while maintaining high classification accuracy across experiments."
-    ],
-    "summary_cn": [
-      "• 核心模型: PLADA（伪标签作为数据）方法，通过仅传输预加载参考数据集中特定图像的类别标签来消除像素传输，并引入剪枝机制筛选语义相关图像。",
-      "• 数据来源: 使用大型通用未标记参考数据集（如ImageNet-1K、ImageNet-21K），并在10个多样化目标数据集上进行分类任务测试。",
-      "• 主要结论: 在传输负载小于1 MB的情况下，成功实现任务知识传递，并在实验中保持高分类准确率。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate; offers cost-efficient data serving for distributed learning, potentially reducing communication overhead in edge computing or federated learning scenarios, but direct financial alpha is limited.",
-      "• Implementation Risk: High; relies on clients having preloaded reference datasets, which may not be feasible in all environments, and pruning mechanism's effectiveness depends on dataset similarity.",
-      "• Novelty: High; introduces a novel approach to dataset distillation by eliminating pixel transmission entirely, focusing on label-based compression, which is innovative compared to traditional methods."
-    ],
-    "verdict_cn": [
-      "• 创新点: 高；提出了一种全新的数据集蒸馏方法，通过完全消除像素传输，仅基于标签进行压缩，相比传统方法具有显著创新性。",
-      "• 实盘坑: 高；依赖客户端预加载参考数据集，这在某些环境中可能不可行，且剪枝机制的效果受数据集相似性影响，存在实际部署风险。",
-      "• 复现难度: 中等；方法相对简洁，但需要访问大型参考数据集和多样化的目标数据集进行实验，复现可能受数据可用性限制。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2602.23353v1",
-    "title": "SOTAlign: Semi-Supervised Alignment of Unimodal Vision and Language Models via Optimal Transport",
-    "pdf_url": "https://arxiv.org/pdf/2602.23353v1",
-    "published": "2026-02-26",
-    "crawled_at": "2026-02-27 20:16:34",
-    "ai_score": 7.8,
-    "translated_title": "SOTAlign：基于最优传输的单模态视觉与语言模型半监督对齐方法",
-    "summary_en": [
-      "• Model Architecture: Two-stage framework with linear teacher for coarse alignment and optimal-transport-based divergence for refinement using unpaired data.",
-      "• Data used: Small number of image-text pairs (paired data) combined with large amounts of unpaired images and text in semi-supervised setting.",
-      "• Performance metrics: Significantly outperforms supervised and semi-supervised baselines across datasets and encoder pairs, demonstrating robust joint embeddings."
-    ],
-    "summary_cn": [
-      "• 核心模型: 两阶段框架，第一阶段使用线性教师从有限配对数据恢复粗略共享几何，第二阶段通过最优传输散度在未配对样本上精炼对齐。",
-      "• 数据来源: 少量图像-文本配对数据结合大量未配对图像和文本的半监督设置。",
-      "• 主要结论: 在多个数据集和编码器对上显著优于监督和半监督基线，学习到鲁棒的联合嵌入，有效利用未配对数据。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate - reduces data dependency for multimodal alignment, potentially applicable to cross-modal financial data fusion with limited labeled examples.",
-      "• Implementation Risk: High - optimal transport computations can be computationally expensive; semi-supervised approach requires careful handling of unpaired data quality.",
-      "• Novelty: High - introduces semi-supervised optimal transport approach to multimodal alignment, addressing data scarcity while avoiding overconstraining target space."
-    ],
-    "verdict_cn": [
-      "• 创新点: 将最优传输引入半监督多模态对齐，在数据稀缺下有效利用未配对样本，避免目标空间过度约束。",
-      "• 实盘坑: 最优传输计算复杂度高；未配对数据质量直接影响对齐效果；线性教师阶段可能引入偏差。",
-      "• 复现难度: 中等偏高，需要实现两阶段训练流程和最优传输优化，对计算资源要求较高。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2602.23349v1",
-    "title": "FlashOptim: Optimizers for Memory Efficient Training",
-    "pdf_url": "https://arxiv.org/pdf/2602.23349v1",
-    "published": "2026-02-26",
-    "crawled_at": "2026-02-27 20:16:58",
-    "ai_score": 8.5,
-    "translated_title": "FlashOptim：内存高效训练的优化器",
-    "summary_en": [
-      "• Model Architecture: FlashOptim introduces a suite of optimizations for mixed-precision training, including improved master weight splitting with tight quantization error bounds and companding functions for 8-bit optimizer state quantization, combined with 16-bit gradients.",
-      "• Data used: The paper evaluates performance on standard vision and language benchmarks, including Llama-3.1-8B finetuning, but does not specify exact datasets or data sources in the abstract.",
-      "• Performance metrics: FlashOptim reduces AdamW memory from 16 bytes to 7 bytes per parameter (or 5 bytes with gradient release) and cuts model checkpoint sizes by more than half, with no measurable quality degradation on tested tasks."
-    ],
-    "summary_cn": [
-      "• 核心模型: FlashOptim 是一套针对混合精度训练的优化技术，包括改进的主权重分割（利用量化误差紧界）和用于8位优化器状态量化的压扩函数，结合16位梯度。",
-      "• 数据来源: 论文在标准视觉和语言基准测试（包括Llama-3.1-8B微调）上进行评估，但摘要中未明确指定具体数据集或数据来源。",
-      "• 主要结论: FlashOptim 将AdamW内存从每参数16字节减少到7字节（或梯度释放时为5字节），模型检查点大小减半以上，且在测试任务中未观察到质量下降。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High potential for alpha in deep learning strategies by enabling training of larger models (e.g., 7B+ parameters) on limited hardware, reducing memory costs by over 50%, which could lower operational expenses and accelerate research iterations.",
-      "• Implementation Risk: Moderate risk due to reliance on quantization techniques; potential issues include hardware compatibility, increased computational overhead from error correction, and scalability challenges with very large models or non-standard optimizers.",
-      "• Novelty: Significant novelty in combining master weight splitting with companding functions for 8-bit state quantization, offering a practical solution to memory bottlenecks while maintaining API compatibility and model quality."
-    ],
-    "verdict_cn": [
-      "• 创新点: 结合主权重分割和8位状态量化的压扩函数，显著降低内存使用（超50%），同时保持API兼容性和模型质量，针对大模型训练的内存瓶颈提供实用解决方案。",
-      "• 实盘坑: 依赖量化技术可能导致硬件兼容性问题、误差校正增加计算开销，以及超大模型或非标准优化器的可扩展性挑战，实盘部署需谨慎测试。",
-      "• 复现难度: 中等难度，需要实现量化误差界优化和压扩函数，但论文提供具体技术细节（如16位梯度、8位状态），且兼容标准优化器如SGD、AdamW、Lion，便于复现验证。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2602.23341v1",
-    "title": "Mean Estimation from Coarse Data: Characterizations and Efficient Algorithms",
-    "pdf_url": "https://arxiv.org/pdf/2602.23341v1",
-    "published": "2026-02-26",
-    "crawled_at": "2026-02-27 20:17:22",
-    "ai_score": 8.2,
-    "translated_title": "从粗粒度数据中进行均值估计：特征刻画与高效算法",
-    "summary_en": [
-      "• Model Architecture: The paper studies Gaussian mean estimation under coarse data, where true samples are drawn from a d-dimensional Gaussian with identity covariance but are only observed through partition sets containing them. It focuses on convex partitions and addresses identifiability conditions.",
-      "• Data used: The theoretical framework assumes coarse data generated from Gaussian distributions with unknown means, where each sample is revealed only as a set (partition element) rather than exact values. This models scenarios like measurement rounding or sensor limitations.",
-      "• Performance metrics: The work resolves two open questions: (1) characterizing when the mean is identifiable under convex partitions, and (2) establishing computationally efficient estimation algorithms under identifiability and convexity, contrasting with NP-hardness results for non-convex partitions."
-    ],
-    "summary_cn": [
-      "• 核心模型: 研究高斯均值估计问题，其中真实样本来自具有单位协方差的d维高斯分布，但仅通过包含样本的划分集合（粗粒度数据）进行观测，重点关注凸划分下的可识别性与算法设计。",
-      "• 数据来源: 理论分析基于从高斯分布生成的粗粒度数据，每个样本仅以集合形式（划分元素）呈现，模拟测量舍入、传感器限制或经济系统滞后等实际场景。",
-      "• 主要结论: 解决了两个关键开放问题：一是明确了在凸划分下均值可识别的条件；二是在可识别性和凸划分假设下，提出了计算高效的估计算法，与非凸划分下的NP难问题形成对比。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate—the theoretical insights into identifiability and efficient algorithms for coarse data could inform alpha generation in scenarios with imperfect or delayed data (e.g., economic indicators, sensor-based trading), but direct application to financial markets requires adaptation.",
-      "• Implementation Risk: High—the assumptions (e.g., Gaussian distributions with identity covariance, convex partitions) are restrictive for real-world financial data, which often exhibits non-Gaussianity, time-varying volatility, and complex dependencies, increasing model risk.",
-      "• Novelty: High—the paper advances prior work by Fotakis et al. [FKKT21] by fully characterizing identifiability and providing efficient algorithms under convexity, offering new theoretical guarantees in statistical estimation with coarse observations."
-    ],
-    "verdict_cn": [
-      "• 创新点: 高—在Fotakis等人[FKKT21]的基础上，首次完整刻画了凸划分下均值的可识别性条件，并设计了计算高效的估计算法，为粗粒度数据统计推断提供了新的理论保证。",
-      "• 实盘坑: 高—模型假设（如单位协方差高斯分布、凸划分）过于理想化，金融数据常呈现非高斯性、时变波动和复杂依赖，直接应用可能导致显著偏差，需谨慎验证。",
-      "• 复现难度: 中—算法基于理论推导，可能涉及凸优化或统计方法，但缺乏实证代码或数据集，复现需较强数学背景，对量化团队构成一定挑战。"
-    ],
-    "ai_strategy": "Alpha-Factor",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Accepted"
-    }
-  },
-  {
-    "id": "2602.23336v1",
-    "title": "Differentiable Zero-One Loss via Hypersimplex Projections",
-    "pdf_url": "https://arxiv.org/pdf/2602.23336v1",
-    "published": "2026-02-26",
-    "crawled_at": "2026-02-27 20:17:35",
-    "ai_score": 7.8,
-    "translated_title": "通过超单纯形投影实现可微的零一损失",
-    "summary_en": [
-      "• Model Architecture: Introduces Soft-Binary-Argmax operator via constrained optimization framework for smooth projection onto n,k-dimensional hypersimplex",
-      "• Data used: Not explicitly specified in abstract, but methodology applies to binary and multiclass classification systems",
-      "• Performance metrics: Achieves significant improvements in generalization under large-batch training by imposing geometric consistency constraints on output logits"
-    ],
-    "summary_cn": [
-      "• 核心模型: 通过约束优化框架引入Soft-Binary-Argmax算子，实现n,k维超单纯形的平滑投影",
-      "• 数据来源: 摘要未明确指定，但方法适用于二分类和多分类系统",
-      "• 主要结论: 通过对输出logits施加几何一致性约束，在大批量训练中显著提升泛化性能"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate - addresses fundamental optimization challenge in classification but limited direct financial applications",
-      "• Implementation Risk: High - requires careful tuning of projection parameters and integration with existing gradient-based systems",
-      "• Novelty: High - novel differentiable approximation to zero-one loss with geometric constraints represents significant theoretical contribution"
-    ],
-    "verdict_cn": [
-      "• 创新点: 通过超单纯形投影实现零一损失的可微近似，解决了分类优化的核心难题",
-      "• 实盘坑: 投影参数调优复杂，与现有梯度系统的集成存在技术风险",
-      "• 复现难度: 中等 - 需要实现约束优化框架和雅可比矩阵计算，但数学推导清晰"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2602.23330v1",
-    "title": "Toward Expert Investment Teams:A Multi-Agent LLM System with Fine-Grained Trading Tasks",
-    "pdf_url": "https://arxiv.org/pdf/2602.23330v1",
-    "published": "2026-02-26",
-    "crawled_at": "2026-02-27 20:17:57",
-    "ai_score": 7.5,
-    "translated_title": "迈向专家投资团队：基于细粒度交易任务的多智能体LLM系统",
-    "summary_en": [
-      "• Model Architecture: Proposes a multi-agent LLM trading framework that decomposes investment analysis into fine-grained tasks, moving beyond coarse-grained instructions to improve workflow alignment and decision transparency.",
-      "• Data used: Evaluated on Japanese stock data, including price data, financial statements, news articles, and macroeconomic information, under a leakage-controlled backtesting setting to ensure realistic performance assessment.",
-      "• Performance metrics: Demonstrates significant improvement in risk-adjusted returns compared to conventional coarse-grained designs, with further analysis showing alignment between analytical outputs and downstream decision preferences as a key performance driver.",
-      "• Additional approach: Conducts standard portfolio optimization by exploiting low correlation with the stock index and variance of system outputs, achieving superior performance through this integration."
-    ],
-    "summary_cn": [
-      "• 核心模型: 提出一个多智能体LLM交易框架，将投资分析分解为细粒度任务，而非粗粒度指令，以提升工作流对齐和决策透明度。",
-      "• 数据来源: 使用日本股票数据进行评估，包括价格数据、财务报表、新闻文章和宏观经济信息，在泄漏控制的回测设置下进行实验。",
-      "• 主要结论: 细粒度任务分解显著提高了风险调整后收益，优于传统粗粒度设计；分析中间输出显示，分析输出与下游决策偏好的对齐是系统性能的关键驱动因素。",
-      "• 优化方法: 通过利用与股票指数的低相关性和系统输出的方差进行标准投资组合优化，实现了更优的性能表现。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate to high; the framework's fine-grained task decomposition and alignment focus could capture nuanced market signals, but reliance on Japanese data may limit generalizability to other markets without further validation.",
-      "• Implementation Risk: High; real-world deployment faces challenges such as data latency, model interpretability in complex multi-agent systems, and potential overfitting to historical Japanese market conditions.",
-      "• Novelty: Moderate; while multi-agent LLM systems are emerging, the explicit emphasis on fine-grained task decomposition and output-decision alignment adds a structured approach to agent design in trading contexts."
-    ],
-    "verdict_cn": [
-      "• 创新点: 中等；多智能体LLM系统已有研究，但强调细粒度任务分解和输出-决策对齐，为交易场景中的智能体设计提供了结构化方法，具有一定新颖性。",
-      "• 实盘坑: 高；实际部署面临数据延迟、复杂多智能体系统的模型可解释性挑战，以及可能对日本历史市场条件的过拟合风险，需谨慎处理。",
-      "• 复现难度: 中等；框架描述清晰，但需要获取日本股票数据（价格、财务、新闻、宏观）并实现泄漏控制回测，技术门槛适中，但数据获取可能受限。"
-    ],
-    "ai_strategy": "NLP/LLM",
-    "journal_info": {
-      "name": "ArXiv Preprint",
-      "status": "Preprint"
-    }
-  },
-  {
-    "id": "2602.23321v1",
-    "title": "Deep ensemble graph neural networks for probabilistic cosmic-ray direction and energy reconstruction in autonomous radio arrays",
-    "pdf_url": "https://arxiv.org/pdf/2602.23321v1",
-    "published": "2026-02-26",
-    "crawled_at": "2026-02-27 20:18:15",
-    "ai_score": 8.2,
-    "translated_title": "基于深度集成图神经网络的自主射电阵列中宇宙射线方向与能量概率重建方法",
-    "summary_en": [
-      "• Model Architecture: Graph Neural Network (GNN) with physics-informed architecture and input representation, using triggered antennas as graph nodes with physical relationships as edges, enhanced by ensemble methods for uncertainty estimation.",
-      "• Data used: Simulated voltage traces from ground-based radio detector arrays under realistic noise conditions, representing ultra-high-energy cosmic ray events, with domain shift considerations between simulation and reality.",
-      "• Performance metrics: Achieves angular resolution of 0.092° and electromagnetic energy reconstruction resolution of 16.4% on simulated data, with uncertainty quantification providing confidence intervals for predictions."
-    ],
-    "summary_cn": [
-      "• 核心模型: 采用图神经网络（GNN）架构，将触发天线表示为图结构节点，物理关系作为边，融入物理知识优化模型，结合集成方法进行不确定性估计。",
-      "• 数据来源: 基于地面射电探测器阵列的模拟电压轨迹数据，模拟超高能宇宙射线事件，包含真实噪声条件，并考虑仿真与现实的域偏移问题。",
-      "• 主要结论: 在模拟数据上实现0.092°的角度分辨率和16.4%的电磁能量重建分辨率，通过不确定性量化提供预测置信区间，提升模型可靠性。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High for applications requiring precise spatial and energy reconstruction in noisy environments, such as astrophysical signal processing or sensor network optimization, with potential transfer to financial time-series anomaly detection.",
-      "• Implementation Risk: Moderate due to reliance on simulated data with domain shift challenges; real-world deployment may require extensive calibration and robustness testing against unmodeled variations.",
-      "• Novelty: Strong integration of physics-informed GNNs with uncertainty estimation for probabilistic reconstruction, offering a hybrid approach that reduces training data requirements compared to purely data-driven methods."
-    ],
-    "verdict_cn": [
-      "• 创新点: 将物理知识融入图神经网络架构与输入数据，结合集成方法进行不确定性估计，实现概率性重建，减少对纯数据驱动方法的大规模训练集依赖。",
-      "• 实盘坑: 依赖模拟数据，存在仿真与现实域偏移风险，实际部署需大量校准和鲁棒性测试，可能面临未建模变异的挑战。",
-      "• 复现难度: 中等偏高，需构建复杂的图结构数据管道和物理约束模型，集成不确定性估计增加计算复杂度，但开源代码可降低门槛。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Accepted"
-    }
-  },
-  {
-    "id": "2602.23320v1",
-    "title": "ParamMem: Augmenting Language Agents with Parametric Reflective Memory",
-    "pdf_url": "https://arxiv.org/pdf/2602.23320v1",
-    "published": "2026-02-26",
-    "crawled_at": "2026-02-27 20:18:36",
-    "ai_score": 8.2,
-    "translated_title": "ParamMem：通过参数化反思记忆增强语言智能体",
-    "summary_en": [
-      "• Model Architecture: ParamMem is a parametric memory module that encodes cross-sample reflection patterns into model parameters, integrated with episodic and cross-sample memory in the ParamAgent framework to enable temperature-controlled sampling for diverse reflection generation.",
-      "• Data used: The paper evaluates on code generation, mathematical reasoning, and multi-hop question answering tasks, though specific datasets are not detailed in the abstract, implying standard benchmarks in these domains.",
-      "• Performance metrics: Extensive experiments show consistent improvements over state-of-the-art baselines across multiple tasks, with additional analysis indicating sample efficiency, weak-to-strong transfer across model scales, and self-improvement without external models."
-    ],
-    "summary_cn": [
-      "• 核心模型: ParamMem是一个参数化记忆模块，将跨样本反思模式编码到模型参数中，结合ParamAgent框架中的情景和跨样本记忆，通过温度控制采样实现多样化反思生成。",
-      "• 数据来源: 基于代码生成、数学推理和多跳问答任务进行评估，摘要中未指定具体数据集，可能使用这些领域的标准基准。",
-      "• 主要结论: 实验表明在多个任务上持续优于最先进基线，分析显示ParamMem具有样本效率、支持跨模型规模的弱到强迁移，且无需外部模型即可自我改进。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High potential for enhancing language agents in financial NLP applications, such as automated report generation or sentiment analysis, by reducing repetitive outputs and improving reasoning diversity, which could lead to more robust decision-making systems.",
-      "• Implementation Risk: Moderate risk due to reliance on temperature-controlled sampling, which may introduce instability in real-world deployments, and the need for extensive training data to encode effective reflection patterns, potentially limiting scalability.",
-      "• Novelty: Novel approach integrating parametric memory with episodic and cross-sample memory to address reflection diversity, offering a unique solution for self-improvement without external models, though builds on existing reflection-based agent frameworks."
-    ],
-    "verdict_cn": [
-      "• 创新点: 创新性地将参数化记忆与情景和跨样本记忆结合，通过温度控制采样解决反思多样性问题，提供无需外部模型的自我改进机制，但基于现有反思智能体框架。",
-      "• 实盘坑: 依赖温度控制采样可能在实际部署中引入不稳定性，且需要大量训练数据编码有效反思模式，可能限制可扩展性，增加实施复杂度。",
-      "• 复现难度: 中等难度，需要复现参数化记忆模块和集成框架，但基于标准NLP任务，代码和数据可能公开，技术细节需论文全文支持。"
-    ],
-    "ai_strategy": "NLP/LLM",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2602.23312v1",
-    "title": "Evaluating Zero-Shot and One-Shot Adaptation of Small Language Models in Leader-Follower Interaction",
-    "pdf_url": "https://arxiv.org/pdf/2602.23312v1",
-    "published": "2026-02-26",
-    "crawled_at": "2026-02-27 20:18:57",
-    "ai_score": 7.2,
-    "translated_title": "评估小语言模型在领导者-追随者交互中的零样本与单样本适应能力",
-    "summary_en": [
-      "• Model Architecture: Qwen2.5-0.5B small language model (SLM) with 0.5 billion parameters, evaluated under zero-shot and one-shot adaptation modes using prompt engineering and fine-tuning techniques.",
-      "• Data used: Novel benchmark dataset derived from published HRI database, augmented with synthetic samples to capture interaction-specific dynamics for leader-follower role classification.",
-      "• Performance metrics: Zero-shot fine-tuning achieved 86.66% classification accuracy with 22.2 ms latency per sample, significantly outperforming baseline and prompt-engineered approaches. One-shot modes showed performance degradation due to context length challenges."
-    ],
-    "summary_cn": [
-      "• 核心模型: 采用Qwen2.5-0.5B小语言模型（5亿参数），通过提示工程和微调两种策略，在零样本和单样本交互模式下进行领导者-追随者角色分类评估。",
-      "• 数据来源: 基于已发布的人机交互数据库构建新型基准数据集，通过合成样本增强以捕捉交互特定动态，专门用于角色分类任务。",
-      "• 主要结论: 零样本微调在保持低延迟（22.2毫秒/样本）的同时达到86.66%的分类准确率，显著优于基线和提示工程方法。单样本模式因上下文长度挑战出现性能下降。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate - demonstrates SLMs can achieve real-time role classification with low latency, potentially applicable to edge-based trading signal interpretation or client interaction routing systems where response time is critical.",
-      "• Implementation Risk: High - performance degradation in one-shot modes reveals architectural limitations for complex dialogue contexts; edge deployment requires careful latency-accuracy trade-off management in dynamic environments.",
-      "• Novelty: Limited - while application to HRI is novel, the core techniques (fine-tuning SLMs, zero/one-shot adaptation) are well-established in NLP research; main contribution is systematic benchmarking in this specific domain."
-    ],
-    "verdict_cn": [
-      "• 创新点: 有限 - 将小语言模型应用于人机交互角色分类具有场景创新性，但核心技术（微调、零/单样本适应）属于NLP常规方法；主要贡献在于该特定领域的系统化基准测试。",
-      "• 实盘坑: 高风险 - 单样本模式性能下降暴露了模型架构对复杂上下文的处理局限；边缘部署需精细管理延迟-准确率权衡，动态环境中稳定性存疑。",
-      "• 复现难度: 中等 - 使用公开模型和相对标准的方法论，但需要构建特定交互数据集和边缘部署环境；性能结果对上下文长度敏感，复现需严格控制实验条件。"
-    ],
-    "ai_strategy": "NLP/LLM",
-    "journal_info": {
-      "name": "ArXiv Preprint",
-      "status": "Preprint"
     }
   }
 ]
