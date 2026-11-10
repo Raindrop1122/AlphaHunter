@@ -1,5 +1,341 @@
 [
   {
+    "id": "2611.10498v1",
+    "title": "EmbodiedIntentBench: Benchmarking Intent-Driven Runtime Adaptation for Mobile Robotic Missions",
+    "pdf_url": "https://arxiv.org/pdf/2611.10498v1",
+    "published": "2026-11-07",
+    "crawled_at": "2026-11-10 02:25:39",
+    "ai_score": 6.5,
+    "translated_title": "EmbodiedIntentBench: 面向移动机器人任务的意图驱动运行时自适应基准测试",
+    "summary_en": [
+      "• Model Architecture: The benchmark provides a simulation framework coupling UAV workloads with causal, resource-accounted execution, where computation decisions affect mission time, resource use, and evidence collection. It evaluates fixed and adaptive perception strategies under varying urgency, connectivity, and battery conditions.",
+      "• Data used: Simulated UAV missions with multi-phase scenarios (e.g., Depot study) and replays using Jetson AGX Orin CPU and GPU profiles. Mission intent is represented through structured contracts for coverage, temporal evidence, reporting, urgency, and resources.",
+      "• Performance metrics: Mission success rate, target recall, task energy consumption, and aggregate mission success. Key findings: a high-recall configuration (87.5%) completes only 1 of 16 missions, while a lower-recall configuration completes 14; ignoring execution-induced observation loss reverses strategy ordering; intent-driven adaptation reduces modeled task energy by up to 28% with unchanged success."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出EmbodiedIntentBench基准，通过结构化契约（覆盖、时间证据、报告、紧急度、资源）表示任务意图，并将UAV工作负载与因果的、资源核算的执行过程耦合，评估固定和自适应感知策略。",
+      "• 数据来源: 基于模拟的UAV多阶段任务（如Depot研究）以及Jetson AGX Orin CPU和GPU配置的回放数据，涵盖不同紧急度、连接性和电池条件。",
+      "• 主要结论: 高召回率配置（87.5%）仅完成1/16任务，而低召回率配置完成14个；忽略执行引起的观测损失会提高总体任务成功率并逆转策略排序；意图驱动自适应在保持任务成功的同时降低建模任务能耗高达28%。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Limited direct alpha for financial markets; however, the framework's focus on intent-driven adaptation under resource constraints could inspire risk-management or resource-allocation algorithms in trading systems, but the connection is indirect.",
+      "• Implementation Risk: High risk in generalizing simulation results to real-world robotic missions due to simplified models; the benchmark's reliance on specific hardware profiles (Jetson) may not transfer to other platforms, and the causal execution model may miss complex real-world interactions.",
+      "• Novelty: Moderate novelty in integrating mission intent contracts with runtime adaptation evaluation; the ablation showing the impact of ignoring observation loss is insightful, but similar concepts exist in embodied AI and resource-aware computing."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将任务意图形式化为结构化契约，并耦合资源核算的执行过程，为移动机器人运行时自适应提供了可扩展的评估框架；揭示了高召回率策略在资源约束下可能导致任务失败的反直觉现象。",
+      "• 实盘坑: 模拟环境与真实世界差距大，硬件配置（Jetson）特定性强，结论难以直接迁移；忽略执行引起的观测损失会逆转策略排序，提示实际部署中需谨慎建模执行反馈。",
+      "• 复现难度: 中等偏高，需要搭建UAV模拟环境并集成Jetson硬件回放，但论文提供了基准框架，复现步骤相对清晰；然而，扩展至其他任务或硬件需大量适配工作。"
+    ],
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2611.10487v1",
+    "title": "GEAR: A GPU-Accelerated Global Solver for Bounded Continuous Nonlinear Programs via Linear Bound Propagation",
+    "pdf_url": "https://arxiv.org/pdf/2611.10487v1",
+    "published": "2026-11-07",
+    "crawled_at": "2026-11-10 02:25:47",
+    "ai_score": 7.5,
+    "translated_title": "GEAR: 基于线性界传播的GPU加速有界连续非线性规划全局求解器",
+    "summary_en": [
+      "• Model Architecture: GEAR leverages linear bound propagation from neural network verification to solve constrained nonlinear programs, with tighter linear relaxations for bilinear, quotient, and other nonlinear functions, and a projected augmented Lagrangian method for primal solutions.",
+      "• Data used: Evaluated on 505 bounded continuous NLP problems from GAMS and MINLPLib benchmarks, comparing against six global solvers including Gurobi, BARON, and SCIP.",
+      "• Performance metrics: Solves 421 problems within 180 seconds, outperforming all compared solvers; certifies 16 problems that no other solver can, particularly those with exponential, logarithmic, or trigonometric terms."
+    ],
+    "summary_cn": [
+      "• 核心模型: GEAR利用神经网络验证中的线性界传播技术，为有界连续非线性规划问题提供全局求解框架，包括针对双线性、商等非线性函数的更紧线性松弛，以及投影增广拉格朗日方法生成原始解。",
+      "• 数据来源: 在GAMS和MINLPLib基准的505个有界连续NLP问题上进行评估，与Gurobi、BARON、SCIP等六个全局求解器对比。",
+      "• 主要结论: 在180秒内求解421个问题，优于所有对比求解器；能证明16个其他求解器无法证明的问题，这些通常包含指数、对数或三角函数项。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for quantitative finance where global optimization of nonconvex problems (e.g., portfolio optimization with transaction costs, risk parity) is critical; GPU acceleration enables faster backtesting and real-time risk management.",
+      "• Implementation Risk: Integration with existing financial optimization pipelines may require significant engineering; GPU dependency and potential numerical stability issues in bound propagation could pose challenges.",
+      "• Novelty: Innovative cross-domain application of NN verification techniques to NLP, with tighter relaxations and a coupled primal-dual method; demonstrates practical speedups and superior performance on hard benchmarks."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将神经网络验证中的线性界传播技术迁移到非线性规划，提出更紧的线性松弛和投影增广拉格朗日方法，实现GPU加速的全局求解，在基准测试中超越商业求解器。",
+      "• 实盘坑: 金融优化问题往往需要低延迟和高可靠性，GPU求解器的稳定性和数值精度需进一步验证；与现有量化系统集成可能复杂。",
+      "• 复现难度: 中等偏高，需要深入理解界传播和增广拉格朗日方法，且依赖GPU硬件和CUDA实现，但论文提供了项目页面和可能代码，有助于复现。"
+    ],
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2611.10472v1",
+    "title": "Group-Conditional Conformal Risk Control: Exact Guarantees, Limits, and Overlapping Extensions",
+    "pdf_url": "https://arxiv.org/pdf/2611.10472v1",
+    "published": "2026-11-07",
+    "crawled_at": "2026-11-10 02:25:56",
+    "ai_score": 6.5,
+    "translated_title": "组条件共形风险控制：精确保证、局限性与重叠扩展",
+    "summary_en": "• Model Architecture: The paper proposes group-conditional conformal risk control (CRC) for disjoint and overlapping groups under bounded monotone losses. For disjoint groups, it establishes exact finite-sample conditional risk control and two-sided bounds, and identifies fundamental limitations from local support and calibration-rank granularity. For overlapping groups, it studies two exactly valid approaches: group-restricted calibration with union deployment, and direct calibration of the deployed prediction-set family.\n• Data used: The paper conducts experiments on synthetic and real data, including historical diabetic-retinopathy scores, to illustrate tradeoffs.\n• Performance metrics: The paper characterizes the union's limiting reconciliation gap, identifies conditions for its disappearance, and establishes sharp lower bounds for structured losses in product-form models. It also demonstrates a strict size advantage for direct calibration in an ordinal model. Experiments show that direct calibration can reduce prediction-set size, but efficiency depends on group structure, loss type, and shape fitting.\n• Key finding: Local support, reconciliation slack, and threshold heterogeneity determine efficiency, with neither approach uniformly dominating.",
+    "summary_cn": "• 核心模型: 本文研究了组条件共形风险控制（CRC），针对不相交组和重叠组，在有界单调损失下。对于不相交组，建立了精确的有限样本条件风险控制、组限制风险的双侧界，并指出了局部支撑和校准秩粒度带来的根本局限性。对于重叠组，研究了两种精确有效的方法：组限制校准后联合部署，以及直接校准部署的预测集族。\n• 数据来源: 实验使用了合成数据和真实数据，包括历史糖尿病视网膜病变评分，以说明权衡。\n• 主要结论: 刻画了联合方法的极限协调差距，确定了其消失的条件，并在特定乘积形式模型中为结构化损失建立了尖锐下界。在序数模型中展示了直接校准的严格大小优势。实验表明直接校准可以减少预测集大小，但效率取决于组结构、损失类型和形状拟合。总体而言，局部支撑、协调松弛和阈值异质性决定效率，两种方法没有一致占优。",
+    "verdict_en": "• Alpha Potential: The paper provides rigorous theoretical guarantees for group-conditional conformal risk control, which could be valuable for risk-sensitive applications such as healthcare and finance where group fairness and risk control are critical. However, the direct applicability to alpha generation in trading is limited, as it focuses on prediction set construction rather than return forecasting.\n• Implementation Risk: The methods require careful calibration and may be sensitive to model misspecification and group structure. The efficiency depends on factors like local support and reconciliation slack, which may be hard to estimate in practice. Overlapping groups introduce additional complexity and potential for unstable results.\n• Novelty: The paper offers a systematic study of group-conditional CRC with exact guarantees and limitations, extending to overlapping groups. The characterization of reconciliation gap and sharp lower bounds are novel contributions. However, the core ideas build on existing conformal prediction literature, and the practical impact may be incremental.\n• Overall: A solid theoretical contribution with potential for risk management applications, but not a direct alpha generator. Suitable for venues like NeurIPS or ICML.",
+    "verdict_cn": "• 创新点: 本文对组条件共形风险控制进行了系统研究，给出了精确的有限样本保证和根本局限性，并扩展到重叠组。联合方法的协调差距刻画和尖锐下界是新颖的理论贡献。\n• 实盘坑: 方法需要仔细校准，对模型错误设定和组结构敏感。效率依赖于局部支撑和协调松弛等因素，这些在实际中难以估计。重叠组引入额外复杂性，可能导致结果不稳定。在金融实盘中，直接用于生成阿尔法信号的价值有限，更适用于风险管理。\n• 复现难度: 理论部分较为复杂，需要较强的数学背景。实验部分涉及合成数据和真实数据，但未提供代码，复现可能需要大量工作。总体而言，复现难度中等偏高。",
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2611.10468v1",
+    "title": "Dynamic State Estimation from Sparse PMUs via Physics-Informed Graph Neural Operators",
+    "pdf_url": "https://arxiv.org/pdf/2611.10468v1",
+    "published": "2026-11-07",
+    "crawled_at": "2026-11-10 02:26:03",
+    "ai_score": 7.2,
+    "translated_title": "基于物理信息图神经算子的稀疏PMU动态状态估计",
+    "summary_en": [
+      "• Model Architecture: A physics-informed graph neural operator with a graph-attention encoder that processes sparse PMU measurements and imposes swing equations as hard constraints or soft constraints with a learned correction term.",
+      "• Data used: Trained on simulated measurements without state labels, using masked training where one PMU is hidden from input but kept in loss; evaluated on four transmission systems with detailed machine models.",
+      "• Performance metrics: Most accurate estimator that neither optimizes per scenario nor uses state labels, except on the smallest system with large model errors where tuned Kalman smoothers are better; faster and more accurate than hard-constrained moving-horizon estimation on the 118-bus system."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出物理信息图神经算子，包含图注意力编码器，将摇摆方程作为硬约束或带学习修正的软约束，实现单次前向传播估计所有发电机转子角和转速。",
+      "• 数据来源: 使用模拟测量数据训练，无需状态标签；采用掩码训练策略，在输入中隐藏一个PMU但在损失中保留，在四个输电系统上评估。",
+      "• 主要结论: 在无需逐场景优化且不使用状态标签的估计器中精度最高；在最小系统且模型误差大时，调优的卡尔曼平滑器更优；在118节点系统上比硬约束移动 Horizon 估计更快更准。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; could improve real-time grid monitoring and control, but direct alpha generation is limited as it focuses on state estimation rather than trading signals.",
+      "• Implementation Risk: High; requires accurate system models and PMU data, and performance degrades with large model errors on small systems; real-world deployment complexity.",
+      "• Novelty: Solid; combines graph neural operators with physics constraints and masked training for state estimation, showing promise over traditional methods in certain scenarios."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将图神经算子与物理约束（摇摆方程）结合，并引入掩码训练策略，在稀疏PMU条件下实现动态状态估计，具有一定新意。",
+      "• 实盘坑: 依赖精确的系统模型和参数，模型误差较大时在小系统上表现不如卡尔曼平滑器；实际电网中PMU数据质量和通信延迟可能影响效果。",
+      "• 复现难度: 中等偏高；需要构建详细的电力系统仿真环境，训练过程无需状态标签但需模拟测量数据，计算资源要求较高。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "IEEE Transactions on Power Systems",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2611.10466v1",
+    "title": "The Fast Tree Transform",
+    "pdf_url": "https://arxiv.org/pdf/2611.10466v1",
+    "published": "2026-11-07",
+    "crawled_at": "2026-11-10 02:26:09",
+    "ai_score": 6.5,
+    "translated_title": "快速树变换",
+    "summary_en": [
+      "• Model Architecture: The Fast Tree Transform is a locally-aggregated transform for arbitrary graph geometries that generalizes the Hadamard frequency transform and Haar wavelet transform on the circle, combining frequency and wavelet components.",
+      "• Data used: The paper does not specify any datasets; it is a theoretical/methodological contribution with potential applications in graph signal processing and geometric optimization.",
+      "• Performance metrics: The pure frequency part approximately diagonalizes the graph Laplacian, making it useful as a preconditioner; the full transform provides a slightly redundant representation enabling sparse representation of signals with edges and textures."
+    ],
+    "summary_cn": [
+      "• 核心模型: 快速树变换是一种针对任意图几何的局部聚合变换，推广了圆上的Hadamard频率变换和Haar小波变换，结合了频率和小波成分。",
+      "• 数据来源: 论文未指定任何数据集，属于理论/方法贡献，潜在应用于图信号处理和几何优化。",
+      "• 主要结论: 纯频率部分近似对角化图拉普拉斯矩阵，可作为预条件子；完整变换提供略微冗余的表示，能够稀疏表示包含边缘和纹理的信号。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the transform could improve graph-based optimization and signal processing, but direct alpha generation is not evident without application to financial graphs.",
+      "• Implementation Risk: High; requires deep understanding of graph Laplacians and transforms, and adaptation to financial data may be non-trivial.",
+      "• Novelty: Moderate; generalizes known transforms to arbitrary graphs, but similar ideas exist in graph signal processing literature."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将Hadamard频率变换和Haar小波变换推广到任意图几何，提出局部聚合的快速树变换，具有一定理论新颖性。",
+      "• 实盘坑: 缺乏实际数据验证，在金融图结构上的有效性和计算效率未知，直接应用风险高。",
+      "• 复现难度: 中等偏上，需要图拉普拉斯和变换理论背景，且无开源代码，复现需大量工程实现。"
+    ],
+    "ai_strategy": "Alpha-Factor",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2611.10464v1",
+    "title": "Beyond Discrete Ancestry Groups: Distribution-Aware In-Context Learning for Cancer Outcome Prediction Across the Genetic Ancestry Continuum",
+    "pdf_url": "https://arxiv.org/pdf/2611.10464v1",
+    "published": "2026-11-07",
+    "crawled_at": "2026-11-10 02:26:17",
+    "ai_score": 6.5,
+    "translated_title": "超越离散祖先群体：面向遗传祖先连续体的分布感知上下文学习用于癌症结果预测",
+    "summary_en": [
+      "• Model Architecture: Proposes Distribution-Aware In-Context Learning (DA-ICL), extending ancestry-discrete modeling to ancestry-continuum modeling by capturing nonstationary omics-endpoint relationships across the genetic continuum using an in-context learning foundation model.",
+      "• Data used: Omics-based cancer outcome prediction data, likely including genetic ancestry information and clinical endpoints, though specific datasets are not detailed in the abstract.",
+      "• Performance metrics: Theoretical analysis demonstrates superiority of ancestry-continuum over ancestry-discrete modeling; empirical results support the framework, but no specific metrics (e.g., AUC, accuracy) are provided in the abstract.",
+      "• Key innovation: Addresses the limitation of discrete ancestry groups by modeling continuous genetic distance and data distribution shifts, enabling efficient modeling via in-context learning."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出分布感知上下文学习（DA-ICL），将离散祖先建模扩展为祖先连续体建模，通过上下文学习基础模型捕捉遗传连续体上非平稳的组学-终点关系。",
+      "• 数据来源: 基于组学的癌症结果预测数据，可能包含遗传祖先信息和临床终点，但摘要未具体说明数据集。",
+      "• 主要结论: 理论分析证明祖先连续体建模优于离散建模，实证结果支持该框架，但摘要未提供具体性能指标（如AUC、准确率）。",
+      "• 创新点: 解决离散祖先群体的局限性，通过建模连续遗传距离和数据分布偏移，利用上下文学习实现高效建模。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate for biomedical investment; could improve personalized cancer outcome prediction by accounting for genetic ancestry continuum, potentially leading to better patient stratification and drug response prediction.",
+      "• Implementation Risk: High due to reliance on genetic ancestry data and omics data quality; model complexity and in-context learning may require substantial computational resources and careful validation.",
+      "• Novelty: Moderate to high; moves beyond discrete ancestry groups to continuum modeling, but in-context learning is increasingly common. Theoretical analysis adds credibility.",
+      "• Reproducibility: Source code available, but data availability and preprocessing details are unclear, which may hinder replication."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将祖先群体建模从离散扩展到连续体，利用上下文学习处理非平稳关系，理论分析支撑其优越性，在精准医疗领域有潜在价值。",
+      "• 实盘坑: 依赖高质量遗传祖先和组学数据，数据获取和预处理成本高；模型复杂，可能过拟合；临床转化需大量验证。",
+      "• 复现难度: 代码已开源，但数据未明确，复现需获取类似数据并调整预处理，难度中等偏高。",
+      "• 投资潜力: 对生物医药投资有中等吸引力，可能改善癌症预后预测，但需进一步实证和临床验证。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2611.10461v1",
+    "title": "Zeroth-Order Langevin Dynamics for Stochastic Nonconvex Optimization: Curvature Regularization and Non-Asymptotic Guarantees",
+    "pdf_url": "https://arxiv.org/pdf/2611.10461v1",
+    "published": "2026-11-07",
+    "crawled_at": "2026-11-10 02:26:24",
+    "ai_score": 6.5,
+    "translated_title": "零阶朗之万动力学用于随机非凸优化：曲率正则化与非渐近保证",
+    "summary_en": [
+      "• Model Architecture: Stochastic Zeroth-Order Langevin Dynamics (ZOLD) using only noisy function evaluations, with Gaussian smoothing that induces implicit Hessian-trace regularization.",
+      "• Data used: Theoretical analysis on stochastic nonconvex objectives; no empirical datasets, but assumptions allow non-uniform dependence on data stream.",
+      "• Performance metrics: Non-asymptotic excess-risk bounds for curvature-regularized objective and Wasserstein distance guarantees to Gibbs measure, without log-Sobolev or Poincaré inequalities."
+    ],
+    "summary_cn": [
+      "• 核心模型: 随机零阶朗之万动力学（ZOLD），仅使用噪声函数评估，通过高斯平滑隐式引入Hessian迹正则化。",
+      "• 数据来源: 理论分析针对随机非凸目标，无实际数据集，但允许数据流非均匀依赖的假设。",
+      "• 主要结论: 建立了曲率正则化目标的非渐近超额风险界，以及ZOLD迭代分布与吉布斯测度的Wasserstein距离保证，且不依赖对数Sobolev或庞加莱不等式。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Limited direct alpha; theoretical framework may inspire derivative-free optimization in low-data regimes, but practical impact unclear.",
+      "• Implementation Risk: High; requires careful tuning of smoothing and inverse temperature parameters, and assumptions may not hold in financial nonconvex landscapes.",
+      "• Novelty: Moderate; first non-asymptotic analysis combining excess-risk and Wasserstein guarantees for zeroth-order Langevin, but incremental over existing zeroth-order literature."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次同时建立零阶朗之万方法的曲率正则化超额风险界和Wasserstein保证，且放宽了对数Sobolev不等式依赖。",
+      "• 实盘坑: 高斯平滑引入的隐式正则化可能扭曲真实目标，参数耦合敏感，金融数据非凸性可能使假设失效。",
+      "• 复现难度: 高；理论复杂，需精确实现平滑与逆温度耦合，且缺乏实证验证。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2611.10455v1",
+    "title": "Bayesian Low-Rank Posteriors for Scalable Membership Inference",
+    "pdf_url": "https://arxiv.org/pdf/2611.10455v1",
+    "published": "2026-11-07",
+    "crawled_at": "2026-11-10 02:26:31",
+    "ai_score": 7.2,
+    "translated_title": "面向可扩展成员推理的贝叶斯低秩后验",
+    "summary_en": [
+      "• Model Architecture: The paper proposes a Bayesian approximation over low-rank adaptation (LoRA) parameters to construct virtual reference models from a single training run, using Stochastic Weight Averaging Gaussian (SWAG) for efficient posterior sampling.",
+      "• Data used: Evaluated on three downstream-adapted Vision-Language Models (VLMs) across two privacy-sensitive visual question answering tasks (Document VQA and Medical VQA), plus a controlled synthetic dataset to isolate pretraining effects.",
+      "• Performance metrics: The approach outperforms standard reference-based membership inference attacks while requiring only a single reference-model fine-tuning run, significantly reducing computational cost compared to shadow-model ensembles."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出在LoRA参数子空间上进行贝叶斯近似，利用SWAG从单次训练运行中构建后验，采样生成虚拟参考模型，替代传统影子模型集成。",
+      "• 数据来源: 在三个下游适配的视觉语言模型上评估，涉及两个隐私敏感的视觉问答任务（文档VQA和医疗VQA），并引入受控合成数据集以分离预训练知识的影响。",
+      "• 主要结论: 该方法在仅需一次参考模型微调的情况下，优于标准的基于参考模型的成员推理攻击，使大规模VLM的成员推理更加实用。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Limited direct alpha generation; primarily a privacy attack tool. Potential use in risk management for model auditing and compliance, but not a trading alpha source.",
+      "• Implementation Risk: Relies on LoRA subspace and SWAG approximation, which may not capture full model uncertainty; performance may degrade for models not fine-tuned with LoRA or with different architectures.",
+      "• Novelty: Moderate; combines existing techniques (LoRA, SWAG, membership inference) in a new way for scalability, but lacks theoretical breakthroughs."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将贝叶斯低秩后验与成员推理结合，用单次训练替代影子模型集成，降低了计算成本，为大规模VLM隐私攻击提供了实用方案。",
+      "• 实盘坑: 实际部署中，攻击效果依赖LoRA微调的质量和SWAG近似的准确性；对于非LoRA微调的模型或复杂架构，可能失效。",
+      "• 复现难度: 中等；需要复现LoRA微调和SWAG后验采样，但论文提供了详细方法，且代码可能开源，复现可行性较高。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2611.10445v1",
+    "title": "DiSARM: Diverse and Surprising Association Rule Mining with Large Language Models",
+    "pdf_url": "https://arxiv.org/pdf/2611.10445v1",
+    "published": "2026-11-07",
+    "crawled_at": "2026-11-10 02:26:39",
+    "ai_score": 6.5,
+    "translated_title": "DiSARM：基于大语言模型的多样且令人惊讶的关联规则挖掘",
+    "summary_en": [
+      "• Model Architecture: DiSARM is a hybrid framework that combines association rule mining (ARM) with large language models (LLMs) to assess subjective interestingness of rules, while maintaining statistical reliability and promoting diversity among selected rules.",
+      "• Data used: Experiments are conducted on three transactional datasets, though specific datasets are not named in the abstract.",
+      "• Performance metrics: The framework effectively combines statistical reliability with surprise and diversity, as demonstrated across the three datasets, offering a promising approach to exploratory data analysis from transactional data.",
+      "• Key innovation: Leveraging LLM world knowledge for subjective interestingness while addressing scalability and statistical reliability concerns through a hybrid approach."
+    ],
+    "summary_cn": [
+      "• 核心模型: DiSARM是一个混合框架，结合关联规则挖掘（ARM）与大语言模型（LLM），利用LLM的世界知识评估规则的主观有趣性，同时保持统计可靠性和促进所选规则的多样性。",
+      "• 数据来源: 在三个事务数据集上进行实验，摘要中未具体说明数据集名称。",
+      "• 主要结论: 该框架有效地结合了统计可靠性与惊喜度和多样性，为事务数据的探索性数据分析提供了一种有前景的方法。",
+      "• 创新点: 利用LLM世界知识进行主观有趣性评估，同时通过混合方法解决可扩展性和统计可靠性问题。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate. The method could enhance exploratory data analysis in finance (e.g., transaction data, fraud detection), potentially uncovering non-obvious patterns, but direct alpha generation is not demonstrated.",
+      "• Implementation Risk: High. Reliance on LLMs introduces scalability and reliability concerns; integration with ARM may be complex and computationally expensive for large datasets.",
+      "• Novelty: Moderate. Combining LLMs with ARM for subjective interestingness is relatively new, but the paper builds on prior ARM research and lacks deep financial application.",
+      "• Reproducibility: Medium. The abstract lacks details on datasets, LLM models used, and evaluation metrics, making replication challenging without further information."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将LLM的世界知识引入关联规则挖掘，评估主观有趣性，并兼顾多样性和统计可靠性，属于交叉创新。",
+      "• 实盘坑: LLM的推理成本高，难以处理大规模事务数据；主观有趣性可能引入偏差，且与金融收益无直接关联，实盘价值有限。",
+      "• 复现难度: 中等。摘要未提供数据集细节、LLM选型和评估指标，复现需大量实验调整。",
+      "• 潜在应用: 可用于金融交易数据的探索性分析，如异常检测、客户行为分析，但需进一步验证其在实际交易策略中的效用。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2611.10441v1",
+    "title": "Split and Bridge: Multimodal Generation via Diffusion Bridging",
+    "pdf_url": "https://arxiv.org/pdf/2611.10441v1",
+    "published": "2026-11-07",
+    "crawled_at": "2026-11-10 02:26:47",
+    "ai_score": 7.5,
+    "translated_title": "拆分与桥接：通过扩散桥接的多模态生成",
+    "summary_en": [
+      "• Model Architecture: Proposes Split and Bridge (SnB), a bottom-up framework that couples pretrained unimodal diffusion models at sampling time. It follows a shared diffusion trajectory up to a split point, then branches into modality-specific trajectories guided by a bridge module, avoiding joint training.",
+      "• Data used: Evaluated on standard benchmarks (PolyMNIST, CelebAMask-HQ) and more complex settings (PIE-Bench++, ROCO).",
+      "• Performance metrics: Achieves a strong balance between sample quality and coherence, and naturally extends to zero-shot tasks such as interleaved co-generation, image editing, and style coupling/decoupling.",
+      "• Key innovation: Enables plug-and-play reuse of powerful pretrained models without joint training, making it scalable and adaptable, complementing top-down multimodal approaches."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出Split and Bridge (SnB)自底向上框架，在采样时耦合预训练的单模态扩散模型。通过共享扩散轨迹至分裂点，然后由桥接模块引导分支到模态特定轨迹，无需联合训练。",
+      "• 数据来源: 在标准基准（PolyMNIST, CelebAMask-HQ）和更复杂设置（PIE-Bench++, ROCO）上评估。",
+      "• 主要结论: 在样本质量和一致性之间取得强平衡，并自然扩展到零样本任务，如交错协同生成、图像编辑和风格耦合/解耦。",
+      "• 关键创新: 实现预训练模型的即插即用重用，无需联合训练，使其可扩展且易于适应，补充了现有的自顶向下多模态方法。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate. The method's scalability and plug-and-play nature could enable rapid adaptation to new modalities, potentially reducing development costs for multimodal generative applications in finance (e.g., generating synthetic financial reports with charts).",
+      "• Implementation Risk: Low to moderate. Relies on pretrained diffusion models; bridge module training may require careful tuning. Code is available, reducing reproducibility risk.",
+      "• Novelty: The bottom-up approach of coupling pretrained models at sampling time is a fresh perspective compared to joint training, but the core idea of diffusion bridging is not entirely new. The split point concept adds originality.",
+      "• Practicality: Strong for zero-shot tasks and style manipulation, which could be useful for data augmentation and scenario generation in quantitative research."
+    ],
+    "verdict_cn": [
+      "• 创新点: 自底向上框架，在采样时耦合预训练模型，避免联合训练，支持即插即用，扩展性强。分裂点概念有一定新意。",
+      "• 实盘坑: 桥接模块的训练可能需精细调参，且依赖预训练模型的质量。在金融领域应用需验证生成数据的真实性和一致性。",
+      "• 复现难度: 中等。代码已开源，但需要复现多模态生成任务，计算资源要求较高。",
+      "• 应用前景: 在零样本任务和风格控制方面有潜力，可用于数据增强和场景生成，但直接用于交易信号生成需进一步探索。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
     "id": "2611.08487v1",
     "title": "User Embeddings are Superpositions of Interpretable Behavioral Modes",
     "pdf_url": "https://arxiv.org/pdf/2611.08487v1",
@@ -43554,360 +43890,6 @@
     "journal_info": {
       "name": "NeurIPS",
       "status": "Accepted"
-    }
-  },
-  {
-    "id": "2603.24594v1",
-    "title": "Polynomial Speedup in Diffusion Models with the Multilevel Euler-Maruyama Method",
-    "pdf_url": "https://arxiv.org/pdf/2603.24594v1",
-    "published": "2026-03-25",
-    "crawled_at": "2026-03-26 20:23:39",
-    "ai_score": 7.8,
-    "translated_title": "扩散模型中多级欧拉-丸山方法的多项式加速",
-    "summary_en": [
-      "• Model Architecture: Introduces Multilevel Euler-Maruyama (ML-EM) method for SDE/ODE solving using hierarchical approximators f¹,...,fᵏ with increasing accuracy/cost, requiring few evaluations of most accurate fᵏ and many of cheaper f¹,...,fᵏ⁻¹.",
-      "• Data used: CelebA dataset downscaled to 64x64 resolution for image generation experiments.",
-      "• Performance metrics: Achieves up to 4x speedup in image generation with measured γ≈2.5 in HTMC regime, theoretically improving compute from ε⁻⁽γ⁺¹⁾ to ε⁻γ (equivalent to single drift evaluation cost).",
-      "• Key innovation: Enables sampling with computational equivalent of single largest UNet evaluation by training UNets of increasing sizes as different levels."
-    ],
-    "summary_cn": [
-      "• 核心模型: 提出多级欧拉-丸山方法，使用精度/成本递增的层次近似器f¹,...,fᵏ求解SDE/ODE，仅需少量最精确fᵏ评估和大量廉价f¹,...,fᵏ⁻¹评估。",
-      "• 数据来源: 使用CelebA数据集下采样至64x64分辨率进行图像生成实验。",
-      "• 主要结论: 在HTMC机制下实现高达4倍图像生成加速，测得γ≈2.5，理论计算复杂度从ε⁻⁽γ⁺¹⁾提升至ε⁻γ（相当于单次漂移评估成本）。",
-      "• 方法实现: 通过训练尺寸递增的UNet作为不同层级，实现采样计算成本等效于单次最大UNet评估。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate - polynomial speedup in diffusion sampling could reduce inference costs for image/video generation models, but limited to specific HTMC regime (γ>2) which may not generalize across all architectures.",
-      "• Implementation Risk: High - requires training multiple UNet variants with controlled accuracy hierarchy, introducing additional training complexity and potential error propagation between levels.",
-      "• Novelty: Significant - first application of multilevel Monte Carlo methods to diffusion model sampling with theoretical guarantees, though builds on established numerical SDE literature.",
-      "• Scalability concerns: Paper only demonstrates 64x64 CelebA; claims of 'stronger speedups for larger networks' remain speculative without empirical validation on modern diffusion architectures (e.g., Stable Diffusion scale)."
-    ],
-    "verdict_cn": [
-      "• 创新点: 显著 - 首次将多级蒙特卡洛方法应用于扩散模型采样并给出理论保证，但基于成熟数值SDE文献构建。",
-      "• 实盘坑: 高 - 需训练多个精度受控的UNet变体，引入额外训练复杂度及层级间误差传播风险；HTMC机制(γ>2)假设在实际架构中可能不普遍成立。",
-      "• 复现难度: 中等偏高 - 需要精确实现层级精度控制及误差传播管理，CelebA 64x64实验相对简单，但扩展到实际生产规模（如1024x1024）存在不确定性。",
-      "• 应用局限: 仅验证64x64低分辨率图像；对现代扩散架构（如十亿参数模型）的加速效果仍属推测，需进一步实证。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2603.24587v1",
-    "title": "DreamerAD: Efficient Reinforcement Learning via Latent World Model for Autonomous Driving",
-    "pdf_url": "https://arxiv.org/pdf/2603.24587v1",
-    "published": "2026-03-25",
-    "crawled_at": "2026-03-26 20:23:58",
-    "ai_score": 8.2,
-    "translated_title": "DreamerAD：基于潜在世界模型的高效强化学习用于自动驾驶",
-    "summary_en": [
-      "• Model Architecture: DreamerAD is a latent world model framework that compresses diffusion sampling from 100 steps to 1 using shortcut forcing, recursive multi-resolution step compression, and Gaussian vocabulary sampling for GRPO, enabling efficient reinforcement learning with 80x speedup.",
-      "• Data used: The model is trained on real-world driving data, leveraging denoised latent features from video generation models to reduce costs and safety risks associated with direct RL training on such data.",
-      "• Performance metrics: Achieves 87.7 EPDMS on NavSim v2, establishing state-of-the-art performance, and demonstrates 80x speedup in diffusion inference latency from 2s/frame to much faster rates, maintaining visual interpretability."
-    ],
-    "summary_cn": [
-      "• 核心模型: DreamerAD采用潜在世界模型框架，通过捷径强制、递归多分辨率步压缩和高斯词汇采样等技术，将扩散采样从100步压缩至1步，实现80倍加速。",
-      "• 数据来源: 基于真实世界驾驶数据进行训练，利用视频生成模型的去噪潜在特征，降低直接强化学习训练的成本和安全风险。",
-      "• 主要结论: 在NavSim v2上达到87.7 EPDMS的顶尖性能，扩散推理延迟从2秒/帧大幅提升，保持视觉可解释性，证明潜在空间强化学习在自动驾驶中的有效性。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High potential for generating alpha in autonomous driving and robotics applications by enabling efficient, safe simulation-based training that reduces real-world data dependency and accelerates policy iteration.",
-      "• Implementation Risk: Moderate to high risk due to reliance on complex latent representations and diffusion models, which may introduce instability in real-time systems and require extensive validation for safety-critical domains.",
-      "• Novelty: Significant novelty as the first latent world model framework for autonomous driving RL, introducing innovative mechanisms like shortcut forcing and Gaussian vocabulary sampling to address diffusion latency issues."
-    ],
-    "verdict_cn": [
-      "• 创新点: 首次提出用于自动驾驶强化学习的潜在世界模型框架，通过捷径强制和高斯词汇采样等创新机制，有效解决扩散模型推理延迟问题，具有突破性。",
-      "• 实盘坑: 依赖复杂潜在表示和扩散模型，在实时系统中可能引入不稳定性，安全关键领域需大量验证，实盘部署风险较高。",
-      "• 复现难度: 中等偏高，涉及多分辨率压缩和潜在特征处理，需要专业硬件和数据集，但开源代码可能降低门槛。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2603.24580v1",
-    "title": "Retrieval Improvements Do Not Guarantee Better Answers: A Study of RAG for AI Policy QA",
-    "pdf_url": "https://arxiv.org/pdf/2603.24580v1",
-    "published": "2026-03-25",
-    "crawled_at": "2026-03-26 20:24:17",
-    "ai_score": 7.2,
-    "translated_title": "检索改进不保证更好答案：RAG在AI政策问答中的研究",
-    "summary_en": [
-      "• Model Architecture: Combines ColBERT-based retriever fine-tuned with contrastive learning and a generator aligned using Direct Preference Optimization (DPO) for domain adaptation.",
-      "• Data used: AI Governance and Regulatory Archive (AGORA) corpus with 947 AI policy documents, synthetic queries, and collected pairwise preferences for training.",
-      "• Performance metrics: Evaluates retrieval quality, answer relevance, and faithfulness; finds domain-specific fine-tuning improves retrieval but not consistently end-to-end QA performance.",
-      "• Key finding: Stronger retrieval can lead to more confident hallucinations when relevant documents are absent, highlighting component improvements don't guarantee reliable answers."
-    ],
-    "summary_cn": [
-      "• 核心模型: 结合基于ColBERT的检索器（通过对比学习微调）和生成器（使用直接偏好优化对齐），针对政策领域进行适配。",
-      "• 数据来源: AI治理与监管档案（AGORA）语料库，包含947份AI政策文档，使用合成查询和收集的成对偏好进行训练。",
-      "• 主要结论: 领域特定微调提升检索指标，但未一致改善端到端问答性能；更强检索在相关文档缺失时可能导致更自信的幻觉。",
-      "• 实际意义: 组件改进不一定转化为更可靠答案，为动态监管语料库的问答系统设计提供实用见解。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate; identifies critical failure mode in RAG systems where retrieval improvements can degrade answer quality, offering insights for risk-aware deployment in policy analysis.",
-      "• Implementation Risk: High; system reliability remains challenging in dense legal domains, with hallucinations persisting despite technical enhancements, limiting expert usage.",
-      "• Novelty: Low to moderate; applies established RAG techniques to AI policy domain but reveals counterintuitive interaction between retrieval and generation, adding practical caution to literature."
-    ],
-    "verdict_cn": [
-      "• 创新点: 较低至中等；将成熟RAG技术应用于AI政策领域，但揭示了检索与生成间的反直觉交互，为文献添加实用警示。",
-      "• 实盘坑: 高；在密集法律领域中系统可靠性仍具挑战，幻觉问题持续存在，技术改进有限，影响专家级使用。",
-      "• 复现难度: 中等；依赖AGORA语料库和合成数据，但方法基于标准技术，复现可行但需领域数据获取。"
-    ],
-    "ai_strategy": "NLP/LLM",
-    "journal_info": {
-      "name": "ArXiv Preprint",
-      "status": "Preprint"
-    }
-  },
-  {
-    "id": "2603.24567v1",
-    "title": "Trust Region Constrained Bayesian Optimization with Penalized Constraint Handling",
-    "pdf_url": "https://arxiv.org/pdf/2603.24567v1",
-    "published": "2026-03-25",
-    "crawled_at": "2026-03-26 20:24:34",
-    "ai_score": 7.5,
-    "translated_title": "基于惩罚约束处理的信任区域约束贝叶斯优化",
-    "summary_en": [
-      "• Model Architecture: Combines penalty-based constraint handling (converting constrained to unconstrained via penalty functions), trust region strategy (local search around current best solution), and Expected Improvement acquisition function for point selection.",
-      "• Data used: Synthetic and real-world high-dimensional constrained optimization problems (specific datasets not detailed in abstract).",
-      "• Performance metrics: Evaluated against state-of-the-art methods; shows ability to identify high-quality feasible solutions with fewer evaluations and stable performance across settings."
-    ],
-    "summary_cn": [
-      "• 核心模型: 采用惩罚函数将约束优化转为无约束问题，结合信任区域策略（局部搜索当前最优解附近）和期望改进采集函数进行点选择。",
-      "• 数据来源: 合成及现实世界的高维约束优化问题（摘要未详述具体数据集）。",
-      "• 主要结论: 相比现有方法，能以更少评估次数找到高质量可行解，并在不同设置下保持稳定性能。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate; method could enhance optimization in high-dimensional finance problems (e.g., portfolio optimization with constraints), but abstract lacks concrete financial applications.",
-      "• Implementation Risk: High; trust region and penalty tuning require careful parameterization; may struggle with noisy or non-stationary real-world data.",
-      "• Novelty: Limited; integrates existing techniques (penalty methods, trust regions, Bayesian optimization) rather than introducing breakthrough innovations."
-    ],
-    "verdict_cn": [
-      "• 创新点: 有限；主要整合现有技术（惩罚方法、信任区域、贝叶斯优化），缺乏突破性新理论。",
-      "• 实盘坑: 高；信任区域和惩罚参数需精细调参，在噪声或非平稳现实数据中可能失效。",
-      "• 复现难度: 中等；方法描述清晰，但依赖未公开的合成/现实数据集，可能影响复现一致性。"
-    ],
-    "ai_strategy": "Alpha-Factor",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Accepted"
-    }
-  },
-  {
-    "id": "2603.24562v1",
-    "title": "Scaling Recurrence-aware Foundation Models for Clinical Records via Next-Visit Prediction",
-    "pdf_url": "https://arxiv.org/pdf/2603.24562v1",
-    "published": "2026-03-25",
-    "crawled_at": "2026-03-26 20:24:53",
-    "ai_score": 8.2,
-    "translated_title": "通过下次就诊预测扩展面向临床记录的复发感知基础模型",
-    "summary_en": [
-      "• Model Architecture: RAVEN uses a generative pretraining strategy based on Recurrence-Aware next-Visit Event prediction, autoregressively generating tokenized clinical events for the next visit conditioned on patient history, with regularization on predicting repeated events.",
-      "• Data used: Leverages a dataset of over one million unique individuals with structured electronic health records (EHRs), focusing on sequential EHR data.",
-      "• Performance metrics: Evaluated via zero-shot prediction for forecasting disease incidence, rivals fully fine-tuned representation-based Transformer models, outperforms simulation-based next-token approaches, and generalizes to external cohorts under lossy mappings."
-    ],
-    "summary_cn": [
-      "• 核心模型: RAVEN采用基于复发感知下次就诊事件预测的生成式预训练策略，自回归生成基于患者历史的标记化临床事件，并正则化重复事件预测。",
-      "• 数据来源: 使用超过一百万独特个体的结构化电子健康记录数据集，专注于序列化EHR数据。",
-      "• 主要结论: 在零样本预测疾病发生率方面表现优异，媲美全微调Transformer模型，优于基于模拟的下一个标记方法，并在损失映射下泛化至外部队列。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High potential for generating predictive signals in healthcare investment strategies by forecasting disease incidence and patient trajectories, with zero-shot capability reducing fine-tuning costs.",
-      "• Implementation Risk: Moderate risk due to data constraints in compute-saturated regimes, reliance on large-scale EHR datasets with privacy concerns, and potential pitfalls in metric inflation from repeated events.",
-      "• Novelty: Novel in addressing recurrence-aware prediction in EHRs, highlighting evaluation pitfalls, and exploring scaling behaviors in data-limited settings, though builds on existing Transformer architectures."
-    ],
-    "verdict_cn": [
-      "• 创新点: 创新性地处理EHR中的复发感知预测，揭示评估指标因重复事件而膨胀的陷阱，并在数据受限环境中探索扩展行为，但基于现有Transformer架构。",
-      "• 实盘坑: 中等风险，因计算饱和环境中的数据限制、依赖大规模EHR数据集带来的隐私问题，以及重复事件可能导致指标虚高。",
-      "• 复现难度: 中等难度，需要访问大规模EHR数据和计算资源，但方法描述清晰，正则化和泛化测试可复现。"
-    ],
-    "ai_strategy": "NLP/LLM",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Accepted"
-    }
-  },
-  {
-    "id": "2603.24533v1",
-    "title": "UI-Voyager: A Self-Evolving GUI Agent Learning via Failed Experience",
-    "pdf_url": "https://arxiv.org/pdf/2603.24533v1",
-    "published": "2026-03-25",
-    "crawled_at": "2026-03-26 20:25:15",
-    "ai_score": 8.2,
-    "translated_title": "UI-Voyager：通过失败经验学习的自进化GUI代理",
-    "summary_en": [
-      "• Model Architecture: Two-stage self-evolving mobile GUI agent with Rejection Fine-Tuning (RFT) for continuous co-evolution of data/models and Group Relative Self-Distillation (GRSD) for dense step-level supervision from successful trajectories.",
-      "• Data used: Autonomous learning loop without manual annotation, utilizing failed trajectories and group rollouts from AndroidWorld environment for training and evaluation.",
-      "• Performance metrics: 81.0% Pass@1 success rate on AndroidWorld benchmarks, outperforming recent baselines and exceeding human-level performance with a 4B parameter model.",
-      "• Key innovation: Addresses inefficient learning from failures and ambiguous credit assignment in long-horizon GUI tasks through self-distillation techniques."
-    ],
-    "summary_cn": [
-      "• 核心模型: 两阶段自进化移动GUI代理，第一阶段采用拒绝微调实现数据与模型的持续协同进化，第二阶段引入组相对自蒸馏技术构建密集步骤级监督。",
-      "• 数据来源: 完全自主循环学习，无需人工标注，利用AndroidWorld环境中的失败轨迹和组滚动数据进行训练和评估。",
-      "• 主要结论: 在AndroidWorld基准测试中达到81.0% Pass@1成功率，超越近期基线方法并超过人类水平表现，4B参数模型验证了方法的有效性。",
-      "• 技术突破: 通过自蒸馏技术解决了长视野GUI任务中失败学习效率低和稀疏奖励下信用分配模糊的问题。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High - self-evolving capability without manual annotation reduces operational costs and enables continuous improvement in GUI automation tasks, potentially applicable to automated trading interface interaction.",
-      "• Implementation Risk: Medium - reliance on MLLMs introduces computational overhead and black-box uncertainty; AndroidWorld environment may not fully represent real-world GUI complexity.",
-      "• Novelty: Significant - RFT+GRSD framework addresses fundamental limitations in existing GUI agents; group-based distillation for credit assignment is conceptually innovative.",
-      "• Scalability concerns: 4B parameter model requires substantial resources; generalization to diverse GUI platforms beyond Android needs validation."
-    ],
-    "verdict_cn": [
-      "• 创新点: 拒绝微调与组相对自蒸馏的结合在GUI代理领域具有突破性，实现了完全自主的失败经验学习循环，无需昂贵的人工标注。",
-      "• 实盘坑: 依赖多模态大语言模型带来计算成本高和可解释性差的风险；AndroidWorld环境与真实交易界面的差异可能导致性能衰减。",
-      "• 复现难度: 中等偏高 - 需要构建完整的自主学习基础设施和AndroidWorld测试环境；组滚动数据收集和自蒸馏实现技术门槛较高。",
-      "• 应用局限: 当前仅验证于移动GUI环境，扩展到桌面端或专业交易平台需要额外适配；实时性能要求可能限制实际部署。"
-    ],
-    "ai_strategy": "NLP/LLM",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2603.24524v1",
-    "title": "No Single Metric Tells the Whole Story: A Multi-Dimensional Evaluation Framework for Uncertainty Attributions",
-    "pdf_url": "https://arxiv.org/pdf/2603.24524v1",
-    "published": "2026-03-25",
-    "crawled_at": "2026-03-26 20:25:36",
-    "ai_score": 7.8,
-    "translated_title": "单一指标无法反映全貌：不确定性归因的多维度评估框架",
-    "summary_en": [
-      "• Model Architecture: The paper proposes a multi-dimensional evaluation framework for uncertainty attribution methods, aligning with the Co-12 framework for XAI evaluation. It introduces five properties: correctness, consistency, continuity, compactness, and conveyance (a novel property specific to uncertainty attributions).",
-      "• Data used: Experiments are conducted on both tabular and image datasets, though specific datasets are not named in the abstract. The framework is tested with eight metrics across combinations of uncertainty quantification and feature attribution methods.",
-      "• Performance metrics: The framework includes eight metrics implementing the five properties. Experiments show gradient-based methods outperform perturbation-based approaches in consistency and conveyance, and Monte-Carlo dropconnect outperforms Monte-Carlo dropout in most metrics. Inter-method agreement remains low, indicating no single metric is sufficient."
-    ],
-    "summary_cn": [
-      "• 核心模型: 提出一个基于Co-12 XAI评估框架的多维度不确定性归因评估体系，包含正确性、一致性、连续性、紧凑性和传导性五个属性，其中传导性是针对不确定性归因定制的新属性。",
-      "• 数据来源: 在表格数据和图像数据上进行实验，但摘要中未具体说明数据集名称。测试了不确定性量化和特征归因方法的多种组合。",
-      "• 主要结论: 梯度方法在一致性和传导性上优于扰动方法；Monte-Carlo dropconnect在多数指标上优于Monte-Carlo dropout；不同方法间一致性低，表明单一指标不足以评估不确定性归因质量。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate. The framework could help identify more reliable uncertainty attribution methods for risk-sensitive trading models, potentially improving model interpretability in high-stakes financial applications.",
-      "• Implementation Risk: High. The abstract lacks details on specific datasets, model architectures, and computational requirements, making direct application to financial data uncertain. Low inter-method agreement suggests practical deployment challenges.",
-      "• Novelty: High. The introduction of 'conveyance' as a tailored property for uncertainty attributions and the systematic multi-dimensional evaluation approach are significant contributions to XAI research, addressing a gap in current literature."
-    ],
-    "verdict_cn": [
-      "• 创新点: 高。提出传导性这一针对不确定性归因的新评估属性，并构建系统化的多维度评估框架，填补了XAI领域在不确定性解释评估方面的空白。",
-      "• 实盘坑: 高。摘要未提供具体数据集和模型细节，方法间一致性低，在金融数据上的泛化性和计算效率存疑，直接应用于实盘风险大。",
-      "• 复现难度: 中等。基于Co-12框架和标准评估属性，但需要实现多种不确定性量化和归因方法，实验设计较复杂，对计算资源有一定要求。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Accepted"
-    }
-  },
-  {
-    "id": "2603.24518v1",
-    "title": "TuneShift-KD: Knowledge Distillation and Transfer for Fine-tuned Models",
-    "pdf_url": "https://arxiv.org/pdf/2603.24518v1",
-    "published": "2026-03-25",
-    "crawled_at": "2026-03-26 20:25:58",
-    "ai_score": 7.5,
-    "translated_title": "TuneShift-KD：微调模型的知识蒸馏与迁移",
-    "summary_en": [
-      "• Model Architecture: TuneShift-KD uses an iterative process to automatically distill specialized knowledge from a fine-tuned model to a target model by identifying prompts where perplexity differences between base and fine-tuned models indicate specialized knowledge, then generating synthetic training datasets without requiring discriminators or original training data.",
-      "• Data used: The method requires only the initial fine-tuned and base models and a few representative prompts; it creates synthetic datasets based on perplexity analysis, eliminating the need for access to original specialized data, which may be unavailable due to privacy or commercial restrictions.",
-      "• Performance metrics: Experiments show that models fine-tuned using TuneShift-KD achieve higher accuracy than prior approaches, enabling effective transfer of specialized knowledge and ease of deployment, though specific numerical metrics are not detailed in the abstract."
-    ],
-    "summary_cn": [
-      "• 核心模型: TuneShift-KD 采用迭代过程，通过分析基础模型与微调模型在困惑度上的差异来识别专业化知识，自动从微调模型蒸馏知识到目标模型，无需训练判别器或原始数据集。",
-      "• 数据来源: 仅需初始微调模型、基础模型和少量代表性提示；基于困惑度分析生成合成训练数据集，避免了对原始专业化数据的依赖，解决了隐私或商业限制导致数据不可用的问题。",
-      "• 主要结论: 实验表明，使用TuneShift-KD微调的模型比先前方法具有更高准确性，实现了专业化知识的有效迁移和便捷部署，提升了模型在新架构上的适应性。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate; the method could enhance transfer learning efficiency in NLP/LLM applications, potentially reducing data dependency and improving model adaptation in specialized domains like finance or healthcare, but direct alpha generation is limited without integration into trading strategies.",
-      "• Implementation Risk: High; reliance on perplexity differences may be sensitive to model architectures and prompt quality, and synthetic data generation could introduce biases or errors, requiring careful validation in real-world scenarios with diverse datasets.",
-      "• Novelty: High; the approach introduces a novel insight using perplexity differences to automate knowledge distillation without original data, offering a practical solution for transferring specialized knowledge across evolving LLM models, though it builds on existing fine-tuning and distillation techniques."
-    ],
-    "verdict_cn": [
-      "• 创新点: 高；利用困惑度差异自动识别专业化知识，无需原始数据即可进行知识蒸馏，为LLM模型间的知识迁移提供了新颖的自动化方法，具有实际应用价值。",
-      "• 实盘坑: 高；困惑度分析对模型架构和提示质量敏感，合成数据可能引入偏差，在复杂金融场景中需严格验证，部署风险较大。",
-      "• 复现难度: 中等；方法基于公开的微调技术，但需要精细调整迭代过程和困惑度阈值，对计算资源和专业知识要求较高，可能影响大规模应用。"
-    ],
-    "ai_strategy": "NLP/LLM",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2603.24517v1",
-    "title": "AVO: Agentic Variation Operators for Autonomous Evolutionary Search",
-    "pdf_url": "https://arxiv.org/pdf/2603.24517v1",
-    "published": "2026-03-25",
-    "crawled_at": "2026-03-26 20:26:21",
-    "ai_score": 8.7,
-    "translated_title": "AVO：用于自主进化搜索的智能体变异算子",
-    "summary_en": [
-      "• Model Architecture: AVO replaces traditional evolutionary operators (mutation, crossover) with autonomous coding agents that operate in a self-directed loop, consulting lineage, domain knowledge, and execution feedback to propose, repair, critique, and verify implementation edits.",
-      "• Data used: The evaluation focuses on attention kernels, specifically multi-head attention and grouped-query attention, tested on NVIDIA Blackwell (B200) GPUs using cuDNN and FlashAttention-4 as benchmarks.",
-      "• Performance metrics: Over 7 days of autonomous evolution, AVO discovered kernels that outperform cuDNN by up to 3.5% and FlashAttention-4 by up to 10.5% for multi-head attention; for grouped-query attention, after 30 minutes of adaptation, gains reached up to 7.0% over cuDNN and 9.3% over FlashAttention-4."
-    ],
-    "summary_cn": [
-      "• 核心模型: AVO采用自主编码智能体替代传统进化算子，形成自导向循环，可参考谱系、领域知识和执行反馈来提出、修复、批判和验证实现编辑。",
-      "• 数据来源: 评估基于注意力内核，特别是多头注意力和分组查询注意力，在NVIDIA Blackwell (B200) GPU上测试，以cuDNN和FlashAttention-4为基准。",
-      "• 主要结论: 在7天自主进化中，AVO发现的内核在多头上优于cuDNN达3.5%、优于FlashAttention-4达10.5%；分组查询注意力经30分钟适应后，增益达cuDNN的7.0%和FlashAttention-4的9.3%。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High potential for generating alpha in algorithmic trading by optimizing low-latency kernels for high-frequency strategies, though direct financial application is not tested; the 3.5-10.5% performance gains on GPU hardware could translate to faster execution speeds in quantitative models.",
-      "• Implementation Risk: Moderate to high risk due to reliance on autonomous agents that may introduce unpredictable bugs or require extensive tuning; the 7-day evolution time and hardware-specific optimization (NVIDIA Blackwell) limit scalability and increase operational costs.",
-      "• Novelty: High novelty in elevating LLMs from candidate generators to full variation operators, enabling self-directed search without fixed heuristics; this represents a significant advance over prior LLM-in-the-loop evolutionary pipelines, though it builds on existing evolutionary and agent-based methods."
-    ],
-    "verdict_cn": [
-      "• 创新点: 将LLM从候选生成器提升为完整变异算子，实现无固定启发式的自导向搜索，超越先前LLM-in-the-loop进化流程，是进化算法与智能体技术的重大融合。",
-      "• 实盘坑: 依赖自主智能体可能引入不可预测错误，需大量调优；7天进化时间和NVIDIA Blackwell硬件特定优化限制可扩展性，增加运营成本，金融应用未经验证。",
-      "• 复现难度: 高难度，需高级GPU硬件（如B200）、复杂智能体循环设置和领域知识库，代码和实验细节可能不完整，适合研究机构而非快速部署。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2603.24511v1",
-    "title": "Claudini: Autoresearch Discovers State-of-the-Art Adversarial Attack Algorithms for LLMs",
-    "pdf_url": "https://arxiv.org/pdf/2603.24511v1",
-    "published": "2026-03-25",
-    "crawled_at": "2026-03-26 20:26:41",
-    "ai_score": 8.5,
-    "translated_title": "Claudini：自主研究发现针对LLM的最先进对抗攻击算法",
-    "summary_en": [
-      "• Model Architecture: Uses an autoresearch-style pipeline powered by Claude Code, starting from existing attack implementations like GCG and iteratively generating new algorithms.",
-      "• Data used: Evaluates on CBRN queries against GPT-OSS-Safeguard-20B and held-out models like Meta-SecAlign-70B, with comparisons to 30+ existing methods.",
-      "• Performance metrics: Achieves up to 40% attack success rate on CBRN queries (vs. ≤10% for baselines) and 100% ASR against Meta-SecAlign-70B (vs. 56% for best baseline).",
-      "• Generalization: Discovered algorithms transfer directly to held-out models, demonstrating strong cross-model applicability."
-    ],
-    "summary_cn": [
-      "• 核心模型: 采用基于Claude Code的自主研究流水线，从GCG等现有攻击方法出发，迭代生成新算法。",
-      "• 数据来源: 在GPT-OSS-Safeguard-20B的CBRN查询和Meta-SecAlign-70B等保留模型上进行评估，对比30多种现有方法。",
-      "• 主要结论: 新算法在CBRN查询上攻击成功率高达40%（基线≤10%），对Meta-SecAlign-70B达到100% ASR（基线最佳56%）。",
-      "• 泛化能力: 发现的算法可直接迁移到保留模型，展现强跨模型适用性。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High for security-focused hedge funds; automated discovery of adversarial attacks could inform risk models and exploit vulnerabilities in AI-driven trading systems.",
-      "• Implementation Risk: Moderate; while algorithms are released, real-world deployment requires careful testing to avoid unintended consequences or regulatory issues.",
-      "• Novelty: Significant; demonstrates automated AI research for security, extending prior work like AutoAdvExBench, with practical outperformance over numerous baselines.",
-      "• Scalability: Promising; white-box adversarial red-teaming provides dense feedback, suggesting the pipeline could scale to other optimization tasks."
-    ],
-    "verdict_cn": [
-      "• 创新点: 显著；展示AI安全研究的自动化能力，扩展了AutoAdvExBench等工作，在性能上大幅超越现有方法。",
-      "• 实盘坑: 中等；算法已开源，但实际部署需谨慎测试，以避免意外后果或监管问题，特别是在金融AI系统中。",
-      "• 复现难度: 低；代码和基线实现已公开，但依赖Claude Code等LLM代理，可能增加操作复杂性和成本。",
-      "• 应用前景: 高；对关注安全的对冲基金有潜力，可增强风险模型或利用AI交易系统漏洞，但需伦理考量。"
-    ],
-    "ai_strategy": "NLP/LLM",
-    "journal_info": {
-      "name": "ArXiv Preprint",
-      "status": "Preprint"
     }
   }
 ]
