@@ -1,5 +1,337 @@
 [
   {
+    "id": "2611.21608v1",
+    "title": "Latent Lattice Language Models",
+    "pdf_url": "https://arxiv.org/pdf/2611.21608v1",
+    "published": "2026-11-16",
+    "crawled_at": "2026-11-18 01:54:16",
+    "ai_score": 7.8,
+    "translated_title": "潜在格语言模型",
+    "summary_en": [
+      "• Model Architecture: Introduces a Lattice of Latents—per-layer horizontal latent streams that run recurrently over time alongside the vertical residual stream, directly conditioning attention, KV-cache writes, MLP computation, and decoding.",
+      "• Data used: Trained on 20B tokens from FineWeb-Edu dataset using Transformer and hybrid architectures (Gated DeltaNet, Mamba-2, Triadic GDN, GDN-Mamba-2).",
+      "• Performance metrics: A 406M-parameter Lattice model reduces validation perplexity from 15.41 to 14.40 over a parameter-matched Transformer; with hyper-connections and input residuals, perplexity drops to 13.61; Lattice-GDN and Lattice-Triadic-GDN outperform baselines with 4x larger native states."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出潜在格（Lattice of Latents），即每层水平潜在流，沿时间循环运行，与垂直残差流并行，直接调节注意力、KV缓存写入、MLP计算和解码。",
+      "• 数据来源: 使用FineWeb-Edu数据集的200亿token，在Transformer及混合架构（Gated DeltaNet、Mamba-2、Triadic GDN、GDN-Mamba-2）上训练。",
+      "• 主要结论: 406M参数的Lattice模型将验证困惑度从15.41降至14.40；结合超连接和输入残差后降至13.61；在多种架构上均提升性能，Lattice-GDN和Lattice-Triadic-GDN甚至超越原生状态大4倍的基线。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate—perplexity gains are consistent but modest (7-12% relative), and real-world trading alpha from LLM improvements is indirect and uncertain.",
+      "• Implementation Risk: High—requires substantial compute (20B tokens) and architectural modifications; integration with existing trading pipelines is non-trivial.",
+      "• Novelty: Solid—introduces a new axis of scaling (persistent per-layer state) that complements existing residual enhancements and hybrid architectures, with empirical validation across multiple models."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出潜在格作为新的计算扩展轴，与残差流增强和混合架构互补，实验验证充分。",
+      "• 实盘坑: 困惑度提升幅度有限（约7-12%相对），对实际交易信号的增益不明确；训练成本高，架构改动大，落地到生产环境需大量工程适配。",
+      "• 复现难度: 中等偏高—需要20B token训练和多种架构实现，但论文提供了详细配置，复现可行性尚可。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2611.21602v1",
+    "title": "Quantifying the added value of human forecaster discussions for tropical cyclone intensity prediction",
+    "pdf_url": "https://arxiv.org/pdf/2611.21602v1",
+    "published": "2026-11-16",
+    "crawled_at": "2026-11-18 01:54:23",
+    "ai_score": 6.5,
+    "translated_title": "量化人类预报员讨论对热带气旋强度预测的附加价值",
+    "summary_en": [
+      "• Model Architecture: End-to-end deep learning framework for text (likely transformer-based) combined with SHIPS predictors via ensemble of five models; also tests ERA5 wind fields.",
+      "• Data used: 637 Atlantic and eastern North Pacific tropical cyclones from 2002-2023; NHC discussions, 13 SHIPS environmental predictors, ERA5 10-meter winds.",
+      "• Performance metrics: Discussions alone comparable to SHIPS for 24h intensity forecasts; adding discussions reduces MAE from 9.89 to 8.90 kt (2022-2023), CI excludes zero; prediction intervals under-cover during rapid intensification."
+    ],
+    "summary_cn": [
+      "• 核心模型: 端到端深度学习文本模型（可能基于Transformer）与SHIPS预测器集成，并测试ERA5风场影响。",
+      "• 数据来源: 2002-2023年637个大西洋和东太平洋热带气旋，NHC讨论文本、13个SHIPS环境预测器、ERA5 10米风场。",
+      "• 主要结论: 仅讨论文本对24小时强度预测的价值与SHIPS相当；加入讨论信息后，2022-2023年最大持续风速预测MAE从9.89降至8.90节，置信区间排除零；快速增强期间预测区间覆盖率低于90%。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Limited for financial markets; methodology for incorporating expert text into numerical models could inspire alternative data strategies in commodities/insurance.",
+      "• Implementation Risk: Retrospective study with reanalysis data and timing mismatch (discussions issued ≥3h after valid time) limits operational validity; results not directly actionable.",
+      "• Novelty: Moderate; demonstrates value of human forecaster discussions via deep learning, but similar multimodal fusion approaches exist; domain-specific application is incremental."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将专家讨论文本与数值预测器结合，量化人类判断的附加价值，为多模态学习在专业领域的应用提供案例。",
+      "• 实盘坑: 回顾性研究使用再分析数据，且讨论发布时间滞后至少3小时，实际业务中无法实时获取，操作价值低。",
+      "• 复现难度: 中等；需获取NHC讨论文本和SHIPS数据，模型架构未详细说明，但端到端深度学习框架可复现。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2611.21600v1",
+    "title": "How VLMs Plan What's Next",
+    "pdf_url": "https://arxiv.org/pdf/2611.21600v1",
+    "published": "2026-11-16",
+    "crawled_at": "2026-11-18 01:54:30",
+    "ai_score": 7.8,
+    "translated_title": "视觉语言模型如何规划下一步",
+    "summary_en": "• Model Architecture: The paper identifies a four-part mechanism in VLMs: binding heads (match text tokens to image regions), progress signal (cursor tracking written regions), select step (choose nearest unwritten region), and gaze heads (execute pointer and extract concept). Validated via causal patching in Qwen3-VL models.\n• Data used: Synthetic visual retrieval task, natural photographs, and multiple languages; models from 2B to 32B parameters.\n• Performance metrics: Causal patching validates each mechanism component; alternative hypotheses tested and ruled out; mechanism generalizes across input formats, images, and languages.\n• Key finding: The planning mechanism is consistent across model sizes and modalities, enabling layer-by-layer and token-by-token analysis of multi-step task planning.",
+    "summary_cn": "• 核心模型: 论文揭示了VLM的四部分规划机制：绑定头（将文本token与图像区域匹配）、进度信号（光标跟踪已写区域）、选择步骤（选择最近未写区域）、注视头（执行指针并提取概念）。在Qwen3-VL模型上通过因果修补验证。\n• 数据来源: 合成视觉检索任务、自然照片和多语言输入；模型规模从2B到32B参数。\n• 主要结论: 因果修补验证了每个机制组件，排除了替代假设；机制在不同输入格式、图像和语言间具有泛化性；规划机制在所有模型规模中一致存在。",
+    "verdict_en": "• Alpha Potential: High for interpretability-driven trading strategies; understanding VLM planning can improve multimodal financial document analysis and automated report generation.\n• Implementation Risk: Requires deep model internals access; causal patching is computationally intensive; generalization to financial domain-specific images (charts, tables) untested.\n• Novelty: Strong; first detailed mechanistic characterization of VLM planning, with causal validation and cross-scale consistency.\n• Reproducibility: Code and project page available; synthetic task may limit direct financial application; but methodology transferable.",
+    "verdict_cn": "• 创新点: 首次对VLM的规划机制进行详细的机制性刻画，并通过因果修补验证，跨模型规模一致。\n• 实盘坑: 需要深入模型内部，计算成本高；在金融领域特定图像（图表、表格）上的泛化性未经验证；合成任务与真实金融场景差距大。\n• 复现难度: 代码和项目页面公开，但合成任务可能限制直接金融应用；方法论可迁移，但需大量适配。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2611.21599v1",
+    "title": "Hyperlyve: Parallelized Enumeration and Exact Lyapunov Stability Certification for Deep ReLU Networks",
+    "pdf_url": "https://arxiv.org/pdf/2611.21599v1",
+    "published": "2026-11-16",
+    "crawled_at": "2026-11-18 01:54:38",
+    "ai_score": 7.5,
+    "translated_title": "Hyperlyve：深度ReLU网络的并行枚举与精确Lyapunov稳定性认证",
+    "summary_en": [
+      "• Model Architecture: Hyperlyve learns continuous piecewise-affine (CPA) neural Lyapunov functions within a CEGIS loop, using a parallel algorithm to enumerate hyperplane arrangements from ReLU activations of deep networks.",
+      "• Data used: Evaluated on nonlinear dynamical systems with neural network controllers; no external datasets, but benchmarks against state-of-the-art verifiers.",
+      "• Performance metrics: Enumerates ReLU networks over 150 times faster than competing tools, enabling stability proofs for systems previously intractable.",
+      "• Theoretical contribution: Formally characterizes the CPA neural Lyapunov verification problem as co-NP-complete, filling a complexity gap."
+    ],
+    "summary_cn": [
+      "• 核心模型: Hyperlyve在CEGIS循环中学习并形式化认证连续分段仿射（CPA）神经Lyapunov函数，关键创新是并行枚举深度ReLU网络激活形成的超平面排列。",
+      "• 数据来源: 在带有神经网络控制器的非线性动力系统上进行评估，未使用外部数据集，但与最先进的验证器进行了基准测试。",
+      "• 主要结论: 枚举ReLU网络的速度比竞争工具快150倍以上，能够证明当前最先进验证器难以处理的系统的渐近稳定性。",
+      "• 理论贡献: 形式化证明了CPA神经Lyapunov验证问题是co-NP完全的，填补了文献中的关键空白。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low direct alpha; stability certification is more relevant for risk management and robust control than for generating trading signals.",
+      "• Implementation Risk: High; requires expertise in formal verification and neural network analysis, and scalability to high-dimensional systems remains a concern.",
+      "• Novelty: Moderate to high; parallel enumeration and co-NP-completeness result are novel, but the application domain is niche for finance.",
+      "• Practicality: Limited immediate use in high-frequency trading or alpha generation, but could be valuable for ensuring safety of AI-driven trading systems."
+    ],
+    "verdict_cn": [
+      "• 创新点: 并行枚举超平面排列和co-NP完全性证明具有理论新颖性，但应用领域与金融阿尔法挖掘关联较弱。",
+      "• 实盘坑: 认证过程计算复杂，难以扩展到高维系统；且稳定性认证不直接转化为交易信号，实盘价值有限。",
+      "• 复现难度: 高；需要深厚的形式化验证和神经网络分析背景，代码和实验设置可能复杂。",
+      "• 应用场景: 更适合风险管理和控制系统安全认证，而非高频交易或阿尔法因子挖掘。"
+    ],
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2611.21598v1",
+    "title": "Mitigating Catastrophic Forgetting with Physics-Indexed Specialist Memory: the Evolutionary Neuroplastic Agent",
+    "pdf_url": "https://arxiv.org/pdf/2611.21598v1",
+    "published": "2026-11-16",
+    "crawled_at": "2026-11-18 01:54:45",
+    "ai_score": 5.5,
+    "translated_title": "基于物理索引专家记忆的灾难性遗忘缓解：进化神经可塑性智能体",
+    "summary_en": [
+      "• Model Architecture: Evolutionary Neuroplastic Agent (ENA) combines evolutionary search to generate specialist neural networks without gradients, archives policies by detected dynamic regime, and retrieves them via Bayesian policy reuse.",
+      "• Data used: Evaluated in non-stationary CartPole and HalfCheetah environments with 30 replicates for CartPole ablation.",
+      "• Performance metrics: Complete architecture achieved 83.2% mean success rate across five test environments in CartPole; showed most consistent retention among variants that learned harder environments; retrieval rule affected performance; adapted slower than PPO on CartPole and achieved lower returns than SAC on HalfCheetah.",
+      "• Limitations: Evidence concerns complete architecture, does not isolate gradient-free optimization as cause of retention, and does not establish superiority over other continual-learning methods."
+    ],
+    "summary_cn": [
+      "• 核心模型: 进化神经可塑性智能体（ENA）结合进化搜索生成无梯度专家网络，按检测到的动态机制归档策略，并通过贝叶斯策略重用进行检索。",
+      "• 数据来源: 在非平稳的CartPole和HalfCheetah环境中评估，CartPole消融实验使用30次重复。",
+      "• 主要结论: 完整架构在五个测试环境中平均成功率达83.2%；在学会更难环境的变体中表现出最一致的保留；检索规则影响性能；在CartPole上适应慢于PPO，在HalfCheetah上回报低于SAC。",
+      "• 局限性: 证据仅涉及完整架构，未分离无梯度优化对保留的因果作用，也未证明优于其他持续学习方法。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Limited for direct financial alpha; the method addresses continual RL but shows inferior performance to PPO and SAC in benchmarks, suggesting low immediate trading applicability.",
+      "• Implementation Risk: High risk due to slow adaptation and lower returns; complexity of evolutionary search and Bayesian retrieval may introduce instability in live trading environments.",
+      "• Novelty: Moderate novelty in combining evolutionary specialists with physics-indexed memory, but similar concepts exist in continual learning; ablation does not isolate key components."
+    ],
+    "verdict_cn": [
+      "• 创新点: 结合进化搜索专家与物理索引记忆，有一定新意，但类似概念在持续学习领域已存在；消融实验未分离关键组件的作用。",
+      "• 实盘坑: 适应速度慢于PPO，回报低于SAC，在实盘交易中可能表现不佳；进化搜索和贝叶斯检索的复杂性可能引入不稳定性。",
+      "• 复现难度: 中等，需要实现进化搜索和贝叶斯策略重用，但环境非平稳性设置可能难以精确复现；代码未提及开源。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2611.21597v1",
+    "title": "Optimal Autoregressive Chain-of-Thought Learning via Bagging",
+    "pdf_url": "https://arxiv.org/pdf/2611.21597v1",
+    "published": "2026-11-16",
+    "crawled_at": "2026-11-18 01:54:52",
+    "ai_score": 7.2,
+    "translated_title": "通过Bagging实现最优自回归思维链学习",
+    "summary_en": [
+      "• Model Architecture: A bagging-based ensemble of autoregressive next-token generators trained to be chain-of-thought (CoT) consistent on bootstrap samples, with majority voting and optional distillation into a single generator.",
+      "• Data used: Chain-of-thought demonstrations of length T generated by the target function f, with theoretical analysis for binary and finite token sets; no specific real-world dataset mentioned.",
+      "• Performance metrics: Achieves optimal sample complexity O((d_VC + log(1/δ))/ε) for binary tokens, independent of T; for finite tokens, optimal up to a log|Σ| factor using Graph dimension; ensemble size O(log(T/δ)); distillation requires n log(nT) unlabeled prompts."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于Bagging的集成方法，对自回归生成器进行多数投票，并可通过蒸馏压缩为单个生成器。",
+      "• 数据来源: 使用由目标函数生成的思维链演示数据，理论分析涵盖二值及有限词表场景，未涉及具体真实数据集。",
+      "• 主要结论: 二值词表下达到最优样本复杂度O((d_VC+log(1/δ))/ε)，与思维链长度T无关；有限词表下使用图维度，复杂度最优至多差log|Σ|因子；集成规模O(log(T/δ))；蒸馏需n log(nT)无标签提示。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Theoretical guarantees for CoT learning could improve sample efficiency in LLM training, but direct trading alpha is limited without empirical validation on financial data.",
+      "• Implementation Risk: Bagging and distillation may introduce computational overhead; reliance on bootstrap samples and majority voting could be sensitive to noise in CoT demonstrations.",
+      "• Novelty: Provides optimal sample complexity bounds for CoT learning, bridging VC theory and autoregressive models; the bagging approach is simple yet theoretically grounded."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次为思维链学习提供最优样本复杂度理论保证，将VC维理论扩展到自回归模型，Bagging方法简单且理论扎实。",
+      "• 实盘坑: 缺乏金融领域实证，理论假设可能在实际数据中不成立；集成和蒸馏增加计算成本，且对噪声敏感。",
+      "• 复现难度: 理论部分需较强数学背景，实验部分未提供代码或数据集，复现难度中等偏高。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2611.21596v1",
+    "title": "SADL: On the Demand-Supply Geometry of Representation Collapse",
+    "pdf_url": "https://arxiv.org/pdf/2611.21596v1",
+    "published": "2026-11-16",
+    "crawled_at": "2026-11-18 01:55:00",
+    "ai_score": 7.5,
+    "translated_title": "SADL：表征坍缩的供需几何",
+    "summary_en": [
+      "• Model Architecture: SADL (Supply And Demand Loss) is a novel regularization method for Joint-Embedding Predictive Architectures (JEPAs) that directly constrains the encoder when the representation differences demanded by the projector output exceed what the encoder can supply, without adding auxiliary networks or parameters.",
+      "• Data used: Evaluated on LeWorldModel (LeWM) and INTACT for control tasks (single-task and four-task joint training) and on four image datasets for classification.",
+      "• Performance metrics: Reduces collapse rate from 50% to 0% over ten random seeds; after one epoch, encoder effective rank is 3.4-6.4x baseline and latent prediction error is 1/20-1/303 of baseline; INTACT achieves >95% mean search-free control success; consistently improves accuracy and stability on image datasets."
+    ],
+    "summary_cn": [
+      "• 核心模型: SADL（供需损失）是一种针对联合嵌入预测架构（JEPA）的新型正则化方法，当投影器输出所要求的表征差异超过编码器所能提供的差异时，直接对编码器施加约束，且不引入辅助网络或额外参数。",
+      "• 数据来源: 在控制任务（单任务和四任务联合训练）的LeWorldModel（LeWM）和INTACT上评估，并在四个图像数据集上进行分类实验。",
+      "• 主要结论: 在十个随机种子下将坍缩率从50%降至0%；训练一个epoch后，编码器有效秩为基线的3.4-6.4倍，潜在预测误差降至基线的1/20-1/303；INTACT在多种需求正则化器下平均无搜索控制成功率超过95%；在图像数据集上一致提升准确率和稳定性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: The method addresses a fundamental issue in JEPA-based models, potentially enabling more stable and efficient representation learning for control and classification tasks, which could lead to improved performance in downstream financial prediction tasks that rely on robust representations.",
+      "• Implementation Risk: The approach is architecture-agnostic and introduces no additional parameters, making it easy to integrate; however, the effectiveness may depend on the choice of Demand Regularizer and the specific task, requiring some tuning.",
+      "• Novelty: The supply-demand perspective on representation collapse is novel and provides a principled way to balance regularization, though it builds upon existing ideas of preventing collapse in self-supervised learning."
+    ],
+    "verdict_cn": [
+      "• 创新点: 从供需几何角度分析表征坍缩，提出SADL方法，在编码器层面直接约束，无需辅助网络或参数，思路新颖且实用。",
+      "• 实盘坑: 方法在控制任务和图像分类上表现良好，但尚未在金融时间序列数据上验证；实际应用中需注意需求正则化器的选择，可能需针对不同任务调整。",
+      "• 复现难度: 方法简单，易于实现，但需要理解JEPA架构和供需平衡的概念；论文提供了在多个任务上的实验结果，复现难度中等。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2611.21594v1",
+    "title": "Surrogate-Assisted Compact-Model Extraction for SKY130 CMOS at 77 K",
+    "pdf_url": "https://arxiv.org/pdf/2611.21594v1",
+    "published": "2026-11-16",
+    "crawled_at": "2026-11-18 01:55:07",
+    "ai_score": 4.5,
+    "translated_title": "面向77K下SKY130 CMOS的代理辅助紧凑模型提取",
+    "summary_en": [
+      "• Model Architecture: A neural surrogate of NGSpice maps BSIM4 parameters and device geometry to full I-V characteristics, enabling efficient parameter extraction.",
+      "• Data used: Measured I-V curves of SkyWater 130 nm transistors at 77 K across 18 device geometries.",
+      "• Performance metrics: Two searches (7 and 43 parameters) reduce in-sample mean relative RMSE by 17% and 26% versus released cards; 43-parameter search has lower overall error but higher error on some curves."
+    ],
+    "summary_cn": [
+      "• 核心模型: 使用NGSpice的神经代理模型，将BSIM4参数和器件几何映射到完整的I-V特性，加速参数提取。",
+      "• 数据来源: 基于SkyWater 130 nm晶体管在77 K下的实测I-V曲线，覆盖18种器件几何。",
+      "• 主要结论: 7参数和43参数搜索分别将样本内平均相对RMSE降低17%和26%；43参数整体误差更低，但部分曲线误差仍高于原模型。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low direct alpha; enables cryogenic circuit design for quantum computing, but no trading strategy or financial data involved.",
+      "• Implementation Risk: High risk of overfitting to 18 geometries; surrogate may not generalize; limited validation on out-of-sample data.",
+      "• Novelty: Moderate; surrogate-assisted extraction is known, but application to SKY130 at 77 K is niche."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将神经代理模型用于低温紧凑模型提取，结合NGSpice仿真，有一定工程创新。",
+      "• 实盘坑: 与量化交易无关，无法直接产生阿尔法；模型泛化能力存疑，仅18个几何样本易过拟合。",
+      "• 复现难度: 中等，需要NGSpice和实测数据，但代码未公开，复现依赖具体工艺库。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2611.21584v1",
+    "title": "CertiSum: Bitwise-Identical MXFP4 Training Across Platforms and Parallelism Layouts",
+    "pdf_url": "https://arxiv.org/pdf/2611.21584v1",
+    "published": "2026-11-16",
+    "crawled_at": "2026-11-18 01:55:15",
+    "ai_score": 7.5,
+    "translated_title": "CertiSum：跨平台和并行布局的位级相同MXFP4训练",
+    "summary_en": [
+      "• Model Architecture: CertiSum introduces a certification mechanism for MXFP4 matrix multiplication, leveraging the insight that native FP32 accumulation of MXFP4 products is often exact. It collects statistics during quantization to certify results, recomputes uncertified outputs exactly, and uses exact kernels where certification rarely succeeds, ensuring bitwise invariance across parallelism layouts and GPU vendors.",
+      "• Data used: Experiments are conducted on Qwen3-8B-Base with 200-step training runs, and on three 8B-14B models using the FineWeb-Edu dataset on AMD MI350X GPUs.",
+      "• Performance metrics: CertiSum preserves training states bit for bit across AMD MI350X and NVIDIA GB200, and across changes in data, tensor, and context parallelism. It adds 11.8-60.5% to training-step latency relative to non-exact MXFP4 at larger input shapes, with speedups up to 1.24x over BF16 and 1.70x over deterministic BF16."
+    ],
+    "summary_cn": [
+      "• 核心模型: CertiSum通过认证机制确保MXFP4矩阵乘法的位级确定性，利用FP32累加通常精确的特性，在量化时收集统计信息进行认证，对未认证输出精确重算，并在认证成功率低时使用精确内核，实现跨并行布局和GPU厂商的位级不变性。",
+      "• 数据来源: 使用Qwen3-8B-Base进行200步训练实验，并在AMD MI350X上使用FineWeb-Edu数据集对三个8B-14B模型进行测试。",
+      "• 主要结论: CertiSum在AMD MI350X和NVIDIA GB200之间以及不同并行布局下保持训练状态位级一致；相比非精确MXFP4，在较大输入形状下训练步延迟增加11.8-60.5%，但相比BF16加速最高1.24倍，相比确定性BF16加速最高1.70倍。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: CertiSum addresses a critical reproducibility issue in low-precision training, which is essential for reliable model auditing and debugging. The ability to maintain bitwise identical results across platforms could facilitate more robust model development and deployment, potentially leading to more stable alpha generation in LLM-based strategies.",
+      "• Implementation Risk: The added latency (11.8-60.5%) may be prohibitive for some training pipelines, especially at scale. The certification mechanism's overhead could vary with model size and data distribution, requiring careful tuning. Dependence on specific hardware (AMD MI350X, NVIDIA GB200) may limit generalizability.",
+      "• Novelty: The approach is novel in exploiting the exactness of FP32 accumulation for MXFP4 products and providing a certification framework. However, the concept of deterministic training is not new; the specific application to MXFP4 and cross-platform invariance is a significant contribution."
+    ],
+    "verdict_cn": [
+      "• 创新点: 利用FP32累加MXFP4乘积通常精确的特性，设计认证机制确保位级确定性，实现跨平台和并行布局的训练一致性，这在低精度训练领域具有创新性。",
+      "• 实盘坑: 训练延迟增加最高达60.5%，可能影响大规模训练效率；认证机制的开销随模型和数据变化，需仔细调优；硬件依赖性较强，泛化性待验证。",
+      "• 复现难度: 需要特定硬件（AMD MI350X和NVIDIA GB200）和MXFP4支持，复现门槛较高；但论文提供了详细方法，理论上可复现。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2611.21571v1",
+    "title": "DynSurvX: Time-Resolved Explanations for Dynamic Survival Predictions",
+    "pdf_url": "https://arxiv.org/pdf/2611.21571v1",
+    "published": "2026-11-16",
+    "crawled_at": "2026-11-18 01:55:22",
+    "ai_score": 6.5,
+    "translated_title": "DynSurvX：动态生存预测的时间分辨解释",
+    "summary_en": [
+      "• Model Architecture: DynSurvX is a model-agnostic explainability framework based on Shapley values, employing a hierarchical two-phase strategy to identify influential longitudinal features and refine their temporal importance adaptively.",
+      "• Data used: Evaluated on simulated data and two clinical datasets with mixed static and longitudinal covariates, demonstrating robustness across prediction settings.",
+      "• Performance metrics: Achieves 41-80% reduction in computation time relative to temporal explanation baseline, with varying agreement with theoretical importance across models (closer for better-performing models).",
+      "• Key contribution: Provides time-resolved explanations that evolve with new patient data, enabling fine-grained interpretation while reducing computational cost."
+    ],
+    "summary_cn": [
+      "• 核心模型: DynSurvX 是一个基于 Shapley 值的模型无关解释框架，采用分层两阶段策略，先识别有影响力的纵向特征，再自适应细化其时间重要性。",
+      "• 数据来源: 在模拟数据和两个临床数据集上进行评估，包含静态和纵向协变量，并在不同预测设置下展现稳健性。",
+      "• 主要结论: 相比时间解释基线，计算时间减少 41-80%，且与理论重要性的一致性随模型性能提升而提高，在真实场景中提供临床可解释的见解。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Limited direct alpha; primarily an interpretability tool for clinical survival models, not a trading strategy. Potential indirect value in risk management if applied to financial survival analysis.",
+      "• Implementation Risk: Model-agnostic nature reduces risk, but reliance on Shapley values may introduce computational overhead for large-scale longitudinal data; clinical validation needed.",
+      "• Novelty: Moderate; hierarchical two-phase strategy for time-resolved explanations is incremental but practical, addressing computational cost in dynamic survival settings.",
+      "• Reproducibility: Likely high given clear methodology and use of standard Shapley values; code may be available upon request."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出分层两阶段策略，结合 Shapley 值实现时间分辨解释，在动态生存预测中平衡细粒度与计算效率，具有一定方法创新。",
+      "• 实盘坑: 主要面向临床生存分析，直接应用于金融领域需适配；解释的稳定性依赖模型性能，且 Shapley 值计算可能成为瓶颈。",
+      "• 复现难度: 中等偏低，方法描述清晰，基于标准 Shapley 值，但需获取临床数据集进行完整复现。"
+    ],
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2611.19218v1",
     "title": "Neural Dual Bounds: Valid-by-Construction JGLP Warm-Starts for MAP and Constrained MAP",
     "pdf_url": "https://arxiv.org/pdf/2611.19218v1",
@@ -43479,350 +43811,6 @@
     "journal_info": {
       "name": "NeurIPS",
       "status": "Accepted"
-    }
-  },
-  {
-    "id": "2604.01216v1",
-    "title": "LAtent Phase Inference from Short time sequences using SHallow REcurrent Decoders (LAPIS-SHRED)",
-    "pdf_url": "https://arxiv.org/pdf/2604.01216v1",
-    "published": "2026-04-01",
-    "crawled_at": "2026-04-02 20:22:30",
-    "ai_score": 7.8,
-    "translated_title": "基于浅层循环解码器的短时序潜在相位推断（LAPIS-SHRED）",
-    "summary_en": [
-      "• Model Architecture: LAPIS-SHRED employs a three-stage modular pipeline: (1) a pre-trained SHRED model maps sparse sensor time-histories into a structured latent space using simulation data, (2) a temporal sequence model propagates latent states forward/backward in time to span unobserved regions, and (3) deployment combines frozen SHRED and temporal models to reconstruct/forecast full spatiotemporal trajectories from short observational windows.",
-      "• Data used: The model is trained entirely on simulation data across six complex spatio-temporal physics experiments, including turbulent flows, multiscale propulsion physics, volatile combustion transients, and satellite-derived environmental fields, with evaluation on real-world sparse sensor measurements.",
-      "• Performance metrics: The framework demonstrates bidirectional inference, data assimilation, and multiscale reconstruction capabilities, accommodating extreme observational constraints like single-frame terminal inputs, and is highlighted as lightweight and modular for operational settings with physical/logistical limitations."
-    ],
-    "summary_cn": [
-      "• 核心模型: LAPIS-SHRED采用三阶段模块化架构：预训练的SHRED模型将稀疏传感器时间序列映射到结构化潜在空间，时序模型在潜在空间中传播状态以覆盖未观测时段，部署时结合冻结模型从短观测窗口重建或预测完整时空轨迹。",
-      "• 数据来源: 模型完全基于模拟数据进行训练，涵盖六个复杂时空物理实验，如湍流、多尺度推进物理、挥发性燃烧瞬变和卫星环境场，并在真实世界稀疏传感器测量上评估。",
-      "• 主要结论: 该框架支持双向推断、数据同化和多尺度重建，能处理极端观测约束（如单帧终端输入），被强调为轻量级、模块化，适用于受物理或后勤限制的操作环境。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate; the model's ability to reconstruct full dynamics from sparse, short-term observations could enhance predictive modeling in finance for high-frequency or event-driven strategies, but direct application to market data is untested.",
-      "• Implementation Risk: High; reliance on simulation data for training may not generalize well to noisy, non-stationary financial time series, and the modular structure adds complexity in real-world deployment with latency and scalability concerns.",
-      "• Novelty: Moderate; the modular approach combining latent space mapping and temporal propagation is innovative for spatio-temporal problems, but similar concepts exist in deep learning for time-series forecasting, limiting breakthrough potential."
-    ],
-    "verdict_cn": [
-      "• 创新点: 中等；模块化架构结合潜在空间映射和时序传播在时空问题中具有新意，但类似概念在时间序列预测的深度学习中已有应用，突破性有限。",
-      "• 实盘坑: 高；依赖模拟数据训练可能难以泛化到嘈杂、非平稳的金融时间序列，模块化结构在实盘部署中增加复杂性，存在延迟和可扩展性问题。",
-      "• 复现难度: 中等；论文提供了清晰的三阶段流程，但需要大量模拟数据和专业领域知识来训练模型，复现可能耗时且资源密集。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Accepted"
-    }
-  },
-  {
-    "id": "2604.01215v1",
-    "title": "The Recipe Matters More Than the Kitchen:Mathematical Foundations of the AI Weather Prediction Pipeline",
-    "pdf_url": "https://arxiv.org/pdf/2604.01215v1",
-    "published": "2026-04-01",
-    "crawled_at": "2026-04-02 20:22:51",
-    "ai_score": 8.2,
-    "translated_title": "配方比厨房更重要：AI天气预测管道的数学基础",
-    "summary_en": [
-      "• Model Architecture: The paper analyzes ten architecturally diverse AI weather models using NVIDIA Earth2Studio, focusing on the complete learning pipeline rather than architecture alone. It establishes a Learning Pipeline Error Decomposition showing estimation error (loss- and data-dependent) dominates approximation error (architecture-dependent) at current scales.",
-      "• Data used: The empirical validation uses ERA5 initial conditions across 30 initialization dates spanning all seasons, with inference across ten AI weather models. The theoretical framework addresses data distribution as part of the learning pipeline, emphasizing data diversity's importance.",
-      "• Performance metrics: The study evaluates six metrics, confirming universal spectral energy loss at high wavenumbers for MSE-trained models, rising Error Consensus Ratios showing shared forecast error across architectures, and linear negative bias during extreme events. A Holistic Model Assessment Score provides unified multi-dimensional evaluation."
-    ],
-    "summary_cn": [
-      "• 核心模型: 论文分析了十种架构多样的AI天气模型，使用NVIDIA Earth2Studio，强调完整学习管道（包括架构、损失函数、训练策略、数据分布）而非仅架构本身。建立了学习管道误差分解，表明在当前规模下估计误差（依赖损失和数据）主导近似误差（依赖架构）。",
-      "• 数据来源: 实证验证使用ERA5初始条件，涵盖所有季节的30个初始化日期，在十个AI天气模型上进行推断。理论框架将数据分布作为学习管道的一部分，强调数据多样性的重要性。",
-      "• 主要结论: 研究评估了六个指标，确认MSE训练模型在高波数处存在普遍光谱能量损失，误差共识比率上升显示多数预测误差在架构间共享，极端事件期间存在线性负偏差。整体模型评估分数提供了统一的多维评估。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High potential for systematic alpha generation in weather-dependent trading strategies (e.g., energy, agriculture, insurance) by improving forecast accuracy, especially for extreme events where data-driven models show systematic bias. The prescriptive framework enables mathematical evaluation before training, reducing trial-and-error costs.",
-      "• Implementation Risk: Moderate to high risk due to complexity of integrating spherical harmonic coordinates, dynamical systems theory, and real-time weather data into trading systems. Requires specialized expertise in both quant finance and atmospheric science, with potential latency issues in operational deployment.",
-      "• Novelty: High novelty in unifying approximation theory, information theory, and statistical learning into a holistic pipeline framework, moving beyond architecture-focused analyses. The Loss Function Spectral Theory and Out-of-Distribution Extrapolation Bounds provide fresh mathematical insights applicable beyond weather prediction."
-    ],
-    "verdict_cn": [
-      "• 创新点: 高创新性，将近似理论、信息论和统计学习统一为整体管道框架，超越以架构为中心的分析。损失函数光谱理论和分布外外推边界提供了可应用于天气预测以外的新数学见解。",
-      "• 实盘坑: 中高风险，因需将球面谐波坐标、动力系统理论和实时天气数据整合到交易系统中，复杂性高。需要量化金融和大气科学双重专业知识，操作部署可能存在延迟问题。",
-      "• 复现难度: 高难度，需要访问ERA5数据、NVIDIA Earth2Studio和多样化的AI天气模型，理论部分涉及多领域数学，实证验证需大量计算资源，可能限制独立验证。"
-    ],
-    "ai_strategy": "Alpha-Factor",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2604.01210v1",
-    "title": "CliffSearch: Structured Agentic Co-Evolution over Theory and Code for Scientific Algorithm Discovery",
-    "pdf_url": "https://arxiv.org/pdf/2604.01210v1",
-    "published": "2026-04-01",
-    "crawled_at": "2026-04-02 20:23:06",
-    "ai_score": 8.2,
-    "translated_title": "CliffSearch：基于理论与代码结构化智能协同进化的科学算法发现框架",
-    "summary_en": [
-      "• Model Architecture: Agentic evolutionary framework with LLM agents implementing core evolution operators (pair selection, crossover, mutation, review) and structured scientific artifacts in theory+code or code-only modes",
-      "• Data used: Three benchmark-grounded studies: transformer hyper-connection evolution, optimizer discovery on fixed nanoGPT stack, and native-optimizer ablation studies",
-      "• Performance metrics: Optimizes benchmark metrics while gating selection based on reviewer judgments of correctness and originality, with controlled novelty constraints and reproducible persistence"
-    ],
-    "summary_cn": [
-      "• 核心模型: 基于LLM代理的进化框架，包含配对选择、交叉、变异和评审等核心进化算子，支持理论+代码或纯代码的结构化科学产物",
-      "• 数据来源: 三个基准研究：Transformer超连接进化、固定nanoGPT堆栈上的优化器发现、以及原生优化器消融实验",
-      "• 主要结论: 在控制新颖性约束下优先考虑科学可解释性和正确性，同时优化任务指标，而非单纯最大化候选产出"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High potential for discovering novel algorithmic improvements in optimization and neural architecture design through structured co-evolution of theory and implementation",
-      "• Implementation Risk: Moderate risk due to dependency on LLM quality for mutation/repair operations and potential computational overhead of multi-agent evolutionary loops",
-      "• Novelty: Significant novelty in splitting mutation into exploration (domain import) and correction (evidence-guided repair) pathways with structured reviewer gating"
-    ],
-    "verdict_cn": [
-      "• 创新点: 将变异分为探索（跨领域导入）和修正（证据引导修复）两条路径，结合结构化评审门控机制，实现理论与代码的协同进化",
-      "• 实盘坑: LLM代理质量直接影响变异/修复效果，多代理进化循环可能带来显著计算开销，评审标准的主观性可能影响结果一致性",
-      "• 复现难度: 中等偏高，需要完整的LLM基础设施、基准测试环境和进化框架实现，但提供了公开的完整运行产物和可视化工具"
-    ],
-    "ai_strategy": "NLP/LLM",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2604.01206v1",
-    "title": "LLM REgression with a Latent Iterative State Head",
-    "pdf_url": "https://arxiv.org/pdf/2604.01206v1",
-    "published": "2026-04-01",
-    "crawled_at": "2026-04-02 20:23:26",
-    "ai_score": 8.2,
-    "translated_title": "基于潜在迭代状态头的LLM回归方法",
-    "summary_en": [
-      "• Model Architecture: RELISH introduces a lightweight architecture that predicts scalar values directly from frozen LLM representations through iterative refinement of a learned latent state using cross-attention over token-level representations, followed by a linear regressor for point estimation.",
-      "• Data used: The method was evaluated across five datasets, though specific dataset names are not provided in the abstract, indicating broad applicability across different text regression tasks.",
-      "• Performance metrics: RELISH consistently outperformed prior baselines from three major LLM regression families (autoregressive decoding, regression-aware inference, and predictive head methods) across four LLM backbones and two training regimes.",
-      "• Parameter efficiency: The architecture requires only 3.4-3.7M trainable parameters (0.01-0.04% overhead) on frozen LLM backbones, significantly less than LoRA-based alternatives (0.26-0.42%)."
-    ],
-    "summary_cn": [
-      "• 核心模型: RELISH采用轻量级架构，通过跨注意力机制迭代优化潜在状态，直接从冻结的LLM表示中预测标量值，最后通过线性回归器进行点估计。",
-      "• 数据来源: 在五个数据集上进行评估，涵盖多种文本回归任务，但摘要中未具体说明数据集名称。",
-      "• 主要结论: 在四种LLM骨干网络和两种训练机制下，RELISH在性能上全面超越三大主流LLM回归方法（自回归解码、回归感知推理和现有预测头方法）。",
-      "• 参数效率: 仅需3.4-3.7M可训练参数（额外开销0.01-0.04%），远低于随模型规模增长的LoRA替代方案（0.26-0.42%）。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High potential for generating alpha in quantitative strategies that rely on text-based sentiment analysis, earnings call transcripts, or news sentiment regression, due to improved accuracy and efficiency in numeric prediction from text.",
-      "• Implementation Risk: Moderate risk; while parameter-efficient, the iterative refinement process may introduce latency in real-time trading applications, and performance on financial domain-specific data remains untested.",
-      "• Novelty: Significant novelty in combining latent state refinement with cross-attention for direct scalar prediction, offering a new paradigm beyond traditional text-to-number decoding or aggregation methods.",
-      "• Scalability Concerns: The method's reliance on frozen LLM backbones may limit adaptability to rapidly evolving market conditions or niche financial lexicons without frequent retraining."
-    ],
-    "verdict_cn": [
-      "• 创新点: 将潜在状态迭代优化与跨注意力机制结合，直接预测标量值，突破了传统文本到数字解码或聚合方法的局限，架构设计新颖。",
-      "• 实盘坑: 迭代优化过程可能增加实时交易延迟，且未在金融领域数据上验证，存在过拟合或领域适应风险。",
-      "• 复现难度: 中等难度；需要实现跨注意力机制和潜在状态迭代，但开源代码和详细架构可降低复现门槛。",
-      "• 性能风险: 尽管参数高效，但在高波动市场或低频数据中，线性回归器的点估计可能不够稳健，需引入不确定性量化。"
-    ],
-    "ai_strategy": "NLP/LLM",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2604.01204v1",
-    "title": "Neural Harmonic Textures for High-Quality Primitive Based Neural Reconstruction",
-    "pdf_url": "https://arxiv.org/pdf/2604.01204v1",
-    "published": "2026-04-01",
-    "crawled_at": "2026-04-02 20:23:44",
-    "ai_score": 8.5,
-    "translated_title": "基于神经谐波纹理的高质量基元神经重建",
-    "summary_en": [
-      "• Model Architecture: Introduces Neural Harmonic Textures that anchor latent feature vectors on virtual scaffolds around primitives, using periodic activations inspired by Fourier analysis to transform alpha blending into weighted harmonic sums, decoded via a small neural network in a deferred pass.",
-      "• Data used: Implicitly leverages standard datasets for novel-view synthesis and reconstruction tasks, compatible with existing primitive-based pipelines like 3DGUT, Triangle Splatting, and 2DGS, with applications extended to 2D image fitting and semantic reconstruction.",
-      "• Performance metrics: Achieves state-of-the-art results in real-time novel view synthesis, bridging the gap between primitive- and neural-field-based methods while significantly reducing computational costs through efficient deferred decoding."
-    ],
-    "summary_cn": [
-      "• 核心模型: 提出神经谐波纹理，通过在基元周围虚拟支架上锚定潜在特征向量，利用傅里叶分析启发的周期性激活，将alpha混合转换为加权谐波和，并通过小型神经网络在延迟通道中解码。",
-      "• 数据来源: 基于标准的新视角合成和重建数据集，与现有基元方法如3DGUT、Triangle Splatting和2DGS无缝集成，并扩展应用于2D图像拟合和语义重建。",
-      "• 主要结论: 在实时新视角合成中达到最先进水平，通过高效延迟解码显著降低计算成本，弥合了基元与神经场方法之间的差距。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High potential for enhancing high-frequency detail modeling in real-time applications, offering a scalable solution that could improve rendering quality in financial visualization or simulation tools, though market impact depends on adoption in specific domains.",
-      "• Implementation Risk: Moderate risk due to reliance on existing primitive-based pipelines; integration challenges may arise in custom environments, and computational savings might be offset by increased memory usage from virtual scaffolds.",
-      "• Novelty: Strong novelty in applying Fourier-inspired periodic activations to primitive-based methods, creating a hybrid approach that combines the flexibility of primitives with the expressivity of neural fields, though incremental rather than revolutionary."
-    ],
-    "verdict_cn": [
-      "• 创新点: 将傅里叶启发的周期性激活应用于基元方法，形成混合方法，结合了基元的灵活性和神经场的表达能力，但属于渐进式创新而非突破性变革。",
-      "• 实盘坑: 依赖现有基元管道，在自定义环境中可能存在集成挑战；虚拟支架可能增加内存使用，抵消计算节省；高频细节建模在复杂场景中可能仍有限制。",
-      "• 复现难度: 中等难度，需要熟悉基元方法如3D高斯溅射和神经场技术，代码和数据集可能公开，但优化和扩展需专业知识。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2604.01197v1",
-    "title": "Learning and Generating Mixed States Prepared by Shallow Channel Circuits",
-    "pdf_url": "https://arxiv.org/pdf/2604.01197v1",
-    "published": "2026-04-01",
-    "crawled_at": "2026-04-02 20:24:00",
-    "ai_score": 8.2,
-    "translated_title": "浅层信道电路制备混合态的学习与生成",
-    "summary_en": [
-      "• Model Architecture: The paper proposes a quantum generative model based on shallow local channel circuits that preserve local reversibility, enabling efficient learning and generation of mixed states in the trivial phase.",
-      "• Data used: The algorithm requires only measurement access to copies of an unknown trivial phase mixed state, without needing the original preparation circuit, relying on polynomial or quasi-polynomial sample complexity in qubit count.",
-      "• Performance metrics: The model achieves approximate generation in trace distance with runtime polynomial in system size, assuming constant or polylogarithmic circuit depth and gate locality, and extends to classical diffusion models with polynomial overhead."
-    ],
-    "summary_cn": [
-      "• 核心模型: 基于浅层局部信道电路的量子生成模型，该电路保持局部可逆性，用于高效学习和生成平凡相中的混合态。",
-      "• 数据来源: 仅需对未知平凡相混合态的副本进行测量访问，无需原始制备电路，样本复杂度与量子比特数呈多项式或拟多项式关系。",
-      "• 主要结论: 在恒定或对数多项式电路深度和门局部性假设下，模型以系统大小的多项式运行时实现迹距离近似生成，并可推广到具有多项式开销的经典扩散模型。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High potential for quantum-inspired classical generative models (e.g., diffusion models) with provable efficiency, offering a structural foundation that could enhance training and generation in financial time-series or anomaly detection.",
-      "• Implementation Risk: Moderate risk due to reliance on quantum assumptions (trivial phase existence) and polynomial overhead in classical limit; practical deployment requires validation in noisy, high-dimensional datasets typical in finance.",
-      "• Novelty: Significant novelty in bridging quantum state learning with classical generative AI, providing rigorous theoretical guarantees for shallow circuits, which is rare in current machine learning literature."
-    ],
-    "verdict_cn": [
-      "• 创新点: 将量子态学习与经典生成AI结合，为浅层电路提供严格理论保证，这在当前机器学习文献中罕见，具有跨领域突破性。",
-      "• 实盘坑: 依赖量子假设（平凡相存在性）和经典极限中的多项式开销，在金融高维噪声数据中实际部署需额外验证，可能引入计算延迟。",
-      "• 复现难度: 中等偏高，需量子信息背景实现算法核心，但经典扩散模型部分相对易复现，适合量化团队与理论组合作。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2604.01178v1",
-    "title": "Screening Is Enough",
-    "pdf_url": "https://arxiv.org/pdf/2604.01178v1",
-    "published": "2026-04-01",
-    "crawled_at": "2026-04-02 20:24:18",
-    "ai_score": 8.2,
-    "translated_title": "筛选即足够",
-    "summary_en": [
-      "• Model Architecture: Introduces Multiscreen, a language-model architecture built around a screening mechanism that evaluates each key against an explicit threshold, discarding irrelevant keys and aggregating the remaining ones, thereby removing global competition among keys.",
-      "• Data used: Not explicitly specified in the abstract, but likely involves standard language modeling datasets (e.g., Wikipedia, books, web text) for training and validation, with experiments on long-context perplexity and retrieval performance.",
-      "• Performance metrics: Achieves comparable validation loss with ~40% fewer parameters than a Transformer baseline, enables stable optimization at larger learning rates, maintains strong performance in long-context perplexity, shows little degradation in retrieval beyond training context length, and reduces inference latency by up to 3.2× at 100K context length."
-    ],
-    "summary_cn": [
-      "• 核心模型: 提出Multiscreen语言模型架构，基于筛选机制，通过显式阈值评估每个键，丢弃无关键并聚合剩余键，消除键之间的全局竞争。",
-      "• 数据来源: 摘要未明确说明，但可能使用标准语言建模数据集（如维基百科、书籍、网络文本）进行训练和验证，并在长上下文困惑度和检索性能上进行实验。",
-      "• 主要结论: 在验证损失相当的情况下，参数比Transformer基线减少约40%；支持更大学习率的稳定优化；长上下文困惑度表现强劲；检索性能在超出训练上下文长度时几乎无退化；在100K上下文长度下推理延迟降低高达3.2倍。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High potential for improving efficiency in large-scale language models, particularly in long-context applications, by reducing parameter count and inference latency, which could translate to cost savings and faster deployment in financial NLP tasks.",
-      "• Implementation Risk: Moderate risk due to the novelty of the screening mechanism; potential challenges include integration with existing Transformer-based systems and scalability across diverse datasets, though stable optimization is a positive sign.",
-      "• Novelty: High novelty in addressing the core limitation of softmax attention by introducing absolute query-key relevance through screening, a significant departure from standard attention mechanisms that rely on relative relevance."
-    ],
-    "verdict_cn": [
-      "• 创新点: 通过筛选机制引入绝对查询-键相关性，解决了softmax注意力仅依赖相对相关性的核心限制，是注意力机制的重大创新。",
-      "• 实盘坑: 中等风险，筛选机制较新，可能面临与现有Transformer系统集成的挑战，以及在不同数据集上的可扩展性问题，尽管稳定优化是积极信号。",
-      "• 复现难度: 中等难度，需要实现筛选机制和阈值评估，但论文提供了明确的架构描述和性能指标，有助于复现，不过可能依赖未公开的代码或超参数细节。"
-    ],
-    "ai_strategy": "NLP/LLM",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2604.01175v1",
-    "title": "NeuroDDAF: Neural Dynamic Diffusion-Advection Fields with Evidential Fusion for Air Quality Forecasting",
-    "pdf_url": "https://arxiv.org/pdf/2604.01175v1",
-    "published": "2026-04-01",
-    "crawled_at": "2026-04-02 20:24:39",
-    "ai_score": 8.2,
-    "translated_title": "NeuroDDAF：基于证据融合的神经动态扩散-对流场空气质量预测模型",
-    "summary_en": [
-      "• Model Architecture: NeuroDDAF integrates GRU-Graph Attention encoder for temporal dynamics and wind-aware spatial interactions, Fourier-domain diffusion-advection module with learnable residuals, wind-modulated latent Neural ODE for continuous-time evolution, and evidential fusion mechanism for uncertainty quantification.",
-      "• Data used: Experiments conducted on four urban datasets: Beijing, Shenzhen, Tianjin (China) and Ancona (Italy), covering 1-3 day forecasting horizons with air quality metrics measured in μg/m³.",
-      "• Performance metrics: Achieves up to 9.7% RMSE reduction and 9.4% MAE reduction on long-term forecasts compared to baselines like AirPhyNet; specific results include 41.63 μg/m³ RMSE for 1-day and 48.88 μg/m³ for 3-day predictions on Beijing dataset."
-    ],
-    "summary_cn": [
-      "• 核心模型: NeuroDDAF融合了GRU-图注意力编码器（捕捉时空动态和风感知空间交互）、傅里叶域扩散-对流模块（含可学习残差）、风调制潜变量神经ODE（建模时变连接下的连续时间演化）以及证据融合机制（自适应结合物理引导与神经预测，量化不确定性）。",
-      "• 数据来源: 使用四个城市数据集：北京、深圳、天津（中国）和安科纳（意大利），覆盖1-3天预测范围，空气质量指标以μg/m³为单位。",
-      "• 主要结论: 在长期预测中，相比AirPhyNet等基线模型，RMSE降低达9.7%，MAE降低达9.4%；在北京数据集上，1天预测RMSE为41.63 μg/m³，3天预测为48.88 μg/m³，表现最佳，同时提升跨城市泛化能力并提供校准的不确定性估计。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High potential for environmental alpha strategies by improving air quality forecasting accuracy and uncertainty calibration, which could inform trading in carbon markets, ESG-focused investments, or weather-sensitive commodities.",
-      "• Implementation Risk: Moderate risk due to reliance on high-quality spatiotemporal wind and pollution data, computational complexity from Neural ODE and Fourier modules, and potential overfitting in cross-regional generalization despite claimed improvements.",
-      "• Novelty: Strong novelty in combining physics-informed diffusion-advection modeling with neural networks and evidential fusion, offering a hybrid approach that balances interpretability and data-driven accuracy, though similar concepts exist in other domains."
-    ],
-    "verdict_cn": [
-      "• 创新点: 创新性较强，将物理引导的扩散-对流模型与神经网络及证据融合结合，提供了一种平衡可解释性和数据驱动精度的混合方法，但类似思路在其他领域已有应用。",
-      "• 实盘坑: 中等风险，依赖高质量时空风和污染数据，神经ODE和傅里叶模块计算复杂，跨区域泛化可能过拟合，尽管声称有改进。",
-      "• 复现难度: 较高难度，需要整合多模块架构（GRU-GAT、傅里叶域、神经ODE），处理城市级数据集，并实现不确定性校准，对计算资源和领域专业知识要求高。"
-    ],
-    "ai_strategy": "Alpha-Factor",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Accepted"
-    }
-  },
-  {
-    "id": "2604.01173v1",
-    "title": "Safe learning-based control via function-based uncertainty quantification",
-    "pdf_url": "https://arxiv.org/pdf/2604.01173v1",
-    "published": "2026-04-01",
-    "crawled_at": "2026-04-02 20:24:56",
-    "ai_score": 7.5,
-    "translated_title": "基于函数不确定性量化的安全学习控制",
-    "summary_en": [
-      "• Model Architecture: The paper proposes a scenario-based approach for constructing uncertainty tubes that enclose unknown functions (e.g., reward, constraint, or dynamics models) using random function modeling and independent identically distributed realizations, integrated into a safe Bayesian optimization framework.",
-      "• Data used: The method relies solely on sampled realizations generated from the random function model, avoiding dependence on restrictive assumptions like known functional norm bounds or Lipschitz constants, and was tested on a real Furuta pendulum system.",
-      "• Performance metrics: The uncertainty tubes are constructed to hold with high probability, enabling safe learning-based control in safety-critical applications, with practical validation on hardware demonstrating robustness to discontinuities and real-world deployment."
-    ],
-    "summary_cn": [
-      "• 核心模型: 采用基于场景的方法，通过随机函数建模和独立同分布实现构建不确定性管，集成到安全贝叶斯优化框架中，用于封装未知函数（如奖励、约束或动力学模型）。",
-      "• 数据来源: 仅依赖于从随机函数模型中生成的采样实现，无需已知函数范数边界或Lipschitz常数等限制性假设，并在真实Furuta摆系统上进行了测试。",
-      "• 主要结论: 不确定性管以高概率成立，支持在安全关键系统中实现安全学习控制，硬件验证表明该方法能处理不连续性并适用于实际部署。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate; the method enhances safety in control systems, which could be adapted for risk-aware algorithmic trading or portfolio optimization, but direct financial alpha generation is limited without domain-specific tuning.",
-      "• Implementation Risk: High; real-world deployment on hardware like the Furuta pendulum shows practical challenges, and scaling to complex financial systems may introduce computational and robustness issues.",
-      "• Novelty: Significant; it addresses limitations of existing uncertainty quantification methods by avoiding restrictive assumptions and handling discontinuities, offering a more flexible approach for safe learning-based applications."
-    ],
-    "verdict_cn": [
-      "• 创新点: 显著；通过避免限制性假设和处理不连续性，改进了现有不确定性量化方法，为安全学习应用提供了更灵活的框架。",
-      "• 实盘坑: 高；在Furuta摆等硬件上的实际部署显示存在挑战，扩展到复杂金融系统可能带来计算和鲁棒性问题。",
-      "• 复现难度: 中等；方法基于采样实现，无需复杂假设，但集成到安全贝叶斯优化和真实系统测试需要专业控制工程知识。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Accepted"
-    }
-  },
-  {
-    "id": "2604.01170v1",
-    "title": "Online Reasoning Calibration: Test-Time Training Enables Generalizable Conformal LLM Reasoning",
-    "pdf_url": "https://arxiv.org/pdf/2604.01170v1",
-    "published": "2026-04-01",
-    "crawled_at": "2026-04-02 20:25:13",
-    "ai_score": 8.2,
-    "translated_title": "在线推理校准：测试时训练实现可泛化的保形LLM推理",
-    "summary_en": [
-      "• Model Architecture: ORCA integrates conformal prediction with test-time training through a meta-learning calibration module that updates per input, enabling dynamic confidence estimation under distribution shifts.",
-      "• Data used: Evaluated on reasoning tasks including MATH-500 benchmark, using both supervised labels and self-consistency labels across in-distribution and zero-shot out-of-domain settings.",
-      "• Performance metrics: Achieved up to 47.5% efficiency savings on in-distribution tasks and improved MATH-500 savings from 24.8% to 67.0% under out-of-domain settings at δ=0.1 risk level, while maintaining low empirical error rates."
-    ],
-    "summary_cn": [
-      "• 核心模型: ORCA框架结合保形预测与测试时训练，通过元学习校准模块实现每个输入的动态更新，提供分布偏移下的有效置信度估计。",
-      "• 数据来源: 使用MATH-500等推理任务基准，涵盖监督标签和自一致性标签，评估了分布内和零样本分布外场景。",
-      "• 主要结论: 在风险水平δ=0.1下，分布内任务效率提升达47.5%，分布外MATH-500任务节省率从24.8%提升至67.0%，且保持低经验错误率。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High potential for reducing compute costs in LLM deployment by 40-67% through calibrated sampling, directly impacting operational efficiency and scalability in financial NLP applications.",
-      "• Implementation Risk: Moderate risk due to dependency on test-time training which may introduce latency; theoretical guarantees rely on conformal assumptions that might not hold in all market conditions.",
-      "• Novelty: Strong novelty in combining conformal prediction with meta-learning for real-time calibration, addressing miscalibration in sampling techniques—a key bottleneck in current LLM reasoning systems."
-    ],
-    "verdict_cn": [
-      "• 创新点: 将保形预测与元学习结合，实现测试时动态校准，解决了LLM采样中的校准不足问题，具有理论保证和实证优势。",
-      "• 实盘坑: 测试时训练可能增加延迟，影响高频应用；保形假设在市场极端波动下可能失效，需谨慎验证。",
-      "• 复现难度: 中等难度，代码已公开，但需要适配特定金融数据集和模型，元学习模块可能增加调试复杂性。"
-    ],
-    "ai_strategy": "NLP/LLM",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
     }
   }
 ]
