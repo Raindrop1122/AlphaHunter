@@ -1,5 +1,364 @@
 [
   {
+    "id": "2611.32403v1",
+    "title": "A Framework for Graph Node Symmetric Quantification under Dataset Shift",
+    "pdf_url": "https://arxiv.org/pdf/2611.32403v1",
+    "published": "2026-11-24",
+    "crawled_at": "2026-11-25 03:11:26",
+    "ai_score": 6.5,
+    "translated_title": "数据集偏移下的图节点对称量化框架",
+    "summary_en": [
+      "• Model Architecture: Proposes GSQ framework that eliminates node-level supervision and prediction, using node samples labeled by class distribution and directly estimating class prevalence via encoder, pooler, and prevalence predictor.",
+      "• Data used: Evaluated on binary and multi-class graph datasets with varying homophily levels, under prior probability shift and structural covariate shift.",
+      "• Performance metrics: Likely compares against aggregative quantification methods using metrics like MAE and MRAE, though specific results are not detailed in the abstract.",
+      "• Key innovation: Symmetric quantification where training and prediction items are both node samples, avoiding intermediate classifiers."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出GSQ框架，摒弃节点级监督和预测，直接通过编码器、池化器和流行度预测器估计类别流行度，实现对称量化。",
+      "• 数据来源: 在二分类和多分类图数据集上评估，涵盖不同同质性水平，并考虑先验概率偏移和结构协变量偏移。",
+      "• 主要结论: 框架在多种偏移场景下有效，但摘要未提供具体性能指标，需进一步验证。",
+      "• 创新点: 训练和预测均使用节点样本，避免中间分类器，简化流程。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; quantification can improve portfolio risk estimation and sentiment analysis, but direct alpha generation is limited.",
+      "• Implementation Risk: High; requires careful handling of graph structure and shift, and lack of detailed performance metrics raises concerns.",
+      "• Novelty: Decent; symmetric quantification for graphs is a fresh angle, but builds on existing quantification literature.",
+      "• Reproducibility: Medium; framework is modular but depends on specific encoders and pooling choices, which may affect results."
+    ],
+    "verdict_cn": [
+      "• 创新点: 对称量化思路新颖，避免节点级分类器，降低误差累积。",
+      "• 实盘坑: 图结构偏移在实际金融网络中常见，但框架对偏移的鲁棒性未充分验证；缺乏与基线方法的量化对比。",
+      "• 复现难度: 中等；模块化设计便于实现，但需调整编码器和池化器，且未提供超参数细节。",
+      "• 应用场景: 适用于需要估计类别分布的任务，如舆情分析、风险敞口评估，但直接用于高频交易或因子挖掘有限。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2611.32402v1",
+    "title": "Optimal Transport Meets t-SNE: Integrated Visualization without Batch Effects in OT-tSNE",
+    "pdf_url": "https://arxiv.org/pdf/2611.32402v1",
+    "published": "2026-11-24",
+    "crawled_at": "2026-11-25 03:11:32",
+    "ai_score": 6.5,
+    "translated_title": "最优传输遇见t-SNE：OT-tSNE中无批次效应的集成可视化",
+    "summary_en": [
+      "• Model Architecture: OT-tSNE replaces nearest-neighbor-based affinities in t-SNE with globally coupled affinities derived from entropic optimal transport, enabling integrated visualization without batch effects.",
+      "• Data used: Controlled synthetic experiments and seven real single-cell datasets were used to benchmark OT-tSNE against a broad range of integration and visualization methods.",
+      "• Performance metrics: OT-tSNE achieves a Pareto-efficient trade-off between batch mixing and biological conservation, and integrates batches particularly well, while nearest-neighbor-based methods deteriorate on challenging cross-batch geometries."
+    ],
+    "summary_cn": [
+      "• 核心模型: OT-tSNE用基于熵正则最优传输的全局耦合相似度替代t-SNE中的最近邻相似度，实现无批次效应的集成可视化。",
+      "• 数据来源: 使用受控合成实验和七个真实单细胞数据集，与多种集成和可视化方法进行基准比较。",
+      "• 主要结论: OT-tSNE在批次混合与生物保守性之间达到帕累托高效权衡，批次整合效果尤其好，而最近邻方法在挑战性跨批次几何中表现恶化。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Limited direct alpha potential for financial markets; the method is tailored to single-cell data visualization, not predictive modeling or trading signal generation.",
+      "• Implementation Risk: Moderate; optimal transport computation can be expensive for large datasets, and hyperparameter tuning (entropic regularization) may be sensitive.",
+      "• Novelty: Moderate; combining optimal transport with t-SNE is a natural extension but not groundbreaking, as OT has been used in other dimensionality reduction contexts."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将最优传输与t-SNE结合，用全局耦合替代局部最近邻，思路合理但并非全新，OT在降维中已有应用。",
+      "• 实盘坑: 对金融数据可视化可能有帮助，但直接用于交易信号生成价值有限；计算复杂度高，大规模数据可能难以实时处理。",
+      "• 复现难度: 中等，需要实现熵正则最优传输和t-SNE的整合，超参数（如正则化系数）调优可能较敏感。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2611.32399v1",
+    "title": "Not All Pairs Align: Caption-Guided Audio-Visual Contrastive Learning",
+    "pdf_url": "https://arxiv.org/pdf/2611.32399v1",
+    "published": "2026-11-24",
+    "crawled_at": "2026-11-25 03:11:38",
+    "ai_score": 7.2,
+    "translated_title": "并非所有配对都对齐：字幕引导的视听对比学习",
+    "summary_en": [
+      "• Model Architecture: Proposes Caption Guided Alignment Aware Loss (CGAAL), a model-agnostic objective that uses modality-specific captions to estimate semantic agreement between audio and video, weighting positive pairs accordingly.",
+      "• Data used: Evaluated on audio-visual retrieval tasks using standard datasets (e.g., AudioSet, VGGSound) with captions generated or collected.",
+      "• Performance metrics: Consistently improves three contrastive baselines (e.g., AVCL, MIL-NCE, and a multimodal transformer) on retrieval metrics (R@1, R@5, R@10), demonstrating generality."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出CGAAL（字幕引导对齐感知损失），一种模型无关的目标函数，利用模态特定字幕估计音视频语义一致性，并对正样本对加权。",
+      "• 数据来源: 在音视频检索任务上评估，使用标准数据集（如AudioSet、VGGSound）并配以生成或收集的字幕。",
+      "• 主要结论: 在三个对比基线（如AVCL、MIL-NCE和多模态Transformer）上一致提升检索性能（R@1、R@5、R@10），证明了通用性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; alignment-aware weighting could improve multimodal representation quality, benefiting downstream tasks like video understanding and retrieval, but direct alpha in finance is limited unless applied to alternative data.",
+      "• Implementation Risk: Requires reliable caption generation and introduces extra hyperparameters (warm-up period, thresholding), increasing training complexity and potential overfitting.",
+      "• Novelty: Moderate; the idea of using captions to estimate alignment is intuitive but not groundbreaking, as similar concepts exist in weakly-supervised learning."
+    ],
+    "verdict_cn": [
+      "• 创新点: 利用字幕估计音视频语义对齐并加权对比损失，思路直观但并非全新，类似思想在弱监督学习中已有体现。",
+      "• 实盘坑: 依赖高质量字幕生成，引入额外超参数（预热期、阈值策略），增加训练复杂度和过拟合风险；在金融领域直接应用场景有限。",
+      "• 复现难度: 中等；需要生成字幕并调整阈值策略，但模型无关性使其易于集成到现有对比学习框架中。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2611.32393v1",
+    "title": "Fractal Neural Synthesis: Constant-Storage Procedural Weight Derivation via Complex Quadratic Boundary Dynamics",
+    "pdf_url": "https://arxiv.org/pdf/2611.32393v1",
+    "published": "2026-11-24",
+    "crawled_at": "2026-11-25 03:11:45",
+    "ai_score": 6.5,
+    "translated_title": "分形神经合成：基于复二次边界动力学的恒定存储过程化权重推导",
+    "summary_en": [
+      "• Model Architecture: Fractal Neural Synthesis (FNS) replaces hidden-layer weight matrices with a constant 24-byte coordinate seed Θ = (c_x, c_y, ℓ) anchored near the complex quadratic bifurcation boundary ∂M of f_c(z) = z^2 + c, using a large-bailout smooth escape kernel and four geometric sampling apertures (Cartesian Grid, coprime 3x3 Rule-of-Thirds, φ-Vogel spiral, multi-scale Harmonic Tripod).",
+      "• Data used: Four zero-scaler-byte non-linear benchmarks: Ionosphere, Optical Digits, PenDigits, and Satimage, evaluated under leak-free 10-fold cross-validation.",
+      "• Performance metrics: FNS with INT8 readout surpasses 0-hidden Linear-INT8 by +3.6 to +10.8 pp while achieving 10.7x-129x total Flash reduction (725x-2,773x hidden reduction) relative to converged Float32 MLPs, with accuracies of 90.30% (Ionosphere, 285 B), 97.22% (Optical Digits, 2,598 B), 97.90% (PenDigits, 2,598 B), and 87.00% (Satimage, 1,570 B)."
+    ],
+    "summary_cn": [
+      "• 核心模型: 分形神经合成（FNS）用恒定24字节的坐标种子 Θ = (c_x, c_y, ℓ) 替代隐藏层权重矩阵，该种子锚定在复二次分岔边界 ∂M 附近，并采用大逃逸半径（R=256）的光滑逃逸核和四种零开销几何采样孔径（笛卡尔网格、互质3x3三分法、φ-Vogel螺旋、多尺度谐波三脚架）。",
+      "• 数据来源: 四个零缩放字节的非线性基准数据集：Ionosphere、Optical Digits、PenDigits 和 Satimage，使用无泄漏的10折交叉验证进行评估。",
+      "• 主要结论: 在INT8读出下，FNS比0隐藏层Linear-INT8高出3.6至10.8个百分点，同时相对于收敛的Float32 MLP实现10.7倍至129倍的总Flash缩减（隐藏层缩减725倍至2,773倍），准确率分别为90.30%（Ionosphere，285字节）、97.22%（Optical Digits，2,598字节）、97.90%（PenDigits，2,598字节）和87.00%（Satimage，1,570字节）。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Limited for high-frequency trading due to focus on edge microcontrollers and small benchmarks; potential for low-latency inference in resource-constrained environments, but unclear translation to financial alpha generation.",
+      "• Implementation Risk: High risk in reproducibility and stability; reliance on complex quadratic boundary dynamics and geometric sampling may introduce sensitivity to hyperparameters and numerical precision, especially with INT8 quantization.",
+      "• Novelty: Innovative approach combining fractal geometry and procedural weight generation, with theoretical bounds on Kolmogorov complexity and Shannon entropy, but practical impact may be niche."
+    ],
+    "verdict_cn": [
+      "• 创新点: 利用分形几何和过程化权重生成，提出恒定存储的神经网络架构，并给出Kolmogorov复杂度和Shannon熵的理论边界，具有一定新颖性。",
+      "• 实盘坑: 主要面向边缘微控制器和小型基准数据集，在金融高频场景下alpha潜力有限；INT8量化和几何采样可能对数值精度敏感，实盘稳定性存疑。",
+      "• 复现难度: 中等偏高，需要深入理解复二次分岔边界和几何采样孔径的实现细节，且论文未提供代码，复现可能存在挑战。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2611.32391v1",
+    "title": "Latent Class Mixed Model Variational Autoencoders for Scalable Phenotyping of Health Trajectories",
+    "pdf_url": "https://arxiv.org/pdf/2611.32391v1",
+    "published": "2026-11-24",
+    "crawled_at": "2026-11-25 03:11:52",
+    "ai_score": 6.5,
+    "translated_title": "潜在类别混合模型变分自编码器用于可扩展的健康轨迹表型分析",
+    "summary_en": [
+      "• Model Architecture: LCMM-VAE is a deep generative model whose latent prior is a mixture of class-specific linear mixed models, decomposing each subject's latent trajectory into class mean and subject-specific deviation.",
+      "• Data used: Experiments on simulated and real longitudinal cohorts with high-dimensional measurements, irregular visit times, and subject-level heterogeneity.",
+      "• Performance metrics: Returns a partition, reconstruction of incomplete trajectories, and interpretable class-level dynamics simultaneously, remaining competitive with classical and deep baselines.",
+      "• Algorithm: Derives a variational EM algorithm with closed-form updates for class responsibilities, random effects, and mixed-model parameters, with identifiability guarantees under stated conditions."
+    ],
+    "summary_cn": [
+      "• 核心模型: LCMM-VAE是一种深度生成模型，其潜在先验是类别特定线性混合模型的混合，将每个受试者的潜在轨迹分解为类别平均轨迹和受试者特定偏差。",
+      "• 数据来源: 在模拟和真实纵向队列数据上进行实验，涉及高维测量、不规则访问时间和受试者异质性。",
+      "• 主要结论: 同时返回分区、不完整轨迹的重建和可解释的类别级动态，并与经典和深度基线保持竞争力。",
+      "• 算法: 推导了变分EM算法，类别责任、随机效应和混合模型参数以封闭形式更新，并在规定条件下提供可识别性保证。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Limited direct alpha; primarily a statistical phenotyping tool for healthcare data, not financial markets. Potential indirect use in alternative data for risk factors.",
+      "• Implementation Risk: High risk due to complex model, need for careful tuning, and assumptions of linear mixed models; scalability to very high dimensions may be challenging.",
+      "• Novelty: Moderate; combines latent class mixed models with VAE, but similar hybrid approaches exist. Identifiability guarantees add theoretical value.",
+      "• Practicality: Requires irregular longitudinal data with clinical interpretability; not directly applicable to high-frequency financial time series."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将潜在类别混合模型与变分自编码器结合，提供可解释的类别级动态和个体偏差分解，具有理论保证。",
+      "• 实盘坑: 主要针对健康轨迹数据，不直接适用于金融高频数据；模型复杂，调参和计算成本高；线性混合模型假设可能限制灵活性。",
+      "• 复现难度: 中等偏高，需要实现变分EM算法和混合模型，且依赖特定数据结构；代码未提及开源。",
+      "• 应用场景: 适用于医疗健康领域的表型分析，在金融领域需改造为处理金融时间序列的混合模型。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2611.32390v1",
+    "title": "Evolve to Learn: Gradient-aligned experience evolution for model self-improvement",
+    "pdf_url": "https://arxiv.org/pdf/2611.32390v1",
+    "published": "2026-11-24",
+    "crawled_at": "2026-11-25 03:11:58",
+    "ai_score": 7.2,
+    "translated_title": "进化以学习：梯度对齐的经验进化用于模型自我改进",
+    "summary_en": [
+      "• Model Architecture: The paper proposes E2L, a self-evolution framework that iteratively generates, evaluates, and distills experiences based on gradient-based alignment, using on-policy self-distillation (OPSD) to internalize test-time information into model parameters.",
+      "• Data used: The authors systematically analyze diverse mutated experiences across multiple tasks and reflection models, though specific datasets are not detailed in the abstract.",
+      "• Performance metrics: The key finding is that gradient-based alignment is a more reliable indicator of downstream distillation gains than immediate test-time improvement, enabling agents to autonomously produce experience suitable for self-improvement."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出E2L自进化框架，通过基于梯度的对齐评估经验，并利用同策略自蒸馏（OPSD）将测试时信息内化到模型参数中。",
+      "• 数据来源: 在多个任务和反思模型上系统分析了多样化的变异经验，但摘要未具体说明数据集。",
+      "• 主要结论: 梯度对齐比即时测试时改进更能可靠地指示下游蒸馏收益，E2L能自主产生适合自我改进的经验。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the framework could enhance LLM self-improvement in trading strategy generation, but direct alpha is limited without domain-specific adaptation.",
+      "• Implementation Risk: High; requires careful tuning of gradient alignment and distillation processes, and may suffer from instability in financial time-series data.",
+      "• Novelty: Solid; the insight that test-time improvement is not always beneficial for training is valuable, and gradient-based alignment as a selection criterion is a fresh approach."
+    ],
+    "verdict_cn": [
+      "• 创新点: 揭示了测试时性能提升不一定带来训练收益，并提出梯度对齐作为经验选择的可靠指标，具有新意。",
+      "• 实盘坑: 在金融领域应用时，梯度对齐可能受噪声和非平稳性影响，且自蒸馏过程可能过拟合近期模式，导致策略失效。",
+      "• 复现难度: 中等偏高；需要实现经验生成、评估和蒸馏的闭环，且对计算资源要求较高，但论文未提供详细超参数。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2611.32384v1",
+    "title": "Can AI Design a Better nnU-Net? A Hypothesis-Driven Architecture Discovery Loop from Failures to Design Rules",
+    "pdf_url": "https://arxiv.org/pdf/2611.32384v1",
+    "published": "2026-11-24",
+    "crawled_at": "2026-11-25 03:12:07",
+    "ai_score": 7.8,
+    "translated_title": "AI能否设计更好的nnU-Net？从失败到设计规则的假设驱动架构发现循环",
+    "summary_en": [
+      "• Model Architecture: A hypothesis-driven architecture discovery loop using LLM agents to diagnose error patterns, formulate falsifiable hypotheses, and distill validated mechanisms into executable rules. The resulting architectures are LeanNeXt and trigger-routed LeanNeXt+, which modify the nnU-Net pipeline by reallocating computation from high-resolution decoders to the mid-encoder and adding support-confined region contrast with anatomy-dependent triggers.",
+      "• Data used: Evaluated on 3D medical image segmentation tasks, primarily KiTS23 (four-fold cross-validation) and 15 CT/MRI settings from various benchmarks.",
+      "• Performance metrics: LeanNeXt achieves 0.78 MACs and 0.92 training-step time relative to nnU-Net, with +1.63 Dice points on KiTS23. LeanNeXt+ improves all 15 evaluated CT/MRI settings over nnU-Net and exceeds the 3.3× larger ResEnc-M on 12 of 15 benchmarks at 0.30 its parameter count.",
+      "• Methodology: The loop involves eight search waves, with LLM agents diagnosing structured error patterns, testing counterfactual controls under a frozen nnU-Net pipeline, and distilling validated mechanisms into trigger-to-action rules. Compared to random sampling, one-shot LLM generation, and score-selected agent search, the loop yields reusable design rules across modalities."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出一种假设驱动的架构发现循环，利用LLM代理诊断错误模式、形成可证伪假设，并在冻结的nnU-Net管道下测试反事实控制，最终提炼出可执行的触发-动作规则。由此得到LeanNeXt和触发路由的LeanNeXt+，通过将计算从高分辨率解码器重新分配到中编码器，并引入支持受限的区域对比来解决嵌套解剖 compartment 之间的错误。",
+      "• 数据来源: 在3D医学图像分割任务上评估，主要使用KiTS23（四折交叉验证）和15个CT/MRI设置（来自多个基准）。",
+      "• 主要结论: LeanNeXt相对于nnU-Net的MACs为0.78，训练步时间为0.92，在KiTS23上Dice提升1.63个点。LeanNeXt+在所有15个评估的CT/MRI设置上均优于nnU-Net，并在15个基准中的12个上以0.30的参数数量超过大3.3倍的ResEnc-M。与随机采样、一次性LLM生成和分数选择的代理搜索相比，该循环能够产生跨模态可重用的设计规则。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: High for medical imaging AI, as the discovered design rules (computation reallocation and support-confined contrast) are generalizable and yield significant efficiency gains (0.78 MACs) and accuracy improvements (+1.63 Dice). The trigger-routed LeanNeXt+ outperforms larger models at a fraction of parameters, indicating strong potential for real-world deployment in resource-constrained settings.",
+      "• Implementation Risk: Moderate. The approach relies on LLM agents and a frozen nnU-Net pipeline, which may introduce variability in hypothesis generation and rule distillation. Reproducing the exact loop and rules might require careful tuning of LLM prompts and validation thresholds. However, the code and rules are likely to be released, mitigating risk.",
+      "• Novelty: High. The hypothesis-driven loop that leverages failures to distill reusable design rules is a novel paradigm shift from scalar fitness-based NAS. The specific principles (mid-encoder computation reallocation and support-confined region contrast) are new and validated across multiple modalities, contributing to both architecture design and medical image segmentation."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出假设驱动的架构发现循环，将失败分析转化为可重用设计规则，而非仅优化标量适应度。发现的两种设计原则（计算重分配和支持受限区域对比）具有新颖性和泛化性，并在多个模态上验证有效。",
+      "• 实盘坑: 依赖LLM代理生成假设和规则，可能存在不稳定性和可重复性问题；规则提炼过程需要精心设计提示和验证阈值，实际部署时需确保规则在不同数据分布下的鲁棒性。此外，评估主要集中在医学图像分割，跨领域迁移需进一步验证。",
+      "• 复现难度: 中等。需要复现LLM代理的交互循环和nnU-Net管道，但论文提供了详细的规则和架构描述，且可能开源代码，降低了复现门槛。不过，LLM的非确定性可能使完全复现具有挑战性。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2611.32380v1",
+    "title": "The Activity Geometry of Discrete Generative Sampling",
+    "pdf_url": "https://arxiv.org/pdf/2611.32380v1",
+    "published": "2026-11-24",
+    "crawled_at": "2026-11-25 03:12:14",
+    "ai_score": 7.2,
+    "translated_title": "离散生成采样的活动几何",
+    "summary_en": [
+      "• Model Architecture: Introduces Activity Geometry to analyze finite-step couplings in discrete diffusion/flow models, decomposing expected transition cost (activity) into minimum marginal transport and excess coupling terms; proposes Minimal-Activity Finite-Time Coupling (MAFTC) to achieve prescribed marginals with minimum activity without retraining.",
+      "• Data used: Evaluated on language generation tasks (likely using standard text corpora such as WikiText or similar), comparing refinement-based samplers and MAFTC.",
+      "• Performance metrics: MAFTC reduces trajectory activity while maintaining comparable generation quality and higher lexical diversity; refinement-based samplers accumulate additional activity with limited diversity gains as model evaluations increase.",
+      "• Theoretical contributions: Shows continuous-time limit of minimum activity converges to minimum expected jump rate; for metric-induced Gibbs paths, activity of kinetic-optimal flux admits geometric decomposition."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出活动几何框架分析离散扩散/流模型中的有限步耦合，将期望转移成本（活动）分解为边际运输最小值和耦合超额项；提出MAFTC方法在无需重训练下实现最小活动。",
+      "• 数据来源: 在语言生成任务上评估（可能使用WikiText等标准文本语料），比较基于精炼的采样器与MAFTC。",
+      "• 主要结论: MAFTC降低轨迹活动同时保持生成质量并提高词汇多样性；基于精炼的采样器随模型评估次数增加会累积额外活动但多样性增益有限。",
+      "• 理论贡献: 连续时间极限下最小活动收敛到最小期望跳率；对于度量诱导的Gibbs路径，动力学最优通量的活动具有几何分解。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the framework could inspire more efficient discrete diffusion samplers for text generation, potentially reducing computational cost and improving diversity, which may benefit LLM-based trading signal generation or synthetic data augmentation.",
+      "• Implementation Risk: High; theoretical nature requires careful implementation, and benefits may be task-specific; integration with existing discrete diffusion models needs validation.",
+      "• Novelty: Solid; introduces a principled geometric decomposition of coupling costs and a practical sampler (MAFTC) with theoretical guarantees, advancing understanding of discrete generative sampling.",
+      "• Practical Impact: Limited immediate alpha; more relevant for improving generative modeling efficiency rather than direct trading strategies."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出活动几何框架，将耦合成本分解为边际运输最小值和超额项，并设计MAFTC采样器，具有理论深度和实用价值。",
+      "• 实盘坑: 主要针对生成模型效率，与金融交易直接关联弱；实际应用中需验证在金融文本生成上的效果，且计算开销可能仍较高。",
+      "• 复现难度: 中等偏高；需要深入理解离散扩散模型和耦合理论，但论文提供了清晰的理论框架和算法，复现路径相对明确。",
+      "• 应用前景: 可用于改进基于离散扩散的文本生成，潜在应用于金融新闻合成或交易信号增强，但需进一步实验验证。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2611.32373v1",
+    "title": "Metamorphic Testing of Learned Spatial Surrogates for Transit Accessibility",
+    "pdf_url": "https://arxiv.org/pdf/2611.32373v1",
+    "published": "2026-11-24",
+    "crawled_at": "2026-11-25 03:12:20",
+    "ai_score": 6.5,
+    "translated_title": "面向公交可达性的学习型空间代理模型的蜕变测试",
+    "summary_en": [
+      "• Model Architecture: A neural surrogate model is trained to approximate computationally expensive accessibility calculations for transit network design, predicting spatial accessibility changes given a candidate bus network and fixed rail service/opportunity data.",
+      "• Data used: The model is trained on routing-derived accessibility targets from constructed networks, with evaluation on geographically held-out regions and controlled input perturbations.",
+      "• Performance metrics: Predictive skill (e.g., average prediction error) is compared against pass rates on qualitative connectivity relations; models with positive predictive skill can still fail basic connectivity tests.",
+      "• Key finding: A targeted intervention substantially increases pass rates for two connectivity relations while also improving predictive skill, showing that average prediction error alone is insufficient when the model is used as an optimization objective."
+    ],
+    "summary_cn": [
+      "• 核心模型: 训练神经网络代理模型来近似计算昂贵的公交可达性，输入候选公交网络及固定铁路服务/机会数据，预测可达性空间变化。",
+      "• 数据来源: 使用构造网络的路由推导可达性目标进行训练，在地理留出区域评估，并进行受控输入扰动测试。",
+      "• 主要结论: 具有正预测技能的模型仍可能无法通过基本连通性测试；针对性干预可同时提高两个连通性关系的通过率和预测技能，表明平均预测误差不足以作为优化目标的唯一指标。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Limited direct alpha; the methodology improves reliability of surrogate models in transit optimization, which could indirectly enhance infrastructure investment decisions but lacks immediate trading signal generation.",
+      "• Implementation Risk: High risk of overfitting to routing-derived targets; models may fail qualitative connectivity tests, leading to suboptimal network designs and potential financial losses in real-world deployment.",
+      "• Novelty: Moderate; applies metamorphic testing to spatial surrogates, a relatively underexplored area, but the core idea of behavioral testing for ML models is not new.",
+      "• Reproducibility: Moderate; depends on availability of transit network data and routing engine, but methodology is clearly described and could be replicated with effort."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将蜕变测试引入空间代理模型评估，强调预测一致性与行为测试分离，对优化循环中的模型可靠性有实际意义。",
+      "• 实盘坑: 模型在连通性测试上的失败可能导致优化结果不可行，进而影响投资决策；平均误差小但行为异常的风险难以量化。",
+      "• 复现难度: 中等；需要公交网络数据和路由计算环境，但论文方法描述清晰，具备复现条件。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2611.32372v1",
+    "title": "From the ELBO to Maximum Likelihood: Convergence of Variational Autoencoders for Nonlinear Mixed-Effects Modeling",
+    "pdf_url": "https://arxiv.org/pdf/2611.32372v1",
+    "published": "2026-11-24",
+    "crawled_at": "2026-11-25 03:12:29",
+    "ai_score": 6.5,
+    "translated_title": "从ELBO到最大似然：非线性混合效应建模中变分自编码器的收敛性",
+    "summary_en": [
+      "• Model Architecture: The paper analyzes a VAE-NLME algorithm that uses a neural network encoder to amortize the posterior approximation for nonlinear mixed-effects models, combining gradient-based training with importance-weighted sufficient statistics.",
+      "• Data used: No specific datasets are mentioned in the abstract; the focus is on theoretical convergence analysis rather than empirical evaluation.",
+      "• Performance metrics: The algorithm is proven to converge almost surely to stationary points of the ELBO and then to stationary points of the marginal log-likelihood, without requiring exact encoder training.",
+      "• Theoretical contribution: Provides convergence guarantees for VAE-based NLME modeling, bridging variational inference and maximum likelihood estimation."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出VAE-NLME算法，使用神经网络编码器摊销非线性混合效应模型的后验近似，并结合梯度训练与重要性加权充分统计量。",
+      "• 数据来源: 摘要中未提及具体数据集，重点在于理论收敛性分析而非实证评估。",
+      "• 主要结论: 证明了算法几乎必然收敛到ELBO的稳定点，进而收敛到边际对数似然的稳定点，且无需精确训练编码器。",
+      "• 理论贡献: 为基于VAE的NLME建模提供了收敛保证，连接了变分推断与最大似然估计。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Limited direct alpha potential for trading; the method is tailored to pharmacometrics and may not translate to financial modeling without significant adaptation.",
+      "• Implementation Risk: High implementation complexity due to neural network training and convergence assumptions; risk of instability in real-world settings with noisy financial data.",
+      "• Novelty: Moderate novelty in providing convergence guarantees for VAE-NLME, but the approach builds on existing VAE and NLME literature.",
+      "• Practicality: The theoretical results are strong, but empirical validation on financial data is absent, making it speculative for hedge fund applications."
+    ],
+    "verdict_cn": [
+      "• 创新点: 为VAE-NLME算法提供了收敛性证明，连接了变分推断与最大似然估计，理论上有一定新意。",
+      "• 实盘坑: 该方法针对药代动力学建模，直接应用于金融领域可能水土不服；神经网络训练的不稳定性在噪声金融数据中风险较高。",
+      "• 复现难度: 复现需要深厚的NLME和VAE背景，且缺乏实证细节，实现难度较大。",
+      "• 应用前景: 在金融领域缺乏直接应用场景，需大幅调整才能用于量化交易。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
     "id": "2611.29789v1",
     "title": "Tabular Foundation Models for Weighted Regression and Classification",
     "pdf_url": "https://arxiv.org/pdf/2611.29789v1",
@@ -43398,358 +43757,6 @@
     "journal_info": {
       "name": "NeurIPS",
       "status": "Under Review"
-    }
-  },
-  {
-    "id": "2604.07350v1",
-    "title": "Fast Spatial Memory with Elastic Test-Time Training",
-    "pdf_url": "https://arxiv.org/pdf/2604.07350v1",
-    "published": "2026-04-08",
-    "crawled_at": "2026-04-09 20:37:16",
-    "ai_score": 8.2,
-    "translated_title": "基于弹性测试时训练的高速空间记忆模型",
-    "summary_en": [
-      "• Model Architecture: Introduces Fast Spatial Memory (FSM) with Elastic Test-Time Training, combining elastic weight consolidation principles with exponential moving average anchor states to stabilize fast-weight updates in Large Chunk Test-Time Training (LaCT) framework",
-      "• Data used: Pre-trained on large-scale curated 3D/4D datasets capturing complex spatial environment dynamics and semantics, enabling learning of spatiotemporal representations from long observation sequences",
-      "• Performance metrics: Demonstrates high-quality 3D/4D reconstruction with smaller chunks, mitigates camera-interpolation shortcut, reduces activation-memory bottleneck, and supports robust multi-chunk adaptation for longer sequences"
-    ],
-    "summary_cn": [
-      "• 核心模型: 提出基于弹性测试时训练的快速空间记忆(FSM)架构，通过Fisher加权弹性先验和指数移动平均锚点状态稳定LaCT快速权重更新",
-      "• 数据来源: 使用大规模精选3D/4D数据集进行预训练，捕捉复杂空间环境的动态特性和语义信息",
-      "• 主要结论: 模型在较小数据块上实现高质量3D/4D重建，缓解相机插值捷径问题，显著降低激活内存瓶颈，支持长序列鲁棒多块适应"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High potential for temporal pattern recognition in financial time series, particularly for high-frequency market microstructure analysis where spatial-temporal relationships matter",
-      "• Implementation Risk: Moderate-to-high risk due to computational intensity of 4D reconstruction and potential overfitting in fast-weight adaptation scenarios",
-      "• Novelty: Significant innovation in combining elastic weight consolidation with test-time training, addressing catastrophic forgetting while maintaining plasticity - represents meaningful advancement beyond standard LaCT approaches"
-    ],
-    "verdict_cn": [
-      "• 创新点: 将弹性权重巩固与测试时训练结合，通过动态锚点平衡稳定性和可塑性，有效解决灾难性遗忘问题",
-      "• 实盘坑: 4D重建计算成本高，快速权重适应可能产生过拟合，长序列处理需要大量内存资源",
-      "• 复现难度: 中等偏高，需要大规模3D/4D数据集和复杂训练基础设施，弹性权重调参较为敏感"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2604.07348v1",
-    "title": "MoRight: Motion Control Done Right",
-    "pdf_url": "https://arxiv.org/pdf/2604.07348v1",
-    "published": "2026-04-08",
-    "crawled_at": "2026-04-09 20:37:29",
-    "ai_score": 8.5,
-    "translated_title": "MoRight：正确实现的运动控制",
-    "summary_en": [
-      "• Model Architecture: MoRight uses a unified framework with disentangled motion modeling, featuring temporal cross-view attention to transfer object motion from canonical static-view to arbitrary target camera viewpoints, and decomposes motion into active (user-driven) and passive (consequence) components for causal learning.",
-      "• Data used: The paper experiments on three benchmarks, though specific datasets are not detailed in the abstract; it likely involves video datasets with motion annotations for training the model to learn motion causality from data.",
-      "• Performance metrics: Demonstrates state-of-the-art performance in generation quality, motion controllability, and interaction awareness on three benchmarks, indicating robust evaluation across multiple criteria."
-    ],
-    "summary_cn": [
-      "• 核心模型: MoRight采用解耦运动建模的统一框架，通过时间跨视图注意力将对象运动从规范静态视图转移到任意目标相机视角，并将运动分解为主动（用户驱动）和被动（后果）组件以学习因果关系。",
-      "• 数据来源: 在三个基准测试上进行实验，摘要中未详细说明具体数据集；可能使用带有运动注释的视频数据集来训练模型从数据中学习运动因果关系。",
-      "• 主要结论: 在三个基准测试中，在生成质量、运动可控性和交互意识方面展示了最先进的性能，表明在多标准评估中具有鲁棒性。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High potential for applications in video generation and editing, enabling precise motion control and causal reasoning, which could be leveraged in financial simulations or market behavior modeling for predictive analytics.",
-      "• Implementation Risk: Moderate risk due to reliance on complex deep learning architectures and the need for large, annotated video datasets, which may limit scalability and real-time performance in practical deployments.",
-      "• Novelty: High novelty with its disentangled motion control and motion causality modeling, offering forward and inverse reasoning capabilities that advance beyond existing kinematic displacement methods."
-    ],
-    "verdict_cn": [
-      "• 创新点: 高创新性，通过解耦运动控制和运动因果关系建模，提供前向和逆向推理能力，超越了现有的运动位移方法。",
-      "• 实盘坑: 中等风险，依赖于复杂的深度学习架构和需要大量带注释的视频数据集，可能在实际部署中限制可扩展性和实时性能。",
-      "• 复现难度: 高难度，涉及时间跨视图注意力和因果学习等先进技术，需要专业知识和大规模计算资源进行复现和优化。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Accepted"
-    }
-  },
-  {
-    "id": "2604.07345v1",
-    "title": "Measurement of Generative AI Workload Power Profiles for Whole-Facility Data Center Infrastructure Planning",
-    "pdf_url": "https://arxiv.org/pdf/2604.07345v1",
-    "published": "2026-04-08",
-    "crawled_at": "2026-04-09 20:37:48",
-    "ai_score": 7.5,
-    "translated_title": "生成式AI工作负载功率特性测量及其在全设施数据中心基础设施规划中的应用",
-    "summary_en": [
-      "• Model Architecture: The study employs a bottom-up, event-driven data center energy model that scales high-resolution workload power measurements to whole-facility energy demand, capturing temporal fluctuations driven by AI workloads and user behavior.",
-      "• Data used: Power consumption data measured at 0.1-second resolution for AI training, fine-tuning, and inference jobs on NVIDIA H100 GPUs in NLR's high-performance computing data center, using MLCommons benchmarks for training/fine-tuning and vLLM benchmarks for inference.",
-      "• Performance metrics: The methodology enables reproducible and standardized workload profiling, with the resulting whole-facility energy profiles used to inform infrastructure planning for grid connection, on-site energy generation, and distributed microgrids.",
-      "• Key contribution: Publicly available dataset of power consumption profiles that bridges the gap between proprietary power data and whole-facility energy estimation, addressing challenges in data center infrastructure planning."
-    ],
-    "summary_cn": [
-      "• 核心模型: 采用自下而上、事件驱动的数据中心能耗模型，将高分辨率工作负载功率测量扩展至全设施能耗需求，捕捉AI工作负载和用户行为驱动的时序波动。",
-      "• 数据来源: 在NLR高性能计算数据中心使用NVIDIA H100 GPU，以0.1秒分辨率测量AI训练、微调和推理任务的功耗数据，采用MLCommons基准进行训练/微调，vLLM基准进行推理。",
-      "• 主要结论: 该方法实现了可复现和标准化的工作负载分析，生成的全设施能耗曲线可用于电网连接、现场发电和分布式微电网等基础设施规划。",
-      "• 关键贡献: 公开可用的功耗特性数据集，填补了专有功耗数据与全设施能耗估算之间的空白，解决了数据中心基础设施规划中的挑战。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate - The methodology provides a framework for optimizing energy infrastructure in AI-driven data centers, potentially reducing operational costs and improving sustainability, which could translate to alpha in energy-sensitive AI operations.",
-      "• Implementation Risk: High - Scaling high-resolution measurements to whole-facility models requires significant computational resources and expertise, with potential inaccuracies in real-world deployment due to varying data center configurations and workload mixes.",
-      "• Novelty: Moderate - While the use of high-resolution power measurements and public datasets is innovative, the core modeling approach builds on existing energy management techniques, with limited direct financial or trading applications.",
-      "• Practical limitations: The study focuses on a specific data center setup with H100 GPUs, which may not generalize to other hardware or older infrastructure, limiting immediate applicability across diverse AI environments."
-    ],
-    "verdict_cn": [
-      "• 创新点: 中等 - 采用0.1秒高分辨率功耗测量和公开数据集，填补了专有数据与全设施能耗估算的空白，但核心模型基于现有能源管理技术，金融或交易应用有限。",
-      "• 实盘坑: 高 - 将高分辨率测量扩展至全设施模型需大量计算资源和专业知识，实际部署中可能因数据中心配置和工作负载混合差异导致不准确，通用性受限。",
-      "• 复现难度: 中等 - 基于公开数据集和标准化基准，理论可复现，但需访问类似硬件（如NVIDIA H100 GPU）和数据中心环境，成本较高。",
-      "• 应用局限: 研究聚焦特定H100 GPU数据中心设置，可能不适用于其他硬件或旧基础设施，在多样化AI环境中的即时应用性有限。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "ArXiv Preprint",
-      "status": "Preprint"
-    }
-  },
-  {
-    "id": "2604.07343v1",
-    "title": "Personalized RewardBench: Evaluating Reward Models with Human Aligned Personalization",
-    "pdf_url": "https://arxiv.org/pdf/2604.07343v1",
-    "published": "2026-04-08",
-    "crawled_at": "2026-04-09 20:38:02",
-    "ai_score": 7.8,
-    "translated_title": "个性化奖励基准：基于人类对齐个性化评估奖励模型",
-    "summary_en": [
-      "• Model Architecture: The paper introduces Personalized RewardBench, a benchmark framework designed to evaluate reward models (RMs) by constructing chosen and rejected response pairs based on user-specific rubrics, ensuring preference distinctions are tailored to individual users.",
-      "• Data used: The benchmark uses human evaluations to create response pairs where the primary discriminative factor is personal preference, with both responses maintaining high general quality (e.g., correctness, relevance, helpfulness).",
-      "• Performance metrics: Testing shows existing state-of-the-art reward models struggle with personalization, peaking at 75.94% accuracy. The benchmark demonstrates higher correlation with downstream performance in Best-of-N sampling and Proximal Policy Optimization compared to baselines."
-    ],
-    "summary_cn": [
-      "• 核心模型: 提出个性化奖励基准（Personalized RewardBench），通过基于用户特定规则构建选择和拒绝响应对来评估奖励模型，确保偏好区分针对个体用户。",
-      "• 数据来源: 利用人工评估创建响应对，主要区分因素为个人偏好，同时保持响应的高通用质量（如正确性、相关性和帮助性）。",
-      "• 主要结论: 现有最先进奖励模型在个性化方面表现不佳，最高准确率仅为75.94%。该基准在下游任务（如Best-of-N采样和近端策略优化）中与性能相关性显著高于基线。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate to high; the benchmark addresses a critical gap in evaluating personalized reward models, which could enhance LLM alignment strategies and improve downstream task performance in financial NLP applications.",
-      "• Implementation Risk: High; integrating personalized reward models into existing systems requires robust user preference data collection and validation, posing scalability and privacy challenges.",
-      "• Novelty: High; the focus on pluralistic alignment and personalized preferences is novel, as most benchmarks prioritize general response quality over individual user values."
-    ],
-    "verdict_cn": [
-      "• 创新点: 高；专注于多元对齐和个性化偏好，填补了评估奖励模型在个人价值观方面的空白，区别于主流基准的通用响应质量评估。",
-      "• 实盘坑: 高；将个性化奖励模型集成到现有系统需大量用户偏好数据，面临可扩展性和隐私保护挑战，可能增加实施成本和风险。",
-      "• 复现难度: 中等；基准构建依赖于人工评估和用户特定规则，复现需协调资源，但方法描述清晰，技术门槛可控。"
-    ],
-    "ai_strategy": "NLP/LLM",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2604.07328v1",
-    "title": "How to sketch a learning algorithm",
-    "pdf_url": "https://arxiv.org/pdf/2604.07328v1",
-    "published": "2026-04-08",
-    "crawled_at": "2026-04-09 20:38:16",
-    "ai_score": 7.8,
-    "translated_title": "如何草绘学习算法",
-    "summary_en": [
-      "• Model Architecture: Proposes a data deletion scheme based on 'stability' assumption, using higher-order derivatives in random complex directions with forward-mode automatic differentiation for local sketching of arithmetic circuits.",
-      "• Data used: Experiments conducted with microgpt (a minimal AI model), though specific dataset details are not provided in the abstract.",
-      "• Performance metrics: Achieves vanishing error ε in predicting model outputs; precomputation and prediction algorithms are poly(1/ε) times slower than regular training and inference; storage requires poly(1/ε) models."
-    ],
-    "summary_cn": [
-      "• 核心模型: 基于'稳定性'假设的数据删除方案，采用随机复方向的高阶导数和前向模式自动微分进行算术电路的局部草绘。",
-      "• 数据来源: 使用microgpt进行实验，但摘要中未提供具体数据集细节。",
-      "• 主要结论: 实现预测模型输出的渐近误差ε；预计算和预测算法比常规训练和推理慢poly(1/ε)倍；存储需求为poly(1/ε)个模型。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate—efficient data deletion could enhance model interpretability and privacy, potentially useful for adaptive strategies in dynamic markets, but direct trading alpha is limited.",
-      "• Implementation Risk: High—'stability' assumption is unproven for complex models; poly(1/ε) overhead may be prohibitive in real-time applications; reliance on microgpt experiments raises scalability concerns.",
-      "• Novelty: High—novel technical approach using higher-order derivatives for sketching; addresses data deletion problem with practical efficiency claims, though builds on prior interpretability work."
-    ],
-    "verdict_cn": [
-      "• 创新点: 高—采用高阶导数进行草绘的新技术方法；以实际效率声称解决数据删除问题，尽管基于先前的可解释性研究。",
-      "• 实盘坑: 高—'稳定性'假设对复杂模型未经验证；poly(1/ε)开销在实时应用中可能不可行；依赖microgpt实验引发可扩展性担忧。",
-      "• 复现难度: 中—代码已开源，但技术细节复杂，需要自动微分和稳定性验证的专业知识，实验设置可能不透明。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "ArXiv Preprint",
-      "status": "Preprint"
-    }
-  },
-  {
-    "id": "2604.07323v1",
-    "title": "Gaussian Approximation for Asynchronous Q-learning",
-    "pdf_url": "https://arxiv.org/pdf/2604.07323v1",
-    "published": "2026-04-08",
-    "crawled_at": "2026-04-09 20:38:33",
-    "ai_score": 7.8,
-    "translated_title": "异步Q学习的高斯逼近理论",
-    "summary_en": [
-      "• Model Architecture: Asynchronous Q-learning algorithm with polynomial stepsize k^{-ω} (ω∈(1/2,1]) and Polyak-Ruppert averaging",
-      "• Data used: Sequence of state-action-next-state triples (s_k, a_k, s_{k+1}) forming uniformly geometrically ergodic Markov chains",
-      "• Performance metrics: Convergence rate of order up to n^{-1/6}log^4(nSA) over hyper-rectangles, where n is sample count, S and A are state/action counts",
-      "• Theoretical foundation: High-dimensional CLT for sums of martingale differences with independent interest",
-      "• Additional results: Bounds for high-order moments of the algorithm's last iterate"
-    ],
-    "summary_cn": [
-      "• 核心模型: 采用多项式步长k^{-ω}(ω∈(1/2,1])的异步Q学习算法，结合Polyak-Ruppert平均技术",
-      "• 数据来源: 状态-动作-下一状态三元组序列(s_k, a_k, s_{k+1})，构成一致几何遍历马尔可夫链",
-      "• 主要结论: 在超矩形类上获得高达n^{-1/6}log^4(nSA)的收敛速率，n为样本数，S/A为状态/动作数",
-      "• 理论贡献: 证明了鞅差和的高维中心极限定理，具有独立理论价值",
-      "• 扩展分析: 提供了算法最后迭代的高阶矩边界"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate - provides theoretical guarantees for asynchronous RL in high-dimensional settings, but lacks empirical validation or financial application",
-      "• Implementation Risk: High - assumes uniformly geometrically ergodic Markov chains, which may not hold in real market environments with non-stationarity",
-      "• Novelty: Significant - first high-dimensional CLT rates for asynchronous Q-learning with polynomial stepsize, martingale approach is technically sophisticated",
-      "• Practical limitations: n^{-1/6} rate is relatively slow for practical applications, logarithmic dependence on state-action space could be problematic in large-scale problems",
-      "• Research contribution: Strong theoretical foundation that could enable more robust RL algorithms for sequential decision problems"
-    ],
-    "verdict_cn": [
-      "• 创新点: 首次为多项式步长的异步Q学习建立高维中心极限定理收敛速率，鞅方法技术含量高",
-      "• 实盘坑: 假设一致几何遍历马尔可夫链，实际市场数据常具非平稳性，理论假设可能不成立",
-      "• 复现难度: 中等偏高，需要精确实现多项式步长和Polyak-Ruppert平均，理论证明复杂但算法核心相对明确",
-      "• 应用局限: n^{-1/6}收敛速率较慢，对数依赖状态-动作空间在大规模问题中可能成为瓶颈",
-      "• 理论价值: 为高维异步强化学习提供严格理论保证，但缺乏实证验证和金融场景适配"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2604.07316v1",
-    "title": "SL-FAC: A Communication-Efficient Split Learning Framework with Frequency-Aware Compression",
-    "pdf_url": "https://arxiv.org/pdf/2604.07316v1",
-    "published": "2026-04-08",
-    "crawled_at": "2026-04-09 20:38:48",
-    "ai_score": 7.8,
-    "translated_title": "SL-FAC：一种具有频率感知压缩的通信高效分割学习框架",
-    "summary_en": [
-      "• Model Architecture: SL-FAC introduces a split learning framework with two key components: adaptive frequency decomposition (AFD) to transform smashed data (activations/gradients) into spectral components, and frequency-based quantization compression (FQC) to apply customized bit widths based on spectral energy distribution.",
-      "• Data used: The paper does not specify particular datasets, but extensive experiments are mentioned, likely using standard benchmarks for distributed machine learning (e.g., image classification or NLP tasks) to evaluate communication efficiency and model convergence.",
-      "• Performance metrics: SL-FAC demonstrates significant communication reduction while preserving information crucial for model convergence, as confirmed through experiments showing improved training efficiency compared to baseline methods."
-    ],
-    "summary_cn": [
-      "• 核心模型: SL-FAC采用分割学习框架，包含自适应频率分解（AFD）和基于频率的量化压缩（FQC）两个关键组件，通过频域变换和定制化量化减少通信开销。",
-      "• 数据来源: 论文未明确指定数据集，但提及广泛实验，可能使用分布式机器学习的标准基准（如图像分类或NLP任务）来评估通信效率和模型收敛性。",
-      "• 主要结论: SL-FAC在保持模型收敛关键信息的同时，实现了显著的通信减少，实验证实其能有效提升训练效率。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate; the framework addresses a critical bottleneck in distributed ML (communication overhead), which could enhance edge computing applications, but direct financial alpha generation is indirect and depends on deployment in specific use cases like high-frequency trading systems.",
-      "• Implementation Risk: High; integrating frequency-based compression into existing split learning pipelines requires significant engineering effort, potential compatibility issues with diverse hardware, and risk of information loss affecting model accuracy in real-world scenarios.",
-      "• Novelty: Moderate; while frequency-domain techniques are not new in signal processing, their application to split learning with adaptive decomposition and quantization is innovative, but lacks groundbreaking theoretical advances compared to prior compression methods."
-    ],
-    "verdict_cn": [
-      "• 创新点: 将频率分解和量化压缩结合应用于分割学习，通过自适应频域处理减少通信开销，具有一定新颖性，但非革命性突破。",
-      "• 实盘坑: 高实施风险，需大量工程集成，硬件兼容性问题可能影响性能，且信息损失风险在实盘环境中可能导致模型精度下降。",
-      "• 复现难度: 中等，核心算法描述清晰，但依赖特定频域库和分布式设置，实验复现需一定技术基础，可能遇到调参和优化挑战。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2604.07306v1",
-    "title": "Beyond Loss Values: Robust Dynamic Pruning via Loss Trajectory Alignment",
-    "pdf_url": "https://arxiv.org/pdf/2604.07306v1",
-    "published": "2026-04-08",
-    "crawled_at": "2026-04-09 20:39:03",
-    "ai_score": 7.8,
-    "translated_title": "超越损失值：通过损失轨迹对齐实现鲁棒动态剪枝",
-    "summary_en": [
-      "• Model Architecture: AlignPrune is a plug-and-play module that introduces Dynamic Alignment Score (DAS), a loss-trajectory-based criterion, integrated into existing dynamic pruning frameworks without modifying model architecture or training pipeline.",
-      "• Data used: Experiments conducted on five widely-used benchmarks across various noise types (e.g., noisy-label settings) and pruning ratios, with code available on GitHub.",
-      "• Performance metrics: Boosts accuracy by up to 6.3% over state-of-the-art baselines, demonstrating effectiveness in noisy data scenarios and consistent outperformance across different settings."
-    ],
-    "summary_cn": [
-      "• 核心模型: AlignPrune模块引入动态对齐分数（DAS），基于损失轨迹的准则，作为即插即用组件集成到现有动态剪枝框架中，无需修改模型架构或训练流程。",
-      "• 数据来源: 在五个广泛使用的基准数据集上进行实验，涵盖多种噪声类型（如标签噪声）和剪枝比例，代码已在GitHub开源。",
-      "• 主要结论: 在噪声数据环境下，相比最先进基线方法，准确率提升最高达6.3%，显著提高了动态剪枝在真实场景中的鲁棒性和有效性。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate; addresses a specific pain point (noisy-label robustness in pruning) with measurable performance gains, but limited to dynamic pruning applications rather than broader alpha generation.",
-      "• Implementation Risk: Low; as a plug-and-play module, it minimizes integration complexity and does not require architectural changes, reducing deployment hurdles in existing pipelines.",
-      "• Novelty: High; introduces a novel loss-trajectory-based criterion (DAS) to overcome reliance on per-sample loss, offering a fresh approach to noise robustness in pruning, though the core idea of trajectory analysis is not entirely new in ML."
-    ],
-    "verdict_cn": [
-      "• 创新点: 较高；提出动态对齐分数（DAS），基于损失轨迹而非单点损失值，有效解决噪声标签下剪枝的误判问题，在方法上有所突破。",
-      "• 实盘坑: 低；作为即插即用模块，集成风险小，无需改动模型架构，但依赖现有动态剪枝框架，可能受限于底层算法的性能瓶颈。",
-      "• 复现难度: 中等；代码已开源，实验基于标准基准，但损失轨迹的计算和DAS的调优可能需要额外计算资源和专业知识。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Accepted"
-    }
-  },
-  {
-    "id": "2604.07292v1",
-    "title": "Graph Neural ODE Digital Twins for Control-Oriented Reactor Thermal-Hydraulic Forecasting Under Partial Observability",
-    "pdf_url": "https://arxiv.org/pdf/2604.07292v1",
-    "published": "2026-04-08",
-    "crawled_at": "2026-04-09 20:39:18",
-    "ai_score": 8.2,
-    "translated_title": "面向控制的部分可观测条件下反应堆热工水力预测的图神经网络常微分方程数字孪生",
-    "summary_en": [
-      "• Model Architecture: Combines physics-informed message-passing Graph Neural Network with Neural ODE (GNN-ODE) for continuous-time latent dynamics, using directed sensor graphs with flow/heat transfer-aware edges and topology-guided missing-node initialization.",
-      "• Data used: Simulation transients for training, with adaptation to experimental facility data using only 30 sequences via layerwise discriminative fine-tuning for sim-to-real transfer.",
-      "• Performance metrics: Achieves average MAE of 0.91 K at 60s and 2.18 K at 300s for uninstrumented nodes, R² up to 0.995 for state reconstruction, and inference 105× faster than simulated time on single GPU enabling 64-member ensemble rollouts."
-    ],
-    "summary_cn": [
-      "• 核心模型: 物理信息驱动的消息传递图神经网络与神经常微分方程(GNN-ODE)结合，通过有向传感器图编码水力连通性，实现连续时间潜在动力学建模。",
-      "• 数据来源: 基于仿真瞬态数据训练，仅用30个序列通过分层判别微调适配实验设施数据，完成仿真到现实的迁移。",
-      "• 主要结论: 在未监测节点实现60秒0.91K、300秒2.18K的平均绝对误差，状态重建R²达0.995，推理速度比仿真时间快105倍，支持64成员集成推演。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High for real-time control applications in energy/industrial systems requiring millisecond inference and uncertainty quantification; demonstrated constitutive learning (Reynolds-number exponent recovery) suggests generalization beyond training data.",
-      "• Implementation Risk: Moderate due to dependency on accurate graph topology and physics-informed priors; sim-to-real transfer with limited experimental data (30 sequences) may not scale to complex real-world variations.",
-      "• Novelty: Strong integration of GNNs with Neural ODEs for partial observability handling and topology-guided initialization; physics-aware message passing enhances interpretability and robustness in thermal-hydraulic forecasting."
-    ],
-    "verdict_cn": [
-      "• 创新点: 图神经网络与神经ODE的深度融合，针对部分可观测问题设计拓扑引导缺失节点初始化，物理感知消息传递提升热工水力预测的可解释性。",
-      "• 实盘坑: 严重依赖精确的图拓扑结构和物理先验知识；仅用30个实验序列的仿真到现实迁移可能无法应对复杂实际场景的变异。",
-      "• 复现难度: 中等偏高，需要专业的热工水力仿真数据、GPU计算资源以及图神经网络与ODE的交叉领域技术栈。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Accepted"
-    }
-  },
-  {
-    "id": "2604.07286v1",
-    "title": "CADENCE: Context-Adaptive Depth Estimation for Navigation and Computational Efficiency",
-    "pdf_url": "https://arxiv.org/pdf/2604.07286v1",
-    "published": "2026-04-08",
-    "crawled_at": "2026-04-09 20:39:33",
-    "ai_score": 7.8,
-    "translated_title": "CADENCE：面向导航与计算效率的上下文自适应深度估计",
-    "summary_en": [
-      "• Model Architecture: CADENCE employs a slimmable monocular depth estimation network that dynamically scales computational complexity based on navigation needs and environmental context, creating a closed-loop system between perception fidelity and actuation requirements.",
-      "• Data used: The system was evaluated on an open-source testbed integrating Microsoft AirSim with an NVIDIA Jetson Orin Nano, simulating autonomous vehicle scenarios in remote environments with hardware constraints.",
-      "• Performance metrics: Compared to a static approach, CADENCE reduced sensor acquisitions by 9.67%, power consumption by 16.1%, inference latency by 74.8%, overall energy expenditure by 75.0%, while increasing navigation accuracy by 7.43%."
-    ],
-    "summary_cn": [
-      "• 核心模型: CADENCE采用可瘦身的单目深度估计网络，根据导航需求和环境上下文动态调整计算复杂度，实现感知保真度与执行要求之间的闭环系统。",
-      "• 数据来源: 使用集成Microsoft AirSim与NVIDIA Jetson Orin Nano的开源测试平台进行评估，模拟远程环境中硬件受限的自动驾驶场景。",
-      "• 主要结论: 相比静态方法，CADENCE将传感器采集减少9.67%、功耗降低16.1%、推理延迟降低74.8%、总能耗减少75.0%，同时导航精度提高7.43%。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate - The adaptive efficiency approach could translate to edge computing applications in algorithmic trading where latency and power constraints matter, but direct financial alpha generation is limited.",
-      "• Implementation Risk: High - Real-world deployment faces challenges with environmental variability, sensor reliability, and integration into existing autonomous systems, requiring extensive validation.",
-      "• Novelty: Significant - The closed-loop adaptation between perception and actuation is innovative, though slimmable networks are established; the context-aware scaling mechanism adds practical value."
-    ],
-    "verdict_cn": [
-      "• 创新点: 显著 - 感知与执行间的闭环自适应机制具有创新性，尽管可瘦身网络已有基础，但上下文感知的缩放机制增加了实用价值。",
-      "• 实盘坑: 高 - 实际部署面临环境多变性、传感器可靠性及与现有系统集成的挑战，需大量验证，硬件依赖性强。",
-      "• 复现难度: 中等 - 开源测试平台和明确指标便于复现，但需要特定硬件（NVIDIA Jetson）和仿真环境，可能增加成本。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Accepted"
     }
   }
 ]
