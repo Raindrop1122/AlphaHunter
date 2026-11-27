@@ -1,5 +1,338 @@
 [
   {
+    "id": "2611.34938v1",
+    "title": "Tokenisation is not in APX",
+    "pdf_url": "https://arxiv.org/pdf/2611.34938v1",
+    "published": "2026-11-25",
+    "crawled_at": "2026-11-27 02:27:40",
+    "ai_score": 7.5,
+    "translated_title": "分词不在APX复杂度类中",
+    "summary_en": [
+      "• Model Architecture: The paper analyzes tokenisation algorithms (direct and bottom-up) under compression and unigram log-likelihood objectives, proving complexity hardness results.",
+      "• Data used: Theoretical analysis, no empirical data; proofs consider binary and larger alphabets, including unary alphabets for direct tokenisation.",
+      "• Performance metrics: Main results are complexity-theoretic: unless P=NP, no polynomial-time constant-factor approximation exists for tokenisation (not in APX); direct tokenisation is APX-hard even over unary alphabets."
+    ],
+    "summary_cn": [
+      "• 核心模型: 论文分析直接分词和自底向上分词算法，在压缩或一元对数似然目标下的计算复杂度。",
+      "• 数据来源: 纯理论分析，无实证数据；证明涵盖二进制及更大字母表，并包括一元字母表下的直接分词。",
+      "• 主要结论: 除非P=NP，否则不存在多项式时间常数因子近似算法（即分词不在APX中）；直接分词在一元字母表下也是APX难的。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low direct alpha; theoretical hardness result may inform algorithm design but does not directly yield trading signals.",
+      "• Implementation Risk: High risk if relying on tokenisation for NLP pipelines; results suggest optimal tokenisation is computationally intractable, so practical tokenisers are heuristics with no approximation guarantee.",
+      "• Novelty: High theoretical novelty; first proof that tokenisation is not in APX, with implications for NLP and compression."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次证明分词问题不在APX复杂度类中，具有理论新颖性，对NLP和压缩领域有启示。",
+      "• 实盘坑: 直接阿尔法潜力低；若在交易信号生成中依赖分词，需注意最优分词不可近似，实际分词器仅为启发式，无性能保证。",
+      "• 复现难度: 理论证明复现难度中等，需熟悉计算复杂性理论；但无实证代码，应用需自行设计实验。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2611.34935v1",
+    "title": "Can image generation help visual reasoning? An empirical study",
+    "pdf_url": "https://arxiv.org/pdf/2611.34935v1",
+    "published": "2026-11-25",
+    "crawled_at": "2026-11-27 02:27:46",
+    "ai_score": 4.5,
+    "translated_title": "图像生成能帮助视觉推理吗？一项实证研究",
+    "summary_en": [
+      "• Model Architecture: The study evaluates 13 vision-language model and generator pairs, including unified models BAGEL and Janus-Pro-7B, where a model describes a needed helper image and then answers using original and generated images.",
+      "• Data used: Experiments span 10 visual reasoning tasks, including VSTAR, ChartQAPro, MathVista, and ERQA, with repeated image edits tested on some tasks.",
+      "• Performance metrics: Generation lowers mean accuracy by 3.7 percentage points across all pairs, with declines on 9 of 10 tasks; on VSTAR, adding a generated image to a planning hint reduces accuracy by 10.47 points.",
+      "• Key finding: Repeated image edits yield mixed results—ChartQAPro and MathVista remain below no-generation baselines, while ERQA gains 3 points after 10 edits."
+    ],
+    "summary_cn": [
+      "• 核心模型: 评估了13个视觉语言模型与生成器配对，包括统一模型BAGEL和Janus-Pro-7B，模型先描述所需辅助图像，再结合原始图像和生成图像作答。",
+      "• 数据来源: 涵盖10个视觉推理任务，包括VSTAR、ChartQAPro、MathVista和ERQA，部分任务测试了重复图像编辑。",
+      "• 主要结论: 生成使平均准确率下降3.7个百分点，10个任务中9个下降；在VSTAR上，向规划提示添加生成图像使准确率降低10.47个百分点。",
+      "• 额外发现: 重复图像编辑结果不一——ChartQAPro和MathVista仍低于无生成基线，而ERQA在10次编辑后提升3个百分点。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Low—the paper demonstrates a negative result, showing that generated helper images generally hurt visual reasoning performance, offering little actionable alpha for trading strategies.",
+      "• Implementation Risk: High—the approach requires integrating image generation with vision-language models, which is computationally expensive and prone to error, with inconsistent benefits across tasks.",
+      "• Novelty: Moderate—while the empirical study is thorough, the idea of using generated images to aid reasoning is not entirely new, and the negative findings limit its impact.",
+      "• Practicality: The method is not ready for production; the mixed results and overall degradation suggest that current image generation models are not yet reliable for enhancing visual reasoning."
+    ],
+    "verdict_cn": [
+      "• 创新点: 系统性地实证了图像生成对视觉推理的帮助有限，甚至有害，为多模态推理提供了负面参考。",
+      "• 实盘坑: 生成辅助图像计算成本高，且多数任务性能下降，难以在实时决策中应用；重复编辑效果不稳定，增加调参难度。",
+      "• 复现难度: 中等，需要复现13个模型配对和10个任务的评估，但代码和数据集若公开则相对可行。",
+      "• 总体评价: 论文提供了有价值的负面结果，但缺乏突破性方法，对量化投资的直接启发有限。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2611.34934v1",
+    "title": "Attack Policy Selection can Mislead Monitor Evaluators",
+    "pdf_url": "https://arxiv.org/pdf/2611.34934v1",
+    "published": "2026-11-25",
+    "crawled_at": "2026-11-27 02:27:52",
+    "ai_score": 7.5,
+    "translated_title": "攻击策略选择可能误导监控评估器",
+    "summary_en": "• Model Architecture: Evaluates an ex-production OpenAI monitor (likely a classifier) against attack policies generated via reinforcement learning and optimized prompting/transcript editing, with attacks transferring to a held-out GPT-5.4 target monitor.\n• Data used: Transcripts generated by various attack policies acting as proxies for dangerous behavior; no real deployment data used.\n• Performance metrics: False negative rate ranges from 0.5% to 20.8% across RL optimization levels, and from 6.4% to 23.0% across methods at best optimization, showing high sensitivity to attack-policy choice.\n• Key finding: Monitor evasion evaluations can mislead; basic attack methods may give false confidence in monitor strength, and interpreting results requires justification of proxy legitimacy.",
+    "summary_cn": "• 核心模型: 评估一个前OpenAI生产监控器（分类器），使用强化学习和优化提示/转录编辑生成的攻击策略，攻击迁移到留出的GPT-5.4目标监控器。\n• 数据来源: 由各种攻击策略生成的转录文本，作为危险行为的代理，未使用真实部署数据。\n• 主要结论: 假阴性率在RL优化水平间从0.5%到20.8%不等，在最佳优化水平下不同方法间从6.4%到23.0%不等，表明对攻击策略选择高度敏感；监控规避评估容易误导，基本攻击方法可能带来虚假信心。",
+    "verdict_en": "• Alpha Potential: Limited direct alpha; highlights critical evaluation risk for AI safety monitors, relevant for firms deploying LLM agents in trading or risk management.\n• Implementation Risk: High—results depend heavily on attack-policy choice and optimization level; no standardized evaluation protocol, making deployment decisions unreliable.\n• Novelty: Moderate—empirically demonstrates sensitivity of monitor evaluations to attack proxies, but lacks theoretical framework or solution; open problem of justifying proxy legitimacy remains.",
+    "verdict_cn": "• 创新点: 实证揭示监控评估对攻击策略选择的敏感性，强调代理合法性论证的必要性，对AI安全评估有警示意义。\n• 实盘坑: 评估结果高度依赖攻击方法，易导致对监控器强度的误判；缺乏标准化评估流程，实盘部署风险大。\n• 复现难度: 中等—需要复现RL和提示优化攻击策略，但未提供代码或详细实验设置，复现存在挑战。",
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2611.34930v1",
+    "title": "A gene informed benchmark for BioScoring of pathology foundation models",
+    "pdf_url": "https://arxiv.org/pdf/2611.34930v1",
+    "published": "2026-11-25",
+    "crawled_at": "2026-11-27 02:27:59",
+    "ai_score": 7.2,
+    "translated_title": "基于基因信息的病理基础模型生物评分基准",
+    "summary_en": [
+      "• Model Architecture: BioScore uses a sparse autoencoder to decompose patch embeddings from pathology foundation models into sparse features, which are clustered into groups to measure alignment with cell identities defined by marker genes from spatial transcriptomics.",
+      "• Data used: The benchmark leverages spatial transcriptomics data from the same tissue sections to define 52 cell identities via marker genes, providing a reference for evaluating how well image encoders capture biological information without labels.",
+      "• Performance metrics: BioScore quantifies the specificity of each feature group to a cell identity, producing a score per identity. Evaluated on 8 pathology and 3 natural-image models, pathology models scored 0.299–0.371 vs. 0.214–0.232 for natural-image models, with paired tests separating three tiers among pathology models.",
+      "• Key finding: BioScore requires no labels, builds its reference from data, and ranks encoders similarly to supervised probes, while also providing per-identity breakdowns to identify which cell identities each encoder captures or misses."
+    ],
+    "summary_cn": [
+      "• 核心模型: BioScore 使用稀疏自编码器将病理基础模型的图像块嵌入分解为稀疏特征，并将这些特征聚类成组，以衡量其与空间转录组学定义的细胞身份（由标记基因确定）的对齐程度。",
+      "• 数据来源: 利用同一组织切片的空转数据，通过标记基因定义52种细胞身份，作为评估图像编码器捕捉生物学信息能力的参考，无需人工标注。",
+      "• 主要结论: 对8个病理基础模型和3个自然图像模型进行评估，病理模型得分（0.299-0.371）显著高于自然图像模型（0.214-0.232），配对检验将病理模型分为三个层级；BioScore无需标签，其排序与监督探针一致，并能提供每个细胞身份的详细分解。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: BioScore offers a novel, label-free benchmark for evaluating pathology foundation models on biological relevance, which could improve model selection for diagnostic and research applications, potentially leading to better clinical outcomes and alpha generation in healthcare investments.",
+      "• Implementation Risk: The method relies on spatial transcriptomics data, which may be scarce or costly for some tissues; the sparse autoencoder and clustering steps introduce hyperparameters that could affect reproducibility and stability of scores across datasets.",
+      "• Novelty: The use of sparse autoencoders to interpret patch embeddings and align them with cell identities via spatial transcriptomics is innovative, providing a biologically grounded alternative to supervised probes and enabling fine-grained analysis of model strengths and weaknesses."
+    ],
+    "verdict_cn": [
+      "• 创新点: 首次利用稀疏自编码器将病理基础模型的图像块嵌入分解为稀疏特征，并与空间转录组学定义的细胞身份对齐，实现了无需标签的生物学可解释性评估，为模型选择提供了新维度。",
+      "• 实盘坑: 依赖空间转录组数据，获取成本高且可能受限；稀疏自编码器和聚类步骤的超参数敏感，可能影响评分的稳定性和跨数据集的可重复性；评分与下游临床任务的直接关联性仍需进一步验证。",
+      "• 复现难度: 中等。需要空间转录组数据和病理图像配准，以及训练稀疏自编码器，但论文提供了详细方法，代码若开源则复现相对可行。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2611.34928v1",
+    "title": "Diverse Alternative Reasoning Traces for Hard Math Problems",
+    "pdf_url": "https://arxiv.org/pdf/2611.34928v1",
+    "published": "2026-11-25",
+    "crawled_at": "2026-11-27 02:28:05",
+    "ai_score": 7.5,
+    "translated_title": "针对困难数学问题的多样化替代推理轨迹",
+    "summary_en": [
+      "• Model Architecture: The method, DART, operates on large language models (LLMs) for mathematical reasoning, specifically applied to Llama-3.1-8B-Instruct for post-training.",
+      "• Data used: Experiments are conducted on DeepMath-103K problems that remain unsolved under greedy decoding, with evaluations on MATH-500 and AIME benchmarks.",
+      "• Performance metrics: DART recovers 37% more problems than Monte Carlo sampling at matched generation cost, with 30% lower cost per accepted trace, and achieves the highest point estimate in five of six evaluations after post-training."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出DART方法，从被拒绝的推理轨迹中挖掘多样化替代轨迹，用于大语言模型的数学推理后训练，在Llama-3.1-8B-Instruct上验证。",
+      "• 数据来源: 使用DeepMath-103K中贪婪解码未解决的问题，并在MATH-500和AIME基准上评估。",
+      "• 主要结论: 在相同生成轨迹数下，DART比蒙特卡洛采样多恢复37%的问题，每个接受轨迹成本低30%，后训练后在六项评估中五项点估计最高。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate; the method improves data efficiency for LLM math reasoning, which could enhance model performance in quantitative domains, but direct alpha in trading is indirect.",
+      "• Implementation Risk: Low to moderate; relies on existing LLMs and verifiers, but requires careful tuning of uncertainty ranking and alternative generation.",
+      "• Novelty: Decent; revisiting rejected traces with position-weighted uncertainty and meta-thought is a fresh angle, though incremental over existing trace-mining techniques."
+    ],
+    "verdict_cn": [
+      "• 创新点: 利用位置加权不确定性对拒绝轨迹进行步骤分解和替代生成，结合元思考，提升困难问题的覆盖率和数据效率。",
+      "• 实盘坑: 方法依赖于验证器的准确性，且替代轨迹的生成可能引入噪声；在金融领域直接应用需适配领域特定问题。",
+      "• 复现难度: 中等；需要复现轨迹分解、不确定性排序和替代生成流程，但论文未提供代码，可能需大量工程调优。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2611.34923v1",
+    "title": "Mixture-of-Loops Transformer",
+    "pdf_url": "https://arxiv.org/pdf/2611.34923v1",
+    "published": "2026-11-25",
+    "crawled_at": "2026-11-27 02:28:12",
+    "ai_score": 7.5,
+    "translated_title": "循环混合Transformer",
+    "summary_en": [
+      "• Model Architecture: Mixture-of-Loops Transformer (MoLT) introduces Mixture-of-Loops Attention (MoLA) that uses keys and values as memory for selective reuse across depths and loops. Two variants: MoLT-R (retains residual stream, reads local KV) and MoLT-KV (restarts from embeddings, reads current-loop local KV with preceding-loop memory KV). U-shaped MoLT (U-MoLT) separates memory construction from prediction readout to balance efficiency and quality.",
+      "• Data used: 400B-token pretraining on OLMo3 models (700M/1.5B dense and 3B MoE) and 100B-token continued pretraining on Qwen3.5-0.8B-Base.",
+      "• Performance metrics: U-MoLT achieves 1.7x validation cross-entropy token efficiency at 700M, improves 3B MoE 10-domain perplexity by 0.75 and 10-task accuracy by 2.1 percentage points. In continued pretraining, lowers CE on all 11 domains with 1.4x mean token efficiency. Inference latency matches non-looped OLMo3 (996.6 vs 1000.6 ms on S-size models)."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出循环混合Transformer (MoLT)，其核心是循环混合注意力 (MoLA)，利用键值对作为记忆在深度和循环间选择性重用。包含MoLT-R（保留残差流，读取局部KV）和MoLT-KV（从嵌入重启，读取当前循环局部KV及前序循环记忆KV）。进一步提出U型MoLT (U-MoLT) 分离记忆构建与预测读出以平衡效率与质量。",
+      "• 数据来源: 在OLMo3模型（700M/1.5B密集和3B MoE）上进行400B token预训练，并在Qwen3.5-0.8B-Base上进行100B token持续预训练。",
+      "• 主要结论: U-MoLT在700M模型上达到1.7倍验证交叉熵token效率，3B MoE模型10领域困惑度降低0.75，10任务准确率提升2.1个百分点。持续预训练中所有11个领域交叉熵降低，平均token效率1.4倍。推理延迟与无循环OLMo3相当（S尺寸模型996.6 vs 1000.6毫秒）。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Moderate to high. The efficiency gains (1.7x token efficiency, latency parity) could reduce training and inference costs, potentially improving profitability for LLM-based strategies. However, the improvement margins (e.g., 2.1 percentage points accuracy) may not be sufficient for a strong alpha signal in competitive markets.",
+      "• Implementation Risk: Medium. The architecture introduces complexity (loop forcing, U-shaped design) that may require careful tuning. The code is available, but reproducing results at scale (400B tokens) demands significant compute resources, posing a barrier for smaller funds.",
+      "• Novelty: Solid. The idea of selective KV reuse across loops is a novel twist on looped transformers, with promising efficiency-quality trade-offs. The U-MoLT design and loop forcing for parallel training are non-trivial contributions."
+    ],
+    "verdict_cn": [
+      "• 创新点: 提出循环混合注意力机制，通过选择性重用KV记忆来提升循环Transformer的效率-表达力前沿。U-MoLT的U型设计分离记忆构建与预测读出，避免无用计算，具有一定新颖性。",
+      "• 实盘坑: 性能提升幅度有限（如2.1个百分点准确率），在实盘Alpha挖掘中可能被噪声淹没。训练需要400B token级别数据，算力门槛高，小型基金难以复现。推理延迟虽持平，但架构复杂可能增加部署和维护成本。",
+      "• 复现难度: 中等。代码已开源，但大规模预训练需要大量GPU资源，且超参数（如循环次数、记忆重用策略）可能对结果敏感，需仔细调优。"
+    ],
+    "ai_strategy": "NLP/LLM",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
+    "id": "2611.34899v1",
+    "title": "Enhancing Maritime Domain Awareness using Latent Space Representations",
+    "pdf_url": "https://arxiv.org/pdf/2611.34899v1",
+    "published": "2026-11-25",
+    "crawled_at": "2026-11-27 02:28:19",
+    "ai_score": 6.5,
+    "translated_title": "利用潜在空间表示增强海上态势感知",
+    "summary_en": [
+      "• Model Architecture: Leverages Earth Observation embeddings from the TerraMind geospatial foundation model, operating on compressed latent-space representations of Sentinel-1 SAR imagery to address data gravity bottlenecks.",
+      "• Data used: A new maritime dataset pairing ~2,000 Sentinel-1 GRD images with temporally aligned AIS signals from commercial vessels, manually verified for bounding-box quality and AIS consistency.",
+      "• Performance metrics: Vessel detection achieves ROC-AUC 0.95; vessel localisation has median error ~300 m for vessels >100 m; AIS type-code classification achieves 62% accuracy for majority classes, highly correlated with vessel length."
+    ],
+    "summary_cn": [
+      "• 核心模型: 基于TerraMind地理空间基础模型的潜在空间表示，对Sentinel-1 SAR图像进行压缩嵌入，使用线性和非线性探测进行船舶检测、定位和分类。",
+      "• 数据来源: 新发布的海事数据集，包含约2000张Sentinel-1图像与时间对齐的商业船舶AIS信号，经人工验证边界框质量和AIS一致性。",
+      "• 主要结论: 船舶检测ROC-AUC达0.95；长度>100m船舶定位中位误差约300米；AIS类型分类多数类准确率62%，但与船舶长度高度相关。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Limited direct alpha; the approach is more suited for operational monitoring and risk management than for generating trading signals.",
+      "• Implementation Risk: High due to reliance on foundation model embeddings, data quality issues, and the coarse localisation error (300 m) which may be insufficient for precise vessel tracking.",
+      "• Novelty: Moderate; applying latent space representations for maritime domain awareness is relatively new, but the performance metrics are not groundbreaking."
+    ],
+    "verdict_cn": [
+      "• 创新点: 将地理空间基础模型的潜在空间表示应用于海上态势感知，并发布了经过人工验证的Sentinel-1与AIS配对数据集，具有一定的新颖性。",
+      "• 实盘坑: 定位误差高达300米，难以满足高精度船舶跟踪需求；分类准确率仅62%且与船舶长度高度相关，实际部署价值有限。",
+      "• 复现难度: 中等；依赖TerraMind等基础模型和特定数据集，但代码和数据集已公开，复现门槛相对较低。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2611.34894v1",
+    "title": "What a Drop Reveals: Sim-to-Real Material Estimation for Deformable Objects from Video",
+    "pdf_url": "https://arxiv.org/pdf/2611.34894v1",
+    "published": "2026-11-25",
+    "crawled_at": "2026-11-27 02:28:27",
+    "ai_score": 7.5,
+    "translated_title": "一次跌落揭示的真相：基于视频的可变形物体材料估计的仿真到现实迁移",
+    "summary_en": [
+      "• Model Architecture: PhysReader is a feed-forward predictor trained solely in simulation that estimates density-normalized stiffness (E/ρ) and yield stress (σ_Y/ρ) from a single real drop video. It uses 2D optical-flow tracklets and learns to lift them to 3D by matching a teacher model that sees exact 3D deformation.",
+      "• Data used: Training data is entirely synthetic, generated in simulation. For evaluation, the authors introduce PhysReader-Real, a dataset of 16 everyday objects dropped five times each, with reference materials fit jointly to each object's drops and validated against tensile tests.",
+      "• Performance metrics: On PhysReader-Real, PhysReader outperforms all other input modalities and baselines in estimating material parameters, except for a per-scene optimizer that is slightly more accurate but takes 49 minutes per video versus 12 seconds for PhysReader. The paper also highlights a counterintuitive finding: 3D tracklets, which are most accurate in simulation, transfer poorly to real data, while 2D tracklets transfer best despite being less informative in simulation."
+    ],
+    "summary_cn": [
+      "• 核心模型: PhysReader是一个前馈预测器，仅在仿真中训练，从单段真实跌落视频中估计密度归一化刚度(E/ρ)和屈服应力(σ_Y/ρ)。它使用2D光流轨迹，并通过匹配一个能看到精确3D变形的教师模型来学习提升到3D。",
+      "• 数据来源: 训练数据完全来自仿真。评估时引入了PhysReader-Real数据集，包含16个日常物体各跌落5次，参考材料参数通过联合拟合每个物体的多次跌落并经过拉伸测试验证。",
+      "• 主要结论: 在PhysReader-Real上，PhysReader在材料参数估计上优于所有其他输入模态和基线，唯一例外是每场景优化器稍更准确但耗时49分钟/视频（PhysReader仅12秒）。论文还揭示了一个反直觉发现：在仿真中最准确的3D轨迹在真实数据上迁移效果差，而2D轨迹虽在仿真中信息量少却迁移最佳。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: The method enables fast, non-invasive material estimation from video, which could be valuable for industries like robotics, manufacturing, and CGI, but direct alpha in financial markets is limited unless integrated into alternative data pipelines for commodity or retail analysis.",
+      "• Implementation Risk: The approach relies on simulated training data, and the sim-to-real gap remains a challenge; performance on diverse real-world objects and conditions is not fully validated. The dataset is small (16 objects), and scaling to broader categories may require significant effort.",
+      "• Novelty: The paper's key insight—that perception consistency across domains matters more than simulation informativeness—is novel and counterintuitive, contributing to the sim-to-real literature. The introduction of PhysReader-Real and the teacher-student training scheme are solid contributions."
+    ],
+    "verdict_cn": [
+      "• 创新点: 论文的核心发现——跨域感知一致性比仿真信息量更重要——具有新颖性和反直觉性，对仿真到现实迁移研究有贡献。PhysReader-Real数据集和教师-学生训练方案也是扎实的贡献。",
+      "• 实盘坑: 该方法在金融市场中直接阿尔法潜力有限，除非整合到商品或零售分析的另类数据管道中。仿真训练数据与真实世界的差距仍是挑战，且数据集较小（16个物体），扩展到更广泛类别可能需要大量工作。",
+      "• 复现难度: 复现需要仿真环境、3D渲染和物理引擎设置，以及真实视频采集和材料测试，门槛较高。但论文提供了足够细节，对于有机器人或图形学背景的团队来说是可复现的。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2611.34887v1",
+    "title": "Interpretable and Accurate Hybrid Decision Trees with Selective Case-Based Splits",
+    "pdf_url": "https://arxiv.org/pdf/2611.34887v1",
+    "published": "2026-11-25",
+    "crawled_at": "2026-11-27 02:28:33",
+    "ai_score": 6.5,
+    "translated_title": "可解释且准确的混合决策树与选择性案例分裂",
+    "summary_en": [
+      "• Model Architecture: Proposes a hybrid decision tree that integrates feature-based and case-based splits, allowing heterogeneous splits throughout the tree. Introduces a selective case-based split that searches for the most informative subset of features to define the split.",
+      "• Data used: Experiments conducted on a diverse set of tabular datasets (specific datasets not named in abstract).",
+      "• Performance metrics: Outperforms standard decision trees and achieves performance on par with ensemble methods, while producing shallow trees that retain or improve predictive accuracy.",
+      "• Interpretability: The hybrid approach balances the specificity of case-based methods with the simplicity of feature-based ones, maintaining interpretability."
+    ],
+    "summary_cn": [
+      "• 核心模型: 提出一种混合决策树架构，整合基于特征和基于案例的分裂，允许树中异构分裂；并引入选择性案例分裂，通过搜索最具信息量的特征子集来定义分裂。",
+      "• 数据来源: 在多样化的表格数据集上进行实验（摘要未具体列出数据集名称）。",
+      "• 主要结论: 该方法优于标准决策树，性能与集成方法相当，同时产生浅树，保持或提高预测准确性。",
+      "• 可解释性: 混合方法平衡了基于案例方法的特异性和基于特征方法的简单性，保持了可解释性。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: Limited direct alpha generation; primarily an interpretable ML model improvement, useful for risk management and compliance but not a direct trading signal.",
+      "• Implementation Risk: Moderate; hybrid trees may be more complex to implement and tune than standard trees, with potential overfitting to tabular datasets.",
+      "• Novelty: Moderate; combines existing ideas (feature-based and case-based splits) with a selective subset search, but not fundamentally new.",
+      "• Practicality: Shallow trees with ensemble-level performance could be attractive for interpretable models in finance, but requires validation on financial datasets."
+    ],
+    "verdict_cn": [
+      "• 创新点: 混合分裂架构和选择性案例分裂有一定新意，但本质是现有方法的组合与优化，理论突破有限。",
+      "• 实盘坑: 在金融数据上可能过拟合，且案例分裂需要存储样本，增加内存和计算开销；可解释性虽好但可能牺牲部分预测精度。",
+      "• 复现难度: 中等，需要实现混合树和选择性分裂搜索，但论文未提供代码，复现需一定工程努力。",
+      "• 应用场景: 更适合作为风险管理和合规中的可解释模型，而非直接产生阿尔法的策略。"
+    ],
+    "ai_strategy": "Risk-Mgmt",
+    "journal_info": {
+      "name": "ArXiv Preprint",
+      "status": "Preprint"
+    }
+  },
+  {
+    "id": "2611.34881v1",
+    "title": "Stranger Things: When Objects Appear Without Their Typical Neighbors",
+    "pdf_url": "https://arxiv.org/pdf/2611.34881v1",
+    "published": "2026-11-25",
+    "crawled_at": "2026-11-27 02:28:39",
+    "ai_score": 7.5,
+    "translated_title": "陌生事物：当物体没有典型邻居时出现",
+    "summary_en": [
+      "• Model Architecture: Evaluates five model families: specialist detectors, open-vocabulary detectors, self-supervised models, vision-language models, and multimodal LLMs, across three tasks: supervised detection, open-vocabulary detection, and classification.",
+      "• Data used: Introduces STRANGE-Bench, a photorealistic, layout-controlled synthetic benchmark spanning 17 sub-tiers of object pairs from typical to never-co-occurring, based on NPMI. Also uses natural-image COCO splits.",
+      "• Performance metrics: Typicality bias measured via NPMI; gaps of 5-11 percentage points persist when objects appear without typical neighbors, and do not consistently shrink with scale. Proposed Anchor-Atypicality Sampling (AAS) reduces gap by up to 1.6 p.p. on COCO and 23.0 p.p. on STRANGE-Bench without sacrificing overall performance."
+    ],
+    "summary_cn": [
+      "• 核心模型: 评估了五类模型家族：专用检测器、开放词汇检测器、自监督模型、视觉语言模型和多模态大语言模型，涵盖三个识别任务：监督检测、开放词汇检测和分类。",
+      "• 数据来源: 提出了STRANGE-Bench，一个基于NPMI的、逼真且布局可控的合成基准，涵盖从典型到从未共现的17个子层级的物体对。同时使用了自然图像COCO分割。",
+      "• 主要结论: 典型性偏差普遍存在，当物体没有典型邻居时，性能差距达5-11个百分点，且不随模型规模扩大而一致缩小。提出的锚点非典型采样（AAS）在COCO上最多减少1.6个百分点的差距，在STRANGE-Bench上减少23.0个百分点，且不牺牲整体性能。"
+    ],
+    "verdict_en": [
+      "• Alpha Potential: The identified typicality bias reveals a systematic failure mode in vision models that could be exploited in trading strategies relying on visual data (e.g., satellite imagery, retail parking lots) by accounting for contextual anomalies.",
+      "• Implementation Risk: The proposed AAS is a simple sampling rule for paste-based augmentations, but its effectiveness may depend on the quality of the NPMI signal and the synthetic benchmark's realism; real-world deployment may face distribution shifts.",
+      "• Novelty: While typicality bias was studied pre-Transformer, this work provides a systematic diagnostic across modern vision stack and introduces a novel benchmark and mitigation method, bridging an important gap."
+    ],
+    "verdict_cn": [
+      "• 创新点: 系统性地诊断了现代视觉模型中的典型性偏差，提出了STRANGE-Bench基准和AAS采样方法，填补了Transformer时代该问题研究的空白。",
+      "• 实盘坑: 依赖NPMI信号和合成基准，真实世界中的共现分布可能更复杂，AAS的增益在自然图像上较小（1.6 p.p.），需验证在金融视觉任务中的实际影响。",
+      "• 复现难度: 中等。需要构建合成基准和实现AAS，但论文提供了详细方法；计算资源要求较高，涉及多模型家族评估。"
+    ],
+    "ai_strategy": "Deep-Learning",
+    "journal_info": {
+      "name": "NeurIPS",
+      "status": "Under Review"
+    }
+  },
+  {
     "id": "2611.33743v1",
     "title": "OrbACE: Orbital and Atomic Cluster Expansion",
     "pdf_url": "https://arxiv.org/pdf/2611.33743v1",
@@ -43440,346 +43773,6 @@
     "ai_strategy": "Alpha-Factor",
     "journal_info": {
       "name": "NeurIPS",
-      "status": "Accepted"
-    }
-  },
-  {
-    "id": "2604.09544v1",
-    "title": "Large Language Models Generate Harmful Content Using a Distinct, Unified Mechanism",
-    "pdf_url": "https://arxiv.org/pdf/2604.09544v1",
-    "published": "2026-04-10",
-    "crawled_at": "2026-04-13 20:40:18",
-    "ai_score": 8.5,
-    "translated_title": "大型语言模型通过独特统一机制生成有害内容",
-    "summary_en": [
-      "• Model Architecture: The study employs targeted weight pruning as a causal intervention to probe the internal organization of harmfulness in large language models (LLMs), revealing that harmful content generation depends on a compact set of weights distinct from benign capabilities.",
-      "• Data used: The paper does not specify particular datasets but focuses on analyzing the internal representations of LLMs through weight pruning techniques, likely using standard pre-trained models like GPT variants or similar architectures.",
-      "• Performance metrics: Key findings include that aligned models exhibit greater compression of harm generation weights compared to unaligned counterparts, and pruning these weights in narrow domains reduces emergent misalignment, demonstrating a dissociation between harmful generation and recognition capabilities."
-    ],
-    "summary_cn": [
-      "• 核心模型: 研究采用针对性权重剪枝作为因果干预手段，探究大型语言模型（LLMs）中有害内容的内部组织机制，发现有害内容生成依赖于一组紧凑的权重，与良性能力相分离。",
-      "• 数据来源: 论文未明确指定具体数据集，但通过权重剪枝技术分析LLMs的内部表示，可能使用GPT变体等标准预训练模型。",
-      "• 主要结论: 对齐模型比未对齐模型表现出更强的有害生成权重压缩，在窄域中剪枝这些权重可显著减少突发性错位，揭示有害生成与识别能力之间的解耦。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High potential for developing more robust safety mechanisms in LLMs by targeting compact harm generation weights, which could lead to improved model alignment and reduced jailbreak vulnerabilities in financial NLP applications.",
-      "• Implementation Risk: Moderate risk due to the complexity of weight pruning interventions and potential unintended consequences on model performance; requires careful calibration to avoid degrading benign capabilities.",
-      "• Novelty: High novelty in using causal interventions to reveal a coherent internal structure for harmfulness, providing foundational insights for principled safety approaches beyond surface-level guardrails."
-    ],
-    "verdict_cn": [
-      "• 创新点: 采用因果干预方法揭示LLMs中有害内容的统一内部机制，为超越表面安全护栏的原则性安全方法提供基础性见解，具有高度创新性。",
-      "• 实盘坑: 权重剪枝干预复杂，可能对模型性能产生意外影响，需精细校准以避免损害良性能力，实施风险中等。",
-      "• 复现难度: 中等偏高，需要访问预训练LLMs和专业知识进行权重分析，但方法描述清晰，具备可复现性。"
-    ],
-    "ai_strategy": "NLP/LLM",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2604.09543v1",
-    "title": "ANTIC: Adaptive Neural Temporal In-situ Compressor",
-    "pdf_url": "https://arxiv.org/pdf/2604.09543v1",
-    "published": "2026-04-10",
-    "crawled_at": "2026-04-13 20:40:34",
-    "ai_score": 7.8,
-    "translated_title": "ANTIC：自适应神经时序原位压缩器",
-    "summary_en": [
-      "• Model Architecture: ANTIC is an end-to-end in situ compression pipeline combining an adaptive temporal selector for high-dimensional physics and a spatial neural compression module based on continual fine-tuning of neural fields to learn residual updates between adjacent snapshots.",
-      "• Data used: The method is applied to transient simulations modeling Navier-Stokes equations, magnetohydrodynamics, plasma physics, or binary black hole mergers, generating petabyte-to-exabyte scale data from high-resolution, spatiotemporally evolving fields governed by large-scale PDEs.",
-      "• Performance metrics: Experimental results demonstrate storage reductions of several orders of magnitude while maintaining physics accuracy, effectively alleviating the need for explicit on-disk storage of entire time-evolved trajectories."
-    ],
-    "summary_cn": [
-      "• 核心模型: ANTIC是一个端到端的原位压缩流水线，包含自适应时序选择器和基于神经场的空间神经压缩模块，通过持续微调学习相邻快照间的残差更新。",
-      "• 数据来源: 应用于Navier-Stokes方程、磁流体动力学、等离子体物理或双黑洞合并等瞬态模拟，处理由大规模高维偏微分方程控制的高分辨率时空演化场产生的PB至EB级数据。",
-      "• 主要结论: 实验显示存储减少达数个数量级，同时保持物理精度，显著降低了对完整时间演化轨迹的显式磁盘存储需求。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate; the adaptive compression technique could be adapted for high-frequency trading data streams to reduce storage and latency, but direct financial application is not demonstrated.",
-      "• Implementation Risk: High; in situ compression in HPC environments requires integration with simulation codes and real-time processing, posing significant engineering challenges and potential performance overhead.",
-      "• Novelty: High; the combination of adaptive temporal selection with neural field-based continual fine-tuning for residual learning in a single streaming pass is innovative for large-scale scientific data compression."
-    ],
-    "verdict_cn": [
-      "• 创新点: 较高；将自适应时序选择与基于神经场的持续微调残差学习结合，在单次流式处理中实现时空联合压缩，针对大规模科学数据具有新颖性。",
-      "• 实盘坑: 高；原位压缩需与模拟代码深度集成，实时处理要求高，工程实现复杂，可能引入性能开销和稳定性风险。",
-      "• 复现难度: 中等；方法依赖于特定物理模拟数据，但核心神经网络组件相对标准，复现需适配金融数据并解决实时流处理挑战。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "ArXiv Preprint",
-      "status": "Preprint"
-    }
-  },
-  {
-    "id": "2604.09537v1",
-    "title": "Case-Grounded Evidence Verification: A Framework for Constructing Evidence-Sensitive Supervision",
-    "pdf_url": "https://arxiv.org/pdf/2604.09537v1",
-    "published": "2026-04-10",
-    "crawled_at": "2026-04-13 20:40:54",
-    "ai_score": 7.5,
-    "translated_title": "案例基础证据验证：构建证据敏感监督的框架",
-    "summary_en": [
-      "• Model Architecture: The paper introduces a case-grounded evidence verification framework where a model receives local case context, external evidence, and a structured claim, and must decide if the evidence supports the claim. It uses a standard verifier trained with generated supervision examples, including support, non-support, counterfactual wrong-state, and topic-related negatives.",
-      "• Data used: The framework is instantiated in radiology, utilizing medical case contexts and evidence articles. Supervision is constructed automatically without manual evidence annotation, generating explicit support and semantically controlled non-support examples.",
-      "• Performance metrics: The learned verifier substantially outperforms case-only and evidence-only baselines, remains strong under correct evidence, and collapses when evidence is removed or swapped, indicating genuine evidence dependence. Performance transfers across unseen evidence articles and external case distributions but degrades under evidence-source shift and remains sensitive to backbone choice."
-    ],
-    "summary_cn": [
-      "• 核心模型: 提出案例基础证据验证框架，模型接收局部案例上下文、外部证据和结构化声明，判断证据是否支持声明。使用标准验证器，通过生成的监督示例（包括支持、非支持、反事实错误状态和主题相关负例）进行训练。",
-      "• 数据来源: 在放射学领域实例化，利用医学案例上下文和证据文章。监督通过自动生成构建，无需手动证据标注，生成明确的支持和语义控制的非支持示例。",
-      "• 主要结论: 验证器显著优于仅案例和仅证据基线，在正确证据下保持强劲，证据移除或交换时性能崩溃，表明真正的证据依赖性。性能可迁移到未见证据文章和外部案例分布，但在证据源偏移下下降，对骨干网络选择敏感。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate; the framework addresses a key bottleneck in evidence grounding by improving supervision to encode the causal role of evidence, which could enhance decision-making in financial models requiring evidence-based reasoning, such as in risk assessment or fraud detection.",
-      "• Implementation Risk: High; performance is sensitive to backbone choice and degrades under evidence-source shift, indicating robustness issues. The reliance on automatically generated supervision may introduce noise, and domain adaptation to finance could be challenging due to data specificity.",
-      "• Novelty: High; the introduction of case-grounded evidence verification with a supervision construction procedure that generates diverse negative examples without manual annotation is innovative. It tackles weak supervision and loose evidence-claim ties, offering a generalizable approach beyond radiology."
-    ],
-    "verdict_cn": [
-      "• 创新点: 高；提出案例基础证据验证框架，通过监督构建程序自动生成多样负例（如反事实错误状态和主题相关负例），无需手动标注，创新性地解决证据基础推理中的弱监督和证据-声明松散关联问题。",
-      "• 实盘坑: 高；性能对骨干网络选择敏感，证据源偏移下性能下降，表明鲁棒性不足。自动生成的监督可能引入噪声，且金融领域适配因数据特异性而具挑战性，实盘部署风险较大。",
-      "• 复现难度: 中等；框架在放射学实例化，数据和方法描述清晰，但需要特定领域数据（如案例上下文和证据文章）和计算资源训练验证器。自动监督生成步骤可能复杂，需精细调参以确保性能。"
-    ],
-    "ai_strategy": "NLP/LLM",
-    "journal_info": {
-      "name": "ArXiv Preprint",
-      "status": "Preprint"
-    }
-  },
-  {
-    "id": "2604.09527v1",
-    "title": "Envisioning the Future, One Step at a Time",
-    "pdf_url": "https://arxiv.org/pdf/2604.09527v1",
-    "published": "2026-04-10",
-    "crawled_at": "2026-04-13 20:41:10",
-    "ai_score": 8.2,
-    "translated_title": "逐步展望未来",
-    "summary_en": [
-      "• Model Architecture: Autoregressive diffusion model that predicts sparse point trajectories through step-wise inference, focusing on underlying scene dynamics rather than dense appearance, with explicit modeling of uncertainty growth over time.",
-      "• Data used: OWM benchmark based on diverse in-the-wild videos for evaluating open-set motion prediction under real-world uncertainty, emphasizing trajectory distributions rather than fixed outcomes.",
-      "• Performance metrics: Matches or surpasses dense simulators in predictive accuracy while achieving orders-of-magnitude higher sampling speed, enabling fast rollout of thousands of diverse futures from a single image with physical plausibility and long-range coherence."
-    ],
-    "summary_cn": [
-      "• 核心模型: 自回归扩散模型，通过逐步推理预测稀疏点轨迹，专注于底层场景动态而非密集外观，显式建模随时间增长的不确定性。",
-      "• 数据来源: 基于多样化真实世界视频的OWM基准，用于评估现实不确定性下的开放集运动预测，强调轨迹分布而非固定结果。",
-      "• 主要结论: 在预测准确性上匹配或超越密集模拟器，同时实现数量级更高的采样速度，能从单张图像快速生成数千种多样未来，保持物理合理性和长程一致性。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High for applications requiring real-time scenario simulation in dynamic environments (e.g., autonomous systems, financial market modeling), due to efficient exploration of multi-modal futures and scalability.",
-      "• Implementation Risk: Moderate; reliance on sparse trajectories may miss fine-grained details critical in some domains, and real-world validation beyond the OWM benchmark is needed.",
-      "• Novelty: Significant; shifts focus from dense prediction to dynamics-centric representation, introducing step-wise inference over trajectories and explicit uncertainty modeling for open-set problems."
-    ],
-    "verdict_cn": [
-      "• 创新点: 显著；从密集预测转向以动态为中心的表征，引入轨迹的逐步推理和开放集问题的显式不确定性建模，突破传统方法瓶颈。",
-      "• 实盘坑: 中等；稀疏轨迹可能遗漏某些领域的关键细粒度细节，且需在OWM基准之外进行更广泛的现实世界验证，不确定性建模的校准风险存在。",
-      "• 复现难度: 中等偏高；需要处理复杂场景数据和实现自回归扩散模型，但开源代码和基准可降低部分门槛，硬件要求因高效采样而相对可控。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Accepted"
-    }
-  },
-  {
-    "id": "2604.09523v1",
-    "title": "Event-Driven Temporal Graph Networks for Asynchronous Multi-Agent Cyber Defense in NetForge_RL",
-    "pdf_url": "https://arxiv.org/pdf/2604.09523v1",
-    "published": "2026-04-10",
-    "crawled_at": "2026-04-13 20:41:29",
-    "ai_score": 8.2,
-    "translated_title": "基于事件驱动的时序图网络在NetForge_RL中实现异步多智能体网络防御",
-    "summary_en": [
-      "• Model Architecture: Introduces Continuous-Time Graph MARL (CT-GMARL) with Neural ODEs to process irregularly sampled alerts in a continuous-time Partially Observable Semi-Markov Decision Process (POSMDP) framework.",
-      "• Data used: Utilizes NLP-encoded SIEM telemetry from NetForge_RL simulator, which enforces Zero-Trust Network Access constraints and provides dual-mode evaluation (mock hypervisor for training, Docker hypervisor for live exploit testing).",
-      "• Performance metrics: Achieves converged median Blue reward of 57,135 (2.0x improvement over R-MAPPO, 2.1x over QMIX), restores 12x more compromised services than strongest baseline, and achieves median reward of 98,026 in zero-shot transfer to live Docker environment."
-    ],
-    "summary_cn": [
-      "• 核心模型: 提出连续时间图多智能体强化学习（CT-GMARL），采用神经常微分方程处理不规则采样的警报，适用于连续时间部分可观测半马尔可夫决策过程（POSMDP）。",
-      "• 数据来源: 基于NetForge_RL模拟器生成的NLP编码SIEM遥测数据，该模拟器强制执行零信任网络访问约束，并提供双模式评估（模拟管理程序用于训练，Docker管理程序用于实时漏洞测试）。",
-      "• 主要结论: CT-GMARL在收敛中位数蓝队奖励上达到57,135（比R-MAPPO提升2.0倍，比QMIX提升2.1倍），恢复的受损服务比最强基线多12倍，并在零样本迁移到实时Docker环境中获得98,026的中位数奖励。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High potential for alpha generation in cybersecurity-focused quantitative strategies by enabling real-time, adaptive defense mechanisms that outperform traditional synchronous models, with demonstrated 2x reward improvements and robust zero-shot transfer.",
-      "• Implementation Risk: Moderate to high risk due to reliance on high-fidelity simulator NetForge_RL, which may not fully capture all real-world network complexities; integration with existing SOC infrastructure could face scalability and latency challenges.",
-      "• Novelty: Significant novelty in bridging Sim2Real gap via dual-mode engine and applying Neural ODEs to asynchronous MARL for cyber defense, offering a fresh approach to continuous-time decision-making in noisy, partially observable environments."
-    ],
-    "verdict_cn": [
-      "• 创新点: 通过双模式引擎弥合Sim2Real差距，并将神经常微分方程应用于异步多智能体强化学习进行网络防御，为噪声、部分可观测环境中的连续时间决策提供了新方法。",
-      "• 实盘坑: 依赖高保真模拟器NetForge_RL，可能无法完全捕捉真实网络复杂性；与现有安全运营中心基础设施集成可能面临可扩展性和延迟挑战。",
-      "• 复现难度: 高难度，需要构建NetForge_RL模拟器环境、实现连续时间图多智能体强化学习算法，并处理NLP编码的SIEM数据，对计算资源和专业知识要求较高。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2604.09519v1",
-    "title": "Toward World Models for Epidemiology",
-    "pdf_url": "https://arxiv.org/pdf/2604.09519v1",
-    "published": "2026-04-10",
-    "crawled_at": "2026-04-13 20:41:44",
-    "ai_score": 7.5,
-    "translated_title": "迈向流行病学的世界模型",
-    "summary_en": [
-      "• Model Architecture: Conceptual framework for epidemiological world models, treating epidemics as controlled, partially observed dynamical systems with latent true states, noisy endogenous observations, and sequential interventions with behavioral feedback.",
-      "• Data used: No specific datasets mentioned; relies on theoretical case studies involving behavioral surveillance misreporting, time-lagged signals like hospitalizations/deaths, and counterfactual intervention analysis.",
-      "• Performance metrics: No quantitative metrics provided; evaluation based on illustrative case studies demonstrating necessity for policy-relevant reasoning in strategic misreporting, systematic delays, and counterfactual scenarios."
-    ],
-    "summary_cn": [
-      "• 核心模型: 流行病学世界模型的概念框架，将流行病视为受控、部分可观测的动态系统，包含潜在真实状态、噪声内生观测以及具有行为反馈的序列干预。",
-      "• 数据来源: 未提及具体数据集；基于理论案例研究，涉及行为监测误报、医院/死亡等时滞信号以及反事实干预分析。",
-      "• 主要结论: 世界模型对政策相关推理至关重要，通过案例说明其在处理战略误报、系统延迟和反事实干预分析中的必要性。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate; framework could enhance epidemic forecasting and intervention planning, but lacks empirical validation or financial market direct application.",
-      "• Implementation Risk: High; requires integration of complex behavioral dynamics and policy-dependent signals, with no clear implementation roadmap or data pipelines.",
-      "• Novelty: High; novel application of world models to epidemiology with focus on latent states and adaptive behavior, though conceptual without algorithmic details."
-    ],
-    "verdict_cn": [
-      "• 创新点: 高；将世界模型创新应用于流行病学，强调潜在状态和自适应行为，但缺乏算法细节。",
-      "• 实盘坑: 高；需整合复杂行为动态和政策依赖信号，无明确实施路线或数据管道，实证验证缺失。",
-      "• 复现难度: 中高；概念框架清晰，但无代码或具体模型，依赖领域专业知识进行实现。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "ArXiv Preprint",
-      "status": "Preprint"
-    }
-  },
-  {
-    "id": "2604.09512v1",
-    "title": "Integrated electro-optic attention nonlinearities for transformers",
-    "pdf_url": "https://arxiv.org/pdf/2604.09512v1",
-    "published": "2026-04-10",
-    "crawled_at": "2026-04-13 20:41:59",
-    "ai_score": 8.2,
-    "translated_title": "用于Transformer的集成电光注意力非线性",
-    "summary_en": [
-      "• Model Architecture: Proposes electro-optic alternatives to digital Softmax and Sigmoid using thin-film lithium niobate (TFLN) Mach-Zehnder modulators (MZMs) as analog nonlinear computational elements.",
-      "• Data used: Evaluated performance in Vision Transformers and Large Language Models, with testing under aggressive 4-bit input-output quantization and system noise characterization up to 10 GBaud encoding speeds.",
-      "• Performance metrics: Maintains highly competitive accuracy despite quantization, reduces latency of nonlinear computations, and enables high-speed, energy-efficient nonlinear computation in hybrid co-packaged hardware."
-    ],
-    "summary_cn": [
-      "• 核心模型: 使用薄膜铌酸锂马赫-曾德尔调制器作为模拟非线性计算单元，提出电光替代数字Softmax和Sigmoid的方案。",
-      "• 数据来源: 在Vision Transformers和大型语言模型中进行评估，测试包括4位输入输出量化和高达10 GBaud编码速度的系统噪声分析。",
-      "• 主要结论: 在量化条件下保持高竞争力精度，显著降低非线性计算延迟，支持混合封装硬件中的高速、高效能非线性计算。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High potential for reducing inference latency in transformer-based models, which could enhance high-frequency trading strategies relying on real-time NLP/LLM processing.",
-      "• Implementation Risk: Moderate to high risk due to reliance on specialized photonic hardware (TFLN modulators), potential integration challenges with existing digital systems, and noise sensitivity in analog components.",
-      "• Novelty: High novelty in applying electro-optic analog computing to transformer nonlinearities, addressing a specific bottleneck (Softmax operations) with a hybrid hardware approach."
-    ],
-    "verdict_cn": [
-      "• 创新点: 将电光模拟计算应用于Transformer非线性层，针对Softmax瓶颈提出硬件解决方案，结合光子技术提升计算效率。",
-      "• 实盘坑: 依赖专用光子硬件，集成到现有数字系统可能复杂，模拟组件对噪声敏感，量产和成本控制存在挑战。",
-      "• 复现难度: 高难度，需要薄膜铌酸锂调制器等专业设备，实验设置复杂，噪声测试和量化优化要求高精度控制。"
-    ],
-    "ai_strategy": "NLP/LLM",
-    "journal_info": {
-      "name": "ArXiv Preprint",
-      "status": "Preprint"
-    }
-  },
-  {
-    "id": "2604.09494v1",
-    "title": "RecaLLM: Addressing the Lost-in-Thought Phenomenon with Explicit In-Context Retrieval",
-    "pdf_url": "https://arxiv.org/pdf/2604.09494v1",
-    "published": "2026-04-10",
-    "crawled_at": "2026-04-13 20:42:15",
-    "ai_score": 8.2,
-    "translated_title": "RecaLLM：通过显式上下文检索解决思维迷失现象",
-    "summary_en": [
-      "• Model Architecture: RecaLLM is a reasoning language model that interleaves reasoning with explicit in-context retrieval, using a constrained decoding mechanism for verbatim copying of evidence spans to improve grounding.",
-      "• Data used: Trained on diverse lexical and semantic retrieval tasks with training samples of at most 10K tokens, far shorter than existing long-context approaches, and evaluated on long-context benchmarks RULER and HELMET.",
-      "• Performance metrics: Achieves strong performance on RULER and HELMET benchmarks, significantly outperforming baselines, with consistent gains at context windows up to 128K tokens using minimal training data."
-    ],
-    "summary_cn": [
-      "• 核心模型: RecaLLM是一种推理语言模型，通过交替进行推理和显式上下文检索，结合约束解码机制实现证据段的逐字复制，以增强后续生成的准确性。",
-      "• 数据来源: 使用多样化的词汇和语义检索任务进行训练，训练样本最多10K tokens，远少于现有长上下文方法，并在RULER和HELMET长上下文基准上进行评估。",
-      "• 主要结论: 在RULER和HELMET基准上表现优异，显著超越基线模型，在高达128K tokens的上下文窗口中保持稳定增益，且无需昂贵的长上下文训练数据。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High potential for improving long-context reasoning in financial NLP tasks, such as document analysis and multi-step decision-making, by addressing the lost-in-thought bottleneck with efficient retrieval.",
-      "• Implementation Risk: Moderate risk due to reliance on constrained decoding and retrieval mechanisms, which may introduce latency or complexity in real-time trading environments, though overhead is claimed negligible.",
-      "• Novelty: Novel approach to intertwining retrieval and reasoning, offering a cost-effective path to long-context performance without expensive training data, differentiating from traditional scaling methods."
-    ],
-    "verdict_cn": [
-      "• 创新点: 创新性地将检索与推理深度结合，通过显式检索解决思维迷失问题，提供了一种无需昂贵长上下文训练数据的高效长上下文性能提升路径。",
-      "• 实盘坑: 依赖约束解码和检索机制，可能在实时交易环境中引入延迟或复杂性，尽管声称开销可忽略，但需验证实际部署中的稳定性。",
-      "• 复现难度: 中等难度，需要实现交替推理检索架构和约束解码，但训练数据要求较低（最多10K tokens），降低了数据获取和计算成本。"
-    ],
-    "ai_strategy": "NLP/LLM",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Under Review"
-    }
-  },
-  {
-    "id": "2604.09489v1",
-    "title": "XFED: Non-Collusive Model Poisoning Attack Against Byzantine-Robust Federated Classifiers",
-    "pdf_url": "https://arxiv.org/pdf/2604.09489v1",
-    "published": "2026-04-10",
-    "crawled_at": "2026-04-13 20:42:30",
-    "ai_score": 8.5,
-    "translated_title": "XFED：针对拜占庭鲁棒联邦分类器的非共谋模型投毒攻击",
-    "summary_en": [
-      "• Model Architecture: XFED is an aggregation-agnostic, non-collusive model poisoning attack that operates without communication between attackers, requiring each compromised client to generate malicious updates independently based on a shared adversarial objective.",
-      "• Data used: The empirical evaluation is conducted across six benchmark datasets, though specific dataset names are not provided in the abstract, indicating standard machine learning benchmarks for classification tasks.",
-      "• Performance metrics: XFED bypasses eight state-of-the-art defenses and outperforms six existing model poisoning attacks, demonstrating high effectiveness in degrading federated learning systems without collusion."
-    ],
-    "summary_cn": [
-      "• 核心模型: XFED是一种聚合无关的非共谋模型投毒攻击，攻击者无需通信，各自独立生成恶意更新，基于共享对抗目标破坏联邦学习系统。",
-      "• 数据来源: 在六个基准数据集上进行实证评估，未具体说明数据集名称，推测为标准机器学习分类基准。",
-      "• 主要结论: XFED成功绕过八种先进防御机制，优于六种现有攻击，表明联邦学习系统安全性低于预期，需更鲁棒防御。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: High for cybersecurity-focused quant funds; exposes critical vulnerabilities in federated learning systems used in financial data aggregation, potentially enabling exploitation or defensive strategy development.",
-      "• Implementation Risk: Moderate; while non-collusive design reduces coordination costs, real-world deployment requires compromising multiple clients, which may be challenging in regulated financial environments.",
-      "• Novelty: Significant; introduces the first formalized non-collusive attack model, challenging assumptions in federated learning security and highlighting aggregation-agnostic threats."
-    ],
-    "verdict_cn": [
-      "• 创新点: 首次形式化非共谋攻击模型，突破传统共谋依赖，聚合无关设计增强攻击普适性，对联邦学习安全理论构成挑战。",
-      "• 实盘坑: 攻击需控制多个客户端，在金融合规环境下实施困难；防御机制滞后，可能引发监管风险。",
-      "• 复现难度: 中等；算法描述抽象，依赖基准数据集，但非共谋设计简化协调，代码开源可降低复现门槛。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "NeurIPS",
-      "status": "Accepted"
-    }
-  },
-  {
-    "id": "2604.09487v1",
-    "title": "Sim-to-Real Transfer for Muscle-Actuated Robots via Generalized Actuator Networks",
-    "pdf_url": "https://arxiv.org/pdf/2604.09487v1",
-    "published": "2026-04-10",
-    "crawled_at": "2026-04-13 20:42:44",
-    "ai_score": 7.8,
-    "translated_title": "通过广义执行器网络实现肌肉驱动机器人的仿真到现实迁移",
-    "summary_en": [
-      "• Model Architecture: Generalized Actuator Network (GeAN) combines neural network modeling of complex muscle-tendon actuation with established rigid body simulation for arm dynamics and environmental interactions.",
-      "• Data used: Trained directly from joint position trajectories without requiring torque sensors, enabling actuation model identification across diverse robot platforms.",
-      "• Performance metrics: Successfully deployed precise goal-reaching and dynamic ball-in-a-cup policies on PAMY2, a four-degrees-of-freedom muscle-actuated robot arm, achieving first successful sim-to-real transfer for this class of robots."
-    ],
-    "summary_cn": [
-      "• 核心模型: 广义执行器网络(GeAN)结合了复杂肌肉肌腱驱动的神经网络建模与成熟的刚体动力学仿真。",
-      "• 数据来源: 直接从关节位置轨迹学习，无需扭矩传感器，支持跨机器人平台的执行器模型识别。",
-      "• 主要结论: 在四自由度肌肉驱动机器人臂PAMY2上成功部署了精确目标到达和动态球入杯策略，实现了该类机器人首次成功的仿真到现实迁移。"
-    ],
-    "verdict_en": [
-      "• Alpha Potential: Moderate - addresses critical sim-to-real gap for complex actuation systems but limited to specific robot types; potential for adaptive control in dynamic environments.",
-      "• Implementation Risk: High - muscle-tendon systems have inherent nonlinearities, friction, and hysteresis; real-world deployment requires extensive calibration and may face scalability issues.",
-      "• Novelty: Significant - first successful sim-to-real transfer for four-DOF muscle-actuated robots; novel approach of learning actuation models from position data rather than torque sensors."
-    ],
-    "verdict_cn": [
-      "• 创新点: 首次实现四自由度肌肉驱动机器人的仿真到现实迁移，采用从位置数据而非扭矩传感器学习执行器模型的新方法。",
-      "• 实盘坑: 肌肉肌腱系统固有的非线性、摩擦和迟滞特性导致高实现风险，需要大量校准且可扩展性可能受限。",
-      "• 复现难度: 中等偏高 - 需要特定机器人硬件(PAMY2)和复杂的气动人工肌肉设置，但开源代码可能降低技术门槛。"
-    ],
-    "ai_strategy": "Deep-Learning",
-    "journal_info": {
-      "name": "ICML",
       "status": "Accepted"
     }
   }
